@@ -1,0 +1,11 @@
+.md-typeset .md-code__content {
+  border-radius: 3mm;
+}
+
+.md-typeset figcaption.attribution {
+  text-align: left;
+  font-size: 0.75em;
+  color: var(--md-default-fg-color--light);
+  margin: unset;
+  max-width: unset;
+}
