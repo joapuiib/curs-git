@@ -1,0 +1,92 @@
+site_name: "Introducció a Git i la seua aplicació a l’aula"
+site_author: "Joan Puigcerver Ibáñez"
+site_email: "j.puigcerveribanez@edu.gva.es"
+dev_addr: 127.0.0.1:4567
+
+repo_name: joapuiib/curs-git
+repo_url: https://github.com/joapuiib/curs-git
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/joapuiib
+      name: joapuiib a GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/joanpuigcerver/
+      name: Joan Puigcerver a LinkedIn
+
+theme:
+  name: material-joapuiib
+  icon:
+    logo: simple/git
+  # cover: 
+  #   logo: false
+
+  # Palette toggle for light mode
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      primary: 'deep orange'
+      scheme: default
+      toggle:
+        # icon: material/toggle-switch
+        icon: material/weather-sunny
+        name: Canvia a mode fosc
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: 'deep orange'
+      scheme: slate
+      toggle:
+        # icon: material/toggle-switch-off-outline
+        icon: material/weather-night
+        name: Canvia a mode clar
+
+plugins:
+  - material/search
+  - material-joapuiib/enviorment
+  - awesome-pages # Navegació
+  - macros
+  - i18n:
+      languages:
+        - locale: ca
+          default: true
+          name: Valencià
+          admonition_translations:
+            note: Nota
+            abstract: Resum
+            tip: Consell
+            success: Èxit
+            question: Pregunta
+            warning: Advertència
+            failure: Error
+            danger: Perill
+            example: Exemple
+            quote: Cita
+            docs: Documentació
+            solution: Solució
+  - git-revision-date-localized
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material_joapuiib.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - markdown_captions
