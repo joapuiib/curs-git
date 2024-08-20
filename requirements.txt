@@ -5,4 +5,5 @@ mkdocs-macros-plugin==1.0.5
 mkdocs-material==9.5.29
 mkdocs-static-i18n==1.2.3
 markdown-captions==2.1.2
+mdx-linkify==2.1
 mkdocs-material-joapuiib
