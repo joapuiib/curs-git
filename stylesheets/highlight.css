@@ -1,6 +1,13 @@
 .language-shellconsole.highlight {
   --md-code-hl-generic-color: #D8DEE9;
+  font-size: 0.9em;
 }
+
+/*
+.language-shellconsole.highlight pre {
+  line-height: 1.25;
+}
+*/
 
 .language-shellconsole.highlight code.md-code__content {
   color: var(--md-code-hl-generic-color);
@@ -9,7 +16,7 @@
 
 .language-shellconsole.highlight .gh,
 .language-shellconsole.highlight .go {
-  color: var(--md-code-hl-generic-color);
+  color: #D8DEE9ee;
 }
 .language-shellconsole.highlight .gu {
   color: #88C0D0;
@@ -44,18 +51,29 @@
   color: #EBCB8B;
 }
 
-.language-shellconsole.highlight .git-bl {
+.language-shellconsole.highlight .git-bl,
+.language-shellconsole.highlight .git-untr,
+.language-shellconsole.highlight .git-rb,
+.language-shellconsole.highlight .git-rh,
+.language-shellconsole.highlight .git-mod {
   color: #BF616A;
 }
 .language-shellconsole.highlight .git-ch {
   color: #81A1C1;
 }
-.language-shellconsole.highlight .git-cd {
+.language-shellconsole.highlight .git-cd,
+.language-shellconsole.highlight .git-b,
+.language-shellconsole.highlight .git-stg {
   color: #A3BE8C;
 }
 .language-shellconsole.highlight .git-ca {
   color: #D8DEE98a;
 }
+.language-shellconsole.highlight .git-show-h,
+.language-shellconsole.highlight .git-t,
 .language-shellconsole.highlight .git-r {
   color: #EBCB8B;
+}
+.language-shellconsole.highlight .git-h {
+  color: #88C0D0;
 }
