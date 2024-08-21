@@ -1246,6 +1246,10 @@ que canviarà l'estat dels fitxers <strong>Staged</strong> (mostrat en color ver
     <figcaption>Figura 2: Flux de treball en un repositori de Git.</figcaption>
 </figure>
 
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>La comanda <code>git restore</code> es presenta a l'apartat <a href="#descartar-canvis" rel="nofollow">Descartar canvis</a>.</p>
+</div>
 <div class="admonition docs">
 <p class="admonition-title">Documentació</p>
 <p>Documentació oficial de:</p>
@@ -1489,6 +1493,86 @@ en el <strong>Directori de treball</strong> o <strong>l'Àrea de Preparació</st
 <p>En l'exemple anterior, s'ha afegit la línia <code>Aquesta és una línia nova</code> al fitxer <code>README.md</code>.</p>
 </div>
 <h2 id="descartar-canvis">Descartar canvis</h2>
+<p>Una altra ferramenta útil de Git és <code>git restore</code>, que permet descartar els canvis realitzats en els fitxers
+del <strong>Directori de treball</strong> o <strong>l'Àrea de Preparació</strong>.</p>
+<p>La sintaxi amb les opcions bàsiques és:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>git<span class="w"> </span>restore<span class="w"> </span><span class="o">[</span>--staged<span class="o">]</span><span class="w"> </span>&lt;path&gt;
+</span></code></pre></div></p>
+<ul>
+<li><code>--staged</code>: Opcional. Descarta els canvis realitzats en l'<strong>Àrea de Preparació</strong>.
+    Si no s'indica, es descartaran els canvis realitzats en el <strong>Directori de treball</strong>.</li>
+<li><code>&lt;path&gt;</code>: Opcional. Fitxer o directori sobre el qual es vol descartar els canvis.</li>
+</ul>
+<p>Podeu consultar la <a href="#figure-2" rel="nofollow">Figura 2</a> per a veure un resum del comportament de <code>git restore</code>.</p>
+<div class="admonition docs">
+<p class="admonition-title">Documentació</p>
+<p>Documentació oficial de <code>git restore</code>: <a href="https://git-scm.com/docs/git-restore" rel="nofollow">https://git-scm.com/docs/git-restore</a></p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Perill</p>
+<p>La comanda <code>git restore</code> descarta els canvis realitzats en els fitxers sense possibilitat de recuperar-los.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Descartar canvis en l'Àrea de Preparació</p>
+<p>Continuant amb l'exemple anterior, descartem els canvis realitzats en el fitxer <code>README.md</code> de l'<em>Àrea de Preparació</em>.</p>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="gp-uh">joapuiib@FP</span><span class="gp">:</span><span class="gp-d">~/01_introduccio</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>status
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="go">On branch main</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="go">Changes to be committed:</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="go">  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">        </span><span class="git-stg">modified:   README.md</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="gp-uh">joapuiib@FP</span><span class="gp">:</span><span class="gp-d">~/01_introduccio</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>diff<span class="w"> </span>--staged
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="gh">diff --git a/README.md b/README.md</span>
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="gh">index 6d747b3..f3b3b3e 100644</span>
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="gd">--- a/README.md</span>
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="gi">+++ b/README.md</span>
+</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="gu">@@ -1,2 +1,3 @@</span>
+</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="w"> </span># 01 - Introducció a Git
+</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a><span class="w"> </span>Estem aprenent a utilitzar Git!
+</span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a><span class="gi">+Aquesta és una línia nova</span>
+</span><span id="__span-17-17"><a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a><span class="gp-uh">joapuiib@FP</span><span class="gp">:</span><span class="gp-d">~/01_introduccio</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>restore<span class="w"> </span>--staged<span class="w"> </span>README.md
+</span><span id="__span-17-18"><a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a><span class="gp-uh">joapuiib@FP</span><span class="gp">:</span><span class="gp-d">~/01_introduccio</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>status
+</span><span id="__span-17-19"><a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a><span class="go">On branch main</span>
+</span><span id="__span-17-20"><a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a>
+</span><span id="__span-17-21"><a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a><span class="go">Changes not staged for commit:</span>
+</span><span id="__span-17-22"><a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span>
+</span><span id="__span-17-23"><a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a><span class="go">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)</span>
+</span><span id="__span-17-24"><a id="__codelineno-17-24" name="__codelineno-17-24" href="#__codelineno-17-24"></a><span class="w">        </span><span class="git-mod">modified:   README.md</span>
+</span></code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Descartar canvis en el Directori de treball</p>
+<p>Descartem els canvis realitzats en el fitxer <code>README.md</code> del <strong>Directori de treball</strong>.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Aquesta comanda descartarà els canvis realitzats en el fitxer <code>README.md</code> sense possibilitat de recuperar-los.</p>
+</div>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="gp-uh">joapuiib@FP</span><span class="gp">:</span><span class="gp-d">~/01_introduccio</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>status
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="go">On branch main</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="go">Changes not staged for commit:</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="go">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)</span>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">        </span><span class="git-mod">modified:   README.md</span>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="go">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span>
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="gp-uh">joapuiib@FP</span><span class="gp">:</span><span class="gp-d">~/01_introduccio</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>diff
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="gh">diff --git a/README.md b/README.md</span>
+</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="gh">index 6d747b3..f3b3b3e 100644</span>
+</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="gd">--- a/README.md</span>
+</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="gi">+++ b/README.md</span>
+</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="gu">@@ -1,2 +1,3 @@</span>
+</span><span id="__span-18-16"><a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="w"> </span># 01 - Introducció a Git
+</span><span id="__span-18-17"><a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a><span class="w"> </span>Estem aprenent a utilitzar Git!
+</span><span id="__span-18-18"><a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a><span class="gi">+Aquesta és una línia nova</span>
+</span><span id="__span-18-19"><a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a><span class="gp-uh">joapuiib@FP</span><span class="gp">:</span><span class="gp-d">~/01_introduccio</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>restore<span class="w"> </span>README.md
+</span><span id="__span-18-20"><a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a><span class="gp-uh">joapuiib@FP</span><span class="gp">:</span><span class="gp-d">~/01_introduccio</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>status
+</span><span id="__span-18-21"><a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a><span class="go">On branch main</span>
+</span><span id="__span-18-22"><a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a>
+</span><span id="__span-18-23"><a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a><span class="go">nothing to commit, working tree clean</span>
+</span></code></pre></div>
+</div>
 <h2 id="historic-de-canvis">Històric de canvis</h2>
 <h2 id="configuracio">Configuració</h2>
 <h2 id="ignorar-fitxers">Ignorar fitxers</h2>
@@ -1539,12 +1623,13 @@ en el <strong>Directori de treball</strong> o <strong>l'Àrea de Preparació</st
     
   <h2 id="__comments">Comentaris</h2>
 
+
   <!-- Insert generated snippet here -->
   <script src="https://giscus.app/client.js"
-        data-repo="joapuiib/mkdocs-material-joapuiib"
-        data-repo-id="R_kgDOMUF9Jg"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOMUF9Js4CgyME"
+        data-repo="joapuiib/curs-git"
+        data-repo-id="R_kgDOMi7ohg"
+        data-category="General"
+        data-category-id="DIC_kwDOMi7ohs4Ch1Lw"
         data-mapping="pathname"
         data-strict="1"
         data-reactions-enabled="1"
@@ -1592,6 +1677,7 @@ en el <strong>Directori de treball</strong> o <strong>l'Àrea de Preparació</st
       })
     })
   </script>
+
 
 
               </article>
