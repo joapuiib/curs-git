@@ -15,7 +15,7 @@ hide:
 - Promoure la utilització de Git i GitHub en l’aula com a eina de treball col·laboratiu.
 
 ## Continguts
-- [__Bloc 1: Introducció a Git__](apunts/01_introduccio/)
+- [__Bloc 1: Introducció a Git__](apunts/01_introduccio.md)
     - Instal·lació
     - Configuració
     - Estructura d'un repositori

@@ -337,7 +337,7 @@ Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
         new file:   README.md
 joapuiib@FP:~/01_introduccio (main) $ git commit -m "Added README.md"
-[main (root-commit) 8e70293] Added Readme.md
+[main (root-commit) 8e70293] Added README.md
  1 file changed, 2 insertions(+)
  create mode 100644 README.md
 joapuiib@FP:~/01_introduccio (main) $ git status
@@ -358,11 +358,11 @@ Podem consultar la informació del nou `commit` amb l'ordre `git show`.
 
 ```shellconsole
 joapuiib@FP:~/01_introduccio (main) $ git show 8e70293
-commit 8e702933d5dbec9ee71100a1599ae4491085e1aa
+commit 8e702933d5dbec9ee71100a1599ae4491085e1aa (HEAD -> main)
 Author: {{ config.site_author }} <{{ config.site_email }}>
 Date:   Fri Oct 13 16:06:59 2023 +0200
 
-    Added Readme.md
+    Added README.md
 
 diff --git a/README.md b/README.md
 new file mode 100644

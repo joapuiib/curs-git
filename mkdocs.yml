@@ -71,9 +71,9 @@ markdown_extensions:
   - admonition
   - attr_list
   - def_list
-  - mdx_linkify
   - markdown_captions
   - md_in_html
+  - mdx_linkify
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.emoji:
