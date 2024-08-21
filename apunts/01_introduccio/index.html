@@ -503,9 +503,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mes-canvis" class="md-nav__link">
+  <a href="#diferencies-entre-versions" class="md-nav__link">
     <span class="md-ellipsis">
-      Més canvis
+      Diferències entre versions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descartar-canvis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descartar canvis
     </span>
   </a>
   
@@ -669,9 +678,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mes-canvis" class="md-nav__link">
+  <a href="#diferencies-entre-versions" class="md-nav__link">
     <span class="md-ellipsis">
-      Més canvis
+      Diferències entre versions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descartar-canvis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descartar canvis
     </span>
   </a>
   
@@ -1215,7 +1233,7 @@ desenvolupadors.</p>
 <p>Quan treballes amb un projecte de Git, els canvis es realitzen sobre el <strong>Directori de treball</strong>.
 Aquests canvis poden ser:</p>
 <ul>
-<li><strong>Afegir un nou fitxer.</strong> El nou fitxer comença en l'estat <strong>Untracked</strong>, és a dir, no està sotmès a seguiment per Git.</li>
+<li><strong>Crear un nou fitxer.</strong> El nou fitxer comença en l'estat <strong>Untracked</strong>, és a dir, no està sotmès a seguiment per Git.</li>
 <li><strong>Modificar un fitxer amb seguiment.</strong> El fitxer modificat es trobarà en l'estat <strong>Modified</strong>.</li>
 <li><strong>Eliminar un fitxer amb seguiment.</strong> El fitxer eliminat es trobarà en l'estat <strong>Deleted</strong>.</li>
 </ul>
@@ -1287,7 +1305,7 @@ Aquesta comanda permet especificar quins canvis es desitja afegir.</p>
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="go">Changes to be committed:</span>
 </span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="go">  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="go">        new file:   README.md</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">        </span><span class="git-stg">new file:   README.md</span>
 </span></code></pre></div>
 <p>Vegem com el fitxer <code>README.md</code> ha passat a l'estat <strong>Staged</strong> i està preparat per a ser confirmat.</p>
 <figure id="figure-4">
@@ -1378,7 +1396,99 @@ A més, s'ha creat el primer <code>commit</code> amb el missatge <code>Added REA
 </span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="gi">+# 01 - Introducció a Git</span>
 </span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="gi">+Estem aprenent a utilitzar Git!</span>
 </span></code></pre></div>
-<h2 id="mes-canvis">Més canvis</h2>
+<h2 id="diferencies-entre-versions">Diferències entre versions</h2>
+<p>Una ferramenta molt útil de Git és <code>git diff</code>, que permet comparar les diferències entre els canvis realitzats
+en el <strong>Directori de treball</strong> o <strong>l'Àrea de Preparació</strong> respecte del <strong>Repositori local</strong>.</p>
+<p>La sintaxi amb les opcions bàsiques es:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>git<span class="w"> </span>diff<span class="w"> </span><span class="o">[</span>--staged<span class="o">]</span><span class="w"> </span><span class="o">[</span>&lt;path&gt;<span class="o">]</span>
+</span></code></pre></div></p>
+<ul>
+<li><code>--staged</code>: Opcional. Mostra les diferències entre <strong>l'Àrea de Preparació</strong> i el <strong>Repositori local</strong>.
+    Si no s'indica, es compararan les diferències entre el <strong>Directori de treball</strong> i el <strong>Repositori local</strong>.</li>
+<li><code>&lt;path&gt;</code>: Opcional. Fitxer o directori sobre el qual es vol comparar les diferències.
+    Si no s'indica, es compararan totes les diferències.</li>
+</ul>
+<div class="admonition docs">
+<p class="admonition-title">Documentació</p>
+<p>Documentació oficial de <code>git diff</code>: <a href="https://git-scm.com/docs/git-diff" rel="nofollow">https://git-scm.com/docs/git-diff</a></p>
+</div>
+<figure id="figure-7">
+    <img src="../img/01_introduccio/resum_diff.png" alt="Resum git diff">
+    <figcaption>Figura 7: Resum de `git diff`.</figcaption>
+</figure>
+
+<div class="admonition example">
+<p class="admonition-title">Diferències entre el Directori de treball i el Repositori local</p>
+<p>Observem les diferències entre el fitxer <code>README.md</code> del <strong>Directori de treball</strong> i el <strong>Repositori local</strong>.</p>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="gp-uh">joapuiib@FP</span><span class="gp">:</span><span class="gp-d">~/01_introduccio</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Aquesta és una línia nova&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="gp-uh">joapuiib@FP</span><span class="gp">:</span><span class="gp-d">~/01_introduccio</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>status
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="go">On branch main</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="go">Changes not staged for commit:</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="go">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">        </span><span class="git-mod">modified:   README.md</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="go">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="gp-uh">joapuiib@FP</span><span class="gp">:</span><span class="gp-d">~/01_introduccio</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>diff
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="gh">diff --git a/README.md b/README.md</span>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="gh">index 6d747b3..f3b3b3e 100644</span>
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="gd">--- a/README.md</span>
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="gi">+++ b/README.md</span>
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="gu">@@ -1,2 +1,3 @@</span>
+</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="w"> </span># 01 - Introducció a Git
+</span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="w"> </span>Estem aprenent a utilitzar Git!
+</span><span id="__span-14-19"><a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="gi">+Aquesta és una línia nova</span>
+</span></code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Diferències entre l'Àrea de Preparació i el Repositori local</p>
+<p>Observem les diferències entre el fitxer <code>README.md</code> de l'<em>Àrea de Preparació</em> i el <strong>Repositori local</strong>.</p>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="gp-uh">joapuiib@FP</span><span class="gp">:</span><span class="gp-d">~/01_introduccio</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>README.md
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="gp-uh">joapuiib@FP</span><span class="gp">:</span><span class="gp-d">~/01_introduccio</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>status
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="go">On branch main</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="go">Changes to be committed:</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="go">  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">        </span><span class="git-stg">modified:   README.md</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="gp-uh">joapuiib@FP</span><span class="gp">:</span><span class="gp-d">~/01_introduccio</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>diff<span class="w"> </span>--staged
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="gh">diff --git a/README.md b/README.md</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="gh">index 6d747b3..f3b3b3e 100644</span>
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="gd">--- a/README.md</span>
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="gi">+++ b/README.md</span>
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="gu">@@ -1,2 +1,3 @@</span>
+</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="w"> </span># 01 - Introducció a Git
+</span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="w"> </span>Estem aprenent a utilitzar Git!
+</span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a><span class="gi">+Aquesta és una línia nova</span>
+</span></code></pre></div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Interpretació de <code>git diff</code></p>
+<p>El format de les línies de <code>git diff</code> és el següent:</p>
+<ul>
+<li><code>diff --git a/README.md b/README.md</code>: Mostra els fitxers comparats.<ul>
+<li><code>a/README.md</code>: Fitxer original.</li>
+<li><code>b/README.md</code>: Fitxer modificat.</li>
+</ul>
+</li>
+<li><code>index 6d747b3..f3b3b3e 100644</code>: Mostra el hash dels fitxers comparats i els permisos.</li>
+<li><code>--- a/README.md</code>: Mostra la ruta del fitxer original.</li>
+<li><code>+++ b/README.md</code>: Mostra la ruta del fitxer modificat.</li>
+<li><code>@@ -1,2 +1,3 @@</code>: Mostra la posició de les línies modificades.<ul>
+<li><code>-1,2</code>: Els canvis començen a la línia 1 i afecten 2 línies en el fitxer original.</li>
+<li><code>+1,3</code>: Els canvis començen a la línia 1 i afecten 3 línies en el fitxer modificat.</li>
+</ul>
+</li>
+</ul>
+<p>Després, es mostren les línies modificades:</p>
+<ul>
+<li><code>-</code>: Línia eliminada.</li>
+<li><code>+</code>: Línia afegida.</li>
+</ul>
+<p>En l'exemple anterior, s'ha afegit la línia <code>Aquesta és una línia nova</code> al fitxer <code>README.md</code>.</p>
+</div>
+<h2 id="descartar-canvis">Descartar canvis</h2>
 <h2 id="historic-de-canvis">Històric de canvis</h2>
 <h2 id="configuracio">Configuració</h2>
 <h2 id="ignorar-fitxers">Ignorar fitxers</h2>
@@ -1427,6 +1537,62 @@ A més, s'ha creat el primer <code>commit</code> amb el missatge <code>Added REA
 
 
     
+  <h2 id="__comments">Comentaris</h2>
+
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+        data-repo="joapuiib/mkdocs-material-joapuiib"
+        data-repo-id="R_kgDOMUF9Jg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOMUF9Js4CgyME"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="ca"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+  </script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
 
               </article>
             </div>
