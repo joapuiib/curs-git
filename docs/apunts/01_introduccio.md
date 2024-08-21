@@ -202,6 +202,9 @@ Per últim, tots els canvis de l'__Àrea de preparació__ es poden confirmar i f
     <figcaption>Figura 2: Flux de treball en un repositori de Git.</figcaption>
 </figure>
 
+!!! info
+    La comanda `git restore` es presenta a l'apartat [Descartar canvis](#descartar-canvis).
+
 !!! docs
     Documentació oficial de:
 
@@ -467,6 +470,87 @@ git diff [--staged] [<path>]
 
 
 ## Descartar canvis
+Una altra ferramenta útil de Git és `git restore`, que permet descartar els canvis realitzats en els fitxers
+del __Directori de treball__ o __l'Àrea de Preparació__.
+
+La sintaxi amb les opcions bàsiques és:
+```bash
+git restore [--staged] <path>
+```
+
+- `--staged`: Opcional. Descarta els canvis realitzats en l'__Àrea de Preparació__.
+    Si no s'indica, es descartaran els canvis realitzats en el __Directori de treball__.
+- `<path>`: Opcional. Fitxer o directori sobre el qual es vol descartar els canvis.
+
+Podeu consultar la [Figura 2](#figure-2) per a veure un resum del comportament de `git restore`.
+
+!!! docs
+    Documentació oficial de `git restore`: https://git-scm.com/docs/git-restore
+
+!!! danger
+    La comanda `git restore` descarta els canvis realitzats en els fitxers sense possibilitat de recuperar-los.
+
+!!! example "Descartar canvis en l'Àrea de Preparació"
+    Continuant amb l'exemple anterior, descartem els canvis realitzats en el fitxer `README.md` de l'_Àrea de Preparació_.
+
+    ```shellconsole
+    joapuiib@FP:~/01_introduccio (main) $ git status
+    On branch main
+
+    Changes to be committed:
+      (use "git restore --staged <file>..." to unstage)
+            modified:   README.md
+
+    joapuiib@FP:~/01_introduccio (main) $ git diff --staged
+    diff --git a/README.md b/README.md
+    index 6d747b3..f3b3b3e 100644
+    --- a/README.md
+    +++ b/README.md
+    @@ -1,2 +1,3 @@
+     # 01 - Introducció a Git
+     Estem aprenent a utilitzar Git!
+    +Aquesta és una línia nova
+    joapuiib@FP:~/01_introduccio (main) $ git restore --staged README.md
+    joapuiib@FP:~/01_introduccio (main) $ git status
+    On branch main
+
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+            modified:   README.md
+    ```
+
+!!! example "Descartar canvis en el Directori de treball"
+    Descartem els canvis realitzats en el fitxer `README.md` del __Directori de treball__.
+
+    !!! danger
+        Aquesta comanda descartarà els canvis realitzats en el fitxer `README.md` sense possibilitat de recuperar-los.
+
+    ```shellconsole
+    joapuiib@FP:~/01_introduccio (main) $ git status
+    On branch main
+
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+            modified:   README.md
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+    joapuiib@FP:~/01_introduccio (main) $ git diff
+    diff --git a/README.md b/README.md
+    index 6d747b3..f3b3b3e 100644
+    --- a/README.md
+    +++ b/README.md
+    @@ -1,2 +1,3 @@
+     # 01 - Introducció a Git
+     Estem aprenent a utilitzar Git!
+    +Aquesta és una línia nova
+    joapuiib@FP:~/01_introduccio (main) $ git restore README.md
+    joapuiib@FP:~/01_introduccio (main) $ git status
+    On branch main
+
+    nothing to commit, working tree clean
+    ```
 
 
 ## Històric de canvis
