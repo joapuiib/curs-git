@@ -315,7 +315,7 @@ Cadascun dels `commit` conté la següent informació:
 - __Data__: Data i hora en què s'ha realitzat el `commit`.
 - __Missatge__: Descripció dels canvis realitzats en el `commit`.
 - __Identificador o `hash`__: Codi únic generat automàticament que identifica el `commit`.
-- __Canvis__: Llista de fitxers modificats, afegits o eliminats en el `commit` i els canvis realitzats en ells.
+- __Canvis__: Llista de fitxers modificats, afegits o eliminats en el `commit` i els canvis realitzats en ells __respecte de la versió anterior__.
 
 Per tant, abans de realitzar un `commit`, és necessari configurar el nom i el correu electrònic de l'autor.
 
@@ -554,6 +554,74 @@ Podeu consultar la [Figura 2](#figure-2) per a veure un resum del comportament d
 
 
 ## Històric de canvis
+Git registra tots els canvis confirmats (`commit`) en el __Repositori local__.
+L'històric de canvis es pot consultar amb l'ordre `git log`.
+
+```bash
+git log [options]
+```
+
+!!! docs
+    Consulta totes les opcions a la documentació oficial de `git log`: https://git-scm.com/docs/git-log
+
+!!! example "Històric de canvis"
+    Modifiquem novament el fitxer `README.md` i realitzem un nou `commit`.
+
+    ```shellconsole
+    joapuiib@FP:~/01_introduccio (main) $ echo "Aquesta és una altra línia" >> README.md
+    joapuiib@FP:~/01_introduccio (main) $ git commit -a -m "Added another line to README.md"# (1)!
+    [main c9fc6c8] Added another line to README.md
+     1 file changed, 1 insertions(+)
+    ```
+
+    1. Amb `-a` afegim tots els canvis realitzats al fitxer `README.md` a l'_Àrea de Preparació_ sense necessitat de `git add`.
+
+    Consultem l'històric de canvis amb `git log`.
+
+    ```shellconsole
+    joapuiib@FP:~/01_introduccio (main) $ git log
+    commit c9fc6c856c2d52744b85a6f8d92feac496e60bd6 (HEAD -> main)
+    Author: Joan Puigcerver <j.puigcerveribanez@edu.gva.es>
+    Date:   Mon Oct 16 11:43:20 2023 +0200
+
+        Added another line to README.md
+
+    commit 8e702933d5dbec9ee71100a1599ae4491085e1aa
+    Author: Joan Puigcerver <j.puigcerveribanez@edu.gva.es>
+    Date:   Fri Oct 13 16:06:59 2023 +0200
+
+        Added Readme.md
+    ```
+
+    S'observa tota la informació dels `commit` realitzats, com l'autor, la data, el missatge i l'identificador.
+
+L'ordre `git log` admet moltes opcions per a personalitzar com es mostren els `commit` i la seua informació.
+
+Una possible combicació d'opcions per visualitzar l'històric de canvis de manera més compacta i intuintiva és:
+
+```bash
+git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
+```
+
+!!! example "Històric de canvis compacte"
+    ```shellconsole
+    joapuiib@FP:~/01_introduccio (main) $ git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
+    * c9fc6c8 - (2 minutes ago) Added another line to README.md - Joan Puigcerver (HEAD -> main)
+    * 8e70293 - (3 days ago) Added Readme.md - Joan Puigcerver
+    ```
+
+No obstant això, no és pràctic recordar aquesta comanda. Per això, podem configurar un __alias__
+per a simplificar la seua crida (Vegeu [Configuració](#configuracio)) .
+
+!!! example "Històric de canvis compacte amb àlias"
+    Després de configurar l'àlias `git lg` per a l'ordre anterior, podem cridar-lo de la següent manera:
+
+    ```shellconsole
+    joapuiib@FP:~/01_introduccio (main) $ git lg
+    * c9fc6c8 - (2 minutes ago) Added another line to README.md - Joan Puigcerver (HEAD -> main)
+    * 8e70293 - (3 days ago) Added README.md - Joan Puigcerver
+    ```
+
 
 ## Configuració
 
