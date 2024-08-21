@@ -1,6 +1,7 @@
 ---
 template: document.html
 title: "Bloc 1: Introducció a Git"
+comments: true
 ---
 
 ## Què és Git?
@@ -183,7 +184,7 @@ Dins de l'_Entorn de desenvolupament_ trobem els següents components:
 Quan treballes amb un projecte de Git, els canvis es realitzen sobre el __Directori de treball__.
 Aquests canvis poden ser:
 
-- __Afegir un nou fitxer.__ El nou fitxer comença en l'estat __Untracked__, és a dir, no està sotmès a seguiment per Git.
+- __Crear un nou fitxer.__ El nou fitxer comença en l'estat __Untracked__, és a dir, no està sotmès a seguiment per Git.
 - __Modificar un fitxer amb seguiment.__ El fitxer modificat es trobarà en l'estat __Modified__.
 - __Eliminar un fitxer amb seguiment.__ El fitxer eliminat es trobarà en l'estat __Deleted__.
 
@@ -374,7 +375,99 @@ index 0000000..6d747b3
 +Estem aprenent a utilitzar Git!
 ```
 
-## Més canvis
+## Diferències entre versions
+Una ferramenta molt útil de Git és `git diff`, que permet comparar les diferències entre els canvis realitzats
+en el __Directori de treball__ o __l'Àrea de Preparació__ respecte del __Repositori local__.
+
+La sintaxi amb les opcions bàsiques es:
+```bash
+git diff [--staged] [<path>]
+```
+
+- `--staged`: Opcional. Mostra les diferències entre __l'Àrea de Preparació__ i el __Repositori local__.
+    Si no s'indica, es compararan les diferències entre el __Directori de treball__ i el __Repositori local__.
+- `<path>`: Opcional. Fitxer o directori sobre el qual es vol comparar les diferències.
+    Si no s'indica, es compararan totes les diferències.
+
+!!! docs
+    Documentació oficial de `git diff`: https://git-scm.com/docs/git-diff
+
+<figure id="figure-7">
+    <img src="../img/01_introduccio/resum_diff.png" alt="Resum git diff">
+    <figcaption>Figura 7: Resum de `git diff`.</figcaption>
+</figure>
+
+!!! example "Diferències entre el Directori de treball i el Repositori local"
+    Observem les diferències entre el fitxer `README.md` del __Directori de treball__ i el __Repositori local__.
+
+    ```shellconsole
+    joapuiib@FP:~/01_introduccio (main) $ echo "Aquesta és una línia nova" >> README.md
+    joapuiib@FP:~/01_introduccio (main) $ git status
+    On branch main
+
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+            modified:   README.md
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+    joapuiib@FP:~/01_introduccio (main) $ git diff
+    diff --git a/README.md b/README.md
+    index 6d747b3..f3b3b3e 100644
+    --- a/README.md
+    +++ b/README.md
+    @@ -1,2 +1,3 @@
+     # 01 - Introducció a Git
+     Estem aprenent a utilitzar Git!
+    +Aquesta és una línia nova
+    ```
+
+!!! example "Diferències entre l'Àrea de Preparació i el Repositori local"
+    Observem les diferències entre el fitxer `README.md` de l'_Àrea de Preparació_ i el __Repositori local__.
+
+    ```shellconsole
+    joapuiib@FP:~/01_introduccio (main) $ git add README.md
+    joapuiib@FP:~/01_introduccio (main) $ git status
+    On branch main
+
+    Changes to be committed:
+      (use "git restore --staged <file>..." to unstage)
+            modified:   README.md
+
+    joapuiib@FP:~/01_introduccio (main) $ git diff --staged
+    diff --git a/README.md b/README.md
+    index 6d747b3..f3b3b3e 100644
+    --- a/README.md
+    +++ b/README.md
+    @@ -1,2 +1,3 @@
+     # 01 - Introducció a Git
+     Estem aprenent a utilitzar Git!
+    +Aquesta és una línia nova
+    ```
+
+!!! info "Interpretació de `git diff`"
+    El format de les línies de `git diff` és el següent:
+
+    - `diff --git a/README.md b/README.md`: Mostra els fitxers comparats.
+        - `a/README.md`: Fitxer original.
+        - `b/README.md`: Fitxer modificat.
+    - `index 6d747b3..f3b3b3e 100644`: Mostra el hash dels fitxers comparats i els permisos.
+    - `--- a/README.md`: Mostra la ruta del fitxer original.
+    - `+++ b/README.md`: Mostra la ruta del fitxer modificat.
+    - `@@ -1,2 +1,3 @@`: Mostra la posició de les línies modificades.
+        - `-1,2`: Els canvis començen a la línia 1 i afecten 2 línies en el fitxer original.
+        - `+1,3`: Els canvis començen a la línia 1 i afecten 3 línies en el fitxer modificat.
+
+    Després, es mostren les línies modificades:
+
+    - `-`: Línia eliminada.
+    - `+`: Línia afegida.
+
+    En l'exemple anterior, s'ha afegit la línia `Aquesta és una línia nova` al fitxer `README.md`.
+
+
+## Descartar canvis
+
 
 ## Històric de canvis
 
