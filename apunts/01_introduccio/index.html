@@ -1349,7 +1349,7 @@ del repositori i que conté tota la informació relativa als canvis realitzats.<
 <li><strong>Data</strong>: Data i hora en què s'ha realitzat el <code>commit</code>.</li>
 <li><strong>Missatge</strong>: Descripció dels canvis realitzats en el <code>commit</code>.</li>
 <li><strong>Identificador o <code>hash</code></strong>: Codi únic generat automàticament que identifica el <code>commit</code>.</li>
-<li><strong>Canvis</strong>: Llista de fitxers modificats, afegits o eliminats en el <code>commit</code> i els canvis realitzats en ells.</li>
+<li><strong>Canvis</strong>: Llista de fitxers modificats, afegits o eliminats en el <code>commit</code> i els canvis realitzats en ells <strong>respecte de la versió anterior</strong>.</li>
 </ul>
 <p>Per tant, abans de realitzar un <code>commit</code>, és necessari configurar el nom i el correu electrònic de l'autor.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span>&lt;name&gt;
@@ -1574,6 +1574,62 @@ del <strong>Directori de treball</strong> o <strong>l'Àrea de Preparació</stro
 </span></code></pre></div>
 </div>
 <h2 id="historic-de-canvis">Històric de canvis</h2>
+<p>Git registra tots els canvis confirmats (<code>commit</code>) en el <strong>Repositori local</strong>.
+L'històric de canvis es pot consultar amb l'ordre <code>git log</code>.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>git<span class="w"> </span>log<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</span></code></pre></div>
+<div class="admonition docs">
+<p class="admonition-title">Documentació</p>
+<p>Consulta totes les opcions a la documentació oficial de <code>git log</code>: <a href="https://git-scm.com/docs/git-log" rel="nofollow">https://git-scm.com/docs/git-log</a></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Històric de canvis</p>
+<p>Modifiquem novament el fitxer <code>README.md</code> i realitzem un nou <code>commit</code>.</p>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="gp-uh">joapuiib@FP</span><span class="gp">:</span><span class="gp-d">~/01_introduccio</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Aquesta és una altra línia&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="gp-uh">joapuiib@FP</span><span class="gp">:</span><span class="gp-d">~/01_introduccio</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Added another line to README.md&quot;</span><span class="c1"># (1)!</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="go">[main c9fc6c8] Added another line to README.md</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="go"> 1 file changed, 1 insertions(+)</span>
+</span></code></pre></div>
+<ol>
+<li>Amb <code>-a</code> afegim tots els canvis realitzats al fitxer <code>README.md</code> a l'<em>Àrea de Preparació</em> sense necessitat de <code>git add</code>.</li>
+</ol>
+<p>Consultem l'històric de canvis amb <code>git log</code>.</p>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="gp-uh">joapuiib@FP</span><span class="gp">:</span><span class="gp-d">~/01_introduccio</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>log
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="git-show-h">commit c9fc6c856c2d52744b85a6f8d92feac496e60bd6</span><span class="w"> </span><span class="git-show-h">(</span><span class="git-h">HEAD</span><span class="w"> </span><span class="git-show-h">-&gt;</span><span class="w"> </span><span class="git-b">main</span><span class="git-show-h">)</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="go">Author: Joan Puigcerver &lt;j.puigcerveribanez@edu.gva.es&gt;</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="go">Date:   Mon Oct 16 11:43:20 2023 +0200</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="go">    Added another line to README.md</span>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="git-show-h">commit 8e702933d5dbec9ee71100a1599ae4491085e1aa</span>
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="go">Author: Joan Puigcerver &lt;j.puigcerveribanez@edu.gva.es&gt;</span>
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="go">Date:   Fri Oct 13 16:06:59 2023 +0200</span>
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="go">    Added Readme.md</span>
+</span></code></pre></div>
+<p>S'observa tota la informació dels <code>commit</code> realitzats, com l'autor, la data, el missatge i l'identificador.</p>
+</div>
+<p>L'ordre <code>git log</code> admet moltes opcions per a personalitzar com es mostren els <code>commit</code> i la seua informació.</p>
+<p>Una possible combicació d'opcions per visualitzar l'històric de canvis de manera més compacta i intuintiva és:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>git<span class="w"> </span>log<span class="w"> </span>--graph<span class="w"> </span>--abbrev-commit<span class="w"> </span>--decorate<span class="w"> </span>--format<span class="o">=</span>format:<span class="s1">&#39;%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)&#39;</span>
+</span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Històric de canvis compacte</p>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="gp-uh">joapuiib@FP</span><span class="gp">:</span><span class="gp-d">~/01_introduccio</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--graph<span class="w"> </span>--abbrev-commit<span class="w"> </span>--decorate<span class="w"> </span>--format<span class="o">=</span>format:<span class="s1">&#39;%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)&#39;</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">c9fc6c8</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 minutes ago)</span><span class="w"> </span><span class="git-cm">Added another line to README.md</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8e70293</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 days ago)</span><span class="w"> </span><span class="git-cm">Added Readme.md</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+</span></code></pre></div>
+</div>
+<p>No obstant això, no és pràctic recordar aquesta comanda. Per això, podem configurar un <strong>alias</strong>
+per a simplificar la seua crida (Vegeu <a href="#configuracio" rel="nofollow">Configuració</a>) .</p>
+<div class="admonition example">
+<p class="admonition-title">Històric de canvis compacte amb àlias</p>
+<p>Després de configurar l'àlias <code>git lg</code> per a l'ordre anterior, podem cridar-lo de la següent manera:</p>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="gp-uh">joapuiib@FP</span><span class="gp">:</span><span class="gp-d">~/01_introduccio</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>lg
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">c9fc6c8</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 minutes ago)</span><span class="w"> </span><span class="git-cm">Added another line to README.md</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8e70293</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 days ago)</span><span class="w"> </span><span class="git-cm">Added README.md</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+</span></code></pre></div>
+</div>
 <h2 id="configuracio">Configuració</h2>
 <h2 id="ignorar-fitxers">Ignorar fitxers</h2>
 <h2 id="recursos-addicionals">Recursos addicionals</h2>
