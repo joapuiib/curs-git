@@ -71,6 +71,8 @@ plugins:
             quote: Cita
             docs: Documentació
             solution: Solució
+            important: Important
+            notice: Fixa't
   - git-revision-date-localized
 
 markdown_extensions:

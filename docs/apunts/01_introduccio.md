@@ -10,7 +10,7 @@ amb rapidesa i eficiència. L'objectiu principal de Git és controlar i gestiona
 en una enorme quantitat de fitxers d'una manera fàcil i eficient.
 
 Git va ser dissenyat en 2005 per Linux Torvalds, creador del kernel del sistema operatiu Linux, i des d'aleshores,
-s'ha convertit en una eina fonamental i inprescindible en la gestió de codi font en projectes col·laboratius.
+s'ha convertit en una eina fonamental i imprescindible en la gestió de codi font en projectes col·laboratius.
 
 Git està basat en __repositoris__, que s'inicialitzen en un directori concret i contenen tota la informació
 dels canvis realitzats en tot l'arbre de directoris i fitxers a partir d'aquest directori.
@@ -30,7 +30,7 @@ Els principals objectius i característiques de Git són:
     Els desenvolupadors poden resoldre aquests conflictes manualment.
 - __Col·laboració__: Git facilita la col·laboració en projectes de codi obert o en equips,
     ja que permet a múltiples persones treballar en el mateix projecte de manera eficient.
-    Plataformes com GitHub, GitLab i Bitbucket s'utilitzen comúment per a allotjar repositoris Git en línia i col·laborar en projectes.
+    Plataformes com GitHub, GitLab i Bitbucket s'utilitzen comunment per a allotjar repositoris Git en línia i col·laborar en projectes.
 - __Codi obert i gratuït__: Git és de codi obert i gratuït, la qual cosa significa que qualsevol pot utilitzar-lo sense cost i contribuir al desenvolupament de l'eina.
 
 
@@ -289,7 +289,7 @@ mitjançant l'ordre `git commit`.
 git commit [-a] [-m "<message>"]
 ```
 
-- `-a`: Opcional. Afegix tots els fitxers modificats i eliminats a l'_Àrea de Preparació_ (sense necessitat de `git add`).
+- `-a`: Opcional. Afegeix tots els fitxers modificats i eliminats a l'_Àrea de Preparació_ (sense necessitat de `git add`).
 - `-m "<message>"`: Opcional. Missatge que descriu el canvi realitzat en el `commit`.
 
 !!! warning annotate
@@ -597,7 +597,7 @@ git log [options]
 
 L'ordre `git log` admet moltes opcions per a personalitzar com es mostren els `commit` i la seua informació.
 
-Una possible combicació d'opcions per visualitzar l'històric de canvis de manera més compacta i intuintiva és:
+Una possible combicació d'opcions per visualitzar l'històric de canvis de manera més compacta i intuïtiva és:
 
 ```bash
 git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
@@ -611,7 +611,12 @@ git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(re
     ```
 
 No obstant això, no és pràctic recordar aquesta comanda. Per això, podem configurar un __alias__
-per a simplificar la seua crida (Vegeu [Configuració](#configuracio)) .
+per a simplificar la seua crida.
+
+```bash
+git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'"
+git config --global alias.lga "lg --all"
+```
 
 !!! example "Històric de canvis compacte amb àlias"
     Després de configurar l'àlias `git lg` per a l'ordre anterior, podem cridar-lo de la següent manera:
@@ -624,8 +629,97 @@ per a simplificar la seua crida (Vegeu [Configuració](#configuracio)) .
 
 
 ## Configuració
+Git permet configurar diferents paràmetres per a personalitzar el seu comportament mitjançant l'ordre `git config`.
+
+```bash
+git config [--global] <key> <value>
+```
+
+- `--global`: Opcional. Configura el paràmetre de manera global per a tots els repositoris.
+    Si no s'indica, la configuració es realitzarà únicament per al repositori actual.
+
+!!! notice
+    Fixeu-vos que ja hem utilitzat aquesta comanda per configurar els següents aspectes:
+
+    - El nom (`user.name`) i el correu electrònic (`user.email`) de l'autor dels `commit`
+    - L'editor per defecte (`core.editor`).
+
+### Fitxer de configuració
+La configuració `--global` s'emmagatzema en el fitxer `.gitconfig`, situat del directori de l'usuari.
+
+=== "Linux"
+    ```bash
+    /home/<username>/.gitconfig
+    ```
+=== "Windows"
+    ```cmd
+    C:\Users\<username>\.gitconfig
+    ```
+
+!!! example "Exemple configuració"
+    ```cfg
+    [core]
+        editor = vim # Editor per defecte
+
+    [init]
+        defaultBranch = main # Nom de la branca principal per defecte
+
+    [user]
+        name = {{ config.site_author }}
+        email = {{ config.site_email }}
+
+    [alias]
+        lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
+        lga = lg --all
+    ```
 
 ## Ignorar fitxers
+En un projecte, hi ha fitxers que no volem incloure en el repositori, com arxius temporals, binaris o fitxers de configuració.
+Git permet ignorar aquests fitxers mitjançant el fitxer `.gitignore`, que conté una llista de patrons de fitxers els
+quals Git no tindrà en compte.
+
+Aquest fitxer pot estar situat en qualsevol directori del repositori i Git ignorarà per a tots els fitxers i subdirectoris d'aquest
+que complisquen algun dels patrons especificats.
+
+!!! docs
+    Documentació oficial de `.gitignore`: https://git-scm.com/docs/gitignore
+
+    Llista de patrons:
+
+    - https://git-scm.com/docs/gitignore#_pattern_format
+    - https://www.w3schools.com/git/git_ignore.asp?remote=github
+
+!!! example "Exemple de `.gitignore`"
+    ```gitignore
+    # ignore ALL .log files
+    *.log
+
+    # ignore ALL files in ANY directory named temp
+    temp/
+    ```
+
+    ```shellconsole
+    joapuiib@FP:~/01_introduccio (main) $ touch temp/file.txt
+    joapuiib@FP:~/01_introduccio (main) $ git status
+    On branch main
+
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
+            temp/file.txt
+
+    nothing added to commit but untracked files present (use "git add" to track)
+    joapuiib@FP:~/01_introduccio (main) $ echo "temp/" > .gitignore
+    joapuiib@FP:~/01_introduccio (main) $ git status # (1)!
+    On branch main
+
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
+            .gitignore
+
+    nothing added to commit but untracked files present (use "git add" to track)
+    ```
+
+    1. El fitxer `temp/file.txt` no apareix en l'estat del repositori després de crear el fitxer `.gitignore`.
 
 ## Recursos addicionals
 - [Curs de Git des de zero per MoureDev](https://www.youtube.com/watch?v=3GymExBkKjE&ab_channel=MoureDevbyBraisMoure)
