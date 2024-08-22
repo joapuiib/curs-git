@@ -71,6 +71,47 @@ Alguns dels serveis d'allotjament repositoris remots en línia més coneguts só
 
 
 ## Creació d'un repositori remot a GitHub
+En aquesta secció, crearem un repositori remot a GitHub.
+
+1. Crea un compte a [:simple-github: GitHub](https://github.com/) si no en tens un.
+2. Inicia la sessió amb el teu compte.
+3. Fes clic a l'opció __["New"](https://github.com/new)__ per crear un nou repositori.
+4. Omple el formulari amb la informació del teu repositori:
+    - __Nom__ del repositori. Ha de ser un nom únic en el teu compte de GitHub.
+    - __Descripció__ del repositori. Opcional.
+    - __Visibilitat__ del repositori. Pots triar entre públic o privat.
+        - __Públic__: Qualsevol persona pot veure el teu repositori. Sols les persones autoritzades poden fer canvis.
+        - __Privat__: Només tu i les persones que tu autoritzes poden veure el teu repositori. Sols les persones autoritzades poden fer canvis.
+    - __README__: Indica si vols afegir un README al teu repositori.
+    - __.gitignore__: Indica si vols afegir un fitxer `.gitignore` per ignorar fitxers en el teu repositori.
+    - __Llicència__: Indica si vols afegir una llicència al teu repositori.
+
+!!! example
+    En aquest material, crearem un repositori amb les següents característiques:
+
+    - __Nom__: `02_remots`
+    - __Descripció__: Repositori del Bloc 2: Remots del curs "Introducció a Git i la seua aplicació a l’aula"
+    - __Visibilitat__: Públic
+    - __README__: No
+    - __.gitignore__: No
+    - __Llicència__: No
+
+    <figure id="figure-2">
+        <img src="../img/02_remots/github_new_repository.png" alt="Formulari de creació d'un nou repositori a GitHub">
+        <figcaption>Figura 2: Formulari de creació d'un nou repositori a GitHub</figcaption>
+    </figure>
+
+    Una vegada omplert el formulari, fes clic a __"Create repository"__ per crear el teu repositori.
+
+    El teu repositori s'hauria de crear __buit__ i hauries de veure una pàgina com la següent:
+
+    <figure id="figure-3">
+        <img src="../img/02_remots/github_empty_repository.png" alt="Repositori buit creat a GitHub">
+        <figcaption>Figura 3: Repositori buit creat a GitHub</figcaption>
+    </figure>
+
+    La [Figura 3](#figure-3) mostra els passos per enllaçar el teu repositori local amb el repositori remot creat a GitHub.
+    En els següents apartats, explicarem aquestes ordres amb més detall.
 
 ## Configurar un repositori remot
 

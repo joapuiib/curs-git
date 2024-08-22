@@ -1,8 +1,8 @@
 ---
 template: document.html
 title: "Bloc 1: Introducció a Git"
-comments: true
 alias: bloc1
+comments: true
 ---
 
 ## Què és Git?

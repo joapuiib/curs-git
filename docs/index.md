@@ -26,9 +26,9 @@ hide:
     - Creació d'un repositori remot a GitHub.
     - Configurar un repositori remot.
     - Mètodes d'autenticació.
-    - Clonació d'un repositori remote.
     - Associació entre branques locals i remotes.
     - Publicació i incorporació de canvis.
+    - Clonació d'un repositori remot.
 - __Bloc 3: Branques__
     - Creació de branques.
     - Navegar entre branques.
