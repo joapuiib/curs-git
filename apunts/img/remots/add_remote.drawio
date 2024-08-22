@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-06T19:36:29.697Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="joFRACcD5HTTO8_gU-um" version="22.0.8" type="device">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36" version="24.7.7">
   <diagram name="Pàgina-1" id="mhbHxmUa4zc_a_H4eHv1">
-    <mxGraphModel dx="1434" dy="750" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -37,7 +37,7 @@
         <mxCell id="6d2bNqNMUXDxkiYPfy11-13" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;image=https://cdn.icon-icons.com/icons2/2718/PNG/512/git_branch_icon_174485.png;" parent="1" vertex="1">
           <mxGeometry x="484.5" y="394" width="71" height="71" as="geometry" />
         </mxCell>
-        <mxCell id="ZBEQYxtLiUxqlCDxY6mG-62" value="git@github.com:joapuiib/git_tutorial.git" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=2" parent="1" vertex="1">
+        <mxCell id="ZBEQYxtLiUxqlCDxY6mG-62" value="git@github.com:joapuiib/git_remots.git" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=2" parent="1" vertex="1">
           <mxGeometry x="205" y="30" width="360" height="30" as="geometry" />
         </mxCell>
       </root>
