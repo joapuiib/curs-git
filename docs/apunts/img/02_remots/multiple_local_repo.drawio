@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net" modified="2023-11-06T15:40:02.498Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="blgvKAFOY385m8yFit7D" version="22.0.8" type="device">
+  <diagram name="Pàgina-1" id="mhbHxmUa4zc_a_H4eHv1">
+    <mxGraphModel dx="1434" dy="750" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="6d2bNqNMUXDxkiYPfy11-4" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.mscae.enterprise.internet" parent="1" vertex="1">
+          <mxGeometry x="590" y="94.5" width="50" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="6d2bNqNMUXDxkiYPfy11-6" value="&lt;b style=&quot;font-size: 18px;&quot;&gt;Repositori Remot&lt;/b&gt;&lt;br style=&quot;font-size: 18px;&quot;&gt;&lt;i style=&quot;font-size: 18px;&quot;&gt;Remote Repository&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="660" y="50" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBEQYxtLiUxqlCDxY6mG-35" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="100" y="230" width="380" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="6d2bNqNMUXDxkiYPfy11-1" value="&lt;i style=&quot;font-size: 14px;&quot;&gt;Local - El nostre Entorn de desenvolupament&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;align=center;textDirection=ltr;labelBackgroundColor=none;spacingTop=0;spacing=2;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;container=0;" parent="ZBEQYxtLiUxqlCDxY6mG-35" vertex="1">
+          <mxGeometry x="52.15686274509804" width="327.843137254902" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="6d2bNqNMUXDxkiYPfy11-5" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.azure.computer;fontSize=14;container=0;" parent="ZBEQYxtLiUxqlCDxY6mG-35" vertex="1">
+          <mxGeometry y="39.528399999999976" width="34" height="30.6" as="geometry" />
+        </mxCell>
+        <mxCell id="6d2bNqNMUXDxkiYPfy11-9" value="&lt;b style=&quot;font-size: 14px;&quot;&gt;Repositori local&lt;/b&gt;&lt;i style=&quot;font-size: 14px;&quot;&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;Local Repository&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;container=0;" parent="ZBEQYxtLiUxqlCDxY6mG-35" vertex="1">
+          <mxGeometry x="275.6862745098039" y="13.599999999999994" width="89.41176470588235" height="81.60000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="6d2bNqNMUXDxkiYPfy11-10" value="&lt;b style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;Àrea de preparació&lt;/b&gt;&lt;br style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;&lt;i style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;Staging Area&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;container=0;" parent="ZBEQYxtLiUxqlCDxY6mG-35" vertex="1">
+          <mxGeometry x="171.37254901960785" y="14.028400000000005" width="89.41176470588235" height="81.60000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="6d2bNqNMUXDxkiYPfy11-11" value="&lt;b style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;Directori de treball&lt;/b&gt;&lt;br style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;&lt;i style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;Working directory&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;container=0;" parent="ZBEQYxtLiUxqlCDxY6mG-35" vertex="1">
+          <mxGeometry x="67.05882352941177" y="14.028400000000005" width="89.41176470588235" height="81.60000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="6d2bNqNMUXDxkiYPfy11-12" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;image=https://cdn0.iconfinder.com/data/icons/folder-line/512/folder_tree-512.png;fontSize=14;container=0;" parent="ZBEQYxtLiUxqlCDxY6mG-35" vertex="1">
+          <mxGeometry x="85.68627450980392" y="108.80000000000001" width="47.6" height="47.6" as="geometry" />
+        </mxCell>
+        <mxCell id="6d2bNqNMUXDxkiYPfy11-13" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;image=https://cdn.icon-icons.com/icons2/2718/PNG/512/git_branch_icon_174485.png;fontSize=14;container=0;" parent="ZBEQYxtLiUxqlCDxY6mG-35" vertex="1">
+          <mxGeometry x="293.94117647058823" y="104.72000000000003" width="48.28" height="48.28" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBEQYxtLiUxqlCDxY6mG-44" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="500" y="230" width="380" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBEQYxtLiUxqlCDxY6mG-45" value="&lt;i style=&quot;font-size: 14px;&quot;&gt;Local - Entorn de desenvolupament de Pau&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;align=center;textDirection=ltr;labelBackgroundColor=none;spacingTop=0;spacing=2;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;container=0;" vertex="1" parent="ZBEQYxtLiUxqlCDxY6mG-44">
+          <mxGeometry x="52.15686274509804" width="327.843137254902" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBEQYxtLiUxqlCDxY6mG-46" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.azure.computer;fontSize=14;container=0;" vertex="1" parent="ZBEQYxtLiUxqlCDxY6mG-44">
+          <mxGeometry y="39.528399999999976" width="34" height="30.6" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBEQYxtLiUxqlCDxY6mG-47" value="&lt;b style=&quot;font-size: 14px;&quot;&gt;Repositori local&lt;/b&gt;&lt;i style=&quot;font-size: 14px;&quot;&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;Local Repository&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;container=0;" vertex="1" parent="ZBEQYxtLiUxqlCDxY6mG-44">
+          <mxGeometry x="275.6862745098039" y="13.599999999999994" width="89.41176470588235" height="81.60000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBEQYxtLiUxqlCDxY6mG-48" value="&lt;b style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;Àrea de preparació&lt;/b&gt;&lt;br style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;&lt;i style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;Staging Area&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;container=0;" vertex="1" parent="ZBEQYxtLiUxqlCDxY6mG-44">
+          <mxGeometry x="171.37254901960785" y="14.028400000000005" width="89.41176470588235" height="81.60000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBEQYxtLiUxqlCDxY6mG-49" value="&lt;b style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;Directori de treball&lt;/b&gt;&lt;br style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;&lt;i style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;Working directory&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;container=0;" vertex="1" parent="ZBEQYxtLiUxqlCDxY6mG-44">
+          <mxGeometry x="67.05882352941177" y="14.028400000000005" width="89.41176470588235" height="81.60000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBEQYxtLiUxqlCDxY6mG-50" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;image=https://cdn0.iconfinder.com/data/icons/folder-line/512/folder_tree-512.png;fontSize=14;container=0;" vertex="1" parent="ZBEQYxtLiUxqlCDxY6mG-44">
+          <mxGeometry x="85.68627450980392" y="108.80000000000001" width="47.6" height="47.6" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBEQYxtLiUxqlCDxY6mG-51" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;image=https://cdn.icon-icons.com/icons2/2718/PNG/512/git_branch_icon_174485.png;fontSize=14;container=0;" vertex="1" parent="ZBEQYxtLiUxqlCDxY6mG-44">
+          <mxGeometry x="293.94117647058823" y="104.72000000000003" width="48.28" height="48.28" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBEQYxtLiUxqlCDxY6mG-52" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="900" y="230" width="380" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBEQYxtLiUxqlCDxY6mG-53" value="&lt;i style=&quot;font-size: 14px;&quot;&gt;Local - Entorn de desenvolupament de X&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;align=center;textDirection=ltr;labelBackgroundColor=none;spacingTop=0;spacing=2;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;container=0;" vertex="1" parent="ZBEQYxtLiUxqlCDxY6mG-52">
+          <mxGeometry x="52.15686274509804" width="327.843137254902" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBEQYxtLiUxqlCDxY6mG-54" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.azure.computer;fontSize=14;container=0;" vertex="1" parent="ZBEQYxtLiUxqlCDxY6mG-52">
+          <mxGeometry y="39.528399999999976" width="34" height="30.6" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBEQYxtLiUxqlCDxY6mG-55" value="&lt;b style=&quot;font-size: 14px;&quot;&gt;Repositori local&lt;/b&gt;&lt;i style=&quot;font-size: 14px;&quot;&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;Local Repository&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;container=0;" vertex="1" parent="ZBEQYxtLiUxqlCDxY6mG-52">
+          <mxGeometry x="275.6862745098039" y="13.599999999999994" width="89.41176470588235" height="81.60000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBEQYxtLiUxqlCDxY6mG-56" value="&lt;b style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;Àrea de preparació&lt;/b&gt;&lt;br style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;&lt;i style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;Staging Area&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;container=0;" vertex="1" parent="ZBEQYxtLiUxqlCDxY6mG-52">
+          <mxGeometry x="171.37254901960785" y="14.028400000000005" width="89.41176470588235" height="81.60000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBEQYxtLiUxqlCDxY6mG-57" value="&lt;b style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;Directori de treball&lt;/b&gt;&lt;br style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;&lt;i style=&quot;border-color: var(--border-color); font-size: 14px;&quot;&gt;Working directory&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;container=0;" vertex="1" parent="ZBEQYxtLiUxqlCDxY6mG-52">
+          <mxGeometry x="67.05882352941177" y="14.028400000000005" width="89.41176470588235" height="81.60000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBEQYxtLiUxqlCDxY6mG-58" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;image=https://cdn0.iconfinder.com/data/icons/folder-line/512/folder_tree-512.png;fontSize=14;container=0;" vertex="1" parent="ZBEQYxtLiUxqlCDxY6mG-52">
+          <mxGeometry x="85.68627450980392" y="108.80000000000001" width="47.6" height="47.6" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBEQYxtLiUxqlCDxY6mG-59" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;image=https://cdn.icon-icons.com/icons2/2718/PNG/512/git_branch_icon_174485.png;fontSize=14;container=0;" vertex="1" parent="ZBEQYxtLiUxqlCDxY6mG-52">
+          <mxGeometry x="293.94117647058823" y="104.72000000000003" width="48.28" height="48.28" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

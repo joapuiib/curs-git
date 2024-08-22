@@ -22,7 +22,7 @@ hide:
     - Flux de treball
     - Inicialització d'un repositori
     - Realització de canvis
-- __Bloc 2: Remots__
+- [__Bloc 2: Remots__](apunts/02_remots.md)
     - Creació d'un repositori remot a GitHub.
     - Configurar un repositori remot.
     - Mètodes d'autenticació.

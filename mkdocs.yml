@@ -52,6 +52,7 @@ plugins:
   - material/search
   - material-joapuiib/enviorment
   - awesome-pages # Navegació
+  - alias
   - macros
   - i18n:
       languages:
