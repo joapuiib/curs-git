@@ -161,7 +161,7 @@ on encara no haurem connectat cap repositori __remot__.
 Abans que res, hem de conéixer l'estructura d'un repositori de Git.
 
 <figure id="figure-1">
-    <img src="../img/01_introduccio/components.png" alt="Components d'un repositori de Git">
+    <img src="../img/introduccio/components.png" alt="Components d'un repositori de Git">
     <figcaption>Figura 1: Components d'un repositori de Git.</figcaption>
 </figure>
 
@@ -199,7 +199,7 @@ Per últim, tots els canvis de l'__Àrea de preparació__ es poden confirmar i f
 
 
 <figure id="figure-2">
-    <img src="../img/01_introduccio/flux_treball.png" alt="Flux de treball en un repositori de Git">
+    <img src="../img/introduccio/flux_treball.png" alt="Flux de treball en un repositori de Git">
     <figcaption>Figura 2: Flux de treball en un repositori de Git.</figcaption>
 </figure>
 
@@ -245,7 +245,7 @@ La comanda `git status` ens mostra que no s'està realitzant cap seguiment del f
 que es troba en l'estat __Untracked__.
 
 <figure id="figure-3">
-    <img src="../img/01_introduccio/untracked_readme.png" alt="Fitxer sense seguiment">
+    <img src="../img/introduccio/untracked_readme.png" alt="Fitxer sense seguiment">
     <figcaption>Figura 3: Fitxer sense seguiment (untracked).</figcaption>
 </figure>
 
@@ -276,7 +276,7 @@ Changes to be committed:
 Vegem com el fitxer `README.md` ha passat a l'estat __Staged__ i està preparat per a ser confirmat.
 
 <figure id="figure-4">
-    <img src="../img/01_introduccio/staged_readme.png" alt="">
+    <img src="../img/introduccio/staged_readme.png" alt="">
     <figcaption>Figura 4: Fitxer a l'àrea de preparació.</figcaption>
 </figure>
 
@@ -302,7 +302,7 @@ git commit [-a] [-m "<message>"]
     ```
 
 <figure id="figure-5">
-    <img src="../img/01_introduccio/before_commit_readme.png" alt="Estat del repositori de Git abans de fer un commit">
+    <img src="../img/introduccio/before_commit_readme.png" alt="Estat del repositori de Git abans de fer un commit">
     <figcaption>Figura 5: Estat del repositori de Git abans de fer un `commit`.</figcaption>
 </figure>
 
@@ -355,7 +355,7 @@ Vegem que l'estat del nostre repositori ha canviat i ja no hi ha canvis pendents
 A més, s'ha creat el primer `commit` amb el missatge `Added README.md` i identificador `8e70293`.
 
 <figure id="figure-6">
-    <img src="../img/01_introduccio/after_commit_readme.png" alt="Estat del repositori de Git després de fer un commit">
+    <img src="../img/introduccio/after_commit_readme.png" alt="Estat del repositori de Git després de fer un commit">
     <figcaption>Figura 6: Estat del repositori de Git després de fer un `commit`.</figcaption>
 </figure>
 
@@ -397,7 +397,7 @@ git diff [--staged] [<path>]
     Documentació oficial de `git diff`: https://git-scm.com/docs/git-diff
 
 <figure id="figure-7">
-    <img src="../img/01_introduccio/resum_diff.png" alt="Resum git diff">
+    <img src="../img/introduccio/resum_diff.png" alt="Resum git diff">
     <figcaption>Figura 7: Resum de `git diff`.</figcaption>
 </figure>
 

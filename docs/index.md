@@ -22,20 +22,19 @@ hide:
     - Flux de treball
     - Inicialització d'un repositori
     - Realització de canvis
-- [__Bloc 2: Remots__](apunts/02_remots.md)
+- __Bloc 2: Branques__
+    - Creació de branques.
+    - Navegar entre branques.
+    - Sincronització de branques
+    - Fusió de branques (`merge`)
+    - Canvi de base (`rebase`)
+- [__Bloc 3: Remots__](apunts/03_remots.md)
     - Creació d'un repositori remot a GitHub.
     - Configurar un repositori remot.
     - Mètodes d'autenticació.
     - Associació entre branques locals i remotes.
     - Publicació i incorporació de canvis.
     - Clonació d'un repositori remot.
-- __Bloc 3: Branques__
-    - Creació de branques.
-    - Navegar entre branques.
-    - Sincronització de branques
-    - Fusió de branques (`merge`)
-    - Canvi de base (`rebase`)
-    - Incorporació des del remot: `merge` i `rebase`.
 - __Bloc 4: Estratègies de ramificació__
     - GitFlow
 - __Bloc 5: Gestió de projectes__
