@@ -53,6 +53,7 @@ plugins:
   - material-joapuiib/enviorment
   - awesome-pages # Navegació
   - alias
+  - drawio_file
   - macros
   - i18n:
       languages:
@@ -74,7 +75,7 @@ plugins:
             solution: Solució
             important: Important
             notice: Fixa't
-  - git-revision-date-localized
+  - git-revision-date-localized # Després de i18n o falla
 
 markdown_extensions:
   - abbr
