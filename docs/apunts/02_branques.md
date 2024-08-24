@@ -294,3 +294,78 @@ git branch [-d | --delete] [-D] [-f | --force] <nom>
 
 
 ## Fusió de branques
+La __fusió de branques__ o _merge_ és el procés de combinar els canvis d'una branca
+a una altra.
+
+Aquest procés es realitza amb l'ordre:
+```bash
+git merge <branca>
+```
+
+- `<branca>`: Branca que es vol fusionar amb la __branca actual__.
+
+!!! important
+    La __fusió de branques__ sempre incorpora els canvis de la branca
+    especificada a la __branca actual__ (on es troba el `HEAD`).
+
+!!! docs
+    Documentació de la ordre `git merge`: https://git-scm.com/docs/git-merge
+
+Segons l'estrucura de les branques, la fusió pot ser [__directa__](#fusio-directa) (_fast-forward_)
+o mitjançant [__commit de fusió__](#commit-de-fusio) (_merge commit_).
+
+
+### Fusió directa
+La __fusió directa__ (_fast-forward_) és un tipus de fusió que es produeix
+quan la branca actual (`HEAD`) no té cap nou `commit` des de que es va crear la branca
+que es vol fusionar.
+
+En aquest cas, la fusió es realitza avançant el punter de la branca actual (`HEAD`)
+fins on es troba la branca que es vol fusionar.
+
+!!! example annotate
+    Partint de la situació de la [Figura 4](#figure-4), on la branca `desc` té un `commit` més que la branca `main`,
+    la fusió de la branca `desc` a la branca `main` serà una fusió directa.
+
+    <figure id="figure-5">
+        <img src="../img/branques/before_ff.png" alt="Història abans de la fusió directa.">
+        <figcaption>Figura 5: Història abans de la fusió directa.</figcaption>
+    </figure>
+
+    ```shellconsole
+    joapuiib@fp:~/git_branques (desc) $ git checkout main
+    Switched to branch 'main'
+    joapuiib@fp:~/git_branques (main) $ cat README.md
+    # Bloc: Branques
+    joapuiib@fp:~/git_branques (main) $ git lg
+    * 1b2c5d6 - (3 seconds ago) README.md: Subtítol - Joan Puigcerver (desc)
+    * 0b1b3b4 - (3 minutes ago) README.md: Títol - Joan Puigcerver (HEAD -> main)
+    ```
+
+    En aquest cas, la fusió es portarà a terme avançant el punter de la branca `main` fins al punt on es troba la branca `desc`.
+
+    <figure id="figure-6">
+        <img src="../img/branques/after_ff.png" alt="Història després de la fusió directa.">
+        <figcaption>Figura 6: Història després de la fusió directa.</figcaption>
+    </figure>
+
+    ```shellconsole
+    joapuiib@fp:~/git_branques (main) $ git merge desc
+    Updating 0b1b3b4..1b2c5d6
+    Fast-forward
+     README.md | 1 +
+     1 file changed, 1 insertion(+)
+    joapuiib@fp:~/git_branques (main) $ cat README.md # (1)!
+    # Bloc: Branques
+    ## Descripció
+    joapuiib@fp:~/git_branques (main) $ git lg
+    * 1b2c5d6 - (3 seconds ago) README.md: Subtítol - Joan Puigcerver (HEAD -> main, desc)
+    * 0b1b3b4 - (3 minutes ago) README.md: Títol - Joan Puigcerver
+    ```
+
+    1. Vegem que el fitxer `README.md` ha incorporat els canvis de la branca `desc`.
+
+
+### Commit de fusió
+
+### Resolució de conflictes
