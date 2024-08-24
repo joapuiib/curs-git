@@ -69,6 +69,7 @@
 .language-shellconsole.highlight .git-ca {
   color: #D8DEE98a;
 }
+.language-shellconsole.highlight .git-hint,
 .language-shellconsole.highlight .git-show-h,
 .language-shellconsole.highlight .git-t,
 .language-shellconsole.highlight .git-r {
