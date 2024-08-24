@@ -32,7 +32,7 @@ que té connotacions racistes.
     cd ~/git_branques
     echo "# Bloc: Branques" > README.md
     git add README.md
-    git commit -m "README.md: Títol"
+    git commit -m "Títol"
     ```
 
     !!! example
@@ -43,12 +43,12 @@ que té connotacions racistes.
         joapuiib@fp:~/git_branques (main) $ branch -m main # (1)!
         joapuiib@fp:~/git_branques (main) $ echo "# Bloc: Branques" > README.md
         joapuiib@fp:~/git_branques (main) $ git add README.md
-        joapuiib@fp:~/git_branques (main) $ git commit -m "README.md: Títol"
-        [master (root-commit) 0b1b3b4] README.md: Títol
+        joapuiib@fp:~/git_branques (main) $ git commit -m "Títol"
+        [master (root-commit) 0b1b3b4] Títol
          1 file changed, 1 insertion(+)
          create mode 100644 README.md
         joapuiib@fp:~/git_branques (main) $ git lg
-        * 0b1b3b4 - (3 minutes ago) README.md: Títol - Joan Puigcerver (HEAD -> main)
+        * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> main)
         ```
 
         1. Canviem el nom de la branca principal a `main`.
@@ -71,7 +71,7 @@ que avança a mesura que es fan nous commits sobre aquesta.
 
     ```shellconsole
     joapuiib@fp:~/git_branques (main) $ git lg
-    * 0b1b3b4 - (3 minutes ago) README.md: Títol - Joan Puigcerver (HEAD -> main)
+    * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> main)
     ```
 
     Vegem que tenim un únic `commit` amb l'identificador `0b1b3b4`.
@@ -140,7 +140,7 @@ Aquesta ordre indicarà amb un `*` la branca activa (on es troba el `HEAD`).
     * main
       desc
     joapuiib@fp:~/git_branques (main) $ git lg
-    * 0b1b3b4 - (3 minutes ago) README.md: Títol - Joan Puigcerver (HEAD -> main, desc)
+    * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> main, desc)
     ```
 
     Vegem que s'ha creat la branca `desc` que apunta
@@ -193,7 +193,7 @@ La [Figura 3](#figure-2) mostra l'estat del repositori després de canviar a la 
     * main
       desc
     joapuiib@fp:~/git_branques (main) $ git lg
-    * 0b1b3b4 - (3 minutes ago) README.md: Títol - Joan Puigcerver (HEAD -> main, desc)
+    * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> main, desc)
     joapuiib@fp:~/git_branques (main) $ cat README.md
     # Bloc: Branques
     joapuiib@fp:~/git_branques (main) $ git switch desc
@@ -202,7 +202,7 @@ La [Figura 3](#figure-2) mostra l'estat del repositori després de canviar a la 
       main
     * desc
     joapuiib@fp:~/git_branques (desc) $ git lg
-    * 0b1b3b4 - (3 minutes ago) README.md: Títol - Joan Puigcerver (HEAD -> desc, main)
+    * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> desc, main)
     joapuiib@fp:~/git_branques (desc) $ cat README.md
     # Bloc: Branques
     ```
@@ -223,12 +223,12 @@ s'avança al nou `commit`.
     joapuiib@fp:~/git_branques (main) $ git checkout desc
     joapuiib@fp:~/git_branques (desc) $ echo "## Descripció" >> README.md
     joapuiib@fp:~/git_branques (desc) $ git add README.md
-    joapuiib@fp:~/git_branques (desc) $ git commit -m "README.md: Subtítol descripció"
-    [desc 1b2c5d6] README.md: Subtítol
+    joapuiib@fp:~/git_branques (desc) $ git commit -m "Subtítol descripció"
+    [desc 1b2c5d6] Subtítol descripció
      1 file changed, 1 insertion(+)
     joapuiib@fp:~/git_branques (desc) $ git lg
-    * 1b2c5d6 - (3 seconds ago) README.md: Subtítol - Joan Puigcerver (HEAD -> desc)
-    * 0b1b3b4 - (3 minutes ago) README.md: Títol - Joan Puigcerver (main)
+    * 1b2c5d6 - (3 seconds ago) Subtítol descripció - Joan Puigcerver (HEAD -> desc)
+    * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (main)
     ```
 
     Vegem que la branca `desc` ha avançat al nou `commit` `1b2c5d6`, mentre que la branca `main` continua apuntant al `commit` `0b1b3b4`.
@@ -248,7 +248,7 @@ git branch [-m | --move] <nou_nom>
 - `<nou_nom>`: Nou nom de la branca.
 
 !!! example
-    En la [Introducció](#introducció) s'ha utilitzat aquesta opció
+    En la [Introducció](#introduccio) s'ha utilitzat aquesta opció
     per canviar el nom de la branca principal de `master` a `main`.
 
 
@@ -267,9 +267,9 @@ git branch [-d | --delete] [-D] [-f | --force] <nom>
     es diu que és un `commit` __orfre__ i serà eliminat pel
     __recol·lector de brossa__ (_garbage collector_) de Git.
 
-    L'eliminació d'una branca pot provocar la pèrdua de commits,
-    Git mostrarà un error i no es podrà eliminar la branca a no ser
-    que s'utilitze l'opció `-D` o `--delete --force`.
+    L'eliminació d'una branca pot provocar la pèrdua de commits.
+    En aquest cas, Git mostrarà un error i no es podrà eliminar la branca
+    a no ser que s'utilitze l'opció `-D` o `--delete --force`.
 
 !!! example annotate
     Eliminem la branca `desc`.
@@ -277,8 +277,8 @@ git branch [-d | --delete] [-D] [-f | --force] <nom>
     ```shellconsole
     joapuiib@fp:~/git_branques (desc) $ git checkout main
     joapuiib@fp:~/git_branques (main) $ git lg
-    * 1b2c5d6 - (3 seconds ago) README.md: Subtítol - Joan Puigcerver (desc)
-    * 0b1b3b4 - (3 minutes ago) README.md: Títol - Joan Puigcerver (HEAD -> main)
+    * 1b2c5d6 - (3 seconds ago) Subtítol descripció - Joan Puigcerver (desc)
+    * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> main)
     joapuiib@fp:~/git_branques (main) $ git branch -d desc
     error: the branch 'desc' is not fully merged
     hint: If you are sure you want to delete it, run 'git branch -D desc'
@@ -286,7 +286,7 @@ git branch [-d | --delete] [-D] [-f | --force] <nom>
     joapuiib@fp:~/git_branques (main) $ git branch -D desc
     Deleted branch desc (was 1b2c5d6).
     joapuiib@fp:~/git_branques (main) $ git lg
-    * 0b1b3b4 - (3 minutes ago) README.md: Títol - Joan Puigcerver (HEAD -> main)
+    * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> main)
     ```
 
     La branca `desc` ha estat eliminada i, per tant, el `commit` `1b2c5d6` s'ha convertit en un `commit` orfe
@@ -323,6 +323,11 @@ que es vol fusionar.
 En aquest cas, la fusió es realitza avançant el punter de la branca actual (`HEAD`)
 fins on es troba la branca que es vol fusionar.
 
+!!! important
+    La __fusió directa__ és la forma més senzilla i neta de fusionar branques,
+    ja que no es crea cap `commit` addicional per fusionar les branques i
+    manté una __història lineal__ i fàcil de seguir.
+
 !!! example annotate
     Partint de la situació de la [Figura 4](#figure-4), on la branca `desc` té un `commit` més que la branca `main`,
     la fusió de la branca `desc` a la branca `main` serà una fusió directa.
@@ -338,8 +343,8 @@ fins on es troba la branca que es vol fusionar.
     joapuiib@fp:~/git_branques (main) $ cat README.md
     # Bloc: Branques
     joapuiib@fp:~/git_branques (main) $ git lg
-    * 1b2c5d6 - (3 seconds ago) README.md: Subtítol - Joan Puigcerver (desc)
-    * 0b1b3b4 - (3 minutes ago) README.md: Títol - Joan Puigcerver (HEAD -> main)
+    * 1b2c5d6 - (3 seconds ago) Subtítol descripció - Joan Puigcerver (desc)
+    * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> main)
     ```
 
     En aquest cas, la fusió es portarà a terme avançant el punter de la branca `main` fins al punt on es troba la branca `desc`.
@@ -359,13 +364,129 @@ fins on es troba la branca que es vol fusionar.
     # Bloc: Branques
     ## Descripció
     joapuiib@fp:~/git_branques (main) $ git lg
-    * 1b2c5d6 - (3 seconds ago) README.md: Subtítol - Joan Puigcerver (HEAD -> main, desc)
-    * 0b1b3b4 - (3 minutes ago) README.md: Títol - Joan Puigcerver
+    * 1b2c5d6 - (3 seconds ago) Subtítol descripció - Joan Puigcerver (HEAD -> main, desc)
+    * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver
     ```
 
     1. Vegem que el fitxer `README.md` ha incorporat els canvis de la branca `desc`.
 
 
-### Commit de fusió
+### Fusió de branques divergents
+No sempre és possible realitzar fusió mitjançant una [__fusió directa__ (_fast-forward_)](#fusio-directa).
+Pot donar-se el cas que les dues branques hagen __divergit__, és a dir, que cada branca haja
+realitzat canvis que no estan presents en l'altra branca.
+
+<figure id="figure-7">
+    <img src="../img/branques/before_divergent.png" alt="Història abans de la fusió en branques divergents.">
+    <figcaption>Figura 7: Història abans de la fusió en branques divergents.</figcaption>
+</figure>
+
+En aquest cas, la fusió es realitza mitjançant un __commit de fusió__ (_merge commit_).
+Aquest `commit` de fusió té dos pares (`parents`), un per cada branca que es fusiona
+i incorpora els canvis de les dues branques.
+
+<figure id="figure-8">
+    <img src="../img/branques/after_divergent.png" alt="Història després de la fusió en branques divergents.">
+    <figcaption>Figura 8: Història després de la fusió en branques divergents.</figcaption>
+</figure>
+
+En el moment de realitzar la fusió (`git merge`), Git crearà un nou `commit` de fusió
+que incorporarà els canvis de les dues branques. Aquest `commit` necessita d'un missatge,
+per tant, es pot utilitzar l'opció `-m` per afegir un missatge al `commit`.
+Si no se n'especifica cap, s'obrirà l'editor de text configurat per defecte per a afegir el missatge
+(Vegeu [Confirmar canvis](01_introduccio.md#confirmar-canvis)).
+
+!!! warning
+    Aquest tipus de fusió no és tan neta com la __fusió directa__ (_fast-forward_),
+    ja que la història del projecte es torna més complexa i __no lineal__.
+
+
+!!! example annotate "Preparació branques divergents"
+    1. Realitzem canvis en la branca `desc`.
+
+    ```shellconsole
+    joapuiib@fp:~/git_branques (main) $ git checkout desc
+    Switched to branch 'desc'
+    joapuiib@fp:~/git_branques (desc) $ echo "Aprenem a treballar amb branques" >> README.md
+    joapuiib@fp:~/git_branques (desc) $ git diff
+    diff --git a/README.md b/README.md
+    index 4efb7a9..3e27f51 100644
+    --- a/README.md
+    +++ b/README.md
+    @@ -1,3 +1,4 @@
+     # Bloc: Branques
+     ## Descripció
+    +Aprenem a treballar amb branques
+    joapuiib@fp:~/git_branques (desc) $ git commit -a -m "Descripció"
+    [desc 3d4e5f6] Descripció
+     1 file changed, 1 insertion(+)
+    joapuiib@fp:~/git_branques (desc) $ git lg
+    * 3d4e5f6 - (3 seconds ago) Descripció - Joan Puigcerver (HEAD -> desc)
+    * 1b2c5d6 - (3 minutes ago) Subtítol descripció - Joan Puigcerver (main)
+    * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver
+    ```
+
+    2. Realitzem canvis en la branca `main`.
+
+    ```shellconsole
+    joapuiib@fp:~/git_branques (desc) $ git checkout main
+    Switched to branch 'main'
+    joapuiib@fp:~/git_branques (main) $ vim README.md # (1)!
+    joapuiib@fp:~/git_branques (main) $ git diff
+    diff --git a/README.md b/README.md
+    index 3e27f51..4efb7a9 100644
+    --- a/README.md
+    +++ b/README.md
+    @@ -1,2 +1,3 @@
+     # Bloc: Branques
+    +__Autor:__ Joan Puigcerver
+    +
+     ## Descripció
+    joapuiib@fp:~/git_branques (main) $ git commit -a -m "Autor"
+    [main 2a3b4c5] Autor
+     1 file changed, 1 insertion(+)
+    joapuiib@fp:~/git_branques (main) $ git lg -a
+    * 2a3b4c5 - (5 seconds ago) Autor - Joan Puigcerver (HEAD -> main)
+    | * 3d4e5f6 - (3 minutes ago) Descripció - Joan Puigcerver (desc)
+    |/
+    * 1b2c5d6 - (10 minutes ago) Subtítol descripció - Joan Puigcerver (desc)
+    * 0b1b3b4 - (13 minutes ago) Títol - Joan Puigcerver
+    ```
+
+    1. Modifiquem el fitxer `README.md`. Pots utilitzar l'editor de text que preferisques.
+
+    En aquest moment ens trobem en la situació mostrada en la [Figura 7](#figure-7).
+
+    3. Realitzem la fusió de les dues branques.
+
+    ```shellconsole
+    joapuiib@fp:~/git_branques (main) $ git merge desc -m "Merge branch 'desc' into main" # (1)!
+    Auto-merging README.md
+    Merge made by the 'ort' strategy.
+     README.md | 1 +
+     1 file changed, 1 insertion(+)
+    joapuiib@fp:~/git_branques (main) $ git lg
+    *   b6aa5c3 - (3 seconds ago) Merge branch 'desc' into main - Joan Puigcerver (HEAD -> main)
+    |\
+    | * 3d4e5f6 - (3 minutes ago) Descripció - Joan Puigcerver (desc)
+    * | 2a3b4c5 - (5 seconds ago) Autor - Joan Puigcerver
+    |/
+    * 1b2c5d6 - (10 minutes ago) Subtítol descripció - Joan Puigcerver
+    * 0b1b3b4 - (13 minutes ago) Títol - Joan Puigcerver
+    joapuiib@fp:~/git_branques (main) $ cat README.md
+    # Bloc: Branques
+    __Autor:__ Joan Puigcerver
+
+    ## Descripció
+    Aprenem a treballar amb branques
+    ```
+
+    1. La opció `-m` permet afegir un missatge al `commit` de fusió.
+
+    En aquest punt ens trobem en la situació mostrada en la [Figura 8](#figure-8).
+    Vegem que el fitxer `README.md` ha incorporat els canvis de les dues branques.
+
+
+
 
 ### Resolució de conflictes

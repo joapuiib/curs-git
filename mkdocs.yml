@@ -82,9 +82,9 @@ markdown_extensions:
   - admonition
   - attr_list
   - def_list
-  - markdown_captions
   - md_in_html
   - mdx_linkify
+  - sane_lists
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.emoji:
