@@ -15,20 +15,20 @@ hide:
 - Promoure la utilització de Git i GitHub en l’aula com a eina de treball col·laboratiu.
 
 ## Continguts
-- [__Bloc 1: Introducció a Git__](apunts/01_introduccio.md)
+- __[[bloc1]]__
     - Instal·lació
     - Configuració
     - Estructura d'un repositori
     - Flux de treball
     - Inicialització d'un repositori
     - Realització de canvis
-- __Bloc 2: Branques__
+- __[[bloc2]]__
     - Creació de branques.
     - Navegar entre branques.
     - Sincronització de branques
     - Fusió de branques (`merge`)
     - Canvi de base (`rebase`)
-- [__Bloc 3: Remots__](apunts/03_remots.md)
+- __[[bloc3]]__
     - Creació d'un repositori remot a GitHub.
     - Configurar un repositori remot.
     - Mètodes d'autenticació.
