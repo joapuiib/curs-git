@@ -386,32 +386,7 @@ No sempre és possible realitzar fusió mitjançant una [__fusió directa__ (_fa
 Pot donar-se el cas que les dues branques hagen __divergit__, és a dir, que cada branca haja
 realitzat canvis que no estan presents en l'altra branca.
 
-<figure id="figure-7">
-    <img src="../img/branques/before_divergent.png" alt="Història abans de la fusió en branques divergents.">
-    <figcaption>Figura 7: Història abans de la fusió en branques divergents.</figcaption>
-</figure>
-
-En aquest cas, la fusió es realitza mitjançant un __commit de fusió__ (_merge commit_).
-Aquest `commit` de fusió té dos pares (`parents`), un per cada branca que es fusiona
-i incorpora els canvis de les dues branques.
-
-<figure id="figure-8">
-    <img src="../img/branques/after_divergent.png" alt="Història després de la fusió en branques divergents.">
-    <figcaption>Figura 8: Història després de la fusió en branques divergents.</figcaption>
-</figure>
-
-En el moment de realitzar la fusió (`git merge`), Git crearà un nou `commit` de fusió
-que incorporarà els canvis de les dues branques. Aquest `commit` necessita d'un missatge,
-per tant, es pot utilitzar l'opció `-m` per afegir un missatge al `commit`.
-Si no se n'especifica cap, s'obrirà l'editor de text configurat per defecte per a afegir el missatge
-(Vegeu [Confirmar canvis](01_introduccio.md#confirmar-canvis)).
-
-!!! warning
-    Aquest tipus de fusió no és tan neta com la __fusió directa__ (_fast-forward_),
-    ja que la història del projecte es torna més complexa i __no lineal__.
-
-
-!!! example annotate "Exemple de fusió branques divergents"
+??? prep annotate "Preparació branques divergents"
     1. Realitzem canvis en la branca `docs`.
 
     ```shellconsole
@@ -466,9 +441,34 @@ Si no se n'especifica cap, s'obrirà l'editor de text configurat per defecte per
 
     1. Modifiquem el fitxer `README.md`. Pots utilitzar l'editor de text que preferisques.
 
-    En aquest moment ens trobem en la situació mostrada en la [Figura 7](#figure-7).
 
-    3. Realitzem la fusió de les dues branques.
+<figure id="figure-7">
+    <img src="../img/branques/before_divergent.png" alt="Història abans de la fusió en branques divergents.">
+    <figcaption>Figura 7: Història abans de la fusió en branques divergents.</figcaption>
+</figure>
+
+En aquest cas, la fusió es realitza mitjançant un __commit de fusió__ (_merge commit_).
+Aquest `commit` de fusió té dos pares (`parents`), un per cada branca que es fusiona
+i incorpora els canvis de les dues branques.
+
+<figure id="figure-8">
+    <img src="../img/branques/after_divergent.png" alt="Història després de la fusió en branques divergents.">
+    <figcaption>Figura 8: Història després de la fusió en branques divergents.</figcaption>
+</figure>
+
+En el moment de realitzar la fusió (`git merge`), Git crearà un nou `commit` de fusió
+que incorporarà els canvis de les dues branques. Aquest `commit` necessita d'un missatge,
+per tant, es pot utilitzar l'opció `-m` per afegir un missatge al `commit`.
+Si no se n'especifica cap, s'obrirà l'editor de text configurat per defecte per a afegir el missatge
+(Vegeu [Confirmar canvis](01_introduccio.md#confirmar-canvis)).
+
+!!! warning
+    Aquest tipus de fusió no és tan neta com la __fusió directa__ (_fast-forward_),
+    ja que la història del projecte es torna més complexa i __no lineal__.
+
+
+!!! example annotate "Fusió de branques divergents"
+    Realitzem la fusió de les dues branques.
 
     ```shellconsole
     joapuiib@fp:~/git_branques (main) $ git merge docs -m "Merge branch 'docs' into main" # (1)!
@@ -523,7 +523,10 @@ Per resoldre el conflicte, caldrà:
 
 Una vegada resolt el conflicte, caldrà confirmar els canvis amb `git add` i `git commit`.
 
-!!! example annotate "Exemple de fusió amb resolució de conflictes"
+!!! info
+    En cas que es desitge cancel·lar el procés de fusió, es pot utilitzar l'ordre `git merge --abort`.
+
+??? prep annotate "Preparació branques divergents amb conflicte"
     1. Creem la branca `conflictes` i realitzem canvis en la descripció del fitxer `README.md`.
 
     ```shellconsole
@@ -583,7 +586,8 @@ Una vegada resolt el conflicte, caldrà confirmar els canvis amb `git add` i `gi
     ...
     ```
 
-    3. Realitzem la fusió de la branca `conflictes` a la branca `main`.
+!!! example annotate "Exemple de fusió amb resolució de conflictes"
+    Realitzem la fusió de la branca `conflictes` a la branca `main`.
 
     ```shellconsole
     joapuiib@fp:~/git_branques (main) $ git merge conflictes
@@ -629,4 +633,315 @@ Una vegada resolt el conflicte, caldrà confirmar els canvis amb `git add` i `gi
 
 
 ## Canvi de base (`rebase`)
+El __canvi de base__ (`rebase`) és una altra manera de fusionar canvis de branques __divergents__,
+que consiteix en aplicar els canvis dels `commit` d'una branca sobre una altra branca, en ordre cronològic.
 
+Aquesta tècnica permet eliminar les branques diveregents i mantenir una __història lineal__.
+
+Aquest procés es realitza amb l'ordre:
+```bash
+git rebase <branca>
+```
+
+!!! docs
+    Documentació de la ordre `git rebase`: https://git-scm.com/docs/git-rebase
+
+!!! important
+    L'ordre `git rebase` canviarà la base de la branca actual (`HEAD`).
+
+??? prep annotate "Preparació branques divergents"
+    1. Creem la branca `llicencia` i realitzem canvis en la descripció del fitxer `README.md`.
+
+    ```shellconsole
+    joapuiib@fp:~/git_branques (main) $ git checkout -b llicencia # (1)!
+    Switched to a new branch 'llicencia'
+    joapuiib@fp:~/git_branques (llicencia) $ echo >> README.md
+    joapuiib@fp:~/git_branques (llicencia) $ echo "## Llicència" >> README.md
+    joapuiib@fp:~/git_branques (llicencia) $ echo "CC BY-NC-SA 4.0" >> README.md
+    joapuiib@fp:~/git_branques (llicencia) $ git diff
+    diff --git a/README.md b/README.md
+    index 2ca252f..6aa790e 100644
+    --- a/README.md
+    +++ b/README.md
+    @@ -5,3 +5,6 @@ Estem aprenent a fusionar branques i resoldre conflictes.
+     
+     ## Documentació
+     - https://git-scm.com/
+    +
+    +## Llicència
+    +CC BY-NC-SA 4.0
+    joapuiib@fp:~/git_branques (llicencia) $ git commit -a -m "Llicència"
+    [llicencia e474d76] Llicència
+     1 file changed, 3 insertions(+)
+    joapuiib@fp:~/git_branques (llicencia) $ git lg
+    * e474d76 - (14 seconds ago) Llicència - Joan Puigcerver (HEAD -> llicencia)
+    * 8a9b0c1 - (3 minutes ago) Resolució conflicte - Joan Puigcerver (main)
+    ...
+    ```
+
+    2. Realitzem canvis en la descripció en la branca `main`.
+
+    ```shellconsole
+    joapuiib@fp:~/git_branques (llicencia) $ git checkout main
+    Switched to branch 'main'
+    joapuiib@fp:~/git_branques (main) $ vim README.md
+    joapuiib@fp:~/git_branques (main) $ git diff
+    diff --git a/README.md b/README.md
+    index 2ca252f..3a3fe02 100644
+    --- a/README.md
+    +++ b/README.md
+    @@ -2,6 +2,7 @@
+     __Autor__: Joan Puigcerver
+     
+     Estem aprenent a fusionar branques i resoldre conflictes.
+    +També a canviar la base d'una branca.
+     
+     ## Documentació
+     - https://git-scm.com/
+    joapuiib@fp:~/git_branques (main) $ git commit -a -m "Text rebase"
+    [main 1b2c3d4] Text rebase
+     1 file changed, 1 insertion(+)
+    joapuiib@fp:~/git_branques (main) $ git lg -a
+    * 1b2c3d4 - (3 seconds ago) Text rebase - Joan Puigcerver (HEAD -> main)
+    | * e474d76 - (3 minutes ago) Llicència - Joan Puigcerver (llicencia)
+    |/
+    * 8a9b0c1 - (3 minutes ago) Resolució conflicte - Joan Puigcerver
+    ...
+    ```
+
+1. L'opció `git checkout -b` permet crear una nova branca i situar-se en ella directament.
+
+
+<figure id="figure-9">
+    <img src="../img/branques/before_rebase.png" alt="Història abans del canvi de base.">
+    <figcaption>Figura 9: Història abans del canvi de base.</figcaption>
+</figure>
+
+<figure id="figure-10">
+    <img src="../img/branques/after_rebase.png" alt="Història després del canvi de base.">
+    <figcaption>Figura 10: Història després del canvi de base.</figcaption>
+</figure>
+
+!!! example "Canvi de base"
+    Canviem la base de la branca `llicencia` a la branca `main`.
+
+    ```shellconsole
+    joapuiib@fp:~/git_branques (main) $ git checkout llicencia
+    Switched to branch 'llicencia'
+    joapuiib@fp:~/git_branques (llicencia) $ git rebase main
+    Successfully rebased and updated refs/heads/llicencia.
+    joapuiib@fp:~/git_branques (llicencia) $ git lg
+    * 8bad4a1 - (3 seconds ago) Llicència - Joan Puigcerver (HEAD -> llicencia)
+    * 1b2c3d4 - (3 minutes ago) Text rebase - Joan Puigcerver (main)
+    * 8a9b0c1 - (3 minutes ago) Resolució conflicte - Joan Puigcerver
+    ...
+    joapuiib@fp:~/git_branques (llicencia) $ cat README.md
+    # Bloc: Branques
+    __Autor__: Joan Puigcerver
+
+    Estem aprenent a fusionar branques i resoldre conflictes.
+    També a canviar la base d'una branca.
+
+    ## Documentació
+    - https://git-scm.com/
+
+    ## Llicència
+    CC BY-NC-SA 4.0
+    ```
+
+    Vegem que la branca `llicencia` ha canviat la seva base a la branca `main` i ha incorporat els seus canvis.
+
+    !!! notice
+        L'identificador (_hash_) del `commit` __Llicència__ ha canviat després del `rebase`.
+
+        Això és degut a que s'ha creat un nou `commit` amb els canvis de l'anterior.
+
+
+    En aquest punt, si volem incorporar els canvis de la branca `llicencia` a la branca `main`, podem fer-ho
+    mitjançant una [__fusió directa__ (_fast-forward_)](#fusio-directa).
+
+    ```shellconsole
+    joapuiib@fp:~/git_branques (llicencia) $ git checkout main
+    Switched to branch 'main'
+    joapuiib@fp:~/git_branques (main) $ git merge llicencia
+    Updating 1b2c3d4..8bad4a1
+    Fast-forward
+     README.md | 3 +++
+     1 file changed, 3 insertions(+)
+    joapuiib@fp:~/git_branques (main) $ git lg
+    * 8bad4a1 - (3 seconds ago) Llicència - Joan Puigcerver (HEAD -> main, llicencia)
+    * 1b2c3d4 - (3 minutes ago) Text rebase - Joan Puigcerver
+    ...
+    ```
+### Resolució de conflictes
+El __canvi de base__ (`rebase`) també pot provocar conflictes si les dues branques
+han modificat la mateixa part d'un fitxer.
+
+Git ens indicarà que hi ha conflictes i caldrà resoldre'ls manualment,
+d'una manera similar a [__la resolució de conflictes en la fusió de branques__](#resolucio-de-conflictes).
+
+En aquest cas, caldrà resoldre els conflictes per a cada `commit` en el que s'està canviant la base.
+
+Després de resoldre els conflictes d'un `commit`, caldrà continuar amb el procés de `rebase` amb l'ordre `git rebase --continue`
+fins que s'haja aplicat el canvi de base a tots els `commit` de la branca.
+
+??? prep "Preparació branques divergents amb conflictes"
+    1. Creem la branca `docs/git_training` i realitzem canvis en la descripció del fitxer `README.md`.
+
+    ```shellconsole
+    joapuiib@fp:~/git_branques (main) $ git checkout -b docs_git_training
+    Switched to a new branch 'docs_git_training'
+    joapuiib@fp:~/git_branques (docs_git_training) $ vim README.md
+    joapuiib@fp:~/git_branques (docs_git_training) $ git diff
+    diff --git a/README.md b/README.md
+    index 54f292f..271a617 100644
+    --- a/README.md
+    +++ b/README.md
+    @@ -6,6 +6,7 @@ També a canviar la base d'una branca.
+     
+     ## Documentació
+     - https://git-scm.com/
+    +- https://github.com/UnseenWizzard/git_training 
+     
+     ## Llicència
+     CC BY-NC-SA 4.0
+    joapuiib@fp:~/git_branques (docs_git_training) $ git commit -a -m "Documentació git_training"
+    [docs_git_training a136424] Documentació git_training
+     1 file changed, 1 insertion(+)
+    joapuiib@fp:~/git_branques (docs_git_training) $ git lg
+    * a136424 - (3 seconds ago) Documentació git_training - Joan Puigcerver (HEAD -> docs_git_training)
+    * 1b2c3d4 - (3 minutes ago) Text rebase - Joan Puigcerver (main)
+    ...
+    ```
+
+    2. Realitzem canvis en la descripció en la branca `main`.
+
+    ```shellconsole
+    joapuiib@fp:~/git_branques (docs_git_training) $ git checkout main
+    Switched to branch 'main'
+    joapuiib@fp:~/git_branques (main) $ vim README.md
+    joapuiib@fp:~/git_branques (main) $ git diff
+    diff --git a/README.md b/README.md
+    index 54f292f..6f65136 100644
+    --- a/README.md
+    +++ b/README.md
+    @@ -6,6 +6,7 @@ També a canviar la base d'una branca.
+     
+     ## Documentació
+     - https://git-scm.com/
+    +- https://www.w3schools.com/git/
+     
+     ## Llicència
+     CC BY-NC-SA 4.0
+    joapuiib@fp:~/git_branques (main) $ git commit -a -m "Documentació w3schools"
+    [main 0230b1b] Documentació w3schools
+     1 file changed, 1 insertion(+)
+    joapuiib@fp:~/git_branques (main) $ git lg -a
+    * 0230b1b - (3 seconds ago) Documentació w3schools - Joan Puigcerver (HEAD -> main)
+    | * a136424 - (3 minutes ago) Documentació git_training - Joan Puigcerver (docs_git_training)
+    |/
+    * 1b2c3d4 - (3 minutes ago) Text rebase - Joan Puigcerver
+    ...
+    ```
+
+!!! example "Canvi de base amb conflictes"
+    Canviem la base de la branca `docs_git_training` a la branca `main`.
+
+    ```shellconsole
+    joapuiib@fp:~/git_branques (main) $ git checkout docs_git_training
+    Switched to branch 'docs_git_training'
+    joapuiib@fp:~/git_branques (docs_git_training) $ git rebase main
+    Auto-merging README.md
+    CONFLICT (content): Merge conflict in README.md
+    error: could not apply a136424... git_training
+    hint: Resolve all conflicts manually, mark them as resolved with
+    hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+    hint: You can instead skip this commit: run "git rebase --skip".
+    hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+    hint: Disable this message with "git config advice.mergeConflict false"
+    Could not apply a136424... Documentació git_training
+    joapuiib@fp:~/git_branques (docs_git_training|REBASE 1/1) $ git status
+    interactive rebase in progress; onto 0230b1b
+    Last command done (1 command done):
+       pick a136424 git_training
+    No commands remaining.
+    You are currently rebasing branch 'docs_git_training' on '0230b1b'.
+      (fix conflicts and then run "git rebase --continue")
+      (use "git rebase --skip" to skip this patch)
+      (use "git rebase --abort" to check out the original branch)
+
+    Unmerged paths:
+      (use "git restore --staged <file>..." to unstage)
+      (use "git add <file>..." to mark resolution)
+        both modified:   README.md
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+    joapuiib@fp:~/git_branques (docs_git_training|REBASE 1/1) $ cat README.md
+    # Bloc: Branques
+    __Autor__: Joan Puigcerver
+
+    Estem aprenent a fusionar branques i resoldre conflictes.
+    També a canviar la base d'una branca.
+
+    ## Documentació
+    - https://git-scm.com/
+    <<<<<<< HEAD
+    - https://www.w3schools.com/git/
+    =======
+    - https://github.com/UnseenWizzard/git_training 
+    >>>>>>> a136424 (git_training)
+
+    ## Llicència
+    CC BY-NC-SA 4.0
+    ```
+
+    Vegem que hi ha conflictes en el fitxer `README.md`. Hem de resoldre'ls manualment.
+
+    ```shellconsole
+    joapuiib@fp:~/git_branques (docs_git_training|REBASE 1/1) $ vim README.md # (1)!
+    joapuiib@fp:~/git_branques (docs_git_training|REBASE 1/1) $ cat README.md
+    # Bloc: Branques
+    __Autor__: Joan Puigcerver
+
+    Estem aprenent a fusionar branques i resoldre conflictes.
+    També a canviar la base d'una branca.
+
+    ## Documentació
+    - https://git-scm.com/
+    - https://www.w3schools.com/git/
+    - https://github.com/UnseenWizzard/git_training 
+
+    ## Llicència
+    CC BY-NC-SA 4.0
+    joapuiib@fp:~/git_branques (docs_git_training|REBASE 1/1) $ git add README.md # (2)!
+    joapuiib@fp:~/git_branques (docs_git_training|REBASE 1/1) $ git status
+    interactive rebase in progress; onto 0230b1b
+    Last command done (1 command done):
+       pick a136424 git_training
+    No commands remaining.
+    You are currently rebasing branch 'docs_git_training' on '0230b1b'.
+      (all conflicts fixed: run "git rebase --continue")
+
+    Changes to be committed:
+      (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+    joapuiib@fp:~/git_branques (docs_git_training|REBASE 1/1) $ git rebase --continue --no-edit # (3)!
+    Successfully rebased and updated refs/heads/docs_git_training.
+    joapuiib@fp:~/git_branques (docs_git_training) $ git lg
+    * 8bad4a1 - (3 seconds ago) Documentació git_training - Joan Puigcerver (HEAD -> docs_git_training)
+    * 0230b1b - (3 minutes ago) Documentació w3schools - Joan Puigcerver (main)
+    ...
+    ```
+
+    1. Hem eliminat les marques de conflicte i hem combinat els dos textos.
+    2. Hem marcat el fitxer `README.md` com a resolt.
+    3. L'opció `--no-edit` permet continuar el procés de `rebase`, utilitzant el missatge del `commit` original.
+
+## Recursos addicionals
+- [Curs de Git des de zero per MoureDev](https://www.youtube.com/watch?v=3GymExBkKjE&ab_channel=MoureDevbyBraisMoure)
+- https://github.com/UnseenWizzard/git_training
+
+## Bibliografia
+- https://git-scm.com/book/en/v2
+- https://github.com/UnseenWizzard/git_training

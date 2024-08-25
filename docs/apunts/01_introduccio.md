@@ -727,8 +727,8 @@ que complisquen algun dels patrons especificats.
 - https://github.com/UnseenWizzard/git_training
 
 ## Bibliografia
+- https://git-scm.com/book/en/v2
 - https://github.com/UnseenWizzard/git_training
 - https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main
 - https://stackoverflow.com/questions/35430584/how-is-the-git-hash-calculated
 - https://en.wikipedia.org/wiki/Diff
-
