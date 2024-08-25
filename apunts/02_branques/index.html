@@ -584,6 +584,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Canvi de base (rebase)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resolucio-de-conflictes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolució de conflictes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-addicionals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos addicionals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bibliografia
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -771,6 +804,39 @@
   <a href="#canvi-de-base-rebase" class="md-nav__link">
     <span class="md-ellipsis">
       Canvi de base (rebase)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Canvi de base (rebase)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resolucio-de-conflictes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolució de conflictes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-addicionals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos addicionals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bibliografia
     </span>
   </a>
   
@@ -1445,31 +1511,8 @@ la fusió de la branca <code>docs</code> a la branca <code>main</code> serà una
 <p>No sempre és possible realitzar fusió mitjançant una <a href="#fusio-directa" rel="nofollow"><strong>fusió directa</strong> (<em>fast-forward</em>)</a>.
 Pot donar-se el cas que les dues branques hagen <strong>divergit</strong>, és a dir, que cada branca haja
 realitzat canvis que no estan presents en l'altra branca.</p>
-<figure id="figure-7">
-    <img src="../img/branques/before_divergent.png" alt="Història abans de la fusió en branques divergents.">
-    <figcaption>Figura 7: Història abans de la fusió en branques divergents.</figcaption>
-</figure>
-
-<p>En aquest cas, la fusió es realitza mitjançant un <strong>commit de fusió</strong> (<em>merge commit</em>).
-Aquest <code>commit</code> de fusió té dos pares (<code>parents</code>), un per cada branca que es fusiona
-i incorpora els canvis de les dues branques.</p>
-<figure id="figure-8">
-    <img src="../img/branques/after_divergent.png" alt="Història després de la fusió en branques divergents.">
-    <figcaption>Figura 8: Història després de la fusió en branques divergents.</figcaption>
-</figure>
-
-<p>En el moment de realitzar la fusió (<code>git merge</code>), Git crearà un nou <code>commit</code> de fusió
-que incorporarà els canvis de les dues branques. Aquest <code>commit</code> necessita d'un missatge,
-per tant, es pot utilitzar l'opció <code>-m</code> per afegir un missatge al <code>commit</code>.
-Si no se n'especifica cap, s'obrirà l'editor de text configurat per defecte per a afegir el missatge
-(Vegeu <a href="../01_introduccio/#confirmar-canvis" rel="nofollow">Confirmar canvis</a>).</p>
-<div class="admonition warning">
-<p class="admonition-title">Advertència</p>
-<p>Aquest tipus de fusió no és tan neta com la <strong>fusió directa</strong> (<em>fast-forward</em>),
-ja que la història del projecte es torna més complexa i <strong>no lineal</strong>.</p>
-</div>
-<div class="admonition example annotate">
-<p class="admonition-title">Exemple de fusió branques divergents</p>
+<details class="prep annotate">
+<summary>Preparació branques divergents</summary>
 <ol>
 <li>Realitzem canvis en la branca <code>docs</code>.</li>
 </ol>
@@ -1523,10 +1566,33 @@ ja que la història del projecte es torna més complexa i <strong>no lineal</str
 <ol>
 <li>Modifiquem el fitxer <code>README.md</code>. Pots utilitzar l'editor de text que preferisques.</li>
 </ol>
-<p>En aquest moment ens trobem en la situació mostrada en la <a href="#figure-7" rel="nofollow">Figura 7</a>.</p>
-<ol start="3">
-<li>Realitzem la fusió de les dues branques.</li>
-</ol>
+</details>
+<figure id="figure-7">
+    <img src="../img/branques/before_divergent.png" alt="Història abans de la fusió en branques divergents.">
+    <figcaption>Figura 7: Història abans de la fusió en branques divergents.</figcaption>
+</figure>
+
+<p>En aquest cas, la fusió es realitza mitjançant un <strong>commit de fusió</strong> (<em>merge commit</em>).
+Aquest <code>commit</code> de fusió té dos pares (<code>parents</code>), un per cada branca que es fusiona
+i incorpora els canvis de les dues branques.</p>
+<figure id="figure-8">
+    <img src="../img/branques/after_divergent.png" alt="Història després de la fusió en branques divergents.">
+    <figcaption>Figura 8: Història després de la fusió en branques divergents.</figcaption>
+</figure>
+
+<p>En el moment de realitzar la fusió (<code>git merge</code>), Git crearà un nou <code>commit</code> de fusió
+que incorporarà els canvis de les dues branques. Aquest <code>commit</code> necessita d'un missatge,
+per tant, es pot utilitzar l'opció <code>-m</code> per afegir un missatge al <code>commit</code>.
+Si no se n'especifica cap, s'obrirà l'editor de text configurat per defecte per a afegir el missatge
+(Vegeu <a href="../01_introduccio/#confirmar-canvis" rel="nofollow">Confirmar canvis</a>).</p>
+<div class="admonition warning">
+<p class="admonition-title">Advertència</p>
+<p>Aquest tipus de fusió no és tan neta com la <strong>fusió directa</strong> (<em>fast-forward</em>),
+ja que la història del projecte es torna més complexa i <strong>no lineal</strong>.</p>
+</div>
+<div class="admonition example annotate">
+<p class="admonition-title">Fusió de branques divergents</p>
+<p>Realitzem la fusió de les dues branques.</p>
 <div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>merge<span class="w"> </span>docs<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Merge branch &#39;docs&#39; into main&quot;</span><span class="w"> </span><span class="c1"># (1)!</span>
 </span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="go">Auto-merging README.md</span>
 </span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="go">Merge made by the &#39;ort&#39; strategy.</span>
@@ -1573,8 +1639,12 @@ fusió en curs.</p>
 <li>Esborrar les marques de conflicte.</li>
 </ol>
 <p>Una vegada resolt el conflicte, caldrà confirmar els canvis amb <code>git add</code> i <code>git commit</code>.</p>
-<div class="admonition example annotate">
-<p class="admonition-title">Exemple de fusió amb resolució de conflictes</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>En cas que es desitge cancel·lar el procés de fusió, es pot utilitzar l'ordre <code>git merge --abort</code>.</p>
+</div>
+<details class="prep annotate">
+<summary>Preparació branques divergents amb conflicte</summary>
 <ol>
 <li>Creem la branca <code>conflictes</code> i realitzem canvis en la descripció del fitxer <code>README.md</code>.</li>
 </ol>
@@ -1632,9 +1702,10 @@ fusió en curs.</p>
 </span><span id="__span-21-24"><a id="__codelineno-21-24" name="__codelineno-21-24" href="#__codelineno-21-24"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">b6aa5c3</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 minutes ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;docs&#39; into main</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
 </span><span id="__span-21-25"><a id="__codelineno-21-25" name="__codelineno-21-25" href="#__codelineno-21-25"></a><span class="go">...</span>
 </span></code></pre></div>
-<ol start="3">
-<li>Realitzem la fusió de la branca <code>conflictes</code> a la branca <code>main</code>.</li>
-</ol>
+</details>
+<div class="admonition example annotate">
+<p class="admonition-title">Exemple de fusió amb resolució de conflictes</p>
+<p>Realitzem la fusió de la branca <code>conflictes</code> a la branca <code>main</code>.</p>
 <div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>merge<span class="w"> </span>conflictes
 </span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="go">Auto-merging README.md</span>
 </span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="go">CONFLICT (content): Merge conflict in README.md</span>
@@ -1678,6 +1749,307 @@ fusió en curs.</p>
 </ol>
 </div>
 <h2 id="canvi-de-base-rebase">Canvi de base (<code>rebase</code>)</h2>
+<p>El <strong>canvi de base</strong> (<code>rebase</code>) és una altra manera de fusionar canvis de branques <strong>divergents</strong>,
+que consiteix en aplicar els canvis dels <code>commit</code> d'una branca sobre una altra branca, en ordre cronològic.</p>
+<p>Aquesta tècnica permet eliminar les branques diveregents i mantenir una <strong>història lineal</strong>.</p>
+<p>Aquest procés es realitza amb l'ordre:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>git<span class="w"> </span>rebase<span class="w"> </span>&lt;branca&gt;
+</span></code></pre></div></p>
+<div class="admonition docs">
+<p class="admonition-title">Documentació</p>
+<p>Documentació de la ordre <code>git rebase</code>: <a href="https://git-scm.com/docs/git-rebase" rel="nofollow">https://git-scm.com/docs/git-rebase</a></p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>L'ordre <code>git rebase</code> canviarà la base de la branca actual (<code>HEAD</code>).</p>
+</div>
+<details class="prep annotate">
+<summary>Preparació branques divergents</summary>
+<ol>
+<li>Creem la branca <code>llicencia</code> i realitzem canvis en la descripció del fitxer <code>README.md</code>.</li>
+</ol>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>llicencia<span class="w"> </span><span class="c1"># (1)!</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="go">Switched to a new branch &#39;llicencia&#39;</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(llicencia)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(llicencia)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;## Llicència&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(llicencia)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;CC BY-NC-SA 4.0&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(llicencia)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>diff
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="gh">diff --git a/README.md b/README.md</span>
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="gh">index 2ca252f..6aa790e 100644</span>
+</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="gd">--- a/README.md</span>
+</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="gi">+++ b/README.md</span>
+</span><span id="__span-24-11"><a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a><span class="gu">@@ -5,3 +5,6 @@ Estem aprenent a fusionar branques i resoldre conflictes.</span>
+</span><span id="__span-24-12"><a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a>
+</span><span id="__span-24-13"><a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a><span class="w"> </span>## Documentació
+</span><span id="__span-24-14"><a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a><span class="w"> </span>- https://git-scm.com/
+</span><span id="__span-24-15"><a id="__codelineno-24-15" name="__codelineno-24-15" href="#__codelineno-24-15"></a><span class="gi">+</span>
+</span><span id="__span-24-16"><a id="__codelineno-24-16" name="__codelineno-24-16" href="#__codelineno-24-16"></a><span class="gi">+## Llicència</span>
+</span><span id="__span-24-17"><a id="__codelineno-24-17" name="__codelineno-24-17" href="#__codelineno-24-17"></a><span class="gi">+CC BY-NC-SA 4.0</span>
+</span><span id="__span-24-18"><a id="__codelineno-24-18" name="__codelineno-24-18" href="#__codelineno-24-18"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(llicencia)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Llicència&quot;</span>
+</span><span id="__span-24-19"><a id="__codelineno-24-19" name="__codelineno-24-19" href="#__codelineno-24-19"></a><span class="go">[llicencia e474d76] Llicència</span>
+</span><span id="__span-24-20"><a id="__codelineno-24-20" name="__codelineno-24-20" href="#__codelineno-24-20"></a><span class="go"> 1 file changed, 3 insertions(+)</span>
+</span><span id="__span-24-21"><a id="__codelineno-24-21" name="__codelineno-24-21" href="#__codelineno-24-21"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(llicencia)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>lg
+</span><span id="__span-24-22"><a id="__codelineno-24-22" name="__codelineno-24-22" href="#__codelineno-24-22"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">e474d76</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(14 seconds ago)</span><span class="w"> </span><span class="git-cm">Llicència</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; llicencia)</span>
+</span><span id="__span-24-23"><a id="__codelineno-24-23" name="__codelineno-24-23" href="#__codelineno-24-23"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8a9b0c1</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 minutes ago)</span><span class="w"> </span><span class="git-cm">Resolució conflicte</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(main)</span>
+</span><span id="__span-24-24"><a id="__codelineno-24-24" name="__codelineno-24-24" href="#__codelineno-24-24"></a><span class="go">...</span>
+</span></code></pre></div>
+<ol start="2">
+<li>Realitzem canvis en la descripció en la branca <code>main</code>.</li>
+</ol>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(llicencia)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>main
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="go">Switched to branch &#39;main&#39;</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>vim<span class="w"> </span>README.md
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>diff
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="gh">diff --git a/README.md b/README.md</span>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="gh">index 2ca252f..3a3fe02 100644</span>
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a><span class="gd">--- a/README.md</span>
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a><span class="gi">+++ b/README.md</span>
+</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a><span class="gu">@@ -2,6 +2,7 @@</span>
+</span><span id="__span-25-10"><a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a><span class="w"> </span>__Autor__: Joan Puigcerver
+</span><span id="__span-25-11"><a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>
+</span><span id="__span-25-12"><a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a><span class="w"> </span>Estem aprenent a fusionar branques i resoldre conflictes.
+</span><span id="__span-25-13"><a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a><span class="gi">+També a canviar la base d&#39;una branca.</span>
+</span><span id="__span-25-14"><a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a>
+</span><span id="__span-25-15"><a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a><span class="w"> </span>## Documentació
+</span><span id="__span-25-16"><a id="__codelineno-25-16" name="__codelineno-25-16" href="#__codelineno-25-16"></a><span class="w"> </span>- https://git-scm.com/
+</span><span id="__span-25-17"><a id="__codelineno-25-17" name="__codelineno-25-17" href="#__codelineno-25-17"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Text rebase&quot;</span>
+</span><span id="__span-25-18"><a id="__codelineno-25-18" name="__codelineno-25-18" href="#__codelineno-25-18"></a><span class="go">[main 1b2c3d4] Text rebase</span>
+</span><span id="__span-25-19"><a id="__codelineno-25-19" name="__codelineno-25-19" href="#__codelineno-25-19"></a><span class="go"> 1 file changed, 1 insertion(+)</span>
+</span><span id="__span-25-20"><a id="__codelineno-25-20" name="__codelineno-25-20" href="#__codelineno-25-20"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>lg<span class="w"> </span>-a
+</span><span id="__span-25-21"><a id="__codelineno-25-21" name="__codelineno-25-21" href="#__codelineno-25-21"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">1b2c3d4</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 seconds ago)</span><span class="w"> </span><span class="git-cm">Text rebase</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
+</span><span id="__span-25-22"><a id="__codelineno-25-22" name="__codelineno-25-22" href="#__codelineno-25-22"></a><span class="git-bl">| </span><span class="go">*</span><span class="w"> </span><span class="git-ch">e474d76</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 minutes ago)</span><span class="w"> </span><span class="git-cm">Llicència</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(llicencia)</span>
+</span><span id="__span-25-23"><a id="__codelineno-25-23" name="__codelineno-25-23" href="#__codelineno-25-23"></a><span class="git-bl">|/</span>
+</span><span id="__span-25-24"><a id="__codelineno-25-24" name="__codelineno-25-24" href="#__codelineno-25-24"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8a9b0c1</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 minutes ago)</span><span class="w"> </span><span class="git-cm">Resolució conflicte</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+</span><span id="__span-25-25"><a id="__codelineno-25-25" name="__codelineno-25-25" href="#__codelineno-25-25"></a><span class="go">...</span>
+</span></code></pre></div>
+</details>
+<ol>
+<li>L'opció <code>git checkout -b</code> permet crear una nova branca i situar-se en ella directament.</li>
+</ol>
+<figure id="figure-9">
+    <img src="../img/branques/before_rebase.png" alt="Història abans del canvi de base.">
+    <figcaption>Figura 9: Història abans del canvi de base.</figcaption>
+</figure>
+
+<figure id="figure-10">
+    <img src="../img/branques/after_rebase.png" alt="Història després del canvi de base.">
+    <figcaption>Figura 10: Història després del canvi de base.</figcaption>
+</figure>
+
+<div class="admonition example">
+<p class="admonition-title">Canvi de base</p>
+<p>Canviem la base de la branca <code>llicencia</code> a la branca <code>main</code>.</p>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>llicencia
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="go">Switched to branch &#39;llicencia&#39;</span>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(llicencia)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>rebase<span class="w"> </span>main
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="go">Successfully rebased and updated refs/heads/llicencia.</span>
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(llicencia)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>lg
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8bad4a1</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 seconds ago)</span><span class="w"> </span><span class="git-cm">Llicència</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; llicencia)</span>
+</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">1b2c3d4</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 minutes ago)</span><span class="w"> </span><span class="git-cm">Text rebase</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(main)</span>
+</span><span id="__span-26-8"><a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8a9b0c1</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 minutes ago)</span><span class="w"> </span><span class="git-cm">Resolució conflicte</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+</span><span id="__span-26-9"><a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a><span class="go">...</span>
+</span><span id="__span-26-10"><a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(llicencia)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>cat<span class="w"> </span>README.md
+</span><span id="__span-26-11"><a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a><span class="go"># Bloc: Branques</span>
+</span><span id="__span-26-12"><a id="__codelineno-26-12" name="__codelineno-26-12" href="#__codelineno-26-12"></a><span class="go">__Autor__: Joan Puigcerver</span>
+</span><span id="__span-26-13"><a id="__codelineno-26-13" name="__codelineno-26-13" href="#__codelineno-26-13"></a>
+</span><span id="__span-26-14"><a id="__codelineno-26-14" name="__codelineno-26-14" href="#__codelineno-26-14"></a><span class="go">Estem aprenent a fusionar branques i resoldre conflictes.</span>
+</span><span id="__span-26-15"><a id="__codelineno-26-15" name="__codelineno-26-15" href="#__codelineno-26-15"></a><span class="go">També a canviar la base d&#39;una branca.</span>
+</span><span id="__span-26-16"><a id="__codelineno-26-16" name="__codelineno-26-16" href="#__codelineno-26-16"></a>
+</span><span id="__span-26-17"><a id="__codelineno-26-17" name="__codelineno-26-17" href="#__codelineno-26-17"></a><span class="go">## Documentació</span>
+</span><span id="__span-26-18"><a id="__codelineno-26-18" name="__codelineno-26-18" href="#__codelineno-26-18"></a><span class="go">- https://git-scm.com/</span>
+</span><span id="__span-26-19"><a id="__codelineno-26-19" name="__codelineno-26-19" href="#__codelineno-26-19"></a>
+</span><span id="__span-26-20"><a id="__codelineno-26-20" name="__codelineno-26-20" href="#__codelineno-26-20"></a><span class="go">## Llicència</span>
+</span><span id="__span-26-21"><a id="__codelineno-26-21" name="__codelineno-26-21" href="#__codelineno-26-21"></a><span class="go">CC BY-NC-SA 4.0</span>
+</span></code></pre></div>
+<p>Vegem que la branca <code>llicencia</code> ha canviat la seva base a la branca <code>main</code> i ha incorporat els seus canvis.</p>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>L'identificador (<em>hash</em>) del <code>commit</code> <strong>Llicència</strong> ha canviat després del <code>rebase</code>.</p>
+<p>Això és degut a que s'ha creat un nou <code>commit</code> amb els canvis de l'anterior.</p>
+</div>
+<p>En aquest punt, si volem incorporar els canvis de la branca <code>llicencia</code> a la branca <code>main</code>, podem fer-ho
+mitjançant una <a href="#fusio-directa" rel="nofollow"><strong>fusió directa</strong> (<em>fast-forward</em>)</a>.</p>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(llicencia)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>main
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="go">Switched to branch &#39;main&#39;</span>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>merge<span class="w"> </span>llicencia
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="go">Updating 1b2c3d4..8bad4a1</span>
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="go">Fast-forward</span>
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="go"> README.md | 3 +++</span>
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="go"> 1 file changed, 3 insertions(+)</span>
+</span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>lg
+</span><span id="__span-27-9"><a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8bad4a1</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 seconds ago)</span><span class="w"> </span><span class="git-cm">Llicència</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main, llicencia)</span>
+</span><span id="__span-27-10"><a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">1b2c3d4</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 minutes ago)</span><span class="w"> </span><span class="git-cm">Text rebase</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+</span><span id="__span-27-11"><a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a><span class="go">...</span>
+</span></code></pre></div>
+</div>
+<h3 id="resolucio-de-conflictes_1">Resolució de conflictes</h3>
+<p>El <strong>canvi de base</strong> (<code>rebase</code>) també pot provocar conflictes si les dues branques
+han modificat la mateixa part d'un fitxer.</p>
+<p>Git ens indicarà que hi ha conflictes i caldrà resoldre'ls manualment,
+d'una manera similar a <a href="#resolucio-de-conflictes" rel="nofollow"><strong>la resolució de conflictes en la fusió de branques</strong></a>.</p>
+<p>En aquest cas, caldrà resoldre els conflictes per a cada <code>commit</code> en el que s'està canviant la base.</p>
+<p>Després de resoldre els conflictes d'un <code>commit</code>, caldrà continuar amb el procés de <code>rebase</code> amb l'ordre <code>git rebase --continue</code>
+fins que s'haja aplicat el canvi de base a tots els <code>commit</code> de la branca.</p>
+<details class="prep">
+<summary>Preparació branques divergents amb conflictes</summary>
+<ol>
+<li>Creem la branca <code>docs/git_training</code> i realitzem canvis en la descripció del fitxer <code>README.md</code>.</li>
+</ol>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>docs_git_training
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="go">Switched to a new branch &#39;docs_git_training&#39;</span>
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(docs_git_training)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>vim<span class="w"> </span>README.md
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(docs_git_training)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>diff
+</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="gh">diff --git a/README.md b/README.md</span>
+</span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a><span class="gh">index 54f292f..271a617 100644</span>
+</span><span id="__span-28-7"><a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a><span class="gd">--- a/README.md</span>
+</span><span id="__span-28-8"><a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a><span class="gi">+++ b/README.md</span>
+</span><span id="__span-28-9"><a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a><span class="gu">@@ -6,6 +6,7 @@ També a canviar la base d&#39;una branca.</span>
+</span><span id="__span-28-10"><a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>
+</span><span id="__span-28-11"><a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a><span class="w"> </span>## Documentació
+</span><span id="__span-28-12"><a id="__codelineno-28-12" name="__codelineno-28-12" href="#__codelineno-28-12"></a><span class="w"> </span>- https://git-scm.com/
+</span><span id="__span-28-13"><a id="__codelineno-28-13" name="__codelineno-28-13" href="#__codelineno-28-13"></a><span class="gi">+- https://github.com/UnseenWizzard/git_training </span>
+</span><span id="__span-28-14"><a id="__codelineno-28-14" name="__codelineno-28-14" href="#__codelineno-28-14"></a>
+</span><span id="__span-28-15"><a id="__codelineno-28-15" name="__codelineno-28-15" href="#__codelineno-28-15"></a><span class="w"> </span>## Llicència
+</span><span id="__span-28-16"><a id="__codelineno-28-16" name="__codelineno-28-16" href="#__codelineno-28-16"></a><span class="w"> </span>CC BY-NC-SA 4.0
+</span><span id="__span-28-17"><a id="__codelineno-28-17" name="__codelineno-28-17" href="#__codelineno-28-17"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(docs_git_training)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Documentació git_training&quot;</span>
+</span><span id="__span-28-18"><a id="__codelineno-28-18" name="__codelineno-28-18" href="#__codelineno-28-18"></a><span class="go">[docs_git_training a136424] Documentació git_training</span>
+</span><span id="__span-28-19"><a id="__codelineno-28-19" name="__codelineno-28-19" href="#__codelineno-28-19"></a><span class="go"> 1 file changed, 1 insertion(+)</span>
+</span><span id="__span-28-20"><a id="__codelineno-28-20" name="__codelineno-28-20" href="#__codelineno-28-20"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(docs_git_training)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>lg
+</span><span id="__span-28-21"><a id="__codelineno-28-21" name="__codelineno-28-21" href="#__codelineno-28-21"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">a136424</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 seconds ago)</span><span class="w"> </span><span class="git-cm">Documentació git_training</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; docs_git_training)</span>
+</span><span id="__span-28-22"><a id="__codelineno-28-22" name="__codelineno-28-22" href="#__codelineno-28-22"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">1b2c3d4</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 minutes ago)</span><span class="w"> </span><span class="git-cm">Text rebase</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(main)</span>
+</span><span id="__span-28-23"><a id="__codelineno-28-23" name="__codelineno-28-23" href="#__codelineno-28-23"></a><span class="go">...</span>
+</span></code></pre></div>
+<ol start="2">
+<li>Realitzem canvis en la descripció en la branca <code>main</code>.</li>
+</ol>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(docs_git_training)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>main
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="go">Switched to branch &#39;main&#39;</span>
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>vim<span class="w"> </span>README.md
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>diff
+</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="gh">diff --git a/README.md b/README.md</span>
+</span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a><span class="gh">index 54f292f..6f65136 100644</span>
+</span><span id="__span-29-7"><a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a><span class="gd">--- a/README.md</span>
+</span><span id="__span-29-8"><a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a><span class="gi">+++ b/README.md</span>
+</span><span id="__span-29-9"><a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a><span class="gu">@@ -6,6 +6,7 @@ També a canviar la base d&#39;una branca.</span>
+</span><span id="__span-29-10"><a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a>
+</span><span id="__span-29-11"><a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a><span class="w"> </span>## Documentació
+</span><span id="__span-29-12"><a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a><span class="w"> </span>- https://git-scm.com/
+</span><span id="__span-29-13"><a id="__codelineno-29-13" name="__codelineno-29-13" href="#__codelineno-29-13"></a><span class="gi">+- https://www.w3schools.com/git/</span>
+</span><span id="__span-29-14"><a id="__codelineno-29-14" name="__codelineno-29-14" href="#__codelineno-29-14"></a>
+</span><span id="__span-29-15"><a id="__codelineno-29-15" name="__codelineno-29-15" href="#__codelineno-29-15"></a><span class="w"> </span>## Llicència
+</span><span id="__span-29-16"><a id="__codelineno-29-16" name="__codelineno-29-16" href="#__codelineno-29-16"></a><span class="w"> </span>CC BY-NC-SA 4.0
+</span><span id="__span-29-17"><a id="__codelineno-29-17" name="__codelineno-29-17" href="#__codelineno-29-17"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Documentació w3schools&quot;</span>
+</span><span id="__span-29-18"><a id="__codelineno-29-18" name="__codelineno-29-18" href="#__codelineno-29-18"></a><span class="go">[main 0230b1b] Documentació w3schools</span>
+</span><span id="__span-29-19"><a id="__codelineno-29-19" name="__codelineno-29-19" href="#__codelineno-29-19"></a><span class="go"> 1 file changed, 1 insertion(+)</span>
+</span><span id="__span-29-20"><a id="__codelineno-29-20" name="__codelineno-29-20" href="#__codelineno-29-20"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>lg<span class="w"> </span>-a
+</span><span id="__span-29-21"><a id="__codelineno-29-21" name="__codelineno-29-21" href="#__codelineno-29-21"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">0230b1b</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 seconds ago)</span><span class="w"> </span><span class="git-cm">Documentació w3schools</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
+</span><span id="__span-29-22"><a id="__codelineno-29-22" name="__codelineno-29-22" href="#__codelineno-29-22"></a><span class="git-bl">| </span><span class="go">*</span><span class="w"> </span><span class="git-ch">a136424</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 minutes ago)</span><span class="w"> </span><span class="git-cm">Documentació git_training</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(docs_git_training)</span>
+</span><span id="__span-29-23"><a id="__codelineno-29-23" name="__codelineno-29-23" href="#__codelineno-29-23"></a><span class="git-bl">|/</span>
+</span><span id="__span-29-24"><a id="__codelineno-29-24" name="__codelineno-29-24" href="#__codelineno-29-24"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">1b2c3d4</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 minutes ago)</span><span class="w"> </span><span class="git-cm">Text rebase</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+</span><span id="__span-29-25"><a id="__codelineno-29-25" name="__codelineno-29-25" href="#__codelineno-29-25"></a><span class="go">...</span>
+</span></code></pre></div>
+</details>
+<div class="admonition example">
+<p class="admonition-title">Canvi de base amb conflictes</p>
+<p>Canviem la base de la branca <code>docs_git_training</code> a la branca <code>main</code>.</p>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>docs_git_training
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="go">Switched to branch &#39;docs_git_training&#39;</span>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(docs_git_training)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>rebase<span class="w"> </span>main
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="go">Auto-merging README.md</span>
+</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a><span class="go">CONFLICT (content): Merge conflict in README.md</span>
+</span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="go">error: could not apply a136424... git_training</span>
+</span><span id="__span-30-7"><a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a><span class="git-hint">hint: Resolve all conflicts manually, mark them as resolved with</span>
+</span><span id="__span-30-8"><a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a><span class="git-hint">hint: &quot;git add/rm &lt;conflicted_files&gt;&quot;, then run &quot;git rebase --continue&quot;.</span>
+</span><span id="__span-30-9"><a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a><span class="git-hint">hint: You can instead skip this commit: run &quot;git rebase --skip&quot;.</span>
+</span><span id="__span-30-10"><a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a><span class="git-hint">hint: To abort and get back to the state before &quot;git rebase&quot;, run &quot;git rebase --abort&quot;.</span>
+</span><span id="__span-30-11"><a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a><span class="git-hint">hint: Disable this message with &quot;git config advice.mergeConflict false&quot;</span>
+</span><span id="__span-30-12"><a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a><span class="go">Could not apply a136424... Documentació git_training</span>
+</span><span id="__span-30-13"><a id="__codelineno-30-13" name="__codelineno-30-13" href="#__codelineno-30-13"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(docs_git_training|REBASE 1/1)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>status
+</span><span id="__span-30-14"><a id="__codelineno-30-14" name="__codelineno-30-14" href="#__codelineno-30-14"></a><span class="go">interactive rebase in progress; onto 0230b1b</span>
+</span><span id="__span-30-15"><a id="__codelineno-30-15" name="__codelineno-30-15" href="#__codelineno-30-15"></a><span class="go">Last command done (1 command done):</span>
+</span><span id="__span-30-16"><a id="__codelineno-30-16" name="__codelineno-30-16" href="#__codelineno-30-16"></a><span class="go">   pick a136424 git_training</span>
+</span><span id="__span-30-17"><a id="__codelineno-30-17" name="__codelineno-30-17" href="#__codelineno-30-17"></a><span class="go">No commands remaining.</span>
+</span><span id="__span-30-18"><a id="__codelineno-30-18" name="__codelineno-30-18" href="#__codelineno-30-18"></a><span class="go">You are currently rebasing branch &#39;docs_git_training&#39; on &#39;0230b1b&#39;.</span>
+</span><span id="__span-30-19"><a id="__codelineno-30-19" name="__codelineno-30-19" href="#__codelineno-30-19"></a><span class="go">  (fix conflicts and then run &quot;git rebase --continue&quot;)</span>
+</span><span id="__span-30-20"><a id="__codelineno-30-20" name="__codelineno-30-20" href="#__codelineno-30-20"></a><span class="go">  (use &quot;git rebase --skip&quot; to skip this patch)</span>
+</span><span id="__span-30-21"><a id="__codelineno-30-21" name="__codelineno-30-21" href="#__codelineno-30-21"></a><span class="go">  (use &quot;git rebase --abort&quot; to check out the original branch)</span>
+</span><span id="__span-30-22"><a id="__codelineno-30-22" name="__codelineno-30-22" href="#__codelineno-30-22"></a>
+</span><span id="__span-30-23"><a id="__codelineno-30-23" name="__codelineno-30-23" href="#__codelineno-30-23"></a><span class="go">Unmerged paths:</span>
+</span><span id="__span-30-24"><a id="__codelineno-30-24" name="__codelineno-30-24" href="#__codelineno-30-24"></a><span class="go">  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)</span>
+</span><span id="__span-30-25"><a id="__codelineno-30-25" name="__codelineno-30-25" href="#__codelineno-30-25"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to mark resolution)</span>
+</span><span id="__span-30-26"><a id="__codelineno-30-26" name="__codelineno-30-26" href="#__codelineno-30-26"></a><span class="w">    </span><span class="git-unm">both modified:   README.md</span>
+</span><span id="__span-30-27"><a id="__codelineno-30-27" name="__codelineno-30-27" href="#__codelineno-30-27"></a>
+</span><span id="__span-30-28"><a id="__codelineno-30-28" name="__codelineno-30-28" href="#__codelineno-30-28"></a><span class="go">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span>
+</span><span id="__span-30-29"><a id="__codelineno-30-29" name="__codelineno-30-29" href="#__codelineno-30-29"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(docs_git_training|REBASE 1/1)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>cat<span class="w"> </span>README.md
+</span><span id="__span-30-30"><a id="__codelineno-30-30" name="__codelineno-30-30" href="#__codelineno-30-30"></a><span class="go"># Bloc: Branques</span>
+</span><span id="__span-30-31"><a id="__codelineno-30-31" name="__codelineno-30-31" href="#__codelineno-30-31"></a><span class="go">__Autor__: Joan Puigcerver</span>
+</span><span id="__span-30-32"><a id="__codelineno-30-32" name="__codelineno-30-32" href="#__codelineno-30-32"></a>
+</span><span id="__span-30-33"><a id="__codelineno-30-33" name="__codelineno-30-33" href="#__codelineno-30-33"></a><span class="go">Estem aprenent a fusionar branques i resoldre conflictes.</span>
+</span><span id="__span-30-34"><a id="__codelineno-30-34" name="__codelineno-30-34" href="#__codelineno-30-34"></a><span class="go">També a canviar la base d&#39;una branca.</span>
+</span><span id="__span-30-35"><a id="__codelineno-30-35" name="__codelineno-30-35" href="#__codelineno-30-35"></a>
+</span><span id="__span-30-36"><a id="__codelineno-30-36" name="__codelineno-30-36" href="#__codelineno-30-36"></a><span class="go">## Documentació</span>
+</span><span id="__span-30-37"><a id="__codelineno-30-37" name="__codelineno-30-37" href="#__codelineno-30-37"></a><span class="go">- https://git-scm.com/</span>
+</span><span id="__span-30-38"><a id="__codelineno-30-38" name="__codelineno-30-38" href="#__codelineno-30-38"></a><span class="go">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
+</span><span id="__span-30-39"><a id="__codelineno-30-39" name="__codelineno-30-39" href="#__codelineno-30-39"></a><span class="go">- https://www.w3schools.com/git/</span>
+</span><span id="__span-30-40"><a id="__codelineno-30-40" name="__codelineno-30-40" href="#__codelineno-30-40"></a><span class="go">=======</span>
+</span><span id="__span-30-41"><a id="__codelineno-30-41" name="__codelineno-30-41" href="#__codelineno-30-41"></a><span class="go">- https://github.com/UnseenWizzard/git_training </span>
+</span><span id="__span-30-42"><a id="__codelineno-30-42" name="__codelineno-30-42" href="#__codelineno-30-42"></a><span class="go">&gt;&gt;&gt;&gt;&gt;&gt;&gt; a136424 (git_training)</span>
+</span><span id="__span-30-43"><a id="__codelineno-30-43" name="__codelineno-30-43" href="#__codelineno-30-43"></a>
+</span><span id="__span-30-44"><a id="__codelineno-30-44" name="__codelineno-30-44" href="#__codelineno-30-44"></a><span class="go">## Llicència</span>
+</span><span id="__span-30-45"><a id="__codelineno-30-45" name="__codelineno-30-45" href="#__codelineno-30-45"></a><span class="go">CC BY-NC-SA 4.0</span>
+</span></code></pre></div>
+<p>Vegem que hi ha conflictes en el fitxer <code>README.md</code>. Hem de resoldre'ls manualment.</p>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(docs_git_training|REBASE 1/1)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>vim<span class="w"> </span>README.md<span class="w"> </span><span class="c1"># (1)!</span>
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(docs_git_training|REBASE 1/1)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>cat<span class="w"> </span>README.md
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="go"># Bloc: Branques</span>
+</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="go">__Autor__: Joan Puigcerver</span>
+</span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>
+</span><span id="__span-31-6"><a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a><span class="go">Estem aprenent a fusionar branques i resoldre conflictes.</span>
+</span><span id="__span-31-7"><a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a><span class="go">També a canviar la base d&#39;una branca.</span>
+</span><span id="__span-31-8"><a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>
+</span><span id="__span-31-9"><a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a><span class="go">## Documentació</span>
+</span><span id="__span-31-10"><a id="__codelineno-31-10" name="__codelineno-31-10" href="#__codelineno-31-10"></a><span class="go">- https://git-scm.com/</span>
+</span><span id="__span-31-11"><a id="__codelineno-31-11" name="__codelineno-31-11" href="#__codelineno-31-11"></a><span class="go">- https://www.w3schools.com/git/</span>
+</span><span id="__span-31-12"><a id="__codelineno-31-12" name="__codelineno-31-12" href="#__codelineno-31-12"></a><span class="go">- https://github.com/UnseenWizzard/git_training </span>
+</span><span id="__span-31-13"><a id="__codelineno-31-13" name="__codelineno-31-13" href="#__codelineno-31-13"></a>
+</span><span id="__span-31-14"><a id="__codelineno-31-14" name="__codelineno-31-14" href="#__codelineno-31-14"></a><span class="go">## Llicència</span>
+</span><span id="__span-31-15"><a id="__codelineno-31-15" name="__codelineno-31-15" href="#__codelineno-31-15"></a><span class="go">CC BY-NC-SA 4.0</span>
+</span><span id="__span-31-16"><a id="__codelineno-31-16" name="__codelineno-31-16" href="#__codelineno-31-16"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(docs_git_training|REBASE 1/1)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>README.md<span class="w"> </span><span class="c1"># (2)!</span>
+</span><span id="__span-31-17"><a id="__codelineno-31-17" name="__codelineno-31-17" href="#__codelineno-31-17"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(docs_git_training|REBASE 1/1)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>status
+</span><span id="__span-31-18"><a id="__codelineno-31-18" name="__codelineno-31-18" href="#__codelineno-31-18"></a><span class="go">interactive rebase in progress; onto 0230b1b</span>
+</span><span id="__span-31-19"><a id="__codelineno-31-19" name="__codelineno-31-19" href="#__codelineno-31-19"></a><span class="go">Last command done (1 command done):</span>
+</span><span id="__span-31-20"><a id="__codelineno-31-20" name="__codelineno-31-20" href="#__codelineno-31-20"></a><span class="go">   pick a136424 git_training</span>
+</span><span id="__span-31-21"><a id="__codelineno-31-21" name="__codelineno-31-21" href="#__codelineno-31-21"></a><span class="go">No commands remaining.</span>
+</span><span id="__span-31-22"><a id="__codelineno-31-22" name="__codelineno-31-22" href="#__codelineno-31-22"></a><span class="go">You are currently rebasing branch &#39;docs_git_training&#39; on &#39;0230b1b&#39;.</span>
+</span><span id="__span-31-23"><a id="__codelineno-31-23" name="__codelineno-31-23" href="#__codelineno-31-23"></a><span class="go">  (all conflicts fixed: run &quot;git rebase --continue&quot;)</span>
+</span><span id="__span-31-24"><a id="__codelineno-31-24" name="__codelineno-31-24" href="#__codelineno-31-24"></a>
+</span><span id="__span-31-25"><a id="__codelineno-31-25" name="__codelineno-31-25" href="#__codelineno-31-25"></a><span class="go">Changes to be committed:</span>
+</span><span id="__span-31-26"><a id="__codelineno-31-26" name="__codelineno-31-26" href="#__codelineno-31-26"></a><span class="go">  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)</span>
+</span><span id="__span-31-27"><a id="__codelineno-31-27" name="__codelineno-31-27" href="#__codelineno-31-27"></a><span class="w">    </span><span class="git-stg">modified:   README.md</span>
+</span><span id="__span-31-28"><a id="__codelineno-31-28" name="__codelineno-31-28" href="#__codelineno-31-28"></a>
+</span><span id="__span-31-29"><a id="__codelineno-31-29" name="__codelineno-31-29" href="#__codelineno-31-29"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(docs_git_training|REBASE 1/1)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>rebase<span class="w"> </span>--continue<span class="w"> </span>--no-edit<span class="w"> </span><span class="c1"># (3)!</span>
+</span><span id="__span-31-30"><a id="__codelineno-31-30" name="__codelineno-31-30" href="#__codelineno-31-30"></a><span class="go">Successfully rebased and updated refs/heads/docs_git_training.</span>
+</span><span id="__span-31-31"><a id="__codelineno-31-31" name="__codelineno-31-31" href="#__codelineno-31-31"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(docs_git_training)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>lg
+</span><span id="__span-31-32"><a id="__codelineno-31-32" name="__codelineno-31-32" href="#__codelineno-31-32"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8bad4a1</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 seconds ago)</span><span class="w"> </span><span class="git-cm">Documentació git_training</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; docs_git_training)</span>
+</span><span id="__span-31-33"><a id="__codelineno-31-33" name="__codelineno-31-33" href="#__codelineno-31-33"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">0230b1b</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 minutes ago)</span><span class="w"> </span><span class="git-cm">Documentació w3schools</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(main)</span>
+</span><span id="__span-31-34"><a id="__codelineno-31-34" name="__codelineno-31-34" href="#__codelineno-31-34"></a><span class="go">...</span>
+</span></code></pre></div>
+<ol>
+<li>Hem eliminat les marques de conflicte i hem combinat els dos textos.</li>
+<li>Hem marcat el fitxer <code>README.md</code> com a resolt.</li>
+<li>L'opció <code>--no-edit</code> permet continuar el procés de <code>rebase</code>, utilitzant el missatge del <code>commit</code> original.</li>
+</ol>
+</div>
+<h2 id="recursos-addicionals">Recursos addicionals</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=3GymExBkKjE&amp;ab_channel=MoureDevbyBraisMoure" rel="nofollow">Curs de Git des de zero per MoureDev</a></li>
+<li><a href="https://github.com/UnseenWizzard/git_training" rel="nofollow">https://github.com/UnseenWizzard/git_training</a></li>
+</ul>
+<h2 id="bibliografia">Bibliografia</h2>
+<ul>
+<li><a href="https://git-scm.com/book/en/v2" rel="nofollow">https://git-scm.com/book/en/v2</a></li>
+<li><a href="https://github.com/UnseenWizzard/git_training" rel="nofollow">https://github.com/UnseenWizzard/git_training</a></li>
+</ul>
     
 
 
