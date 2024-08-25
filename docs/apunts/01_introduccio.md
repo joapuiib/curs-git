@@ -214,7 +214,7 @@ Per últim, tots els canvis de l'__Àrea de preparació__ es poden confirmar i f
     - `git commit`: https://git-scm.com/docs/git-commit
 
 
-## Afegir fitxers a l'Àrea de Preparació
+## Afegir fitxers a l'Àrea de Preparació (`git add`)
 Afegim el primer fitxer `README.md` al nostre repositori.
 
 !!! info
@@ -281,7 +281,7 @@ Vegem com el fitxer `README.md` ha passat a l'estat __Staged__ i està preparat 
 </figure>
 
 
-## Confirmar canvis
+## Confirmar canvis (`git commit`)
 
 Una vegada afegits tots els canvis a l'_Àrea de Preparació_, ja podem __confirmar-los__
 mitjançant l'ordre `git commit`.
@@ -379,7 +379,7 @@ index 0000000..6d747b3
 +Estem aprenent a utilitzar Git!
 ```
 
-## Diferències entre versions
+## Diferències entre versions (`git diff`)
 Una ferramenta molt útil de Git és `git diff`, que permet comparar les diferències entre els canvis realitzats
 en el __Directori de treball__ o __l'Àrea de Preparació__ respecte del __Repositori local__.
 
@@ -470,7 +470,7 @@ git diff [--staged] [<path>]
     En l'exemple anterior, s'ha afegit la línia `Aquesta és una línia nova` al fitxer `README.md`.
 
 
-## Descartar canvis
+## Descartar canvis (`git restore`)
 Una altra ferramenta útil de Git és `git restore`, que permet descartar els canvis realitzats en els fitxers
 del __Directori de treball__ o __l'Àrea de Preparació__.
 
@@ -554,7 +554,7 @@ Podeu consultar la [Figura 2](#figure-2) per a veure un resum del comportament d
     ```
 
 
-## Històric de canvis
+## Històric de canvis (`git log`)
 Git registra tots els canvis confirmats (`commit`) en el __Repositori local__.
 L'històric de canvis es pot consultar amb l'ordre `git log`.
 
@@ -629,7 +629,7 @@ git config --global alias.lga "lg --all"
     ```
 
 
-## Configuració
+## Configuració (`git config`)
 Git permet configurar diferents paràmetres per a personalitzar el seu comportament mitjançant l'ordre `git config`.
 
 ```bash
@@ -645,7 +645,7 @@ git config [--global] <key> <value>
     - El nom (`user.name`) i el correu electrònic (`user.email`) de l'autor dels `commit`
     - L'editor per defecte (`core.editor`).
 
-### Fitxer de configuració
+### Fitxer de configuració (`.gitconfig`)
 La configuració `--global` s'emmagatzema en el fitxer `.gitconfig`, situat del directori de l'usuari.
 
 === "Linux"
@@ -674,7 +674,7 @@ La configuració `--global` s'emmagatzema en el fitxer `.gitconfig`, situat del 
         lga = lg --all
     ```
 
-## Ignorar fitxers
+## Ignorar fitxers (`.gitignore`)
 En un projecte, hi ha fitxers que no volem incloure en el repositori, com arxius temporals, binaris o fitxers de configuració.
 Git permet ignorar aquests fitxers mitjançant el fitxer `.gitignore`, que conté una llista de patrons de fitxers els
 quals Git no tindrà en compte.
