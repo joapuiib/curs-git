@@ -1,6 +1,7 @@
 ---
 template: document.html
 title: "Bloc 1: Introducció a Git"
+icon: material/book-open-variant
 alias: bloc1
 comments: true
 ---
@@ -204,7 +205,7 @@ Per últim, tots els canvis de l'__Àrea de preparació__ es poden confirmar i f
 </figure>
 
 !!! info
-    La comanda `git restore` es presenta a l'apartat [Descartar canvis](#descartar-canvis).
+    La comanda `git restore` es presenta a l'apartat [Descartar canvis](#descartar-canvis-git-restore).
 
 !!! docs
     Documentació oficial de:

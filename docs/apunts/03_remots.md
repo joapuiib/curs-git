@@ -1,6 +1,7 @@
 ---
 template: document.html
 title: "Bloc 3: Remots"
+icon: material/book-open-variant
 alias: bloc3
 comments: true
 ---

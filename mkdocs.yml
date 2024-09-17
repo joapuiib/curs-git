@@ -1,6 +1,7 @@
 site_name: "Introducció a Git i la seua aplicació a l’aula"
 site_author: "Joan Puigcerver Ibáñez"
 site_email: "j.puigcerveribanez@edu.gva.es"
+site_url: https://joapuiib.github.io/curs-git/
 dev_addr: 127.0.0.1:4567
 
 repo_name: joapuiib/curs-git
@@ -14,6 +15,14 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/joanpuigcerver/
       name: Joan Puigcerver a LinkedIn
+
+draft_docs: |
+  *_unpublished.md
+  *_draft.md
+
+exclude_docs: |
+  *_excluded.md
+  _*
 
 theme:
   name: material-joapuiib
@@ -49,12 +58,13 @@ theme:
         name: Canvia a mode clar
 
 plugins:
-  - material/search
-  - material-joapuiib/enviorment
-  - awesome-pages # Navegació
   - alias
+  - awesome-pages # Navegació
   - drawio_file
   - macros
+  - material/search
+  - material-joapuiib/enviorment
+  - sectionicons
   - i18n:
       languages:
         - locale: ca
@@ -83,23 +93,33 @@ markdown_extensions:
   - admonition
   - attr_list
   - def_list
+  - footnotes
+  - markdown_grid_tables
   - md_in_html
-  - mdx_linkify
   - sane_lists
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:material_joapuiib.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
+  - toc:
+      permalink: true
+      toc_depth: 4

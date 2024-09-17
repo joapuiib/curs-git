@@ -1,6 +1,7 @@
 ---
 template: document.html
 title: "Bloc 2: Branques"
+icon: material/book-open-variant
 alias: bloc2
 comments: true
 ---
@@ -321,7 +322,7 @@ git merge <branca>
     Documentació de la ordre `git merge`: https://git-scm.com/docs/git-merge
 
 Segons l'estrucura de les branques, la fusió pot ser [__directa__](#fusio-directa) (_fast-forward_)
-o mitjançant [__commit de fusió__](#commit-de-fusio) (_merge commit_).
+o mitjançant [__commit de fusió__](#fusio-de-branques-divergents) (_merge commit_).
 
 
 ### Fusió directa
@@ -460,7 +461,7 @@ En el moment de realitzar la fusió (`git merge`), Git crearà un nou `commit` d
 que incorporarà els canvis de les dues branques. Aquest `commit` necessita d'un missatge,
 per tant, es pot utilitzar l'opció `-m` per afegir un missatge al `commit`.
 Si no se n'especifica cap, s'obrirà l'editor de text configurat per defecte per a afegir el missatge
-(Vegeu [Confirmar canvis](01_introduccio.md#confirmar-canvis)).
+(Vegeu [Confirmar canvis](01_introduccio.md#confirmar-canvis-git-commit)).
 
 !!! warning
     Aquest tipus de fusió no és tan neta com la __fusió directa__ (_fast-forward_),

@@ -24,13 +24,18 @@ while [ $# -gt 0 ] ; do
     shift
 done
 
+if [ ! -d "venv" ]; then
+    INSTALL_VENV=1
+    print "Virtual environment not found."
+fi
+
 if [ $INSTALL_VENV -eq 1 ]; then
     if [ -d "venv" ]; then
-        print "Removing existing virtual environment"
+        print "Removing existing virtual environment..."
         rm -rf venv
     fi
 
-    print "Installing virtual environment"
+    print "Installing virtual environment..."
     python3 -m venv venv
     print "Installing dependencies"
     ./venv/bin/pip install -r requirements.txt
