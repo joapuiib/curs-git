@@ -1,0 +1,60 @@
+table.distribucio-temporal {
+    border: 0;
+    font-weight: bold;
+    width: 100%;
+}
+
+table.distribucio-temporal td,
+table.distribucio-temporal tr,
+table.quadre-resum td,
+table.quadre-resum tr {
+    border: 0;
+    font-weight: unset;
+    vertical-align: middle;
+    padding: 5px 10px;
+}
+
+table.distribucio-temporal th,
+table.quadre-resum th {
+    background-color: #2F84B5;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+table.distribucio-temporal tr.term1 {
+    background-color: rgb(219, 228, 240);
+}
+
+table.distribucio-temporal tr.term2 {
+    background-color: rgb(210, 240, 200);
+}
+
+table.distribucio-temporal tr.term3 {
+    background-color: rgb(250, 211, 180);
+}
+
+table.quadre-resum {
+    border: 1px solid;
+}
+
+table.quadre-resum td,
+table.quadre-resum tr {
+    border: 1px solid;
+    font-weight: unset;
+}
+
+table.quadre-resum th {
+    background-color: #2F84B5;
+    color: white;
+    border: 1px solid black;
+}
+
+table.quadre-resum tr.ordinaria {
+    background-color: rgb(219, 228, 240);
+}
+
+table.quadre-resum tr.extraordinaria {
+    background-color: rgb(250, 211, 180);
+}

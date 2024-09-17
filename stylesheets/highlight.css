@@ -15,6 +15,7 @@
 }
 
 .language-shellconsole.highlight .gh,
+.language-shellconsole.highlight .p,
 .language-shellconsole.highlight .go {
   color: #D8DEE9ee;
 }

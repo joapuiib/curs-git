@@ -12,3 +12,55 @@
   margin: unset;
   max-width: unset;
 }
+
+.md-banner .twemoji {
+    border-radius: 100%;
+    box-shadow: inset 0 0 0 .05rem currentcolor;
+    display: inline-block;
+    height: 1.2rem;
+    padding: .25rem;
+    transition: all .25s;
+    vertical-align: bottom;
+    width: 1.2rem;
+}
+
+.md-banner:has(.md-banner__inner .under-construction) {
+    background-color: #ffd914;
+    color: #111111;
+}
+
+p:has(img.center) {
+    text-align: center;
+}
+
+.red {
+    color: #d85b5b;
+}
+.blue {
+    color: #4976c7;
+}
+.lightblue {
+    color: #6cb2eb;
+}
+.green {
+    color: #639b4c;
+}
+.orange {
+    color: #f9a61a;
+}
+.yellow {
+    color: #f9d616;
+}
+.purple {
+    color: #8e7cc3;
+}
+.white {
+    color: white;
+}
+.gray {
+    color: gray;
+}
+
+.center {
+    text-align: center;
+}
