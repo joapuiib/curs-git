@@ -4,6 +4,12 @@ title: "Bloc 1: Introducció a Git"
 icon: material/book-open-variant
 alias: bloc1
 comments: true
+tags:
+  - git
+  - commit
+  - staging
+  - repository
+  - diff
 ---
 
 ## Què és Git?

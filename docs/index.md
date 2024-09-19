@@ -16,18 +16,19 @@ hide:
 
 ## Continguts
 - __[[bloc1]]__
-    - Instal·lació
-    - Configuració
-    - Estructura d'un repositori
-    - Flux de treball
-    - Inicialització d'un repositori
-    - Realització de canvis
+    - Instal·lació.
+    - Configuració.
+    - Estructura d'un repositori.
+    - Flux de treball.
+    - Inicialització d'un repositori.
+    - Realització de canvis.
 - __[[bloc2]]__
     - Creació de branques.
     - Navegar entre branques.
-    - Sincronització de branques
-    - Fusió de branques (`merge`)
-    - Canvi de base (`rebase`)
+    - Sincronització de branques.
+    - Fusió de branques (`merge`).
+    - Canvi de base (`rebase`).
+    - Resolució de conflictes.
 - __[[bloc3]]__
     - Creació d'un repositori remot a GitHub.
     - Configurar un repositori remot.
@@ -36,11 +37,11 @@ hide:
     - Publicació i incorporació de canvis.
     - Clonació d'un repositori remot.
 - __Bloc 4: Estratègies de ramificació__
-    - GitFlow
+    - GitFlow.
 - __Bloc 5: Gestió de projectes__
-    - Organitzacions a GitHub
-    - GitHub Projects
-    - Forks i Pull Requests
+    - Organitzacions a GitHub.
+    - GitHub Projects.
+    - Forks i Pull Requests.
 
 ## Dirigit a
 - Professorat de la família d'Informàtica i Comunicacions.

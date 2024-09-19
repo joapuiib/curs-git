@@ -158,6 +158,14 @@ i fer canvis en aquest, necessites autenticar-te amb el servidor de GitHub.
 
 GitHub ofereix diferents mètodes d'autenticació, utilitzant dos protocols diferents:
 
+!!! tip
+    Per seguretat i reutilització, es recomana utilitzar el __mètode SSH__ per autenticar-se
+    amb el servidor de GitHub.
+
+    Consulta l'apartat [Configuració de la clau SSH](#configuracio-de-la-clau-ssh) si
+    vols anar directament a aquest mètode.
+
+
 - __Protocol HTTPS__: Utilitza el protocol HTTPS per autenticar-se amb el servidor de GitHub.
 
     Per utilitzar aquest mètode, has de configurar les teues credencials d'accés a GitHub
@@ -177,16 +185,6 @@ GitHub ofereix diferents mètodes d'autenticació, utilitzant dos protocols dife
 
     Per utilitzar aquest mètode, has de configurar una clau SSH en el teu sistema local
     i afegir-la al teu compte de GitHub.
-
-    !!! docs
-        - https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh
-
-!!! tip
-    Per seguretat i reutilització, es recomana utilitzar el __mètode SSH__ per autenticar-se
-    amb el servidor de GitHub.
-
-    Consulta l'apartat [Configuració de la clau SSH](#configuracio-de-la-clau-ssh) si
-    vols anar directament a aquest mètode.
 
 ### Token d'accés personal (PAT)
 Un __Token d'Accés Personal (*Personal Access Token* o PAT)__ és una clau d'accés
@@ -249,6 +247,9 @@ de dues maneres:
 Per autenticar-te amb el servidor de GitHub mitjançant el protocol SSH,
 has de configurar una clau SSH en el teu sistema local i afegir-la al teu compte de GitHub.
 
+!!! docs
+    - https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh
+
 Per generar una clau SSH, segueix els següents passos.
 
 === "Terminal"
@@ -283,13 +284,24 @@ Per generar una clau SSH, segueix els següents passos.
 
     - Obri el programa __Git GUI__.
     - Obri el diàleg a __Help > Show SSH Key__.
+
+        <figure id="figure-4">
+            <img src="../img/remots/git_gui_help.png" alt="Git GUI: menú diàleg SSH">
+            <figcaption>Figura 4: Menú diàleg SSH de Git GUI</figcaption>
+        </figure>
+
     - Fes clic a __Generate Key__.
         - Indica una contrasenya (_passphrase_) per protegir la clau (opcional)
             o deixa el camp buit per no protegir-la.
     - Fes clic a __Copy to Clipboard__ per copiar la clau pública al portaretalls.
 
+        <figure id="figure-5">
+            <img src="../img/remots/git_gui_key_generated.png" alt="Git GUI: clau SSH generada">
+            <figcaption>Figura 5: Clau SSH generada amb Git GUI</figcaption>
+        </figure>
 
-Configura la clau SSH al teu compte de GitHub seguint els següents passos:
+
+Després, configura la clau SSH al teu compte de GitHub seguint els següents passos:
 
 - Inicia la sessió a [:material-github: GitHub](https:/github.com/)
 - Fes clic a la teua foto de perfil i selecciona __Settings__.
@@ -342,9 +354,9 @@ git remote add <nom> <url>
     Normalment, s'utilitza el nom `origin` per referir-se al repositori remot principal.
 - `<url>`: URL del repositori remot.
 
-<figure id="figure-4">
+<figure id="figure-6">
     <img src="../img/remots/add_remote.png" alt="Repsitori Local vinculat amb un Repositori Remot">
-    <figcaption>Figura 4: Repositori Local vinculat amb un Repositori Remot</figcaption>
+    <figcaption>Figura 6: Repositori Local vinculat amb un Repositori Remot</figcaption>
 </figure>
 
 !!! warning annotate

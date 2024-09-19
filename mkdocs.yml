@@ -62,6 +62,7 @@ plugins:
   - awesome-pages # Navegació
   - drawio_file
   - macros
+  - material/tags
   - material/search
   - material-joapuiib/enviorment
   - sectionicons
