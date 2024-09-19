@@ -569,13 +569,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configurar-un-repositori-remot" class="md-nav__link">
+  <a href="#configurar-un-repositori-remot-git-remote" class="md-nav__link">
     <span class="md-ellipsis">
-      Configurar un repositori remot
+      Configurar un repositori remot (git remote)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configurar un repositori remot">
+    <nav class="md-nav" aria-label="Configurar un repositori remot (git remote)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -611,18 +611,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#associacio-entre-branques-locals-i-remotes" class="md-nav__link">
+  <a href="#associacio-entre-branques-locals-i-remotes-set-upstream" class="md-nav__link">
     <span class="md-ellipsis">
-      Associació entre branques locals i remotes
+      Associació entre branques locals i remotes (--set-upstream)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#publicacio-de-canvis" class="md-nav__link">
+  <a href="#publicacio-de-canvis-git-push" class="md-nav__link">
     <span class="md-ellipsis">
-      Publicació de canvis
+      Publicació de canvis (git push)
     </span>
   </a>
   
@@ -774,13 +774,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configurar-un-repositori-remot" class="md-nav__link">
+  <a href="#configurar-un-repositori-remot-git-remote" class="md-nav__link">
     <span class="md-ellipsis">
-      Configurar un repositori remot
+      Configurar un repositori remot (git remote)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configurar un repositori remot">
+    <nav class="md-nav" aria-label="Configurar un repositori remot (git remote)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -816,18 +816,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#associacio-entre-branques-locals-i-remotes" class="md-nav__link">
+  <a href="#associacio-entre-branques-locals-i-remotes-set-upstream" class="md-nav__link">
     <span class="md-ellipsis">
-      Associació entre branques locals i remotes
+      Associació entre branques locals i remotes (--set-upstream)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#publicacio-de-canvis" class="md-nav__link">
+  <a href="#publicacio-de-canvis-git-push" class="md-nav__link">
     <span class="md-ellipsis">
-      Publicació de canvis
+      Publicació de canvis (git push)
     </span>
   </a>
   
@@ -1208,8 +1208,8 @@ lloc.</p>
 repositoris que es troben <strong>allotjats en un servidor</strong>, que permeten
 l'accés a altres usuaris i la col·laboració en el desenvolupament de
 projectes.</p>
-<div class="admonition note">
-<p class="admonition-title">Repositori local</p>
+<div class="admonition prep">
+<p class="admonition-title">Preparació repositori local</p>
 <p>En aquest material treballarem sobre un nou repositori local.</p>
 <p><strong>Inicialització:</strong>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>init<span class="w"> </span>~/git_remots
@@ -1511,7 +1511,7 @@ has de configurar una clau SSH en el teu sistema local i afegir-la al teu compte
 <p>Aquesta configuració s'ha de repetir per cada dispositiu on
 vulgues autenticar-te amb el servidor de GitHub mitjançant el protocol SSH.</p>
 </div>
-<h2 id="configurar-un-repositori-remot">Configurar un repositori remot<a class="headerlink" href="#configurar-un-repositori-remot" title="Permanent link">&para;</a></h2>
+<h2 id="configurar-un-repositori-remot-git-remote">Configurar un repositori remot (<code>git remote</code>)<a class="headerlink" href="#configurar-un-repositori-remot-git-remote" title="Permanent link">&para;</a></h2>
 <p>El primer pas és enllaçar el teu <strong>Repositori Local</strong>
 amb el <strong>Repositori Remot</strong> que acabem de crear.
 Per fer-ho, utilitzarem la comanda <code>git remote</code>.</p>
@@ -1607,8 +1607,36 @@ associat al teu repositori local.</p>
 <ul>
 <li><code>&lt;nom&gt;</code>: Nom del repositori remot a eliminar.</li>
 </ul>
-<h2 id="associacio-entre-branques-locals-i-remotes">Associació entre branques locals i remotes<a class="headerlink" href="#associacio-entre-branques-locals-i-remotes" title="Permanent link">&para;</a></h2>
-<h2 id="publicacio-de-canvis">Publicació de canvis<a class="headerlink" href="#publicacio-de-canvis" title="Permanent link">&para;</a></h2>
+<h2 id="associacio-entre-branques-locals-i-remotes-set-upstream">Associació entre branques locals i remotes (<code>--set-upstream</code>)<a class="headerlink" href="#associacio-entre-branques-locals-i-remotes-set-upstream" title="Permanent link">&para;</a></h2>
+<p>De moment, les branques que hem creat resideixen en el repositori local,
+és a dir, en el nostre dispositiu.</p>
+<p>Podem associar les branques locals a branques remotes, del repositori remot,
+perquè els canvis que fem localment es puguen veure reflectits en el repositori remot.</p>
+<p>Per fer-ho, utilitzarem la comanda <code>git push</code> amb l'opció <code>-u</code> o <code>--set-upstream</code>.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>git<span class="w"> </span>push<span class="w"> </span><span class="o">[</span>-u<span class="p">|</span>--set-upstream<span class="o">]</span><span class="w"> </span>&lt;remot&gt;<span class="w"> </span>&lt;branca&gt;
+</span></code></pre></div>
+<ul>
+<li><code>-u|--set-upstream</code>: Configura la branca local perquè s'associe amb la branca remota.</li>
+<li><code>&lt;remot&gt;</code>: Àlies del repositori remot (configurat amb <code>git remote add</code>).</li>
+<li><code>&lt;branca&gt;</code>: Nom de la branca remota.</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Aquesta comanda funciona sobre la branca on estem situats (<code>HEAD</code>).</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Consell</p>
+<p>Pots configurar git perquè configure automàticament la branca local
+perquè s'associe amb la branca remota amb el mateix nom
+amb l'opció <code>push.autoSetupRemote</code>.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>push.autoSetupRemote<span class="w"> </span><span class="nb">true</span>
+</span></code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Associació branca local i remota</p>
+<p>@TODO</p>
+</div>
+<h2 id="publicacio-de-canvis-git-push">Publicació de canvis (<code>git push</code>)<a class="headerlink" href="#publicacio-de-canvis-git-push" title="Permanent link">&para;</a></h2>
 <h2 id="incorporacio-de-canvis">Incorporació de canvis<a class="headerlink" href="#incorporacio-de-canvis" title="Permanent link">&para;</a></h2>
 <h2 id="clonacio-dun-repositori-remot">Clonació d'un repositori remot<a class="headerlink" href="#clonacio-dun-repositori-remot" title="Permanent link">&para;</a></h2>
 <h2 id="recursos-addicionals">Recursos addicionals<a class="headerlink" href="#recursos-addicionals" title="Permanent link">&para;</a></h2>
