@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://joapuiib.github.io/curs-git/</loc>
-        <lastmod>2024-09-17</lastmod>
+        <lastmod>2024-09-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ca" href="https://joapuiib.github.io/curs-git/"/>
     </url>
     <url>
         <loc>https://joapuiib.github.io/curs-git/apunts/</loc>
-        <lastmod>2024-09-17</lastmod>
+        <lastmod>2024-09-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ca" href="https://joapuiib.github.io/curs-git/apunts/"/>
     </url>
     <url>
         <loc>https://joapuiib.github.io/curs-git/apunts/01_introduccio/</loc>
-        <lastmod>2024-09-17</lastmod>
+        <lastmod>2024-09-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ca" href="https://joapuiib.github.io/curs-git/apunts/01_introduccio/"/>
     </url>
     <url>
         <loc>https://joapuiib.github.io/curs-git/apunts/02_branques/</loc>
-        <lastmod>2024-09-17</lastmod>
+        <lastmod>2024-09-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ca" href="https://joapuiib.github.io/curs-git/apunts/02_branques/"/>
     </url>
     <url>
         <loc>https://joapuiib.github.io/curs-git/apunts/03_remots/</loc>
-        <lastmod>2024-09-17</lastmod>
+        <lastmod>2024-09-19</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ca" href="https://joapuiib.github.io/curs-git/apunts/03_remots/"/>
     </url>

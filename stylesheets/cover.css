@@ -31,7 +31,7 @@ div.cover div.content {
 }
 
 div.cover div.content.with-background {
-    padding-left: 120px;
+    padding-left: calc(25px + 1rem);
     /*
     background-image:
         url("../img/cover/horizontal_rect.svg"),

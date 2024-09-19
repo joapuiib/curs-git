@@ -64,3 +64,32 @@ p:has(img.center) {
 .center {
     text-align: center;
 }
+
+.opacity-25 {
+    opacity: 0.25 !important;
+}
+.opacity-50 {
+    opacity: 0.5 !important;
+}
+.opacity-75 {
+    opacity: 0.75 !important;
+}
+.opacity-100 {
+    opacity: 1 !important;
+}
+
+.md-typeset ol ol, .md-typeset ul ol {
+    list-style-type: unset;
+}
+.md-typeset ol ol ol, .md-typeset ul ol ol {
+    list-style-type: unset;
+}
+
+.md-typeset ol ol:not([type]), .md-typeset ul ol:not([type]) {
+    list-style-type: lower-alpha;
+}
+
+.md-typeset ol ol ol:not([type]), .md-typeset ol ul ol:not([type]),
+.md-typeset ul ol ol:not([type]), .md-typeset ul ul ol:not([type]){
+    list-style-type: lower-roman;
+}
