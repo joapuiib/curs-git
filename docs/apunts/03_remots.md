@@ -20,7 +20,7 @@ repositoris que es troben __allotjats en un servidor__, que permeten
 l'accés a altres usuaris i la col·laboració en el desenvolupament de
 projectes.
 
-!!! note "Repositori local"
+!!! prep "Preparació repositori local"
     En aquest material treballarem sobre un nou repositori local.
 
     __Inicialització:__
@@ -316,7 +316,7 @@ Després, configura la clau SSH al teu compte de GitHub seguint els següents pa
     vulgues autenticar-te amb el servidor de GitHub mitjançant el protocol SSH.
 
 
-## Configurar un repositori remot
+## Configurar un repositori remot (`git remote`)
 El primer pas és enllaçar el teu __Repositori Local__
 amb el __Repositori Remot__ que acabem de crear.
 Per fer-ho, utilitzarem la comanda `git remote`.
@@ -423,9 +423,40 @@ git remote remove <nom>
 - `<nom>`: Nom del repositori remot a eliminar.
 
 
-## Associació entre branques locals i remotes
+## Associació entre branques locals i remotes (`--set-upstream`)
+De moment, les branques que hem creat resideixen en el repositori local,
+és a dir, en el nostre dispositiu.
 
-## Publicació de canvis
+Podem associar les branques locals a branques remotes, del repositori remot,
+perquè els canvis que fem localment es puguen veure reflectits en el repositori remot.
+
+Per fer-ho, utilitzarem la comanda `git push` amb l'opció `-u` o `--set-upstream`.
+
+```bash
+git push [-u|--set-upstream] <remot> <branca>
+```
+
+- `-u|--set-upstream`: Configura la branca local perquè s'associe amb la branca remota.
+- `<remot>`: Àlies del repositori remot (configurat amb `git remote add`).
+- `<branca>`: Nom de la branca remota.
+
+!!! important
+    Aquesta comanda funciona sobre la branca on estem situats (`HEAD`).
+
+!!! tip
+    Pots configurar git perquè configure automàticament la branca local
+    perquè s'associe amb la branca remota amb el mateix nom
+    amb l'opció `push.autoSetupRemote`.
+
+    ```bash
+    git config --global push.autoSetupRemote true
+    ```
+
+!!! example "Associació branca local i remota"
+    @TODO
+
+
+## Publicació de canvis (`git push`)
 
 ## Incorporació de canvis
 
