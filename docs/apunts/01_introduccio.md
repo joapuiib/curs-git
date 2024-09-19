@@ -5,11 +5,16 @@ icon: material/book-open-variant
 alias: bloc1
 comments: true
 tags:
-  - git
-  - commit
-  - staging
-  - repository
-  - diff
+  - git add
+  - git commit
+  - git config
+  - git diff
+  - git init
+  - git log
+  - git status
+  - git restore
+  - gitconfig
+  - gitignore
 ---
 
 ## Què és Git?
@@ -105,7 +110,7 @@ No obstant això, és important conéixer com funcionen les comandes de Git en l
 - __Comprensió__: Permet entendre com funcionen les comandes de Git i els processos que realitza en el sistema.
 
 
-## Inicialització d'un repositori
+## Inicialització d'un repositori (`git init`)
 
 Per a començar a utilitzar Git en un projecte, primer cal inicialitzar un repositori en un directori concret.
 ```bash
