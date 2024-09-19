@@ -4,6 +4,18 @@ title: "Bloc 3: Remots"
 icon: material/book-open-variant
 alias: bloc3
 comments: true
+tags:
+    - git clone
+    - git fetch
+    - git pull
+    - git push
+    - git remote
+    - github
+    - ssh
+    - personal access token
+    - origin
+    - remot
+    - --set-upstream
 ---
 
 ## Introducció
@@ -423,7 +435,7 @@ git remote remove <nom>
 - `<nom>`: Nom del repositori remot a eliminar.
 
 
-## Associació entre branques locals i remotes (`--set-upstream`)
+## Associació entre branques locals i remotes (`git push --set-upstream`)
 De moment, les branques que hem creat resideixen en el repositori local,
 és a dir, en el nostre dispositiu.
 
@@ -443,6 +455,11 @@ git push [-u|--set-upstream] <remot> <branca>
 !!! important
     Aquesta comanda funciona sobre la branca on estem situats (`HEAD`).
 
+<figure id="figure-7">
+    <img src="../img/remots/push_setupstream.png" alt="Associació d'una branca local a una branca remota">
+    <figcaption>Figura 7: Associació d'una branca local a una branca remota</figcaption>
+</figure>
+
 !!! tip
     Pots configurar git perquè configure automàticament la branca local
     perquè s'associe amb la branca remota amb el mateix nom
@@ -453,14 +470,112 @@ git push [-u|--set-upstream] <remot> <branca>
     ```
 
 !!! example "Associació branca local i remota"
+    Vegem que inicialment la branca `main` no està associada a cap branca remota.
+
+    Si intentem fer un `git push`, ens mostrarà un missatge d'error com que
+    hem d'anar associar una branca remota.
+
+    ```shellconsole
+    joapuiib@fp:~/git_remots (main) $ git lga
+    * b7adb78 - (2 seconds ago) README.md: Descripció - Joan Puigcerver (HEAD -> main)
+    * a41ab9e - (2 seconds ago) README.md: Títol - Joan Puigcerver
+    joapuiib@fp:~/git_remots (main) $ git push
+    fatal: The current branch main has no upstream branch.
+    To push the current branch and set the remote as upstream, use
+
+        git push --set-upstream origin main
+
+    To have this happen automatically for branches without a tracking
+    upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+    ```
+
+    Associem les branques `main` local i remota amb l'ordre `git push --set-upstream`.
+
+    Localment, s'ha creat la referència `origin/main` que apunta a la branca remota `main`.
+
+
+    ```shellconsole
+    joapuiib@fp:~/git_remots (main) $ git push --set-upstream origin main
+    Enumerating objects: 6, done.
+    Counting objects: 100% (6/6), done.
+    Delta compression using up to 12 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (6/6), 503 bytes | 503.00 KiB/s, done.
+    Total 6 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+    remote: Resolving deltas: 100% (1/1), done.
+    To github.com:joapuiib/git_remots.git
+     * [new branch]      main -> main
+    branch 'main' set up to track 'origin/main'.
+    joapuiib@fp:~/git_remots (main) $ git lga
+    * b7adb78 - (2 seconds ago) README.md: Descripció - Joan Puigcerver (HEAD -> main, origin/main)
+    * a41ab9e - (2 seconds ago) README.md: Títol - Joan Puigcerver
+    ```
+
+    Vegem que els canvis s'han publicat correctament al repositori remot:
+
+    <figure id="figure-8">
+        <img src="../img/remots/github_push.png" alt="Canvis publicats a GitHub">
+        <figcaption>Figura 8: Canvis publicats a GitHub</figcaption>
+    </figure>
+
+
+## Clonació d'un repositori remot (`git clone`)
+L'ordre `git clone` permet copiar un repositori remot a un repositori local en el teu sistema,
+des del qual podràs realitzar canvis.
+
+Aquesta ordre còpia els continguts del _Directori de Treball_ i tota la informació del _Repositori Local_,
+incloent la història de canvis. A més, configura automàticament el repositori remot com a `origin`.
+
+La sintaxi és la següent:
+```bash
+git clone <url> [<directori>]
+```
+
+- `<url>`: URL del repositori remot. Pot ser una URL HTTPS o SSH.
+- `<directori>`: Opcional. Nom del directori on es copiarà el repositori. Per defecte, es crea un directori amb
+    el nom del repositori remot.
+
+<figure id="figure-9">
+    <img src="../img/remots/clone.png" alt="Clonació d'un repositori remot">
+    <figcaption>Figura 9: Clonació d'un repositori remot</figcaption>
+</figure>
+
+!!! example "Pau clona el repositori remot"
+    En aquest exemple, el desenvolupador Pau clonarà el repositori remot `git_remots`
+    sobre el directori `~/git_remots_pau` del seu sistema.
+
+    > S'ha modificat el _prompt_ per indicar les comandes que executaria Pau.
+
+    ```shellconsole
+    pau@fp:~ $ git clone git@github.com:joapuiib/git_remots.git ~/git_remots_pau
+    Cloning into '/home/pau/git_remots_pau'...
+    remote: Enumerating objects: 6, done.
+    remote: Counting objects: 100% (6/6), done.
+    remote: Compressing objects: 100% (2/2), done.
+    remote: Total 6 (delta 1), reused 6 (delta 1), pack-reused 0 (from 0)
+    Receiving objects: 100% (6/6), done.
+    Resolving deltas: 100% (1/1), done.
+    pau@fp:~ $ cd ~/git_remots_pau
+    pau@fp:~/git_remots_pau (main) $ ls
+    README.md
+    pau@fp:~/git_remots_pau (main) $ git lg
+    * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver (HEAD -> main, origin/main)
+    * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
+    ```
+
+    S'observa que s'ha clonat correctament el repositori remot `git_remots` al directori `~/git_remots_pau`,
+    que conté els fitxers i la història de canvis del repositori remot.
+
+
+## Sincronitzacio entre repositoris (`git fetch`)
+
+!!! prep "Preparació: Pau realitza canvis"
     @TODO
 
 
-## Publicació de canvis (`git push`)
+## Incorporació de canvis (`git pull`)
 
-## Incorporació de canvis
-
-## Clonació d'un repositori remot
 
 ## Recursos addicionals
 
