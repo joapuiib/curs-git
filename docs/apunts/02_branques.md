@@ -4,6 +4,15 @@ title: "Bloc 2: Branques"
 icon: material/book-open-variant
 alias: bloc2
 comments: true
+tags:
+  - conflictes
+  - fast-forward
+  - git branch
+  - git checkout
+  - git merge
+  - git rebase
+  - git switch
+  - HEAD
 ---
 
 ## Introducció
