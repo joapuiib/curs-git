@@ -611,36 +611,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#associacio-entre-branques-locals-i-remotes-set-upstream" class="md-nav__link">
+  <a href="#associacio-entre-branques-locals-i-remotes-git-push-set-upstream" class="md-nav__link">
     <span class="md-ellipsis">
-      Associació entre branques locals i remotes (--set-upstream)
+      Associació entre branques locals i remotes (git push --set-upstream)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#publicacio-de-canvis-git-push" class="md-nav__link">
+  <a href="#clonacio-dun-repositori-remot-git-clone" class="md-nav__link">
     <span class="md-ellipsis">
-      Publicació de canvis (git push)
+      Clonació d'un repositori remot (git clone)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#incorporacio-de-canvis" class="md-nav__link">
+  <a href="#sincronitzacio-entre-repositoris-git-fetch" class="md-nav__link">
     <span class="md-ellipsis">
-      Incorporació de canvis
+      Sincronitzacio entre repositoris (git fetch)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#clonacio-dun-repositori-remot" class="md-nav__link">
+  <a href="#incorporacio-de-canvis-git-pull" class="md-nav__link">
     <span class="md-ellipsis">
-      Clonació d'un repositori remot
+      Incorporació de canvis (git pull)
     </span>
   </a>
   
@@ -816,36 +816,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#associacio-entre-branques-locals-i-remotes-set-upstream" class="md-nav__link">
+  <a href="#associacio-entre-branques-locals-i-remotes-git-push-set-upstream" class="md-nav__link">
     <span class="md-ellipsis">
-      Associació entre branques locals i remotes (--set-upstream)
+      Associació entre branques locals i remotes (git push --set-upstream)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#publicacio-de-canvis-git-push" class="md-nav__link">
+  <a href="#clonacio-dun-repositori-remot-git-clone" class="md-nav__link">
     <span class="md-ellipsis">
-      Publicació de canvis (git push)
+      Clonació d'un repositori remot (git clone)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#incorporacio-de-canvis" class="md-nav__link">
+  <a href="#sincronitzacio-entre-repositoris-git-fetch" class="md-nav__link">
     <span class="md-ellipsis">
-      Incorporació de canvis
+      Sincronitzacio entre repositoris (git fetch)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#clonacio-dun-repositori-remot" class="md-nav__link">
+  <a href="#incorporacio-de-canvis-git-pull" class="md-nav__link">
     <span class="md-ellipsis">
-      Clonació d'un repositori remot
+      Incorporació de canvis (git pull)
     </span>
   </a>
   
@@ -881,6 +881,77 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+    
+      
+<nav class="md-tags" >
+  
+    
+    
+    
+      <span class="md-tag">git clone</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">git fetch</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">git pull</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">git push</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">git remote</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">github</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">ssh</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">personal access token</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">origin</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">remot</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">--set-upstream</span>
+    
+  
+</nav>
     
     
 
@@ -1607,7 +1678,7 @@ associat al teu repositori local.</p>
 <ul>
 <li><code>&lt;nom&gt;</code>: Nom del repositori remot a eliminar.</li>
 </ul>
-<h2 id="associacio-entre-branques-locals-i-remotes-set-upstream">Associació entre branques locals i remotes (<code>--set-upstream</code>)<a class="headerlink" href="#associacio-entre-branques-locals-i-remotes-set-upstream" title="Permanent link">&para;</a></h2>
+<h2 id="associacio-entre-branques-locals-i-remotes-git-push-set-upstream">Associació entre branques locals i remotes (<code>git push --set-upstream</code>)<a class="headerlink" href="#associacio-entre-branques-locals-i-remotes-git-push-set-upstream" title="Permanent link">&para;</a></h2>
 <p>De moment, les branques que hem creat resideixen en el repositori local,
 és a dir, en el nostre dispositiu.</p>
 <p>Podem associar les branques locals a branques remotes, del repositori remot,
@@ -1624,6 +1695,11 @@ perquè els canvis que fem localment es puguen veure reflectits en el repositori
 <p class="admonition-title">Important</p>
 <p>Aquesta comanda funciona sobre la branca on estem situats (<code>HEAD</code>).</p>
 </div>
+<figure id="figure-7">
+    <img src="../img/remots/push_setupstream.png" alt="Associació d'una branca local a una branca remota">
+    <figcaption>Figura 7: Associació d'una branca local a una branca remota</figcaption>
+</figure>
+
 <div class="admonition tip">
 <p class="admonition-title">Consell</p>
 <p>Pots configurar git perquè configure automàticament la branca local
@@ -1634,11 +1710,93 @@ amb l'opció <code>push.autoSetupRemote</code>.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Associació branca local i remota</p>
+<p>Vegem que inicialment la branca <code>main</code> no està associada a cap branca remota.</p>
+<p>Si intentem fer un <code>git push</code>, ens mostrarà un missatge d'error com que
+hem d'anar associar una branca remota.</p>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>lga
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">b7adb78</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 seconds ago)</span><span class="w"> </span><span class="git-cm">README.md: Descripció</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">a41ab9e</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 seconds ago)</span><span class="w"> </span><span class="git-cm">README.md: Títol</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>push
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="go">fatal: The current branch main has no upstream branch.</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="go">To push the current branch and set the remote as upstream, use</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="go">    git push --set-upstream origin main</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="go">To have this happen automatically for branches without a tracking</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="go">upstream, see &#39;push.autoSetupRemote&#39; in &#39;git help config&#39;.</span>
+</span></code></pre></div>
+<p>Associem les branques <code>main</code> local i remota amb l'ordre <code>git push --set-upstream</code>.</p>
+<p>Localment, s'ha creat la referència <code>origin/main</code> que apunta a la branca remota <code>main</code>.</p>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>--set-upstream<span class="w"> </span>origin<span class="w"> </span>main
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="go">Enumerating objects: 6, done.</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="go">Counting objects: 100% (6/6), done.</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="go">Delta compression using up to 12 threads</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="go">Compressing objects: 100% (3/3), done.</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="go">Writing objects: 100% (6/6), 503 bytes | 503.00 KiB/s, done.</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="go">Total 6 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="go">remote: Resolving deltas: 100% (1/1), done.</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="go">To github.com:joapuiib/git_remots.git</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="go"> * [new branch]      main -&gt; main</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="go">branch &#39;main&#39; set up to track &#39;origin/main&#39;.</span>
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>lga
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">b7adb78</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 seconds ago)</span><span class="w"> </span><span class="git-cm">README.md: Descripció</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main, origin/main)</span>
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">a41ab9e</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 seconds ago)</span><span class="w"> </span><span class="git-cm">README.md: Títol</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+</span></code></pre></div>
+<p>Vegem que els canvis s'han publicat correctament al repositori remot:</p>
+<p><figure id="figure-8">
+    <img src="../img/remots/github_push.png" alt="Canvis publicats a GitHub">
+    <figcaption>Figura 8: Canvis publicats a GitHub</figcaption>
+</figure></p>
+</div>
+<h2 id="clonacio-dun-repositori-remot-git-clone">Clonació d'un repositori remot (<code>git clone</code>)<a class="headerlink" href="#clonacio-dun-repositori-remot-git-clone" title="Permanent link">&para;</a></h2>
+<p>L'ordre <code>git clone</code> permet copiar un repositori remot a un repositori local en el teu sistema,
+des del qual podràs realitzar canvis.</p>
+<p>Aquesta ordre còpia els continguts del <em>Directori de Treball</em> i tota la informació del <em>Repositori Local</em>,
+incloent la història de canvis. A més, configura automàticament el repositori remot com a <code>origin</code>.</p>
+<p>La sintaxi és la següent:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>git<span class="w"> </span>clone<span class="w"> </span>&lt;url&gt;<span class="w"> </span><span class="o">[</span>&lt;directori&gt;<span class="o">]</span>
+</span></code></pre></div></p>
+<ul>
+<li><code>&lt;url&gt;</code>: URL del repositori remot. Pot ser una URL HTTPS o SSH.</li>
+<li><code>&lt;directori&gt;</code>: Opcional. Nom del directori on es copiarà el repositori. Per defecte, es crea un directori amb
+    el nom del repositori remot.</li>
+</ul>
+<figure id="figure-9">
+    <img src="../img/remots/clone.png" alt="Clonació d'un repositori remot">
+    <figcaption>Figura 9: Clonació d'un repositori remot</figcaption>
+</figure>
+
+<div class="admonition example">
+<p class="admonition-title">Pau clona el repositori remot</p>
+<p>En aquest exemple, el desenvolupador Pau clonarà el repositori remot <code>git_remots</code>
+sobre el directori <code>~/git_remots_pau</code> del seu sistema.</p>
+<blockquote>
+<p>S'ha modificat el <em>prompt</em> per indicar les comandes que executaria Pau.</p>
+</blockquote>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:joapuiib/git_remots.git<span class="w"> </span>~/git_remots_pau
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="go">Cloning into &#39;/home/pau/git_remots_pau&#39;...</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="go">remote: Enumerating objects: 6, done.</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="go">remote: Counting objects: 100% (6/6), done.</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="go">remote: Compressing objects: 100% (2/2), done.</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="go">remote: Total 6 (delta 1), reused 6 (delta 1), pack-reused 0 (from 0)</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="go">Receiving objects: 100% (6/6), done.</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="go">Resolving deltas: 100% (1/1), done.</span>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/git_remots_pau
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots_pau</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>ls
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="go">README.md</span>
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots_pau</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>lg
+</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">b7adb78</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">README.md: Descripció</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main, origin/main)</span>
+</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">a41ab9e</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">README.md: Títol</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+</span></code></pre></div>
+<p>S'observa que s'ha clonat correctament el repositori remot <code>git_remots</code> al directori <code>~/git_remots_pau</code>,
+que conté els fitxers i la història de canvis del repositori remot.</p>
+</div>
+<h2 id="sincronitzacio-entre-repositoris-git-fetch">Sincronitzacio entre repositoris (<code>git fetch</code>)<a class="headerlink" href="#sincronitzacio-entre-repositoris-git-fetch" title="Permanent link">&para;</a></h2>
+<div class="admonition prep">
+<p class="admonition-title">Preparació: Pau realitza canvis</p>
 <p>@TODO</p>
 </div>
-<h2 id="publicacio-de-canvis-git-push">Publicació de canvis (<code>git push</code>)<a class="headerlink" href="#publicacio-de-canvis-git-push" title="Permanent link">&para;</a></h2>
-<h2 id="incorporacio-de-canvis">Incorporació de canvis<a class="headerlink" href="#incorporacio-de-canvis" title="Permanent link">&para;</a></h2>
-<h2 id="clonacio-dun-repositori-remot">Clonació d'un repositori remot<a class="headerlink" href="#clonacio-dun-repositori-remot" title="Permanent link">&para;</a></h2>
+<h2 id="incorporacio-de-canvis-git-pull">Incorporació de canvis (<code>git pull</code>)<a class="headerlink" href="#incorporacio-de-canvis-git-pull" title="Permanent link">&para;</a></h2>
 <h2 id="recursos-addicionals">Recursos addicionals<a class="headerlink" href="#recursos-addicionals" title="Permanent link">&para;</a></h2>
 <h2 id="bibliografia">Bibliografia<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
     
