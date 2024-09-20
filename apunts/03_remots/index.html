@@ -1796,8 +1796,8 @@ sobre el directori <code>~/git_remots_pau</code> del seu sistema.</p>
 que conté els fitxers i la història de canvis del repositori remot.</p>
 </div>
 <h2 id="sincronitzacio-entre-repositoris-git-fetch">Sincronitzacio entre repositoris (<code>git fetch</code>)<a class="headerlink" href="#sincronitzacio-entre-repositoris-git-fetch" title="Permanent link">&para;</a></h2>
-<div class="admonition prep">
-<p class="admonition-title">Preparació: Pau realitza canvis</p>
+<details class="prep">
+<summary>Preparació: Pau realitza canvis</summary>
 <p>Pau crea el fitxer <code>pau.txt</code> amb el contingut <code>Canvi realitzat per Pau</code>.</p>
 <div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots_pau</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Canvi realitzat per Pau&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>pau.txt
 </span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots_pau</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>status
@@ -1834,8 +1834,8 @@ que conté els fitxers i la història de canvis del repositori remot.</p>
 </span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">b7adb78</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">README.md: Descripció</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
 </span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">a41ab9e</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">README.md: Títol</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
 </span></code></pre></div>
-</div>
-<p>En aquest moment, Paul ha realitzat un canvi en el repositori remot, que no està reflectit
+</details>
+<p>En aquest moment, Pau ha realitzat un canvi en el repositori remot, que no està reflectit
 en el nostre repositori local.</p>
 <div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>lg
 </span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">b7adb78</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">README.md: Descripció</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main, origin/main)</span>
@@ -1885,8 +1885,102 @@ realitzats per Pau.</p>
 però la branca <code>main</code> continua en el commit anterior.</p>
 </div>
 <h2 id="incorporacio-de-canvis-git-pull">Incorporació de canvis (<code>git pull</code>)<a class="headerlink" href="#incorporacio-de-canvis-git-pull" title="Permanent link">&para;</a></h2>
+<p>Per incorporar els canvis d'una branca remota a la branca local,
+utilitzarem l'ordre <code>git pull</code>.</p>
+<p>Aquesta ordre realitza dos accions:</p>
+<ul>
+<li><code>git fetch</code>: Actualitza la informació de les branques remotes al nostre repositori local.</li>
+<li><code>git merge origin/&lt;branca&gt;</code>: Incorpora els canvis de la branca remota a la branca local.</li>
+</ul>
+<figure id="figure-11">
+    <img src="../img/remots/pull.png" alt="Incorporació de canvis">
+    <figcaption>Figura 11: Incorporació de canvis</figcaption>
+</figure>
+
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>git<span class="w"> </span>pull<span class="w"> </span><span class="o">[</span>&lt;options&gt;<span class="o">]</span><span class="w"> </span><span class="o">[</span>&lt;remot&gt;<span class="w"> </span><span class="o">[</span>&lt;branca&gt;<span class="o">]]</span>
+</span></code></pre></div>
+<ul>
+<li><code>&lt;options&gt;</code>: Opcions de la comanda.</li>
+<li><code>&lt;remot&gt;</code>: Àlies del repositori remot. Per defecte, s'utilitza la configuració de la branca actual.</li>
+<li><code>&lt;branca&gt;</code>: Nom de la branca remota. Per defecte, s'utilitza la configuració de la branca actual.</li>
+</ul>
+<div class="admonition docs">
+<p class="admonition-title">Documentació</p>
+<p>Documentació oficial de <code>git pull</code>: <a href="https://git-scm.com/docs/git-pull">https://git-scm.com/docs/git-pull</a></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Advertència</p>
+<p>La fusió (<code>merge</code>) implicita de <code>git pull</code> pot ser <a href="../02_branques/#fusio-directa" target="_blank">directa (<em>fast-forward</em>)</a>
+o es pot produir una <a href="../02_branques/#fusio-de-branques-divergents" target="_blank">fusió de branques divergents</a> si
+la branca local i la branca remota divergeixen.</p>
+<p>En aquest últim cas:</p>
+<ul>
+<li><strong>Poden produïr conflictes</strong>. Si es produeixen, caldrà resoldre'ls manualment.</li>
+<li>Executar directament <code>git pull</code> <strong>generarà un commit de fusió</strong>,
+    que pot ser no és desitjable si es vol mantenir <strong>una història lineal</strong>.</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Consell</p>
+<p>Per evitar <strong>la fusió de branques divergents</strong> en <code>git pull</code>,
+es pot fer el següent:</p>
+<ul>
+<li>
+<p><code>git pull --ff-only</code>: Incorpora els canvis de la branca remota
+    només si es pot fer una fusió directa (<em>fast-forward</em>).</p>
+<p>Git pot ser configurat perquè només permeta aquest tipus de fusió
+en la comanda <code>git pull</code>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>git config --global pull.ff only
+</span></code></pre></div>
+</li>
+<li>
+<p><code>git pull --rebase</code>: Incorpora els canvis de la branca remota
+    mitjançant un rebase, és a dir, aplica els canvis de la branca local
+    després dels canvis de la branca remota.</p>
+<p>Aquest comportament també es pot configurar per defecte en la comanda <code>git pull</code>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>git config --global pull.rebase true
+</span></code></pre></div>
+</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Incorporació de canvis fusió directa</p>
+<p>Vegem com el commit <code>1b3b4b0</code> forma part de la branca remota <code>origin/main</code>,
+però no de la branca local <code>main</code>.</p>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>lg
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">1b3b4b0</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 minutes ago)</span><span class="w"> </span><span class="git-cm">pau.txt: Canvi realitzat per Pau</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Pau</span><span class="w"> </span><span class="git-r">(origin/main)</span>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">b7adb78</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">README.md: Descripció</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">a41ab9e</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">README.md: Títol</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>status
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="go">On branch main</span>
+</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="go">Your branch is behind &#39;origin/main&#39; by 1 commit, and can be fast-forwarded.</span>
+</span><span id="__span-26-8"><a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a><span class="go">  (use &quot;git pull&quot; to update your local branch)</span>
+</span><span id="__span-26-9"><a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>
+</span><span id="__span-26-10"><a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a><span class="go">nothing to commit, working tree clean</span>
+</span></code></pre></div>
+<p>Incorporem els canvis de la branca remota <code>origin/main</code> a la branca local <code>main</code>.</p>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>pull
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="go">Updating b7adb78..1b3b4b0</span>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="go">Fast-forward</span>
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="go"> pau.txt | 1 +</span>
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="go"> 1 file changed, 1 insertion(+)</span>
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="go"> create mode 100644 pau.txt</span>
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>lg
+</span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">1b3b4b0</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 minutes ago)</span><span class="w"> </span><span class="git-cm">pau.txt: Canvi realitzat per Pau</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Pau</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main, origin/main)</span>
+</span><span id="__span-27-9"><a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">b7adb78</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">README.md: Descripció</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+</span><span id="__span-27-10"><a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">a41ab9e</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">README.md: Títol</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+</span></code></pre></div>
+</div>
 <h2 id="recursos-addicionals">Recursos addicionals<a class="headerlink" href="#recursos-addicionals" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=3GymExBkKjE&amp;ab_channel=MoureDevbyBraisMoure">Curs de Git des de zero per MoureDev</a></li>
+<li><a href="https://github.com/UnseenWizzard/git_training">https://github.com/UnseenWizzard/git_training</a></li>
+</ul>
 <h2 id="bibliografia">Bibliografia<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://git-scm.com/book/en/v2">https://git-scm.com/book/en/v2</a></li>
+<li><a href="https://github.com/UnseenWizzard/git_training">https://github.com/UnseenWizzard/git_training</a></li>
+</ul>
     
 
 
