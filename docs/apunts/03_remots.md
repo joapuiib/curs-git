@@ -573,7 +573,7 @@ git clone <url> [<directori>]
 
 ## Sincronitzacio entre repositoris (`git fetch`)
 
-!!! prep "Preparació: Pau realitza canvis"
+??? prep "Preparació: Pau realitza canvis"
     Pau crea el fitxer `pau.txt` amb el contingut `Canvi realitzat per Pau`.
 
     ```shellconsole
@@ -616,7 +616,7 @@ git clone <url> [<directori>]
     * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
     ```
 
-En aquest moment, Paul ha realitzat un canvi en el repositori remot, que no està reflectit
+En aquest moment, Pau ha realitzat un canvi en el repositori remot, que no està reflectit
 en el nostre repositori local.
 
 ```shellconsole
@@ -673,8 +673,107 @@ git fetch [<options>] [<remot>]
 
 
 ## Incorporació de canvis (`git pull`)
+Per incorporar els canvis d'una branca remota a la branca local,
+utilitzarem l'ordre `git pull`.
+
+Aquesta ordre realitza dos accions:
+
+- `git fetch`: Actualitza la informació de les branques remotes al nostre repositori local.
+- `git merge origin/<branca>`: Incorpora els canvis de la branca remota a la branca local.
+
+<figure id="figure-11">
+    <img src="../img/remots/pull.png" alt="Incorporació de canvis">
+    <figcaption>Figura 11: Incorporació de canvis</figcaption>
+</figure>
+
+```bash
+git pull [<options>] [<remot> [<branca>]]
+```
+
+- `<options>`: Opcions de la comanda.
+- `<remot>`: Àlies del repositori remot. Per defecte, s'utilitza la configuració de la branca actual.
+- `<branca>`: Nom de la branca remota. Per defecte, s'utilitza la configuració de la branca actual.
+
+!!! docs
+    Documentació oficial de `git pull`: https://git-scm.com/docs/git-pull
+
+!!! warning
+    La fusió (`merge`) implicita de `git pull` pot ser [[bloc2#fusio-directa|directa (_fast-forward_)]]{: target="_blank"}
+    o es pot produir una [[bloc2#fusio-de-branques-divergents|fusió de branques divergents]]{: target="_blank"} si
+    la branca local i la branca remota divergeixen.
+
+    En aquest últim cas:
+
+    - __Poden produïr conflictes__. Si es produeixen, caldrà resoldre'ls manualment.
+    - Executar directament `git pull` __generarà un commit de fusió__,
+        que pot ser no és desitjable si es vol mantenir __una història lineal__.
+    
+!!! tip
+    Per evitar __la fusió de branques divergents__ en `git pull`,
+    es pot fer el següent:
+
+    - `git pull --ff-only`: Incorpora els canvis de la branca remota
+        només si es pot fer una fusió directa (_fast-forward_).
+
+        Git pot ser configurat perquè només permeta aquest tipus de fusió
+        en la comanda `git pull`.
+
+        ```
+        git config --global pull.ff only
+        ```
+
+    - `git pull --rebase`: Incorpora els canvis de la branca remota
+        mitjançant un rebase, és a dir, aplica els canvis de la branca local
+        després dels canvis de la branca remota.
+
+        Aquest comportament també es pot configurar per defecte en la comanda `git pull`.
+
+        ```
+        git config --global pull.rebase true
+        ```
+
+!!! example "Incorporació de canvis fusió directa"
+    Vegem com el commit `1b3b4b0` forma part de la branca remota `origin/main`,
+    però no de la branca local `main`.
+
+    ```shellconsole
+    joapuiib@fp:~/git_remots (main) $ git lg
+    * 1b3b4b0 - (2 minutes ago) pau.txt: Canvi realitzat per Pau - Pau (origin/main)
+    * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver (HEAD -> main)
+    * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
+    joapuiib@fp:~/git_remots (main) $ git status
+    On branch main
+    Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+      (use "git pull" to update your local branch)
+
+    nothing to commit, working tree clean
+    ```
+
+    Incorporem els canvis de la branca remota `origin/main` a la branca local `main`.
+
+    ```shellconsole
+    joapuiib@fp:~/git_remots (main) $ git pull
+    Updating b7adb78..1b3b4b0
+    Fast-forward
+     pau.txt | 1 +
+     1 file changed, 1 insertion(+)
+     create mode 100644 pau.txt
+    joapuiib@fp:~/git_remots (main) $ git lg
+    * 1b3b4b0 - (2 minutes ago) pau.txt: Canvi realitzat per Pau - Pau (HEAD -> main, origin/main)
+    * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver
+    * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
+    ```
+
+{% if false %}
+!!! example "Incorporació de canvis canvi de base"
+    @TODO
+{% endif %}
 
 
 ## Recursos addicionals
+- [Curs de Git des de zero per MoureDev](https://www.youtube.com/watch?v=3GymExBkKjE&ab_channel=MoureDevbyBraisMoure)
+- https://github.com/UnseenWizzard/git_training
 
 ## Bibliografia
+- https://git-scm.com/book/en/v2
+- https://github.com/UnseenWizzard/git_training

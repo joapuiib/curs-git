@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-07T10:53:13.693Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="Y6oyUt9Z3wJ_nAIa91aQ" version="22.0.8" type="device">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="24.7.14">
   <diagram name="Pàgina-1" id="mhbHxmUa4zc_a_H4eHv1">
-    <mxGraphModel dx="792" dy="1102" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2074" dy="1146" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -19,8 +19,8 @@
         <mxCell id="6d2bNqNMUXDxkiYPfy11-6" value="&lt;b style=&quot;font-size: 18px;&quot;&gt;Repositori Remot&lt;/b&gt;&lt;br style=&quot;font-size: 18px;&quot;&gt;&lt;i style=&quot;font-size: 18px;&quot;&gt;Remote Repository&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="320" y="80" width="120" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="ZBEQYxtLiUxqlCDxY6mG-60" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;git pull&lt;/span&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;startArrow=classic;startFill=1;strokeWidth=3;fillColor=#dae8fc;strokeColor=#0066CC;fontColor=#0066CC;fontStyle=1" parent="1" source="4n5gT17O1HJPVpCU4XkF-1" target="ppVQ1Xcq_nVEkJrV4YZX-3" edge="1">
-          <mxGeometry x="0.4286" y="20" relative="1" as="geometry">
+        <mxCell id="ZBEQYxtLiUxqlCDxY6mG-60" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;git fetch&lt;/span&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;startArrow=classic;startFill=1;strokeWidth=3;fillColor=#dae8fc;strokeColor=#0066CC;fontColor=#0066CC;fontStyle=1" parent="1" source="4n5gT17O1HJPVpCU4XkF-1" target="ppVQ1Xcq_nVEkJrV4YZX-3" edge="1">
+          <mxGeometry x="0.5556" y="-20" relative="1" as="geometry">
             <mxPoint x="520" y="165" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
@@ -43,7 +43,7 @@
         <mxCell id="6d2bNqNMUXDxkiYPfy11-13" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;image=https://cdn.icon-icons.com/icons2/2718/PNG/512/git_branch_icon_174485.png;" parent="1" vertex="1">
           <mxGeometry x="484.5" y="394" width="71" height="71" as="geometry" />
         </mxCell>
-        <mxCell id="ZBEQYxtLiUxqlCDxY6mG-62" value="git@github.com:joapuiib/git_tutorial.git" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=2" parent="1" vertex="1">
+        <mxCell id="ZBEQYxtLiUxqlCDxY6mG-62" value="git@github.com:joapuiib/git_remots&lt;span style=&quot;background-color: initial;&quot;&gt;.git&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=2" parent="1" vertex="1">
           <mxGeometry x="265" y="50" width="360" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ppVQ1Xcq_nVEkJrV4YZX-2" value="&lt;i style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;Branques locals&lt;/b&gt;&lt;br style=&quot;font-size: 16px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- main&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;spacingLeft=5;" parent="1" vertex="1">
@@ -55,11 +55,15 @@
         <mxCell id="4n5gT17O1HJPVpCU4XkF-1" value="&lt;i style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;Branques remotes&lt;/b&gt;&lt;br style=&quot;font-size: 16px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- origin/main&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;spacingLeft=5;" parent="1" vertex="1">
           <mxGeometry x="690" y="260" width="110" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="3MhdX8197IQw0FQtGkG_-1" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#dae8fc;strokeColor=#0066CC;strokeWidth=3;" parent="1" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxCell id="3MhdX8197IQw0FQtGkG_-1" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;git merge origin/main&lt;/font&gt;&lt;/b&gt;" style="endArrow=classic;html=1;rounded=0;fillColor=#dae8fc;strokeColor=#0066CC;strokeWidth=3;fontColor=#0066CC;labelBackgroundColor=none;" parent="1" edge="1">
+          <mxGeometry x="-0.24" y="25" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="699" y="315.5" as="sourcePoint" />
             <mxPoint x="649" y="315.5" as="targetPoint" />
+            <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="xx-00NQbcgDI2qEmDHsn-1" value="&lt;font size=&quot;1&quot; color=&quot;#0066cc&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;git pull&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="800" y="170" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
