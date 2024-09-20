@@ -764,10 +764,115 @@ git pull [<options>] [<remot> [<branca>]]
     * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
     ```
 
-{% if false %}
-!!! example "Incorporació de canvis canvi de base"
-    @TODO
-{% endif %}
+!!! example annotate "Incorporació de canvis canvi de base"
+    ???+ prep "Preparació: Més canvis de Pau"
+        ```shellconsole
+        pau@fp:~/git_remots_pau (main) $ echo "Un altre canvi de Pau" >> pau.txt
+        pau@fp:~/git_remots_pau (main) $ git commit -a -m "pau.txt: Un altre canvi de Pau"
+        [main 2b3b4b0] pau.txt: Un altre canvi de Pau
+         1 file changed, 1 insertion(+)
+        pau@fp:~/git_remots_pau (main) $ git push
+        Enumerating objects: 4, done.
+        Counting objects: 100% (4/4), done.
+        Delta compression using up to 12 threads
+        Compressing objects: 100% (2/2), done.
+        Writing objects: 100% (3/3), 303 bytes | 303.00 KiB/s, done.
+        Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+        To github.com:joapuiib/git_remots.git
+           1b3b4b0..2b3b4b0  main -> main
+        pau@fp:~/git_remots_pau (main) $ git lg
+        * 2b3b4b0 - (2 minutes ago) pau.txt: Un altre canvi de Pau - Pau (HEAD -> main, origin/main)
+        * 1b3b4b0 - (10 minutes ago) pau.txt: Canvi realitzat per Pau - Pau
+        * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver
+        * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
+        ```
+
+    Una de les situacions més comunes que ens porten a que la branca local divergisca de la branca remota és
+    quan realitzem canvis sobre la branca local sense haver sincronitzat abans el seu estat amb la branca remota associada.
+
+    En aquest cas, Pau ha realitzat un altre canvi en el repositori remot, que nosaltrens no hem incorporat.
+
+    No obstant això, anem a fer un canvi a la branca local `main`, simulant la situació anteriorment descrita.
+
+    ```shellconsole
+    joapuiib@fp:~/git_remots (main) $ git lg # (1)!
+    * 1b3b4b0 - (2 minutes ago) pau.txt: Canvi realitzat per Pau - Pau (HEAD -> main, origin/main)
+    * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver
+    * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
+    joapuiib@fp:~/git_remots (main) $ echo "Canvi realitzat per Joan" >> joan.txt
+    joapuiib@fp:~/git_remots (main) $ git add joan.txt
+    joapuiib@fp:~/git_remots (main) $ git commit -m "joan.txt: Canvi realitzat per Joan"
+    [main 3b4b0b0] joan.txt: Canvi realitzat per Joan
+     1 file changed, 1 insertion(+)
+     create mode 100644 joan.txt
+    joapuiib@fp:~/git_remots (main) $ git lg
+    * 3b4b0b0 - (2 minutes ago) joan.txt: Canvi realitzat per Joan (HEAD -> main)
+    * 1b3b4b0 - (10 minutes ago) pau.txt: Canvi realitzat per Pau - Pau (origin/main)
+    * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver
+    * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
+    ```
+
+    1. En aquest moment, el canvi de Pau `2b3b4b0` no està reflectit en el nostre repositori local.
+
+    En aquest moment, podríem intentar publicar aquest canvi al repositori remot,
+    però ens mostrarà un error com que el repositori remot té canvis que no estan reflectits en el nostre repositori local.
+
+    ```shellconsole
+    joapuiib@fp:~/git_remots (main) $ git push
+    To github.com:joapuiib/git_remots.git
+    ! [rejected]        main -> main (fetch first)
+    error: failed to push some refs to 'github.com:joapuiib/git_remots.git'
+    hint: Updates were rejected because the remote contains work that you do not
+    hint: have locally. This is usually caused by another repository pushing to
+    hint: the same ref. If you want to integrate the remote changes, use
+    hint: 'git pull' before pushing again.
+    hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+    joapuiib@fp:~/git_remots (main) $ git lga
+    * 3b4b0b0 - (2 minutes ago) joan.txt: Canvi realitzat per Joan (HEAD -> main)
+    | * 2b3b4b0 - (2 minutes ago) pau.txt: Un altre canvi de Pau - Pau (origin/main)
+    |/
+    * 1b3b4b0 - (10 minutes ago) pau.txt: Canvi realitzat per Pau - Pau
+    * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver
+    * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
+    ```
+
+    Vegem que l'ordre `git push` ens recomana fer un `git pull` per incorporar els canvis,
+    ja que les dues branques __han divergit__.
+
+    Si executem `git pull`, es produirà una fusió de branques divergents, que crearà un commit de fusió
+    i resultarà en una història no lineal.
+
+    Intentem fer un `git pull --ff-only` per veure-ho.
+
+    ```shellconsole
+    joapuiib@fp:~/git_remots (main) $ git pull --ff-only
+    hint: Diverging branches can't be fast-forwarded, you need to either:
+    hint:
+    hint:   git merge --no-ff
+    hint:
+    hint: or:
+    hint:
+    hint:   git rebase
+    hint:
+    hint: Disable this message with "git config advice.diverging false"
+    fatal: Not possible to fast-forward, aborting.
+    ```
+
+    Si volem conservar una història lineal, haurem de fer un __canvi de base__ amb `git pull --rebase`.
+
+    ```shellconsole
+    joapuiib@fp:~/git_remots (main) $ git pull --rebase
+    Successfully rebased and updated refs/heads/main.
+    joapuiib@fp:~/git_remots (main) $ git lga
+    * 3b4b0b0 - (2 minutes ago) joan.txt: Canvi realitzat per Joan (HEAD -> main)
+    * 2b3b4b0 - (2 minutes ago) pau.txt: Un altre canvi de Pau - Pau (origin/main)
+    * 1b3b4b0 - (10 minutes ago) pau.txt: Canvi realitzat per Pau - Pau
+    * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver
+    * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
+    ```
+
+
+
 
 
 ## Recursos addicionals
