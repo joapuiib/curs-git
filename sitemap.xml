@@ -30,4 +30,16 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ca" href="https://joapuiib.github.io/curs-git/apunts/03_remots/"/>
     </url>
+    <url>
+        <loc>https://joapuiib.github.io/curs-git/exercicis/</loc>
+        <lastmod>2024-09-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ca" href="https://joapuiib.github.io/curs-git/exercicis/"/>
+    </url>
+    <url>
+        <loc>https://joapuiib.github.io/curs-git/exercicis/01_introduccio/</loc>
+        <lastmod>2024-09-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ca" href="https://joapuiib.github.io/curs-git/exercicis/01_introduccio/"/>
+    </url>
 </urlset>
