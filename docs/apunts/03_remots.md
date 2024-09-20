@@ -452,6 +452,9 @@ git push [-u|--set-upstream] <remot> <branca>
 - `<remot>`: Àlies del repositori remot (configurat amb `git remote add`).
 - `<branca>`: Nom de la branca remota.
 
+!!! docs
+    Documentació oficial de `git push`: https://git-scm.com/docs/git-push
+
 !!! important
     Aquesta comanda funciona sobre la branca on estem situats (`HEAD`).
 
@@ -571,7 +574,102 @@ git clone <url> [<directori>]
 ## Sincronitzacio entre repositoris (`git fetch`)
 
 !!! prep "Preparació: Pau realitza canvis"
-    @TODO
+    Pau crea el fitxer `pau.txt` amb el contingut `Canvi realitzat per Pau`.
+
+    ```shellconsole
+    pau@fp:~/git_remots_pau (main) $ echo "Canvi realitzat per Pau" > pau.txt
+    pau@fp:~/git_remots_pau (main) $ git status
+        On branch main
+    Your branch is up to date with 'origin/main'.
+
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
+        pau.txt
+
+    nothing added to commit but untracked files present (use "git add" to track)
+    pau@fp:~/git_remots_pau (main) $ git add pau.txt
+    pau@fp:~/git_remots_pau (main) $ git commit -m "pau.txt: Canvi realitzat per Pau"
+    [main 1b3b4b0] pau.txt: Canvi realitzat per Pau
+     1 file changed, 1 insertion(+)
+     create mode 100644 pau.txt
+    pau@fp:~/git_remots_pau (main) $ git lg
+    * 1b3b4b0 - (2 minutes ago) pau.txt: Canvi realitzat per Pau - Pau (HEAD -> main)
+    * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver (origin/main)
+    * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
+    ```
+
+    Després, Pau puja els canvis al repositori remot.
+
+    ```shellconsole
+    pau@fp:~/git_remots_pau (main) $ git push
+    Enumerating objects: 4, done.
+    Counting objects: 100% (4/4), done.
+    Delta compression using up to 12 threads
+    Compressing objects: 100% (2/2), done.
+    Writing objects: 100% (3/3), 303 bytes | 303.00 KiB/s, done.
+    Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+    To github.com:joapuiib/git_remots.git
+       b7adb78..1b3b4b0  main -> main
+    pau@fp:~/git_remots_pau (main) $ git lg
+    * 1b3b4b0 - (2 minutes ago) pau.txt: Canvi realitzat per Pau - Pau (HEAD -> main, origin/main)
+    * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver
+    * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
+    ```
+
+En aquest moment, Paul ha realitzat un canvi en el repositori remot, que no està reflectit
+en el nostre repositori local.
+
+```shellconsole
+joapuiib@fp:~/git_remots (main) $ git lg
+* b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver (HEAD -> main, origin/main)
+* a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
+```
+
+Per sincronitzar l'estat dels repositoris, utilitzarem l'ordre `git fetch`.
+
+<figure id="figure-10">
+    <img src="../img/remots/fetch.png" alt="Sincronització entre repositoris">
+    <figcaption>Figura 10: Sincronització entre repositoris</figcaption>
+</figure>
+
+Aquesta ordre actualitza la informació de les branques remotes `origin/<branca>` al nostre repositori local,
+però no aplicarà els canvis a les nostres branques locals.
+
+```bash
+git fetch [<options>] [<remot>]
+```
+
+- `<options>`: Opcions de la comanda.
+- `<remot>`: Àlies del repositori remot. Per defecte, s'utilitza `origin`.
+
+!!! docs
+    Documentació oficial de `git fetch`: https://git-scm.com/docs/git-fetch
+
+!!! info
+    Aquesta ordre és útil per obtindre la informació dels canvis realitzats en el repositori remot
+    i decidir si volem incorporar-los al nostre repositori local.
+
+!!! example "git fetch"
+    Sincronitzem el repositori local amb el repositori remot, que conté els canvis
+    realitzats per Pau.
+    
+    ```shellconsole
+    joapuiib@fp:~/git_remots (main) $ git fetch
+    remote: Enumerating objects: 4, done.
+    remote: Counting objects: 100% (4/4), done.
+    remote: Compressing objects: 100% (2/2), done.
+    remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+    Unpacking objects: 100% (3/3), done.
+    From github.com:joapuiib/git_remots
+       b7adb78..1b3b4b0  main     -> origin/main
+    joapuiib@fp:~/git_remots (main) $ git lg
+    * 1b3b4b0 - (2 minutes ago) pau.txt: Canvi realitzat per Pau - Pau (origin/main)
+    * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver (HEAD -> main)
+    * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
+    ```
+
+    S'observa que la branca `origin/main` s'ha actualitzat amb el canvi realitzat per Pau,
+    però la branca `main` continua en el commit anterior.
 
 
 ## Incorporació de canvis (`git pull`)
