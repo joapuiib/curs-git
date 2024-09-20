@@ -44,3 +44,7 @@ Els objectius d'aquests exercici són:
 1. Configura el repositori perquè ignore la carpeta `tmp`.
 1. Fes un _commit_ amb aquesta configuració.
 1. Comprova la història de canvis del repositori.
+
+## Bibliografia
+- Basat en l'exercici de la sessió 1 del curs [Gestió de la tasca docent con GitHub](https://github.com/pedroprieto/curso-github)
+    de Pedro Prieto.
