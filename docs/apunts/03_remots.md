@@ -806,7 +806,7 @@ git pull [<options>] [<remot> [<branca>]]
      1 file changed, 1 insertion(+)
      create mode 100644 joan.txt
     joapuiib@fp:~/git_remots (main) $ git lg
-    * 3b4b0b0 - (2 minutes ago) joan.txt: Canvi realitzat per Joan (HEAD -> main)
+    * 3b4b0b0 - (2 minutes ago) joan.txt: Canvi realitzat per Joan - Joan Puigcerver (HEAD -> main)
     * 1b3b4b0 - (10 minutes ago) pau.txt: Canvi realitzat per Pau - Pau (origin/main)
     * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver
     * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
@@ -828,7 +828,7 @@ git pull [<options>] [<remot> [<branca>]]
     hint: 'git pull' before pushing again.
     hint: See the 'Note about fast-forwards' in 'git push --help' for details.
     joapuiib@fp:~/git_remots (main) $ git lga
-    * 3b4b0b0 - (2 minutes ago) joan.txt: Canvi realitzat per Joan (HEAD -> main)
+    * 3b4b0b0 - (2 minutes ago) joan.txt: Canvi realitzat per Joan - Joan Puigcerver (HEAD -> main)
     | * 2b3b4b0 - (2 minutes ago) pau.txt: Un altre canvi de Pau - Pau (origin/main)
     |/
     * 1b3b4b0 - (10 minutes ago) pau.txt: Canvi realitzat per Pau - Pau
@@ -864,14 +864,12 @@ git pull [<options>] [<remot> [<branca>]]
     joapuiib@fp:~/git_remots (main) $ git pull --rebase
     Successfully rebased and updated refs/heads/main.
     joapuiib@fp:~/git_remots (main) $ git lga
-    * 3b4b0b0 - (2 minutes ago) joan.txt: Canvi realitzat per Joan (HEAD -> main)
+    * 3b4b0b0 - (2 minutes ago) joan.txt: Canvi realitzat per Joan - Joan Puigcerver (HEAD -> main)
     * 2b3b4b0 - (2 minutes ago) pau.txt: Un altre canvi de Pau - Pau (origin/main)
     * 1b3b4b0 - (10 minutes ago) pau.txt: Canvi realitzat per Pau - Pau
     * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver
     * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
     ```
-
-
 
 
 
