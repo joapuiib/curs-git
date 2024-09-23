@@ -93,3 +93,13 @@ p:has(img.center) {
 .md-typeset ul ol ol:not([type]), .md-typeset ul ul ol:not([type]){
     list-style-type: lower-roman;
 }
+
+/*
+.md-typeset ol[style="list-style-type: lower-alpha;"] li::marker {
+    content: counter(list-item, lower-alpha) ") ";
+}
+.md-typeset ol[style="list-style-type: upper;"] li::marker {
+    content: counter(list-item, upper) ") ";
+}
+/*
+

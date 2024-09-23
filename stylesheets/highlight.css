@@ -57,7 +57,8 @@
 .language-shellconsole.highlight .git-unm,
 .language-shellconsole.highlight .git-rb,
 .language-shellconsole.highlight .git-rh,
-.language-shellconsole.highlight .git-mod {
+.language-shellconsole.highlight .git-mod,
+.language-shellconsole.highlight .git-fatal {
   color: #BF616A;
 }
 .language-shellconsole.highlight .git-ch {
