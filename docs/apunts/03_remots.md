@@ -18,6 +18,8 @@ tags:
     - --set-upstream
 ---
 
+*[PAT]: Personal Access Token
+
 ## Introducció
 En el blocs anteriors, ens hem centrat en conéixer la seua estructura i
 realitzar accions bàsiques per realitzar canvis sobre aquest.
@@ -230,7 +232,7 @@ Una vegada creat el token, podràs utilitzar-lo per autenticar-te amb el servido
 Pots utilitzar el teu token d'accés personal per autenticar-te amb el servidor de GitHub
 de dues maneres:
 
-- __Mitjançant la URL (Recomanat)__: Pots afegir el teu token d'accés personal a la URL del repositori
+- __Mitjançant la URL__: Pots afegir el teu token d'accés personal a la URL del repositori
     per autenticar-te amb el servidor de GitHub.
     ```shellconsole
     git clone https://<token>@github.com/<usuari>/<repositori>
@@ -250,9 +252,16 @@ de dues maneres:
 
 
 !!! tip
-    Es recomana utilitzar el __mètode mitjançant la URL__ per autenticar-te
-    amb el servidor de GitHub, ja que es queda configurat en la URL
-    i no caldrà introduir-lo cada vegada que faces una acció.
+    Per tal de no haver de recordar el PAT cada vegada, és possible configurar
+    Git perquè ho recorde automàticament.
+
+    ```bash
+    git config --global credential.helper store
+    ```
+    Aquesta comanda guardarà les credencials en un fitxer de text en el teu sistema local.
+
+    !!! danger
+        Aquesta opció guarda les credencials en text pla en el fitxer `~/.git-credentials`.
 
 
 ### Configuració de la clau SSH
