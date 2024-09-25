@@ -1,6 +1,6 @@
 ---
 template: document.html
-title: "Exercicis Bloc 2: Branques"
+title: "Exercici Bloc 2: Branques"
 icon: material/pencil-outline
 alias: bloc2-exercicis
 ---
@@ -24,7 +24,8 @@ Els objectius d'aquests exercici són:
     per entendre els diferents estats dels fitxers.
     {: .annotate}
 
-    1. Crea un directori anomenat `bloc2_exercici` en la teua carpeta de treball.
+    1. Revisa [[bloc1#historic-de-canvis-git-log]] per veure
+        la configuració de l'àlies `git lga`.
 
 
 1. Crea un directori anomenat `bloc2_exercici` en la teua carpeta de treball.

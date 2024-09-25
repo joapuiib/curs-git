@@ -1,6 +1,6 @@
 ---
 template: document.html
-title: "Exercicis Bloc 1: Introducció a Git"
+title: "Exercici Bloc 1: Introducció a Git"
 icon: material/pencil-outline
 alias: bloc1-exercicis
 ---
