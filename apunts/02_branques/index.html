@@ -714,6 +714,8 @@
       
         
       
+        
+      
     
     
       
@@ -773,6 +775,31 @@
   
   <span class="md-ellipsis">
     Exercicis Bloc 1: Introducció a Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercicis/02_branques/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.06 9 .94.94L5.92 19H5v-.92L14.06 9m3.6-6c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29m-3.6 3.19L3 17.25V21h3.75L17.81 9.94l-3.75-3.75Z"/></svg>
+  
+  
+  <span class="md-ellipsis">
+    Exercicis Bloc 2: Branques
   </span>
   
 
@@ -1394,7 +1421,7 @@ que té connotacions racistes.</p>
 </span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>lg
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">0b1b3b4</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 minutes ago)</span><span class="w"> </span><span class="git-cm">Títol</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
 </span></code></pre></div>
-<ol>
+<ol class="fancylists-decimal" type="1">
 <li>Canviem el nom de la branca principal a <code>main</code>.</li>
 </ol>
 </div>
@@ -1689,7 +1716,7 @@ la fusió de la branca <code>docs</code> a la branca <code>main</code> serà una
 </span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">1b2c5d6</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 seconds ago)</span><span class="w"> </span><span class="git-cm">Subtítol documentació</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main, docs)</span>
 </span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">0b1b3b4</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 minutes ago)</span><span class="w"> </span><span class="git-cm">Títol</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
 </span></code></pre></div>
-<ol>
+<ol class="fancylists-decimal" type="1">
 <li>Vegem que el fitxer <code>README.md</code> ha incorporat els canvis de la branca <code>docs</code>.</li>
 </ol>
 </div>
@@ -1699,7 +1726,7 @@ Pot donar-se el cas que les dues branques hagen <strong>divergit</strong>, és a
 realitzat canvis que no estan presents en l'altra branca.</p>
 <details class="prep annotate">
 <summary>Preparació branques divergents</summary>
-<ol>
+<ol class="fancylists-decimal" type="1">
 <li>Realitzem canvis en la branca <code>docs</code>.</li>
 </ol>
 <div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>docs
@@ -1723,7 +1750,7 @@ realitzat canvis que no estan presents en l'altra branca.</p>
 </span><span id="__span-16-19"><a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">1b2c5d6</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 minutes ago)</span><span class="w"> </span><span class="git-cm">Subtítol documentació</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(main)</span>
 </span><span id="__span-16-20"><a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">0b1b3b4</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 minutes ago)</span><span class="w"> </span><span class="git-cm">Títol</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
 </span></code></pre></div>
-<ol start="2">
+<ol class="fancylists-decimal" start="2" type="1">
 <li>Realitzem canvis en la branca <code>main</code>.</li>
 </ol>
 <div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(docs)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>main
@@ -1749,7 +1776,7 @@ realitzat canvis que no estan presents en l'altra branca.</p>
 </span><span id="__span-17-21"><a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">1b2c5d6</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">Subtítol documentació</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(docs)</span>
 </span><span id="__span-17-22"><a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">0b1b3b4</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(13 minutes ago)</span><span class="w"> </span><span class="git-cm">Títol</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
 </span></code></pre></div>
-<ol>
+<ol class="fancylists-decimal" type="1">
 <li>Modifiquem el fitxer <code>README.md</code>. Pots utilitzar l'editor de text que preferisques.</li>
 </ol>
 </details>
@@ -1799,7 +1826,7 @@ ja que la història del projecte es torna més complexa i <strong>no lineal</str
 </span><span id="__span-18-18"><a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a><span class="go">## Documentació</span>
 </span><span id="__span-18-19"><a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a><span class="go">- https://git-scm.com/</span>
 </span></code></pre></div>
-<ol>
+<ol class="fancylists-decimal" type="1">
 <li>La opció <code>-m</code> permet afegir un missatge al <code>commit</code> de fusió.</li>
 </ol>
 <p>En aquest punt ens trobem en la situació mostrada en la <a href="#figure-8">Figura 8</a>.
@@ -1820,7 +1847,7 @@ amb la següent notació:
 <p>A més, el repositori passarà a l'estat de <strong>fusió</strong> (<code>MERGING</code>), indicant que hi ha una
 fusió en curs.</p>
 <p>Per resoldre el conflicte, caldrà:</p>
-<ol>
+<ol class="fancylists-decimal" type="1">
 <li>Editar el fitxer i resoldre manualment el conflicte.</li>
 <li>Esborrar les marques de conflicte.</li>
 </ol>
@@ -1831,7 +1858,7 @@ fusió en curs.</p>
 </div>
 <details class="prep annotate">
 <summary>Preparació branques divergents amb conflicte</summary>
-<ol>
+<ol class="fancylists-decimal" type="1">
 <li>Creem la branca <code>conflictes</code> i realitzem canvis en la descripció del fitxer <code>README.md</code>.</li>
 </ol>
 <div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>branch<span class="w"> </span>conflictes
@@ -1859,7 +1886,7 @@ fusió en curs.</p>
 </span><span id="__span-20-23"><a id="__codelineno-20-23" name="__codelineno-20-23" href="#__codelineno-20-23"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">b6aa5c3</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 minutes ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;docs&#39; into main</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(main)</span>
 </span><span id="__span-20-24"><a id="__codelineno-20-24" name="__codelineno-20-24" href="#__codelineno-20-24"></a><span class="go">...</span>
 </span></code></pre></div>
-<ol start="2">
+<ol class="fancylists-decimal" start="2" type="1">
 <li>Realitzem canvis en la descripció en la branca <code>main</code>.</li>
 </ol>
 <div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>main
@@ -1930,7 +1957,7 @@ fusió en curs.</p>
 </span><span id="__span-22-36"><a id="__codelineno-22-36" name="__codelineno-22-36" href="#__codelineno-22-36"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">b6aa5c3</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 minutes ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;docs&#39; into main</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
 </span><span id="__span-22-37"><a id="__codelineno-22-37" name="__codelineno-22-37" href="#__codelineno-22-37"></a><span class="go">...</span>
 </span></code></pre></div>
-<ol>
+<ol class="fancylists-decimal" type="1">
 <li>Hem combinat els dos textos i hem eliminat les marques de conflicte.</li>
 </ol>
 </div>
@@ -1951,7 +1978,7 @@ que consiteix en aplicar els canvis dels <code>commit</code> d'una branca sobre 
 </div>
 <details class="prep annotate">
 <summary>Preparació branques divergents</summary>
-<ol>
+<ol class="fancylists-decimal" type="1">
 <li>Creem la branca <code>llicencia</code> i realitzem canvis en la descripció del fitxer <code>README.md</code>.</li>
 </ol>
 <div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>llicencia<span class="w"> </span><span class="c1"># (1)!</span>
@@ -1979,7 +2006,7 @@ que consiteix en aplicar els canvis dels <code>commit</code> d'una branca sobre 
 </span><span id="__span-24-23"><a id="__codelineno-24-23" name="__codelineno-24-23" href="#__codelineno-24-23"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8a9b0c1</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 minutes ago)</span><span class="w"> </span><span class="git-cm">Resolució conflicte</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(main)</span>
 </span><span id="__span-24-24"><a id="__codelineno-24-24" name="__codelineno-24-24" href="#__codelineno-24-24"></a><span class="go">...</span>
 </span></code></pre></div>
-<ol start="2">
+<ol class="fancylists-decimal" start="2" type="1">
 <li>Realitzem canvis en la descripció en la branca <code>main</code>.</li>
 </ol>
 <div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(llicencia)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>main
@@ -2009,7 +2036,7 @@ que consiteix en aplicar els canvis dels <code>commit</code> d'una branca sobre 
 </span><span id="__span-25-25"><a id="__codelineno-25-25" name="__codelineno-25-25" href="#__codelineno-25-25"></a><span class="go">...</span>
 </span></code></pre></div>
 </details>
-<ol>
+<ol class="fancylists-decimal" type="1">
 <li>L'opció <code>git checkout -b</code> permet crear una nova branca i situar-se en ella directament.</li>
 </ol>
 <figure id="figure-9">
@@ -2078,7 +2105,7 @@ d'una manera similar a <a href="#resolucio-de-conflictes"><strong>la resolució 
 fins que s'haja aplicat el canvi de base a tots els <code>commit</code> de la branca.</p>
 <details class="prep">
 <summary>Preparació branques divergents amb conflictes</summary>
-<ol>
+<ol class="fancylists-decimal" type="1">
 <li>Creem la branca <code>docs/git_training</code> i realitzem canvis en la descripció del fitxer <code>README.md</code>.</li>
 </ol>
 <div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>docs_git_training
@@ -2105,7 +2132,7 @@ fins que s'haja aplicat el canvi de base a tots els <code>commit</code> de la br
 </span><span id="__span-28-22"><a id="__codelineno-28-22" name="__codelineno-28-22" href="#__codelineno-28-22"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">1b2c3d4</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 minutes ago)</span><span class="w"> </span><span class="git-cm">Text rebase</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(main)</span>
 </span><span id="__span-28-23"><a id="__codelineno-28-23" name="__codelineno-28-23" href="#__codelineno-28-23"></a><span class="go">...</span>
 </span></code></pre></div>
-<ol start="2">
+<ol class="fancylists-decimal" start="2" type="1">
 <li>Realitzem canvis en la descripció en la branca <code>main</code>.</li>
 </ol>
 <div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="gp-uh">joapuiib@fp</span><span class="gp">:</span><span class="gp-d">~/git_branques</span><span class="w"> </span><span class="gp-gb">(docs_git_training)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>main
@@ -2220,7 +2247,7 @@ fins que s'haja aplicat el canvi de base a tots els <code>commit</code> de la br
 </span><span id="__span-31-33"><a id="__codelineno-31-33" name="__codelineno-31-33" href="#__codelineno-31-33"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">0230b1b</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 minutes ago)</span><span class="w"> </span><span class="git-cm">Documentació w3schools</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(main)</span>
 </span><span id="__span-31-34"><a id="__codelineno-31-34" name="__codelineno-31-34" href="#__codelineno-31-34"></a><span class="go">...</span>
 </span></code></pre></div>
-<ol>
+<ol class="fancylists-decimal" type="1">
 <li>Hem eliminat les marques de conflicte i hem combinat els dos textos.</li>
 <li>Hem marcat el fitxer <code>README.md</code> com a resolt.</li>
 <li>L'opció <code>--no-edit</code> permet continuar el procés de <code>rebase</code>, utilitzant el missatge del <code>commit</code> original.</li>

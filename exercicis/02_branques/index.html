@@ -10,40 +10,40 @@
         <meta name="author" content="Joan Puigcerver Ibáñez">
       
       
-        <link rel="canonical" href="https://joapuiib.github.io/curs-git/">
+        <link rel="canonical" href="https://joapuiib.github.io/curs-git/exercicis/02_branques/">
+      
+      
+        <link rel="prev" href="../01_introduccio/">
       
       
       
-        <link rel="next" href="apunts/">
-      
-      
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
     
     
       
-        <title>Inici - Introducció a Git i la seua aplicació a l’aula</title>
+        <title>Exercicis Bloc 2: Branques - Introducció a Git i la seua aplicació a l’aula</title>
       
     
     
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.76a95c52.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.76a95c52.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
 
     
-    <link rel="stylesheet" href="stylesheets/site.css">
-    <link rel="stylesheet" href="stylesheets/admonitions.css">
-    <link rel="stylesheet" href="stylesheets/highlight.css">
-    <link rel="stylesheet" href="stylesheets/collapse-code.css">
+    <link rel="stylesheet" href="../../stylesheets/site.css">
+    <link rel="stylesheet" href="../../stylesheets/admonitions.css">
+    <link rel="stylesheet" href="../../stylesheets/highlight.css">
+    <link rel="stylesheet" href="../../stylesheets/collapse-code.css">
     <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
 
-    <link rel="stylesheet" href="stylesheets/cover.css">
+    <link rel="stylesheet" href="../../stylesheets/cover.css">
 
     
       
@@ -58,7 +58,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -98,7 +98,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Capçalera">
-    <a href="." title="Introducció a Git i la seua aplicació a l’aula" class="md-header__button md-logo" aria-label="Introducció a Git i la seua aplicació a l’aula" data-md-component="logo">
+    <a href="../.." title="Introducció a Git i la seua aplicació a l’aula" class="md-header__button md-logo" aria-label="Introducció a Git i la seua aplicació a l’aula" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.546 10.93 13.067.452a1.55 1.55 0 0 0-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 0 1 2.327 2.341l2.658 2.66a1.838 1.838 0 0 1 1.9 3.039 1.837 1.837 0 0 1-2.6 0 1.846 1.846 0 0 1-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348a1.848 1.848 0 0 1 0 2.6 1.844 1.844 0 0 1-2.609 0 1.834 1.834 0 0 1 0-2.598c.182-.18.387-.316.605-.406V8.835a1.834 1.834 0 0 1-.996-2.41L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477a1.545 1.545 0 0 0 2.186 0l10.43-10.43a1.544 1.544 0 0 0 0-2.187"/></svg>
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Inici
+              Exercicis Bloc 2: Branques
             
           </span>
         </div>
@@ -223,11 +223,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -246,7 +244,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="apunts/" class="md-tabs__link">
+        <a href="../../apunts/" class="md-tabs__link">
           
   
     
@@ -262,11 +260,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="exercicis/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -290,9 +290,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -303,7 +301,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegació" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Introducció a Git i la seua aplicació a l’aula" class="md-nav__button md-logo" aria-label="Introducció a Git i la seua aplicació a l’aula" data-md-component="logo">
+    <a href="../.." title="Introducció a Git i la seua aplicació a l’aula" class="md-nav__button md-logo" aria-label="Introducció a Git i la seua aplicació a l’aula" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.546 10.93 13.067.452a1.55 1.55 0 0 0-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 0 1 2.327 2.341l2.658 2.66a1.838 1.838 0 0 1 1.9 3.039 1.837 1.837 0 0 1-2.6 0 1.846 1.846 0 0 1-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348a1.848 1.848 0 0 1 0 2.6 1.844 1.844 0 0 1-2.609 0 1.834 1.834 0 0 1 0-2.598c.182-.18.387-.316.605-.406V8.835a1.834 1.834 0 0 1-.996-2.41L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477a1.545 1.545 0 0 0 2.186 0l10.43-10.43a1.544 1.544 0 0 0 0-2.187"/></svg>
@@ -330,30 +328,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  
-  <span class="md-ellipsis">
-    Inici
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -364,51 +342,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Taula de continguts
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#objectius" class="md-nav__link">
-    <span class="md-ellipsis">
-      Objectius
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#continguts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Continguts
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dirigit-a" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dirigit a
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -447,7 +380,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="apunts/" class="md-nav__link ">
+            <a href="../../apunts/" class="md-nav__link ">
               
   
   
@@ -482,7 +415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="apunts/01_introduccio/" class="md-nav__link">
+      <a href="../../apunts/01_introduccio/" class="md-nav__link">
         
   
   
@@ -507,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="apunts/02_branques/" class="md-nav__link">
+      <a href="../../apunts/02_branques/" class="md-nav__link">
         
   
   
@@ -532,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="apunts/03_remots/" class="md-nav__link">
+      <a href="../../apunts/03_remots/" class="md-nav__link">
         
   
   
@@ -561,6 +494,8 @@
       
   
   
+    
+  
   
   
     
@@ -577,19 +512,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="exercicis/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -602,13 +540,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Exercicis
@@ -624,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="exercicis/01_introduccio/" class="md-nav__link">
+      <a href="../01_introduccio/" class="md-nav__link">
         
   
   
@@ -646,10 +584,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="exercicis/02_branques/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.06 9 .94.94L5.92 19H5v-.92L14.06 9m3.6-6c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29m-3.6 3.19L3 17.25V21h3.75L17.81 9.94l-3.75-3.75Z"/></svg>
+  
+  
+  <span class="md-ellipsis">
+    Exercicis Bloc 2: Branques
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -662,6 +622,111 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectius" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objectius
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercici" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercici">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inicialitzacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inicialització
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fusio-directa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fusió directa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fusio-de-branques-divergents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fusió de branques divergents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolucio-de-conflictes-en-la-fusio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolució de conflictes en la fusió
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminacio-duna-branca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminació d'una branca
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canvi-de-base-duna-branca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Canvi de base d'una branca
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolucio-de-conflictes-en-el-canvi-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolució de conflictes en el canvi de base
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -681,8 +746,6 @@
               </div>
             
             
-              
-                
               
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
@@ -710,20 +773,80 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#continguts" class="md-nav__link">
+  <a href="#exercici" class="md-nav__link">
     <span class="md-ellipsis">
-      Continguts
+      Exercici
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercici">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inicialitzacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inicialització
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#dirigit-a" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#fusio-directa" class="md-nav__link">
     <span class="md-ellipsis">
-      Dirigit a
+      Fusió directa
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fusio-de-branques-divergents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fusió de branques divergents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolucio-de-conflictes-en-la-fusio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolució de conflictes en la fusió
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminacio-duna-branca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminació d'una branca
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canvi-de-base-duna-branca" class="md-nav__link">
+    <span class="md-ellipsis">
+      Canvi de base d'una branca
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolucio-de-conflictes-en-el-canvi-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolució de conflictes en el canvi de base
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -758,12 +881,6 @@
   
   
 
-  
-    
-    
-      
-    
-    
   
 
   
@@ -1021,7 +1138,7 @@
   
 
 
-<h1>Introducció a Git i la seua aplicació a l’aula</h1>
+<h1>Exercicis Bloc 2: Branques</h1>
 
 
 
@@ -1047,7 +1164,7 @@
 
 <div class="cover__license-img">
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" target="_blank">
-  <img class="" src="img/license/by-nc-sa.png" alt="Licence" height="50" />
+  <img class="" src="../../img/license/by-nc-sa.png" alt="Licence" height="50" />
 </a>
 </div>
 
@@ -1062,57 +1179,132 @@
   
 
     <h2 id="objectius">Objectius<a class="headerlink" href="#objectius" title="Permanent link">&para;</a></h2>
+<p>Els objectius d'aquests exercici són:</p>
 <ul>
-<li>Conèixer els conceptes bàsics de control de versions mitjançant Git i el seu ús en el context del desenvolupament de programari.</li>
-<li>Aprendre a utilitzar Git per a gestionar projectes de desenvolupament de programari.</li>
-<li>Conèixer i utilitzar plataformes de desenvolupament col·laboratiu com GitHub.</li>
-<li>Conèixer i utilitzar eines de gestió de projectes proporcionades per GitHub.</li>
-<li>Promoure la utilització de Git i GitHub en l’aula com a eina de treball col·laboratiu.</li>
+<li>Conéixer com crear i eliminar branques.</li>
+<li>Conéixer com realitzar canvis en una branca.</li>
+<li>Conéixer com canviar de branca.</li>
+<li>Conéixer com fusionar branques.</li>
+<li>Conéixer com canviar la base d'una branca.</li>
+<li>Conéixer com resoldre conflictes en la fusió de branques.</li>
+<li>Conéixer com resoldre conflictes en el canvi de base d'una branca.</li>
 </ul>
-<h2 id="continguts">Continguts<a class="headerlink" href="#continguts" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong><a href="apunts/01_introduccio/">Bloc 1: Introducció a Git</a></strong><ul>
-<li>Instal·lació.</li>
-<li>Configuració.</li>
-<li>Estructura d'un repositori.</li>
-<li>Flux de treball.</li>
-<li>Inicialització d'un repositori.</li>
-<li>Realització de canvis.</li>
-</ul>
+<h2 id="exercici">Exercici<a class="headerlink" href="#exercici" title="Permanent link">&para;</a></h2>
+<h3 id="inicialitzacio">Inicialització<a class="headerlink" href="#inicialitzacio" title="Permanent link">&para;</a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p class="annotate">Comprova l'estat del repositori amb <code>git status</code> i <code>git lga</code> (1) després de cada ordre
+per entendre els diferents estats dels fitxers.</p>
+<ol class="fancylists-decimal" type="1">
+<li>Crea un directori anomenat <code>bloc2_exercici</code> en la teua carpeta de treball.</li>
+</ol>
+</div>
+<ol class="fancylists-decimal" type="1">
+<li>Crea un directori anomenat <code>bloc2_exercici</code> en la teua carpeta de treball.</li>
+<li>Inicialitza un repositori de Git en aquest directori.</li>
+<li>Crea un fitxer anomenat <code>llibres.txt</code> i afegeix tres llibres que t'agraden.</li>
+<li>Fes un primer <em>commit</em>. Tria un missatge significatiu.</li>
+<li>Reanomena la branca principal a <code>main</code>.</li>
+</ol>
+<h3 id="fusio-directa">Fusió directa<a class="headerlink" href="#fusio-directa" title="Permanent link">&para;</a></h3>
+<ol class="fancylists-decimal" type="1">
+<li>Crea una branca anomenada <code>musica</code> i situa't en aquesta branca.</li>
+<li>Crea un fitxer anomenat <code>musica.txt</code> i afegeix tres cançons que t'agraden.</li>
+<li>Fes un <em>commit</em> en aquesta branca.</li>
+<li>Fusiona la branca <code>musica</code> amb la branca <code>main</code>.</li>
+</ol>
+<h3 id="fusio-de-branques-divergents">Fusió de branques divergents<a class="headerlink" href="#fusio-de-branques-divergents" title="Permanent link">&para;</a></h3>
+<ol class="fancylists-decimal" type="1">
+<li>Des de la branca <code>main</code>, crea les branques <code>mes-llibres</code> i <code>mes-musica</code>.</li>
+<li>Des de la branca <code>mes-llibres</code>:<ol class="fancylists-decimal" type="1">
+<li>Afegeix un llibre a <code>llibres.txt</code>.</li>
+<li>Fes un <em>commit</em>.</li>
+</ol>
 </li>
-<li><strong><a href="apunts/02_branques/">Bloc 2: Branques</a></strong><ul>
-<li>Creació de branques.</li>
-<li>Navegar entre branques.</li>
-<li>Sincronització de branques.</li>
-<li>Fusió de branques (<code>merge</code>).</li>
-<li>Canvi de base (<code>rebase</code>).</li>
-<li>Resolució de conflictes.</li>
-</ul>
+<li>
+<p>Des de la branca <code>mes-musica</code>:</p>
+<ol class="fancylists-decimal" type="1">
+<li>Afegeix una cançó a <code>musica.txt</code>.</li>
+<li>Fes un <em>commit</em>.</li>
+</ol>
 </li>
-<li><strong><a href="apunts/03_remots/">Bloc 3: Remots</a></strong><ul>
-<li>Creació d'un repositori remot a GitHub.</li>
-<li>Configurar un repositori remot.</li>
-<li>Mètodes d'autenticació.</li>
-<li>Associació entre branques locals i remotes.</li>
-<li>Publicació i incorporació de canvis.</li>
-<li>Clonació d'un repositori remot.</li>
-</ul>
+<li>
+<p>Fusiona la branca <code>mes-llibres</code> amb la branca <code>main</code>.</p>
 </li>
-<li><strong>Bloc 4: Estratègies de ramificació</strong><ul>
-<li>GitFlow.</li>
-</ul>
+<li>Fusiona la branca <code>mes-musica</code> amb la branca <code>main</code>.</li>
+</ol>
+<h3 id="resolucio-de-conflictes-en-la-fusio">Resolució de conflictes en la fusió<a class="headerlink" href="#resolucio-de-conflictes-en-la-fusio" title="Permanent link">&para;</a></h3>
+<ol class="fancylists-decimal" type="1">
+<li>Des de la branca <code>main</code>, crea les branques <code>llibres-ciencia-ficcio</code> i <code>llibres-fantasia</code>.</li>
+<li>Des de la branca <code>llibres-ciencia-ficcio</code>:<ol class="fancylists-decimal" type="1">
+<li>Afegeix un llibre de ciència-ficció a <code>llibres.txt</code>.</li>
+<li>Fes un <em>commit</em>.</li>
+</ol>
 </li>
-<li><strong>Bloc 5: Gestió de projectes</strong><ul>
-<li>Organitzacions a GitHub.</li>
-<li>GitHub Projects.</li>
-<li>Forks i Pull Requests.</li>
-</ul>
+<li>Des de la branca <code>llibres-fantasia</code>:<ol class="fancylists-decimal" type="1">
+<li>Afegeix un llibre de fantasia a <code>llibres.txt</code>.</li>
+<li>Fes un <em>commit</em>.</li>
+</ol>
 </li>
-</ul>
-<h2 id="dirigit-a">Dirigit a<a class="headerlink" href="#dirigit-a" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Professorat de la família d'Informàtica i Comunicacions.</li>
-</ul>
+<li>Fusiona la branca <code>llibres-ciencia-ficcio</code> amb la branca <code>main</code>.</li>
+<li>Fusiona la branca <code>llibres-fantasia</code> amb la branca <code>main</code>.</li>
+</ol>
+<h3 id="eliminacio-duna-branca">Eliminació d'una branca<a class="headerlink" href="#eliminacio-duna-branca" title="Permanent link">&para;</a></h3>
+<ol class="fancylists-decimal" type="1">
+<li>Des de la branca <code>main</code>, crea una branca anomenada <code>series</code>.</li>
+<li>Des de la branca <code>main</code>, crea una branca anomenada <code>pelicules</code>.</li>
+<li>Des de la branca <code>series</code>:<ol class="fancylists-decimal" type="1">
+<li>Afegeix una sèrie a <code>series.txt</code>.</li>
+<li>Fes un <em>commit</em>.</li>
+</ol>
+</li>
+<li>Elimina la branca <code>pelicules</code>.</li>
+<li>Elimina la branca <code>series</code>.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Pregunta</p>
+<p>Què ha passat amb el commit de la branca <code>series</code>?</p>
+</div>
+<h3 id="canvi-de-base-duna-branca">Canvi de base d'una branca<a class="headerlink" href="#canvi-de-base-duna-branca" title="Permanent link">&para;</a></h3>
+<ol class="fancylists-decimal" type="1">
+<li>Des de la branca <code>main</code>, crea una branca anomenada <code>series</code>.</li>
+<li>Des de la branca <code>main</code>, crea una branca anomenada <code>pelicules</code>.</li>
+<li>Des de la branca <code>series</code>:<ol class="fancylists-decimal" type="1">
+<li>Afegeix una sèrie a <code>series.txt</code>.</li>
+<li>Fes un <em>commit</em>.</li>
+</ol>
+</li>
+<li>Des de la branca <code>pelicules</code>:<ol class="fancylists-decimal" type="1">
+<li>Afegeix una pel·lícula a <code>pelicules.txt</code>.</li>
+<li>Fes un <em>commit</em>.</li>
+</ol>
+</li>
+<li>Fusiona la branca <code>pelicules</code> amb la branca <code>main</code>.</li>
+<li>Canvia la base de la branca <code>series</code> a la branca <code>main</code>.</li>
+<li>Fusiona la branca <code>series</code> amb la branca <code>main</code>.</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Aquest procés és el que cal seguir per fusionar branques divergents
+d'una manera que la història siga lineal.</p>
+</div>
+<h3 id="resolucio-de-conflictes-en-el-canvi-de-base">Resolució de conflictes en el canvi de base<a class="headerlink" href="#resolucio-de-conflictes-en-el-canvi-de-base" title="Permanent link">&para;</a></h3>
+<ol class="fancylists-decimal" type="1">
+<li>Des de la branca <code>main</code>, crea una branca anomenada <code>series-accio</code> i <code>series-drama</code>.</li>
+<li>Des de la branca <code>series-accio</code>:<ol class="fancylists-decimal" type="1">
+<li>Afegeix una sèrie d'acció a <code>series.txt</code>.</li>
+<li>Fes un <em>commit</em>.</li>
+</ol>
+</li>
+<li>Des de la branca <code>series-drama</code>:<ol class="fancylists-decimal" type="1">
+<li>Afegeix una sèrie de drama a <code>series.txt</code>.</li>
+<li>Fes un <em>commit</em>.</li>
+</ol>
+</li>
+<li>Fusiona la branca <code>series-accio</code> amb la branca <code>main</code>.</li>
+<li>Canvia la base de la branca <code>series-drama</code> a la branca <code>main</code>.</li>
+<li>Fusiona la branca <code>series-drama</code> amb la branca <code>main</code>.</li>
+</ol>
     
 
 
@@ -1133,7 +1325,7 @@
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">19 de setembre del 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">25 de setembre del 2024</span>
   </span>
 
     
@@ -1143,8 +1335,6 @@
   </aside>
 
     
-
-  
 
 
     
@@ -1168,26 +1358,24 @@
   
     
       
-        
-      
       <nav class="md-footer__inner md-grid" aria-label="Peu de pàgina" >
         
-        
           
-          <a href="apunts/" class="md-footer__link md-footer__link--next" aria-label="Següent: Apunts">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Següent
-              </span>
-              <div class="md-ellipsis">
-                Apunts
-              </div>
-            </div>
+          <a href="../01_introduccio/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Exercicis Bloc 1: Introducció a Git">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Exercicis Bloc 1: Introducció a Git
+              </div>
             </div>
           </a>
+        
         
       </nav>
     
@@ -1254,14 +1442,14 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["announce.dismiss", "content.code.copy", "content.code.annotate", "content.tooltips", "navigation.top", "navigation.footer", "navigation.indexes", "navigation.tabs", "toc.follow"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.code.copy", "content.code.annotate", "content.tooltips", "navigation.top", "navigation.footer", "navigation.indexes", "navigation.tabs", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
     
     
     
-      <script src="assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
-    <script src="javascript/katex.js"></script>
+    <script src="../../javascript/katex.js"></script>
     <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
     <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
 
