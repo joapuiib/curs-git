@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Page description -->
+    
+
+    <!-- Page author -->
+    
+        <meta name="author" content="Joan Puigcerver Ibáñez" />
+    
+
+    <!-- Canonical -->
+    
+        <link rel="canonical" href="https://joapuiib.github.io/curs-git/apunts/01_introduccio_slides/" />
+    
+
+    <!-- Favicon -->
+    <link rel="icon" href="../../assets/images/favicon.png" />
+
+    <!-- Site title -->
+    
+      
+        <title>Bloc 1: Transparències - Introducció a Git i la seua aplicació a l’aula</title>
+      
+    
+
+    
+        <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reset.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/highlight/monokai.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/white.min.css">
+        <link rel="stylesheet" href="../../stylesheets/slides.css">
+    
+
+    <!-- Meta tags from front matter or plugins -->
+    
+
+</head>
+
+<body>
+
+    
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown
+                 data-separator="^\n---\n$"
+                 data-separator-vertical="^\n--\n$"
+                 data-notes="^Note:">
+          <script type="text/template">
+            ## Introducció a Git
+
+### Entorns de Desenvolupament
+
+#### Curs 2024-2025
+
+---
+
+## Què és Git?
+
+__Sistema de control de versions lliure i distribuït.__
+
+https://git-scm.com/
+
+- Control de versions
+- Facilita la col·laboració
+- Ramificació i gestió de conflictes
+
+---
+
+## Git vs GitHub
+__Git__ és el sistema de control de versions.
+
+__GitHub__ o __GitLab__ són un servei d'allotjament de repositoris de Git.
+
+
+
+<div class="container">
+
+<div class="col">
+<img src="../img/logo_github.png" height="50%">
+
+https://github.com
+</div>
+
+<div class="col">
+<img src="../img/logo_gitlab.png" height="50%">
+
+https://gitlab.com
+</div>
+
+</div>
+
+---
+
+## Estructura d'un repositori
+
+<img src="../img/introduccio/components.png">
+
+---
+
+## Inicialitzar un repositori
+
+```bash
+mkdir git_introduccio
+cd git_introduccio
+git init
+```
+
+---
+
+## Àrea de preparació
+### `git add`
+
+```bash
+git add <files>
+```
+
+<img src="../img/introduccio/staged_readme.png">
+
+---
+
+## Confirmar canvis
+### `git commit`
+
+```bash
+git commit [-m <message>]
+```
+
+<img src="../img/introduccio/after_commit_readme.png">
+
+---
+
+## Mostrar commit
+### `git show`
+
+```bash
+git show [ref]
+```
+
+---
+
+## Diferències
+### `git diff`
+
+```bash
+git diff [--staged]
+```
+
+<img src="../img/introduccio/resum_diff.png">
+
+---
+
+## Històric de canvis
+### `git log`
+
+```bash
+git log
+```
+
+__Àlies:__
+```bash
+git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'"
+git config --global alias.lga "lg --all"
+```
+
+---
+
+## Descartar canvis
+### `git restore`
+
+```bash
+git restore <files>
+```
+
+<img src="../img/introduccio/flux_treball.png">
+          </script>
+        </section>
+      </div>
+    </div>
+    
+
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/markdown/markdown.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/notes/notes.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/zoom/zoom.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/math/math.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/highlight/highlight.min.js"></script>
+    
+
+    
+        <script>
+          // Full list of configuration options available here:
+          // https://github.com/hakimel/reveal.js#configuration
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            hash: true,
+
+            transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [ RevealMarkdown, RevealNotes, RevealZoom, RevealMath, RevealHighlight ]
+          });
+        </script>
+    
+
+</body>
+</html>
