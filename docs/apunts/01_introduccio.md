@@ -22,7 +22,7 @@ Git és __un sistema de control de versions lliure i distribuït__ dissenyat per
 amb rapidesa i eficiència. L'objectiu principal de Git és controlar i gestionar els canvis realitzats
 en una enorme quantitat de fitxers d'una manera fàcil i eficient.
 
-Git va ser dissenyat en 2005 per Linux Torvalds, creador del kernel del sistema operatiu Linux, i des d'aleshores,
+Git va ser dissenyat en 2005 per Linus Torvalds, creador del kernel del sistema operatiu Linux, i des d'aleshores,
 s'ha convertit en una eina fonamental i imprescindible en la gestió de codi font en projectes col·laboratius.
 
 Git està basat en __repositoris__, que s'inicialitzen en un directori concret i contenen tota la informació
