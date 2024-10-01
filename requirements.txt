@@ -1,11 +1,1 @@
-markdown-grid-tables==0.3.2
-mkdocs==1.6.0
-mkdocs-alias-plugin==0.8.1
-mkdocs-awesome-pages-plugin==2.9.2
-mkdocs-drawio-file
-mkdocs-git-revision-date-localized-plugin==1.2.6
-mkdocs-macros-plugin==1.0.5
-mkdocs-material==9.5.29
-mkdocs-static-i18n==1.2.3
-mdx-linkify==2.1
-mkdocs-material-joapuiib
+mkdocs-material-joapuiib~=0.48.0
