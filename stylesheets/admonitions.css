@@ -13,6 +13,13 @@
   --md-admonition-color--notice: 255, 223, 0;
 }
 
+/* Original appearance */
+.md-typeset .admonition,
+.md-typeset details {
+  border-width: 0;
+  border-left-width: 4px;
+}
+
 .md-typeset .admonition.docs,
 .md-typeset details.docs {
   border-color: rgb(var(--md-admonition-color--docs));
