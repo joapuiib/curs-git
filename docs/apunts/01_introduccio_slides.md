@@ -66,7 +66,6 @@ git init
 ---
 
 ## Àrea de preparació
-### `git add`
 
 ```bash
 git add <files>
@@ -77,7 +76,6 @@ git add <files>
 ---
 
 ## Confirmar canvis
-### `git commit`
 
 ```bash
 git commit [-m <message>]
@@ -88,7 +86,6 @@ git commit [-m <message>]
 ---
 
 ## Mostrar commit
-### `git show`
 
 ```bash
 git show [ref]
@@ -97,7 +94,6 @@ git show [ref]
 ---
 
 ## Diferències
-### `git diff`
 
 ```bash
 git diff [--staged]
@@ -108,7 +104,6 @@ git diff [--staged]
 ---
 
 ## Històric de canvis
-### `git log`
 
 ```bash
 git log
@@ -123,7 +118,6 @@ git config --global alias.lga "lg --all"
 ---
 
 ## Descartar canvis
-### `git restore`
 
 ```bash
 git restore <files>
