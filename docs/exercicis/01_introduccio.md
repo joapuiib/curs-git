@@ -31,7 +31,7 @@ Els objectius d'aquests exercici són:
 1. Crea un fitxer anomenat `pelicules.txt` i afegeix tres pel·lícules que t'agraden.
 1. Fes un tercer _commit_ que sols incloga el fitxer `musica.txt`.
 1. Crea un fitxer anomenat `series.txt` i afegeix tres sèries que t'agraden.
-1. Fes un quart _commit_ que incloga els fitxers `musica.txt` i `series.txt`.
+1. Fes un quart _commit_ que incloga els fitxers `pelicules.txt` i `series.txt`.
 1. Modifica el fitxer `llibres.txt` per a eliminar un dels llibres.
 1. Fes un cinqué _commit_.
 1. Modifica el fitxer `pelicules.txt` per a afegir una pel·lícula.
