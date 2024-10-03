@@ -712,6 +712,7 @@ que complisquen algun dels patrons especificats.
     ```
 
     ```shellconsole
+    joapuiib@FP:~/git_introduccio (main) $ mkdir temp
     joapuiib@FP:~/git_introduccio (main) $ touch temp/file.txt
     joapuiib@FP:~/git_introduccio (main) $ git status
     On branch main
