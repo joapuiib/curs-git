@@ -1,1 +1,1 @@
-mkdocs-material-joapuiib~=0.48.0
+mkdocs-material-joapuiib~=0.50
