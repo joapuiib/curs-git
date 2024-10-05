@@ -1,3 +1,7 @@
+[data-md-color-primary=brown] {
+    --md-typeset-a-color: #c1775c;
+}
+
 .md-typeset figcaption {
   color: var(--md-default-fg-color--light);
 }
