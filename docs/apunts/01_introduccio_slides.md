@@ -6,9 +6,7 @@ icon: material/presentation
 
 ## Introducció a Git
 
-### Entorns de Desenvolupament
-
-#### Curs 2024-2025
+### Introducció a Git i la seua aplicació a l’aula
 
 ---
 
