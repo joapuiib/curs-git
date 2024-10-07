@@ -36,9 +36,9 @@ hide:
     - Associació entre branques locals i remotes.
     - Publicació i incorporació de canvis.
     - Clonació d'un repositori remot.
-- __Bloc 4: Estratègies de ramificació__
+- __[[bloc4]]__
     - GitFlow.
-- __Bloc 5: Gestió de projectes__
+- __[[bloc5]]__
     - Organitzacions a GitHub.
     - GitHub Projects.
     - Forks i Pull Requests.
