@@ -50,21 +50,21 @@ projectes.
 
     !!! example
         ```shellconsole
-        joapuiib@fp:~ $ git init ~/git_remots
-        Initialized empty Git repository in /home/joapuiib/git_remots/.git/
-        joapuiib@fp:~ $ cd ~/git_remots
-        joapuiib@fp:~/git_remots (main) $ branch -m main # (1)!
-        joapuiib@fp:~/git_remots (main) $ echo "# Bloc: Remots" > README.md
-        joapuiib@fp:~/git_remots (main) $ git add README.md
-        joapuiib@fp:~/git_remots (main) $ git commit -m "README.md: Títol"
+        jpuigcerver@fp:~ $ git init ~/git_remots
+        Initialized empty Git repository in /home/jpuigcerver/git_remots/.git/
+        jpuigcerver@fp:~ $ cd ~/git_remots
+        jpuigcerver@fp:~/git_remots (main) $ branch -m main # (1)!
+        jpuigcerver@fp:~/git_remots (main) $ echo "# Bloc: Remots" > README.md
+        jpuigcerver@fp:~/git_remots (main) $ git add README.md
+        jpuigcerver@fp:~/git_remots (main) $ git commit -m "README.md: Títol"
         [master (root-commit) 0b1b3b4] README.md: Títol
          1 file changed, 1 insertion(+)
          create mode 100644 README.md
-        joapuiib@fp:~/git_remots (main) $ echo "Repositori del __Bloc: Remots__ del curs __\"Introducció a Git i la seua aplicació a l’aula\"__" >> README.md
-        joapuiib@fp:~/git_remots (main) $ git commit -a -m "README.md: Descripció"
+        jpuigcerver@fp:~/git_remots (main) $ echo "Repositori del __Bloc: Remots__ del curs __\"Introducció a Git i la seua aplicació a l’aula\"__" >> README.md
+        jpuigcerver@fp:~/git_remots (main) $ git commit -a -m "README.md: Descripció"
         [master 1b3b4b0] README.md: Descripció
          1 file changed, 1 insertion(+)
-        joapuiib@fp:~/git_remots (main) $ git lg
+        jpuigcerver@fp:~/git_remots (main) $ git lg
         * 1b3b4b0 - (2 minutes ago) README.md: Descripció - Joan Puigcerver (HEAD -> main)
         * 0b1b3b4 - (3 minutes ago) README.md: Títol - Joan Puigcerver
         ```
@@ -241,7 +241,7 @@ de dues maneres:
     per autenticar-te amb el servidor de GitHub.
 
     ```shellconsole
-    joapuiib@fp:~ $ git clone https://github.com/<usuari>/<repositori>
+    jpuigcerver@fp:~ $ git clone https://github.com/<usuari>/<repositori>
     Cloning into '<repositori>'...
     Username for 'https://github.com': <usuari>
     Password for 'https://<username>@github.com': <token>
@@ -277,12 +277,12 @@ Per generar una clau SSH, segueix els següents passos.
     - Crea una clau SSH al teu sistema local mitjançant la comanda `ssh-keygen`.
 
         ```shellconsole
-        joapuiib@fp:~ $ ssh-keygen -t rsa -b 4096
+        jpuigcerver@fp:~ $ ssh-keygen -t rsa -b 4096
         Generating public/private rsa key pair.
-        Enter file in which to save the key (/home/joapuiib/.ssh/id_rsa):
+        Enter file in which to save the key (/home/jpuigcerver/.ssh/id_rsa):
         Enter passphrase (empty for no passphrase):
         Enter same passphrase again:
-        Your identification has been saved in /home/joapuiib/.ssh/id_rsa
+        Your identification has been saved in /home/jpuigcerver/.ssh/id_rsa
         ```
 
         - `-t rsa`: Indica el tipus de clau RSA.
@@ -293,7 +293,7 @@ Per generar una clau SSH, segueix els següents passos.
     - Còpia el contingut de la clau pública (`id_rsa.pub`) al portaretalls.
 
         ```shellconsole
-        joapuiib@fp:~ $ cat ~/.ssh/id_rsa.pub
+        jpuigcerver@fp:~ $ cat ~/.ssh/id_rsa.pub
         ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC7GqFnEFQZK4+l3zvXF07hN/cMk5ZtJmMkHWAJyTYQ+pDwMXp9eQs
         +VASLlz9z+0Q3vnnXN4vBO/+2u29fKJ4YlrecDYtCDpEhMXCkaCv9/ggkru09j2rELFuAqER55lgEtRKTfLKAVFa3Ws
         2VV7zlTSAH2y8nVddzlJRE9Y1BAfH0+1hjpCe+vgGObBLyIGGsXwlmm3mwI7NKHuKCIVskIEX3F0jw668dBex+6VUtG
@@ -386,8 +386,8 @@ git remote add <nom> <url>
     sense haver enllaçat el teu repositori local,
     Git et mostrarà un missatge d'error:
     ```shellconsole
-    joapuiib@fp:~/git_remots (main) $ git remote # (1)!
-    joapuiib@fp:~/git_remots (main) $ git push
+    jpuigcerver@fp:~/git_remots (main) $ git remote # (1)!
+    jpuigcerver@fp:~/git_remots (main) $ git push
     fatal: No configured push destination.
     Either specify the URL from the command-line or configure a remote repository using
 
@@ -404,17 +404,17 @@ git remote add <nom> <url>
     Enllaçarem el nostre repositori local amb el repositori
     remot creat anteriorment a GitHub.
 
-    La URL del repositori remot és `git@github.com:joapuiib/git_remots.git`(1).
+    La URL del repositori remot és `git@github.com:jpuigcerver/git_remots.git`(1).
     
     ```shellconsole
-    joapuiib@fp:~/git_remots (main) $ git remote
-    joapuiib@fp:~/git_remots (main) $ git remote add origin git@github.com:joapuiib/git_remots.git
-    joapuiib@fp:~/git_remots (main) $ git remote
+    jpuigcerver@fp:~/git_remots (main) $ git remote
+    jpuigcerver@fp:~/git_remots (main) $ git remote add origin git@github.com:jpuigcerver/git_remots.git
+    jpuigcerver@fp:~/git_remots (main) $ git remote
     origin
-    joapuiib@fp:~/git_remots (main) $ git remote show origin
+    jpuigcerver@fp:~/git_remots (main) $ git remote show origin
     * remote origin
-      Fetch URL: git@github.com:joapuiib/git_remots.git
-      Push  URL: git@github.com:joapuiib/git_remots.git
+      Fetch URL: git@github.com:jpuigcerver/git_remots.git
+      Push  URL: git@github.com:jpuigcerver/git_remots.git
       HEAD branch: (unknown)
     ```
 
@@ -488,10 +488,10 @@ git push [-u|--set-upstream] <remot> <branca>
     hem d'anar associar una branca remota.
 
     ```shellconsole
-    joapuiib@fp:~/git_remots (main) $ git lga
+    jpuigcerver@fp:~/git_remots (main) $ git lga
     * b7adb78 - (2 seconds ago) README.md: Descripció - Joan Puigcerver (HEAD -> main)
     * a41ab9e - (2 seconds ago) README.md: Títol - Joan Puigcerver
-    joapuiib@fp:~/git_remots (main) $ git push
+    jpuigcerver@fp:~/git_remots (main) $ git push
     fatal: The current branch main has no upstream branch.
     To push the current branch and set the remote as upstream, use
 
@@ -508,7 +508,7 @@ git push [-u|--set-upstream] <remot> <branca>
 
 
     ```shellconsole
-    joapuiib@fp:~/git_remots (main) $ git push --set-upstream origin main
+    jpuigcerver@fp:~/git_remots (main) $ git push --set-upstream origin main
     Enumerating objects: 6, done.
     Counting objects: 100% (6/6), done.
     Delta compression using up to 12 threads
@@ -516,10 +516,10 @@ git push [-u|--set-upstream] <remot> <branca>
     Writing objects: 100% (6/6), 503 bytes | 503.00 KiB/s, done.
     Total 6 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
     remote: Resolving deltas: 100% (1/1), done.
-    To github.com:joapuiib/git_remots.git
+    To github.com:jpuigcerver/git_remots.git
      * [new branch]      main -> main
     branch 'main' set up to track 'origin/main'.
-    joapuiib@fp:~/git_remots (main) $ git lga
+    jpuigcerver@fp:~/git_remots (main) $ git lga
     * b7adb78 - (2 seconds ago) README.md: Descripció - Joan Puigcerver (HEAD -> main, origin/main)
     * a41ab9e - (2 seconds ago) README.md: Títol - Joan Puigcerver
     ```
@@ -560,7 +560,7 @@ git clone <url> [<directori>]
     > S'ha modificat el _prompt_ per indicar les comandes que executaria Pau.
 
     ```shellconsole
-    pau@fp:~ $ git clone git@github.com:joapuiib/git_remots.git ~/git_remots_pau
+    pau@fp:~ $ git clone git@github.com:jpuigcerver/git_remots.git ~/git_remots_pau
     Cloning into '/home/pau/git_remots_pau'...
     remote: Enumerating objects: 6, done.
     remote: Counting objects: 100% (6/6), done.
@@ -617,7 +617,7 @@ git clone <url> [<directori>]
     Compressing objects: 100% (2/2), done.
     Writing objects: 100% (3/3), 303 bytes | 303.00 KiB/s, done.
     Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-    To github.com:joapuiib/git_remots.git
+    To github.com:jpuigcerver/git_remots.git
        b7adb78..1b3b4b0  main -> main
     pau@fp:~/git_remots_pau (main) $ git lg
     * 1b3b4b0 - (2 minutes ago) pau.txt: Canvi realitzat per Pau - Pau (HEAD -> main, origin/main)
@@ -629,7 +629,7 @@ En aquest moment, Pau ha realitzat un canvi en el repositori remot, que no està
 en el nostre repositori local.
 
 ```shellconsole
-joapuiib@fp:~/git_remots (main) $ git lg
+jpuigcerver@fp:~/git_remots (main) $ git lg
 * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver (HEAD -> main, origin/main)
 * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
 ```
@@ -663,15 +663,15 @@ git fetch [<options>] [<remot>]
     realitzats per Pau.
     
     ```shellconsole
-    joapuiib@fp:~/git_remots (main) $ git fetch
+    jpuigcerver@fp:~/git_remots (main) $ git fetch
     remote: Enumerating objects: 4, done.
     remote: Counting objects: 100% (4/4), done.
     remote: Compressing objects: 100% (2/2), done.
     remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
     Unpacking objects: 100% (3/3), done.
-    From github.com:joapuiib/git_remots
+    From github.com:jpuigcerver/git_remots
        b7adb78..1b3b4b0  main     -> origin/main
-    joapuiib@fp:~/git_remots (main) $ git lg
+    jpuigcerver@fp:~/git_remots (main) $ git lg
     * 1b3b4b0 - (2 minutes ago) pau.txt: Canvi realitzat per Pau - Pau (origin/main)
     * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver (HEAD -> main)
     * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
@@ -746,11 +746,11 @@ git pull [<options>] [<remot> [<branca>]]
     però no de la branca local `main`.
 
     ```shellconsole
-    joapuiib@fp:~/git_remots (main) $ git lg
+    jpuigcerver@fp:~/git_remots (main) $ git lg
     * 1b3b4b0 - (2 minutes ago) pau.txt: Canvi realitzat per Pau - Pau (origin/main)
     * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver (HEAD -> main)
     * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
-    joapuiib@fp:~/git_remots (main) $ git status
+    jpuigcerver@fp:~/git_remots (main) $ git status
     On branch main
     Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
       (use "git pull" to update your local branch)
@@ -761,13 +761,13 @@ git pull [<options>] [<remot> [<branca>]]
     Incorporem els canvis de la branca remota `origin/main` a la branca local `main`.
 
     ```shellconsole
-    joapuiib@fp:~/git_remots (main) $ git pull
+    jpuigcerver@fp:~/git_remots (main) $ git pull
     Updating b7adb78..1b3b4b0
     Fast-forward
      pau.txt | 1 +
      1 file changed, 1 insertion(+)
      create mode 100644 pau.txt
-    joapuiib@fp:~/git_remots (main) $ git lg
+    jpuigcerver@fp:~/git_remots (main) $ git lg
     * 1b3b4b0 - (2 minutes ago) pau.txt: Canvi realitzat per Pau - Pau (HEAD -> main, origin/main)
     * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver
     * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
@@ -787,7 +787,7 @@ git pull [<options>] [<remot> [<branca>]]
         Compressing objects: 100% (2/2), done.
         Writing objects: 100% (3/3), 303 bytes | 303.00 KiB/s, done.
         Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-        To github.com:joapuiib/git_remots.git
+        To github.com:jpuigcerver/git_remots.git
            1b3b4b0..2b3b4b0  main -> main
         pau@fp:~/git_remots_pau (main) $ git lg
         * 2b3b4b0 - (2 minutes ago) pau.txt: Un altre canvi de Pau - Pau (HEAD -> main, origin/main)
@@ -804,17 +804,17 @@ git pull [<options>] [<remot> [<branca>]]
     No obstant això, anem a fer un canvi a la branca local `main`, simulant la situació anteriorment descrita.
 
     ```shellconsole
-    joapuiib@fp:~/git_remots (main) $ git lg # (1)!
+    jpuigcerver@fp:~/git_remots (main) $ git lg # (1)!
     * 1b3b4b0 - (2 minutes ago) pau.txt: Canvi realitzat per Pau - Pau (HEAD -> main, origin/main)
     * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver
     * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
-    joapuiib@fp:~/git_remots (main) $ echo "Canvi realitzat per Joan" >> joan.txt
-    joapuiib@fp:~/git_remots (main) $ git add joan.txt
-    joapuiib@fp:~/git_remots (main) $ git commit -m "joan.txt: Canvi realitzat per Joan"
+    jpuigcerver@fp:~/git_remots (main) $ echo "Canvi realitzat per Joan" >> joan.txt
+    jpuigcerver@fp:~/git_remots (main) $ git add joan.txt
+    jpuigcerver@fp:~/git_remots (main) $ git commit -m "joan.txt: Canvi realitzat per Joan"
     [main 3b4b0b0] joan.txt: Canvi realitzat per Joan
      1 file changed, 1 insertion(+)
      create mode 100644 joan.txt
-    joapuiib@fp:~/git_remots (main) $ git lg
+    jpuigcerver@fp:~/git_remots (main) $ git lg
     * 3b4b0b0 - (2 minutes ago) joan.txt: Canvi realitzat per Joan - Joan Puigcerver (HEAD -> main)
     * 1b3b4b0 - (10 minutes ago) pau.txt: Canvi realitzat per Pau - Pau (origin/main)
     * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver
@@ -827,16 +827,16 @@ git pull [<options>] [<remot> [<branca>]]
     però ens mostrarà un error com que el repositori remot té canvis que no estan reflectits en el nostre repositori local.
 
     ```shellconsole
-    joapuiib@fp:~/git_remots (main) $ git push
-    To github.com:joapuiib/git_remots.git
+    jpuigcerver@fp:~/git_remots (main) $ git push
+    To github.com:jpuigcerver/git_remots.git
     ! [rejected]        main -> main (fetch first)
-    error: failed to push some refs to 'github.com:joapuiib/git_remots.git'
+    error: failed to push some refs to 'github.com:jpuigcerver/git_remots.git'
     hint: Updates were rejected because the remote contains work that you do not
     hint: have locally. This is usually caused by another repository pushing to
     hint: the same ref. If you want to integrate the remote changes, use
     hint: 'git pull' before pushing again.
     hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-    joapuiib@fp:~/git_remots (main) $ git lga
+    jpuigcerver@fp:~/git_remots (main) $ git lga
     * 3b4b0b0 - (2 minutes ago) joan.txt: Canvi realitzat per Joan - Joan Puigcerver (HEAD -> main)
     | * 2b3b4b0 - (2 minutes ago) pau.txt: Un altre canvi de Pau - Pau (origin/main)
     |/
@@ -854,7 +854,7 @@ git pull [<options>] [<remot> [<branca>]]
     Intentem fer un `git pull --ff-only` per veure-ho.
 
     ```shellconsole
-    joapuiib@fp:~/git_remots (main) $ git pull --ff-only
+    jpuigcerver@fp:~/git_remots (main) $ git pull --ff-only
     hint: Diverging branches can't be fast-forwarded, you need to either:
     hint:
     hint:   git merge --no-ff
@@ -870,9 +870,9 @@ git pull [<options>] [<remot> [<branca>]]
     Si volem conservar una història lineal, haurem de fer un __canvi de base__ amb `git pull --rebase`.
 
     ```shellconsole
-    joapuiib@fp:~/git_remots (main) $ git pull --rebase
+    jpuigcerver@fp:~/git_remots (main) $ git pull --rebase
     Successfully rebased and updated refs/heads/main.
-    joapuiib@fp:~/git_remots (main) $ git lga
+    jpuigcerver@fp:~/git_remots (main) $ git lga
     * 3b4b0b0 - (2 minutes ago) joan.txt: Canvi realitzat per Joan - Joan Puigcerver (HEAD -> main)
     * 2b3b4b0 - (2 minutes ago) pau.txt: Un altre canvi de Pau - Pau (origin/main)
     * 1b3b4b0 - (10 minutes ago) pau.txt: Canvi realitzat per Pau - Pau

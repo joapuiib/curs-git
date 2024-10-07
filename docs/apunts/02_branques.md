@@ -46,17 +46,17 @@ que té connotacions racistes.
     ```
 
     ```shellconsole
-    joapuiib@fp:~ $ git init ~/git_branques
-    Initialized empty Git repository in /home/joapuiib/git_branques/.git/
-    joapuiib@fp:~ $ cd ~/git_branques
-    joapuiib@fp:~/git_branques (main) $ branch -m main # (1)!
-    joapuiib@fp:~/git_branques (main) $ echo "# Bloc: Branques" > README.md
-    joapuiib@fp:~/git_branques (main) $ git add README.md
-    joapuiib@fp:~/git_branques (main) $ git commit -m "Títol"
+    jpuigcerver@fp:~ $ git init ~/git_branques
+    Initialized empty Git repository in /home/jpuigcerver/git_branques/.git/
+    jpuigcerver@fp:~ $ cd ~/git_branques
+    jpuigcerver@fp:~/git_branques (main) $ branch -m main # (1)!
+    jpuigcerver@fp:~/git_branques (main) $ echo "# Bloc: Branques" > README.md
+    jpuigcerver@fp:~/git_branques (main) $ git add README.md
+    jpuigcerver@fp:~/git_branques (main) $ git commit -m "Títol"
     [master (root-commit) 0b1b3b4] Títol
      1 file changed, 1 insertion(+)
      create mode 100644 README.md
-    joapuiib@fp:~/git_branques (main) $ git lg
+    jpuigcerver@fp:~/git_branques (main) $ git lg
     * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> main)
     ```
 
@@ -79,7 +79,7 @@ que avança a mesura que es fan nous commits sobre aquesta.
     és el que es mostra a la [Figura 1](#figure-1).
 
     ```shellconsole
-    joapuiib@fp:~/git_branques (main) $ git lg
+    jpuigcerver@fp:~/git_branques (main) $ git lg
     * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> main)
     ```
 
@@ -119,7 +119,7 @@ Més opcions:
     Mostrem les branques del nostre repositori.
 
     ```shellconsole
-    joapuiib@fp:~/git_branques (main) $ git branch
+    jpuigcerver@fp:~/git_branques (main) $ git branch
     * main
     ```
 
@@ -144,11 +144,11 @@ Aquesta ordre indicarà amb un `*` la branca activa (on es troba el `HEAD`).
 !!! example
     Creem la branca `docs`.
     ```shellconsole
-    joapuiib@fp:~/git_branques (main) $ git branch docs
-    joapuiib@fp:~/git_branques (main) $ git branch
+    jpuigcerver@fp:~/git_branques (main) $ git branch docs
+    jpuigcerver@fp:~/git_branques (main) $ git branch
     * main
       docs
-    joapuiib@fp:~/git_branques (main) $ git lg
+    jpuigcerver@fp:~/git_branques (main) $ git lg
     * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> main, docs)
     ```
 
@@ -198,21 +198,21 @@ La [Figura 3](#figure-2) mostra l'estat del repositori després de canviar a la 
     apunten al mateix `commit`, però el `HEAD` apunta a la branca `docs`.
 
     ```shellconsole
-    joapuiib@fp:~/git_branques (main) $ git branch
+    jpuigcerver@fp:~/git_branques (main) $ git branch
     * main
       docs
-    joapuiib@fp:~/git_branques (main) $ git lg
+    jpuigcerver@fp:~/git_branques (main) $ git lg
     * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> main, docs)
-    joapuiib@fp:~/git_branques (main) $ cat README.md
+    jpuigcerver@fp:~/git_branques (main) $ cat README.md
     # Bloc: Branques
-    joapuiib@fp:~/git_branques (main) $ git switch docs
+    jpuigcerver@fp:~/git_branques (main) $ git switch docs
     Switched to branch 'docs'
-    joapuiib@fp:~/git_branques (docs) $ git branch
+    jpuigcerver@fp:~/git_branques (docs) $ git branch
       main
     * docs
-    joapuiib@fp:~/git_branques (docs) $ git lg
+    jpuigcerver@fp:~/git_branques (docs) $ git lg
     * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> docs, main)
-    joapuiib@fp:~/git_branques (docs) $ cat README.md
+    jpuigcerver@fp:~/git_branques (docs) $ cat README.md
     # Bloc: Branques
     ```
 
@@ -229,10 +229,10 @@ s'avança al nou `commit`.
     Afegim un subtítol al nostre fitxer `README.md` a la branca `docs`.
 
     ```shellconsole
-    joapuiib@fp:~/git_branques (main) $ git checkout docs
-    joapuiib@fp:~/git_branques (docs) $ echo >> README.md
-    joapuiib@fp:~/git_branques (docs) $ echo "## Documentació" >> README.md
-    joapuiib@fp:~/git_branques (docs) $ git diff
+    jpuigcerver@fp:~/git_branques (main) $ git checkout docs
+    jpuigcerver@fp:~/git_branques (docs) $ echo >> README.md
+    jpuigcerver@fp:~/git_branques (docs) $ echo "## Documentació" >> README.md
+    jpuigcerver@fp:~/git_branques (docs) $ git diff
     diff --git a/README.md b/README.md
     index 4efb7a9..3e27f51 100644
     --- a/README.md
@@ -241,11 +241,11 @@ s'avança al nou `commit`.
      # Bloc: Branques
     +
     +## Documentació
-    joapuiib@fp:~/git_branques (docs) $ git add README.md
-    joapuiib@fp:~/git_branques (docs) $ git commit -m "Subtítol documentació"
+    jpuigcerver@fp:~/git_branques (docs) $ git add README.md
+    jpuigcerver@fp:~/git_branques (docs) $ git commit -m "Subtítol documentació"
     [docs 1b2c5d6] Subtítol documentació
      1 file changed, 1 insertion(+)
-    joapuiib@fp:~/git_branques (docs) $ git lg
+    jpuigcerver@fp:~/git_branques (docs) $ git lg
     * 1b2c5d6 - (3 seconds ago) Subtítol documentació - Joan Puigcerver (HEAD -> docs)
     * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (main)
     ```
@@ -294,17 +294,17 @@ git branch [-d | --delete] [-D] [-f | --force] <nom>
     Eliminem la branca `docs`.
 
     ```shellconsole
-    joapuiib@fp:~/git_branques (docs) $ git checkout main
-    joapuiib@fp:~/git_branques (main) $ git lg
+    jpuigcerver@fp:~/git_branques (docs) $ git checkout main
+    jpuigcerver@fp:~/git_branques (main) $ git lg
     * 1b2c5d6 - (3 seconds ago) Subtítol documentació - Joan Puigcerver (docs)
     * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> main)
-    joapuiib@fp:~/git_branques (main) $ git branch -d docs
+    jpuigcerver@fp:~/git_branques (main) $ git branch -d docs
     error: the branch 'docs' is not fully merged
     hint: If you are sure you want to delete it, run 'git branch -D docs'
     hint: Disable this message with "git config advice.forceDeleteBranch false"
-    joapuiib@fp:~/git_branques (main) $ git branch -D docs
+    jpuigcerver@fp:~/git_branques (main) $ git branch -D docs
     Deleted branch docs (was 1b2c5d6).
-    joapuiib@fp:~/git_branques (main) $ git lg
+    jpuigcerver@fp:~/git_branques (main) $ git lg
     * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> main)
     ```
 
@@ -357,11 +357,11 @@ fins on es troba la branca que es vol fusionar.
     </figure>
 
     ```shellconsole
-    joapuiib@fp:~/git_branques (docs) $ git checkout main
+    jpuigcerver@fp:~/git_branques (docs) $ git checkout main
     Switched to branch 'main'
-    joapuiib@fp:~/git_branques (main) $ cat README.md
+    jpuigcerver@fp:~/git_branques (main) $ cat README.md
     # Bloc: Branques
-    joapuiib@fp:~/git_branques (main) $ git lg
+    jpuigcerver@fp:~/git_branques (main) $ git lg
     * 1b2c5d6 - (3 seconds ago) Subtítol documentació - Joan Puigcerver (docs)
     * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> main)
     ```
@@ -374,16 +374,16 @@ fins on es troba la branca que es vol fusionar.
     </figure>
 
     ```shellconsole
-    joapuiib@fp:~/git_branques (main) $ git merge docs
+    jpuigcerver@fp:~/git_branques (main) $ git merge docs
     Updating 0b1b3b4..1b2c5d6
     Fast-forward
      README.md | 1 +
      1 file changed, 1 insertion(+)
-    joapuiib@fp:~/git_branques (main) $ cat README.md # (1)!
+    jpuigcerver@fp:~/git_branques (main) $ cat README.md # (1)!
     # Bloc: Branques
 
     ## Documentació
-    joapuiib@fp:~/git_branques (main) $ git lg
+    jpuigcerver@fp:~/git_branques (main) $ git lg
     * 1b2c5d6 - (3 seconds ago) Subtítol documentació - Joan Puigcerver (HEAD -> main, docs)
     * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver
     ```
@@ -400,10 +400,10 @@ realitzat canvis que no estan presents en l'altra branca.
     1. Realitzem canvis en la branca `docs`.
 
     ```shellconsole
-    joapuiib@fp:~/git_branques (main) $ git checkout docs
+    jpuigcerver@fp:~/git_branques (main) $ git checkout docs
     Switched to branch 'docs'
-    joapuiib@fp:~/git_branques (docs) $ echo "https://git-scm.com/" >> README.md
-    joapuiib@fp:~/git_branques (docs) $ git diff
+    jpuigcerver@fp:~/git_branques (docs) $ echo "https://git-scm.com/" >> README.md
+    jpuigcerver@fp:~/git_branques (docs) $ git diff
     diff --git a/README.md b/README.md
     index 4efb7a9..3e27f51 100644
     --- a/README.md
@@ -413,10 +413,10 @@ realitzat canvis que no estan presents en l'altra branca.
 
      ## Documentació
     +- https://git-scm.com/
-    joapuiib@fp:~/git_branques (docs) $ git commit -a -m "Documentació oficial"
+    jpuigcerver@fp:~/git_branques (docs) $ git commit -a -m "Documentació oficial"
     [docs 3d4e5f6] Documentació oficial
      1 file changed, 1 insertion(+)
-    joapuiib@fp:~/git_branques (docs) $ git lg
+    jpuigcerver@fp:~/git_branques (docs) $ git lg
     * 3d4e5f6 - (3 seconds ago) Documentació oficial - Joan Puigcerver (HEAD -> docs)
     * 1b2c5d6 - (3 minutes ago) Subtítol documentació - Joan Puigcerver (main)
     * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver
@@ -425,10 +425,10 @@ realitzat canvis que no estan presents en l'altra branca.
     2. Realitzem canvis en la branca `main`.
 
     ```shellconsole
-    joapuiib@fp:~/git_branques (docs) $ git checkout main
+    jpuigcerver@fp:~/git_branques (docs) $ git checkout main
     Switched to branch 'main'
-    joapuiib@fp:~/git_branques (main) $ vim README.md # (1)!
-    joapuiib@fp:~/git_branques (main) $ git diff
+    jpuigcerver@fp:~/git_branques (main) $ vim README.md # (1)!
+    jpuigcerver@fp:~/git_branques (main) $ git diff
     diff --git a/README.md b/README.md
     index 3e27f51..4efb7a9 100644
     --- a/README.md
@@ -438,10 +438,10 @@ realitzat canvis que no estan presents en l'altra branca.
     +__Autor:__ Joan Puigcerver
 
      ## Documentació
-    joapuiib@fp:~/git_branques (main) $ git commit -a -m "Autor"
+    jpuigcerver@fp:~/git_branques (main) $ git commit -a -m "Autor"
     [main 2a3b4c5] Autor
      1 file changed, 1 insertion(+)
-    joapuiib@fp:~/git_branques (main) $ git lg -a
+    jpuigcerver@fp:~/git_branques (main) $ git lg -a
     * 2a3b4c5 - (5 seconds ago) Autor - Joan Puigcerver (HEAD -> main)
     | * 3d4e5f6 - (3 minutes ago) Documentació oficial - Joan Puigcerver (docs)
     |/
@@ -481,12 +481,12 @@ Si no se n'especifica cap, s'obrirà l'editor de text configurat per defecte per
     Realitzem la fusió de les dues branques.
 
     ```shellconsole
-    joapuiib@fp:~/git_branques (main) $ git merge docs -m "Merge branch 'docs' into main" # (1)!
+    jpuigcerver@fp:~/git_branques (main) $ git merge docs -m "Merge branch 'docs' into main" # (1)!
     Auto-merging README.md
     Merge made by the 'ort' strategy.
      README.md | 1 +
      1 file changed, 1 insertion(+)
-    joapuiib@fp:~/git_branques (main) $ git lg
+    jpuigcerver@fp:~/git_branques (main) $ git lg
     *   b6aa5c3 - (3 seconds ago) Merge branch 'docs' into main - Joan Puigcerver (HEAD -> main)
     |\
     | * 3d4e5f6 - (3 minutes ago) Documentació oficial - Joan Puigcerver (docs)
@@ -494,7 +494,7 @@ Si no se n'especifica cap, s'obrirà l'editor de text configurat per defecte per
     |/
     * 1b2c5d6 - (10 minutes ago) Subtítol documentació - Joan Puigcerver
     * 0b1b3b4 - (13 minutes ago) Títol - Joan Puigcerver
-    joapuiib@fp:~/git_branques (main) $ cat README.md
+    jpuigcerver@fp:~/git_branques (main) $ cat README.md
     # Bloc: Branques
     __Autor:__ Joan Puigcerver
 
@@ -540,11 +540,11 @@ Una vegada resolt el conflicte, caldrà confirmar els canvis amb `git add` i `gi
     1. Creem la branca `conflictes` i realitzem canvis en la descripció del fitxer `README.md`.
 
     ```shellconsole
-    joapuiib@fp:~/git_branques (main) $ git branch conflictes
-    joapuiib@fp:~/git_branques (main) $ git checkout conflictes
+    jpuigcerver@fp:~/git_branques (main) $ git branch conflictes
+    jpuigcerver@fp:~/git_branques (main) $ git checkout conflictes
     Switched to branch 'conflictes'
-    joapuiib@fp:~/git_branques (conflictes) $ vim README.md
-    joapuiib@fp:~/git_branques (conflictes) $ git diff
+    jpuigcerver@fp:~/git_branques (conflictes) $ vim README.md
+    jpuigcerver@fp:~/git_branques (conflictes) $ git diff
     diff --git a/README.md b/README.md
     index f94383b..c9b0a17 100644
     --- a/README.md
@@ -557,10 +557,10 @@ Una vegada resolt el conflicte, caldrà confirmar els canvis amb `git add` i `gi
     +
      ## Documentació
      - https://git-scm.com/
-    joapuiib@fp:~/git_branques (conflictes) $ git commit -a -m "Text conflictes"
+    jpuigcerver@fp:~/git_branques (conflictes) $ git commit -a -m "Text conflictes"
     [conflictes 4e5f6d7] Text conflictes
      1 file changed, 2 insertions(+)
-    joapuiib@fp:~/git_branques (conflictes) $ git lg
+    jpuigcerver@fp:~/git_branques (conflictes) $ git lg
     * 4e5f6d7 - (3 seconds ago) Text conflictes - Joan Puigcerver (HEAD -> conflictes)
     * b6aa5c3 - (3 minutes ago) Merge branch 'docs' into main - Joan Puigcerver (main)
     ...
@@ -569,10 +569,10 @@ Una vegada resolt el conflicte, caldrà confirmar els canvis amb `git add` i `gi
     2. Realitzem canvis en la descripció en la branca `main`.
 
     ```shellconsole
-    joapuiib@fp:~/git_branques (main) $ git checkout main
+    jpuigcerver@fp:~/git_branques (main) $ git checkout main
     Switched to branch 'main'
-    joapuiib@fp:~/git_branques (main) $ vim README.md
-    joapuiib@fp:~/git_branques (main) $ git diff
+    jpuigcerver@fp:~/git_branques (main) $ vim README.md
+    jpuigcerver@fp:~/git_branques (main) $ git diff
     diff --git a/README.md b/README.md
     index f94383b..a03cd9d 100644
     --- a/README.md
@@ -585,10 +585,10 @@ Una vegada resolt el conflicte, caldrà confirmar els canvis amb `git add` i `gi
     +
      ## Documentació
      - https://git-scm.com/
-    joapuiib@fp:~/git_branques (main) $ git commit -a -m "Text fusió"
+    jpuigcerver@fp:~/git_branques (main) $ git commit -a -m "Text fusió"
     [main 072e36a] Text fusió
      1 file changed, 2 insertions(+)
-    joapuiib@fp:~/git_branques (main) $ git lg -a
+    jpuigcerver@fp:~/git_branques (main) $ git lg -a
     * 072e36a - (3 seconds ago) Text fusió - Joan Puigcerver (HEAD -> main)
     | * 4e5f6d7 - (3 minutes ago) Text conflictes - Joan Puigcerver (conflictes)
     |/
@@ -600,11 +600,11 @@ Una vegada resolt el conflicte, caldrà confirmar els canvis amb `git add` i `gi
     Realitzem la fusió de la branca `conflictes` a la branca `main`.
 
     ```shellconsole
-    joapuiib@fp:~/git_branques (main) $ git merge conflictes
+    jpuigcerver@fp:~/git_branques (main) $ git merge conflictes
     Auto-merging README.md
     CONFLICT (content): Merge conflict in README.md
     Automatic merge failed; fix conflicts and then commit the result.
-    joapuiib@fp:~/git_branques (main|MERGING) $ cat README.md
+    jpuigcerver@fp:~/git_branques (main|MERGING) $ cat README.md
     # Bloc: Branques
     __Autor__: Joan Puigcerver
 
@@ -616,9 +616,9 @@ Una vegada resolt el conflicte, caldrà confirmar els canvis amb `git add` i `gi
 
     ## Documentació
     - https://git-scm.com/
-    joapuiib@fp:~/git_branques (main|MERGING) $ vim README.md # (1)!
-    joapuiib@fp:~/git_branques (main|MERGING) $ cat README.md
-    joapuiib@fedora:~/git_branques (main|MERGING) $ cat README.md 
+    jpuigcerver@fp:~/git_branques (main|MERGING) $ vim README.md # (1)!
+    jpuigcerver@fp:~/git_branques (main|MERGING) $ cat README.md
+    jpuigcerver@fedora:~/git_branques (main|MERGING) $ cat README.md 
     # Bloc: Branques
     __Autor__: Joan Puigcerver
 
@@ -626,10 +626,10 @@ Una vegada resolt el conflicte, caldrà confirmar els canvis amb `git add` i `gi
 
     ## Documentació
     - https://git-scm.com/
-    joapuiib@fp:~/git_branques (main|MERGING) $ git add README.md
-    joapuiib@fp:~/git_branques (main|MERGING) $ git commit -m "Resolució conflicte"
+    jpuigcerver@fp:~/git_branques (main|MERGING) $ git add README.md
+    jpuigcerver@fp:~/git_branques (main|MERGING) $ git commit -m "Resolució conflicte"
     [main 8a9b0c1] Resolució conflicte
-    joapuiib@fp:~/git_branques (main) $ git lg
+    jpuigcerver@fp:~/git_branques (main) $ git lg
     * 8a9b0c1 - (3 seconds ago) Resolució conflicte - Joan Puigcerver (HEAD -> main)
     |\
     | * 4e5f6d7 - (3 minutes ago) Text conflictes - Joan Puigcerver (conflictes)
@@ -663,12 +663,12 @@ git rebase <branca>
     1. Creem la branca `llicencia` i realitzem canvis en la descripció del fitxer `README.md`.
 
     ```shellconsole
-    joapuiib@fp:~/git_branques (main) $ git checkout -b llicencia # (1)!
+    jpuigcerver@fp:~/git_branques (main) $ git checkout -b llicencia # (1)!
     Switched to a new branch 'llicencia'
-    joapuiib@fp:~/git_branques (llicencia) $ echo >> README.md
-    joapuiib@fp:~/git_branques (llicencia) $ echo "## Llicència" >> README.md
-    joapuiib@fp:~/git_branques (llicencia) $ echo "CC BY-NC-SA 4.0" >> README.md
-    joapuiib@fp:~/git_branques (llicencia) $ git diff
+    jpuigcerver@fp:~/git_branques (llicencia) $ echo >> README.md
+    jpuigcerver@fp:~/git_branques (llicencia) $ echo "## Llicència" >> README.md
+    jpuigcerver@fp:~/git_branques (llicencia) $ echo "CC BY-NC-SA 4.0" >> README.md
+    jpuigcerver@fp:~/git_branques (llicencia) $ git diff
     diff --git a/README.md b/README.md
     index 2ca252f..6aa790e 100644
     --- a/README.md
@@ -680,10 +680,10 @@ git rebase <branca>
     +
     +## Llicència
     +CC BY-NC-SA 4.0
-    joapuiib@fp:~/git_branques (llicencia) $ git commit -a -m "Llicència"
+    jpuigcerver@fp:~/git_branques (llicencia) $ git commit -a -m "Llicència"
     [llicencia e474d76] Llicència
      1 file changed, 3 insertions(+)
-    joapuiib@fp:~/git_branques (llicencia) $ git lg
+    jpuigcerver@fp:~/git_branques (llicencia) $ git lg
     * e474d76 - (14 seconds ago) Llicència - Joan Puigcerver (HEAD -> llicencia)
     * 8a9b0c1 - (3 minutes ago) Resolució conflicte - Joan Puigcerver (main)
     ...
@@ -692,10 +692,10 @@ git rebase <branca>
     2. Realitzem canvis en la descripció en la branca `main`.
 
     ```shellconsole
-    joapuiib@fp:~/git_branques (llicencia) $ git checkout main
+    jpuigcerver@fp:~/git_branques (llicencia) $ git checkout main
     Switched to branch 'main'
-    joapuiib@fp:~/git_branques (main) $ vim README.md
-    joapuiib@fp:~/git_branques (main) $ git diff
+    jpuigcerver@fp:~/git_branques (main) $ vim README.md
+    jpuigcerver@fp:~/git_branques (main) $ git diff
     diff --git a/README.md b/README.md
     index 2ca252f..3a3fe02 100644
     --- a/README.md
@@ -708,10 +708,10 @@ git rebase <branca>
      
      ## Documentació
      - https://git-scm.com/
-    joapuiib@fp:~/git_branques (main) $ git commit -a -m "Text rebase"
+    jpuigcerver@fp:~/git_branques (main) $ git commit -a -m "Text rebase"
     [main 1b2c3d4] Text rebase
      1 file changed, 1 insertion(+)
-    joapuiib@fp:~/git_branques (main) $ git lg -a
+    jpuigcerver@fp:~/git_branques (main) $ git lg -a
     * 1b2c3d4 - (3 seconds ago) Text rebase - Joan Puigcerver (HEAD -> main)
     | * e474d76 - (3 minutes ago) Llicència - Joan Puigcerver (llicencia)
     |/
@@ -736,16 +736,16 @@ git rebase <branca>
     Canviem la base de la branca `llicencia` a la branca `main`.
 
     ```shellconsole
-    joapuiib@fp:~/git_branques (main) $ git checkout llicencia
+    jpuigcerver@fp:~/git_branques (main) $ git checkout llicencia
     Switched to branch 'llicencia'
-    joapuiib@fp:~/git_branques (llicencia) $ git rebase main
+    jpuigcerver@fp:~/git_branques (llicencia) $ git rebase main
     Successfully rebased and updated refs/heads/llicencia.
-    joapuiib@fp:~/git_branques (llicencia) $ git lg
+    jpuigcerver@fp:~/git_branques (llicencia) $ git lg
     * 8bad4a1 - (3 seconds ago) Llicència - Joan Puigcerver (HEAD -> llicencia)
     * 1b2c3d4 - (3 minutes ago) Text rebase - Joan Puigcerver (main)
     * 8a9b0c1 - (3 minutes ago) Resolució conflicte - Joan Puigcerver
     ...
-    joapuiib@fp:~/git_branques (llicencia) $ cat README.md
+    jpuigcerver@fp:~/git_branques (llicencia) $ cat README.md
     # Bloc: Branques
     __Autor__: Joan Puigcerver
 
@@ -771,14 +771,14 @@ git rebase <branca>
     mitjançant una [__fusió directa__ (_fast-forward_)](#fusio-directa).
 
     ```shellconsole
-    joapuiib@fp:~/git_branques (llicencia) $ git checkout main
+    jpuigcerver@fp:~/git_branques (llicencia) $ git checkout main
     Switched to branch 'main'
-    joapuiib@fp:~/git_branques (main) $ git merge llicencia
+    jpuigcerver@fp:~/git_branques (main) $ git merge llicencia
     Updating 1b2c3d4..8bad4a1
     Fast-forward
      README.md | 3 +++
      1 file changed, 3 insertions(+)
-    joapuiib@fp:~/git_branques (main) $ git lg
+    jpuigcerver@fp:~/git_branques (main) $ git lg
     * 8bad4a1 - (3 seconds ago) Llicència - Joan Puigcerver (HEAD -> main, llicencia)
     * 1b2c3d4 - (3 minutes ago) Text rebase - Joan Puigcerver
     ...
@@ -799,10 +799,10 @@ fins que s'haja aplicat el canvi de base a tots els `commit` de la branca.
     1. Creem la branca `docs/git_training` i realitzem canvis en la descripció del fitxer `README.md`.
 
     ```shellconsole
-    joapuiib@fp:~/git_branques (main) $ git checkout -b docs_git_training
+    jpuigcerver@fp:~/git_branques (main) $ git checkout -b docs_git_training
     Switched to a new branch 'docs_git_training'
-    joapuiib@fp:~/git_branques (docs_git_training) $ vim README.md
-    joapuiib@fp:~/git_branques (docs_git_training) $ git diff
+    jpuigcerver@fp:~/git_branques (docs_git_training) $ vim README.md
+    jpuigcerver@fp:~/git_branques (docs_git_training) $ git diff
     diff --git a/README.md b/README.md
     index 54f292f..271a617 100644
     --- a/README.md
@@ -815,10 +815,10 @@ fins que s'haja aplicat el canvi de base a tots els `commit` de la branca.
      
      ## Llicència
      CC BY-NC-SA 4.0
-    joapuiib@fp:~/git_branques (docs_git_training) $ git commit -a -m "Documentació git_training"
+    jpuigcerver@fp:~/git_branques (docs_git_training) $ git commit -a -m "Documentació git_training"
     [docs_git_training a136424] Documentació git_training
      1 file changed, 1 insertion(+)
-    joapuiib@fp:~/git_branques (docs_git_training) $ git lg
+    jpuigcerver@fp:~/git_branques (docs_git_training) $ git lg
     * a136424 - (3 seconds ago) Documentació git_training - Joan Puigcerver (HEAD -> docs_git_training)
     * 1b2c3d4 - (3 minutes ago) Text rebase - Joan Puigcerver (main)
     ...
@@ -827,10 +827,10 @@ fins que s'haja aplicat el canvi de base a tots els `commit` de la branca.
     2. Realitzem canvis en la descripció en la branca `main`.
 
     ```shellconsole
-    joapuiib@fp:~/git_branques (docs_git_training) $ git checkout main
+    jpuigcerver@fp:~/git_branques (docs_git_training) $ git checkout main
     Switched to branch 'main'
-    joapuiib@fp:~/git_branques (main) $ vim README.md
-    joapuiib@fp:~/git_branques (main) $ git diff
+    jpuigcerver@fp:~/git_branques (main) $ vim README.md
+    jpuigcerver@fp:~/git_branques (main) $ git diff
     diff --git a/README.md b/README.md
     index 54f292f..6f65136 100644
     --- a/README.md
@@ -843,10 +843,10 @@ fins que s'haja aplicat el canvi de base a tots els `commit` de la branca.
      
      ## Llicència
      CC BY-NC-SA 4.0
-    joapuiib@fp:~/git_branques (main) $ git commit -a -m "Documentació w3schools"
+    jpuigcerver@fp:~/git_branques (main) $ git commit -a -m "Documentació w3schools"
     [main 0230b1b] Documentació w3schools
      1 file changed, 1 insertion(+)
-    joapuiib@fp:~/git_branques (main) $ git lg -a
+    jpuigcerver@fp:~/git_branques (main) $ git lg -a
     * 0230b1b - (3 seconds ago) Documentació w3schools - Joan Puigcerver (HEAD -> main)
     | * a136424 - (3 minutes ago) Documentació git_training - Joan Puigcerver (docs_git_training)
     |/
@@ -858,9 +858,9 @@ fins que s'haja aplicat el canvi de base a tots els `commit` de la branca.
     Canviem la base de la branca `docs_git_training` a la branca `main`.
 
     ```shellconsole
-    joapuiib@fp:~/git_branques (main) $ git checkout docs_git_training
+    jpuigcerver@fp:~/git_branques (main) $ git checkout docs_git_training
     Switched to branch 'docs_git_training'
-    joapuiib@fp:~/git_branques (docs_git_training) $ git rebase main
+    jpuigcerver@fp:~/git_branques (docs_git_training) $ git rebase main
     Auto-merging README.md
     CONFLICT (content): Merge conflict in README.md
     error: could not apply a136424... git_training
@@ -870,7 +870,7 @@ fins que s'haja aplicat el canvi de base a tots els `commit` de la branca.
     hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
     hint: Disable this message with "git config advice.mergeConflict false"
     Could not apply a136424... Documentació git_training
-    joapuiib@fp:~/git_branques (docs_git_training|REBASE 1/1) $ git status
+    jpuigcerver@fp:~/git_branques (docs_git_training|REBASE 1/1) $ git status
     interactive rebase in progress; onto 0230b1b
     Last command done (1 command done):
        pick a136424 git_training
@@ -886,7 +886,7 @@ fins que s'haja aplicat el canvi de base a tots els `commit` de la branca.
         both modified:   README.md
 
     no changes added to commit (use "git add" and/or "git commit -a")
-    joapuiib@fp:~/git_branques (docs_git_training|REBASE 1/1) $ cat README.md
+    jpuigcerver@fp:~/git_branques (docs_git_training|REBASE 1/1) $ cat README.md
     # Bloc: Branques
     __Autor__: Joan Puigcerver
 
@@ -908,8 +908,8 @@ fins que s'haja aplicat el canvi de base a tots els `commit` de la branca.
     Vegem que hi ha conflictes en el fitxer `README.md`. Hem de resoldre'ls manualment.
 
     ```shellconsole
-    joapuiib@fp:~/git_branques (docs_git_training|REBASE 1/1) $ vim README.md # (1)!
-    joapuiib@fp:~/git_branques (docs_git_training|REBASE 1/1) $ cat README.md
+    jpuigcerver@fp:~/git_branques (docs_git_training|REBASE 1/1) $ vim README.md # (1)!
+    jpuigcerver@fp:~/git_branques (docs_git_training|REBASE 1/1) $ cat README.md
     # Bloc: Branques
     __Autor__: Joan Puigcerver
 
@@ -923,8 +923,8 @@ fins que s'haja aplicat el canvi de base a tots els `commit` de la branca.
 
     ## Llicència
     CC BY-NC-SA 4.0
-    joapuiib@fp:~/git_branques (docs_git_training|REBASE 1/1) $ git add README.md # (2)!
-    joapuiib@fp:~/git_branques (docs_git_training|REBASE 1/1) $ git status
+    jpuigcerver@fp:~/git_branques (docs_git_training|REBASE 1/1) $ git add README.md # (2)!
+    jpuigcerver@fp:~/git_branques (docs_git_training|REBASE 1/1) $ git status
     interactive rebase in progress; onto 0230b1b
     Last command done (1 command done):
        pick a136424 git_training
@@ -936,9 +936,9 @@ fins que s'haja aplicat el canvi de base a tots els `commit` de la branca.
       (use "git restore --staged <file>..." to unstage)
         modified:   README.md
 
-    joapuiib@fp:~/git_branques (docs_git_training|REBASE 1/1) $ git rebase --continue --no-edit # (3)!
+    jpuigcerver@fp:~/git_branques (docs_git_training|REBASE 1/1) $ git rebase --continue --no-edit # (3)!
     Successfully rebased and updated refs/heads/docs_git_training.
-    joapuiib@fp:~/git_branques (docs_git_training) $ git lg
+    jpuigcerver@fp:~/git_branques (docs_git_training) $ git lg
     * 8bad4a1 - (3 seconds ago) Documentació git_training - Joan Puigcerver (HEAD -> docs_git_training)
     * 0230b1b - (3 minutes ago) Documentació w3schools - Joan Puigcerver (main)
     ...

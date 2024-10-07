@@ -127,11 +127,11 @@ que conté tota la informació relativa al __Repositori Local__.
 
 
 ```shellconsole
-joapuiib@fp:~ $ mkdir git_introduccio
-joapuiib@fp:~ $ cd git_introduccio
-joapuiib@fp:~/git_introduccio $ ls -a # (1)!
+jpuigcerver@fp:~ $ mkdir git_introduccio
+jpuigcerver@fp:~ $ cd git_introduccio
+jpuigcerver@fp:~/git_introduccio $ ls -a # (1)!
 .  ..
-joapuiib@fp:~/git_introduccio $ git init
+jpuigcerver@fp:~/git_introduccio $ git init
 hint: Using 'master' as the name for the initial branch. This default branch name
 hint: is subject to change. To configure the initial branch name to use in all
 hint: of your new repositoris, which will suppress this warning, call:
@@ -142,11 +142,11 @@ hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
 hint: 'development'. The just-created branch can be renamed via this command:
 hint:
 hint: git branch -m <name>
-Initialized empty Git repository in /home/joapuiib/git_introduccio/.git/
-joapuiib@fp:~/git_introduccio (master) $ git branch -m main
-joapuiib@fp:~/git_introduccio (main) $ ls -a # (2)!
+Initialized empty Git repository in /home/jpuigcerver/git_introduccio/.git/
+jpuigcerver@fp:~/git_introduccio (master) $ git branch -m main
+jpuigcerver@fp:~/git_introduccio (main) $ ls -a # (2)!
 .  ..  .git/
-joapuiib@fp:~/git_introduccio (main) $ git status
+jpuigcerver@fp:~/git_introduccio (main) $ git status
 On branch main
 
 No commits yet
@@ -234,12 +234,12 @@ Afegim el primer fitxer `README.md` al nostre repositori.
     com s'utilitza i qualsevol altra informació rellevant.
 
 ```shellconsole
-joapuiib@fp:~/git_introduccio (main) $ echo "# 01 - Introducció a Git" > README.md
-joapuiib@fp:~/git_introduccio (main) $ echo "Estem aprenent a utilitzar Git!" >> README.md
-joapuiib@fp:~/git_introduccio (main) $ cat README.md
+jpuigcerver@fp:~/git_introduccio (main) $ echo "# 01 - Introducció a Git" > README.md
+jpuigcerver@fp:~/git_introduccio (main) $ echo "Estem aprenent a utilitzar Git!" >> README.md
+jpuigcerver@fp:~/git_introduccio (main) $ cat README.md
 # 01 - Introducció a Git
 Estem aprenent a utilitzar Git!
-joapuiib@fp:~/git_introduccio (main) $ git status
+jpuigcerver@fp:~/git_introduccio (main) $ git status
 On branch main
 
 No commits yet
@@ -274,8 +274,8 @@ Aquesta comanda permet especificar quins canvis es desitja afegir.
 
 
 ```shellconsole
-joapuiib@FP:~/git_introduccio (main) $ git add README.md
-joapuiib@FP:~/git_introduccio (main) $ git status
+jpuigcerver@FP:~/git_introduccio (main) $ git add README.md
+jpuigcerver@FP:~/git_introduccio (main) $ git status
 On branch main
 
 No commits yet
@@ -338,14 +338,14 @@ git config --global user.email <email>
 ```
 
 ```shellconsole
-joapuiib@FP:~/git_introduccio (main) $ git config --global user.name "{{ config.site_author }}"
-joapuiib@FP:~/git_introduccio (main) $ git config --global user.email "{{ config.site_email }}"
+jpuigcerver@FP:~/git_introduccio (main) $ git config --global user.name "{{ config.site_author }}"
+jpuigcerver@FP:~/git_introduccio (main) $ git config --global user.email "{{ config.site_email }}"
 ```
 
 Amb aquesta informació configurada, ja podem realitzar el nostre primer `commit`.
 
 ```shellconsole
-joapuiib@FP:~/git_introduccio (main) $ git status
+jpuigcerver@FP:~/git_introduccio (main) $ git status
 On branch main
 
 No commits yet
@@ -353,11 +353,11 @@ No commits yet
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
         new file:   README.md
-joapuiib@FP:~/git_introduccio (main) $ git commit -m "Added README.md"
+jpuigcerver@FP:~/git_introduccio (main) $ git commit -m "Added README.md"
 [main (root-commit) 8e70293] Added README.md
  1 file changed, 2 insertions(+)
  create mode 100644 README.md
-joapuiib@FP:~/git_introduccio (main) $ git status
+jpuigcerver@FP:~/git_introduccio (main) $ git status
 On branch main
 
 nothing to commit, working tree clean
@@ -374,7 +374,7 @@ A més, s'ha creat el primer `commit` amb el missatge `Added README.md` i identi
 Podem consultar la informació del nou `commit` amb l'ordre `git show`.
 
 ```shellconsole
-joapuiib@FP:~/git_introduccio (main) $ git show 8e70293
+jpuigcerver@FP:~/git_introduccio (main) $ git show 8e70293
 commit 8e702933d5dbec9ee71100a1599ae4491085e1aa (HEAD -> main)
 Author: {{ config.site_author }} <{{ config.site_email }}>
 Date:   Fri Oct 13 16:06:59 2023 +0200
@@ -417,8 +417,8 @@ git diff [--staged] [<path>]
     Observem les diferències entre el fitxer `README.md` del __Directori de treball__ i el __Repositori local__.
 
     ```shellconsole
-    joapuiib@FP:~/git_introduccio (main) $ echo "Aquesta és una línia nova" >> README.md
-    joapuiib@FP:~/git_introduccio (main) $ git status
+    jpuigcerver@FP:~/git_introduccio (main) $ echo "Aquesta és una línia nova" >> README.md
+    jpuigcerver@FP:~/git_introduccio (main) $ git status
     On branch main
 
     Changes not staged for commit:
@@ -427,7 +427,7 @@ git diff [--staged] [<path>]
             modified:   README.md
 
     no changes added to commit (use "git add" and/or "git commit -a")
-    joapuiib@FP:~/git_introduccio (main) $ git diff
+    jpuigcerver@FP:~/git_introduccio (main) $ git diff
     diff --git a/README.md b/README.md
     index 6d747b3..f3b3b3e 100644
     --- a/README.md
@@ -442,15 +442,15 @@ git diff [--staged] [<path>]
     Observem les diferències entre el fitxer `README.md` de l'_Àrea de Preparació_ i el __Repositori local__.
 
     ```shellconsole
-    joapuiib@FP:~/git_introduccio (main) $ git add README.md
-    joapuiib@FP:~/git_introduccio (main) $ git status
+    jpuigcerver@FP:~/git_introduccio (main) $ git add README.md
+    jpuigcerver@FP:~/git_introduccio (main) $ git status
     On branch main
 
     Changes to be committed:
       (use "git restore --staged <file>..." to unstage)
             modified:   README.md
 
-    joapuiib@FP:~/git_introduccio (main) $ git diff --staged
+    jpuigcerver@FP:~/git_introduccio (main) $ git diff --staged
     diff --git a/README.md b/README.md
     index 6d747b3..f3b3b3e 100644
     --- a/README.md
@@ -507,14 +507,14 @@ Podeu consultar la [Figura 2](#figure-2) per a veure un resum del comportament d
     Continuant amb l'exemple anterior, descartem els canvis realitzats en el fitxer `README.md` de l'_Àrea de Preparació_.
 
     ```shellconsole
-    joapuiib@FP:~/git_introduccio (main) $ git status
+    jpuigcerver@FP:~/git_introduccio (main) $ git status
     On branch main
 
     Changes to be committed:
       (use "git restore --staged <file>..." to unstage)
             modified:   README.md
 
-    joapuiib@FP:~/git_introduccio (main) $ git diff --staged
+    jpuigcerver@FP:~/git_introduccio (main) $ git diff --staged
     diff --git a/README.md b/README.md
     index 6d747b3..f3b3b3e 100644
     --- a/README.md
@@ -523,8 +523,8 @@ Podeu consultar la [Figura 2](#figure-2) per a veure un resum del comportament d
      # 01 - Introducció a Git
      Estem aprenent a utilitzar Git!
     +Aquesta és una línia nova
-    joapuiib@FP:~/git_introduccio (main) $ git restore --staged README.md
-    joapuiib@FP:~/git_introduccio (main) $ git status
+    jpuigcerver@FP:~/git_introduccio (main) $ git restore --staged README.md
+    jpuigcerver@FP:~/git_introduccio (main) $ git status
     On branch main
 
     Changes not staged for commit:
@@ -540,7 +540,7 @@ Podeu consultar la [Figura 2](#figure-2) per a veure un resum del comportament d
         Aquesta comanda descartarà els canvis realitzats en el fitxer `README.md` sense possibilitat de recuperar-los.
 
     ```shellconsole
-    joapuiib@FP:~/git_introduccio (main) $ git status
+    jpuigcerver@FP:~/git_introduccio (main) $ git status
     On branch main
 
     Changes not staged for commit:
@@ -549,7 +549,7 @@ Podeu consultar la [Figura 2](#figure-2) per a veure un resum del comportament d
             modified:   README.md
 
     no changes added to commit (use "git add" and/or "git commit -a")
-    joapuiib@FP:~/git_introduccio (main) $ git diff
+    jpuigcerver@FP:~/git_introduccio (main) $ git diff
     diff --git a/README.md b/README.md
     index 6d747b3..f3b3b3e 100644
     --- a/README.md
@@ -558,8 +558,8 @@ Podeu consultar la [Figura 2](#figure-2) per a veure un resum del comportament d
      # 01 - Introducció a Git
      Estem aprenent a utilitzar Git!
     +Aquesta és una línia nova
-    joapuiib@FP:~/git_introduccio (main) $ git restore README.md
-    joapuiib@FP:~/git_introduccio (main) $ git status
+    jpuigcerver@FP:~/git_introduccio (main) $ git restore README.md
+    jpuigcerver@FP:~/git_introduccio (main) $ git status
     On branch main
 
     nothing to commit, working tree clean
@@ -581,8 +581,8 @@ git log [options]
     Modifiquem novament el fitxer `README.md` i realitzem un nou `commit`.
 
     ```shellconsole
-    joapuiib@FP:~/git_introduccio (main) $ echo "Aquesta és una altra línia" >> README.md
-    joapuiib@FP:~/git_introduccio (main) $ git commit -a -m "Added another line to README.md"# (1)!
+    jpuigcerver@FP:~/git_introduccio (main) $ echo "Aquesta és una altra línia" >> README.md
+    jpuigcerver@FP:~/git_introduccio (main) $ git commit -a -m "Added another line to README.md"# (1)!
     [main c9fc6c8] Added another line to README.md
      1 file changed, 1 insertions(+)
     ```
@@ -592,7 +592,7 @@ git log [options]
     Consultem l'històric de canvis amb `git log`.
 
     ```shellconsole
-    joapuiib@FP:~/git_introduccio (main) $ git log
+    jpuigcerver@FP:~/git_introduccio (main) $ git log
     commit c9fc6c856c2d52744b85a6f8d92feac496e60bd6 (HEAD -> main)
     Author: Joan Puigcerver <j.puigcerveribanez@edu.gva.es>
     Date:   Mon Oct 16 11:43:20 2023 +0200
@@ -618,7 +618,7 @@ git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(re
 
 !!! example "Històric de canvis compacte"
     ```shellconsole
-    joapuiib@FP:~/git_introduccio (main) $ git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
+    jpuigcerver@FP:~/git_introduccio (main) $ git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
     * c9fc6c8 - (2 minutes ago) Added another line to README.md - Joan Puigcerver (HEAD -> main)
     * 8e70293 - (3 days ago) Added Readme.md - Joan Puigcerver
     ```
@@ -635,7 +635,7 @@ git config --global alias.lga "lg --all"
     Després de configurar l'àlias `git lg` per a l'ordre anterior, podem cridar-lo de la següent manera:
 
     ```shellconsole
-    joapuiib@FP:~/git_introduccio (main) $ git lg
+    jpuigcerver@FP:~/git_introduccio (main) $ git lg
     * c9fc6c8 - (2 minutes ago) Added another line to README.md - Joan Puigcerver (HEAD -> main)
     * 8e70293 - (3 days ago) Added README.md - Joan Puigcerver
     ```
@@ -712,9 +712,9 @@ que complisquen algun dels patrons especificats.
     ```
 
     ```shellconsole
-    joapuiib@FP:~/git_introduccio (main) $ mkdir temp
-    joapuiib@FP:~/git_introduccio (main) $ touch temp/file.txt
-    joapuiib@FP:~/git_introduccio (main) $ git status
+    jpuigcerver@FP:~/git_introduccio (main) $ mkdir temp
+    jpuigcerver@FP:~/git_introduccio (main) $ touch temp/file.txt
+    jpuigcerver@FP:~/git_introduccio (main) $ git status
     On branch main
 
     Untracked files:
@@ -722,8 +722,8 @@ que complisquen algun dels patrons especificats.
             temp/file.txt
 
     nothing added to commit but untracked files present (use "git add" to track)
-    joapuiib@FP:~/git_introduccio (main) $ echo "temp/" > .gitignore
-    joapuiib@FP:~/git_introduccio (main) $ git status # (1)!
+    jpuigcerver@FP:~/git_introduccio (main) $ echo "temp/" > .gitignore
+    jpuigcerver@FP:~/git_introduccio (main) $ git status # (1)!
     On branch main
 
     Untracked files:
