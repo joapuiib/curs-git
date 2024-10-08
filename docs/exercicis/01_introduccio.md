@@ -46,5 +46,6 @@ Els objectius d'aquests exercici són:
 1. Comprova la història de canvis del repositori.
 
 ## Bibliografia
-- Basat en l'exercici de la sessió 1 del curs [Gestió de la tasca docent con GitHub](https://github.com/pedroprieto/curso-github)
+- Basat en l'exercici de la sessió 1 del curs
+    [Gestió de la tasca docent con GitHub](https://github.com/pedroprieto/curso-github){:target="_blank"}
     de Pedro Prieto.

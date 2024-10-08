@@ -1,12 +1,11 @@
 ---
 template: document.html
-title: "Bloc 4: Estratègies de ramificació"
+title: "Bloc 5: Estratègies de ramificació"
 icon: material/book-open-variant
-alias: bloc4
+alias: bloc5
 comments: true
 tags:
     - gitflow
-    - git merge --squash
     - develop
     - feature
     - release

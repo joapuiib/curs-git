@@ -21,13 +21,13 @@ hide:
     - Estructura d'un repositori.
     - Flux de treball.
     - Inicialització d'un repositori.
-    - Realització de canvis.
+    - Realització de canvis: `add` i `commit`.
 - __[[bloc2]]__
     - Creació de branques.
     - Navegar entre branques.
     - Sincronització de branques.
-    - Fusió de branques (`merge`).
-    - Canvi de base (`rebase`).
+    - Fusió de branques: `merge`.
+    - Canvi de base: `rebase`.
     - Resolució de conflictes.
 - __[[bloc3]]__
     - Creació d'un repositori remot a GitHub.
@@ -37,8 +37,14 @@ hide:
     - Publicació i incorporació de canvis.
     - Clonació d'un repositori remot.
 - __[[bloc4]]__
-    - GitFlow.
+    - Eliminació de canvis: `reset` i `revert`.
+    - Etiquetes: `tags`.
+    - Reserva de canvis: `stash`.
+    - Còpia de canvis: `cherry-pick`.
+    - Fusió de canvis en un sol commit: `squash`.
 - __[[bloc5]]__
+    - GitFlow.
+- __[[bloc6]]__
     - Organitzacions a GitHub.
     - GitHub Projects.
     - Forks i Pull Requests.
