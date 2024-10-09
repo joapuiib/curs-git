@@ -116,6 +116,7 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.magiclink
   - pymdownx.mark
+  - pymdownx.saneheaders
   - pymdownx.snippets
   - pymdownx.superfences:
       custom_fences:

@@ -146,23 +146,28 @@ de programari, seguint una sèrie de passos i pautes per aconseguir un flux de t
 A més, s'exposaran dues tècinques per integrar les branques de funcionalitats amb la branca de desenvolupament,
 utilitzant `rebase` i `merge squash` de tal manera que la història del projecte siga __lineal__.
 
-!!! prep "Preparació de l'entorn"
-    Els exemples que es mostren a continuació estan basats
-    en el següent repositori.
+!!! prep "Preparació repositori remot"
+    Per veure el funcionament de __Gitflow__ en un projecte real,
+    anem a simular un projecte de desenvolupament de programari
+    on tres desenvolupadors treballen en diferents funcionalitats
+    de manera independent.
+
+    Per evitar haver de crear un repositori a [:material-github: GitHub](https://github.com){target=_blank},
+    crearem un repositori remot en la màquina local.
 
     ```shellconsole
-    jpuigcerver@fp:~ $ git init ~/gitflow
-    Initialized empty Git repository in /home/jpuigcerver/gitflow/.git/
-    jpuigcerver@fp:~ $ cd ~/gitflow
-    jpuigcerver@fp:~ (main) $ git branch -m main
-    jpuigcerver@fp:~/gitflow (main) $ echo "# Gitflow" > README.md
-    jpuigcerver@fp:~/gitflow (main) $ git add README.md
-    jpuigcerver@fp:~/gitflow (main) $ git commit -m "Commit inicial"
-    [main (root-commit) 0b3b3b7] Commit inicial
+    jpuigcerver@fp:~ $ mkdir -p ~/gitflow/remot
+    jpuigcerver@fp:~ $ cd ~/gitflow/remot
+    Initialized empty Git repository in /home/jpuigcerver/gitflow/remot/.git/
+    jpuigcerver@fp:~/gitflow/remot (main) $ git branch -m main
+    jpuigcerver@fp:~/gitflow/remot (main) $ echo "# Gitflow" > README.md
+    jpuigcerver@fp:~/gitflow/remot (main) $ git add README.md
+    jpuigcerver@fp:~/gitflow/remot (main) $ git commit -m "1. Primer commit"
+    [main (root-commit) 8e70293] 1. Primer commit
      1 file changed, 1 insertion(+)
      create mode 100644 README.md
     jpuigcerver@fp:~/gitflow (main) $ git lga
-    * 0b3b3b7 - (2 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main)
+    * 8e70293 - (1 minute ago) 1. Primer commit - Joan Puigcerver (HEAD -> main)
     ```
 
 ### Branca de desenvolupament
@@ -170,22 +175,254 @@ El primer pas per establir un flux de treball amb __Gitflow__
 és crear la branca de desenvolupament `develop`.
 
 ```shellconsole
-jpuigcerver@fp:~/gitflow (main) $ git checkout -b develop
-Switched to a new branch 'develop'
-jpuigcerver@fp:~/gitflow (develop) $ git lga
-* 0b3b3b7 - (2 minutes ago) Commit inicial - Joan Puigcerver (HEAD -> develop, main)
+jpuigcerver@fp:~/gitflow/remot (main) $ git branch develop
+jpuigcerver@fp:~/gitflow/remot (main) $ git lga
+* 8e70293 - (1 minute ago) 1. Primer commit - Joan Puigcerver (HEAD -> main, develop)
 ```
 
 ### Branques de funcionalitats
 En aquest punt, podem començar a desenvolupar les diferents funcionalitats del projecte
 en branques independents.
 
-Com a exemple, crearem dues branques de funcionalitats:
+!!! prep "Preparació repositoris locals"
+    Crearem un repositori local per a cada desenvolupador,
+    simulant que treballen cadascú en el seu dispositiu.
 
-- `feature/*`
+    ```shellconsole
+    jpuigcerver@fp:~ $ cd ~/gitflow
+    jpuigcerver@fp:~/gitflow $ git clone remot anna
+    Cloning into 'anna'...
+    done.
+    jpuigcerver@fp:~/gitflow $ git clone remot pau
+    Cloning into 'pau'...
+    done.
+    jpuigcerver@fp:~/gitflow $ git clone remot mar
+    Cloning into 'mar'...
+    done.
+    jpuigcerver@fp:~/gitflow $ tree .
+    .
+    ├── anna
+    │   └── README.md
+    ├── mar
+    │   └── README.md
+    ├── pau
+    │   └── README.md
+    └── remot
+        └── README.md
+
+    5 directories, 4 files
+    ```
+
+Cada desenvolupador començarà a treballar en una nova funcionalitat.
+
+- Anna treballarà en la funcionalitat `feature/readme`, que consistirà a afegir una descripció del projecte al README.
+- Pau treballarà en la funcionalitat `feature/license`, que consistirà a afegir una llicència al projecte.
+- Mar treballarà en la funcionalitat `feature/author`, que consistirà a afegir el nom de l'autors del projecte al README.
+
+A partir d'aquest moment, cada desenvolupador treballarà en el seu propi repositori,
+en la seua pròpia branca de funcionalitat de manera independent i paral·lela.
+
+!!! important
+    És important que cada desenvolupador treballe en una única branca per funcionalitat, i que una mateixa branca no es compartisca entre desenvolupadors.
+
+    Si existeix la necessitat de compartir una branca, segurament siga perque la funcionalitat no està ben definida i segurament es podrà dividir en diverses funcionalitats més xicotetes.
+
+#### Branca `feature/readme`
+Anna començarà a treballar en la seua funcionalitat `feature/readme` en el seu repositori local.
+
+!!! note
+    Configurem l'usuari i el correu electrònic per a cada repositori local
+    per simular que cada desenvolupador treballa en el seu propi dispositiu.
+
+    També es mostra el nom en el prompt.
+
+```shellconsole
+anna@fp:~/gitflow $ cd anna
+anna@fp:~/gitflow/anna (main) $ git config user.name "Anna"
+anna@fp:~/gitflow/anna (main) $ git config user.email "anna@fpmislata.com"
+anna@fp:~/gitflow/anna (main) $ git checkout develop
+Switched to branch 'develop'
+branch 'develop' set up to track 'origin/develop'.
+anna@fp:~/gitflow/anna (develop) $ git checkout -b feature/readme
+Switched to a new branch 'feature/readme'
+anna@fp:~/gitflow/anna (feature/readme) $ vim README.md
+anna@fp:~/gitflow/anna (feature/readme) $ git diff
+diff --git a/README.md b/README.md
+index 938f41f..2822753 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1,5 @@
+ # Gitflow
++Gitflow és una estratègia de ramificació per a Git,
++que proporciona un marc de treball organitzat que
++facilita la col·laboració entre diferents desenvolupadors
++en un mateix projecte.
+anna@fp:~/gitflow/anna (feature/readme) $ git add README.md
+anna@fp:~/gitflow/anna (feature/readme) $ git commit -m "2. Afegida descripció del projecte"
+[feature/readme 0fb88ef] 2. Afegida descripció del projecte
+ 1 file changed, 4 insertions(+)
+anna@fp:~/gitflow/anna (feature/readme) $ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 338 bytes | 338.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To /home/jpuigcerver/gitflow/remot
+ * [new branch]      feature/readme -> feature/readme
+branch 'feature/readme' set up to track 'origin/feature/readme'.
+anna@fp:~/gitflow/anna (feature/readme) $ git lga
+* 0fb88ef - (1 minute ago) 2. Afegida descripció del projecte - Anna (HEAD -> feature/readme, origin/feature/readme)
+* 8e70293 - (11 minutes ago) 1. Primer commit - Joan Puigcerver (main, develop, origin/main, origin/develop)
+```
+
+Els passos seguits per Anna són:
+
+- Crear la branca `feature/readme` a partir de `develop`.
+- Realitzar els canvis pertinents.
+- Publicar la branca `feature/readme` al repositori remot.
+
+#### Branca `feature/license`
+Pau començarà a treballar en la seua funcionalitat `feature/license` en el seu repositori local.
+
+```shellconsole
+pau@fp:~/gitflow $ cd pau
+pau@fp:~/gitflow/pau (main) $ git config user.name "Pau"
+pau@fp:~/gitflow/pau (main) $ git config user.email "pau@fpmislata.com"
+pau@fp:~/gitflow/pau (main) $ git checkout develop
+Switched to branch 'develop'
+branch 'develop' set up to track 'origin/develop'.
+pau@fp:~/gitflow/pau (develop) $ git checkout -b feature/license
+Switched to a new branch 'feature/license'
+pau@fp:~/gitflow/pau (feature/license) $ vim LICENSE
+pau@fp:~/gitflow/pau (feature/license) $ cat LICENCE 
+Llicència:
+- CC BY-NC-SA 4.0 DEED - Reconeixement-NoComercial-CompartirIgual 4.0 Internacional
+
+More info: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca
+pau@fp:~/gitflow/pau (feature/license) $ git add LICENSE
+pau@fp:~/gitflow/pau (feature/license) $ git commit -m "3. Afegida llicència"
+[feature/license b1265b9] 3. Afegida llicència
+ 1 file changed, 4 insertions(+)
+pau@fp:~/gitflow/pau (feature/license) $ git push -u origin feature/license
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 338 bytes | 338.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To /home/jpuigcerver/gitflow/remot
+ * [new branch]      feature/license -> feature/license
+branch 'feature/license' set up to track 'origin/feature/license'.
+pau@fp:~/gitflow/pau (feature/license) $ git lga
+* b1265b9 - (1 minute ago) 3. Afegida llicència - Pau (HEAD -> feature/license, origin/feature/license)
+* 8e70293 - (11 minutes ago) 1. Primer commit - Joan Puigcerver (main, develop, origin/main, origin/develop)
+```
+
+Els passos seguits per Pau són:
+
+- Crear la branca `feature/license` a partir de `develop`.
+- Realitzar els canvis pertinents.
+- Publicar la branca `feature/license` al repositori remot.
+
+
+#### Branca `feature/author`
+Mar començarà a treballar en la seua funcionalitat `feature/author` en el seu repositori local.
+
+```shellconsole
+mar@fp:~/gitflow $ cd mar
+mar@fp:~/gitflow/mar (main) $ git config user.name "Mar"
+mar@fp:~/gitflow/mar (main) $ git config user.email "mar@fpmislata.com"
+mar@fp:~/gitflow/mar (main) $ git checkout develop
+Switched to branch 'develop'
+branch 'develop' set up to track 'origin/develop'.
+mar@fp:~/gitflow/mar (develop) $ git checkout -b feature/author
+Switched to a new branch 'feature/author'
+mar@fp:~/gitflow/mar (feature/author) $ vim README.md
+mar@fp:~/gitflow/mar (feature/author) $ git diff
+diff --git a/README.md b/README.md
+index 2822753..a482a10 100644
+--- a/README.md
++++ b/README.md
+@@ -3,3 +3,6 @@ Gitflow és una estratègia de ramificació per a Git,
+ que proporciona un marc de treball organitzat que
+ facilita la col·laboració entre diferents desenvolupadors
+ en un mateix projecte.
++
++## Autors
++Anna, Pau i Mar
+mar@fp:~/gitflow/mar (feature/author) $ git add README.md
+mar@fp:~/gitflow/mar (feature/author) $ git commit -m "4. Afegits autors"
+[feature/author f853946] 4. Afegits autors
+ 1 file changed, 3 insertions(+)
+mar@fp:~/gitflow/mar (feature/author) $ git push -u origin feature/author
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 338 bytes | 338.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To /home/jpuigcerver/gitflow/remot
+ * [new branch]      feature/author -> feature/author
+Branch 'feature/author' set up to track 'origin/feature/author'.
+mar@fp:~/gitflow/mar (feature/author) $ git lga
+* f853946 - (1 minute ago) 4. Afegits autors - Mar (HEAD -> feature/author, origin/feature/author)
+* 8e70293 - (11 minutes ago) 1. Primer commit - Joan Puigcerver (main, develop, origin/main, origin/develop)
+```
+
+Els passos seguits per Mar són:
+
+- Crear la branca `feature/author` a partir de `develop`.
+- Realitzar els canvis pertinents.
+- Publicar la branca `feature/author` al repositori remot.
+
 
 ### Integració de les funcionalitats
+En aquest punt, les tres funcionalitats han sigut desenvolupades de manera independent,
+però encara no han segut integrades a la branca de desenvolupament `develop`.
+
+```shellconsole
+jpuigcerver@fp:~/gitflow (develop) $ cd ~/gitflow/remot
+jpuigcerver@fp:~/gitflow/remot (develop) $ git lga
+* f853946 - (1 minute ago) 4. Afegits autors - Mar (HEAD -> feature/author, origin/feature/author)
+| * b1265b9 - (1 minute ago) 3. Afegida llicència - Pau (HEAD -> feature/license, origin/feature/license)
+|/
+| * 0fb88ef - (1 minute ago) 2. Afegida descripció del projecte - Anna (HEAD -> feature/readme, origin/feature/readme)
+|/
+* 8e70293 - (11 minutes ago) 1. Primer commit - Joan Puigcerver (main, develop, origin/main, origin/develop)
+```
+
+Existeixen dues opcions per integrar les funcionalitats a la branca de desenvolupament `develop`:
+
+- __Utilitzar `rebase`__: Aquesta opció consisteix a aplicar els canvis de les branques de funcionalitats
+    sobre la branca de desenvolupament `develop`, de manera que la història del projecte siga lineal.
+
+    En aquest cas, es conserven tots els commits de les branques de funcionalitats.
+
+- __Utilitzar `merge squash`__: Aquesta opció consisteix a fusionar les branques de funcionalitats
+    amb la branca de desenvolupament `develop`, però només es conserva un únic commit amb tots els canvis.
+
+    En aquest cas, la història del projecte també és lineal, però només es conserva un commit per funcionalitat.
+
 #### Integració amb `rebase`
+El procés que cal seguir per integrar les funcionalitats amb `rebase` és el següent:
+
+1. Sincronitzar l'estat del repositori local amb el remot amb `git fetch`.
+1. Si cal, actualitzar la branca local `develop` amb els canvis del remot `git pull`.
+1. Assegurar-se que la branca `feature/*` està actualitzada amb `develop`.
+    Si no ho està, cal incorporar els canvis amb __`rebase`__ per mantindre la història lineal.
+1. Fusionar la branca `feature/*` amb `develop` amb una __fusió directa (_fast-forward_)__.
+1. Publicar els canvis de la branca `develop` al repositori remot amb `git push`.
+
+    !!! danger
+        En aquest punt podria passar que mentre has realitzat aquest procés,
+        altres desenvolupadors hagen publicat nous canvis.
+
+        En aquest cas, caldria integrar els canvis de `develop`
+        amb `git pull --rebase`.
+
+1. Eliminar la branca `feature/*` del repositori local i del remot.
+
 #### Integració amb `merge squash`
 ### Branques de publicació
 ### Branques de correcció
