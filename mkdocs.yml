@@ -58,7 +58,8 @@ theme:
         name: Canvia a mode clar
 
 plugins:
-  - alias
+  - alias:
+      use_anchor_titles: true
   - awesome-pages # Navegació
   - drawio_file
   - macros
