@@ -2,6 +2,11 @@
     --md-typeset-a-color: #c1775c;
 }
 
+.md-main__inner {
+    max-width: 84rem;
+    padding: 0 1.5rem;
+}
+
 .md-typeset figcaption {
   color: var(--md-default-fg-color--light);
 }
