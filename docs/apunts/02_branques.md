@@ -185,8 +185,8 @@ En qualsevol cas, canviar de branca significa moure el punter `HEAD` a la branca
 El canvi de branca també implica modificar el contingut del __Directori de Treball__ a l'estat
 del `commit` al qual apunta la branca.
 
-La [Figura 1](#figure-1) mostra l'estat del repositori quan el `HEAD` apunta a la branca `main`.
-La [Figura 3](#figure-2) mostra l'estat del repositori després de canviar a la branca `docs`.
+La [Figura 2](#figure-2) mostra l'estat del repositori quan el `HEAD` apunta a la branca `main`.
+La [Figura 3](#figure-3) mostra l'estat del repositori després de canviar a la branca `docs`.
 
 <figure id="figure-3">
     <img src="../img/branques/checkout_docs.png" alt="Estructura de branques després de canviar a la branca docs.">
