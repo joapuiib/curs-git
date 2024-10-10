@@ -22,9 +22,8 @@ de regles i pautes que defineixen com s'han de crear, fusionar i mantindre les b
 Aquesta part és essencial, ja que permet el desenvolupament en paral·lel de diferents funcionalitats
 i garanteix la correcta integració de les diferents parts del projecte.
 
-Existeixen diverses estratègies de ramificació, cadascuna amb les seves característiques i avantatges.
-No obstant això, en aquests apunts ens centrarem en __Gitflow__, una de les més populars que es
-basa en el següent:
+Existeixen diverses estratègies de ramificació però, totes en certa manera comparteixen
+els mateixos principis bàsics:
 
 - __Creació de branques de funcionalitat `feature/*`__: Es crea una branca independent per desenvolupar cada funcionalitat.
 - __Branca de desenvolupament `develop`__: Estat del projecte on s'incorporen les funcionalitats acabades, però que encara no han segut publicades.
@@ -35,9 +34,9 @@ basa en el següent:
 Utilitzant aquestes característiques, es pot adaptar el flux de treball a les necessitats del projecte,
 on podem decidir quin tipus de branca incorporar en la nostra metodologia de treball.
 
-A més, aquesta estratègia pot ser utilitzada en combinació amb altres tècniques com les
+A més, les estratègies poden ser utilitzades en combinació amb altres tècniques com les
 [__Pull Requests__](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests){target=_blank},
-que veurem en el [[bloc5]].
+que veurem en el [[bloc6]].
 
 ## Gitflow
 __Gitflow__ és una metodologia de treball i una estratègia de ramificació
@@ -1214,3 +1213,8 @@ Els passos que ha de seguir són:
 
 
 ## Branques de correcció
+
+## Bibliografia
+- [War of the Git Flows](https://dev.to/scottshipp/war-of-the-git-flows-3ec2)
+- [OneFlow](https://www.endoflineblog.com/oneflow-a-git-branching-model-and-workflow)
+- [Trunk Based Development](https://trunkbaseddevelopment.com/)
