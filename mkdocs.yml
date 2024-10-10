@@ -101,13 +101,6 @@ markdown_extensions:
   - sane_lists
   - pymdownx.arithmatex:
       generic: true
-  - pymdownx.blocks.admonition:
-      types:
-        - name: note
-          title: Nota
-        - info
-        - name: notice
-          title: Fixa't
   - pymdownx.blocks.html
   - pymdownx.details
   - pymdownx.critic

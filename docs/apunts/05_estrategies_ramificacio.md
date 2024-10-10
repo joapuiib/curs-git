@@ -802,15 +802,13 @@ El procés que cal seguir per integrar les funcionalitats amb `merge squash` és
 1. Eliminar la branca `feature/*` del repositori local i del remot.
 
 #### Integració de `feature/readme`
-/// note
-Aquests exemples mostren com integrar les funcionalitats amb `rebase`
-a partir de l'estat del repositori mostrat a [[bloc5#integracio-de-les-funcionalitats]].
-///
+!!! note
+    Aquests exemples mostren com integrar les funcionalitats amb `rebase`
+    a partir de l'estat del repositori mostrat a [[bloc5#integracio-de-les-funcionalitats]].
 
-/// note
-En aquest cas, utilitzar `merge --squash` no aporta cap avantatge,
-ja que cada funcionlitat sols té un commit.
-///
+!!! note
+    En aquest cas, utilitzar `merge --squash` no aporta cap avantatge,
+    ja que cada funcionlitat sols té un commit.
 
 Anna ja ha acabat la seua funcionalitat `feature/readme` i vol integrar-la a la branca `develop`.
 
@@ -986,12 +984,11 @@ Els passos que ha de seguir són:
 
     1. L'opció `--no-edit` deixa el missatge de commit tal com està i no obri l'editor de text.
 
-    /// notice
-    Hem fusionat els canvis de `develop` a `feature/license` amb un `merge`.
+    !!! notice
+        Hem fusionat els canvis de `develop` a `feature/license` amb un `merge`.
 
-    Aquesta estratègia és més senzilla que el `rebase`,
-    però no manté la història lineal de la branca `feature/license`.
-    ///
+        Aquesta estratègia és més senzilla que el `rebase`,
+        però no manté la història lineal de la branca `feature/license`.
 
 1. Fusionar la branca `feature/license` amb `develop` amb __un sol commit__ amb __`merge --squash`__.
 
@@ -1023,9 +1020,8 @@ Els passos que ha de seguir són:
     * 8e70293 - (11 minutes ago) 1. Primer commit - Joan Puigcerver (main, origin/main)
     ```
 
-    /// notice
-    Encara que no ho parega, la branca `develop` manté una història lineal.
-    ///
+    !!! notice
+        Encara que no ho parega, la branca `develop` manté una història lineal.
 
 1. Publicar els canvis de la branca `develop` al repositori remot.
 
