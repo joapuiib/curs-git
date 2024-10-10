@@ -168,7 +168,10 @@ utilitzant `rebase` i `merge squash` de tal manera que la història del projecte
      create mode 100644 README.md
     jpuigcerver@fp:~/gitflow (main) $ git lga
     * 8e70293 - (1 minute ago) 1. Primer commit - Joan Puigcerver (HEAD -> main)
+    jpuigcerver@fp:~/gitflow/remot (main) $ git config --bool core.bare true # (1)!
     ```
+
+    1. Aquesta comanda és necessària perquè el repositori siga __bare__ i puga ser utilitzat com a repositori remot.
 
 ### Branca de desenvolupament
 El primer pas per establir un flux de treball amb __Gitflow__
@@ -262,11 +265,6 @@ anna@fp:~/gitflow/anna (feature/readme) $ git commit -m "2. Afegida descripció 
 [feature/readme 0fb88ef] 2. Afegida descripció del projecte
  1 file changed, 4 insertions(+)
 anna@fp:~/gitflow/anna (feature/readme) $ git push
-Enumerating objects: 5, done.
-Counting objects: 100% (5/5), done.
-Delta compression using up to 12 threads
-Compressing objects: 100% (2/2), done.
-Writing objects: 100% (3/3), 338 bytes | 338.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 To /home/jpuigcerver/gitflow/remot
  * [new branch]      feature/readme -> feature/readme
@@ -305,12 +303,6 @@ pau@fp:~/gitflow/pau (feature/license) $ git commit -m "3. Afegida llicència"
 [feature/license b1265b9] 3. Afegida llicència
  1 file changed, 4 insertions(+)
 pau@fp:~/gitflow/pau (feature/license) $ git push -u origin feature/license
-Enumerating objects: 5, done.
-Counting objects: 100% (5/5), done.
-Delta compression using up to 12 threads
-Compressing objects: 100% (2/2), done.
-Writing objects: 100% (3/3), 338 bytes | 338.00 KiB/s, done.
-Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 To /home/jpuigcerver/gitflow/remot
  * [new branch]      feature/license -> feature/license
 branch 'feature/license' set up to track 'origin/feature/license'.
@@ -356,12 +348,6 @@ mar@fp:~/gitflow/mar (feature/author) $ git commit -m "4. Afegits autors"
 [feature/author f853946] 4. Afegits autors
  1 file changed, 3 insertions(+)
 mar@fp:~/gitflow/mar (feature/author) $ git push -u origin feature/author
-Enumerating objects: 5, done.
-Counting objects: 100% (5/5), done.
-Delta compression using up to 12 threads
-Compressing objects: 100% (2/2), done.
-Writing objects: 100% (3/3), 338 bytes | 338.00 KiB/s, done.
-Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 To /home/jpuigcerver/gitflow/remot
  * [new branch]      feature/author -> feature/author
 Branch 'feature/author' set up to track 'origin/feature/author'.
@@ -497,12 +483,6 @@ Els passos que ha de seguir són:
 
     ```shellconsole
     anna@fp:~/gitflow/anna (develop) $ git push
-    Enumerating objects: 5, done.
-    Counting objects: 100% (5/5), done.
-    Delta compression using up to 12 threads
-    Compressing objects: 100% (2/2), done.
-    Writing objects: 100% (3/3), 338 bytes | 338.00 KiB/s, done.
-    Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
     To /home/jpuigcerver/gitflow_example/remot
        8e70293..0fb88ef  develop -> develop
     anna@fp:~/gitflow/anna (develop) $ git lga
@@ -581,11 +561,6 @@ Els passos que ha de seguir són:
 
     En aquest cas, __sí__ cal actualitzar la branca `feature/license` amb `develop`
     mitjançant un __`rebase`__ per mantindre la història lineal.
-
-    !!! warning
-        El procés del `rebase` no està documentat per simplificar l'exemple.
-
-        Si sorgixen conflictes, caldrà resoldre'ls abans de continuar.
 
     ```shellconsole
     pau@fp:~/gitflow/pau (develop) $ git checkout feature/license
@@ -731,10 +706,76 @@ Mar ja ha acabat la seua funcionalitat `feature/author` i vol integrar-la a la b
     !!! important
         Per conservar la història lineal, cal utilitzar `pull --rebase`.
 
+    !!! warning
+        En aquest cas hi han conflictes `git pull --rebase`.
+        Cal resoldre-los per a continuar.
+
+        Aquest procés no està documentat per simplificar l'exemple.
+
     ```shellconsole
     mar@fp:~/gitflow/mar (develop) $ git pull --rebase
+    From /home/jpuigcerver/gitflow/remot
+       859d972..c853948  develop    -> origin/develop
+    Auto-merging README.md
+    CONFLICT (content): Merge conflict in README.md
+    fatal: Could not apply f853946... 4. Afegits autors
+    hint: Resolve all conflicts manually, mark them as resolved with
+    hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+    hint: You can instead skip this commit: run "git rebase --skip".
+    hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+    hint: Disable this message with "git config advice.mergeConflict false"
+    mar@fp:~/gitflow/mar (develop) $ vim README.md
+    mar@fp:~/gitflow/mar (develop) $ git add README.md
+    mar@fp:~/gitflow/mar (develop) $ git rebase --continue
+    [detached HEAD 96877b7] 4. Afegits autors
+     1 file changed, 3 insertions(+)
+    Successfully rebased and updated refs/heads/develop.
+    mar@fp:~/gitflow/mar (develop) $ git lga
+    * 96877b7 - (1 minute ago) 4. Afegits autors - Mar (HEAD -> develop)
+    * 04be61c - (1 minute ago) 3. Afegida llicència - Pau (origin/develop)
+    * 0fb88ef - (1 minute ago) 2. Afegida descripció del projecte - Anna
+    | * f853946 - (1 minute ago) 4. Afegits autors - Mar (feature/author, origin/feature/author)
+    |/
+    * 8e70293 - (11 minutes ago) 1. Primer commit - Joan Puigcerver (main, origin/main)
     ```
 
+1. Publicar els canvis de la branca `develop` al repositori remot.
+
+    ```shellconsole
+    mar@fp:~/gitflow/mar (develop) $ git push
+    To /home/jpuigcerver/gitflow_example/remot
+       04be61c..96877b7  develop -> develop
+    mar@fp:~/gitflow/mar (develop) $ git lga
+    * 96877b7 - (1 minute ago) 4. Afegits autors - Mar (HEAD -> develop, origin/develop)
+    * 04be61c - (1 minute ago) 3. Afegida llicència - Pau
+    * 0fb88ef - (1 minute ago) 2. Afegida descripció del projecte - Anna
+    | * f853946 - (1 minute ago) 4. Afegits autors - Mar (feature/author, origin/feature/author)
+    |/
+    * 8e70293 - (11 minutes ago) 1. Primer commit - Joan Puigcerver (main, origin/main)
+    ```
+
+1. Eliminar la branca `feature/author` del repositori local i del remot.
+
+    ```shellconsole
+    mar@fp:~/gitflow/mar (develop) $ git branch -d feature/author
+    Deleted branch feature/author (was f853946).
+    mar@fp:~/gitflow/mar (develop) $ git push origin --delete feature/author
+    To /home/jpuigcerver/gitflow_example/remot
+     - [deleted]         feature/author
+    mar@fp:~/gitflow/mar (develop) $ git lga
+    * 96877b7 - (1 minute ago) 4. Afegits autors - Mar (HEAD -> develop, origin/develop)
+    * 04be61c - (1 minute ago) 3. Afegida llicència - Pau
+    * 0fb88ef - (1 minute ago) 2. Afegida descripció del projecte - Anna
+    * 8e70293 - (11 minutes ago) 1. Primer commit - Joan Puigcerver (main, origin/main)
+    ```
+
+En aquest punt, la funcionalitat desenvolupada per Mar
+ha sigut integrada a la branca de desenvolupament `develop`
+i pot continuar treballant en altres funcionalitats.
+
+!!! success
+    Hem aconseguit incorporar totes les funcionalitats
+    a la branca de desenvolupament `develop` mantenint la història lineal.
 
 
 ### Integració amb `merge squash`
@@ -760,5 +801,416 @@ El procés que cal seguir per integrar les funcionalitats amb `merge squash` és
         amb `git pull --rebase`.
 
 1. Eliminar la branca `feature/*` del repositori local i del remot.
+
+#### Integració de `feature/readme`
+/// note
+Aquests exemples mostren com integrar les funcionalitats amb `rebase`
+a partir de l'estat del repositori mostrat a [[bloc5#integracio-de-les-funcionalitats]].
+///
+
+/// note
+En aquest cas, utilitzar `merge --squash` no aporta cap avantatge,
+ja que cada funcionlitat sols té un commit.
+///
+
+Anna ja ha acabat la seua funcionalitat `feature/readme` i vol integrar-la a la branca `develop`.
+
+Els passos que ha de seguir són:
+
+1. Sincronitzar l'estat del repositori local amb el remot amb `git fetch`.
+
+    ```shellconsole
+    anna@fp:~/gitflow/ $ cd ~/gitflow/anna
+    anna@fp:~/gitflow/anna (feature/readme) $ git fetch
+    From /home/jpuigcerver/gitflow_example/remot
+     * [new branch]      feature/author  -> origin/feature/author
+     * [new branch]      feature/license -> origin/feature/license
+    anna@fp:~/gitflow/anna (feature/readme) $ git lga
+    * f853946 - (1 minute ago) 4. Afegits autors - Mar (HEAD -> feature/author, origin/feature/author)
+    | * b1265b9 - (1 minute ago) 3. Afegida llicència - Pau (HEAD -> feature/license, origin/feature/license)
+    |/
+    | * 0fb88ef - (1 minute ago) 2. Afegida descripció del projecte - Anna (HEAD -> feature/readme, origin/feature/readme)
+    |/
+    * 8e70293 - (11 minutes ago) 1. Primer commit - Joan Puigcerver (main, develop, origin/main, origin/develop)
+    ```
+
+1. Si cal, actualitzar la branca `develop` amb els canvis del remot.
+
+    En aquest cas, ja està actualitzada.
+
+    ```shellconsole
+    anna@fp:~/gitflow/anna (feature/readme) $ git checkout develop
+    Switched to branch 'develop'
+    anna@fp:~/gitflow/anna (develop) $ git pull
+    Already up to date.
+    ```
+
+1. Assegurar-se que la branca `feature/readme` està actualitzada amb `develop`.
+
+    En aquest cas, la branca `feature/readme` està actualitzada amb `develop`.
+
+    !!! info
+        En aquest cas és indiferent si es fa amb `rebase` o `merge`,
+
+    ```shellconsole
+    anna@fp:~/gitflow/anna (develop) $ git checkout feature/readme
+    Switched to branch 'feature/readme'
+    anna@fp:~/gitflow/anna (feature/readme) $ git merge develop
+    Already up to date.
+    ```
+
+1. Fusionar la branca `feature/readme` amb `develop` en __un sol commit__ amb __`merge --squash`__.
+
+    ```shellconsole
+    anna@fp:~/gitflow/anna (feature/readme) $ git checkout develop
+    Switched to branch 'develop'
+    anna@fp:~/gitflow/anna (develop) $ git merge --squash feature/readme
+    Updating 3991b11..a9a0ec1
+    Fast-forward
+    Squash commit -- not updating HEAD
+     README.md | 4 ++++
+     1 file changed, 4 insertions(+)
+    anna@fp:~/gitflow/anna (develop) $ git commit -m "Merge branch 'feature/readme'"
+    anna@fp:~/gitflow/anna (develop) $ git lga
+    * ce741a5 - (7 seconds ago) Merge branch 'feature/readme' - Anna (HEAD -> develop)
+    | * 0fb88ef - (1 minute ago) 2. Afegida descripció del projecte - Anna (feature/readme, origin/feature/readme)
+    |/
+    | * f853946 - (1 minute ago) 4. Afegits autors - Mar (feature/author, origin/feature/author)
+    |/
+    | * b1265b9 - (1 minute ago) 3. Afegida llicència - Pau (feature/license, origin/feature/license)
+    |/
+    * 8e70293 - (11 minutes ago) 1. Primer commit - Joan Puigcerver (main, origin/main, origin/develop)
+    ```
+
+1. Publicar els canvis de la branca `develop` al repositori remot.
+
+    ```shellconsole
+    anna@fp:~/gitflow/anna (develop) $ git push
+    To /home/jpuigcerver/gitflow_example/remot
+       8e70293..ce741a5  develop -> develop
+    anna@fp:~/gitflow/anna (develop) $ git lga
+    * ce741a5 - (7 seconds ago) Merge branch 'feature/readme' - Anna (HEAD -> develop, origin/develop)
+    | * 0fb88ef - (1 minute ago) 2. Afegida descripció del projecte - Anna (feature/readme, origin/feature/readme)
+    |/
+    | * f853946 - (1 minute ago) 4. Afegits autors - Mar (feature/author, origin/feature/author)
+    |/
+    | * b1265b9 - (1 minute ago) 3. Afegida llicència - Pau (feature/license, origin/feature/license)
+    |/
+    * 8e70293 - (11 minutes ago) 1. Primer commit - Joan Puigcerver (main, origin/main)
+    ```
+
+1. Eliminar la branca `feature/readme` del repositori local i del remot.
+
+    ```shellconsole
+    anna@fp:~/gitflow/anna (develop) $ git branch -d feature/readme
+    Deleted branch feature/readme (was 0fb88ef).
+    anna@fp:~/gitflow/anna (develop) $ git push origin --delete feature/readme
+    To /home/jpuigcerver/gitflow_example/remot
+     - [deleted]         feature/readme
+    anna@fp:~/gitflow/anna (develop) $ git lga
+    * ce741a5 - (7 seconds ago) Merge branch 'feature/readme' - Anna (HEAD -> develop, origin/develop)
+    | * f853946 - (1 minute ago) 4. Afegits autors - Mar (feature/author, origin/feature/author)
+    |/
+    | * b1265b9 - (1 minute ago) 3. Afegida llicència - Pau (feature/license, origin/feature/license)
+    |/
+    * 8e70293 - (11 minutes ago) 1. Primer commit - Joan Puigcerver (main, origin/main)
+    ```
+
+En aquest punt, la funcionalitat desenvolupada per Anna
+ha sigut integrada a la branca de desenvolupament `develop`
+i pot continuar treballant en altres funcionalitats.
+
+
+#### Integració de `feature/license`
+Pau ja ha acabat la seua funcionalitat `feature/license` i vol integrar-la a la branca `develop`.
+
+Els passos que ha de seguir són:
+
+1. Sincronitzar l'estat del repositori local amb el remot amb `git fetch`.
+
+    ```shellconsole
+    pau@fp:~/gitflow/pau (feature/license) $ git fetch
+    From /home/jpuigcerver/gitflow_example/remot
+     * [new branch]      feature/author  -> origin/feature/author
+    pau@fp:~/gitflow/pau (feature/license) $ git lga
+    * ce741a5 - (7 seconds ago) Merge branch 'feature/readme' - Anna (origin/develop)
+    | * f853946 - (1 minute ago) 4. Afegits autors - Mar (feature/author, origin/feature/author)
+    |/
+    | * b1265b9 - (1 minute ago) 3. Afegida llicència - Pau (HEAD -> feature/license, origin/feature/license)
+    |/
+    * 8e70293 - (11 minutes ago) 1. Primer commit - Joan Puigcerver (main, develop, origin/main)
+    ```
+
+1. Si cal, actualitzar la branca `develop` amb els canvis del remot.
+
+    En aquest cas, __sí__ cal actualitzar la branca `develop`, ja que Anna ha integrat la seua funcionalitat.
+
+    ```shellconsole
+    pau@fp:~/gitflow/pau (feature/license) $ git checkout develop
+    Switched to branch 'develop'
+    pau@fp:~/gitflow/pau (develop) $ git pull
+    Updating 8e70293..ce741a5
+    Fast-forward
+     README.md | 4 ++++
+     1 file changed, 4 insertions(+)
+    pau@fp:~/gitflow/pau (develop) $ git lga
+    * ce741a5 - (7 seconds ago) Merge branch 'feature/readme' - Anna (HEAD -> develop, origin/develop)
+    | * f853946 - (1 minute ago) 4. Afegits autors - Mar (feature/author, origin/feature/author)
+    |/
+    | * b1265b9 - (1 minute ago) 3. Afegida llicència - Pau (feature/license, origin/feature/license)
+    |/
+    * 8e70293 - (11 minutes ago) 1. Primer commit - Joan Puigcerver (main, origin/main)
+    ```
+
+1. Assegurar-se que la branca `feature/license` està actualitzada amb `develop`.
+
+    En aquest cas, __sí__ cal actualitzar la branca `feature/license` amb `develop`
+    mitjançant un `merge` o `rebase`.
+
+    ```shellconsole
+    pau@fp:~/gitflow/pau (develop) $ git checkout feature/license
+    Switched to branch 'feature/license'
+    pau@fp:~/gitflow/pau (feature/license) $ git merge develop --no-edit # (1)!
+    Merge made by the 'ort' strategy.
+     README.md | 4 ++++
+     1 file changed, 4 insertions(+)
+    pau@fp:~/gitflow/pau (feature/license) $ git lga
+    *   0d8bd92 - (5 seconds ago) Merge branch 'develop' into feature/license - Pau (HEAD -> feature/license)
+    |\
+    | * ce741a5 - (7 seconds ago) Merge branch 'feature/readme' - Anna (HEAD -> develop, origin/develop)
+    * | b1265b9 - (1 minute ago) 3. Afegida llicència - Pau (feature/license, origin/feature/license)
+    |/
+    | * f853946 - (1 minute ago) 4. Afegits autors - Mar (feature/author, origin/feature/author)
+    |/
+    * 8e70293 - (11 minutes ago) 1. Primer commit - Joan Puigcerver (main, origin/main)
+    ```
+
+    1. L'opció `--no-edit` deixa el missatge de commit tal com està i no obri l'editor de text.
+
+    /// notice
+    Hem fusionat els canvis de `develop` a `feature/license` amb un `merge`.
+
+    Aquesta estratègia és més senzilla que el `rebase`,
+    però no manté la història lineal de la branca `feature/license`.
+    ///
+
+1. Fusionar la branca `feature/license` amb `develop` amb __un sol commit__ amb __`merge --squash`__.
+
+    ```shellconsole
+    pau@fp:~/gitflow/pau (feature/license) $ git checkout develop
+    Switched to branch 'develop'
+    pau@fp:~/gitflow/pau (develop) $ git merge --squash feature/license
+    Updating 7bc8cc9..8289821
+    Fast-forward
+    Squash commit -- not updating HEAD
+     LICENSE | 4 ++++
+     1 file changed, 4 insertions(+)
+     create mode 100644 LICENSE
+    pau@fp:~/gitflow/pau (develop) $ git comit -m "Merge branch 'feature/license'"
+    [develop 372e7a3] Merge branch 'feature/license'
+     1 file changed, 4 insertions(+)
+     create mode 100644 LICENSE
+    pau@fp:~/gitflow/pau (develop) $ git lga
+    * 372e7a3 - (3 seconds ago) Merge branch 'feature/license' - Pau (HEAD -> develop)
+    | *   0d8bd92 - (5 seconds ago) Merge branch 'develop' into feature/license - Pau (HEAD -> feature/license)
+    | |\  
+    | |/  
+    |/|   
+    * | ce741a5 - (7 seconds ago) Merge branch 'feature/readme' - Anna (origin/develop)
+    | * b1265b9 - (1 minute ago) 3. Afegida llicència - Pau (feature/license, origin/feature/license)
+    |/  
+    | * f853946 - (1 minute ago) 4. Afegits autors - Mar (feature/author, origin/feature/author)
+    |/  
+    * 8e70293 - (11 minutes ago) 1. Primer commit - Joan Puigcerver (main, origin/main)
+    ```
+
+    /// notice
+    Encara que no ho parega, la branca `develop` manté una història lineal.
+    ///
+
+1. Publicar els canvis de la branca `develop` al repositori remot.
+
+    ```shellconsole
+    pau@fp:~/gitflow/pau (develop) $ git push
+    To /home/jpuigcerver/gitflow_example/remot
+       ce741a5..372e7a3  develop -> develop
+    ```
+
+1. Eliminar la branca `feature/license` del repositori local i del remot.
+
+    ```shellconsole
+    pau@fp:~/gitflow/pau (develop) $ git branch -d feature/license
+    Deleted branch feature/license (was b1265b9).
+    pau@fp:~/gitflow/pau (develop) $ git push origin --delete feature/license
+    To /home/jpuigcerver/gitflow_example/remot
+     - [deleted]         feature/license
+    pau@fp:~/gitflow/pau (develop) $ git lga
+    * 94d2475 - (6 seconds ago) Merge branch 'feature/license' - Pau (HEAD -> develop, origin/develop)
+    * 21392d8 - (6 seconds ago) Merge branch 'feature/readme' - Anna
+    | * 2c1d542 - (6 seconds ago) 4. Afegits autors - Mar (origin/feature/author)
+    |/  
+    * 8402918 - (6 seconds ago) 1. Primer commit - Joan Puigcerver (origin/main, origin/HEAD, main)
+    ```
+
+En aquest punt, la funcionalitat desenvolupada per Pau
+ha sigut integrada a la branca de desenvolupament `develop`
+i pot continuar treballant en altres funcionalitats.
+
+#### Integració de `feature/author`
+Mar ja ha acabat la seua funcionalitat `feature/author` i vol integrar-la a la branca `develop`.
+
+En aquest cas, hauria de seguir els mateixos passos que els seus companys per
+integrar la seua funcionalitat a la branca `develop`.
+
+L'estat final del repositori després d'integrar
+totes les funcionalitats a la branca `develop` i
+eliminar les branques de funcionalitats és:
+
+```shellconsole
+jpuigcerver@fp:~/gitflow/remot (develop) $ git lga
+* ee85113 - (6 seconds ago) Merge branch 'feature/authors' - Mar (HEAD -> develop)
+* 94d2475 - (6 seconds ago) Merge branch 'feature/license' - Pau
+* 21392d8 - (6 seconds ago) Merge branch 'feature/readme' - Anna
+* 8402918 - (6 seconds ago) 1. Primer commit - Joan Puigcerver (main)
+```
+
+!!! success
+    Hem aconseguit incorporar totes les funcionalitats
+    a la branca de desenvolupament `develop` mantenint la història lineal.
+
 ## Branques de publicació
+Les branques de publicació són branques temporals
+que s'utilitzen per a preparar la publicació d'una versió.
+
+Normalment, el prefix de les branques de publicació és `release/`.
+
+Aquestes branques es creen a partir de la branca de desenvolupament `develop`
+i s'utilitzen per a realitzar tasques com:
+
+- Actualitzar la versió del projecte.
+- Realitzar proves de validació.
+- Corregir errors que han pogut passar desapercebuts.
+- Preparar paràmetres de configuració específics per a la publicació.
+
+Una vegada acabades aquestes tasques, s'ha fusionar a la branca principal `main`
+i a la branca de desenvolupament `develop`.
+
+### Publicació de la versió 1.0.0
+Anna és l'encarregada de preparar la publicació de la versió 1.0.0.
+
+Els passos que ha de seguir són:
+
+1. Actualitzar la branca `develop` amb els canvis del remot.
+
+    ```shellconsole
+    anna@fp:~/gitflow/anna (develop) $ git checkout develop
+    Switched to branch 'develop'
+    anna@fp:~/gitflow/anna (develop) $ git pull
+    From /home/joapuiib/gitflow/remot
+       4e753b7..c6f2edb  develop    -> origin/develop
+    Updating 4e753b7..c6f2edb
+    Fast-forward
+     LICENSE | 4 ++++
+     1 file changed, 4 insertions(+)
+     create mode 100644 LICENSE
+    ```
+
+1. Crear la branca de publicació `release/v1.0.0` a partir de la branca `develop`.
+    
+    ```shellconsole
+    anna@fp:~/gitflow/anna (develop) $ git checkout -b release/v1.0.0
+    Switched to a new branch 'release/v1.0.0'
+    ```
+
+1. Realitzar les tasques necessàries per a preparar la publicació de la versió 1.0.0.
+
+    ```shellconsole
+    anna@fp:~/gitflow/anna (release/v1.0.0) $ echo "1.0.0" > VERSION
+    anna@fp:~/gitflow/anna (release/v1.0.0) $ git add VERSION
+    anna@fp:~/gitflow/anna (release/v1.0.0) $ git commit -m "Versió 1.0.0"
+    [release/v1.0.0 4b893fa] Versió 1.0.0
+     1 file changed, 1 insertion(+)
+     create mode 100644 VERSION
+    anna@fp:~/gitflow/anna (release/v1.0.0) $ git lga
+    * 4b893fa - (1 second ago) Versió 1.0.0 - Anna (HEAD -> release/v1.0.0)
+    * ee85113 - (6 seconds ago) Merge branch 'feature/authors' - Mar (develop, origin/develop)
+    * 94d2475 - (6 seconds ago) Merge branch 'feature/license' - Pau
+    * 21392d8 - (6 seconds ago) Merge branch 'feature/readme' - Anna
+    * 8402918 - (6 seconds ago) 1. Primer commit - Joan Puigcerver (main, origin/main)
+    ```
+
+1. Crear i publicar una etiqueta amb la versió 1.0.0.
+
+    ```shellconsole
+    anna@fp:~/gitflow/anna (release/v1.0.0) $ git tag "v1.0.0"
+    anna@fp:~/gitflow/anna (release/v1.0.0) $ git push origin v1.0.0
+    anna@fp:~/gitflow/anna (release/v1.0.0) $ git lga
+    * 4b893fa - (1 second ago) Versió 1.0.0 - Anna (HEAD -> release/v1.0.0, tag: v1.0.0)
+    * ee85113 - (6 seconds ago) Merge branch 'feature/authors' - Mar (develop, origin/develop)
+    * 94d2475 - (6 seconds ago) Merge branch 'feature/license' - Pau
+    * 21392d8 - (6 seconds ago) Merge branch 'feature/readme' - Anna
+    * 8402918 - (6 seconds ago) 1. Primer commit - Joan Puigcerver (main, origin/main)
+    ```
+
+1. Integrar aquesta branca a la branca de desenvolupament `develop` i publicar-la.
+
+    ```shellconsole
+    anna@fp:~/gitflow/anna (release/v1.0.0) $ git checkout develop
+    Switched to branch 'develop'
+    anna@fp:~/gitflow/anna (develop) $ git merge --ff-only release/v1.0.0
+    Updating 8402918..4b893fa
+    Fast-forward
+     VERSION   | 1 +
+     1 files changed, 1 insertions(+)
+     create mode 100644 VERSION
+    anna@fp:~/gitflow/anna (develop) $ git push
+    To /home/joapuiib/gitflow/remot
+       ee84113..4b893fa
+    anna@fp:~/gitflow/anna (develop) $ git lga
+    * 4b893fa - (1 second ago) Versió 1.0.0 - Anna (HEAD -> develop, release/v1.0.0, tag: v1.0.0, origin/develop)
+    * ee85113 - (6 seconds ago) Merge branch 'feature/authors' - Mar
+    * 94d2475 - (6 seconds ago) Merge branch 'feature/license' - Pau
+    * 21392d8 - (6 seconds ago) Merge branch 'feature/readme' - Anna
+    * 8402918 - (6 seconds ago) 1. Primer commit - Joan Puigcerver (main, origin/main)
+    ```
+
+1. Integrar aquesta branca a la branca principal `main` i publicar els canvis.
+
+    ```shellconsole
+    anna@fp:~/gitflow/anna (release/v1.0.0) $ git checkout main
+    Switched to branch 'main'
+    anna@fp:~/gitflow/anna (main) $ git merge --ff-only release/v1.0.0
+    Updating 8402918..4b893fa
+    Fast-forward
+     LICENSE   | 4 ++++
+     README.md | 4 ++++
+     VERSION   | 1 +
+     3 files changed, 9 insertions(+)
+     create mode 100644 LICENSE
+     create mode 100644 VERSION
+    anna@fp:~/gitflow/anna (main) $ git push
+    To /home/joapuiib/gitflow/remot
+       e68db39..0cb1dbc  main -> main
+    anna@fp:~/gitflow/anna (main) $ git lga
+    * 4b893fa - (1 second ago) Versió 1.0.0 - Anna (HEAD -> main, develop, release/v1.0.0, tag: v1.0.0, origin/main, origin/develop)
+    * ee85113 - (6 seconds ago) Merge branch 'feature/authors' - Mar
+    * 94d2475 - (6 seconds ago) Merge branch 'feature/license' - Pau
+    * 21392d8 - (6 seconds ago) Merge branch 'feature/readme' - Anna
+    * 8402918 - (6 seconds ago) 1. Primer commit - Joan Puigcerver
+    ```
+
+1. Eliminar la branca de publicació.
+
+    ```shellconsole
+    anna@fp:~/gitflow/anna (main) $ git branch -d release/v1.0.0
+    Deleted branch 'release/v1.0.0' (was 4b893fa)
+    anna@fp:~/gitflow/anna (main) $ git lga
+    * 4b893fa - (1 second ago) Versió 1.0.0 - Anna (HEAD -> main, develop, tag: v1.0.0, origin/main, origin/develop)
+    * ee85113 - (6 seconds ago) Merge branch 'feature/authors' - Mar
+    * 94d2475 - (6 seconds ago) Merge branch 'feature/license' - Pau
+    * 21392d8 - (6 seconds ago) Merge branch 'feature/readme' - Anna
+    * 8402918 - (6 seconds ago) 1. Primer commit - Joan Puigcerver
+    ```
+
+
 ## Branques de correcció
