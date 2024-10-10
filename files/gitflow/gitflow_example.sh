@@ -167,3 +167,4 @@ git checkout main
 git merge --ff-only release/1.0.0
 git push
 
+git branch -d release/1.0.0
