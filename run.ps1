@@ -52,4 +52,4 @@ if ($BUILD -eq $true) {
 }
 
 # Run mkdocs with the determined command and arguments
-& "./venv/Scripts/mkdocs" $COMMAND $ARGS
+& "./venv/Scripts/mkdocs" $COMMAND $COMMAND_ARGS
