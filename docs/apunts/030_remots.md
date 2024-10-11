@@ -217,6 +217,7 @@ Per crear un token d'accés personal, segueix els següents passos:
 - Fes clic a __Generate new token__.
 
 Existeixen dos tipus de tokens d'accés personal:
+
 - __Access token (classic)__: Permet especificar els permisos que vols donar al token,
     que són globals per a tot el teu compte.
 - __Fine-grained token__: Permet especificar els permisos que vols donar al token,
