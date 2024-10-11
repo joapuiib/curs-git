@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Page description -->
+    
+
+    <!-- Page author -->
+    
+        <meta name="author" content="Joan Puigcerver Ibáñez" />
+    
+
+    <!-- Canonical -->
+    
+        <link rel="canonical" href="https://joapuiib.github.io/curs-git/apunts/031_remots_auth_slides/" />
+    
+
+    <!-- Favicon -->
+    <link rel="icon" href="../../assets/images/favicon.png" />
+
+    <!-- Site title -->
+    
+      
+        <title>Transparències 3.1: Mètodes d'autenticació a GitHub - Introducció a Git i la seua aplicació a l’aula</title>
+      
+    
+
+    
+        <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reset.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/highlight/monokai.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/white.min.css">
+        <link rel="stylesheet" href="../../stylesheets/slides.css">
+    
+
+    <!-- Meta tags from front matter or plugins -->
+    
+
+</head>
+
+<body>
+
+    
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown
+                 data-separator="^\n---\n$"
+                 data-separator-vertical="^\n--\n$"
+                 data-notes="^Note:">
+          <script type="text/template">
+            ## Mètodes d'autenticació a GitHub
+
+#### Introducció a Git i la seua aplicació a l’aula
+
+---
+
+## Repositori remot
+
+<img src="../img/introduccio/components.png">
+
+---
+
+## Desenvolupament distribuït
+
+<img src="../img/remots/multiple_local_repo.png">
+
+---
+
+## Mètodes d'autenticació a GitHub
+
+- ~~Nom d'usuari i contrasenya (2021)~~
+- (_HTTPS_) Personal Access Token (PAT)
+- (_SSH_) Clau SSH
+
+---
+
+## Token d'accés personal (PAT)
+
+Generat desde Settings > Developer settings > Personal access tokens
+
+- Classic
+- Fine-grained
+
+```bash
+git config --global credential.helper store
+```
+
+---
+
+## Clau SSH
+
+- Generar clau SSH localment
+- Afegir clau a GitHub
+
+```bash
+ssh-keygen -t rsa -b 4096
+```
+          </script>
+        </section>
+      </div>
+    </div>
+    
+
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/markdown/markdown.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/notes/notes.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/zoom/zoom.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/math/math.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/highlight/highlight.min.js"></script>
+    
+
+    
+        <script>
+          // Full list of configuration options available here:
+          // https://github.com/hakimel/reveal.js#configuration
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            hash: true,
+
+            transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [ RevealMarkdown, RevealNotes, RevealZoom, RevealMath, RevealHighlight ]
+          });
+        </script>
+    
+
+</body>
+</html>
