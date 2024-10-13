@@ -29,16 +29,7 @@
     height: var(--md-content__header-height);
 }
 
-@page {
-    size: A4;
-    margin: 10mm;
-}
-
 @media print {
-    .md-main__inner, .md-content__inner {
-      margin: unset;
-    }
-
     .md-content__print-layout {
         display: table;
     }
@@ -68,20 +59,6 @@
     }
     .md-content__footer {
         bottom: 0;
-    }
-    .cover {
-      /* Substract header and footer height plus 1.5rem (if not, license image goes to different page) */
-      height: calc(100vh - var(--md-content__header-height, 0px) * 2 - 1.5rem);
-    }
-
-    .break-page {
-        -webkit-column-break-before: avoid;
-        page-break-before: always;
-        break-before: always;
-    }
-    
-    .md-source-file {
-        display: none;
     }
 }
 

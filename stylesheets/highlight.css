@@ -40,6 +40,15 @@
 .language-shellconsole.highlight .gp-gb {
   font-weight: bold;
 }
+.language-shellconsole.highlight .gp,
+.language-shellconsole.highlight .gp-w,
+.language-shellconsole.highlight .gp-ve,
+.language-shellconsole.highlight .gp-uh,
+.language-shellconsole.highlight .gp-d,
+.language-shellconsole.highlight .gp-gb {
+  font-weight: bold;
+  user-select: none;
+}
 
 .language-shellconsole.highlight .gp-uh,
 .language-shellconsole.highlight .s2 {

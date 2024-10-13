@@ -96,3 +96,31 @@ p:has(img.center) {
 .fancylists-upper-alpha > li::marker {
     content: counter(list-item, upper-alpha) ") ";
 }
+
+@page {
+    size: A4;
+    margin: 10mm;
+}
+
+
+@media print {
+    .md-main__inner, .md-content__inner {
+      margin: unset;
+    }
+
+    .cover {
+      /* Substract 1.5rem (if not, license image goes to different page) */
+      height: calc(100vh - 1.5rem);
+    }
+
+    .break-page {
+        -webkit-column-break-before: avoid;
+        page-break-before: always;
+        break-before: always;
+    }
+    
+    .md-source-file {
+        display: none;
+    }
+}
+

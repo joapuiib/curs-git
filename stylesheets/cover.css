@@ -13,6 +13,9 @@
     position: absolute;
 }
 
+.cover__logo {
+    text-align: center;
+}
 .cover__logo img,
 .cover__logo svg {
    height: auto;
