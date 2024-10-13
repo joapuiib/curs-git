@@ -31,6 +31,8 @@ git remote add origin <url>
 - (_HTTPS_) Personal Access Token (PAT)
 - (_SSH_) Clau SSH
 
+<img src="../img/remots/add_remote.png" alt="Repsitori Local vinculat amb un Repositori Remot">
+
 ---
 
 ## Associació branques locals i remotes
@@ -38,6 +40,8 @@ git remote add origin <url>
 ```bash
 git push [-u | --set-upstream] origin <branca>
 ```
+
+<img src="../img/remots/push_setupstream.png" alt="Associació d'una branca local a una branca remota">
 
 ---
 
