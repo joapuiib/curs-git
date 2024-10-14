@@ -165,6 +165,28 @@ Podem observar que estem en la branca `main` i que de moment no s'ha realitzat c
 
     Vegeu: [Regarding Git and Branch Naming](https://sfconservancy.org/news/2020/jun/23/gitbranchname/)
 
+### Eliminar un repositori
+Per a eliminar un repositori de Git, simplement cal eliminar el directori ocult `.git`.
+
+```bash
+rm -rf .git
+```
+
+- `-r`: Opció per a eliminar de manera recursiva.
+- `-f`: Opció per a forçar l'eliminació sense confirmació dels elements protegits contra escriptura.
+
+```shellconsole
+jpuigcerver@fp:~/git_introduccio (main) $ ls -a
+.  ..  .git
+jpuigcerver@fp:~/git_introduccio (main) $ rm -rf .git
+jpuigcerver@fp:~/git_introduccio $ git status
+fatal: not a git repository (or any of the parent directories): .git
+```
+
+!!! danger
+    Sigues extremadament cautelós amb l'ús de la comanda `rm -rf`,
+    ja que elimina tots els fitxers, inclsos aquells protegits contra escritura.
+
 
 ## Estructura d'un repositori de Git
 En aquesta introducció, ens centrarem en com funcionen els repositoris de Git d'una manera __local__,
