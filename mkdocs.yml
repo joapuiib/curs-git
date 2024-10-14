@@ -61,7 +61,7 @@ plugins:
   - alias:
       use_anchor_titles: true
   - awesome-pages # Navegació
-  - drawio_file
+  - drawio
   - macros
   - material/tags
   - material/search
