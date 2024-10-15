@@ -1,0 +1,15 @@
+jpuigcerver@fp:~ $ mkdir -p ~/gitflow/remot
+jpuigcerver@fp:~ $ cd ~/gitflow/remot
+jpuigcerver@fp:~/gitflow/remot $ git init
+Initialized empty Git repository in ~/gitflow/remot/.git/
+jpuigcerver@fp:~/gitflow/remot (HEAD) $ git branch -m main
+jpuigcerver@fp:~/gitflow/remot (HEAD) $ echo # Gitflow
+# Gitflow
+jpuigcerver@fp:~/gitflow/remot (HEAD) $ git add README.md
+jpuigcerver@fp:~/gitflow/remot (HEAD) $ git commit -m 1. Primer commit
+[main (root-commit) 41c3aa7] 1. Primer commit
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+jpuigcerver@fp:~/gitflow/remot (main) $ git lga
+* 41c3aa7 - (0 seconds ago) 1. Primer commit - Joan Puigcerver (HEAD -> main)
+jpuigcerver@fp:~/gitflow/remot (main) $ git config --bool core.bare true

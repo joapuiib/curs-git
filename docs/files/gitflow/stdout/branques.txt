@@ -1,0 +1,10 @@
+jpuigcerver@fp:~/gitflow $ cd ~/gitflow/remot
+jpuigcerver@fp:~/gitflow/remot (main) $ git lga
+* 3b033c4 - (0 seconds ago) 5. Afegida documentació - Carles (feature/documentacio)
+| * 7a5dea6 - (1 second ago) 4. Afegits autors - Mar (feature/author)
+|/  
+| * f790b4c - (1 second ago) 3. Afegida llicència - Pau (feature/license)
+|/  
+| * 97beddf - (1 second ago) 2. Afegida descripció del projecte - Anna (feature/readme)
+|/  
+* 41c3aa7 - (1 second ago) 1. Primer commit - Joan Puigcerver (HEAD -> main, develop)

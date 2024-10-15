@@ -1,0 +1,27 @@
+jpuigcerver@fp:~/gitflow/remot (main) $ cd ~/gitflow
+jpuigcerver@fp:~/gitflow $ git clone remot anna
+Cloning into 'anna'...
+done.
+jpuigcerver@fp:~/gitflow $ git clone remot pau
+Cloning into 'pau'...
+done.
+jpuigcerver@fp:~/gitflow $ git clone remot mar
+Cloning into 'mar'...
+done.
+jpuigcerver@fp:~/gitflow $ git clone remot carles
+Cloning into 'carles'...
+done.
+jpuigcerver@fp:~/gitflow $ tree .
+.
+├── anna
+│   └── README.md
+├── carles
+│   └── README.md
+├── mar
+│   └── README.md
+├── pau
+│   └── README.md
+└── remot
+    └── README.md
+
+6 directories, 5 files

@@ -226,19 +226,7 @@ utilitzant `rebase` i `merge squash` de tal manera que la història del projecte
     crearem un repositori remot en la màquina local.
 
     ```shellconsole
-    jpuigcerver@fp:~ $ mkdir -p ~/gitflow/remot
-    jpuigcerver@fp:~ $ cd ~/gitflow/remot
-    Initialized empty Git repository in /home/jpuigcerver/gitflow/remot/.git/
-    jpuigcerver@fp:~/gitflow/remot (main) $ git branch -m main
-    jpuigcerver@fp:~/gitflow/remot (main) $ echo "# Gitflow" > README.md
-    jpuigcerver@fp:~/gitflow/remot (main) $ git add README.md
-    jpuigcerver@fp:~/gitflow/remot (main) $ git commit -m "1. Primer commit"
-    [main (root-commit) 8e70293] 1. Primer commit
-     1 file changed, 1 insertion(+)
-     create mode 100644 README.md
-    jpuigcerver@fp:~/gitflow (main) $ git lga
-    * 8e70293 - (1 minute ago) 1. Primer commit - Joan Puigcerver (HEAD -> main)
-    jpuigcerver@fp:~/gitflow/remot (main) $ git config --bool core.bare true # (1)!
+    --8<-- "docs/files/gitflow/stdout/remot.txt"
     ```
 
     1. Aquesta comanda és necessària perquè el repositori siga __bare__ i puga ser utilitzat com a repositori remot.
@@ -248,9 +236,7 @@ El primer pas per establir un flux de treball amb __Gitflow__
 és crear la branca de desenvolupament `develop`.
 
 ```shellconsole
-jpuigcerver@fp:~/gitflow/remot (main) $ git branch develop
-jpuigcerver@fp:~/gitflow/remot (main) $ git lga
-* 8e70293 - (1 minute ago) 1. Primer commit - Joan Puigcerver (HEAD -> main, develop)
+--8<-- "docs/files/gitflow/stdout/development.txt"
 ```
 
 ### Desenvolupament de funcionalitats
@@ -448,26 +434,27 @@ jpuigcerver@fp:~/gitflow/remot (develop) $ git lga
 * 8e70293 - (11 minutes ago) 1. Primer commit - Joan Puigcerver (main, develop, origin/main, origin/develop)
 ```
 
-Existeixen dues opcions per integrar les funcionalitats a la branca de desenvolupament `develop`:
+Anem a veure com integrar les funcionalitats amb les diferents tècniques de fusió
+exposades anteriorment.
 
-- __Utilitzar `rebase`__: Aquesta opció consisteix a aplicar els canvis de les branques de funcionalitats
-    sobre la branca de desenvolupament `develop`, de manera que la història del projecte siga lineal.
-
-    En aquest cas, es conserven tots els commits de les branques de funcionalitats.
-
-- __Utilitzar `merge squash`__: Aquesta opció consisteix a fusionar les branques de funcionalitats
-    amb la branca de desenvolupament `develop`, però només es conserva un únic commit amb tots els canvis.
-
-    En aquest cas, la història del projecte també és lineal, però només es conserva un commit per funcionalitat.
-
-#### Integracó amb `merge --squash`
-El procés que cal seguir per integrar les funcionalitats amb `rebase` és el següent:
+En tots els casos, el procés a seguir és el mateix:
 
 1. Sincronitzar l'estat del repositori local amb el remot amb `git fetch`.
 1. Si cal, actualitzar la branca local `develop` amb els canvis del remot `git pull`.
-1. Assegurar-se que la branca `feature/*` està actualitzada amb `develop`.
-    Si no ho està, cal incorporar els canvis amb __`rebase`__ per mantindre la història lineal.
-1. Fusionar la branca `feature/*` amb `develop` amb una __fusió directa (_fast-forward_)__.
+
+    !!! tip
+        Per evitar possibles conflictes i errors, es recomana configurar `git pull`
+        perquè sols puga incorporar els canvis de manera __directa (_fast-forward_)__.
+
+        ```bash
+        git config [--global] pull.ff only
+        ```
+
+1. Incorporar els canvis de la branca `feature/*` amb la branca `develop` amb la tècnica triada.
+
+    !!! important
+        Aquest punt és l'únic que varia segons la tècnica de integració triada.
+
 1. Publicar els canvis de la branca `develop` al repositori remot amb `git push`.
 
     !!! danger
@@ -477,13 +464,11 @@ El procés que cal seguir per integrar les funcionalitats amb `rebase` és el se
         En aquest cas, caldria integrar els canvis de `develop`
         amb `git pull --rebase`.
 
-1. Eliminar la branca `feature/*` del repositori local i del remot.
+1. Eliminar les branques `feature/*` del repositori local i del remot.
 
-#### Integració amb `rebase`
-!!! note
-    Aquests exemples mostren com integrar les funcionalitats amb `rebase`
-    a partir de l'estat del repositori mostrat a [[bloc5#integracio-de-les-funcionalitats]].
 
+
+#### Integracó amb `merge --no-ff`
 Anna ja ha acabat la seua funcionalitat `feature/readme` i vol integrar-la a la branca `develop`.
 
 Els passos que ha de seguir són:
@@ -516,18 +501,7 @@ Els passos que ha de seguir són:
     Already up to date.
     ```
 
-1. Assegurar-se que la branca `feature/readme` està actualitzada amb `develop`.
-
-    En aquest cas, la branca `feature/readme` està actualitzada amb `develop`.
-
-    ```shellconsole
-    anna@fp:~/gitflow/anna (develop) $ git checkout feature/readme
-    Switched to branch 'feature/readme'
-    anna@fp:~/gitflow/anna (feature/readme) $ git rebase develop
-    Current branch feature/readme is up to date.
-    ```
-
-1. Fusionar la branca `feature/readme` amb `develop` amb una __fusió directa (_fast-forward_)__.
+1. Fusionar la branca `feature/readme` amb `develop`: __`git merge --no-ff`__.
 
     !!! tip
         L'opció `merge --ff-only` permet assegurar-nos que la fusió siga un __fusió directa__.
@@ -535,7 +509,7 @@ Els passos que ha de seguir són:
     ```shellconsole
     anna@fp:~/gitflow/anna (feature/readme) $ git checkout develop
     Switched to branch 'develop'
-    anna@fp:~/gitflow/anna (develop) $ git merge --ff-only feature/readme
+    anna@fp:~/gitflow/anna (develop) $ git merge --no-ff feature/readme --no-edit # (1)!
     Updating 8e70293..0fb88ef
     Fast-forward
      README.md | 4 ++++
@@ -548,6 +522,8 @@ Els passos que ha de seguir són:
     |/
     * 8e70293 - (11 minutes ago) 1. Primer commit - Joan Puigcerver (main, origin/main, origin/develop)
     ```
+
+    1. L'opció `--no-edit` permet realitzar la fusió sense obrir l'editor de text, deixant el missatge de fusió per defecte.
 
 1. Publicar els canvis de la branca `develop` al repositori remot.
 
@@ -584,6 +560,26 @@ Els passos que ha de seguir són:
 En aquest punt, la funcionalitat desenvolupada per Anna
 ha sigut integrada a la branca de desenvolupament `develop`
 i pot continuar treballant en altres funcionalitats.
+
+#### Integració amb `rebase`
+El procés que cal seguir per integrar les funcionalitats amb `rebase` és el següent:
+
+1. Sincronitzar l'estat del repositori local amb el remot amb `git fetch`.
+1. Si cal, actualitzar la branca local `develop` amb els canvis del remot `git pull`.
+1. Assegurar-se que la branca `feature/*` està actualitzada amb `develop`.
+    Si no ho està, cal incorporar els canvis amb __`rebase`__ per mantindre la història lineal.
+1. Fusionar la branca `feature/*` amb `develop` amb una __fusió directa (_fast-forward_)__.
+1. Publicar els canvis de la branca `develop` al repositori remot amb `git push`.
+
+    !!! danger
+        En aquest punt podria passar que mentre has realitzat aquest procés,
+        altres desenvolupadors hagen publicat nous canvis.
+
+        En aquest cas, caldria integrar els canvis de `develop`
+        amb `git pull --rebase`.
+
+1. Eliminar la branca `feature/*` del repositori local i del remot.
+
 
 
 #### Integració amb `rebase` + `merge --no-ff`
