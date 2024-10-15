@@ -1,93 +1,215 @@
 #!/bin/bash
 # Stop script on error
 set -e 
-# Print commands and their arguments as they are executed
-set -o xtrace
 
 if [ -d ~/gitflow ]; then
-    echo "Removing ~/gitflow"
     rm -rf ~/gitflow
 fi
+mkdir -p stdout
+SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+
+# Prompt is @u/@h:@w (branch) $
+user="jpuigcerver"
+host="fp"
+workdir="~"
+branch=""
+
+file=""
+
+home_dir=$HOME
+
+function rmi() {
+    if [ -f "$1" ]; then
+        rm "$1"
+    fi
+}
+
+# @TODO: redirections
+function x() {
+    prompt="$user@$host:$workdir"
+    branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || true)
+    if [ -n "$branch" ]; then
+        prompt="$prompt ($branch)"
+    fi
+    prompt="$prompt \$"
+    prompt=$(echo $prompt | sed "s|$home_dir|~|g")
+
+    if [ -n "$file" ]; then
+        echo "$prompt $@" | sed "s|$home_dir|~|g" | tee -a $file
+    else
+        echo "$prompt $@" | sed "s|$home_dir|~|g"
+    fi
+
+    # cd special case
+    if [ "$1" = "cd" ]; then
+        # Change directory in the current shell
+        builtin cd "${@:2}"
+        # Update workdir variable after changing directories
+        workdir="$(pwd)"
+        return  # Return so that it does not execute the next command
+    fi
+
+    output="$("$@" 2>&1)"  # Capture both stdout and stderr
+    output=$(echo "$output" | sed "s|$home_dir|~|g")
+    if [[ -n $output && "$output" != *$'\n' ]]; then
+        output="$output"$'\n'
+    fi
+
+
+    if [ -n "$file" ]; then
+        echo -n -e "$output" | tee -a $file
+    else
+        echo -n -e "$output"
+    fi
+}
+
+cd ~
 
 # Set up remote repository
-mkdir -p ~/gitflow/remot
-cd ~/gitflow/remot
-git init
-git branch -m main
-echo "# Gitflow" > README.md
-git add README.md
-git commit -m "1. Primer commit"
-git config --bool core.bare true
+file="$SCRIPTPATH/stdout/remot.txt"
+rmi $file
+x mkdir -p ~/gitflow/remot
+x cd ~/gitflow/remot
+x git init
+x git branch -m main
+x echo "# Gitflow" > README.md
+x git add README.md
+x git commit -m "1. Primer commit"
+x git lga
+x git config --bool core.bare true
+
+echo "==================================================="
 
 # Development branch
-git branch develop
+file="$SCRIPTPATH/stdout/development.txt"
+rmi $file
+x git branch develop
+x git lga
+
+echo "==================================================="
 
 # Clone repository
-cd ~/gitflow
-git clone remot anna
-git clone remot pau
-git clone remot mar
-git clone remot carles
+file="$SCRIPTPATH/stdout/clone.txt"
+rmi $file
+x cd ~/gitflow
+x git clone remot anna
+x git clone remot pau
+x git clone remot mar
+x git clone remot carles
+x tree .
+
+echo "==================================================="
 
 # Anna `feature/readme`
-cd ~/gitflow/anna
-git config user.name "Anna"
-git config user.email "anna@fpmislata.com"
-git checkout develop
-git checkout -b feature/readme
-echo "Gitflow és una estratègia de ramificació per a Git," >> README.md
-echo "que proporciona un marc de treball organitzat que" >> README.md
-echo "facilita la col·laboració entre diferents desenvolupadors" >> README.md
-echo "en un mateix projecte." >> README.md
-git commit -a -m "2. Afegida descripció del projecte"
-git push
+file="$SCRIPTPATH/stdout/feature_readme.txt"
+rmi $file
+user="anna"
+
+cd ~/gitflow/
+x cd ~/gitflow/anna
+x git config user.name "Anna"
+x git config user.email "anna@fpmislata.com"
+x git checkout develop
+x git checkout -b feature/readme
+x echo "Gitflow és una estratègia de ramificació per a Git," >> README.md
+x echo "que proporciona un marc de treball organitzat que" >> README.md
+x echo "facilita la col·laboració entre diferents desenvolupadors" >> README.md
+x echo "en un mateix projecte." >> README.md
+x git commit -a -m "2. Afegida descripció del projecte"
+x git push
+x git lga
+
+echo "==================================================="
 
 # Pau `feature/license`
-cd ~/gitflow/pau
-git config user.name "Pau"
-git config user.email "pau@fpmislata.com"
-git checkout develop
-git checkout -b feature/license
-echo "" >> LICENSE
-echo "## Llicència" >> LICENSE
-echo "CC BY-NC-SA 4.0 DEED - Reconeixement-NoComercial-CompartirIgual 4.0 Internacional" >> LICENSE
-echo "" >> LICENSE
-echo "Més informació: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" >> LICENSE
-git add LICENSE
-git commit -m "3. Afegida llicència"
-git push
+file="$SCRIPTPATH/stdout/feature_license.txt"
+rmi $file
+user="pau"
+
+cd ~/gitflow/
+workdir="~/gitflow"
+x cd ~/gitflow/pau
+x git config user.name "Pau"
+x git config user.email "pau@fpmislata.com"
+x git checkout develop
+x git checkout -b feature/license
+x echo "" >> LICENSE
+x echo "## Llicència" >> LICENSE
+x echo "CC BY-NC-SA 4.0 DEED - Reconeixement-NoComercial-CompartirIgual 4.0 Internacional" >> LICENSE
+x echo "" >> LICENSE
+x echo "Més informació: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" >> LICENSE
+x git add LICENSE
+x git commit -m "3. Afegida llicència"
+x git push
+x git lga
+
+echo "==================================================="
 
 # Mar `feature/author`
-cd ~/gitflow/mar
-git config user.name "Mar"
-git config user.email "mar@fpmislata.com"
-git checkout develop
-git checkout -b feature/author
-echo "" >> README.md
-echo "## Autors" >> README.md
-echo "Anna, Pau, Mar i Carles" >> README.md
-git commit -a -m "4. Afegits autors"
-git push
+file="$SCRIPTPATH/stdout/feature_author.txt"
+rmi $file
+user="mar"
+
+cd ~/gitflow/
+workdir="~/gitflow"
+x cd ~/gitflow/mar
+x git config user.name "Mar"
+x git config user.email "mar@fpmislata.com"
+x git checkout develop
+x git checkout -b feature/author
+x echo "" >> README.md
+x echo "## Autors" >> README.md
+x echo "Anna, Pau, Mar i Carles" >> README.md
+x git commit -a -m "4. Afegits autors"
+x git push
+x git lga
+
+echo "==================================================="
 
 # Carles `feature/documentacio`
-cd ~/gitflow/carles
-git config user.name "Carles"
-git config user.email "carles@fpmislata.com"
-git checkout develop
-git checkout -b feature/documentacio
-echo "" >> README.md
-echo "## Documentació" >> README.md
-echo "- https://git-scm.com/" >> README.md
-git commit -a -m "5. Afegida documentació"
-git push
+file="$SCRIPTPATH/stdout/feature_documentacio.txt"
+rmi $file
+user="carles"
+
+cd ~/gitflow/
+workdir="~/gitflow"
+x cd ~/gitflow/carles
+x git config user.name "Carles"
+x git config user.email "carles@fpmislata.com"
+x git checkout develop
+x git checkout -b feature/documentacio
+x echo "" >> README.md
+x echo "## Documentació" >> README.md
+x echo "- https://git-scm.com/" >> README.md
+x git commit -a -m "5. Afegida documentació"
+x git push
+x git lga
+
+echo "==================================================="
+
+# Estat remot
+file="$SCRIPTPATH/stdout/branques.txt"
+rmi $file
+user="jpuigcerver"
+
+cd ~/gitflow/
+workdir="~/gitflow"
+x cd ~/gitflow/remot
+x git lga
+
+echo "==================================================="
+exit 0
 
 # Anna: Integració amb `merge --no-ff`
 cd ~/gitflow/anna
 git fetch
+git lga
 git checkout develop
 git pull
 git merge --no-ff feature/readme --no-edit
+git lga
 git push
+git lga
 
 # Pau: Integració amb `rebase`
 cd ~/gitflow/pau
@@ -104,28 +226,48 @@ git push
 # Mar: Integració amb `rebase` + `merge --no-ff`
 cd ~/gitflow/mar
 git fetch
+git lga
 git checkout develop
 git pull
+git lga
 git checkout feature/author
 git rebase develop || true # Evita que el script acabe per `set -e`
 sed -i '/^<<<<<<<.*$/d; /^=======/d; /^>>>>>>>.*$/d' README.md # Elimina les marques de conflicte
 git add README.md
 GIT_EDITOR=true git rebase --continue
 git push -f
+git lga
 git checkout develop
 git merge --no-ff feature/author --no-edit
+git lga
 git push
+git lga
 
 # Carles: Integració amb `merge --squash`
 cd ~/gitflow/carles
 git fetch
+git lga
 git checkout develop
 git pull
+git lga
 git checkout feature/documentacio
-git merge --no-ff develop --no-edit # Podria ser rebase
-# @TODO solucionar conflictes canviant l'ordre
-git push
+git rebase develop || true # Podria ser merge
+# Solucionar conflictes canviant l'ordre del contingut
+awk '
+/^<<<<<<< HEAD$/ {in_head=1; next} 
+/^=======$/ {in_head=0; next} 
+/^>>>>>>> develop$/ {next} 
+in_head {head_lines = head_lines $0 "\n"; next} 
+{print $0} 
+END {print head_lines}' README.md > README.md.tmp
+mv README.md.tmp README.md
+git add README.md
+GIT_EDITOR=true git rebase --continue
+git push -f
+git lga
 git checkout develop
 git merge --squash feature/documentacio
+git lga
 git commit -m "Merge branch 'feature/documentacio'"
 git push
+git lga
