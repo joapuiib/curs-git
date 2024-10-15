@@ -4,12 +4,9 @@ set -e
 # Print commands and their arguments as they are executed
 set -o xtrace
 
-REBASE=0
-SQUASH=0
-if [ $1 == "--rebase" ]; then
-    REBASE=1
-elif [ $1 == "--squash" ]; then
-    SQUASH=1
+if [ -d ~/gitflow ]; then
+    echo "Removing ~/gitflow"
+    rm -rf ~/gitflow
 fi
 
 # Set up remote repository
@@ -30,6 +27,7 @@ cd ~/gitflow
 git clone remot anna
 git clone remot pau
 git clone remot mar
+git clone remot carles
 
 # Anna `feature/readme`
 cd ~/gitflow/anna
@@ -50,10 +48,11 @@ git config user.name "Pau"
 git config user.email "pau@fpmislata.com"
 git checkout develop
 git checkout -b feature/license
-echo "Llicència:" >> LICENSE
-echo "- CC BY-NC-SA 4.0 DEED - Reconeixement-NoComercial-CompartirIgual 4.0 Internacional" >> LICENSE
 echo "" >> LICENSE
-echo "More info: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" >> LICENSE
+echo "## Llicència" >> LICENSE
+echo "CC BY-NC-SA 4.0 DEED - Reconeixement-NoComercial-CompartirIgual 4.0 Internacional" >> LICENSE
+echo "" >> LICENSE
+echo "Més informació: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" >> LICENSE
 git add LICENSE
 git commit -m "3. Afegida llicència"
 git push
@@ -66,105 +65,67 @@ git checkout develop
 git checkout -b feature/author
 echo "" >> README.md
 echo "## Autors" >> README.md
-echo "Anna, Pau i Mar" >> README.md
+echo "Anna, Pau, Mar i Carles" >> README.md
 git commit -a -m "4. Afegits autors"
 git push
 
-if [ $REBASE -eq 1 ]; then
-    # Integració amb rebase
-    # Integracio `feature/readme`
-    cd ~/gitflow/anna
-    git fetch
-    git checkout develop
-    git pull
-    git checkout feature/readme
-    git rebase develop
-    git checkout develop
-    git merge --ff-only feature/readme
-    git push
-    git push -d origin feature/readme
-    git branch -d feature/readme
+# Carles `feature/documentacio`
+cd ~/gitflow/carles
+git config user.name "Carles"
+git config user.email "carles@fpmislata.com"
+git checkout develop
+git checkout -b feature/documentacio
+echo "" >> README.md
+echo "## Documentació" >> README.md
+echo "- https://git-scm.com/" >> README.md
+git commit -a -m "5. Afegida documentació"
+git push
 
-    # Integracio `feature/license`
-    cd ~/gitflow/pau
-    git fetch
-    git checkout develop
-    git pull
-    git checkout feature/license
-    git rebase develop
-    git checkout develop
-    git merge --ff-only feature/license
-    git push
-    git push -d origin feature/license
-    git branch -d feature/license
-
-    # Integracio `feature/author`
-    cd ~/gitflow/mar
-    # git fetch
-    # git checkout develop
-    # git pull
-    git checkout feature/author
-    git rebase develop
-    git checkout develop
-    git merge --ff-only feature/author
-    git push || true # Evita que el script acabe per `set -e`
-    git pull --rebase || true
-    sed -i '/^<<<<<<<.*$/d; /^=======/d; /^>>>>>>>.*$/d' README.md # Elimina les marques de conflicte
-    git add README.md
-    GIT_EDITOR=true git rebase --continue # Continua el rebase sense obrir l'editor
-    git push
-    git push -d origin feature/author
-    git branch -D feature/author
-
-elif [ $SQUASH -eq 1 ]; then
-    # Integració amb squash
-    # Integracio `feature/readme`
-    cd ~/gitflow/anna
-    git fetch
-    git checkout develop
-    git pull
-    git checkout feature/readme
-    git merge develop
-    git checkout develop
-    git merge --squash feature/readme
-    git commit -m "Merge branch 'feature/readme'"
-    git push
-    git branch -d feature/readme
-    git push -d origin feature/readme
-
-    # Integracio `feature/license`
-    cd ~/gitflow/pau
-    git fetch
-    git checkout develop
-    git pull
-    git checkout feature/license
-    git merge develop --no-edit
-    git checkout develop
-    git merge --squash feature/license
-    git commit -m "Merge branch 'feature/license'"
-    git push
-    git branch -D feature/license
-    git push -d origin feature/license
-fi
-
-# Anna `release/1.0.0`
+# Anna: Integració amb `merge --no-ff`
 cd ~/gitflow/anna
+git fetch
 git checkout develop
 git pull
-git checkout -b release/1.0.0
-echo "1.0.0" >> VERSION
-git add VERSION
-git commit -m "Versió 1.0.0"
+git merge --no-ff feature/readme --no-edit
+git push
 
-git tag "v1.0.0"
-git push origin v1.0.0
-
+# Pau: Integració amb `rebase`
+cd ~/gitflow/pau
+git fetch
 git checkout develop
-git merge --ff-only release/1.0.0
+git pull
+git checkout feature/license
+git rebase develop
+git push -f
+git checkout develop
+git merge --ff-only feature/license
 git push
 
-git checkout main
-git merge --ff-only release/1.0.0
+# Mar: Integració amb `rebase` + `merge --no-ff`
+cd ~/gitflow/mar
+git fetch
+git checkout develop
+git pull
+git checkout feature/author
+git rebase develop || true # Evita que el script acabe per `set -e`
+sed -i '/^<<<<<<<.*$/d; /^=======/d; /^>>>>>>>.*$/d' README.md # Elimina les marques de conflicte
+git add README.md
+GIT_EDITOR=true git rebase --continue
+git push -f
+git checkout develop
+git merge --no-ff feature/author --no-edit
 git push
 
-git branch -d release/1.0.0
+# Carles: Integració amb `merge --squash`
+cd ~/gitflow/carles
+git fetch
+git checkout develop
+git pull
+git checkout feature/documentacio
+git merge --no-ff develop --no-edit # Podria ser rebase
+# @TODO solucionar conflictes canviant l'ordre
+git push
+git checkout develop
+git merge --squash feature/documentacio
+git commit -m "Merge branch 'feature/documentacio'"
+git push
