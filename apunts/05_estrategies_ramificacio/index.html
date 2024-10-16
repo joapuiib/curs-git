@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
     
     
       
@@ -30,7 +30,7 @@
     
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -362,6 +362,8 @@
       
         
           
+        
+      
         
       
         
@@ -794,6 +796,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#repositori-remot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repositori remot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#branca-de-desenvolupament" class="md-nav__link">
     <span class="md-ellipsis">
       Branca de desenvolupament
@@ -968,6 +979,32 @@
   
   <span class="md-ellipsis">
     Bloc 6: Gestió de projectes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      
+      <a href="../07_educativa/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg>
+  
+  
+  <span class="md-ellipsis">
+    Bloc 7: GitHub com a plataforma educativa
   </span>
   
 
@@ -1281,6 +1318,15 @@
   
     <nav class="md-nav" aria-label="Exemple de flux de treball">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repositori-remot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repositori remot
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#branca-de-desenvolupament" class="md-nav__link">
@@ -1965,6 +2011,11 @@ mitjançant un <strong>commit de fusió</strong> amb <code>merge --no-ff</code>.
 mitjançant <code>merge --squash</code>, de manera que tots els <em>commits</em> de la branca de funcionalitat es fusionen
 en un <strong>únic <em>commit</em></strong>.</p>
 <p>@TODO: Figura merge --squash</p>
+<p>En el cas que hi hagen conflictes, una bona pràctica és integrar els canvis de <code>develop</code> a la branca de funcionalitat
+i resoldre'ls abans de realitzar la fusió.</p>
+<p>Aquesta integració de canvis es pot realitzar amb <code>rebase</code> o amb <code>merge --no-ff</code>.</p>
+<p>@TODO: Figura rebase + merge --squash</p>
+<p>@TODO: Figura merge --no-ff + merge --squash</p>
 <p>Els avantatges principals són:</p>
 <ul>
 <li>Manté la història lineal.</li>
@@ -1981,14 +2032,11 @@ en un <strong>únic <em>commit</em></strong>.</p>
 <li>Dificulta la revisió de canvis individuals.</li>
 </ul>
 <h2 id="exemple-de-flux-de-treball">Exemple de flux de treball<a class="headerlink" href="#exemple-de-flux-de-treball" title="Permanent link">&para;</a></h2>
-<p>En aquest apartat veurem com es pot utilitzar <strong>Gitflow</strong> en un projecte de desenvolupament
-de programari, seguint una sèrie de passos i pautes per aconseguir un flux de treball eficient.</p>
-<p>A més, s'exposaran dues tècinques per integrar les branques de funcionalitats amb la branca de desenvolupament,
-utilitzant <code>rebase</code> i <code>merge squash</code> de tal manera que la història del projecte siga <strong>lineal</strong>.</p>
-<div class="admonition prep">
-<p class="admonition-title">Preparació repositori remot</p>
-<p>Per veure el funcionament de <strong>Gitflow</strong> en un projecte real,
-anem a simular un projecte de desenvolupament de programari
+<p>En aquest apartat veurem com es pot utilitzar una estratègia de ramificació
+en un projecte de desenvolupament de programari.</p>
+<p>En aquest projecte utilitzarem la tècnica d'integració <strong><code>rebase</code> + <code>merge --squash</code></strong>.</p>
+<h3 id="repositori-remot">Repositori remot<a class="headerlink" href="#repositori-remot" title="Permanent link">&para;</a></h3>
+<p>Anem a simular un projecte de desenvolupament de programari
 on tres desenvolupadors treballen en diferents funcionalitats
 de manera independent.</p>
 <p>Per evitar haver de crear un repositori a <a href="https://github.com" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg></span> GitHub</a>,
@@ -1997,37 +2045,33 @@ crearem un repositori remot en la màquina local.</p>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">cd</span><span class="w"> </span>~/gitflow/remot
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/remot</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>init
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="go">Initialized empty Git repository in ~/gitflow/remot/.git/</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/remot</span><span class="gp-w"> </span><span class="gp-gb">(HEAD)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>branch<span class="w"> </span>-m<span class="w"> </span>main
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/remot</span><span class="gp-w"> </span><span class="gp-gb">(HEAD)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="c1"># Gitflow</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="go"># Gitflow</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/remot</span><span class="gp-w"> </span><span class="gp-gb">(HEAD)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>add<span class="w"> </span>README.md
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/remot</span><span class="gp-w"> </span><span class="gp-gb">(HEAD)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="m">1</span>.<span class="w"> </span>Primer<span class="w"> </span>commit
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="go">[main (root-commit) 41c3aa7] 1. Primer commit</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="go"> 1 file changed, 2 insertions(+)</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="go"> create mode 100644 README.md</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/remot</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">41c3aa7</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">1. Primer commit</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/remot</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>config<span class="w"> </span>--bool<span class="w"> </span>core.bare<span class="w"> </span><span class="nb">true</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/remot</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>branch<span class="w"> </span>-m<span class="w"> </span>main
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/remot</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;# Gitflow&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>README.md
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/remot</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>add<span class="w"> </span>README.md
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/remot</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;1. Primer commit&quot;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="go">[main (root-commit) 7cf4080] 1. Primer commit</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="go"> 1 file changed, 1 insertion(+)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="go"> create mode 100644 README.md</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/remot</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">7cf4080</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">1. Primer commit</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/remot</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>config<span class="w"> </span>--bool<span class="w"> </span>core.bare<span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="c1"># (1)!</span>
 </span></code></pre></div>
 <ol class="fancylists-decimal" type="1">
 <li>Aquesta comanda és necessària perquè el repositori siga <strong>bare</strong> i puga ser utilitzat com a repositori remot.</li>
 </ol>
-</div>
 <h3 id="branca-de-desenvolupament">Branca de desenvolupament<a class="headerlink" href="#branca-de-desenvolupament" title="Permanent link">&para;</a></h3>
 <p>El primer pas per establir un flux de treball amb <strong>Gitflow</strong>
 és crear la branca de desenvolupament <code>develop</code>.</p>
 <div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/remot</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>branch<span class="w"> </span>develop
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/remot</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">41c3aa7</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">1. Primer commit</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main, develop)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">7cf4080</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">1. Primer commit</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main, develop)</span>
 </span></code></pre></div>
 <h3 id="desenvolupament-de-funcionalitats">Desenvolupament de funcionalitats<a class="headerlink" href="#desenvolupament-de-funcionalitats" title="Permanent link">&para;</a></h3>
 <p>En aquest punt, podem començar a desenvolupar les diferents funcionalitats del projecte
 en branques independents.</p>
-<div class="admonition prep">
-<p class="admonition-title">Preparació repositoris locals</p>
 <p>Crearem un repositori local per a cada desenvolupador,
-simulant que treballen cadascú en el seu dispositiu.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">cd</span><span class="w"> </span>~/gitflow
+simulant que cadascú treballa en el seu dispositiu.</p>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/remot</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">cd</span><span class="w"> </span>~/gitflow
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>clone<span class="w"> </span>remot<span class="w"> </span>anna
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="go">Cloning into &#39;anna&#39;...</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="go">done.</span>
@@ -2037,20 +2081,24 @@ simulant que treballen cadascú en el seu dispositiu.</p>
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>clone<span class="w"> </span>remot<span class="w"> </span>mar
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="go">Cloning into &#39;mar&#39;...</span>
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="go">done.</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>tree<span class="w"> </span>.
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="go">.</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="go">├── anna</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="go">│   └── README.md</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="go">├── mar</span>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="go">│   └── README.md</span>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="go">├── pau</span>
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="go">│   └── README.md</span>
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="go">└── remot</span>
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="go">    └── README.md</span>
-</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
-</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="go">5 directories, 4 files</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>clone<span class="w"> </span>remot<span class="w"> </span>carles
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="go">Cloning into &#39;carles&#39;...</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="go">done.</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>tree<span class="w"> </span>.
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="go">.</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="go">├── anna</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="go">│   └── README.md</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="go">├── carles</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="go">│   └── README.md</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="go">├── mar</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="go">│   └── README.md</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="go">├── pau</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="go">│   └── README.md</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="go">└── remot</span>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="go">    └── README.md</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="go">6 directories, 5 files</span>
 </span></code></pre></div>
-</div>
 <p>Cada desenvolupador començarà a treballar en una nova funcionalitat.</p>
 <ul>
 <li>Anna treballarà en la funcionalitat <code>feature/readme</code>, que consistirà a afegir una descripció del projecte al README.</li>
@@ -2062,7 +2110,7 @@ en la seua pròpia branca de funcionalitat de manera independent i paral·lela.<
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>És important que cada desenvolupador treballe en una única branca per funcionalitat, i que una mateixa branca no es compartisca entre desenvolupadors.</p>
-<p>Si existeix la necessitat de compartir una branca, segurament siga perque la funcionalitat no està ben definida i segurament es podrà dividir en diverses funcionalitats més xicotetes.</p>
+<p>Si existeix la necessitat de compartir una branca, segurament siga perque la funcionalitat no està ben definida i podrà ser dividida en diverses funcionalitats més xicotetes.</p>
 </div>
 <h4 id="branca-featurereadme">Branca <code>feature/readme</code><a class="headerlink" href="#branca-featurereadme" title="Permanent link">&para;</a></h4>
 <p>Anna començarà a treballar en la seua funcionalitat <code>feature/readme</code> en el seu repositori local.</p>
@@ -2072,38 +2120,28 @@ en la seua pròpia branca de funcionalitat de manera independent i paral·lela.<
 per simular que cada desenvolupador treballa en el seu propi dispositiu.</p>
 <p>També es mostra el nom en el prompt.</p>
 </div>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">cd</span><span class="w"> </span>anna
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">cd</span><span class="w"> </span>~/gitflow/anna
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>config<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Anna&quot;</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>config<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;anna@fpmislata.com&quot;</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>develop
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="go">Switched to branch &#39;develop&#39;</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="go">branch &#39;develop&#39; set up to track &#39;origin/develop&#39;.</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="go">branch &#39;develop&#39; set up to track &#39;origin/develop&#39;.</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="go">Switched to a new branch &#39;develop&#39;</span>
 </span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(develop)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/readme
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="go">Switched to a new branch &#39;feature/readme&#39;</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(feature/readme)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>vim<span class="w"> </span>README.md
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(feature/readme)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>diff
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="gh">diff --git a/README.md b/README.md</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="gh">index 938f41f..2822753 100644</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="gd">--- a/README.md</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="gi">+++ b/README.md</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="gu">@@ -1 +1,5 @@</span>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w"> </span># Gitflow
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="gi">+Gitflow és una estratègia de ramificació per a Git,</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="gi">+que proporciona un marc de treball organitzat que</span>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="gi">+facilita la col·laboració entre diferents desenvolupadors</span>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="gi">+en un mateix projecte.</span>
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(feature/readme)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>add<span class="w"> </span>README.md
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(feature/readme)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;2. Afegida descripció del projecte&quot;</span>
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="go">[feature/readme 0fb88ef] 2. Afegida descripció del projecte</span>
-</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="go"> 1 file changed, 4 insertions(+)</span>
-</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(feature/readme)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>push
-</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="go">Total 3 (delta 0), reused 0 (delta 0), pack-reused 0</span>
-</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="go">To /home/jpuigcerver/gitflow/remot</span>
-</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="go"> * [new branch]      feature/readme -&gt; feature/readme</span>
-</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="go">branch &#39;feature/readme&#39; set up to track &#39;origin/feature/readme&#39;.</span>
-</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(feature/readme)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
-</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">0fb88ef</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(1 minute ago)</span><span class="w"> </span><span class="git-cm">2. Afegida descripció del projecte</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span><span class="w"> </span><span class="git-r">(HEAD -&gt; feature/readme, origin/feature/readme)</span>
-</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8e70293</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(11 minutes ago)</span><span class="w"> </span><span class="git-cm">1. Primer commit</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(main, develop, origin/main, origin/develop)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(feature/readme)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Gitflow és una estratègia de ramificació per a Git,&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(feature/readme)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;que proporciona un marc de treball organitzat que&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(feature/readme)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;facilita la col·laboració entre diferents desenvolupadors&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(feature/readme)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;en un mateix projecte.&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(feature/readme)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;2. Afegida descripció del projecte&quot;</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="go">[feature/readme 61742c0] 2. Afegida descripció del projecte</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="go"> 1 file changed, 4 insertions(+)</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(feature/readme)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>push
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="go">branch &#39;feature/readme&#39; set up to track &#39;origin/feature/readme&#39;.</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="go">To ~/gitflow/remot</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="go"> * [new branch]      feature/readme -&gt; feature/readme</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(feature/readme)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">61742c0</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">2. Afegida descripció del projecte</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span><span class="w"> </span><span class="git-r">(HEAD -&gt; feature/readme, origin/feature/readme)</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">7cf4080</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">1. Primer commit</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(origin/main, origin/develop, origin/HEAD, main, develop)</span>
 </span></code></pre></div>
 <p>Els passos seguits per Anna són:</p>
 <ul>
@@ -2113,31 +2151,31 @@ per simular que cada desenvolupador treballa en el seu propi dispositiu.</p>
 </ul>
 <h4 id="branca-featurelicense">Branca <code>feature/license</code><a class="headerlink" href="#branca-featurelicense" title="Permanent link">&para;</a></h4>
 <p>Pau començarà a treballar en la seua funcionalitat <code>feature/license</code> en el seu repositori local.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">cd</span><span class="w"> </span>pau
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">cd</span><span class="w"> </span>~/gitflow/pau
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/pau</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>config<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Pau&quot;</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/pau</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>config<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;pau@fpmislata.com&quot;</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/pau</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>develop
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="go">Switched to branch &#39;develop&#39;</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="go">branch &#39;develop&#39; set up to track &#39;origin/develop&#39;.</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="go">branch &#39;develop&#39; set up to track &#39;origin/develop&#39;.</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="go">Switched to a new branch &#39;develop&#39;</span>
 </span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/pau</span><span class="gp-w"> </span><span class="gp-gb">(develop)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/license
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="go">Switched to a new branch &#39;feature/license&#39;</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/pau</span><span class="gp-w"> </span><span class="gp-gb">(feature/license)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>vim<span class="w"> </span>LICENSE
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/pau</span><span class="gp-w"> </span><span class="gp-gb">(feature/license)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>cat<span class="w"> </span>LICENCE<span class="w"> </span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="go">Llicència:</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="go">- CC BY-NC-SA 4.0 DEED - Reconeixement-NoComercial-CompartirIgual 4.0 Internacional</span>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="go">More info: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca</span>
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/pau</span><span class="gp-w"> </span><span class="gp-gb">(feature/license)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>add<span class="w"> </span>LICENSE
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/pau</span><span class="gp-w"> </span><span class="gp-gb">(feature/license)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;3. Afegida llicència&quot;</span>
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="go">[feature/license b1265b9] 3. Afegida llicència</span>
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="go"> 1 file changed, 4 insertions(+)</span>
-</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/pau</span><span class="gp-w"> </span><span class="gp-gb">(feature/license)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>feature/license
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="go">To /home/jpuigcerver/gitflow/remot</span>
-</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="go"> * [new branch]      feature/license -&gt; feature/license</span>
-</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="go">branch &#39;feature/license&#39; set up to track &#39;origin/feature/license&#39;.</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/pau</span><span class="gp-w"> </span><span class="gp-gb">(feature/license)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>LICENSE
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/pau</span><span class="gp-w"> </span><span class="gp-gb">(feature/license)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;## Llicència&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>LICENSE
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/pau</span><span class="gp-w"> </span><span class="gp-gb">(feature/license)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;CC BY-NC-SA 4.0 DEED - Reconeixement-NoComercial-CompartirIgual 4.0 Internacional&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>LICENSE
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/pau</span><span class="gp-w"> </span><span class="gp-gb">(feature/license)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>LICENSE
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/pau</span><span class="gp-w"> </span><span class="gp-gb">(feature/license)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Més informació: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>LICENSE
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/pau</span><span class="gp-w"> </span><span class="gp-gb">(feature/license)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>add<span class="w"> </span>LICENSE
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/pau</span><span class="gp-w"> </span><span class="gp-gb">(feature/license)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;3. Afegida llicència&quot;</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="go">[feature/license 043e89b] 3. Afegida llicència</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="go"> 1 file changed, 5 insertions(+)</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="go"> create mode 100644 LICENSE</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/pau</span><span class="gp-w"> </span><span class="gp-gb">(feature/license)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>push
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="go">branch &#39;feature/license&#39; set up to track &#39;origin/feature/license&#39;.</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="go">To ~/gitflow/remot</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="go"> * [new branch]      feature/license -&gt; feature/license</span>
 </span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/pau</span><span class="gp-w"> </span><span class="gp-gb">(feature/license)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
-</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">b1265b9</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(1 minute ago)</span><span class="w"> </span><span class="git-cm">3. Afegida llicència</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Pau</span><span class="w"> </span><span class="git-r">(HEAD -&gt; feature/license, origin/feature/license)</span>
-</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8e70293</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(11 minutes ago)</span><span class="w"> </span><span class="git-cm">1. Primer commit</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(main, develop, origin/main, origin/develop)</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">043e89b</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">3. Afegida llicència</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Pau</span><span class="w"> </span><span class="git-r">(HEAD -&gt; feature/license, origin/feature/license)</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">7cf4080</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">1. Primer commit</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(origin/main, origin/develop, origin/HEAD, main, develop)</span>
 </span></code></pre></div>
 <p>Els passos seguits per Pau són:</p>
 <ul>
@@ -2147,38 +2185,7 @@ per simular que cada desenvolupador treballa en el seu propi dispositiu.</p>
 </ul>
 <h4 id="branca-featureauthor">Branca <code>feature/author</code><a class="headerlink" href="#branca-featureauthor" title="Permanent link">&para;</a></h4>
 <p>Mar començarà a treballar en la seua funcionalitat <code>feature/author</code> en el seu repositori local.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="gp-uh">mar@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">cd</span><span class="w"> </span>mar
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="gp-uh">mar@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/mar</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>config<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Mar&quot;</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="gp-uh">mar@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/mar</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>config<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;mar@fpmislata.com&quot;</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="gp-uh">mar@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/mar</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>develop
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="go">Switched to branch &#39;develop&#39;</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="go">branch &#39;develop&#39; set up to track &#39;origin/develop&#39;.</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="gp-uh">mar@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/mar</span><span class="gp-w"> </span><span class="gp-gb">(develop)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/author
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="go">Switched to a new branch &#39;feature/author&#39;</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="gp-uh">mar@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/mar</span><span class="gp-w"> </span><span class="gp-gb">(feature/author)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>vim<span class="w"> </span>README.md
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="gp-uh">mar@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/mar</span><span class="gp-w"> </span><span class="gp-gb">(feature/author)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>diff
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="gh">diff --git a/README.md b/README.md</span>
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="gh">index 2822753..a482a10 100644</span>
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="gd">--- a/README.md</span>
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="gi">+++ b/README.md</span>
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="gu">@@ -3,3 +3,6 @@ Gitflow és una estratègia de ramificació per a Git,</span>
-</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w"> </span>que proporciona un marc de treball organitzat que
-</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w"> </span>facilita la col·laboració entre diferents desenvolupadors
-</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w"> </span>en un mateix projecte.
-</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="gi">+</span>
-</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="gi">+## Autors</span>
-</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="gi">+Anna, Pau i Mar</span>
-</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="gp-uh">mar@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/mar</span><span class="gp-w"> </span><span class="gp-gb">(feature/author)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>add<span class="w"> </span>README.md
-</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="gp-uh">mar@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/mar</span><span class="gp-w"> </span><span class="gp-gb">(feature/author)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;4. Afegits autors&quot;</span>
-</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="go">[feature/author f853946] 4. Afegits autors</span>
-</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="go"> 1 file changed, 3 insertions(+)</span>
-</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="gp-uh">mar@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/mar</span><span class="gp-w"> </span><span class="gp-gb">(feature/author)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>feature/author
-</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="go">To /home/jpuigcerver/gitflow/remot</span>
-</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="go"> * [new branch]      feature/author -&gt; feature/author</span>
-</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="go">Branch &#39;feature/author&#39; set up to track &#39;origin/feature/author&#39;.</span>
-</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="gp-uh">mar@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/mar</span><span class="gp-w"> </span><span class="gp-gb">(feature/author)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
-</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">f853946</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(1 minute ago)</span><span class="w"> </span><span class="git-cm">4. Afegits autors</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Mar</span><span class="w"> </span><span class="git-r">(HEAD -&gt; feature/author, origin/feature/author)</span>
-</span><span id="__span-5-32"><a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8e70293</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(11 minutes ago)</span><span class="w"> </span><span class="git-cm">1. Primer commit</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(main, develop, origin/main, origin/develop)</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>
 </span></code></pre></div>
 <p>Els passos seguits per Mar són:</p>
 <ul>
@@ -2746,7 +2753,7 @@ i a la branca de desenvolupament <code>develop</code>.</p>
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">15 d’octubre del 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">16 d’octubre del 2024</span>
   </span>
 
     
@@ -2971,7 +2978,7 @@ i a la branca de desenvolupament <code>develop</code>.</p>
     
     
     
-      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
     <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>

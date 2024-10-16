@@ -1,28 +1,25 @@
 pau@fp:~/gitflow $ cd ~/gitflow/pau
-pau@fp:~/gitflow/pau (main) $ git config user.name Pau
-pau@fp:~/gitflow/pau (main) $ git config user.email pau@fpmislata.com
+pau@fp:~/gitflow/pau (main) $ git config user.name "Pau"
+pau@fp:~/gitflow/pau (main) $ git config user.email "pau@fpmislata.com"
 pau@fp:~/gitflow/pau (main) $ git checkout develop
-Switched to a new branch 'develop'
 branch 'develop' set up to track 'origin/develop'.
+Switched to a new branch 'develop'
 pau@fp:~/gitflow/pau (develop) $ git checkout -b feature/license
 Switched to a new branch 'feature/license'
-pau@fp:~/gitflow/pau (feature/license) $ echo 
-pau@fp:~/gitflow/pau (feature/license) $ echo ## Llicència
-## Llicència
-pau@fp:~/gitflow/pau (feature/license) $ echo CC BY-NC-SA 4.0 DEED - Reconeixement-NoComercial-CompartirIgual 4.0 Internacional
-CC BY-NC-SA 4.0 DEED - Reconeixement-NoComercial-CompartirIgual 4.0 Internacional
-pau@fp:~/gitflow/pau (feature/license) $ echo 
-pau@fp:~/gitflow/pau (feature/license) $ echo Més informació: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca
-Més informació: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca
+pau@fp:~/gitflow/pau (feature/license) $ echo "" > LICENSE
+pau@fp:~/gitflow/pau (feature/license) $ echo "## Llicència" >> LICENSE
+pau@fp:~/gitflow/pau (feature/license) $ echo "CC BY-NC-SA 4.0 DEED - Reconeixement-NoComercial-CompartirIgual 4.0 Internacional" >> LICENSE
+pau@fp:~/gitflow/pau (feature/license) $ echo "" >> LICENSE
+pau@fp:~/gitflow/pau (feature/license) $ echo "Més informació: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" >> LICENSE
 pau@fp:~/gitflow/pau (feature/license) $ git add LICENSE
-pau@fp:~/gitflow/pau (feature/license) $ git commit -m 3. Afegida llicència
-[feature/license f790b4c] 3. Afegida llicència
- 1 file changed, 8 insertions(+)
+pau@fp:~/gitflow/pau (feature/license) $ git commit -m "3. Afegida llicència"
+[feature/license 043e89b] 3. Afegida llicència
+ 1 file changed, 5 insertions(+)
  create mode 100644 LICENSE
 pau@fp:~/gitflow/pau (feature/license) $ git push
+branch 'feature/license' set up to track 'origin/feature/license'.
 To ~/gitflow/remot
  * [new branch]      feature/license -> feature/license
-branch 'feature/license' set up to track 'origin/feature/license'.
 pau@fp:~/gitflow/pau (feature/license) $ git lga
-* f790b4c - (0 seconds ago) 3. Afegida llicència - Pau (HEAD -> feature/license, origin/feature/license)
-* 41c3aa7 - (0 seconds ago) 1. Primer commit - Joan Puigcerver (origin/main, origin/develop, origin/HEAD, main, develop)
+* 043e89b - (0 seconds ago) 3. Afegida llicència - Pau (HEAD -> feature/license, origin/feature/license)
+* 7cf4080 - (0 seconds ago) 1. Primer commit - Joan Puigcerver (origin/main, origin/develop, origin/HEAD, main, develop)
