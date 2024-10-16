@@ -1,12 +1,10 @@
-mar@fp:~/gitflow/mar (develop) $ git branch -d feature/author
-Deleted branch feature/author (was db65dda).
-warning: deleting branch 'feature/author' that has been merged to
-         'refs/remotes/origin/feature/author', but not yet merged to HEAD
+mar@fp:~/gitflow/mar (develop) $ git branch -D feature/author
+Deleted branch feature/author (was 170a575).
 mar@fp:~/gitflow/mar (develop) $ git push origin --delete feature/author
 To ~/gitflow/remot
  - [deleted]         feature/author
 mar@fp:~/gitflow/mar (develop) $ git lga
-* d8f53dd - (1 second ago) Merge branch 'feature/author' - Mar (HEAD -> develop, origin/develop)
-* feb6177 - (1 second ago) Merge branch 'feature/license' - Pau
-* 6dcedfa - (1 second ago) Merge branch 'feature/readme' - Anna
-* 58facc3 - (1 second ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)
+* d528774 - (0 seconds ago) Merge branch 'feature/author' - Mar (HEAD -> develop, origin/develop)
+* 9ee1217 - (1 second ago) Merge branch 'feature/license' - Pau
+* 069239c - (1 second ago) Merge branch 'feature/readme' - Anna
+* a1acfb5 - (1 second ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)

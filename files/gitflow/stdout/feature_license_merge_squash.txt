@@ -1,0 +1,50 @@
+pau@fp:~/gitflow/pau (feature/license) $ git checkout develop
+Your branch is up to date with 'origin/develop'.
+Switched to branch 'develop'
+pau@fp:~/gitflow/pau (develop) $ git merge --squash feature/license
+Updating 069239c..cd0d7ee
+Fast-forward
+Squash commit -- not updating HEAD
+ LICENSE | 5 +++++
+ 1 file changed, 5 insertions(+)
+ create mode 100644 LICENSE
+pau@fp:~/gitflow/pau (develop) $ git status
+On branch develop
+Your branch is up to date with 'origin/develop'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   LICENSE
+
+pau@fp:~/gitflow/pau (develop) $ git diff --staged
+diff --git a/LICENSE b/LICENSE
+new file mode 100644
+index 0000000..809d714
+--- /dev/null
++++ b/LICENSE
+@@ -0,0 +1,5 @@
++
++## Llicència
++CC BY-NC-SA 4.0 DEED - Reconeixement-NoComercial-CompartirIgual 4.0 Internacional
++
++Més informació: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca
+pau@fp:~/gitflow/pau (develop) $ git commit -m "Merge branch 'feature/license'"
+[develop 9ee1217] Merge branch 'feature/license'
+ 1 file changed, 5 insertions(+)
+ create mode 100644 LICENSE
+pau@fp:~/gitflow/pau (develop) $ git lga
+* 9ee1217 - (0 seconds ago) Merge branch 'feature/license' - Pau (HEAD -> develop)
+| *   cd0d7ee - (0 seconds ago) Merge branch 'develop' into feature/license - Pau (feature/license)
+| |\  
+| |/  
+|/|   
+* | 069239c - (0 seconds ago) Merge branch 'feature/readme' - Anna (origin/develop)
+| * db2c8a8 - (0 seconds ago) LICENSE: Enllaç a la llicència - Pau (origin/feature/license)
+| * d20ffa3 - (0 seconds ago) LICENSE: Afegida llicència - Pau
+|/  
+| * 3e60c32 - (0 seconds ago) Autors: Mar - Mar (origin/feature/author)
+| * 32a7bd7 - (0 seconds ago) Autors: Pau - Mar
+| * cebc3c1 - (0 seconds ago) Autors: Anna - Mar
+| * 0677978 - (0 seconds ago) README.md: Secció d'autors - Mar
+|/  
+* a1acfb5 - (0 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)
