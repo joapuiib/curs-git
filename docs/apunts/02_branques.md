@@ -347,6 +347,11 @@ fins on es troba la branca que es vol fusionar.
     ja que no es crea cap `commit` addicional per fusionar les branques i
     manté una __història lineal__ i fàcil de seguir.
 
+!!! info
+    Per assegurar-se que la fusió siga directa, es pot utilitzar l'opció `--ff-only`
+
+    En cas que la fusió no siga directa, Git mostrarà un error i no es realitzarà la fusió.
+
 !!! example annotate
     Partint de la situació de la [Figura 4](#figure-4), on la branca `docs` té un `commit` més que la branca `main`,
     la fusió de la branca `docs` a la branca `main` serà una fusió directa.
@@ -458,7 +463,7 @@ realitzat canvis que no estan presents en l'altra branca.
 </figure>
 
 En aquest cas, la fusió es realitza mitjançant un __commit de fusió__ (_merge commit_).
-Aquest `commit` de fusió té dos pares (`parents`), un per cada branca que es fusiona
+Aquest `commit` de fusió té dos pares, un per cada branca que es fusiona
 i incorpora els canvis de les dues branques.
 
 <figure id="figure-8">
@@ -466,16 +471,20 @@ i incorpora els canvis de les dues branques.
     <figcaption>Figura 8: Història després de la fusió en branques divergents.</figcaption>
 </figure>
 
-En el moment de realitzar la fusió (`git merge`), Git crearà un nou `commit` de fusió
-que incorporarà els canvis de les dues branques. Aquest `commit` necessita d'un missatge,
-per tant, es pot utilitzar l'opció `-m` per afegir un missatge al `commit`.
-Si no se n'especifica cap, s'obrirà l'editor de text configurat per defecte per a afegir el missatge
-(Vegeu [Confirmar canvis](01_introduccio.md#confirmar-canvis-git-commit)).
+En el moment de realitzar la fusió (`git merge`),
+Git crearà un nou `commit` de fusió que incorporarà els canvis de les dues branques.
+
+Aquest `commit` necessita d'un missatge, per tant, es pot utilitzar l'opció `-m` per afegir un missatge al `commit`.
+Si no se n'especifica cap, s'obrirà l'editor de text configurat per defecte per a afegir el missatge.
+(Vegeu [Confirmar canvis](01_introduccio.md#confirmar-canvis-git-commit))
 
 !!! warning
     Aquest tipus de fusió no és tan neta com la __fusió directa__ (_fast-forward_),
     ja que la història del projecte es torna més complexa i __no lineal__.
 
+!!! info
+    Per forçar que la fusió es realitze amb un __commit de fusió__ (_merge commit_),
+    es pot utilitzar l'opció `--no-ff`.
 
 !!! example annotate "Fusió de branques divergents"
     Realitzem la fusió de les dues branques.
