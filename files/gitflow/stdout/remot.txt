@@ -3,12 +3,12 @@ jpuigcerver@fp:~ $ cd ~/gitflow/remot
 jpuigcerver@fp:~/gitflow/remot $ git init
 Initialized empty Git repository in ~/gitflow/remot/.git/
 jpuigcerver@fp:~/gitflow/remot (main) $ git branch -m main
-jpuigcerver@fp:~/gitflow/remot (main) $ echo "# Gitflow" > README.md
+jpuigcerver@fp:~/gitflow/remot (main) $ echo "# Estratègies de ramificació" > README.md
 jpuigcerver@fp:~/gitflow/remot (main) $ git add README.md
-jpuigcerver@fp:~/gitflow/remot (main) $ git commit -m "1. Primer commit"
-[main (root-commit) 7cf4080] 1. Primer commit
+jpuigcerver@fp:~/gitflow/remot (main) $ git commit -m "Commit inicial"
+[main (root-commit) 58facc3] Commit inicial
  1 file changed, 1 insertion(+)
  create mode 100644 README.md
 jpuigcerver@fp:~/gitflow/remot (main) $ git lga
-* 7cf4080 - (0 seconds ago) 1. Primer commit - Joan Puigcerver (HEAD -> main)
+* 58facc3 - (0 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main)
 jpuigcerver@fp:~/gitflow/remot (main) $ git config --bool core.bare true # (1)!

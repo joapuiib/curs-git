@@ -1,0 +1,44 @@
+mar@fp:~/gitflow/mar (feature/author) $ git checkout develop
+Your branch is up to date with 'origin/develop'.
+Switched to branch 'develop'
+mar@fp:~/gitflow/mar (develop) $ git merge --squash feature/author
+Updating feb6177..db65dda
+Fast-forward
+Squash commit -- not updating HEAD
+ README.md | 5 +++++
+ 1 file changed, 5 insertions(+)
+mar@fp:~/gitflow/mar (develop) $ git status
+On branch develop
+Your branch is up to date with 'origin/develop'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   README.md
+
+mar@fp:~/gitflow/mar (develop) $ git diff --staged
+diff --git a/README.md b/README.md
+index 9e7f142..6d3a44b 100644
+--- a/README.md
++++ b/README.md
+@@ -5,3 +5,8 @@ entre diferents desenvolupadors en un mateix projecte
+ 
+ La característica principal és la utilització
+ de branques amb un únic propòsit.
++
++## Autors
++- Anna (anna@fpmislata.com)
++- Pau (pau@fpmislata.com)
++- Mar (mar@fpmislata.com)
+mar@fp:~/gitflow/mar (develop) $ git commit -m "Merge branch 'feature/author'"
+[develop d8f53dd] Merge branch 'feature/author'
+ 1 file changed, 5 insertions(+)
+mar@fp:~/gitflow/mar (develop) $ git lga
+* d8f53dd - (0 seconds ago) Merge branch 'feature/author' - Mar (HEAD -> develop)
+| * db65dda - (0 seconds ago) Autors: Mar - Mar (origin/feature/author, feature/author)
+| * b621365 - (0 seconds ago) Autors: Pau - Mar
+| * 9c674af - (0 seconds ago) Autors: Anna - Mar
+| * 844a772 - (0 seconds ago) README.md: Secció d'autors - Mar
+|/  
+* feb6177 - (0 seconds ago) Merge branch 'feature/license' - Pau (origin/develop)
+* 6dcedfa - (0 seconds ago) Merge branch 'feature/readme' - Anna
+* 58facc3 - (0 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)

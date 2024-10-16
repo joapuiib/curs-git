@@ -1,0 +1,20 @@
+mar@fp:~/gitflow/mar (feature/author) $ git checkout develop
+Your branch is behind 'origin/develop' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Switched to branch 'develop'
+mar@fp:~/gitflow/mar (develop) $ git pull --ff-only
+Updating 58facc3..feb6177
+Fast-forward
+ LICENSE   | 5 +++++
+ README.md | 6 ++++++
+ 2 files changed, 11 insertions(+)
+ create mode 100644 LICENSE
+mar@fp:~/gitflow/mar (develop) $ git lga
+* feb6177 - (0 seconds ago) Merge branch 'feature/license' - Pau (HEAD -> develop, origin/develop)
+* 6dcedfa - (0 seconds ago) Merge branch 'feature/readme' - Anna
+| * 3e9f87b - (0 seconds ago) Autors: Mar - Mar (origin/feature/author, feature/author)
+| * 2d3d519 - (0 seconds ago) Autors: Pau - Mar
+| * 7b77dba - (0 seconds ago) Autors: Anna - Mar
+| * 0043084 - (0 seconds ago) README.md: Secció d'autors - Mar
+|/  
+* 58facc3 - (0 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)

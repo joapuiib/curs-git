@@ -1,0 +1,13 @@
+mar@fp:~/gitflow/mar (develop) $ git push
+To ~/gitflow/remot
+   feb6177..d8f53dd  develop -> develop
+mar@fp:~/gitflow/mar (develop) $ git lga
+* d8f53dd - (1 second ago) Merge branch 'feature/author' - Mar (HEAD -> develop, origin/develop)
+| * db65dda - (1 second ago) Autors: Mar - Mar (origin/feature/author, feature/author)
+| * b621365 - (1 second ago) Autors: Pau - Mar
+| * 9c674af - (1 second ago) Autors: Anna - Mar
+| * 844a772 - (1 second ago) README.md: Secció d'autors - Mar
+|/  
+* feb6177 - (1 second ago) Merge branch 'feature/license' - Pau
+* 6dcedfa - (1 second ago) Merge branch 'feature/readme' - Anna
+* 58facc3 - (1 second ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)
