@@ -7,7 +7,9 @@ comments: true
 tags:
     - pull requests
     - github projects
-    - organitzacions
+    - actions
+    - pages
+    - issues
 ---
 
 

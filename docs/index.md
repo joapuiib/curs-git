@@ -7,12 +7,18 @@ hide:
   - navigation
 ---
 
+*[CI/CD]: Continous Integration/Continous Deployment
+
 ## Objectius
-- Conèixer els conceptes bàsics de control de versions mitjançant Git i el seu ús en el context del desenvolupament de programari.
+
+- Conéixer els conceptes de control de versions mitjançant Git i el seu ús en el context del desenvolupament de programari.
 - Aprendre a utilitzar Git per a gestionar projectes de desenvolupament de programari.
-- Conèixer i utilitzar plataformes de desenvolupament col·laboratiu com GitHub.
-- Conèixer i utilitzar eines de gestió de projectes proporcionades per GitHub.
-- Promoure la utilització de Git i GitHub en l’aula com a eina de treball col·laboratiu.
+- Conéixer i aplicar estratègies de ramificació en projectes de desenvolupament de programari col·laboratiu.
+- Conéixer i utilitzar plataformes d'allotjament de repositoris en línia com GitHub.
+- Conéixer i utilitzar eines de gestió de projectes proporcionades per GitHub.
+- Promoure la utilització de Git i GitHub a l’aula com a eina de treball col·laboratiu.
+- Proporcionar estratègies als docents per incorporar la utilització de Git i GitHub a l'aula.
+
 
 ## Continguts
 - __[[bloc1]]__
@@ -45,9 +51,16 @@ hide:
 - __[[bloc5]]__
     - GitFlow.
 - __[[bloc6]]__
-    - Organitzacions a GitHub.
-    - GitHub Projects.
     - Forks i Pull Requests.
+    - Incidències (_issues_).
+    - Debats (_discussions_).
+    - GitHub Projects.
+    - CI/CD amb GitHub Actions.
+    - GitHub Pages.
+- __[[bloc7]]__
+    - Organitzacions a GitHub.
+    - GitHub Classroom.
+    - Estratègies per a l'ús de Git i GitHub a l'aula.
 
 ## Dirigit a
 - Professorat de la família d'Informàtica i Comunicacions.
