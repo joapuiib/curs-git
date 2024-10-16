@@ -750,33 +750,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#branques-de-publicacio" class="md-nav__link">
-    <span class="md-ellipsis">
-      Branques de publicació
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Branques de publicació">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#publicacio-de-la-versio-100" class="md-nav__link">
     <span class="md-ellipsis">
       Publicació de la versió 1.0.0
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#branques-de-correccio" class="md-nav__link">
-    <span class="md-ellipsis">
-      Branques de correcció
     </span>
   </a>
   
@@ -1352,33 +1328,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#branques-de-publicacio" class="md-nav__link">
-    <span class="md-ellipsis">
-      Branques de publicació
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Branques de publicació">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#publicacio-de-la-versio-100" class="md-nav__link">
     <span class="md-ellipsis">
       Publicació de la versió 1.0.0
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#branques-de-correccio" class="md-nav__link">
-    <span class="md-ellipsis">
-      Branques de correcció
     </span>
   </a>
   
@@ -2425,131 +2377,46 @@ i pot continuar treballant en altres funcionalitats.</p>
 </span></code></pre></div>
 </li>
 </ol>
-<h3 id="branques-de-publicacio">Branques de publicació<a class="headerlink" href="#branques-de-publicacio" title="Permanent link">&para;</a></h3>
-<p>Les branques de publicació són branques temporals
-que s'utilitzen per a preparar la publicació d'una versió.</p>
-<p>Normalment, el prefix de les branques de publicació és <code>release/</code>.</p>
-<p>Aquestes branques es creen a partir de la branca de desenvolupament <code>develop</code>
-i s'utilitzen per a realitzar tasques com:</p>
-<ul>
-<li>Actualitzar la versió del projecte.</li>
-<li>Realitzar proves de validació.</li>
-<li>Corregir errors que han pogut passar desapercebuts.</li>
-<li>Preparar paràmetres de configuració específics per a la publicació.</li>
-</ul>
-<p>Una vegada acabades aquestes tasques, s'ha fusionar a la branca principal <code>main</code>
-i a la branca de desenvolupament <code>develop</code>.</p>
-<h4 id="publicacio-de-la-versio-100">Publicació de la versió 1.0.0<a class="headerlink" href="#publicacio-de-la-versio-100" title="Permanent link">&para;</a></h4>
+<h3 id="publicacio-de-la-versio-100">Publicació de la versió 1.0.0<a class="headerlink" href="#publicacio-de-la-versio-100" title="Permanent link">&para;</a></h3>
 <p>Anna és l'encarregada de preparar la publicació de la versió 1.0.0.</p>
 <p>Els passos que ha de seguir són:</p>
 <ol class="fancylists-decimal" type="1">
 <li>
 <p>Actualitzar la branca <code>develop</code> amb els canvis del remot.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(develop)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>develop
-</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="go">Switched to branch &#39;develop&#39;</span>
-</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(develop)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>pull
-</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="go">From /home/joapuiib/gitflow/remot</span>
-</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="go">   4e753b7..c6f2edb  develop    -&gt; origin/develop</span>
-</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="go">Updating 4e753b7..c6f2edb</span>
-</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a><span class="go">Fast-forward</span>
-</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a><span class="go"> LICENSE | 4 ++++</span>
-</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a><span class="go"> 1 file changed, 4 insertions(+)</span>
-</span><span id="__span-25-10"><a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a><span class="go"> create mode 100644 LICENSE</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>
 </span></code></pre></div>
 </li>
 <li>
 <p>Crear la branca de publicació <code>release/v1.0.0</code> a partir de la branca <code>develop</code>.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(develop)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>release/v1.0.0
-</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="go">Switched to a new branch &#39;release/v1.0.0&#39;</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>
 </span></code></pre></div>
 </li>
 <li>
 <p>Realitzar les tasques necessàries per a preparar la publicació de la versió 1.0.0.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(release/v1.0.0)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>VERSION
-</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(release/v1.0.0)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>add<span class="w"> </span>VERSION
-</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(release/v1.0.0)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Versió 1.0.0&quot;</span>
-</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="go">[release/v1.0.0 4b893fa] Versió 1.0.0</span>
-</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="go"> 1 file changed, 1 insertion(+)</span>
-</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="go"> create mode 100644 VERSION</span>
-</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(release/v1.0.0)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
-</span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">4b893fa</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(1 second ago)</span><span class="w"> </span><span class="git-cm">Versió 1.0.0</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span><span class="w"> </span><span class="git-r">(HEAD -&gt; release/v1.0.0)</span>
-</span><span id="__span-27-9"><a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">ee85113</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;feature/authors&#39;</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Mar</span><span class="w"> </span><span class="git-r">(develop, origin/develop)</span>
-</span><span id="__span-27-10"><a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">94d2475</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;feature/license&#39;</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Pau</span>
-</span><span id="__span-27-11"><a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">21392d8</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;feature/readme&#39;</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span>
-</span><span id="__span-27-12"><a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8402918</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">1. Primer commit</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(main, origin/main)</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>
 </span></code></pre></div>
 </li>
 <li>
 <p>Crear i publicar una etiqueta amb la versió 1.0.0.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(release/v1.0.0)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>tag<span class="w"> </span><span class="s2">&quot;v1.0.0&quot;</span>
-</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(release/v1.0.0)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>v1.0.0
-</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(release/v1.0.0)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
-</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">4b893fa</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(1 second ago)</span><span class="w"> </span><span class="git-cm">Versió 1.0.0</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span><span class="w"> </span><span class="git-r">(HEAD -&gt; release/v1.0.0, tag: v1.0.0)</span>
-</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">ee85113</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;feature/authors&#39;</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Mar</span><span class="w"> </span><span class="git-r">(develop, origin/develop)</span>
-</span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">94d2475</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;feature/license&#39;</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Pau</span>
-</span><span id="__span-28-7"><a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">21392d8</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;feature/readme&#39;</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span>
-</span><span id="__span-28-8"><a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8402918</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">1. Primer commit</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(main, origin/main)</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>
 </span></code></pre></div>
 </li>
 <li>
 <p>Integrar aquesta branca a la branca de desenvolupament <code>develop</code> i publicar-la.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(release/v1.0.0)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>develop
-</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="go">Switched to branch &#39;develop&#39;</span>
-</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(develop)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>merge<span class="w"> </span>--ff-only<span class="w"> </span>release/v1.0.0
-</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="go">Updating 8402918..4b893fa</span>
-</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="go">Fast-forward</span>
-</span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a><span class="go"> VERSION   | 1 +</span>
-</span><span id="__span-29-7"><a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a><span class="go"> 1 files changed, 1 insertions(+)</span>
-</span><span id="__span-29-8"><a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a><span class="go"> create mode 100644 VERSION</span>
-</span><span id="__span-29-9"><a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(develop)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>push
-</span><span id="__span-29-10"><a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a><span class="go">To /home/joapuiib/gitflow/remot</span>
-</span><span id="__span-29-11"><a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a><span class="go">   ee84113..4b893fa</span>
-</span><span id="__span-29-12"><a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(develop)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
-</span><span id="__span-29-13"><a id="__codelineno-29-13" name="__codelineno-29-13" href="#__codelineno-29-13"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">4b893fa</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(1 second ago)</span><span class="w"> </span><span class="git-cm">Versió 1.0.0</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span><span class="w"> </span><span class="git-r">(HEAD -&gt; develop, release/v1.0.0, tag: v1.0.0, origin/develop)</span>
-</span><span id="__span-29-14"><a id="__codelineno-29-14" name="__codelineno-29-14" href="#__codelineno-29-14"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">ee85113</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;feature/authors&#39;</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Mar</span>
-</span><span id="__span-29-15"><a id="__codelineno-29-15" name="__codelineno-29-15" href="#__codelineno-29-15"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">94d2475</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;feature/license&#39;</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Pau</span>
-</span><span id="__span-29-16"><a id="__codelineno-29-16" name="__codelineno-29-16" href="#__codelineno-29-16"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">21392d8</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;feature/readme&#39;</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span>
-</span><span id="__span-29-17"><a id="__codelineno-29-17" name="__codelineno-29-17" href="#__codelineno-29-17"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8402918</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">1. Primer commit</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(main, origin/main)</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>
 </span></code></pre></div>
 </li>
 <li>
 <p>Integrar aquesta branca a la branca principal <code>main</code> i publicar els canvis.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(release/v1.0.0)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>main
-</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="go">Switched to branch &#39;main&#39;</span>
-</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>merge<span class="w"> </span>--ff-only<span class="w"> </span>release/v1.0.0
-</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="go">Updating 8402918..4b893fa</span>
-</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a><span class="go">Fast-forward</span>
-</span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="go"> LICENSE   | 4 ++++</span>
-</span><span id="__span-30-7"><a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a><span class="go"> README.md | 4 ++++</span>
-</span><span id="__span-30-8"><a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a><span class="go"> VERSION   | 1 +</span>
-</span><span id="__span-30-9"><a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a><span class="go"> 3 files changed, 9 insertions(+)</span>
-</span><span id="__span-30-10"><a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a><span class="go"> create mode 100644 LICENSE</span>
-</span><span id="__span-30-11"><a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a><span class="go"> create mode 100644 VERSION</span>
-</span><span id="__span-30-12"><a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>push
-</span><span id="__span-30-13"><a id="__codelineno-30-13" name="__codelineno-30-13" href="#__codelineno-30-13"></a><span class="go">To /home/joapuiib/gitflow/remot</span>
-</span><span id="__span-30-14"><a id="__codelineno-30-14" name="__codelineno-30-14" href="#__codelineno-30-14"></a><span class="go">   e68db39..0cb1dbc  main -&gt; main</span>
-</span><span id="__span-30-15"><a id="__codelineno-30-15" name="__codelineno-30-15" href="#__codelineno-30-15"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
-</span><span id="__span-30-16"><a id="__codelineno-30-16" name="__codelineno-30-16" href="#__codelineno-30-16"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">4b893fa</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(1 second ago)</span><span class="w"> </span><span class="git-cm">Versió 1.0.0</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main, develop, release/v1.0.0, tag: v1.0.0, origin/main, origin/develop)</span>
-</span><span id="__span-30-17"><a id="__codelineno-30-17" name="__codelineno-30-17" href="#__codelineno-30-17"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">ee85113</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;feature/authors&#39;</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Mar</span>
-</span><span id="__span-30-18"><a id="__codelineno-30-18" name="__codelineno-30-18" href="#__codelineno-30-18"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">94d2475</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;feature/license&#39;</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Pau</span>
-</span><span id="__span-30-19"><a id="__codelineno-30-19" name="__codelineno-30-19" href="#__codelineno-30-19"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">21392d8</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;feature/readme&#39;</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span>
-</span><span id="__span-30-20"><a id="__codelineno-30-20" name="__codelineno-30-20" href="#__codelineno-30-20"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8402918</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">1. Primer commit</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>
 </span></code></pre></div>
 </li>
 <li>
 <p>Eliminar la branca de publicació.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>release/v1.0.0
-</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="go">Deleted branch &#39;release/v1.0.0&#39; (was 4b893fa)</span>
-</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="gp-uh">anna@fp</span><span class="gp">:</span><span class="gp-d">~/gitflow/anna</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
-</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">4b893fa</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(1 second ago)</span><span class="w"> </span><span class="git-cm">Versió 1.0.0</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main, develop, tag: v1.0.0, origin/main, origin/develop)</span>
-</span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">ee85113</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;feature/authors&#39;</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Mar</span>
-</span><span id="__span-31-6"><a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">94d2475</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;feature/license&#39;</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Pau</span>
-</span><span id="__span-31-7"><a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">21392d8</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;feature/readme&#39;</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span>
-</span><span id="__span-31-8"><a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8402918</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">1. Primer commit</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>
 </span></code></pre></div>
 </li>
 </ol>
-<h3 id="branques-de-correccio">Branques de correcció<a class="headerlink" href="#branques-de-correccio" title="Permanent link">&para;</a></h3>
     
 
 

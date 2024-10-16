@@ -705,6 +705,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#branques-de-publicacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branques de publicació
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branques-de-correccio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branques de correcció
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1288,6 +1306,24 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branques-de-publicacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branques de publicació
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branques-de-correccio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branques de correcció
+    </span>
+  </a>
   
 </li>
         
@@ -1901,6 +1937,33 @@ sorgir conflictes en cada <em>commit</em>.</p>
 <li>No manté tot l'històric de canvis.</li>
 <li>Dificulta la revisió de canvis individuals.</li>
 </ul>
+<h3 id="branques-de-publicacio">Branques de publicació<a class="headerlink" href="#branques-de-publicacio" title="Permanent link">&para;</a></h3>
+<p>Les branques de publicació són branques temporals
+que s'utilitzen per a preparar la publicació d'una versió.</p>
+<p>Normalment, el prefix de les branques de publicació és <code>release/</code>.</p>
+<p>Aquestes branques es creen a partir de la branca de desenvolupament <code>develop</code>
+i s'utilitzen per a realitzar tasques com:</p>
+<ul>
+<li>Actualitzar la versió del projecte.</li>
+<li>Realitzar proves de validació.</li>
+<li>Corregir errors que han pogut passar desapercebuts.</li>
+<li>Preparar paràmetres de configuració específics per a la publicació.</li>
+</ul>
+<p>Una vegada acabades aquestes tasques, s'ha fusionar a la branca principal <code>main</code>
+i a la branca de desenvolupament <code>develop</code>.</p>
+<p>@TODO: Figura branques de publicació</p>
+<h3 id="branques-de-correccio">Branques de correcció<a class="headerlink" href="#branques-de-correccio" title="Permanent link">&para;</a></h3>
+<p>Les branques de correcció són branques temporals
+que s'utilitzen per a corregir errors crítics en el codi estable del projecte,
+quan la seua correcció no pot esperar a la següent versió.</p>
+<p>Normalment, el prefix de les branques de correcció és <code>hotfix/</code>.</p>
+<p>El flux de treball amb aquestes branques és el següent:</p>
+<ul>
+<li>Es creen a partir de la branca principal <code>main</code>.</li>
+<li>Es realitzen les correccions necessàries.</li>
+<li>Els canvis d'integren a la branca de desenvolupament <code>develop</code> i a la branca principal <code>main</code>.</li>
+</ul>
+<p>@TODO: Figura branques de correcció</p>
 <h2 id="bibliografia">Bibliografia<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://logongas.es/doku.php?id=clase:daw:daw:2eval:tema06" target="_blank">Apunts de Desplegament d'Aplicacions Web de Lorenzo González Gascón</a></li>
