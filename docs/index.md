@@ -49,7 +49,8 @@ hide:
     - Còpia de canvis: `cherry-pick`.
     - Fusió de canvis en un sol commit: `squash`.
 - __[[bloc5]]__
-    - GitFlow.
+    - Branques de propòsit únic.
+    - Mètodes d'integració de branques de funcionalitat.
 - __[[bloc6]]__
     - Forks i Pull Requests.
     - Incidències (_issues_).
