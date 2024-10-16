@@ -6,6 +6,11 @@ import os
 import subprocess
 import re
 
+"""
+@TODO:
+    - Carriage return in output
+    - lga remove timestamp
+"""
 class CommandExecutor:
     def __init__(self, user, host, file=None):
         self.user = user
