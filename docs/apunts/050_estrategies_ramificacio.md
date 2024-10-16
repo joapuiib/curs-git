@@ -252,6 +252,40 @@ El principal desavantatge és:
 - No manté tot l'històric de canvis.
 - Dificulta la revisió de canvis individuals.
 
+### Branques de publicació
+Les branques de publicació són branques temporals
+que s'utilitzen per a preparar la publicació d'una versió.
+
+Normalment, el prefix de les branques de publicació és `release/`.
+
+Aquestes branques es creen a partir de la branca de desenvolupament `develop`
+i s'utilitzen per a realitzar tasques com:
+
+- Actualitzar la versió del projecte.
+- Realitzar proves de validació.
+- Corregir errors que han pogut passar desapercebuts.
+- Preparar paràmetres de configuració específics per a la publicació.
+
+Una vegada acabades aquestes tasques, s'ha fusionar a la branca principal `main`
+i a la branca de desenvolupament `develop`.
+
+@TODO: Figura branques de publicació
+
+
+### Branques de correcció
+Les branques de correcció són branques temporals
+que s'utilitzen per a corregir errors crítics en el codi estable del projecte,
+quan la seua correcció no pot esperar a la següent versió.
+
+Normalment, el prefix de les branques de correcció és `hotfix/`.
+
+El flux de treball amb aquestes branques és el següent:
+
+- Es creen a partir de la branca principal `main`.
+- Es realitzen les correccions necessàries.
+- Els canvis d'integren a la branca de desenvolupament `develop` i a la branca principal `main`.
+
+@TODO: Figura branques de correcció
 
 ## Bibliografia
 - [Apunts de Desplegament d'Aplicacions Web de Lorenzo González Gascón](https://logongas.es/doku.php?id=clase:daw:daw:2eval:tema06){target=_blank}

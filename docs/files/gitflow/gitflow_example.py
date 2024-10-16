@@ -401,3 +401,54 @@ x.x('git push origin --delete feature/author')
 x.x('git lga')
 
 print('===================================================')
+x.set_file('stdout/release_pull.txt')
+x.rm_file()
+x.set_user('anna')
+
+x.run('cd ~/gitflow/')
+x.x('cd ~/gitflow/anna')
+x.x('git checkout develop')
+x.x('git pull --ff-only')
+x.x('git lga')
+
+print('===================================================')
+x.set_file('stdout/release_create.txt')
+x.rm_file()
+
+x.x('git checkout -b release/v1.0.0')
+x.x('git lga')
+
+print('===================================================')
+x.set_file('stdout/release.txt')
+x.rm_file()
+
+x.x('echo "v1.0.0" > VERSION')
+x.x('git add VERSION')
+x.x('git commit -m "Publicada versió: v1.0.0"')
+x.x('git lga')
+
+print('===================================================')
+x.set_file('stdout/release_tag.txt')
+x.rm_file()
+
+x.x('git tag v1.0.0')
+x.x('git lga')
+
+print('===================================================')
+x.set_file('stdout/release_merge_develop.txt')
+x.rm_file()
+
+x.x('git checkout develop')
+x.x('git merge --ff-only release/v1.0.0')
+x.x('git push')
+x.x('git lga')
+
+print('===================================================')
+x.set_file('stdout/release_merge_main.txt')
+x.rm_file()
+
+x.x('git checkout main')
+x.x('git merge --ff-only release/v1.0.0')
+x.x('git push')
+x.x('git push --tags')
+x.x('git lga')

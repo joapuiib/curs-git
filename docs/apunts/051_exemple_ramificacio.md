@@ -260,24 +260,7 @@ Els passos que ha de seguir són:
     --8<-- "docs/files/gitflow/stdout/feature_author_delete.txt"
     ```
 
-### Branques de publicació
-Les branques de publicació són branques temporals
-que s'utilitzen per a preparar la publicació d'una versió.
-
-Normalment, el prefix de les branques de publicació és `release/`.
-
-Aquestes branques es creen a partir de la branca de desenvolupament `develop`
-i s'utilitzen per a realitzar tasques com:
-
-- Actualitzar la versió del projecte.
-- Realitzar proves de validació.
-- Corregir errors que han pogut passar desapercebuts.
-- Preparar paràmetres de configuració específics per a la publicació.
-
-Una vegada acabades aquestes tasques, s'ha fusionar a la branca principal `main`
-i a la branca de desenvolupament `develop`.
-
-#### Publicació de la versió 1.0.0
+### Publicació de la versió 1.0.0
 Anna és l'encarregada de preparar la publicació de la versió 1.0.0.
 
 Els passos que ha de seguir són:
@@ -285,114 +268,41 @@ Els passos que ha de seguir són:
 1. Actualitzar la branca `develop` amb els canvis del remot.
 
     ```shellconsole
-    anna@fp:~/gitflow/anna (develop) $ git checkout develop
-    Switched to branch 'develop'
-    anna@fp:~/gitflow/anna (develop) $ git pull
-    From /home/joapuiib/gitflow/remot
-       4e753b7..c6f2edb  develop    -> origin/develop
-    Updating 4e753b7..c6f2edb
-    Fast-forward
-     LICENSE | 4 ++++
-     1 file changed, 4 insertions(+)
-     create mode 100644 LICENSE
+    --8<-- "docs/files/gitflow/stdout/release_pull.txt"
     ```
 
 1. Crear la branca de publicació `release/v1.0.0` a partir de la branca `develop`.
     
     ```shellconsole
-    anna@fp:~/gitflow/anna (develop) $ git checkout -b release/v1.0.0
-    Switched to a new branch 'release/v1.0.0'
+    --8<-- "docs/files/gitflow/stdout/release_create.txt"
     ```
 
 1. Realitzar les tasques necessàries per a preparar la publicació de la versió 1.0.0.
 
     ```shellconsole
-    anna@fp:~/gitflow/anna (release/v1.0.0) $ echo "1.0.0" > VERSION
-    anna@fp:~/gitflow/anna (release/v1.0.0) $ git add VERSION
-    anna@fp:~/gitflow/anna (release/v1.0.0) $ git commit -m "Versió 1.0.0"
-    [release/v1.0.0 4b893fa] Versió 1.0.0
-     1 file changed, 1 insertion(+)
-     create mode 100644 VERSION
-    anna@fp:~/gitflow/anna (release/v1.0.0) $ git lga
-    * 4b893fa - (1 second ago) Versió 1.0.0 - Anna (HEAD -> release/v1.0.0)
-    * ee85113 - (6 seconds ago) Merge branch 'feature/authors' - Mar (develop, origin/develop)
-    * 94d2475 - (6 seconds ago) Merge branch 'feature/license' - Pau
-    * 21392d8 - (6 seconds ago) Merge branch 'feature/readme' - Anna
-    * 8402918 - (6 seconds ago) 1. Primer commit - Joan Puigcerver (main, origin/main)
+    --8<-- "docs/files/gitflow/stdout/release.txt"
     ```
 
 1. Crear i publicar una etiqueta amb la versió 1.0.0.
 
     ```shellconsole
-    anna@fp:~/gitflow/anna (release/v1.0.0) $ git tag "v1.0.0"
-    anna@fp:~/gitflow/anna (release/v1.0.0) $ git push origin v1.0.0
-    anna@fp:~/gitflow/anna (release/v1.0.0) $ git lga
-    * 4b893fa - (1 second ago) Versió 1.0.0 - Anna (HEAD -> release/v1.0.0, tag: v1.0.0)
-    * ee85113 - (6 seconds ago) Merge branch 'feature/authors' - Mar (develop, origin/develop)
-    * 94d2475 - (6 seconds ago) Merge branch 'feature/license' - Pau
-    * 21392d8 - (6 seconds ago) Merge branch 'feature/readme' - Anna
-    * 8402918 - (6 seconds ago) 1. Primer commit - Joan Puigcerver (main, origin/main)
+    --8<-- "docs/files/gitflow/stdout/tag.txt"
     ```
 
 1. Integrar aquesta branca a la branca de desenvolupament `develop` i publicar-la.
 
     ```shellconsole
-    anna@fp:~/gitflow/anna (release/v1.0.0) $ git checkout develop
-    Switched to branch 'develop'
-    anna@fp:~/gitflow/anna (develop) $ git merge --ff-only release/v1.0.0
-    Updating 8402918..4b893fa
-    Fast-forward
-     VERSION   | 1 +
-     1 files changed, 1 insertions(+)
-     create mode 100644 VERSION
-    anna@fp:~/gitflow/anna (develop) $ git push
-    To /home/joapuiib/gitflow/remot
-       ee84113..4b893fa
-    anna@fp:~/gitflow/anna (develop) $ git lga
-    * 4b893fa - (1 second ago) Versió 1.0.0 - Anna (HEAD -> develop, release/v1.0.0, tag: v1.0.0, origin/develop)
-    * ee85113 - (6 seconds ago) Merge branch 'feature/authors' - Mar
-    * 94d2475 - (6 seconds ago) Merge branch 'feature/license' - Pau
-    * 21392d8 - (6 seconds ago) Merge branch 'feature/readme' - Anna
-    * 8402918 - (6 seconds ago) 1. Primer commit - Joan Puigcerver (main, origin/main)
+    --8<-- "docs/files/gitflow/stdout/release_merge_develop.txt"
     ```
 
 1. Integrar aquesta branca a la branca principal `main` i publicar els canvis.
 
     ```shellconsole
-    anna@fp:~/gitflow/anna (release/v1.0.0) $ git checkout main
-    Switched to branch 'main'
-    anna@fp:~/gitflow/anna (main) $ git merge --ff-only release/v1.0.0
-    Updating 8402918..4b893fa
-    Fast-forward
-     LICENSE   | 4 ++++
-     README.md | 4 ++++
-     VERSION   | 1 +
-     3 files changed, 9 insertions(+)
-     create mode 100644 LICENSE
-     create mode 100644 VERSION
-    anna@fp:~/gitflow/anna (main) $ git push
-    To /home/joapuiib/gitflow/remot
-       e68db39..0cb1dbc  main -> main
-    anna@fp:~/gitflow/anna (main) $ git lga
-    * 4b893fa - (1 second ago) Versió 1.0.0 - Anna (HEAD -> main, develop, release/v1.0.0, tag: v1.0.0, origin/main, origin/develop)
-    * ee85113 - (6 seconds ago) Merge branch 'feature/authors' - Mar
-    * 94d2475 - (6 seconds ago) Merge branch 'feature/license' - Pau
-    * 21392d8 - (6 seconds ago) Merge branch 'feature/readme' - Anna
-    * 8402918 - (6 seconds ago) 1. Primer commit - Joan Puigcerver
+    --8<-- "docs/files/gitflow/stdout/release_merge_main.txt"
     ```
 
 1. Eliminar la branca de publicació.
 
     ```shellconsole
-    anna@fp:~/gitflow/anna (main) $ git branch -d release/v1.0.0
-    Deleted branch 'release/v1.0.0' (was 4b893fa)
-    anna@fp:~/gitflow/anna (main) $ git lga
-    * 4b893fa - (1 second ago) Versió 1.0.0 - Anna (HEAD -> main, develop, tag: v1.0.0, origin/main, origin/develop)
-    * ee85113 - (6 seconds ago) Merge branch 'feature/authors' - Mar
-    * 94d2475 - (6 seconds ago) Merge branch 'feature/license' - Pau
-    * 21392d8 - (6 seconds ago) Merge branch 'feature/readme' - Anna
-    * 8402918 - (6 seconds ago) 1. Primer commit - Joan Puigcerver
+    --8<-- "docs/files/gitflow/stdout/release_delete.txt"
     ```
-
-
-### Branques de correcció
