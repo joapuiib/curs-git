@@ -64,7 +64,7 @@ class CommandExecutor:
             print(output, end="")
 
 
-    def run(self, cmd):
+    def run(self, cmd, env=None):
         args = cmd.split()
         if args[0] == "cd":
             if len(args) > 1:
@@ -76,7 +76,7 @@ class CommandExecutor:
 
         try:
             # Execute the command and capture stdout and stderr
-            result = subprocess.run(cmd, capture_output=True, text=True, shell=True, executable="/bin/bash")
+            result = subprocess.run(cmd, capture_output=True, text=True, shell=True, executable="/bin/bash", env=env)
             output = result.stdout + result.stderr
         except FileNotFoundError:
             output = f"Command not found: {cmd}\n"
@@ -84,15 +84,21 @@ class CommandExecutor:
         output = output.replace(self.home_dir, "~")
         if output and not output.endswith("\n"):
             output += "\n"
+
+        print(repr(output))
         return output
 
 
-    def x(self, cmd):
+    def log_prompt(self, cmd):
         prompt = self.build_prompt()
-        log_entry = f"{prompt} {cmd}\n"
-        self.log_output(log_entry)
+        output = f"{prompt} {cmd}\n"
+        self.log_output(output)
 
-        output = self.run(cmd)
+
+    def x(self, cmd, env=None):
+        self.log_prompt(cmd)
+
+        output = self.run(cmd, env)
 
         self.log_output(output)
 
@@ -115,9 +121,9 @@ x.x('mkdir -p ~/gitflow/remot')
 x.x('cd ~/gitflow/remot')
 x.x('git init')
 x.x('git branch -m main')
-x.x('echo "# Gitflow" > README.md')
+x.x('echo "# Estratègies de ramificació" > README.md')
 x.x('git add README.md')
-x.x('git commit -m "1. Primer commit"')
+x.x('git commit -m "Commit inicial"')
 x.x('git lga')
 x.x('git config --bool core.bare true # (1)!')
 
@@ -154,11 +160,14 @@ x.x('git config user.name "Anna"')
 x.x('git config user.email "anna@fpmislata.com"')
 x.x('git checkout develop')
 x.x('git checkout -b feature/readme')
-x.x('echo "Gitflow és una estratègia de ramificació per a Git," >> README.md')
-x.x('echo "que proporciona un marc de treball organitzat que" >> README.md')
-x.x('echo "facilita la col·laboració entre diferents desenvolupadors" >> README.md')
-x.x('echo "en un mateix projecte." >> README.md')
-x.x('git commit -a -m "2. Afegida descripció del projecte"')
+x.x('echo "Les estratègies de ramificació proporcionen un" >> README.md')
+x.x('echo "marc de treball organitzat que facilita la col·laboració" >> README.md')
+x.x('echo "entre diferents desenvolupadors en un mateix projecte" >> README.md')
+x.x('git commit -a -m "README.md: Descripció"')
+x.x('echo "" >> README.md')
+x.x('echo "La característica principal és la utilització" >> README.md')
+x.x('echo "de branques amb un únic propòsit." >> README.md')
+x.x('git commit -a -m "README.md: Branques propòsit únic"')
 x.x('git push')
 x.x('git lga')
 
@@ -177,10 +186,11 @@ x.x('git checkout -b feature/license')
 x.x('echo "" > LICENSE')
 x.x('echo "## Llicència" >> LICENSE')
 x.x('echo "CC BY-NC-SA 4.0 DEED - Reconeixement-NoComercial-CompartirIgual 4.0 Internacional" >> LICENSE')
+x.x('git add LICENSE')
+x.x('git commit -m "LICENSE: Afegida llicència"')
 x.x('echo "" >> LICENSE')
 x.x('echo "Més informació: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" >> LICENSE')
-x.x('git add LICENSE')
-x.x('git commit -m "3. Afegida llicència"')
+x.x('git commit -a -m "LICENSE: Enllaç a la llicència"')
 x.x('git push')
 x.x('git lga')
 
@@ -190,3 +200,203 @@ x.set_file('stdout/feature_author.txt')
 x.rm_file()
 x.set_user('mar')
 
+x.run('cd ~/gitflow/')
+x.x('cd ~/gitflow/mar')
+x.x('git config user.name "Mar"')
+x.x('git config user.email "mar@fpmislata.com"')
+x.x('git checkout develop')
+x.x('git checkout -b feature/author')
+x.x('echo "" >> README.md')
+x.x('echo "## Autors" >> README.md')
+x.x('git commit -a -m "README.md: Secció d\'autors"')
+x.x('echo "- Anna (anna@fpmislata.com)" >> README.md')
+x.x('git commit -a -m "Autors: Anna"')
+x.x('echo "- Pau (pau@fpmislata.com)" >> README.md')
+x.x('git commit -a -m "Autors: Pau"')
+x.x('echo "- Mar (mar@fpmislata.com)" >> README.md')
+x.x('git commit -a -m "Autors: Mar"')
+x.x('git push')
+x.x('git lga')
+
+print('===================================================')
+# Estat remot
+x.set_file('stdout/branques.txt')
+x.rm_file()
+x.set_user('jpuigcerver')
+
+x.run('cd ~/gitflow/')
+x.x('cd ~/gitflow/remot')
+x.x('git lga')
+
+print('===================================================')
+# Integració de feature/readme
+x.set_user('anna')
+
+## 1. Sincronitzar l'estat
+x.set_file('stdout/feature_readme_fetch.txt')
+x.rm_file()
+
+x.run('cd ~/gitflow/')
+x.x('cd ~/gitflow/anna')
+x.x('git fetch')
+x.x('git lga')
+
+## 2. Incorporar els canvis
+x.set_file('stdout/feature_readme_pull.txt')
+x.rm_file()
+
+x.x('git checkout develop')
+x.x('git pull --ff-only')
+
+## 3. Sincronitzar feature amb develop
+x.set_file('stdout/feature_readme_rebase.txt')
+x.rm_file()
+
+x.x('git checkout feature/readme')
+x.x('git rebase develop')
+
+## 4. Integrar feature/readme a develop
+x.set_file('stdout/feature_readme_merge.txt')
+x.rm_file()
+
+x.x('git checkout develop')
+x.x('git merge --squash feature/readme')
+x.x('git status')
+x.x('git diff --staged')
+x.x('git commit -m "Merge branch \'feature/readme\'"')
+x.x('git lga')
+
+## 5. Pujar els canvis
+x.set_file('stdout/feature_readme_push.txt')
+x.rm_file()
+
+x.x('git push')
+x.x('git lga')
+
+## 6. Eliminar la branca feature/readme
+x.set_file('stdout/feature_readme_delete.txt')
+x.rm_file()
+
+x.x('git branch -d feature/readme')
+x.x('git push origin --delete feature/readme')
+x.x('git lga')
+
+print('===================================================')
+# Integració de feature/license
+x.set_user('pau')
+
+## 1. Sincronitzar l'estat
+x.set_file('stdout/feature_license_fetch.txt')
+x.rm_file()
+
+x.run('cd ~/gitflow/')
+x.x('cd ~/gitflow/pau')
+x.x('git fetch')
+x.x('git lga')
+
+## 2. Incorporar els canvis
+x.set_file('stdout/feature_license_pull.txt')
+x.rm_file()
+
+x.x('git checkout develop')
+x.x('git pull --ff-only')
+x.x('git lga')
+
+## 3. Sincronitzar feature amb develop
+x.set_file('stdout/feature_license_rebase.txt')
+x.rm_file()
+
+x.x('git checkout feature/license')
+x.x('git rebase develop')
+x.x('git lga')
+x.x('git push -f')
+x.x('git lga')
+
+## 4. Integrar feature/license a develop
+x.set_file('stdout/feature_license_merge.txt')
+x.rm_file()
+
+x.x('git checkout develop')
+x.x('git merge --squash feature/license')
+x.x('git status')
+x.x('git diff --staged')
+x.x('git commit -m "Merge branch \'feature/license\'"')
+x.x('git lga')
+
+## 5. Pujar els canvis
+x.set_file('stdout/feature_license_push.txt')
+x.rm_file()
+
+x.x('git push')
+x.x('git lga')
+
+## 6. Eliminar la branca feature/license
+x.set_file('stdout/feature_license_delete.txt')
+x.rm_file()
+
+x.x('git branch -d feature/license')
+x.x('git push origin --delete feature/license')
+x.x('git lga')
+
+print('===================================================')
+# Integració de feature/author
+x.set_user('mar')
+
+## 1. Sincronitzar l'estat
+x.set_file('stdout/feature_author_fetch.txt')
+x.rm_file()
+
+x.run('cd ~/gitflow/')
+x.x('cd ~/gitflow/mar')
+x.x('git fetch')
+x.x('git lga')
+
+## 2. Incorporar els canvis
+x.set_file('stdout/feature_author_pull.txt')
+x.rm_file()
+
+x.x('git checkout develop')
+x.x('git pull --ff-only')
+x.x('git lga')
+
+## 3. Sincronitzar feature amb develop
+x.set_file('stdout/feature_author_rebase.txt')
+x.rm_file()
+
+x.x('git checkout feature/author')
+x.x('git rebase develop')
+x.run('sed -i \'/^<<<<<<<.*$/d; /^=======/d; /^>>>>>>>.*$/d\' README.md')
+x.log_prompt('vim README.md # (1)!')
+x.x('git add README.md')
+x.x('git rebase --continue', env={'GIT_EDITOR': 'true'})
+x.x('git lga')
+x.x('git push -f')
+x.x('git lga')
+
+## 4. Integrar feature/author a develop
+x.set_file('stdout/feature_author_merge.txt')
+x.rm_file()
+
+x.x('git checkout develop')
+x.x('git merge --squash feature/author')
+x.x('git status')
+x.x('git diff --staged')
+x.x('git commit -m "Merge branch \'feature/author\'"')
+x.x('git lga')
+
+## 5. Pujar els canvis
+x.set_file('stdout/feature_author_push.txt')
+x.rm_file()
+
+x.x('git push')
+x.x('git lga')
+
+## 6. Eliminar la branca feature/author
+x.set_file('stdout/feature_author_delete.txt')
+x.rm_file()
+
+x.x('git branch -d feature/author')
+x.x('git push origin --delete feature/author')
+x.x('git lga')
+
+print('===================================================')

@@ -9,17 +9,21 @@ Switched to a new branch 'feature/license'
 pau@fp:~/gitflow/pau (feature/license) $ echo "" > LICENSE
 pau@fp:~/gitflow/pau (feature/license) $ echo "## Llicència" >> LICENSE
 pau@fp:~/gitflow/pau (feature/license) $ echo "CC BY-NC-SA 4.0 DEED - Reconeixement-NoComercial-CompartirIgual 4.0 Internacional" >> LICENSE
+pau@fp:~/gitflow/pau (feature/license) $ git add LICENSE
+pau@fp:~/gitflow/pau (feature/license) $ git commit -m "LICENSE: Afegida llicència"
+[feature/license fcfe09d] LICENSE: Afegida llicència
+ 1 file changed, 3 insertions(+)
+ create mode 100644 LICENSE
 pau@fp:~/gitflow/pau (feature/license) $ echo "" >> LICENSE
 pau@fp:~/gitflow/pau (feature/license) $ echo "Més informació: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" >> LICENSE
-pau@fp:~/gitflow/pau (feature/license) $ git add LICENSE
-pau@fp:~/gitflow/pau (feature/license) $ git commit -m "3. Afegida llicència"
-[feature/license 043e89b] 3. Afegida llicència
- 1 file changed, 5 insertions(+)
- create mode 100644 LICENSE
+pau@fp:~/gitflow/pau (feature/license) $ git commit -a -m "LICENSE: Enllaç a la llicència"
+[feature/license efc6b7f] LICENSE: Enllaç a la llicència
+ 1 file changed, 2 insertions(+)
 pau@fp:~/gitflow/pau (feature/license) $ git push
 branch 'feature/license' set up to track 'origin/feature/license'.
 To ~/gitflow/remot
  * [new branch]      feature/license -> feature/license
 pau@fp:~/gitflow/pau (feature/license) $ git lga
-* 043e89b - (0 seconds ago) 3. Afegida llicència - Pau (HEAD -> feature/license, origin/feature/license)
-* 7cf4080 - (0 seconds ago) 1. Primer commit - Joan Puigcerver (origin/main, origin/develop, origin/HEAD, main, develop)
+* efc6b7f - (0 seconds ago) LICENSE: Enllaç a la llicència - Pau (HEAD -> feature/license, origin/feature/license)
+* fcfe09d - (0 seconds ago) LICENSE: Afegida llicència - Pau
+* 58facc3 - (0 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/develop, origin/HEAD, main, develop)
