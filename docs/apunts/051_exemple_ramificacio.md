@@ -10,7 +10,7 @@ comments: true
 En aquest material veurem com es pot utilitzar una estratègia de ramificació
 en un projecte de desenvolupament de programari.
 
-En aquest projecte utilitzarem la tècnica d'integració __`merge` + `merge --squash`__.
+En aquest projecte utilitzarem la tècnica d'integració [[bloc5#fusio-merge-squash]]{:target=_blank}.
 
 ### Repositori remot
 Anem a simular un projecte de desenvolupament de programari

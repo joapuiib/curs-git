@@ -129,7 +129,7 @@ El procés per integrar les funcionalitats a la branca de desenvolupament `devel
 és el següent:
 
 !!! important
-    Segons la tècnica de fusió triada, els punts 3 i 4 poden variar.
+    Segons la tècnica d'integració triada, els punts 3 i 4 poden variar.
 
 1. Sincronitzar l'estat del repositori local amb el remot amb `git fetch`.
 2. Actualitzar la branca local `develop` amb els canvis del remot `git pull`.
