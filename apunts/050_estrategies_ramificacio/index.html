@@ -685,7 +685,7 @@
           <li class="md-nav__item">
   <a href="#fusio-rebase-merge-no-ff" class="md-nav__link">
     <span class="md-ellipsis">
-      Fusió rebase + merge -no-ff
+      Fusió rebase + merge --no-ff
     </span>
   </a>
   
@@ -1289,7 +1289,7 @@
           <li class="md-nav__item">
   <a href="#fusio-rebase-merge-no-ff" class="md-nav__link">
     <span class="md-ellipsis">
-      Fusió rebase + merge -no-ff
+      Fusió rebase + merge --no-ff
     </span>
   </a>
   
@@ -1889,11 +1889,12 @@ un <strong>commit de fusió</strong>.</p>
 <li>Manté la història lineal.</li>
 <li>Permet resoldre els conflictes fàcilment en el procés de <code>rebase</code>.</li>
 </ul>
-<p>El principal desavantatge és:</p>
+<p>Els principal desavantatges són:</p>
 <ul>
+<li>Realitzar el canvi de base de funcionalitats amb molts <em>commits</em> pot ser complicat.</li>
 <li>Revertir una funcionalitat és complicat, ja que cal revertir múltiples <em>commits</em>.</li>
 </ul>
-<h4 id="fusio-rebase-merge-no-ff">Fusió <code>rebase</code> + <code>merge -no-ff</code><a class="headerlink" href="#fusio-rebase-merge-no-ff" title="Permanent link">&para;</a></h4>
+<h4 id="fusio-rebase-merge-no-ff">Fusió <code>rebase</code> + <code>merge --no-ff</code><a class="headerlink" href="#fusio-rebase-merge-no-ff" title="Permanent link">&para;</a></h4>
 <p>Aquesta opció combina les dues opcions anteriors per tal d'aprofitar els avantatges de cadascuna
 i a la vegada minimitzar els seus desavantatges.</p>
 <p>Aquest mètode es basa en realitzar un canvi de base <code>rebase</code> i després fusionar la branca de funcionalitat
@@ -1914,8 +1915,8 @@ i resoldre'ls abans de realitzar la fusió.</p>
 <p>Per realitzar aquesta integració de canvis, es recomana utilitzar <code>git merge</code>.
 Com que la branca de funcionalitat serà eliminada després de la fusió,
 no importa si la història de la branca de funcionalitat es manté neta o no.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
+<div class="admonition warning">
+<p class="admonition-title">Advertència</p>
 <p>També es podria realitzar la fusió amb <code>rebase</code>,
 però si hi ha molts commits a la branca de funcionalitat,
 aquesta opció pot ser més complicada ja que podrien

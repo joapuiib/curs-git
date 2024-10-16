@@ -1,13 +1,542 @@
 jpuigcerver@fp:~/gitflow $ cd ~/gitflow/remot
 jpuigcerver@fp:~/gitflow/remot (main) $ git lga
-* 3e60c32 - (0 seconds ago) Autors: Mar - Mar (feature/author)
-* 32a7bd7 - (0 seconds ago) Autors: Pau - Mar
-* cebc3c1 - (0 seconds ago) Autors: Anna - Mar
-* 0677978 - (0 seconds ago) README.md: Secció d'autors - Mar
-| * db2c8a8 - (0 seconds ago) LICENSE: Enllaç a la llicència - Pau (feature/license)
-| * d20ffa3 - (0 seconds ago) LICENSE: Afegida llicència - Pau
+* 3ef3c62 - (0 seconds ago) Autors: Mar - Mar (feature/author)
+* 274354c - (0 seconds ago) Autors: Pau - Mar
+* 6c9fbde - (0 seconds ago) Autors: Anna - Mar
+* a72701f - (0 seconds ago) README.md: Secció d'autors - Mar
+| * 67c0a5e - (0 seconds ago) LICENSE: Enllaç a la llicència - Pau (feature/license)
+| * d1275b1 - (0 seconds ago) LICENSE: Afegida llicència - Pau
 |/  
-| * ad0d531 - (0 seconds ago) README.md: Branques propòsit únic - Anna (feature/readme)
-| * 651842a - (0 seconds ago) README.md: Descripció - Anna
+| * fa453da - (0 seconds ago) README.md: Branques propòsit únic - Anna (feature/readme)
+| * e8485fe - (0 seconds ago) README.md: Descripció - Anna
 |/  
-* a1acfb5 - (0 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main, develop)
+* 587aaaf - (0 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main, develop)
+anna@fp:~/gitflow $ cd ~/gitflow/anna
+anna@fp:~/gitflow/anna (feature/readme) $ git fetch
+From ~/gitflow/remot
+ * [new branch]      feature/author  -> origin/feature/author
+ * [new branch]      feature/license -> origin/feature/license
+anna@fp:~/gitflow/anna (feature/readme) $ git lga
+* fa453da - (0 seconds ago) README.md: Branques propòsit únic - Anna (HEAD -> feature/readme, origin/feature/readme)
+* e8485fe - (0 seconds ago) README.md: Descripció - Anna
+| * 3ef3c62 - (0 seconds ago) Autors: Mar - Mar (origin/feature/author)
+| * 274354c - (0 seconds ago) Autors: Pau - Mar
+| * 6c9fbde - (0 seconds ago) Autors: Anna - Mar
+| * a72701f - (0 seconds ago) README.md: Secció d'autors - Mar
+|/  
+| * 67c0a5e - (0 seconds ago) LICENSE: Enllaç a la llicència - Pau (origin/feature/license)
+| * d1275b1 - (0 seconds ago) LICENSE: Afegida llicència - Pau
+|/  
+* 587aaaf - (0 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/develop, origin/HEAD, main, develop)
+anna@fp:~/gitflow/anna (feature/readme) $ git checkout develop
+Your branch is up to date with 'origin/develop'.
+Switched to branch 'develop'
+anna@fp:~/gitflow/anna (develop) $ git pull --ff-only
+Already up to date.
+anna@fp:~/gitflow/anna (develop) $ git checkout develop
+Your branch is up to date with 'origin/develop'.
+Already on 'develop'
+anna@fp:~/gitflow/anna (develop) $ git merge --no-ff --no-edit feature/readme
+Merge made by the 'ort' strategy.
+ README.md | 6 ++++++
+ 1 file changed, 6 insertions(+)
+anna@fp:~/gitflow/anna (develop) $ git lga
+*   364d51b - (0 seconds ago) Merge branch 'feature/readme' into develop - Anna (HEAD -> develop)
+|\  
+| * fa453da - (0 seconds ago) README.md: Branques propòsit únic - Anna (origin/feature/readme, feature/readme)
+| * e8485fe - (0 seconds ago) README.md: Descripció - Anna
+|/  
+| * 3ef3c62 - (0 seconds ago) Autors: Mar - Mar (origin/feature/author)
+| * 274354c - (0 seconds ago) Autors: Pau - Mar
+| * 6c9fbde - (0 seconds ago) Autors: Anna - Mar
+| * a72701f - (0 seconds ago) README.md: Secció d'autors - Mar
+|/  
+| * 67c0a5e - (0 seconds ago) LICENSE: Enllaç a la llicència - Pau (origin/feature/license)
+| * d1275b1 - (0 seconds ago) LICENSE: Afegida llicència - Pau
+|/  
+* 587aaaf - (0 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/develop, origin/HEAD, main)
+anna@fp:~/gitflow/anna (develop) $ git push
+To ~/gitflow/remot
+   587aaaf..364d51b  develop -> develop
+anna@fp:~/gitflow/anna (develop) $ git lga
+*   364d51b - (0 seconds ago) Merge branch 'feature/readme' into develop - Anna (HEAD -> develop, origin/develop)
+|\  
+| * fa453da - (0 seconds ago) README.md: Branques propòsit únic - Anna (origin/feature/readme, feature/readme)
+| * e8485fe - (0 seconds ago) README.md: Descripció - Anna
+|/  
+| * 3ef3c62 - (0 seconds ago) Autors: Mar - Mar (origin/feature/author)
+| * 274354c - (0 seconds ago) Autors: Pau - Mar
+| * 6c9fbde - (0 seconds ago) Autors: Anna - Mar
+| * a72701f - (0 seconds ago) README.md: Secció d'autors - Mar
+|/  
+| * 67c0a5e - (0 seconds ago) LICENSE: Enllaç a la llicència - Pau (origin/feature/license)
+| * d1275b1 - (0 seconds ago) LICENSE: Afegida llicència - Pau
+|/  
+* 587aaaf - (0 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)
+anna@fp:~/gitflow/anna (develop) $ git branch -D feature/readme
+Deleted branch feature/readme (was fa453da).
+anna@fp:~/gitflow/anna (develop) $ git push origin --delete feature/readme
+To ~/gitflow/remot
+ - [deleted]         feature/readme
+anna@fp:~/gitflow/anna (develop) $ git lga
+*   364d51b - (0 seconds ago) Merge branch 'feature/readme' into develop - Anna (HEAD -> develop, origin/develop)
+|\  
+| * fa453da - (0 seconds ago) README.md: Branques propòsit únic - Anna
+| * e8485fe - (0 seconds ago) README.md: Descripció - Anna
+|/  
+| * 3ef3c62 - (0 seconds ago) Autors: Mar - Mar (origin/feature/author)
+| * 274354c - (0 seconds ago) Autors: Pau - Mar
+| * 6c9fbde - (0 seconds ago) Autors: Anna - Mar
+| * a72701f - (0 seconds ago) README.md: Secció d'autors - Mar
+|/  
+| * 67c0a5e - (0 seconds ago) LICENSE: Enllaç a la llicència - Pau (origin/feature/license)
+| * d1275b1 - (0 seconds ago) LICENSE: Afegida llicència - Pau
+|/  
+* 587aaaf - (0 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)
+pau@fp:~/gitflow $ cd ~/gitflow/pau
+pau@fp:~/gitflow/pau (feature/license) $ git fetch --prune
+From ~/gitflow/remot
+   587aaaf..364d51b  develop        -> origin/develop
+ * [new branch]      feature/author -> origin/feature/author
+pau@fp:~/gitflow/pau (feature/license) $ git lga
+* 67c0a5e - (0 seconds ago) LICENSE: Enllaç a la llicència - Pau (HEAD -> feature/license, origin/feature/license)
+* d1275b1 - (0 seconds ago) LICENSE: Afegida llicència - Pau
+| * 364d51b - (0 seconds ago) Merge branch 'feature/readme' into develop - Anna (origin/develop)
+|/| 
+| * fa453da - (0 seconds ago) README.md: Branques propòsit únic - Anna
+| * e8485fe - (0 seconds ago) README.md: Descripció - Anna
+|/  
+| * 3ef3c62 - (0 seconds ago) Autors: Mar - Mar (origin/feature/author)
+| * 274354c - (0 seconds ago) Autors: Pau - Mar
+| * 6c9fbde - (0 seconds ago) Autors: Anna - Mar
+| * a72701f - (0 seconds ago) README.md: Secció d'autors - Mar
+|/  
+* 587aaaf - (0 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main, develop)
+pau@fp:~/gitflow/pau (feature/license) $ git checkout develop
+Your branch is behind 'origin/develop' by 3 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Switched to branch 'develop'
+pau@fp:~/gitflow/pau (develop) $ git pull --ff-only
+Updating 587aaaf..364d51b
+Fast-forward
+ README.md | 6 ++++++
+ 1 file changed, 6 insertions(+)
+pau@fp:~/gitflow/pau (develop) $ git lga
+*   364d51b - (0 seconds ago) Merge branch 'feature/readme' into develop - Anna (HEAD -> develop, origin/develop)
+|\  
+| * fa453da - (0 seconds ago) README.md: Branques propòsit únic - Anna
+| * e8485fe - (0 seconds ago) README.md: Descripció - Anna
+|/  
+| * 67c0a5e - (0 seconds ago) LICENSE: Enllaç a la llicència - Pau (origin/feature/license, feature/license)
+| * d1275b1 - (0 seconds ago) LICENSE: Afegida llicència - Pau
+|/  
+| * 3ef3c62 - (0 seconds ago) Autors: Mar - Mar (origin/feature/author)
+| * 274354c - (0 seconds ago) Autors: Pau - Mar
+| * 6c9fbde - (0 seconds ago) Autors: Anna - Mar
+| * a72701f - (0 seconds ago) README.md: Secció d'autors - Mar
+|/  
+* 587aaaf - (0 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)
+pau@fp:~/gitflow/pau (develop) $ git checkout develop
+Your branch is up to date with 'origin/develop'.
+Already on 'develop'
+pau@fp:~/gitflow/pau (develop) $ git merge --no-ff --no-edit feature/license
+Merge made by the 'ort' strategy.
+ LICENSE | 5 +++++
+ 1 file changed, 5 insertions(+)
+ create mode 100644 LICENSE
+pau@fp:~/gitflow/pau (develop) $ git lga
+*   851c4e7 - (0 seconds ago) Merge branch 'feature/license' into develop - Pau (HEAD -> develop)
+|\  
+| * 67c0a5e - (0 seconds ago) LICENSE: Enllaç a la llicència - Pau (origin/feature/license, feature/license)
+| * d1275b1 - (0 seconds ago) LICENSE: Afegida llicència - Pau
+* |   364d51b - (0 seconds ago) Merge branch 'feature/readme' into develop - Anna (origin/develop)
+|\ \  
+| |/  
+|/|   
+| * fa453da - (0 seconds ago) README.md: Branques propòsit únic - Anna
+| * e8485fe - (0 seconds ago) README.md: Descripció - Anna
+|/  
+| * 3ef3c62 - (0 seconds ago) Autors: Mar - Mar (origin/feature/author)
+| * 274354c - (0 seconds ago) Autors: Pau - Mar
+| * 6c9fbde - (0 seconds ago) Autors: Anna - Mar
+| * a72701f - (0 seconds ago) README.md: Secció d'autors - Mar
+|/  
+* 587aaaf - (0 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)
+pau@fp:~/gitflow/pau (develop) $ git push
+To ~/gitflow/remot
+   364d51b..851c4e7  develop -> develop
+pau@fp:~/gitflow/pau (develop) $ git lga
+*   851c4e7 - (1 second ago) Merge branch 'feature/license' into develop - Pau (HEAD -> develop, origin/develop)
+|\  
+| * 67c0a5e - (1 second ago) LICENSE: Enllaç a la llicència - Pau (origin/feature/license, feature/license)
+| * d1275b1 - (1 second ago) LICENSE: Afegida llicència - Pau
+* |   364d51b - (1 second ago) Merge branch 'feature/readme' into develop - Anna
+|\ \  
+| |/  
+|/|   
+| * fa453da - (1 second ago) README.md: Branques propòsit únic - Anna
+| * e8485fe - (1 second ago) README.md: Descripció - Anna
+|/  
+| * 3ef3c62 - (1 second ago) Autors: Mar - Mar (origin/feature/author)
+| * 274354c - (1 second ago) Autors: Pau - Mar
+| * 6c9fbde - (1 second ago) Autors: Anna - Mar
+| * a72701f - (1 second ago) README.md: Secció d'autors - Mar
+|/  
+* 587aaaf - (1 second ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)
+pau@fp:~/gitflow/pau (develop) $ git branch -D feature/license
+Deleted branch feature/license (was 67c0a5e).
+pau@fp:~/gitflow/pau (develop) $ git push origin --delete feature/license
+To ~/gitflow/remot
+ - [deleted]         feature/license
+pau@fp:~/gitflow/pau (develop) $ git lga
+*   851c4e7 - (1 second ago) Merge branch 'feature/license' into develop - Pau (HEAD -> develop, origin/develop)
+|\  
+| * 67c0a5e - (1 second ago) LICENSE: Enllaç a la llicència - Pau
+| * d1275b1 - (1 second ago) LICENSE: Afegida llicència - Pau
+* |   364d51b - (1 second ago) Merge branch 'feature/readme' into develop - Anna
+|\ \  
+| |/  
+|/|   
+| * fa453da - (1 second ago) README.md: Branques propòsit únic - Anna
+| * e8485fe - (1 second ago) README.md: Descripció - Anna
+|/  
+| * 3ef3c62 - (1 second ago) Autors: Mar - Mar (origin/feature/author)
+| * 274354c - (1 second ago) Autors: Pau - Mar
+| * 6c9fbde - (1 second ago) Autors: Anna - Mar
+| * a72701f - (1 second ago) README.md: Secció d'autors - Mar
+|/  
+* 587aaaf - (1 second ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)
+mar@fp:~/gitflow $ cd ~/gitflow/mar
+mar@fp:~/gitflow/mar (feature/author) $ git fetch
+From ~/gitflow/remot
+   587aaaf..851c4e7  develop    -> origin/develop
+mar@fp:~/gitflow/mar (feature/author) $ git lga
+* 3ef3c62 - (1 second ago) Autors: Mar - Mar (HEAD -> feature/author, origin/feature/author)
+* 274354c - (1 second ago) Autors: Pau - Mar
+* 6c9fbde - (1 second ago) Autors: Anna - Mar
+* a72701f - (1 second ago) README.md: Secció d'autors - Mar
+| *   851c4e7 - (1 second ago) Merge branch 'feature/license' into develop - Pau (origin/develop)
+| |\  
+| | * 67c0a5e - (1 second ago) LICENSE: Enllaç a la llicència - Pau
+| | * d1275b1 - (1 second ago) LICENSE: Afegida llicència - Pau
+| |/  
+|/|   
+| * 364d51b - (1 second ago) Merge branch 'feature/readme' into develop - Anna
+|/| 
+| * fa453da - (1 second ago) README.md: Branques propòsit únic - Anna
+| * e8485fe - (1 second ago) README.md: Descripció - Anna
+|/  
+* 587aaaf - (1 second ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main, develop)
+mar@fp:~/gitflow/mar (feature/author) $ git checkout develop
+Your branch is behind 'origin/develop' by 6 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Switched to branch 'develop'
+mar@fp:~/gitflow/mar (develop) $ git pull --ff-only
+Updating 587aaaf..851c4e7
+Fast-forward
+ LICENSE   | 5 +++++
+ README.md | 6 ++++++
+ 2 files changed, 11 insertions(+)
+ create mode 100644 LICENSE
+mar@fp:~/gitflow/mar (develop) $ git lga
+*   851c4e7 - (1 second ago) Merge branch 'feature/license' into develop - Pau (HEAD -> develop, origin/develop)
+|\  
+| * 67c0a5e - (1 second ago) LICENSE: Enllaç a la llicència - Pau
+| * d1275b1 - (1 second ago) LICENSE: Afegida llicència - Pau
+* |   364d51b - (1 second ago) Merge branch 'feature/readme' into develop - Anna
+|\ \  
+| |/  
+|/|   
+| * fa453da - (1 second ago) README.md: Branques propòsit únic - Anna
+| * e8485fe - (1 second ago) README.md: Descripció - Anna
+|/  
+| * 3ef3c62 - (1 second ago) Autors: Mar - Mar (origin/feature/author, feature/author)
+| * 274354c - (1 second ago) Autors: Pau - Mar
+| * 6c9fbde - (1 second ago) Autors: Anna - Mar
+| * a72701f - (1 second ago) README.md: Secció d'autors - Mar
+|/  
+* 587aaaf - (1 second ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)
+mar@fp:~/gitflow/mar (develop) $ git checkout develop
+Your branch is up to date with 'origin/develop'.
+Already on 'develop'
+mar@fp:~/gitflow/mar (develop) $ git merge --no-ff --no-edit feature/author
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+mar@fp:~/gitflow/mar (develop) $ vim README.md # (2)!
+mar@fp:~/gitflow/mar (develop) $ git add README.md
+mar@fp:~/gitflow/mar (develop) $ git commit --no-edit # (1)!
+[develop 2741c7a] Merge branch 'feature/author' into develop
+mar@fp:~/gitflow/mar (develop) $ git lga
+*   2741c7a - (0 seconds ago) Merge branch 'feature/author' into develop - Mar (HEAD -> develop)
+|\  
+| * 3ef3c62 - (1 second ago) Autors: Mar - Mar (origin/feature/author, feature/author)
+| * 274354c - (1 second ago) Autors: Pau - Mar
+| * 6c9fbde - (1 second ago) Autors: Anna - Mar
+| * a72701f - (1 second ago) README.md: Secció d'autors - Mar
+* |   851c4e7 - (1 second ago) Merge branch 'feature/license' into develop - Pau (origin/develop)
+|\ \  
+| * | 67c0a5e - (1 second ago) LICENSE: Enllaç a la llicència - Pau
+| * | d1275b1 - (1 second ago) LICENSE: Afegida llicència - Pau
+| |/  
+* |   364d51b - (1 second ago) Merge branch 'feature/readme' into develop - Anna
+|\ \  
+| |/  
+|/|   
+| * fa453da - (1 second ago) README.md: Branques propòsit únic - Anna
+| * e8485fe - (1 second ago) README.md: Descripció - Anna
+|/  
+* 587aaaf - (1 second ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)
+mar@fp:~/gitflow/mar (develop) $ git push
+To ~/gitflow/remot
+   851c4e7..2741c7a  develop -> develop
+mar@fp:~/gitflow/mar (develop) $ git lga
+*   2741c7a - (0 seconds ago) Merge branch 'feature/author' into develop - Mar (HEAD -> develop, origin/develop)
+|\  
+| * 3ef3c62 - (1 second ago) Autors: Mar - Mar (origin/feature/author, feature/author)
+| * 274354c - (1 second ago) Autors: Pau - Mar
+| * 6c9fbde - (1 second ago) Autors: Anna - Mar
+| * a72701f - (1 second ago) README.md: Secció d'autors - Mar
+* |   851c4e7 - (1 second ago) Merge branch 'feature/license' into develop - Pau
+|\ \  
+| * | 67c0a5e - (1 second ago) LICENSE: Enllaç a la llicència - Pau
+| * | d1275b1 - (1 second ago) LICENSE: Afegida llicència - Pau
+| |/  
+* |   364d51b - (1 second ago) Merge branch 'feature/readme' into develop - Anna
+|\ \  
+| |/  
+|/|   
+| * fa453da - (1 second ago) README.md: Branques propòsit únic - Anna
+| * e8485fe - (1 second ago) README.md: Descripció - Anna
+|/  
+* 587aaaf - (1 second ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)
+mar@fp:~/gitflow/mar (develop) $ git branch -D feature/author
+Deleted branch feature/author (was 3ef3c62).
+mar@fp:~/gitflow/mar (develop) $ git push origin --delete feature/author
+To ~/gitflow/remot
+ - [deleted]         feature/author
+mar@fp:~/gitflow/mar (develop) $ git lga
+*   2741c7a - (0 seconds ago) Merge branch 'feature/author' into develop - Mar (HEAD -> develop, origin/develop)
+|\  
+| * 3ef3c62 - (1 second ago) Autors: Mar - Mar
+| * 274354c - (1 second ago) Autors: Pau - Mar
+| * 6c9fbde - (1 second ago) Autors: Anna - Mar
+| * a72701f - (1 second ago) README.md: Secció d'autors - Mar
+* |   851c4e7 - (1 second ago) Merge branch 'feature/license' into develop - Pau
+|\ \  
+| * | 67c0a5e - (1 second ago) LICENSE: Enllaç a la llicència - Pau
+| * | d1275b1 - (1 second ago) LICENSE: Afegida llicència - Pau
+| |/  
+* |   364d51b - (1 second ago) Merge branch 'feature/readme' into develop - Anna
+|\ \  
+| |/  
+|/|   
+| * fa453da - (1 second ago) README.md: Branques propòsit únic - Anna
+| * e8485fe - (1 second ago) README.md: Descripció - Anna
+|/  
+* 587aaaf - (1 second ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)
+anna@fp:~/gitflow $ cd ~/gitflow/anna
+anna@fp:~/gitflow/anna (develop) $ git checkout develop
+Your branch is up to date with 'origin/develop'.
+Already on 'develop'
+anna@fp:~/gitflow/anna (develop) $ git fetch --prune
+From ~/gitflow/remot
+ - [deleted]         (none)     -> origin/feature/author
+ - [deleted]         (none)     -> origin/feature/license
+   364d51b..2741c7a  develop    -> origin/develop
+anna@fp:~/gitflow/anna (develop) $ git pull --ff-only
+Updating 364d51b..2741c7a
+Fast-forward
+ LICENSE   | 5 +++++
+ README.md | 5 +++++
+ 2 files changed, 10 insertions(+)
+ create mode 100644 LICENSE
+anna@fp:~/gitflow/anna (develop) $ git lga
+*   2741c7a - (0 seconds ago) Merge branch 'feature/author' into develop - Mar (HEAD -> develop, origin/develop)
+|\  
+| * 3ef3c62 - (1 second ago) Autors: Mar - Mar
+| * 274354c - (1 second ago) Autors: Pau - Mar
+| * 6c9fbde - (1 second ago) Autors: Anna - Mar
+| * a72701f - (1 second ago) README.md: Secció d'autors - Mar
+* |   851c4e7 - (1 second ago) Merge branch 'feature/license' into develop - Pau
+|\ \  
+| * | 67c0a5e - (1 second ago) LICENSE: Enllaç a la llicència - Pau
+| * | d1275b1 - (1 second ago) LICENSE: Afegida llicència - Pau
+| |/  
+* |   364d51b - (1 second ago) Merge branch 'feature/readme' into develop - Anna
+|\ \  
+| |/  
+|/|   
+| * fa453da - (1 second ago) README.md: Branques propòsit únic - Anna
+| * e8485fe - (1 second ago) README.md: Descripció - Anna
+|/  
+* 587aaaf - (1 second ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)
+anna@fp:~/gitflow/anna (develop) $ git checkout -b release/v1.0.0
+Switched to a new branch 'release/v1.0.0'
+anna@fp:~/gitflow/anna (release/v1.0.0) $ git lga
+*   2741c7a - (0 seconds ago) Merge branch 'feature/author' into develop - Mar (HEAD -> release/v1.0.0, origin/develop, develop)
+|\  
+| * 3ef3c62 - (1 second ago) Autors: Mar - Mar
+| * 274354c - (1 second ago) Autors: Pau - Mar
+| * 6c9fbde - (1 second ago) Autors: Anna - Mar
+| * a72701f - (1 second ago) README.md: Secció d'autors - Mar
+* |   851c4e7 - (1 second ago) Merge branch 'feature/license' into develop - Pau
+|\ \  
+| * | 67c0a5e - (1 second ago) LICENSE: Enllaç a la llicència - Pau
+| * | d1275b1 - (1 second ago) LICENSE: Afegida llicència - Pau
+| |/  
+* |   364d51b - (1 second ago) Merge branch 'feature/readme' into develop - Anna
+|\ \  
+| |/  
+|/|   
+| * fa453da - (1 second ago) README.md: Branques propòsit únic - Anna
+| * e8485fe - (1 second ago) README.md: Descripció - Anna
+|/  
+* 587aaaf - (1 second ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)
+anna@fp:~/gitflow/anna (release/v1.0.0) $ echo "v1.0.0" > VERSION
+anna@fp:~/gitflow/anna (release/v1.0.0) $ git add VERSION
+anna@fp:~/gitflow/anna (release/v1.0.0) $ git commit -m "Publicada versió: v1.0.0"
+[release/v1.0.0 e7b19ed] Publicada versió: v1.0.0
+ 1 file changed, 1 insertion(+)
+ create mode 100644 VERSION
+anna@fp:~/gitflow/anna (release/v1.0.0) $ git lga
+* e7b19ed - (0 seconds ago) Publicada versió: v1.0.0 - Anna (HEAD -> release/v1.0.0)
+*   2741c7a - (0 seconds ago) Merge branch 'feature/author' into develop - Mar (origin/develop, develop)
+|\  
+| * 3ef3c62 - (1 second ago) Autors: Mar - Mar
+| * 274354c - (1 second ago) Autors: Pau - Mar
+| * 6c9fbde - (1 second ago) Autors: Anna - Mar
+| * a72701f - (1 second ago) README.md: Secció d'autors - Mar
+* |   851c4e7 - (1 second ago) Merge branch 'feature/license' into develop - Pau
+|\ \  
+| * | 67c0a5e - (1 second ago) LICENSE: Enllaç a la llicència - Pau
+| * | d1275b1 - (1 second ago) LICENSE: Afegida llicència - Pau
+| |/  
+* |   364d51b - (1 second ago) Merge branch 'feature/readme' into develop - Anna
+|\ \  
+| |/  
+|/|   
+| * fa453da - (1 second ago) README.md: Branques propòsit únic - Anna
+| * e8485fe - (1 second ago) README.md: Descripció - Anna
+|/  
+* 587aaaf - (1 second ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)
+anna@fp:~/gitflow/anna (release/v1.0.0) $ git checkout develop
+Your branch is up to date with 'origin/develop'.
+Switched to branch 'develop'
+anna@fp:~/gitflow/anna (develop) $ git merge --ff-only release/v1.0.0
+Updating 2741c7a..e7b19ed
+Fast-forward
+ VERSION | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 VERSION
+anna@fp:~/gitflow/anna (develop) $ git push
+To ~/gitflow/remot
+   2741c7a..e7b19ed  develop -> develop
+anna@fp:~/gitflow/anna (develop) $ git lga
+* e7b19ed - (0 seconds ago) Publicada versió: v1.0.0 - Anna (HEAD -> develop, origin/develop, release/v1.0.0)
+*   2741c7a - (0 seconds ago) Merge branch 'feature/author' into develop - Mar
+|\  
+| * 3ef3c62 - (1 second ago) Autors: Mar - Mar
+| * 274354c - (1 second ago) Autors: Pau - Mar
+| * 6c9fbde - (1 second ago) Autors: Anna - Mar
+| * a72701f - (1 second ago) README.md: Secció d'autors - Mar
+* |   851c4e7 - (1 second ago) Merge branch 'feature/license' into develop - Pau
+|\ \  
+| * | 67c0a5e - (1 second ago) LICENSE: Enllaç a la llicència - Pau
+| * | d1275b1 - (1 second ago) LICENSE: Afegida llicència - Pau
+| |/  
+* |   364d51b - (1 second ago) Merge branch 'feature/readme' into develop - Anna
+|\ \  
+| |/  
+|/|   
+| * fa453da - (1 second ago) README.md: Branques propòsit únic - Anna
+| * e8485fe - (1 second ago) README.md: Descripció - Anna
+|/  
+* 587aaaf - (1 second ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)
+anna@fp:~/gitflow/anna (develop) $ git checkout main
+Your branch is up to date with 'origin/main'.
+Switched to branch 'main'
+anna@fp:~/gitflow/anna (main) $ git merge --ff-only release/v1.0.0
+Updating 587aaaf..e7b19ed
+Fast-forward
+ LICENSE   |  5 +++++
+ README.md | 11 +++++++++++
+ VERSION   |  1 +
+ 3 files changed, 17 insertions(+)
+ create mode 100644 LICENSE
+ create mode 100644 VERSION
+anna@fp:~/gitflow/anna (main) $ git push
+To ~/gitflow/remot
+   587aaaf..e7b19ed  main -> main
+anna@fp:~/gitflow/anna (main) $ git lga
+* e7b19ed - (0 seconds ago) Publicada versió: v1.0.0 - Anna (HEAD -> main, origin/main, origin/develop, origin/HEAD, release/v1.0.0, develop)
+*   2741c7a - (0 seconds ago) Merge branch 'feature/author' into develop - Mar
+|\  
+| * 3ef3c62 - (1 second ago) Autors: Mar - Mar
+| * 274354c - (1 second ago) Autors: Pau - Mar
+| * 6c9fbde - (1 second ago) Autors: Anna - Mar
+| * a72701f - (1 second ago) README.md: Secció d'autors - Mar
+* |   851c4e7 - (1 second ago) Merge branch 'feature/license' into develop - Pau
+|\ \  
+| * | 67c0a5e - (1 second ago) LICENSE: Enllaç a la llicència - Pau
+| * | d1275b1 - (1 second ago) LICENSE: Afegida llicència - Pau
+| |/  
+* |   364d51b - (1 second ago) Merge branch 'feature/readme' into develop - Anna
+|\ \  
+| |/  
+|/|   
+| * fa453da - (1 second ago) README.md: Branques propòsit únic - Anna
+| * e8485fe - (1 second ago) README.md: Descripció - Anna
+|/  
+* 587aaaf - (1 second ago) Commit inicial - Joan Puigcerver
+anna@fp:~/gitflow/anna (main) $ git tag v1.0.0
+anna@fp:~/gitflow/anna (main) $ git push --tags
+To ~/gitflow/remot
+ * [new tag]         v1.0.0 -> v1.0.0
+anna@fp:~/gitflow/anna (main) $ git lga
+* e7b19ed - (0 seconds ago) Publicada versió: v1.0.0 - Anna (HEAD -> main, tag: v1.0.0, origin/main, origin/develop, origin/HEAD, release/v1.0.0, develop)
+*   2741c7a - (0 seconds ago) Merge branch 'feature/author' into develop - Mar
+|\  
+| * 3ef3c62 - (1 second ago) Autors: Mar - Mar
+| * 274354c - (1 second ago) Autors: Pau - Mar
+| * 6c9fbde - (1 second ago) Autors: Anna - Mar
+| * a72701f - (1 second ago) README.md: Secció d'autors - Mar
+* |   851c4e7 - (1 second ago) Merge branch 'feature/license' into develop - Pau
+|\ \  
+| * | 67c0a5e - (1 second ago) LICENSE: Enllaç a la llicència - Pau
+| * | d1275b1 - (1 second ago) LICENSE: Afegida llicència - Pau
+| |/  
+* |   364d51b - (1 second ago) Merge branch 'feature/readme' into develop - Anna
+|\ \  
+| |/  
+|/|   
+| * fa453da - (1 second ago) README.md: Branques propòsit únic - Anna
+| * e8485fe - (1 second ago) README.md: Descripció - Anna
+|/  
+* 587aaaf - (1 second ago) Commit inicial - Joan Puigcerver
+anna@fp:~/gitflow/anna (main) $ git branch -D release/v1.0.0
+Deleted branch release/v1.0.0 (was e7b19ed).
+anna@fp:~/gitflow/anna (main) $ git push origin --delete release/v1.0.0
+error: unable to delete 'release/v1.0.0': remote ref does not exist
+error: failed to push some refs to '~/gitflow/remot'
+anna@fp:~/gitflow/anna (main) $ git lga
+* e7b19ed - (0 seconds ago) Publicada versió: v1.0.0 - Anna (HEAD -> main, tag: v1.0.0, origin/main, origin/develop, origin/HEAD, develop)
+*   2741c7a - (0 seconds ago) Merge branch 'feature/author' into develop - Mar
+|\  
+| * 3ef3c62 - (1 second ago) Autors: Mar - Mar
+| * 274354c - (1 second ago) Autors: Pau - Mar
+| * 6c9fbde - (1 second ago) Autors: Anna - Mar
+| * a72701f - (1 second ago) README.md: Secció d'autors - Mar
+* |   851c4e7 - (1 second ago) Merge branch 'feature/license' into develop - Pau
+|\ \  
+| * | 67c0a5e - (1 second ago) LICENSE: Enllaç a la llicència - Pau
+| * | d1275b1 - (1 second ago) LICENSE: Afegida llicència - Pau
+| |/  
+* |   364d51b - (1 second ago) Merge branch 'feature/readme' into develop - Anna
+|\ \  
+| |/  
+|/|   
+| * fa453da - (1 second ago) README.md: Branques propòsit únic - Anna
+| * e8485fe - (1 second ago) README.md: Descripció - Anna
+|/  
+* 587aaaf - (1 second ago) Commit inicial - Joan Puigcerver

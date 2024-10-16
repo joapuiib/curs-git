@@ -1,0 +1,11 @@
+anna@fp:~/gitflow/anna (main) $ git branch -D release/v1.0.0
+Deleted branch release/v1.0.0 (was f673e07).
+anna@fp:~/gitflow/anna (main) $ git push origin --delete release/v1.0.0
+error: unable to delete 'release/v1.0.0': remote ref does not exist
+error: failed to push some refs to '~/gitflow/remot'
+anna@fp:~/gitflow/anna (main) $ git lga
+* f673e07 - (0 seconds ago) Publicada versió: v1.0.0 - Anna (HEAD -> main, tag: v1.0.0, origin/main, origin/develop, origin/HEAD, develop)
+* cb8fb0e - (1 second ago) Merge branch 'feature/author' - Mar
+* 15cc954 - (1 second ago) Merge branch 'feature/license' - Pau
+* 6096544 - (1 second ago) Merge branch 'feature/readme' - Anna
+* 87c24d1 - (1 second ago) Commit inicial - Joan Puigcerver

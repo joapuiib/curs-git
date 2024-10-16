@@ -8,15 +8,15 @@ Automatic merge failed; fix conflicts and then commit the result.
 mar@fp:~/gitflow/mar (feature/author) $ vim README.md # (2)!
 mar@fp:~/gitflow/mar (feature/author) $ git add README.md
 mar@fp:~/gitflow/mar (feature/author) $ git commit --no-edit # (1)!
-[feature/author 170a575] Merge branch 'develop' into feature/author
+[feature/author 7b204df] Merge branch 'develop' into feature/author
 mar@fp:~/gitflow/mar (feature/author) $ git lga
-*   170a575 - (0 seconds ago) Merge branch 'develop' into feature/author - Mar (HEAD -> feature/author)
+*   7b204df - (0 seconds ago) Merge branch 'develop' into feature/author - Mar (HEAD -> feature/author)
 |\  
-| * 9ee1217 - (1 second ago) Merge branch 'feature/license' - Pau (origin/develop, develop)
-| * 069239c - (1 second ago) Merge branch 'feature/readme' - Anna
-* | 3e60c32 - (1 second ago) Autors: Mar - Mar (origin/feature/author)
-* | 32a7bd7 - (1 second ago) Autors: Pau - Mar
-* | cebc3c1 - (1 second ago) Autors: Anna - Mar
-* | 0677978 - (1 second ago) README.md: Secció d'autors - Mar
+| * 15cc954 - (0 seconds ago) Merge branch 'feature/license' - Pau (origin/develop, develop)
+| * 6096544 - (0 seconds ago) Merge branch 'feature/readme' - Anna
+* | c797058 - (0 seconds ago) Autors: Mar - Mar (origin/feature/author)
+* | e42be41 - (0 seconds ago) Autors: Pau - Mar
+* | 1a39e97 - (0 seconds ago) Autors: Anna - Mar
+* | c20b570 - (0 seconds ago) README.md: Secció d'autors - Mar
 |/  
-* a1acfb5 - (1 second ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)
+* 87c24d1 - (0 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)

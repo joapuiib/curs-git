@@ -1,0 +1,22 @@
+jpuigcerver@fp:~/gitflow $ cd ~/gitflow/remot
+jpuigcerver@fp:~/gitflow/remot (main) $ git lga
+* e7b19ed - (0 seconds ago) Publicada versió: v1.0.0 - Anna (HEAD -> main, tag: v1.0.0, develop)
+*   2741c7a - (0 seconds ago) Merge branch 'feature/author' into develop - Mar
+|\  
+| * 3ef3c62 - (1 second ago) Autors: Mar - Mar
+| * 274354c - (1 second ago) Autors: Pau - Mar
+| * 6c9fbde - (1 second ago) Autors: Anna - Mar
+| * a72701f - (1 second ago) README.md: Secció d'autors - Mar
+* |   851c4e7 - (1 second ago) Merge branch 'feature/license' into develop - Pau
+|\ \  
+| * | 67c0a5e - (1 second ago) LICENSE: Enllaç a la llicència - Pau
+| * | d1275b1 - (1 second ago) LICENSE: Afegida llicència - Pau
+| |/  
+* |   364d51b - (1 second ago) Merge branch 'feature/readme' into develop - Anna
+|\ \  
+| |/  
+|/|   
+| * fa453da - (1 second ago) README.md: Branques propòsit únic - Anna
+| * e8485fe - (1 second ago) README.md: Descripció - Anna
+|/  
+* 587aaaf - (1 second ago) Commit inicial - Joan Puigcerver

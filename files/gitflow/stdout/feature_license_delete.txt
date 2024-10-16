@@ -1,14 +1,14 @@
 pau@fp:~/gitflow/pau (develop) $ git branch -D feature/license
-Deleted branch feature/license (was cd0d7ee).
+Deleted branch feature/license (was 9bc6102).
 pau@fp:~/gitflow/pau (develop) $ git push origin --delete feature/license
 To ~/gitflow/remot
  - [deleted]         feature/license
 pau@fp:~/gitflow/pau (develop) $ git lga
-* 9ee1217 - (0 seconds ago) Merge branch 'feature/license' - Pau (HEAD -> develop, origin/develop)
-* 069239c - (0 seconds ago) Merge branch 'feature/readme' - Anna
-| * 3e60c32 - (0 seconds ago) Autors: Mar - Mar (origin/feature/author)
-| * 32a7bd7 - (0 seconds ago) Autors: Pau - Mar
-| * cebc3c1 - (0 seconds ago) Autors: Anna - Mar
-| * 0677978 - (0 seconds ago) README.md: Secció d'autors - Mar
+* 15cc954 - (0 seconds ago) Merge branch 'feature/license' - Pau (HEAD -> develop, origin/develop)
+* 6096544 - (0 seconds ago) Merge branch 'feature/readme' - Anna
+| * c797058 - (0 seconds ago) Autors: Mar - Mar (origin/feature/author)
+| * e42be41 - (0 seconds ago) Autors: Pau - Mar
+| * 1a39e97 - (0 seconds ago) Autors: Anna - Mar
+| * c20b570 - (0 seconds ago) README.md: Secció d'autors - Mar
 |/  
-* a1acfb5 - (0 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)
+* 87c24d1 - (0 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)
