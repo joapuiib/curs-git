@@ -1,0 +1,21 @@
+anna@fp:~/gitflow/anna (develop) $ git checkout main
+Your branch is up to date with 'origin/main'.
+Switched to branch 'main'
+anna@fp:~/gitflow/anna (main) $ git merge --ff-only release/v1.0.0
+Updating 87c24d1..f673e07
+Fast-forward
+ LICENSE   |  5 +++++
+ README.md | 11 +++++++++++
+ VERSION   |  1 +
+ 3 files changed, 17 insertions(+)
+ create mode 100644 LICENSE
+ create mode 100644 VERSION
+anna@fp:~/gitflow/anna (main) $ git push
+To ~/gitflow/remot
+   87c24d1..f673e07  main -> main
+anna@fp:~/gitflow/anna (main) $ git lga
+* f673e07 - (0 seconds ago) Publicada versió: v1.0.0 - Anna (HEAD -> main, origin/main, origin/develop, origin/HEAD, release/v1.0.0, develop)
+* cb8fb0e - (1 second ago) Merge branch 'feature/author' - Mar
+* 15cc954 - (1 second ago) Merge branch 'feature/license' - Pau
+* 6096544 - (1 second ago) Merge branch 'feature/readme' - Anna
+* 87c24d1 - (1 second ago) Commit inicial - Joan Puigcerver

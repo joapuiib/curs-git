@@ -283,12 +283,6 @@ Els passos que ha de seguir són:
     --8<-- "docs/files/gitflow/stdout/release.txt"
     ```
 
-1. Crear i publicar una etiqueta amb la versió 1.0.0.
-
-    ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/tag.txt"
-    ```
-
 1. Integrar aquesta branca a la branca de desenvolupament `develop` i publicar-la.
 
     ```shellconsole
@@ -301,8 +295,39 @@ Els passos que ha de seguir són:
     --8<-- "docs/files/gitflow/stdout/release_merge_main.txt"
     ```
 
+1. Crear i publicar una etiqueta amb la versió 1.0.0.
+
+    ```shellconsole
+    --8<-- "docs/files/gitflow/stdout/release_tag.txt"
+    ```
+
 1. Eliminar la branca de publicació.
 
     ```shellconsole
     --8<-- "docs/files/gitflow/stdout/release_delete.txt"
     ```
+
+### Estat final
+#### `merge` + `merge --squash`
+
+```shellconsole
+--8<-- "docs/files/gitflow/stdout/squash_final.txt"
+```
+
+#### `merge --no-ff`
+
+```shellconsole
+--8<-- "docs/files/gitflow/stdout/merge_no_ff_final.txt"
+```
+
+#### `rebase`
+
+```shellconsole
+--8<-- "docs/files/gitflow/stdout/rebase_final.txt"
+```
+
+#### `rebase` + `merge --no-ff`
+
+```shellconsole
+--8<-- "docs/files/gitflow/stdout/rebase_no_ff_final.txt"
+```

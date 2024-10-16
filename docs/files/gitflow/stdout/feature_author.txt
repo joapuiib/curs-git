@@ -9,27 +9,27 @@ Switched to a new branch 'feature/author'
 mar@fp:~/gitflow/mar (feature/author) $ echo "" >> README.md
 mar@fp:~/gitflow/mar (feature/author) $ echo "## Autors" >> README.md
 mar@fp:~/gitflow/mar (feature/author) $ git commit -a -m "README.md: Secció d'autors"
-[feature/author 0677978] README.md: Secció d'autors
+[feature/author a72701f] README.md: Secció d'autors
  1 file changed, 2 insertions(+)
 mar@fp:~/gitflow/mar (feature/author) $ echo "- Anna (anna@fpmislata.com)" >> README.md
 mar@fp:~/gitflow/mar (feature/author) $ git commit -a -m "Autors: Anna"
-[feature/author cebc3c1] Autors: Anna
+[feature/author 6c9fbde] Autors: Anna
  1 file changed, 1 insertion(+)
 mar@fp:~/gitflow/mar (feature/author) $ echo "- Pau (pau@fpmislata.com)" >> README.md
 mar@fp:~/gitflow/mar (feature/author) $ git commit -a -m "Autors: Pau"
-[feature/author 32a7bd7] Autors: Pau
+[feature/author 274354c] Autors: Pau
  1 file changed, 1 insertion(+)
 mar@fp:~/gitflow/mar (feature/author) $ echo "- Mar (mar@fpmislata.com)" >> README.md
 mar@fp:~/gitflow/mar (feature/author) $ git commit -a -m "Autors: Mar"
-[feature/author 3e60c32] Autors: Mar
+[feature/author 3ef3c62] Autors: Mar
  1 file changed, 1 insertion(+)
 mar@fp:~/gitflow/mar (feature/author) $ git push
 branch 'feature/author' set up to track 'origin/feature/author'.
 To ~/gitflow/remot
  * [new branch]      feature/author -> feature/author
 mar@fp:~/gitflow/mar (feature/author) $ git lga
-* 3e60c32 - (0 seconds ago) Autors: Mar - Mar (HEAD -> feature/author, origin/feature/author)
-* 32a7bd7 - (0 seconds ago) Autors: Pau - Mar
-* cebc3c1 - (0 seconds ago) Autors: Anna - Mar
-* 0677978 - (0 seconds ago) README.md: Secció d'autors - Mar
-* a1acfb5 - (0 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/develop, origin/HEAD, main, develop)
+* 3ef3c62 - (0 seconds ago) Autors: Mar - Mar (HEAD -> feature/author, origin/feature/author)
+* 274354c - (0 seconds ago) Autors: Pau - Mar
+* 6c9fbde - (0 seconds ago) Autors: Anna - Mar
+* a72701f - (0 seconds ago) README.md: Secció d'autors - Mar
+* 587aaaf - (0 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/develop, origin/HEAD, main, develop)

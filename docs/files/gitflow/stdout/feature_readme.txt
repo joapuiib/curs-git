@@ -10,19 +10,19 @@ anna@fp:~/gitflow/anna (feature/readme) $ echo "Les estratègies de ramificació
 anna@fp:~/gitflow/anna (feature/readme) $ echo "marc de treball organitzat que facilita la col·laboració" >> README.md
 anna@fp:~/gitflow/anna (feature/readme) $ echo "entre diferents desenvolupadors en un mateix projecte" >> README.md
 anna@fp:~/gitflow/anna (feature/readme) $ git commit -a -m "README.md: Descripció"
-[feature/readme 651842a] README.md: Descripció
+[feature/readme e8485fe] README.md: Descripció
  1 file changed, 3 insertions(+)
 anna@fp:~/gitflow/anna (feature/readme) $ echo "" >> README.md
 anna@fp:~/gitflow/anna (feature/readme) $ echo "La característica principal és la utilització" >> README.md
 anna@fp:~/gitflow/anna (feature/readme) $ echo "de branques amb un únic propòsit." >> README.md
 anna@fp:~/gitflow/anna (feature/readme) $ git commit -a -m "README.md: Branques propòsit únic"
-[feature/readme ad0d531] README.md: Branques propòsit únic
+[feature/readme fa453da] README.md: Branques propòsit únic
  1 file changed, 3 insertions(+)
 anna@fp:~/gitflow/anna (feature/readme) $ git push
 branch 'feature/readme' set up to track 'origin/feature/readme'.
 To ~/gitflow/remot
  * [new branch]      feature/readme -> feature/readme
 anna@fp:~/gitflow/anna (feature/readme) $ git lga
-* ad0d531 - (0 seconds ago) README.md: Branques propòsit únic - Anna (HEAD -> feature/readme, origin/feature/readme)
-* 651842a - (0 seconds ago) README.md: Descripció - Anna
-* a1acfb5 - (0 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/develop, origin/HEAD, main, develop)
+* fa453da - (0 seconds ago) README.md: Branques propòsit únic - Anna (HEAD -> feature/readme, origin/feature/readme)
+* e8485fe - (0 seconds ago) README.md: Descripció - Anna
+* 587aaaf - (0 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/develop, origin/HEAD, main, develop)

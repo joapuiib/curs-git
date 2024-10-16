@@ -195,12 +195,13 @@ Els avantatges sóñ:
 - Manté la història lineal.
 - Permet resoldre els conflictes fàcilment en el procés de `rebase`.
 
-El principal desavantatge és:
+Els principal desavantatges són:
 
+- Realitzar el canvi de base de funcionalitats amb molts _commits_ pot ser complicat.
 - Revertir una funcionalitat és complicat, ja que cal revertir múltiples _commits_.
 
 
-#### Fusió `rebase` + `merge -no-ff`
+#### Fusió `rebase` + `merge --no-ff`
 Aquesta opció combina les dues opcions anteriors per tal d'aprofitar els avantatges de cadascuna
 i a la vegada minimitzar els seus desavantatges.
 
@@ -229,7 +230,7 @@ Per realitzar aquesta integració de canvis, es recomana utilitzar `git merge`.
 Com que la branca de funcionalitat serà eliminada després de la fusió,
 no importa si la història de la branca de funcionalitat es manté neta o no.
 
-!!! info
+!!! warning
     També es podria realitzar la fusió amb `rebase`,
     però si hi ha molts commits a la branca de funcionalitat,
     aquesta opció pot ser més complicada ja que podrien
@@ -286,6 +287,7 @@ El flux de treball amb aquestes branques és el següent:
 - Els canvis d'integren a la branca de desenvolupament `develop` i a la branca principal `main`.
 
 @TODO: Figura branques de correcció
+
 
 ## Bibliografia
 - [Apunts de Desplegament d'Aplicacions Web de Lorenzo González Gascón](https://logongas.es/doku.php?id=clase:daw:daw:2eval:tema06){target=_blank}
