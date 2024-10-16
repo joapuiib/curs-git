@@ -1,7 +1,8 @@
 ---
 template: slides.html
-title: "Transparències 3.1: Mètodes d'autenticació a GitHub"
+title: "Bloc 3.1: Mètodes d'autenticació a GitHub"
 icon: material/presentation
+alias: bloc31-slides
 ---
 
 ## Mètodes d'autenticació a GitHub
@@ -12,13 +13,13 @@ icon: material/presentation
 
 ## Repositori remot
 
-<img src="../img/introduccio/components.png">
+<img src="../../apunts/img/introduccio/components.png">
 
 ---
 
 ## Desenvolupament distribuït
 
-<img src="../img/remots/multiple_local_repo.png">
+<img src="../../apunts/img/remots/multiple_local_repo.png">
 
 ---
 

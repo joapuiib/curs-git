@@ -90,7 +90,7 @@ class CommandExecutor:
         if output and not output.endswith("\n"):
             output += "\n"
 
-        print(repr(output))
+        # print(repr(output))
         return output
 
 
@@ -254,14 +254,14 @@ x.x('git checkout develop')
 x.x('git pull --ff-only')
 
 ## 3. Sincronitzar feature amb develop
-x.set_file('stdout/feature_readme_rebase.txt')
+x.set_file('stdout/feature_readme_merge.txt')
 x.rm_file()
 
 x.x('git checkout feature/readme')
-x.x('git rebase develop')
+x.x('git merge --no-ff --no-edit develop #(1)!')
 
 ## 4. Integrar feature/readme a develop
-x.set_file('stdout/feature_readme_merge.txt')
+x.set_file('stdout/feature_readme_merge_squash.txt')
 x.rm_file()
 
 x.x('git checkout develop')
@@ -282,7 +282,7 @@ x.x('git lga')
 x.set_file('stdout/feature_readme_delete.txt')
 x.rm_file()
 
-x.x('git branch -d feature/readme')
+x.x('git branch -D feature/readme')
 x.x('git push origin --delete feature/readme')
 x.x('git lga')
 
@@ -308,17 +308,15 @@ x.x('git pull --ff-only')
 x.x('git lga')
 
 ## 3. Sincronitzar feature amb develop
-x.set_file('stdout/feature_license_rebase.txt')
+x.set_file('stdout/feature_license_merge.txt')
 x.rm_file()
 
 x.x('git checkout feature/license')
-x.x('git rebase develop')
-x.x('git lga')
-x.x('git push -f')
+x.x('git merge --no-ff --no-edit develop # (1)!')
 x.x('git lga')
 
 ## 4. Integrar feature/license a develop
-x.set_file('stdout/feature_license_merge.txt')
+x.set_file('stdout/feature_license_merge_squash.txt')
 x.rm_file()
 
 x.x('git checkout develop')
@@ -339,7 +337,7 @@ x.x('git lga')
 x.set_file('stdout/feature_license_delete.txt')
 x.rm_file()
 
-x.x('git branch -d feature/license')
+x.x('git branch -D feature/license')
 x.x('git push origin --delete feature/license')
 x.x('git lga')
 
@@ -365,21 +363,19 @@ x.x('git pull --ff-only')
 x.x('git lga')
 
 ## 3. Sincronitzar feature amb develop
-x.set_file('stdout/feature_author_rebase.txt')
+x.set_file('stdout/feature_author_merge.txt')
 x.rm_file()
 
 x.x('git checkout feature/author')
-x.x('git rebase develop')
+x.x('git merge --no-ff --no-edit develop # (1)!')
 x.run('sed -i \'/^<<<<<<<.*$/d; /^=======/d; /^>>>>>>>.*$/d\' README.md')
-x.log_prompt('vim README.md # (1)!')
+x.log_prompt('vim README.md # (2)!')
 x.x('git add README.md')
-x.x('git rebase --continue', env={'GIT_EDITOR': 'true'})
-x.x('git lga')
-x.x('git push -f')
+x.x('git commit --no-edit # (1)!', env={'GIT_EDITOR': 'true'})
 x.x('git lga')
 
 ## 4. Integrar feature/author a develop
-x.set_file('stdout/feature_author_merge.txt')
+x.set_file('stdout/feature_author_merge_squash.txt')
 x.rm_file()
 
 x.x('git checkout develop')
@@ -400,7 +396,7 @@ x.x('git lga')
 x.set_file('stdout/feature_author_delete.txt')
 x.rm_file()
 
-x.x('git branch -d feature/author')
+x.x('git branch -D feature/author')
 x.x('git push origin --delete feature/author')
 x.x('git lga')
 
