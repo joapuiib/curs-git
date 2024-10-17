@@ -1859,8 +1859,8 @@ projectes.</p>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Repositori del __Bloc: Remots__ del curs __\&quot;Introducció a Git i la seua aplicació a l’aula\&quot;__&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;README.md: Descripció&quot;</span>
 </span></code></pre></div></p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
+<details class="example">
+<summary>Exemple: Inicialització del repositori local</summary>
 <div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>init<span class="w"> </span>~/git_remots
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="go">Initialized empty Git repository in /home/jpuigcerver/git_remots/.git/</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">cd</span><span class="w"> </span>~/git_remots
@@ -1882,7 +1882,7 @@ projectes.</p>
 <ol class="fancylists-decimal" type="1">
 <li>Canviem el nom de la branca principal a <code>main</code>.</li>
 </ol>
-</div>
+</details>
 </div>
 <h2 id="repositori-remot">Repositori remot<a class="headerlink" href="#repositori-remot" title="Permanent link">&para;</a></h2>
 <p>Un <strong>Repositori Remot</strong> és una còpia d'un repositori de Git que es troba allotjat en un servidor
@@ -1954,9 +1954,9 @@ També ofereix plans de pagament per projectes empresarials.</p>
 </ul>
 </li>
 </ol>
-<div class="admonition example">
-<p class="admonition-title">Exemple</p>
-<p>En aquest material, crearem un repositori amb les següents característiques:</p>
+<details class="example">
+<summary>Exemple: Creació d'un repositori a GitHub</summary>
+<p>Creem un repositori amb les següents característiques:</p>
 <ul>
 <li><strong>Nom</strong>: <code>git_remots</code></li>
 <li><strong>Descripció</strong>: Repositori del Bloc: Remots del curs "Introducció a Git i la seua aplicació a l’aula"</li>
@@ -1977,7 +1977,7 @@ També ofereix plans de pagament per projectes empresarials.</p>
 </figure></p>
 <p>La <a href="#figure-3">Figura 3</a> mostra els passos per enllaçar el teu repositori local amb el repositori remot creat a GitHub.
 En els següents apartats, explicarem aquestes ordres amb més detall.</p>
-</div>
+</details>
 <h2 id="metodes-dautenticacio-a-github">Mètodes d'autenticació a GitHub<a class="headerlink" href="#metodes-dautenticacio-a-github" title="Permanent link">&para;</a></h2>
 <p>Per poder enllaçar el teu repositori local amb el repositori remot
 i fer canvis en aquest, necessites autenticar-te amb el servidor de GitHub.</p>
@@ -2216,8 +2216,8 @@ Git et mostrarà un missatge d'error:
 <ol class="fancylists-decimal" type="1">
 <li>Aquesta ordre no mostra res perquè encara no hi ha configurat cap remot.</li>
 </ol>
-<div class="admonition example annotate">
-<p class="admonition-title">Example</p>
+<details class="example annotate">
+<summary>Exemple: Afegir un repositori remot</summary>
 <p>Enllaçarem el nostre repositori local amb el repositori
 remot creat anteriorment a GitHub.</p>
 <p>La URL del repositori remot és <code>git@github.com:jpuigcerver/git_remots.git</code>(1).</p>
@@ -2231,7 +2231,7 @@ remot creat anteriorment a GitHub.</p>
 </span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="go">  Push  URL: git@github.com:jpuigcerver/git_remots.git</span>
 </span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="go">  HEAD branch: (unknown)</span>
 </span></code></pre></div>
-</div>
+</details>
 <ol class="fancylists-decimal" type="1">
 <li>Utilitzem la URL <strong>SSH</strong> ja que he decidit utilitzar aquest mètode d'autenticació.</li>
 </ol>
@@ -2288,8 +2288,8 @@ amb l'opció <code>push.autoSetupRemote</code>.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>push.autoSetupRemote<span class="w"> </span><span class="nb">true</span>
 </span></code></pre></div>
 </div>
-<div class="admonition example">
-<p class="admonition-title">Associació branca local i remota</p>
+<details class="example">
+<summary>Exemple: Associació branca local i remota</summary>
 <p>Vegem que inicialment la branca <code>main</code> no està associada a cap branca remota.</p>
 <p>Si intentem fer un <code>git push</code>, ens mostrarà un missatge d'error com que
 hem d'anar associar una branca remota.</p>
@@ -2327,7 +2327,7 @@ hem d'anar associar una branca remota.</p>
     <img src="../img/remots/github_push.png" alt="Canvis publicats a GitHub">
     <figcaption>Figura 8: Canvis publicats a GitHub</figcaption>
 </figure></p>
-</div>
+</details>
 <h2 id="clonacio-dun-repositori-remot-git-clone">Clonació d'un repositori remot (<code>git clone</code>)<a class="headerlink" href="#clonacio-dun-repositori-remot-git-clone" title="Permanent link">&para;</a></h2>
 <p>L'ordre <code>git clone</code> permet copiar un repositori remot a un repositori local en el teu sistema,
 des del qual podràs realitzar canvis.</p>
@@ -2346,8 +2346,8 @@ incloent la història de canvis. A més, configura automàticament el repositori
     <figcaption>Figura 9: Clonació d'un repositori remot</figcaption>
 </figure>
 
-<div class="admonition example">
-<p class="admonition-title">Pau clona el repositori remot</p>
+<details class="example">
+<summary>Exemple: Pau clona el repositori remot</summary>
 <p>En aquest exemple, el desenvolupador Pau clonarà el repositori remot <code>git_remots</code>
 sobre el directori <code>~/git_remots_pau</code> del seu sistema.</p>
 <blockquote>
@@ -2370,7 +2370,7 @@ sobre el directori <code>~/git_remots_pau</code> del seu sistema.</p>
 </span></code></pre></div>
 <p>S'observa que s'ha clonat correctament el repositori remot <code>git_remots</code> al directori <code>~/git_remots_pau</code>,
 que conté els fitxers i la història de canvis del repositori remot.</p>
-</div>
+</details>
 <h2 id="sincronitzacio-entre-repositoris-git-fetch">Sincronitzacio entre repositoris (<code>git fetch</code>)<a class="headerlink" href="#sincronitzacio-entre-repositoris-git-fetch" title="Permanent link">&para;</a></h2>
 <details class="prep">
 <summary>Preparació: Pau realitza canvis</summary>
@@ -2411,37 +2411,38 @@ que conté els fitxers i la història de canvis del repositori remot.</p>
 </span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">a41ab9e</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">README.md: Títol</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
 </span></code></pre></div>
 </details>
-<p>En aquest moment, Pau ha realitzat un canvi en el repositori remot, que no està reflectit
-en el nostre repositori local.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lg
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">b7adb78</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">README.md: Descripció</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main, origin/main)</span>
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">a41ab9e</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">README.md: Títol</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
-</span></code></pre></div>
-<p>Per sincronitzar l'estat dels repositoris, utilitzarem l'ordre <code>git fetch</code>.</p>
-<figure id="figure-10">
-    <img src="../img/remots/fetch.png" alt="Sincronització entre repositoris">
-    <figcaption>Figura 10: Sincronització entre repositoris</figcaption>
-</figure>
-
-<p>Aquesta ordre actualitza la informació de les branques remotes <code>origin/&lt;branca&gt;</code> al nostre repositori local,
-però no aplicarà els canvis a les nostres branques locals.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>git<span class="w"> </span>fetch<span class="w"> </span><span class="o">[</span>&lt;options&gt;<span class="o">]</span><span class="w"> </span><span class="o">[</span>&lt;remot&gt;<span class="o">]</span>
+<p>L'ordre <code>git fetch</code> actualitza la informació de les branques remotes <code>origin/&lt;branca&gt;</code>
+al nostre repositori local, però no aplica els canvis a les nostres branques locals.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>git<span class="w"> </span>fetch<span class="w"> </span><span class="o">[</span>&lt;options&gt;<span class="o">]</span><span class="w"> </span><span class="o">[</span>&lt;remot&gt;<span class="o">]</span>
 </span></code></pre></div>
 <ul>
 <li><code>&lt;options&gt;</code>: Opcions de la comanda.</li>
 <li><code>&lt;remot&gt;</code>: Àlies del repositori remot. Per defecte, s'utilitza <code>origin</code>.</li>
 </ul>
+<figure id="figure-10">
+    <img src="../img/remots/fetch.png" alt="Sincronització entre repositoris">
+    <figcaption>Figura 10: Sincronització entre repositoris</figcaption>
+</figure>
+
+<p>Aquesta ordre és útil per obtindre la informació dels canvis realitzats en el repositori remot
+i decidir si volem incorporar-los al nostre repositori local.</p>
 <div class="admonition docs">
 <p class="admonition-title">Documentació</p>
 <p>Documentació oficial de <code>git fetch</code>: <a href="https://git-scm.com/docs/git-fetch">https://git-scm.com/docs/git-fetch</a></p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Aquesta ordre és útil per obtindre la informació dels canvis realitzats en el repositori remot
-i decidir si volem incorporar-los al nostre repositori local.</p>
+<p>L'opció <code>--prune</code> permet eliminar les referències de les branques remotes que ja no existeixen
+en el repositori remot.</p>
 </div>
-<div class="admonition example">
-<p class="admonition-title">git fetch</p>
+<details class="example">
+<summary>Exemple: Pau sincronitza el repositori remot</summary>
+<p>En aquest moment, Pau ha realitzat un canvi en el repositori remot, que no està reflectit
+en el nostre repositori local.</p>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lg
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">b7adb78</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">README.md: Descripció</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main, origin/main)</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">a41ab9e</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">README.md: Títol</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+</span></code></pre></div>
 <p>Sincronitzem el repositori local amb el repositori remot, que conté els canvis
 realitzats per Pau.</p>
 <div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>fetch
@@ -2459,7 +2460,7 @@ realitzats per Pau.</p>
 </span></code></pre></div>
 <p>S'observa que la branca <code>origin/main</code> s'ha actualitzat amb el canvi realitzat per Pau,
 però la branca <code>main</code> continua en el commit anterior.</p>
-</div>
+</details>
 <h2 id="incorporacio-de-canvis-git-pull">Incorporació de canvis (<code>git pull</code>)<a class="headerlink" href="#incorporacio-de-canvis-git-pull" title="Permanent link">&para;</a></h2>
 <p>Per incorporar els canvis d'una branca remota a la branca local,
 utilitzarem l'ordre <code>git pull</code>.</p>
@@ -2473,7 +2474,7 @@ utilitzarem l'ordre <code>git pull</code>.</p>
     <figcaption>Figura 11: Incorporació de canvis</figcaption>
 </figure>
 
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>git<span class="w"> </span>pull<span class="w"> </span><span class="o">[</span>&lt;options&gt;<span class="o">]</span><span class="w"> </span><span class="o">[</span>&lt;remot&gt;<span class="w"> </span><span class="o">[</span>&lt;branca&gt;<span class="o">]]</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>git<span class="w"> </span>pull<span class="w"> </span><span class="o">[</span>&lt;options&gt;<span class="o">]</span><span class="w"> </span><span class="o">[</span>&lt;remot&gt;<span class="w"> </span><span class="o">[</span>&lt;branca&gt;<span class="o">]</span>
 </span></code></pre></div>
 <ul>
 <li><code>&lt;options&gt;</code>: Opcions de la comanda.</li>
@@ -2519,8 +2520,8 @@ en la comanda <code>git pull</code>.</p>
 </li>
 </ul>
 </div>
-<div class="admonition example">
-<p class="admonition-title">Incorporació de canvis fusió directa</p>
+<details class="example">
+<summary>Exemple: Incorporació de canvis fusió directa</summary>
 <p>Vegem com el commit <code>1b3b4b0</code> forma part de la branca remota <code>origin/main</code>,
 però no de la branca local <code>main</code>.</p>
 <div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lg
@@ -2546,10 +2547,10 @@ però no de la branca local <code>main</code>.</p>
 </span><span id="__span-28-9"><a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">b7adb78</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">README.md: Descripció</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
 </span><span id="__span-28-10"><a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">a41ab9e</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">README.md: Títol</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
 </span></code></pre></div>
-</div>
-<div class="admonition example annotate">
-<p class="admonition-title">Incorporació de canvis canvi de base</p>
-<details class="prep" open="open">
+</details>
+<details class="example annotate">
+<summary>Exemple: Incorporació de canvis canvi de base</summary>
+<details class="prep">
 <summary>Preparació: Més canvis de Pau</summary>
 <div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots_pau</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Un altre canvi de Pau&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>pau.txt
 </span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="gp-uh">pau@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots_pau</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;pau.txt: Un altre canvi de Pau&quot;</span>
@@ -2640,7 +2641,7 @@ i resultarà en una història no lineal.</p>
 </span><span id="__span-33-7"><a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">b7adb78</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">README.md: Descripció</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
 </span><span id="__span-33-8"><a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">a41ab9e</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">README.md: Títol</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
 </span></code></pre></div>
-</div>
+</details>
 <h2 id="elminar-una-branca-remota">Elminar una branca remota<a class="headerlink" href="#elminar-una-branca-remota" title="Permanent link">&para;</a></h2>
 <p>Per eliminar una branca remota, cal utilitzar <code>git push</code> amb l'opció <code>-d</code>:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>git<span class="w"> </span>push<span class="w"> </span>-d<span class="w"> </span>origin<span class="w"> </span>&lt;ref&gt;
