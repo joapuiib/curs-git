@@ -1,0 +1,12 @@
+anna@fp:~/gitflow/anna (release/v1.0.0) $ echo "v1.0.0" > VERSION
+anna@fp:~/gitflow/anna (release/v1.0.0) $ git add VERSION
+anna@fp:~/gitflow/anna (release/v1.0.0) $ git commit -m "Publicada versió: v1.0.0"
+[release/v1.0.0 b76e143] Publicada versió: v1.0.0
+ 1 file changed, 1 insertion(+)
+ create mode 100644 VERSION
+anna@fp:~/gitflow/anna (release/v1.0.0) $ git lga
+* b76e143 - (0 seconds ago) Publicada versió: v1.0.0 - Anna (HEAD -> release/v1.0.0)
+* 21278b3 - (0 seconds ago) Merge branch 'feature/author' - Mar (origin/develop, develop)
+* 26e4b55 - (0 seconds ago) Merge branch 'feature/license' - Pau
+* 2241b23 - (1 second ago) Merge branch 'feature/readme' - Anna
+* b11655b - (2 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)

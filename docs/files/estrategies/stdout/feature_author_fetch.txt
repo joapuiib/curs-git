@@ -1,0 +1,13 @@
+mar@fp:~/gitflow $ cd ~/gitflow/mar
+mar@fp:~/gitflow/mar (feature/author) $ git fetch
+From ~/gitflow/remot
+   b11655b..26e4b55  develop    -> origin/develop
+mar@fp:~/gitflow/mar (feature/author) $ git lga
+* 26e4b55 - (0 seconds ago) Merge branch 'feature/license' - Pau (origin/develop)
+* 2241b23 - (1 second ago) Merge branch 'feature/readme' - Anna
+| * 6a65cbc - (1 second ago) Autors: Mar - Mar (HEAD -> feature/author, origin/feature/author)
+| * 41f9bfe - (1 second ago) Autors: Pau - Mar
+| * 36c37ef - (1 second ago) Autors: Anna - Mar
+| * 4b4163e - (1 second ago) README.md: Secció d'autors - Mar
+|/  
+* b11655b - (2 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main, develop)

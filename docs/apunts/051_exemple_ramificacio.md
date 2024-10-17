@@ -329,5 +329,5 @@ Els passos que ha de seguir són:
 #### `rebase` + `merge --no-ff`
 
 ```shellconsole
---8<-- "docs/files/gitflow/stdout/rebase_no_ff_final.txt"
+--8<-- "docs/files/gitflow/stdout/rebase_merge_no_ff_final.txt"
 ```

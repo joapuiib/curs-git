@@ -1,0 +1,21 @@
+anna@fp:~/gitflow $ cd ~/gitflow/anna
+anna@fp:~/gitflow/anna (develop) $ git checkout develop
+Your branch is up to date with 'origin/develop'.
+Already on 'develop'
+anna@fp:~/gitflow/anna (develop) $ git fetch --prune
+From ~/gitflow/remot
+ - [deleted]         (none)     -> origin/feature/author
+ - [deleted]         (none)     -> origin/feature/license
+   2241b23..21278b3  develop    -> origin/develop
+anna@fp:~/gitflow/anna (develop) $ git pull --ff-only
+Updating 2241b23..21278b3
+Fast-forward
+ LICENSE   | 5 +++++
+ README.md | 5 +++++
+ 2 files changed, 10 insertions(+)
+ create mode 100644 LICENSE
+anna@fp:~/gitflow/anna (develop) $ git lga
+* 21278b3 - (0 seconds ago) Merge branch 'feature/author' - Mar (HEAD -> develop, origin/develop)
+* 26e4b55 - (0 seconds ago) Merge branch 'feature/license' - Pau
+* 2241b23 - (1 second ago) Merge branch 'feature/readme' - Anna
+* b11655b - (2 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)

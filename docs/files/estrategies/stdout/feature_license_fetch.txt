@@ -1,0 +1,16 @@
+pau@fp:~/gitflow $ cd ~/gitflow/pau
+pau@fp:~/gitflow/pau (feature/license) $ git fetch
+From ~/gitflow/remot
+   b11655b..2241b23  develop        -> origin/develop
+ * [new branch]      feature/author -> origin/feature/author
+pau@fp:~/gitflow/pau (feature/license) $ git lga
+* c424285 - (0 seconds ago) LICENSE: Enllaç a la llicència - Pau (HEAD -> feature/license, origin/feature/license)
+* 2da5ca1 - (0 seconds ago) LICENSE: Afegida llicència - Pau
+| * 2241b23 - (0 seconds ago) Merge branch 'feature/readme' - Anna (origin/develop)
+|/  
+| * 6a65cbc - (0 seconds ago) Autors: Mar - Mar (origin/feature/author)
+| * 41f9bfe - (0 seconds ago) Autors: Pau - Mar
+| * 36c37ef - (0 seconds ago) Autors: Anna - Mar
+| * 4b4163e - (0 seconds ago) README.md: Secció d'autors - Mar
+|/  
+* b11655b - (1 second ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main, develop)

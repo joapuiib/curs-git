@@ -2,7 +2,7 @@
 template: document.html
 title: "Exercici Bloc 5: Estratègies de ramificació"
 icon: material/pencil-outline
-alias: bloc3-exercicis
+alias: bloc5-exercicis
 ---
 
 ## Objectius
