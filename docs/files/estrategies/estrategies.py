@@ -63,13 +63,14 @@ class CommandExecutor:
 
     def get_git_branch(self):
         try:
+            git_tools_path = os.path.expanduser("~/usr/bin/git-prompt.sh")
             branch = subprocess.check_output(
-                ["git", "symbolic-ref", "--short", "HEAD"],
+                ["bash", "-c", f"source {git_tools_path} && __git_ps1"],
                 stderr=subprocess.DEVNULL,
                 text=True
             ).strip()
             return branch
-        except subprocess.CalledProcessError:
+        except subprocess.CalledProcessError as e:
             return ""
 
 
@@ -77,7 +78,7 @@ class CommandExecutor:
         prompt = f"{self.user}@{self.host}:{self.workdir}"
         branch = self.get_git_branch()
         if branch:
-            prompt += f" ({branch})"
+            prompt += f" {branch}"
         prompt += " $"
         prompt = prompt.replace(self.home_dir, "~")
         return prompt

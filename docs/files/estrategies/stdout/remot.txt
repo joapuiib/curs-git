@@ -6,9 +6,9 @@ jpuigcerver@fp:~/gitflow/remot (main) $ git branch -m main
 jpuigcerver@fp:~/gitflow/remot (main) $ echo "# Estratègies de ramificació" > README.md
 jpuigcerver@fp:~/gitflow/remot (main) $ git add README.md
 jpuigcerver@fp:~/gitflow/remot (main) $ git commit -m "Commit inicial"
-[main (root-commit) b11655b] Commit inicial
+[main (root-commit) ec0e2bd] Commit inicial
  1 file changed, 1 insertion(+)
  create mode 100644 README.md
 jpuigcerver@fp:~/gitflow/remot (main) $ git lga
-* b11655b - (0 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main)
+* ec0e2bd - (0 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main)
 jpuigcerver@fp:~/gitflow/remot (main) $ git config --bool core.bare true # (1)!
