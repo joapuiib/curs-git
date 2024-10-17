@@ -1,3 +1,3 @@
 jpuigcerver@fp:~/gitflow/remot (main) $ git branch develop
 jpuigcerver@fp:~/gitflow/remot (main) $ git lga
-* b11655b - (1 second ago) Commit inicial - Joan Puigcerver (HEAD -> main, develop)
+* ec0e2bd - (0 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main, develop)

@@ -2,7 +2,7 @@ pau@fp:~/gitflow/pau (feature/license) $ git checkout develop
 Your branch is up to date with 'origin/develop'.
 Switched to branch 'develop'
 pau@fp:~/gitflow/pau (develop) $ git merge --squash feature/license
-Updating 2241b23..b09b1fb
+Updating 2bc4029..5b6d510
 Fast-forward
 Squash commit -- not updating HEAD
  LICENSE | 5 +++++
@@ -29,22 +29,22 @@ index 0000000..809d714
 +
 +Més informació: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca
 pau@fp:~/gitflow/pau (develop) $ git commit -m "Merge branch 'feature/license'"
-[develop 26e4b55] Merge branch 'feature/license'
+[develop b7bf0a5] Merge branch 'feature/license'
  1 file changed, 5 insertions(+)
  create mode 100644 LICENSE
 pau@fp:~/gitflow/pau (develop) $ git lga
-* 26e4b55 - (0 seconds ago) Merge branch 'feature/license' - Pau (HEAD -> develop)
-| *   b09b1fb - (1 second ago) Merge branch 'develop' into feature/license - Pau (feature/license)
+* b7bf0a5 - (0 seconds ago) Merge branch 'feature/license' - Pau (HEAD -> develop)
+| *   5b6d510 - (0 seconds ago) Merge branch 'develop' into feature/license - Pau (feature/license)
 | |\  
 | |/  
 |/|   
-* | 2241b23 - (1 second ago) Merge branch 'feature/readme' - Anna (origin/develop)
-| * c424285 - (1 second ago) LICENSE: Enllaç a la llicència - Pau (origin/feature/license)
-| * 2da5ca1 - (1 second ago) LICENSE: Afegida llicència - Pau
+* | 2bc4029 - (1 second ago) Merge branch 'feature/readme' - Anna (origin/develop)
+| * c213387 - (2 seconds ago) LICENSE: Enllaç a la llicència - Pau (origin/feature/license)
+| * b11b498 - (2 seconds ago) LICENSE: Afegida llicència - Pau
 |/  
-| * 6a65cbc - (1 second ago) Autors: Mar - Mar (origin/feature/author)
-| * 41f9bfe - (1 second ago) Autors: Pau - Mar
-| * 36c37ef - (1 second ago) Autors: Anna - Mar
-| * 4b4163e - (1 second ago) README.md: Secció d'autors - Mar
+| * a216550 - (2 seconds ago) Autors: Mar - Mar (origin/feature/author)
+| * 1d5ba44 - (2 seconds ago) Autors: Pau - Mar
+| * 8683319 - (2 seconds ago) Autors: Anna - Mar
+| * 24be503 - (2 seconds ago) README.md: Secció d'autors - Mar
 |/  
-* b11655b - (2 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)
+* ec0e2bd - (3 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)

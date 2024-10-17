@@ -12,4 +12,16 @@ jpuigcerver@fp:~/gitflow $ git clone remot carles
 Cloning into 'carles'...
 done.
 jpuigcerver@fp:~/gitflow $ tree .
-/bin/bash: line 1: tree: command not found
+.
+├── anna
+│   └── README.md
+├── carles
+│   └── README.md
+├── mar
+│   └── README.md
+├── pau
+│   └── README.md
+└── remot
+    └── README.md
+
+6 directories, 5 files

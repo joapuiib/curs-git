@@ -2,34 +2,34 @@ mar@fp:~/gitflow $ cd ~/gitflow/mar
 mar@fp:~/gitflow/mar (main) $ git config user.name "Mar"
 mar@fp:~/gitflow/mar (main) $ git config user.email "mar@fpmislata.com"
 mar@fp:~/gitflow/mar (main) $ git checkout develop
-Branch 'develop' set up to track remote branch 'develop' from 'origin'.
+branch 'develop' set up to track 'origin/develop'.
 Switched to a new branch 'develop'
 mar@fp:~/gitflow/mar (develop) $ git checkout -b feature/author
 Switched to a new branch 'feature/author'
 mar@fp:~/gitflow/mar (feature/author) $ echo "" >> README.md
 mar@fp:~/gitflow/mar (feature/author) $ echo "## Autors" >> README.md
 mar@fp:~/gitflow/mar (feature/author) $ git commit -a -m "README.md: Secció d'autors"
-[feature/author 4b4163e] README.md: Secció d'autors
+[feature/author 24be503] README.md: Secció d'autors
  1 file changed, 2 insertions(+)
 mar@fp:~/gitflow/mar (feature/author) $ echo "- Anna (anna@fpmislata.com)" >> README.md
 mar@fp:~/gitflow/mar (feature/author) $ git commit -a -m "Autors: Anna"
-[feature/author 36c37ef] Autors: Anna
+[feature/author 8683319] Autors: Anna
  1 file changed, 1 insertion(+)
 mar@fp:~/gitflow/mar (feature/author) $ echo "- Pau (pau@fpmislata.com)" >> README.md
 mar@fp:~/gitflow/mar (feature/author) $ git commit -a -m "Autors: Pau"
-[feature/author 41f9bfe] Autors: Pau
+[feature/author 1d5ba44] Autors: Pau
  1 file changed, 1 insertion(+)
 mar@fp:~/gitflow/mar (feature/author) $ echo "- Mar (mar@fpmislata.com)" >> README.md
 mar@fp:~/gitflow/mar (feature/author) $ git commit -a -m "Autors: Mar"
-[feature/author 6a65cbc] Autors: Mar
+[feature/author a216550] Autors: Mar
  1 file changed, 1 insertion(+)
 mar@fp:~/gitflow/mar (feature/author) $ git push -u origin feature/author
-Branch 'feature/author' set up to track remote branch 'feature/author' from 'origin'.
+branch 'feature/author' set up to track 'origin/feature/author'.
 To ~/gitflow/remot
  * [new branch]      feature/author -> feature/author
 mar@fp:~/gitflow/mar (feature/author) $ git lga
-* 6a65cbc - (0 seconds ago) Autors: Mar - Mar (HEAD -> feature/author, origin/feature/author)
-* 41f9bfe - (0 seconds ago) Autors: Pau - Mar
-* 36c37ef - (0 seconds ago) Autors: Anna - Mar
-* 4b4163e - (0 seconds ago) README.md: Secció d'autors - Mar
-* b11655b - (1 second ago) Commit inicial - Joan Puigcerver (origin/main, origin/develop, origin/HEAD, main, develop)
+* a216550 - (0 seconds ago) Autors: Mar - Mar (HEAD -> feature/author, origin/feature/author)
+* 1d5ba44 - (0 seconds ago) Autors: Pau - Mar
+* 8683319 - (0 seconds ago) Autors: Anna - Mar
+* 24be503 - (0 seconds ago) README.md: Secció d'autors - Mar
+* ec0e2bd - (1 second ago) Commit inicial - Joan Puigcerver (origin/main, origin/develop, origin/HEAD, main, develop)
