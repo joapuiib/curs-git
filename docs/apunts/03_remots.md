@@ -48,7 +48,7 @@ projectes.
     git commit -a -m "README.md: Descripció"
     ```
 
-    !!! example
+    ??? example "Exemple: Inicialització del repositori local"
         ```shellconsole
         jpuigcerver@fp:~ $ git init ~/git_remots
         Initialized empty Git repository in /home/jpuigcerver/git_remots/.git/
@@ -139,8 +139,8 @@ En aquesta secció, crearem un repositori remot a GitHub.
     - __.gitignore__: Indica si vols afegir un fitxer `.gitignore` per ignorar fitxers en el teu repositori.
     - __Llicència__: Indica si vols afegir una llicència al teu repositori.
 
-!!! example
-    En aquest material, crearem un repositori amb les següents característiques:
+??? example "Exemple: Creació d'un repositori a GitHub"
+    Creem un repositori amb les següents característiques:
 
     - __Nom__: `git_remots`
     - __Descripció__: Repositori del Bloc: Remots del curs "Introducció a Git i la seua aplicació a l’aula"
@@ -401,7 +401,7 @@ git remote add <nom> <url>
 
 1. Aquesta ordre no mostra res perquè encara no hi ha configurat cap remot.
 
-!!! example annotate
+??? example annotate "Exemple: Afegir un repositori remot"
     Enllaçarem el nostre repositori local amb el repositori
     remot creat anteriorment a GitHub.
 
@@ -482,7 +482,7 @@ git push [-u|--set-upstream] <remot> <branca>
     git config --global push.autoSetupRemote true
     ```
 
-!!! example "Associació branca local i remota"
+??? example "Exemple: Associació branca local i remota"
     Vegem que inicialment la branca `main` no està associada a cap branca remota.
 
     Si intentem fer un `git push`, ens mostrarà un missatge d'error com que
@@ -554,7 +554,7 @@ git clone <url> [<directori>]
     <figcaption>Figura 9: Clonació d'un repositori remot</figcaption>
 </figure>
 
-!!! example "Pau clona el repositori remot"
+??? example "Exemple: Pau clona el repositori remot"
     En aquest exemple, el desenvolupador Pau clonarà el repositori remot `git_remots`
     sobre el directori `~/git_remots_pau` del seu sistema.
 
@@ -626,24 +626,8 @@ git clone <url> [<directori>]
     * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
     ```
 
-En aquest moment, Pau ha realitzat un canvi en el repositori remot, que no està reflectit
-en el nostre repositori local.
-
-```shellconsole
-jpuigcerver@fp:~/git_remots (main) $ git lg
-* b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver (HEAD -> main, origin/main)
-* a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
-```
-
-Per sincronitzar l'estat dels repositoris, utilitzarem l'ordre `git fetch`.
-
-<figure id="figure-10">
-    <img src="../img/remots/fetch.png" alt="Sincronització entre repositoris">
-    <figcaption>Figura 10: Sincronització entre repositoris</figcaption>
-</figure>
-
-Aquesta ordre actualitza la informació de les branques remotes `origin/<branca>` al nostre repositori local,
-però no aplicarà els canvis a les nostres branques locals.
+L'ordre `git fetch` actualitza la informació de les branques remotes `origin/<branca>`
+al nostre repositori local, però no aplica els canvis a les nostres branques locals.
 
 ```bash
 git fetch [<options>] [<remot>]
@@ -652,14 +636,32 @@ git fetch [<options>] [<remot>]
 - `<options>`: Opcions de la comanda.
 - `<remot>`: Àlies del repositori remot. Per defecte, s'utilitza `origin`.
 
+<figure id="figure-10">
+    <img src="../img/remots/fetch.png" alt="Sincronització entre repositoris">
+    <figcaption>Figura 10: Sincronització entre repositoris</figcaption>
+</figure>
+
+
+Aquesta ordre és útil per obtindre la informació dels canvis realitzats en el repositori remot
+i decidir si volem incorporar-los al nostre repositori local.
+
 !!! docs
     Documentació oficial de `git fetch`: https://git-scm.com/docs/git-fetch
 
 !!! info
-    Aquesta ordre és útil per obtindre la informació dels canvis realitzats en el repositori remot
-    i decidir si volem incorporar-los al nostre repositori local.
+    L'opció `--prune` permet eliminar les referències de les branques remotes que ja no existeixen
+    en el repositori remot.
 
-!!! example "git fetch"
+??? example "Exemple: Pau sincronitza el repositori remot"
+    En aquest moment, Pau ha realitzat un canvi en el repositori remot, que no està reflectit
+    en el nostre repositori local.
+
+    ```shellconsole
+    jpuigcerver@fp:~/git_remots (main) $ git lg
+    * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver (HEAD -> main, origin/main)
+    * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
+    ```
+
     Sincronitzem el repositori local amb el repositori remot, que conté els canvis
     realitzats per Pau.
     
@@ -697,7 +699,7 @@ Aquesta ordre realitza dos accions:
 </figure>
 
 ```bash
-git pull [<options>] [<remot> [<branca>]]
+git pull [<options>] [<remot> [<branca>]
 ```
 
 - `<options>`: Opcions de la comanda.
@@ -742,7 +744,7 @@ git pull [<options>] [<remot> [<branca>]]
         git config --global pull.rebase true
         ```
 
-!!! example "Incorporació de canvis fusió directa"
+??? example "Exemple: Incorporació de canvis fusió directa"
     Vegem com el commit `1b3b4b0` forma part de la branca remota `origin/main`,
     però no de la branca local `main`.
 
@@ -774,8 +776,8 @@ git pull [<options>] [<remot> [<branca>]]
     * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
     ```
 
-!!! example annotate "Incorporació de canvis canvi de base"
-    ???+ prep "Preparació: Més canvis de Pau"
+??? example annotate "Exemple: Incorporació de canvis canvi de base"
+    ??? prep "Preparació: Més canvis de Pau"
         ```shellconsole
         pau@fp:~/git_remots_pau (main) $ echo "Un altre canvi de Pau" >> pau.txt
         pau@fp:~/git_remots_pau (main) $ git commit -a -m "pau.txt: Un altre canvi de Pau"
