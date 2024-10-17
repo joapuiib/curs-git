@@ -1,0 +1,18 @@
+anna@fp:~/gitflow/anna (release/v1.0.0) $ git checkout develop
+Your branch is up to date with 'origin/develop'.
+Switched to branch 'develop'
+anna@fp:~/gitflow/anna (develop) $ git merge --ff-only release/v1.0.0
+Updating 21278b3..b76e143
+Fast-forward
+ VERSION | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 VERSION
+anna@fp:~/gitflow/anna (develop) $ git push
+To ~/gitflow/remot
+   21278b3..b76e143  develop -> develop
+anna@fp:~/gitflow/anna (develop) $ git lga
+* b76e143 - (0 seconds ago) Publicada versió: v1.0.0 - Anna (HEAD -> develop, origin/develop, release/v1.0.0)
+* 21278b3 - (0 seconds ago) Merge branch 'feature/author' - Mar
+* 26e4b55 - (0 seconds ago) Merge branch 'feature/license' - Pau
+* 2241b23 - (1 second ago) Merge branch 'feature/readme' - Anna
+* b11655b - (2 seconds ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)

@@ -1,0 +1,7 @@
+jpuigcerver@fp:~/gitflow $ cd ~/gitflow/remot
+jpuigcerver@fp:~/gitflow/remot (main) $ git lga
+* b76e143 - (1 second ago) Publicada versió: v1.0.0 - Anna (HEAD -> main, tag: v1.0.0, develop)
+* 21278b3 - (1 second ago) Merge branch 'feature/author' - Mar
+* 26e4b55 - (1 second ago) Merge branch 'feature/license' - Pau
+* 2241b23 - (2 seconds ago) Merge branch 'feature/readme' - Anna
+* b11655b - (3 seconds ago) Commit inicial - Joan Puigcerver

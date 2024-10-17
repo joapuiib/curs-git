@@ -1,7 +1,0 @@
-anna@fp:~/gitflow/anna (develop) $ git checkout -b release/v1.0.0
-Switched to a new branch 'release/v1.0.0'
-anna@fp:~/gitflow/anna (release/v1.0.0) $ git lga
-* cb8fb0e - (1 second ago) Merge branch 'feature/author' - Mar (HEAD -> release/v1.0.0, origin/develop, develop)
-* 15cc954 - (1 second ago) Merge branch 'feature/license' - Pau
-* 6096544 - (1 second ago) Merge branch 'feature/readme' - Anna
-* 87c24d1 - (1 second ago) Commit inicial - Joan Puigcerver (origin/main, origin/HEAD, main)
