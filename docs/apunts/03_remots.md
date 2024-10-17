@@ -881,6 +881,15 @@ git pull [<options>] [<remot> [<branca>]]
     * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
     ```
 
+## Elminar una branca remota
+Per eliminar una branca remota, cal utilitzar `git push` amb l'opció `-d`:
+
+```bash
+git push -d origin <ref>
+```
+
+- `ref`: Referència a esborrar, que inclou branques i etiquetes.
+
 
 
 ## Recursos addicionals
