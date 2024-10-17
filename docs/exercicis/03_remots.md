@@ -119,6 +119,8 @@ Des del repositori `bloc3_exercici`:
 1. Realitza un _commit_.
 1. Publica la branca `musica` al repositori remot.
 1. Comprova que la branca `musica` està publicada al repositori remot.
+1. Fusiona la branca `musica` amb la branca `main`.
+1. Publica la branca `main` al repositori remot.
 1. Elimina la branca local `musica`.
 1. Elimina la branca remota `musica`.
     
