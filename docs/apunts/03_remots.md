@@ -652,6 +652,18 @@ i decidir si volem incorporar-los al nostre repositori local.
     L'opció `--prune` permet eliminar les referències de les branques remotes que ja no existeixen
     en el repositori remot.
 
+    Aquesta opció pot ser configurada per defecte amb la comanda `git config`.
+
+    ```bash
+    git config --global fetch.prune true
+    ```
+
+    També es pot configurar perquè aquesta opció s'aplique en la comanda `git pull`.
+
+    ```bash
+    git config --global remote.origin.prune true
+    ```
+
 ??? example "Exemple: Pau sincronitza el repositori remot"
     En aquest moment, Pau ha realitzat un canvi en el repositori remot, que no està reflectit
     en el nostre repositori local.
