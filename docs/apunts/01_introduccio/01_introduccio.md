@@ -1,6 +1,6 @@
 ---
 template: document.html
-title: "Bloc 1: Introducció a Git"
+title: "Introducció a Git"
 icon: material/book-open-variant
 alias: bloc1
 comments: true
@@ -194,10 +194,10 @@ on encara no haurem connectat cap repositori __remot__.
 
 Abans que res, hem de conéixer l'estructura d'un repositori de Git.
 
-<figure id="figure-1">
-    <img src="../img/introduccio/components.png" alt="Components d'un repositori de Git">
-    <figcaption>Figura 1: Components d'un repositori de Git.</figcaption>
-</figure>
+![Components d'un repositori de Git](img/components.png)
+/// figure-caption
+Components d'un repositori de Git.
+///
 
 En la figura anterior podem observar el que es coneix com __Entorn de desenvolupament__ o __*Development Enviorment*__.
 Aquesta part està present __localment__ en el teu dispositiu on realitzaràs els canvis i desenvolupament del teu projecte.
@@ -231,11 +231,10 @@ que canviarà l'estat dels fitxers __Staged__ (mostrat en color verd amb `git st
 
 Per últim, tots els canvis de l'__Àrea de preparació__ es poden confirmar i fer efectius en el __Repositori local__ amb la comanda `git commit`.
 
-
-<figure id="figure-2">
-    <img src="../img/introduccio/flux_treball.png" alt="Flux de treball en un repositori de Git">
-    <figcaption>Figura 2: Flux de treball en un repositori de Git.</figcaption>
-</figure>
+![Flux de treball en un repositori de Git](img/flux_treball.png)
+/// figure-caption
+Flux de treball en un repositori de Git.
+///
 
 !!! info
     La comanda `git restore` es presenta a l'apartat [Descartar canvis](#descartar-canvis-git-restore).
@@ -278,10 +277,10 @@ S'ha creat el fitxer `README.md` i s'ha afegit el seu contingut. Aquest fitxer r
 La comanda `git status` ens mostra que no s'està realitzant cap seguiment del fitxer `README.md`,
 que es troba en l'estat __Untracked__.
 
-<figure id="figure-3">
-    <img src="../img/introduccio/untracked_readme.png" alt="Fitxer sense seguiment">
-    <figcaption>Figura 3: Fitxer sense seguiment (untracked).</figcaption>
-</figure>
+![Fitxer sense seguiment](img/untracked_readme.png)
+/// figure-caption
+Fitxer sense seguiment (untracked).
+///
 
 Per afegir els canvis al nostre repositori, el següent pas és afegir
 els canvis a l'_Àrea de Preparació_ amb l'ordre `git add`.
@@ -309,10 +308,10 @@ Changes to be committed:
 
 Vegem com el fitxer `README.md` ha passat a l'estat __Staged__ i està preparat per a ser confirmat.
 
-<figure id="figure-4">
-    <img src="../img/introduccio/staged_readme.png" alt="">
-    <figcaption>Figura 4: Fitxer a l'àrea de preparació.</figcaption>
-</figure>
+![Fitxer a l'Àrea de Preparació](img/staged_readme.png)
+/// figure-caption
+Fitxer a l'Àrea de Preparació (staged).
+///
 
 
 ## Confirmar canvis (`git commit`)
@@ -335,10 +334,10 @@ git commit [-a] [-m "<message>"]
     git config --global core.editor <editor>
     ```
 
-<figure id="figure-5">
-    <img src="../img/introduccio/before_commit_readme.png" alt="Estat del repositori de Git abans de fer un commit">
-    <figcaption>Figura 5: Estat del repositori de Git abans de fer un `commit`.</figcaption>
-</figure>
+![Estat del repositori de Git abans de fer un commit](img/before_commit_readme.png)
+/// figure-caption
+Estat del repositori de Git abans de fer un `commit`.
+///
 
 Aquesta ordre crea un nou `commit`, que és una instantània de l'estat actual dels fitxers
 del repositori i que conté tota la informació relativa als canvis realitzats.
@@ -388,10 +387,10 @@ nothing to commit, working tree clean
 Vegem que l'estat del nostre repositori ha canviat i ja no hi ha canvis pendents de confirmar.
 A més, s'ha creat el primer `commit` amb el missatge `Added README.md` i identificador `8e70293`.
 
-<figure id="figure-6">
-    <img src="../img/introduccio/after_commit_readme.png" alt="Estat del repositori de Git després de fer un commit">
-    <figcaption>Figura 6: Estat del repositori de Git després de fer un `commit`.</figcaption>
-</figure>
+![Estat del repositori de Git després de fer un commit](img/after_commit_readme.png)
+/// figure-caption
+Estat del repositori de Git després de fer un `commit`.
+///
 
 Podem consultar la informació del nou `commit` amb l'ordre `git show`.
 
@@ -430,10 +429,10 @@ git diff [--staged] [<path>]
 !!! docs
     Documentació oficial de `git diff`: https://git-scm.com/docs/git-diff
 
-<figure id="figure-7">
-    <img src="../img/introduccio/resum_diff.png" alt="Resum git diff">
-    <figcaption>Figura 7: Resum de `git diff`.</figcaption>
-</figure>
+![Resum de `git diff`](img/resum_diff.png)
+/// figure-caption
+Resum de `git diff`.
+///
 
 !!! example "Diferències entre el Directori de treball i el Repositori local"
     Observem les diferències entre el fitxer `README.md` del __Directori de treball__ i el __Repositori local__.

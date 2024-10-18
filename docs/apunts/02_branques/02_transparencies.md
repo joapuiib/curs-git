@@ -1,6 +1,6 @@
 ---
 template: slides.html
-title: "Bloc 2: Branques"
+title: "Transparències: Branques"
 icon: material/presentation
 alias: bloc2-slides
 ---

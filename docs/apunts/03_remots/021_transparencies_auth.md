@@ -1,6 +1,6 @@
 ---
 template: slides.html
-title: "Bloc 3.1: Mètodes d'autenticació a GitHub"
+title: "Transparències: Mètodes d'autenticació a GitHub"
 icon: material/presentation
 alias: bloc31-slides
 ---

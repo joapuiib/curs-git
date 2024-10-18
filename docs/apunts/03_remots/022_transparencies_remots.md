@@ -1,6 +1,6 @@
 ---
 template: slides.html
-title: "Bloc 3.2: Remots"
+title: "Transparències: Remots"
 icon: material/presentation
 alias: bloc32-slides
 ---

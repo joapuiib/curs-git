@@ -1,6 +1,6 @@
 ---
 template: document.html
-title: "Bloc 3: Remots"
+title: "Remots"
 icon: material/book-open-variant
 alias: bloc3
 comments: true
@@ -80,10 +80,10 @@ incloses totes les revisions i les branques.
 Els repositoris remots permeten la col·laboració i el seguiment del desenvolupament del codi
 entre múltiples persones, o tu mateix en diferents dispositius.
 
-<figure id="figure-1">
-    <img src="../img/remots/multiple_local_repo.png" alt="Repositori remot vinculat a múltiples repositoris locals">
-    <figcaption>Figura 1: Repositori remot vinculat a múltiples repositoris locals</figcaption>
-</figure>
+![Repositori remot vinculat a múltiples repositoris locals](img/multiple_local_repo.png)
+/// figure-caption
+Repositori remot vinculat a múltiples repositoris locals
+///
 
 Entre les finalitats dels repositoris remots podem trobar:
 
@@ -149,19 +149,19 @@ En aquesta secció, crearem un repositori remot a GitHub.
     - __.gitignore__: No
     - __Llicència__: No
 
-    <figure id="figure-2">
-        <img src="../img/remots/github_new_repository.png" alt="Formulari de creació d'un nou repositori a GitHub">
-        <figcaption>Figura 2: Formulari de creació d'un nou repositori a GitHub</figcaption>
-    </figure>
+    ![Formulari de creació d'un nou repositori a GitHub](img/github_new_repository.png)
+    /// figure-caption
+    Formulari de creació d'un nou repositori a GitHub
+    ///
 
     Una vegada omplert el formulari, fes clic a __"Create repository"__ per crear el teu repositori.
 
     El teu repositori s'hauria de crear __buit__ i hauries de veure una pàgina com la següent:
 
-    <figure id="figure-3">
-        <img src="../img/remots/github_empty_repository.png" alt="Repositori buit creat a GitHub">
-        <figcaption>Figura 3: Repositori buit creat a GitHub</figcaption>
-    </figure>
+    ![Repositori buit creat a GitHub](img/github_empty_repository.png)
+    /// figure-caption
+    Repositori buit creat a GitHub
+    ///
 
     La [Figura 3](#figure-3) mostra els passos per enllaçar el teu repositori local amb el repositori remot creat a GitHub.
     En els següents apartats, explicarem aquestes ordres amb més detall.
@@ -307,21 +307,20 @@ Per generar una clau SSH, segueix els següents passos.
     - Obri el programa __Git GUI__.
     - Obri el diàleg a __Help > Show SSH Key__.
 
-        <figure id="figure-4">
-            <img src="../img/remots/git_gui_help.png" alt="Git GUI: menú diàleg SSH">
-            <figcaption>Figura 4: Menú diàleg SSH de Git GUI</figcaption>
-        </figure>
+        ![Git GUI: menú diàleg SSH](img/git_gui_help.png)
+        /// caption
+        Menú diàleg SSH de Git GUI
+        ///
 
     - Fes clic a __Generate Key__.
         - Indica una contrasenya (_passphrase_) per protegir la clau (opcional)
             o deixa el camp buit per no protegir-la.
     - Fes clic a __Copy to Clipboard__ per copiar la clau pública al portaretalls.
 
-        <figure id="figure-5">
-            <img src="../img/remots/git_gui_key_generated.png" alt="Git GUI: clau SSH generada">
-            <figcaption>Figura 5: Clau SSH generada amb Git GUI</figcaption>
-        </figure>
-
+        ![Git GUI: clau SSH generada](img/git_gui_key_generated.png)
+        /// caption
+        Clau SSH generada amb Git GUI
+        ///
 
 Després, configura la clau SSH al teu compte de GitHub seguint els següents passos:
 
@@ -376,10 +375,10 @@ git remote add <nom> <url>
     Normalment, s'utilitza el nom `origin` per referir-se al repositori remot principal.
 - `<url>`: URL del repositori remot.
 
-<figure id="figure-6">
-    <img src="../img/remots/add_remote.png" alt="Repsitori Local vinculat amb un Repositori Remot">
-    <figcaption>Figura 6: Repositori Local vinculat amb un Repositori Remot</figcaption>
-</figure>
+![Repositori Local vinculat amb un Repositori Remot](img/add_remote.png)
+/// figure-caption
+Repositori Local vinculat amb un Repositori Remot
+///
 
 !!! warning annotate
     Si intentes publicar amb [`git push`](#publicacio-de-canvis)
@@ -468,10 +467,10 @@ git push [-u|--set-upstream] <remot> <branca>
 !!! important
     Aquesta comanda funciona sobre la branca on estem situats (`HEAD`).
 
-<figure id="figure-7">
-    <img src="../img/remots/push_setupstream.png" alt="Associació d'una branca local a una branca remota">
-    <figcaption>Figura 7: Associació d'una branca local a una branca remota</figcaption>
-</figure>
+![Associació d'una branca local a una branca remota](img/push_setupstream.png)
+/// figure-caption
+Associació d'una branca local a una branca remota
+///
 
 !!! tip
     Pots configurar git perquè configure automàticament la branca local
@@ -527,11 +526,10 @@ git push [-u|--set-upstream] <remot> <branca>
 
     Vegem que els canvis s'han publicat correctament al repositori remot:
 
-    <figure id="figure-8">
-        <img src="../img/remots/github_push.png" alt="Canvis publicats a GitHub">
-        <figcaption>Figura 8: Canvis publicats a GitHub</figcaption>
-    </figure>
-
+    ![Canvis publicats a GitHub](img/github_push.png)
+    /// figure-caption
+    Canvis publicats a GitHub
+    ///
 
 ## Clonació d'un repositori remot (`git clone`)
 L'ordre `git clone` permet copiar un repositori remot a un repositori local en el teu sistema,
@@ -549,10 +547,10 @@ git clone <url> [<directori>]
 - `<directori>`: Opcional. Nom del directori on es copiarà el repositori. Per defecte, es crea un directori amb
     el nom del repositori remot.
 
-<figure id="figure-9">
-    <img src="../img/remots/clone.png" alt="Clonació d'un repositori remot">
-    <figcaption>Figura 9: Clonació d'un repositori remot</figcaption>
-</figure>
+![Clonació d'un repositori remot](img/clone.png)
+/// figure-caption
+Clonació d'un repositori remot
+///
 
 ??? example "Exemple: Pau clona el repositori remot"
     En aquest exemple, el desenvolupador Pau clonarà el repositori remot `git_remots`
@@ -636,10 +634,10 @@ git fetch [<options>] [<remot>]
 - `<options>`: Opcions de la comanda.
 - `<remot>`: Àlies del repositori remot. Per defecte, s'utilitza `origin`.
 
-<figure id="figure-10">
-    <img src="../img/remots/fetch.png" alt="Sincronització entre repositoris">
-    <figcaption>Figura 10: Sincronització entre repositoris</figcaption>
-</figure>
+![Sincronització entre repositoris amb git fetch](img/fetch.png)
+/// figure-caption
+Sincronització entre repositoris amb `git fetch`
+///
 
 
 Aquesta ordre és útil per obtindre la informació dels canvis realitzats en el repositori remot
@@ -705,10 +703,10 @@ Aquesta ordre realitza dos accions:
 - `git fetch`: Actualitza la informació de les branques remotes al nostre repositori local.
 - `git merge origin/<branca>`: Incorpora els canvis de la branca remota a la branca local.
 
-<figure id="figure-11">
-    <img src="../img/remots/pull.png" alt="Incorporació de canvis">
-    <figcaption>Figura 11: Incorporació de canvis</figcaption>
-</figure>
+![Incorporació de canvis amb git pull](img/pull.png)
+/// figure-caption
+Incorporació de canvis amb `git pull`
+///
 
 ```bash
 git pull [<options>] [<remot> [<branca>]

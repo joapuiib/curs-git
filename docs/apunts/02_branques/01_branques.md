@@ -1,6 +1,6 @@
 ---
 template: document.html
-title: "Bloc 2: Branques"
+title: "Branques"
 icon: material/book-open-variant
 alias: bloc2
 comments: true
@@ -68,10 +68,10 @@ Una __branca__ és una línia de desenvolupament independent.
 En Git, una branca és un simple __punter__ a un commit,
 que avança a mesura que es fan nous commits sobre aquesta.
 
-<figure id="figure-1">
-    <img src="../img/branques/branques_inicial.png" alt="Estructura de branques inicial." style="max-width: 100%; width: 600px;">
-    <figcaption>Figura 1: Estructura de branques inicial.</figcaption>
-</figure>
+![Estructura de branques](img/branques_inicial.png)
+/// figure-caption
+Estructura de branques inicial.
+///
 
 !!! example
     L'estructura de branques inicial del repositori
@@ -156,10 +156,10 @@ Aquesta ordre indicarà amb un `*` la branca activa (on es troba el `HEAD`).
     al commit `0b1b3b4`. Vegem que la branca activa
     continua sent `main`.
 
-    <figure id="figure-2">
-        <img src="../img/branques/create_docs.png" alt="Estructura de branques després de crear la branca docs.">
-        <figcaption>Figura 2: Estructura de branques després de crear la branca <code>docs</code>.</figcaption>
-    </figure>
+    ![Estructura de branques després de crear la branca docs](img/create_docs.png)
+    /// figure-caption
+    Estructura de branques després de crear la branca `docs`.
+    ///
 
 
 ### Canviar de branca
@@ -188,10 +188,10 @@ del `commit` al qual apunta la branca.
 La [Figura 2](#figure-2) mostra l'estat del repositori quan el `HEAD` apunta a la branca `main`.
 La [Figura 3](#figure-3) mostra l'estat del repositori després de canviar a la branca `docs`.
 
-<figure id="figure-3">
-    <img src="../img/branques/checkout_docs.png" alt="Estructura de branques després de canviar a la branca docs.">
-    <figcaption>Figura 3: Estructura de branques després de canviar a la branca <code>docs</code>.</figcaption>
-</figure>
+![Estructura de branques després de canviar a la branca docs](img/checkout_docs.png)
+/// figure-caption
+Estructura de branques després de canviar a la branca `docs`.
+///
 
 !!! example annotate
     Podeu observar com l'estat del repositori és el mateix, ja que les dues branques
@@ -252,10 +252,10 @@ s'avança al nou `commit`.
 
     Vegem que la branca `docs` ha avançat al nou `commit` `1b2c5d6`, mentre que la branca `main` continua apuntant al `commit` `0b1b3b4`.
 
-    <figure id="figure-4">
-        <img src="../img/branques/commit_docs.png" alt="Estructura de branques després de fer un commit a la branca docs.">
-        <figcaption>Figura 4: Estructura de branques després de fer un commit a la branca <code>docs</code>.</figcaption>
-    </figure>
+    ![Estructura de branques després de fer un commit a la branca docs](img/commit_docs.png)
+    /// figure-caption
+    Estructura de branques després de fer un `commit` a la branca `docs`.
+    ///
 
 ### Reanomenar una branca
 Per reanomenar una branca, utilitzem l'ordre:
@@ -356,10 +356,10 @@ fins on es troba la branca que es vol fusionar.
     Partint de la situació de la [Figura 4](#figure-4), on la branca `docs` té un `commit` més que la branca `main`,
     la fusió de la branca `docs` a la branca `main` serà una fusió directa.
 
-    <figure id="figure-5">
-        <img src="../img/branques/before_ff.png" alt="Història abans de la fusió directa.">
-        <figcaption>Figura 5: Història abans de la fusió directa.</figcaption>
-    </figure>
+    ![Estructura de branques abans de la fusió directa](img/before_ff.png)
+    /// figure-caption
+    Estructura de branques abans de la fusió directa.
+    ///
 
     ```shellconsole
     jpuigcerver@fp:~/git_branques (docs) $ git checkout main
@@ -373,10 +373,10 @@ fins on es troba la branca que es vol fusionar.
 
     En aquest cas, la fusió es portarà a terme avançant el punter de la branca `main` fins al punt on es troba la branca `docs`.
 
-    <figure id="figure-6">
-        <img src="../img/branques/after_ff.png" alt="Història després de la fusió directa.">
-        <figcaption>Figura 6: Història després de la fusió directa.</figcaption>
-    </figure>
+    ![Estructura de branques després de la fusió directa](img/after_ff.png)
+    /// figure-caption
+    Estructura de branques després de la fusió directa.
+    ///
 
     ```shellconsole
     jpuigcerver@fp:~/git_branques (main) $ git merge docs
@@ -457,19 +457,19 @@ realitzat canvis que no estan presents en l'altra branca.
     1. Modifiquem el fitxer `README.md`. Pots utilitzar l'editor de text que preferisques.
 
 
-<figure id="figure-7">
-    <img src="../img/branques/before_divergent.png" alt="Història abans de la fusió en branques divergents.">
-    <figcaption>Figura 7: Història abans de la fusió en branques divergents.</figcaption>
-</figure>
+![Història abans de la fusió en branques divergents](img/before_divergent.png)
+/// figure-caption
+Història abans de la fusió en branques divergents.
+///
 
 En aquest cas, la fusió es realitza mitjançant un __commit de fusió__ (_merge commit_).
 Aquest `commit` de fusió té dos pares, un per cada branca que es fusiona
 i incorpora els canvis de les dues branques.
 
-<figure id="figure-8">
-    <img src="../img/branques/after_divergent.png" alt="Història després de la fusió en branques divergents.">
-    <figcaption>Figura 8: Història després de la fusió en branques divergents.</figcaption>
-</figure>
+![Història després de la fusió en branques divergents](img/after_divergent.png)
+/// figure-caption
+Història després de la fusió en branques divergents.
+///
 
 En el moment de realitzar la fusió (`git merge`),
 Git crearà un nou `commit` de fusió que incorporarà els canvis de les dues branques.
@@ -731,15 +731,15 @@ git rebase <branca>
 1. L'opció `git checkout -b` permet crear una nova branca i situar-se en ella directament.
 
 
-<figure id="figure-9">
-    <img src="../img/branques/before_rebase.png" alt="Història abans del canvi de base.">
-    <figcaption>Figura 9: Història abans del canvi de base.</figcaption>
-</figure>
+![Història abans del canvi de base](img/before_rebase.png)
+/// figure-caption
+Història abans del canvi de base.
+///
 
-<figure id="figure-10">
-    <img src="../img/branques/after_rebase.png" alt="Història després del canvi de base.">
-    <figcaption>Figura 10: Història després del canvi de base.</figcaption>
-</figure>
+![Història després del canvi de base](img/after_rebase.png)
+/// figure-caption
+Història després del canvi de base.
+///
 
 !!! example "Canvi de base"
     Canviem la base de la branca `llicencia` a la branca `main`.

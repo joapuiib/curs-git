@@ -102,6 +102,16 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.blocks.html
+  - pymdownx.blocks.caption:
+      auto: true
+      types:
+        - caption
+        - name: figure-caption
+          prefix: "Figura {}."
+        - name: "table-caption"
+          prefix: "Taula {}."
+        - name: attribution
+          class: attribution
   - pymdownx.details
   - pymdownx.critic
   - pymdownx.caret

@@ -1,6 +1,6 @@
 ---
 template: document.html
-title: "Exercici Bloc 2: Branques"
+title: "Exercici: Branques"
 icon: material/pencil-outline
 alias: bloc2-exercicis
 ---

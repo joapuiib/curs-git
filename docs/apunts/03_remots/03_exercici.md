@@ -1,6 +1,6 @@
 ---
 template: document.html
-title: "Exercici Bloc 3: Remots"
+title: "Exercici: Remots"
 icon: material/pencil-outline
 alias: bloc3-exercicis
 ---

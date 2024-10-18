@@ -162,11 +162,10 @@ i utilitzades en projectes de desenvolupament de programari.
 
 Aquesta metodologia es basa en la creació de les branques `main`, `develop`, `feature/*`, `release/*` i `hotfix/*`.
 
-<figure id="figure-1">
-    <img src="../img/gitflow/gitflow_branches.svg" alt="Branques a Gitflow" style="min-height: 400px;">
-    <figcaption class="attribution">www.atlassian.com</figcaption>
-    <figcaption>Figura 1: Exemple de branques amb Gitflow</figcaption>
-</figure>
+![Esquema de branques amb Gitflow](img/gitflow_branches.svg){: style="min-height: 400px;"}
+/// figure-caption
+Esquema de branques amb Gitflow
+///
 
 La particularitat d'aquesta estratègia és que la fusió de les branques de funcionalitat `feature/*` amb la branca de desenvolupament `develop`
 és realitza mitjançant `merge --no-ff`, de manera que es conserva la història de les branques de funcionalitat que es fusionen mitjançant

@@ -1,6 +1,6 @@
 ---
 template: slides.html
-title: "Bloc 1: Introducció a Git"
+title: "Transparències: Introducció a Git"
 icon: material/presentation
 alias: bloc1-slides
 ---
