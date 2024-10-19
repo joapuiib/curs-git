@@ -8,12 +8,6 @@ tags:
     - tag
 ---
 
-## Git avançat
-En aquest bloc estudiarem algunes de les comandes
-avancades de Git que ens permetran realitzar tasques
-més complexes i específiques en el nostre projecte.
-
-
 ## Etiquetes
 En Git, tots els commits estan identificats mitjançant un _hash_, que es un identificador alfanumèric que es genera quan creem un _commit_.
 No obstant això, de vegades és útil identificar punts concrets (_commits_) en l'estat del nostre repositori amb un nom és més fàcil i significatiu que un _hash_.
