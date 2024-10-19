@@ -112,7 +112,7 @@ L'ordre `git branch` mostra les branques si:
 Més opcions:
 
 - `[-a | --all]`: Opcional. Mostra totes les branques,
-    incloent les remotes (es veurà en el [[bloc3]]).
+    incloent les remotes (es veurà en els apunts [[remots]]).
 - `[-v | --verbose]`: Opcional. Mostra més informació de cada branca.
 
 !!! example
@@ -218,6 +218,7 @@ Estructura de branques després de canviar a la branca `docs`.
 
 ### Canvis en una branca
 Per fer canvis en una branca cal:
+
 - [Situar-se en la branca](#canviar-de-branca) on es vol fer el canvi (`git checkout` o `git switch`).
 - Realitzar els canvis desitjats.
 - Confirmar els canvis amb `git commit`.
@@ -476,7 +477,7 @@ Git crearà un nou `commit` de fusió que incorporarà els canvis de les dues br
 
 Aquest `commit` necessita d'un missatge, per tant, es pot utilitzar l'opció `-m` per afegir un missatge al `commit`.
 Si no se n'especifica cap, s'obrirà l'editor de text configurat per defecte per a afegir el missatge.
-(Vegeu [Confirmar canvis](01_introduccio.md#confirmar-canvis-git-commit))
+(Vegeu [[introduccio#confirmar-canvis-git-commit]])
 
 !!! warning
     Aquest tipus de fusió no és tan neta com la __fusió directa__ (_fast-forward_),

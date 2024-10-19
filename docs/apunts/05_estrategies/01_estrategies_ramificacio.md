@@ -39,7 +39,7 @@ on podem decidir quin tipus de branca incorporar en la nostra metodologia de tre
 
 A més, les estratègies poden ser utilitzades en combinació amb altres tècniques com les
 [__Pull Requests__](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests){target=_blank},
-que veurem en el [[bloc6]].
+que veurem en [[projectes]].
 
 ### Branques amb un propòsit únic
 Les estratègies de ramificació més comuns es basen en la creació de diferents branques,

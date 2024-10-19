@@ -24,7 +24,7 @@ Els objectius d'aquests exercici són:
     per entendre els diferents estats dels fitxers.
     {: .annotate}
 
-    1. Revisa [[bloc1#historic-de-canvis-git-log]] per veure
+    1. Revisa [[introduccio#historic-de-canvis-git-log]] per veure
         la configuració de l'àlies `git lga`.
 
 

@@ -10,7 +10,7 @@ comments: true
 En aquest material veurem com es pot utilitzar una estratègia de ramificació
 en un projecte de desenvolupament de programari.
 
-En aquest projecte utilitzarem la tècnica d'integració [[bloc5#fusio-merge-squash]]{:target=_blank}.
+En aquest projecte utilitzarem la tècnica d'integració [[estrategies#fusio-merge-squash]]{:target=_blank}.
 
 ### Repositori remot
 Anem a simular un projecte de desenvolupament de programari
@@ -115,7 +115,7 @@ i encara no han segut integrades a la branca de desenvolupament `develop`.
 ```
 
 Anem a veure com integrar les funcionalitats amb la tècnica __`merge` + `merge --squash`__
-seguint el procés indicat a [[bloc5#integracio-de-les-funcionalitats]]{:target=_blank}.
+seguint el procés indicat a [[estrategies#integracio-de-les-funcionalitats]]{:target=_blank}.
 
 
 #### Integracó de `feature/readme`

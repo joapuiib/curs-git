@@ -720,8 +720,8 @@ git pull [<options>] [<remot> [<branca>]
     Documentació oficial de `git pull`: https://git-scm.com/docs/git-pull
 
 !!! warning
-    La fusió (`merge`) implicita de `git pull` pot ser [[bloc2#fusio-directa|directa (_fast-forward_)]]{: target="_blank"}
-    o es pot produir una [[bloc2#fusio-de-branques-divergents|fusió de branques divergents]]{: target="_blank"} si
+    La fusió (`merge`) implicita de `git pull` pot ser una [[branques#fusio-directa]]{: target="_blank"}
+    o es pot produir una [[branques#fusio-de-branques-divergents]]{: target="_blank"} si
     la branca local i la branca remota divergeixen.
 
     En aquest últim cas:
