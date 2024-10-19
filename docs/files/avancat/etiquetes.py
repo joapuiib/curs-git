@@ -36,6 +36,7 @@ def init_repositori():
     x.x('git commit -a -m "README: Apartat tipus de etiquetes"')
     x.x('echo "Existeixen dos tipus de etiquetes: anotades i lleugeres" >> README.md')
     x.x('git commit -a -m "README: Descripció tipus de etiquetes"')
+    x.x('git lga')
 
 def crear_etiqueta_anotada():
     x.log_file('stdout/etiquetes/etiqueta_anotada.txt')

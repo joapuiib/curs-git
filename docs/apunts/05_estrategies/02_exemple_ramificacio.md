@@ -21,7 +21,7 @@ Per evitar haver de crear un repositori a [:material-github: GitHub](https://git
 crearem un repositori remot en la màquina local.
 
 ```shellconsole
---8<-- "docs/files/gitflow/stdout/remot.txt"
+--8<-- "docs/files/estrategies/stdout/remot.txt"
 ```
 
 1. Aquesta comanda és necessària perquè el repositori siga configurat com a  __bare__ i puga ser utilitzat com a repositori remot.
@@ -31,7 +31,7 @@ El primer pas per establir un flux de treball amb __Gitflow__
 és crear la branca de desenvolupament `develop`.
 
 ```shellconsole
---8<-- "docs/files/gitflow/stdout/development.txt"
+--8<-- "docs/files/estrategies/stdout/development.txt"
 ```
 
 ### Desenvolupament de funcionalitats
@@ -42,7 +42,7 @@ Crearem un repositori local per a cada desenvolupador,
 simulant que cadascú treballa en el seu dispositiu.
 
 ```shellconsole
---8<-- "docs/files/gitflow/stdout/clone.txt"
+--8<-- "docs/files/estrategies/stdout/clone.txt"
 ```
 
 Cada desenvolupador començarà a treballar en una nova funcionalitat.
@@ -69,7 +69,7 @@ Anna començarà a treballar en la seua funcionalitat `feature/readme` en el seu
     També es mostra el nom en el prompt.
 
 ```shellconsole
---8<-- "docs/files/gitflow/stdout/feature_readme.txt"
+--8<-- "docs/files/estrategies/stdout/feature_readme.txt"
 ```
 
 Els passos seguits per Anna són:
@@ -82,7 +82,7 @@ Els passos seguits per Anna són:
 Pau començarà a treballar en la seua funcionalitat `feature/license` en el seu repositori local.
 
 ```shellconsole
---8<-- "docs/files/gitflow/stdout/feature_license.txt"
+--8<-- "docs/files/estrategies/stdout/feature_license.txt"
 ```
 
 Els passos seguits per Pau són:
@@ -96,7 +96,7 @@ Els passos seguits per Pau són:
 Mar començarà a treballar en la seua funcionalitat `feature/author` en el seu repositori local.
 
 ```shellconsole
---8<-- "docs/files/gitflow/stdout/feature_author.txt"
+--8<-- "docs/files/estrategies/stdout/feature_author.txt"
 ```
 
 Els passos seguits per Mar són:
@@ -111,7 +111,7 @@ En aquest punt, les tres funcionalitats han sigut desenvolupades de manera indep
 i encara no han segut integrades a la branca de desenvolupament `develop`.
 
 ```shellconsole
---8<-- "docs/files/gitflow/stdout/branques.txt"
+--8<-- "docs/files/estrategies/stdout/branques.txt"
 ```
 
 Anem a veure com integrar les funcionalitats amb la tècnica __`merge` + `merge --squash`__
@@ -126,7 +126,7 @@ Els passos que ha de seguir són:
 1. Sincronitzar l'estat del repositori local amb el remot amb `git fetch`.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/feature_readme_fetch.txt"
+    --8<-- "docs/files/estrategies/stdout/feature_readme_fetch.txt"
     ```
 
 1. Actualitzar la branca `develop` amb els canvis del remot.
@@ -134,7 +134,7 @@ Els passos que ha de seguir són:
     En aquest cas, ja està actualitzada.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/feature_readme_pull.txt"
+    --8<-- "docs/files/estrategies/stdout/feature_readme_pull.txt"
     ```
 
 1. Actualitzar la branca `feature/readme` amb els canvis `develop`.
@@ -142,7 +142,7 @@ Els passos que ha de seguir són:
     En aquest cas, ja està actualitzada.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/feature_readme_merge.txt"
+    --8<-- "docs/files/estrategies/stdout/feature_readme_merge.txt"
     ```
 
     1. L'opció `--no-edit` evita obrir l'editor de text i deixa el missatge de commit per defecte.
@@ -150,19 +150,19 @@ Els passos que ha de seguir són:
 1. Fusionar la branca `feature/readme` amb `develop`.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/feature_readme_merge_squash.txt"
+    --8<-- "docs/files/estrategies/stdout/feature_readme_merge_squash.txt"
     ```
 
 1. Publicar els canvis de la branca `develop` al repositori remot.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/feature_readme_push.txt"
+    --8<-- "docs/files/estrategies/stdout/feature_readme_push.txt"
     ```
 
 1. Eliminar la branca `feature/readme` del repositori local i del remot.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/feature_readme_delete.txt"
+    --8<-- "docs/files/estrategies/stdout/feature_readme_delete.txt"
     ```
 
 
@@ -178,19 +178,19 @@ Els passos que ha de seguir són:
 1. Sincronitzar l'estat del repositori local amb el remot amb `git fetch`.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/feature_license_fetch.txt"
+    --8<-- "docs/files/estrategies/stdout/feature_license_fetch.txt"
     ```
 
 1. Actualitzar la branca `develop` amb els canvis del remot.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/feature_license_pull.txt"
+    --8<-- "docs/files/estrategies/stdout/feature_license_pull.txt"
     ```
 
 1. Actualitzar la branca `feature/license` amb els canvis `develop`.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/feature_license_merge.txt"
+    --8<-- "docs/files/estrategies/stdout/feature_license_merge.txt"
     ```
 
     1. L'opció `--no-edit` evita obrir l'editor de text i deixa el missatge de commit per defecte.
@@ -198,19 +198,19 @@ Els passos que ha de seguir són:
 1. Fusionar la branca `feature/license` amb `develop`.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/feature_license_merge_squash.txt"
+    --8<-- "docs/files/estrategies/stdout/feature_license_merge_squash.txt"
     ```
 
 1. Publicar els canvis de la branca `develop` al repositori remot.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/feature_license_push.txt"
+    --8<-- "docs/files/estrategies/stdout/feature_license_push.txt"
     ```
 
 1. Eliminar la branca `feature/license` del repositori local i del remot.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/feature_license_delete.txt"
+    --8<-- "docs/files/estrategies/stdout/feature_license_delete.txt"
     ```
 
 #### Integració de `feature/author`
@@ -221,13 +221,13 @@ Els passos que ha de seguir són:
 1. Sincronitzar l'estat del repositori local amb el remot amb `git fetch`.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/feature_author_fetch.txt"
+    --8<-- "docs/files/estrategies/stdout/feature_author_fetch.txt"
     ```
 
 1. Actualitzar la branca `develop` amb els canvis del remot.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/feature_author_pull.txt"
+    --8<-- "docs/files/estrategies/stdout/feature_author_pull.txt"
     ```
 
 1. Actualitzar la branca `feature/author` amb els canvis `develop`.
@@ -236,7 +236,7 @@ Els passos que ha de seguir són:
         En aquest cas, han sorgit conflictes que hem hagut de solucionar manualment.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/feature_author_merge.txt"
+    --8<-- "docs/files/estrategies/stdout/feature_author_merge.txt"
     ```
 
     1. L'opció `--no-edit` evita obrir l'editor de text i deixa el missatge de commit per defecte.
@@ -245,19 +245,19 @@ Els passos que ha de seguir són:
 1. Fusionar la branca `feature/author` amb `develop`.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/feature_author_merge_squash.txt"
+    --8<-- "docs/files/estrategies/stdout/feature_author_merge_squash.txt"
     ```
 
 1. Publicar els canvis de la branca `develop` al repositori remot.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/feature_author_push.txt"
+    --8<-- "docs/files/estrategies/stdout/feature_author_push.txt"
     ```
 
 1. Eliminar la branca `feature/author` del repositori local i del remot.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/feature_author_delete.txt"
+    --8<-- "docs/files/estrategies/stdout/feature_author_delete.txt"
     ```
 
 ### Publicació de la versió 1.0.0
@@ -268,66 +268,66 @@ Els passos que ha de seguir són:
 1. Actualitzar la branca `develop` amb els canvis del remot.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/release_pull.txt"
+    --8<-- "docs/files/estrategies/stdout/release_pull.txt"
     ```
 
 1. Crear la branca de publicació `release/v1.0.0` a partir de la branca `develop`.
     
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/release_create.txt"
+    --8<-- "docs/files/estrategies/stdout/release_create.txt"
     ```
 
 1. Realitzar les tasques necessàries per a preparar la publicació de la versió 1.0.0.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/release.txt"
+    --8<-- "docs/files/estrategies/stdout/release.txt"
     ```
 
 1. Integrar aquesta branca a la branca de desenvolupament `develop` i publicar-la.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/release_merge_develop.txt"
+    --8<-- "docs/files/estrategies/stdout/release_merge_develop.txt"
     ```
 
 1. Integrar aquesta branca a la branca principal `main` i publicar els canvis.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/release_merge_main.txt"
+    --8<-- "docs/files/estrategies/stdout/release_merge_main.txt"
     ```
 
 1. Crear i publicar una etiqueta amb la versió 1.0.0.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/release_tag.txt"
+    --8<-- "docs/files/estrategies/stdout/release_tag.txt"
     ```
 
 1. Eliminar la branca de publicació.
 
     ```shellconsole
-    --8<-- "docs/files/gitflow/stdout/release_delete.txt"
+    --8<-- "docs/files/estrategies/stdout/release_delete.txt"
     ```
 
 ### Estat final
 #### `merge` + `merge --squash`
 
 ```shellconsole
---8<-- "docs/files/gitflow/stdout/squash_final.txt"
+--8<-- "docs/files/estrategies/stdout/squash_final.txt"
 ```
 
 #### `merge --no-ff`
 
 ```shellconsole
---8<-- "docs/files/gitflow/stdout/merge_no_ff_final.txt"
+--8<-- "docs/files/estrategies/stdout/merge_no_ff_final.txt"
 ```
 
 #### `rebase`
 
 ```shellconsole
---8<-- "docs/files/gitflow/stdout/rebase_final.txt"
+--8<-- "docs/files/estrategies/stdout/rebase_final.txt"
 ```
 
 #### `rebase` + `merge --no-ff`
 
 ```shellconsole
---8<-- "docs/files/gitflow/stdout/rebase_merge_no_ff_final.txt"
+--8<-- "docs/files/estrategies/stdout/rebase_merge_no_ff_final.txt"
 ```

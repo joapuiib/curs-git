@@ -1,0 +1,24 @@
+jpuigcerver@fp:~/git_stash (main) $ echo "" >> README.md
+jpuigcerver@fp:~/git_stash (main) $ echo "L'ordre git stash permet reservar els canvis temporalment per a poder fer altres tasques." >> README.md
+jpuigcerver@fp:~/git_stash (main) $ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+jpuigcerver@fp:~/git_stash (main) $ git checkout feature/documentacio
+error: Your local changes to the following files would be overwritten by checkout:
+	README.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+jpuigcerver@fp:~/git_stash (main) $ git stash -m "Text git stash"
+Saved working directory and index state On main: Text git stash
+jpuigcerver@fp:~/git_stash (main) $ git status
+On branch main
+nothing to commit, working tree clean
+jpuigcerver@fp:~/git_stash (main) $ git checkout feature/documentacio
+Switched to branch 'feature/documentacio'
+jpuigcerver@fp:~/git_stash (feature/documentacio) $ git checkout main
+Switched to branch 'main'
