@@ -8,7 +8,6 @@ tags:
     - tag
 ---
 
-@TODO: Revisar exemples i figures
 ## Git avançat
 En aquest bloc estudiarem algunes de les comandes
 avancades de Git que ens permetran realitzar tasques
@@ -33,9 +32,11 @@ Hi ha dos tipus d'etiquetes, les __etiquetes lleugeres__ i les __etiquetes anota
     - Documentació oficial sobre [etiquetes](https://git-scm.com/docs/git-tag){target=_blank}.
     - Apartat [2.6 Git Basics - Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging){target=_blank} del llibre Pro Git.
 
-???+ prep "Preparació repositori"
-    Repositori a GitHub.
-    pass
+??? prep "Preparació repositori"
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/etiquetes/inicial.txt"
+    ```
+
 
 ### Numeració de versions
 En projectes de desenvolupament, és comú utilitzar un sistema de numeració de versions
@@ -83,9 +84,25 @@ git tag [-a] <nom_etiqueta> [-m "missatge"] [<ref>]
 !!! docs
     Documentació oficial sobre [etiquetes](https://git-scm.com/docs/git-tag){target=_blank}.
 
-??? example "Exemple: Creació d'etiquetes"
-    pass
+??? example "Exemple: Creació d'etiqueta anotada"
+    S'han creat la etiquetes anotades:
 
+    - `v1.0.0` en el primer commit, amb el missatge `Primera versió: v1.0.0`.
+    - `v2.0.0` en el commit __README: Apartat tipus etiquetes__, amb el missatge `Versió: v2.0.0`.
+
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/etiquetes/etiqueta_anotada.txt"
+    ```
+
+??? example "Exemple: Creació d'etiqueta lleugera"
+    S'han creat la etiquetes lleugeres:
+
+    - `v1.1.0` en el _commit_ __README: Descripció__.
+    - `v2.1.0` en el _commit_ actual.
+
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/etiquetes/etiqueta_lleugera.txt"
+    ```
 
 ### Llistar etiquetes
 L'ordre `git tag` sense arguments ens permet llistar les etiquetes del nostre repositori.
@@ -101,7 +118,18 @@ git tag [-l | --list] [<patró>]
     Apartat de la documentació oficial sobre [tag --list](https://git-scm.com/docs/git-tag#Documentation/git-tag.txt---list){target=_blank}.
 
 ??? example "Exemple: Llistar etiquetes"
-    pass
+    Mostrem les etiquetes del nostre repositori.
+
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/etiquetes/llista.txt"
+    ```
+
+??? example "Exemple: Llistar etiquetes amb patró"
+    Mostrem les etiquetes del nostre repositori que comencen per `v2.`.
+
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/etiquetes/llista_patro.txt"
+    ```
 
 ### Consultar informació d'una etiqueta
 L'ordre `git show` ens permet consultar la informació d'una etiqueta.
@@ -113,8 +141,28 @@ git show <nom_etiqueta>
 - En cas de les __etiquetes lleugeres__, es mostrarà la informació del _commit_ associat.
 - En cas de les __etiquetes anotades__, a més, es mostrarà la persona que ha creat l'etiqueta, la data de creació i el missatge associat.
 
-??? "Exemple: Consultar informació d'una etiqueta"
-    pass
+??? example "Exemple: Consultar informació d'una etiqueta anotada"
+    Mostrem la informació de l'etiqueta anotada `v1.0.0`.
+
+    Podem obervar:
+
+    - La persona que ha creat l'etiqueta.
+    - La data de creació.
+    - El missatge associat.
+    - El _commit_ associat.
+
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/etiquetes/info_etiqueta_anotada.txt"
+    ```
+
+??? example "Exemple: Consultar informació d'una etiqueta lleugera"
+    Mostrem la informació de l'etiqueta lleugera `v1.1.0`.
+
+    En aquest cas, sols podem veure el _commit_ associat.
+
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/etiquetes/info_etiqueta_lleugera.txt"
+    ```
 
 
 ### Eliminar etiquetes
@@ -125,7 +173,11 @@ git tag -d <nom_etiqueta>
 ```
 
 ??? example "Exemple: Eliminar etiquetes"
-    pass
+    Eliminem l'etiqueta lleugera `v1.1.0`.
+
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/etiquetes/eliminar_etiqueta.txt"
+    ```
 
 
 ### Etiquetes en el repositori remot
@@ -146,7 +198,23 @@ En cas de voler eliminar una etiqueta del repositori remot, utilitzarem l'opció
 ```bash
 git push [-d | --delete] origin <nom_etiqueta>
 ```
+??? prep "Enllaç amb el repositori remot"
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/etiquetes/preparacio_remot.txt"
+    ```
+
+    Podem veure que les etiquetes creades en el nostre repositori local no estan en el repositori remot.
+
+    ![Repositori remot sense etiquetes](img/etiquetes/github_no_etiquetes.png)
 
 ??? example "Exemple: Etiquetes en el repositori remot"
-    pass
+    Publiquem totes les etiquetes en el repositori remot.
 
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/etiquetes/push_etiquetes.txt"
+    ```
+
+    Vegem que les etiquetes creades en el nostre repositori local s'han publicat en el
+    [repositori remot](https://github.com/joapuiib/cursgit_etiquetes/tags){:target="_blank"}.
+
+    ![Repositori remot amb etiquetes](img/etiquetes/github_etiquetes.png)
