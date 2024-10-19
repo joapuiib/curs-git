@@ -33,7 +33,7 @@ que té connotacions racistes.
     Vegeu: [Regarding Git and Branch Naming](https://sfconservancy.org/news/2020/jun/23/gitbranchname/)
 
 
-!!! prep "Preparació repositori d'exemple"
+??? prep "Preparació repositori d'exemple"
     En aquest material treballarem sobre un nou repositori local.
 
     __Inicialització:__
@@ -74,7 +74,7 @@ que avança a mesura que es fan nous commits sobre aquesta.
 Estructura de branques inicial.
 ///
 
-!!! example
+??? example  "Exemple: Estructura de branques inicial"
     L'estructura de branques inicial del repositori
     que utilitzarem en aquest material és la següent
     és el que es mostra a la [Figura 1](#figure-estat-inicial).
@@ -92,7 +92,7 @@ Estructura de branques inicial.
     indicant que és la branca activa i que el
     __Directori de Treball__ es troba en aquest estat.
 
-    Es veurà amb més detall a l'apartat [Canviar de branca](#canviar-de-branca).
+    El `HEAD` es veurà amb més detall a l'apartat [Canviar de branca](#canviar-de-branca).
 
 La ordre `git branch` ens permet veure i manipular les branques
 d'un repositori.
@@ -116,7 +116,7 @@ Més opcions:
     incloent les remotes (es veurà en els apunts [[remots]]).
 - `[-v | --verbose]`: Opcional. Mostra més informació de cada branca.
 
-!!! example
+??? example "Exemple: Mostrar les branques"
     Mostrem les branques del nostre repositori.
 
     ```shellconsole
@@ -125,6 +125,8 @@ Més opcions:
     ```
 
     Vegem que tenim una única branca anomenada `main`.
+
+    Aquesta ordre indicarà amb un `*` la branca activa (on es troba el `HEAD`).
 
 ### Crear una branca
 Per crear una nova branca, utilitzem l'ordre:
@@ -135,14 +137,12 @@ git branch [-f | --force] <nom>
 - `[-f | --force]`: Opcional. Força la creació de la branca.
 - `<nom>`: Nom de la nova branca.
 
-Aquesta ordre indicarà amb un `*` la branca activa (on es troba el `HEAD`).
-
 !!! warning
     Si ja existeix una branca amb el mateix nom i
     no s'utilitza l'opció `-f` o `--force`,
     l'ordre mostrarà un error i no es crearà la branca.
 
-!!! example
+??? example "Exemple: Crear la branca docs"
     Creem la branca `docs`.
     ```shellconsole
     jpuigcerver@fp:~/git_branques (main) $ git branch docs
@@ -154,14 +154,15 @@ Aquesta ordre indicarà amb un `*` la branca activa (on es troba el `HEAD`).
     ```
 
     Vegem que s'ha creat la branca `docs` que apunta
-    al commit `0b1b3b4`. Vegem que la branca activa
-    continua sent `main`.
+    al commit `0b1b3b4`.
 
-    ![Estructura de branques després de crear la branca docs](img/create_docs.png)
-    /// figure-caption
-        attrs: { id: figure-create-docs }
-    Estructura de branques després de crear la branca `docs`.
-    ///
+    No obstant això,la branca activa continua sent `main`.
+
+![Estructura de branques després de crear la branca docs](img/create_docs.png)
+/// figure-caption
+    attrs: { id: figure-create-docs }
+Estructura de branques després de crear la branca `docs`.
+///
 
 
 ### Canviar de branca
@@ -190,13 +191,7 @@ del `commit` al qual apunta la branca.
 La [Figura 2](#figure-create-docs) mostra l'estat del repositori quan el `HEAD` apunta a la branca `main`.
 La [Figura 3](#figure-checkout-docs) mostra l'estat del repositori després de canviar a la branca `docs`.
 
-![Estructura de branques després de canviar a la branca docs](img/checkout_docs.png)
-/// figure-caption
-    attrs: { id: figure-checkout-docs }
-Estructura de branques després de canviar a la branca `docs`.
-///
-
-!!! example annotate
+??? example annotate "Exemple: Canviar a la branca docs"
     Podeu observar com l'estat del repositori és el mateix, ja que les dues branques
     apunten al mateix `commit`, però el `HEAD` apunta a la branca `docs`.
 
@@ -219,6 +214,12 @@ Estructura de branques després de canviar a la branca `docs`.
     # Bloc: Branques
     ```
 
+![Estructura de branques després de canviar a la branca docs](img/checkout_docs.png)
+/// figure-caption
+    attrs: { id: figure-checkout-docs }
+Estructura de branques després de canviar a la branca `docs`.
+///
+
 ### Canvis en una branca
 Per fer canvis en una branca cal:
 
@@ -229,7 +230,7 @@ Per fer canvis en una branca cal:
 Quan es realitza un `commit` en una branca, el punter de la branca actual (`HEAD`)
 s'avança al nou `commit`.
 
-!!! example
+??? example "Exemple: Canvis en la branca docs"
     Afegim un subtítol al nostre fitxer `README.md` a la branca `docs`.
 
     ```shellconsole
@@ -256,11 +257,11 @@ s'avança al nou `commit`.
 
     Vegem que la branca `docs` ha avançat al nou `commit` `1b2c5d6`, mentre que la branca `main` continua apuntant al `commit` `0b1b3b4`.
 
-    ![Estructura de branques després de fer un commit a la branca docs](img/commit_docs.png)
-    /// figure-caption
-        attrs: { id: figure-commit-docs }
-    Estructura de branques després de fer un `commit` a la branca `docs`.
-    ///
+![Estructura de branques després de fer un commit a la branca docs](img/commit_docs.png)
+/// figure-caption
+    attrs: { id: figure-commit-docs }
+Estructura de branques després de fer un `commit` a la branca `docs`.
+///
 
 ### Reanomenar una branca
 Per reanomenar una branca, utilitzem l'ordre:
@@ -271,7 +272,7 @@ git branch [-m | --move] <nou_nom>
 - `[-m | --move]`: Opcional. Reanomena la branca actual (on es troba el `HEAD`).
 - `<nou_nom>`: Nou nom de la branca.
 
-!!! example
+!!! example "Exemple: Reanomenar la branca principal"
     En la [Introducció](#introduccio) s'ha utilitzat aquesta opció
     per canviar el nom de la branca principal de `master` a `main`.
 
@@ -295,7 +296,7 @@ git branch [-d | --delete] [-D] [-f | --force] <nom>
     En aquest cas, Git mostrarà un error i no es podrà eliminar la branca
     a no ser que s'utilitze l'opció `-D` o `--delete --force`.
 
-!!! example annotate
+??? example annotate "Exemple: Eliminar la branca docs"
     Eliminem la branca `docs`.
 
     ```shellconsole
@@ -342,10 +343,22 @@ o mitjançant [__commit de fusió__](#fusio-de-branques-divergents) (_merge comm
 ### Fusió directa
 La __fusió directa__ (_fast-forward_) és un tipus de fusió que es produeix
 quan la branca actual (`HEAD`) no té cap nou `commit` des de que es va crear la branca
-que es vol fusionar.
+que es vol fusionar. És a dir, la branca que es vol fusionar està __darrere__ de la branca actual,
+mantenint una __història lineal__.
 
-En aquest cas, la fusió es realitza avançant el punter de la branca actual (`HEAD`)
+![Estructura de branques abans de la fusió directa](img/before_ff.png)
+/// figure-caption
+    attrs: { id: figure-before-ff }
+Estructura de branques abans de la fusió directa.
+///
+
+Aquesta fusió consiteix a avançar el punter de la branca actual (`HEAD`)
 fins on es troba la branca que es vol fusionar.
+
+![Estructura de branques després de la fusió directa](img/after_ff.png)
+/// figure-caption
+Estructura de branques després de la fusió directa.
+///
 
 !!! important
     La __fusió directa__ és la forma més senzilla i neta de fusionar branques,
@@ -357,14 +370,9 @@ fins on es troba la branca que es vol fusionar.
 
     En cas que la fusió no siga directa, Git mostrarà un error i no es realitzarà la fusió.
 
-!!! example annotate
-    Partint de la situació de la [Figura 4](#figure-commit-docs), on la branca `docs` té un `commit` més que la branca `main`,
+??? example annotate "Exemple: Fusió directa de la branca docs"
+    Partint de la situació de la [Figura 5](#figure-before-ff), on la branca `docs` té un `commit` més que la branca `main`,
     la fusió de la branca `docs` a la branca `main` serà una fusió directa.
-
-    ![Estructura de branques abans de la fusió directa](img/before_ff.png)
-    /// figure-caption
-    Estructura de branques abans de la fusió directa.
-    ///
 
     ```shellconsole
     jpuigcerver@fp:~/git_branques (docs) $ git checkout main
@@ -377,11 +385,6 @@ fins on es troba la branca que es vol fusionar.
     ```
 
     En aquest cas, la fusió es portarà a terme avançant el punter de la branca `main` fins al punt on es troba la branca `docs`.
-
-    ![Estructura de branques després de la fusió directa](img/after_ff.png)
-    /// figure-caption
-    Estructura de branques després de la fusió directa.
-    ///
 
     ```shellconsole
     jpuigcerver@fp:~/git_branques (main) $ git merge docs
@@ -399,7 +402,6 @@ fins on es troba la branca que es vol fusionar.
     ```
 
     1. Vegem que el fitxer `README.md` ha incorporat els canvis de la branca `docs`.
-
 
 ### Fusió de branques divergents
 No sempre és possible realitzar fusió mitjançant una [__fusió directa__ (_fast-forward_)](#fusio-directa).
@@ -492,7 +494,7 @@ Si no se n'especifica cap, s'obrirà l'editor de text configurat per defecte per
     Per forçar que la fusió es realitze amb un __commit de fusió__ (_merge commit_),
     es pot utilitzar l'opció `--no-ff`.
 
-!!! example annotate "Fusió de branques divergents"
+??? example annotate "Exemple: Fusió de docs divergent amb main"
     Realitzem la fusió de les dues branques.
 
     ```shellconsole
@@ -611,7 +613,7 @@ Una vegada resolt el conflicte, caldrà confirmar els canvis amb `git add` i `gi
     ...
     ```
 
-!!! example annotate "Exemple de fusió amb resolució de conflictes"
+??? example annotate "Exemple: Fusió amb resolució de conflictes"
     Realitzem la fusió de la branca `conflictes` a la branca `main`.
 
     ```shellconsole
@@ -671,6 +673,15 @@ git rebase <branca>
 !!! docs
     Documentació de la ordre `git rebase`: https://git-scm.com/docs/git-rebase
 
+![Història abans del canvi de base](img/before_rebase.png)
+/// figure-caption
+Història abans del canvi de base.
+///
+
+![Història després del canvi de base](img/after_rebase.png)
+/// figure-caption
+Història després del canvi de base.
+///
 !!! important
     L'ordre `git rebase` canviarà la base de la branca actual (`HEAD`).
 
@@ -737,17 +748,7 @@ git rebase <branca>
 1. L'opció `git checkout -b` permet crear una nova branca i situar-se en ella directament.
 
 
-![Història abans del canvi de base](img/before_rebase.png)
-/// figure-caption
-Història abans del canvi de base.
-///
-
-![Història després del canvi de base](img/after_rebase.png)
-/// figure-caption
-Història després del canvi de base.
-///
-
-!!! example "Canvi de base"
+??? example "Exemple: Canvi de base"
     Canviem la base de la branca `llicencia` a la branca `main`.
 
     ```shellconsole
@@ -869,7 +870,7 @@ fins que s'haja aplicat el canvi de base a tots els `commit` de la branca.
     ...
     ```
 
-!!! example "Canvi de base amb conflictes"
+??? example "Exemple: Canvi de base amb conflictes"
     Canviem la base de la branca `docs_git_training` a la branca `main`.
 
     ```shellconsole
