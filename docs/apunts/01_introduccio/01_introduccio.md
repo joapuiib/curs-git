@@ -17,8 +17,6 @@ tags:
   - gitignore
 ---
 
-@TODO: collapsable examples
-
 ## Què és Git?
 Git és __un sistema de control de versions lliure i distribuït__ dissenyat per gestionar xicotets i grans projectes
 amb rapidesa i eficiència. L'objectiu principal de Git és controlar i gestionar els canvis realitzats
@@ -128,44 +126,45 @@ que conté tota la informació relativa al __Repositori Local__.
     Documentació oficial de `git init`: https://git-scm.com/docs/git-init
 
 
-```shellconsole
-jpuigcerver@fp:~ $ mkdir git_introduccio
-jpuigcerver@fp:~ $ cd git_introduccio
-jpuigcerver@fp:~/git_introduccio $ ls -a # (1)!
-.  ..
-jpuigcerver@fp:~/git_introduccio $ git init
-hint: Using 'master' as the name for the initial branch. This default branch name
-hint: is subject to change. To configure the initial branch name to use in all
-hint: of your new repositoris, which will suppress this warning, call:
-hint:
-hint: git config --global init.dafaultBranch <name>
-hint:
-hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-hint: 'development'. The just-created branch can be renamed via this command:
-hint:
-hint: git branch -m <name>
-Initialized empty Git repository in /home/jpuigcerver/git_introduccio/.git/
-jpuigcerver@fp:~/git_introduccio (master) $ git branch -m main
-jpuigcerver@fp:~/git_introduccio (main) $ ls -a # (2)!
-.  ..  .git/
-jpuigcerver@fp:~/git_introduccio (main) $ git status
-On branch main
+??? example "Exemple: Inicialització d'un repositori"
+    ```shellconsole
+    jpuigcerver@fp:~ $ mkdir git_introduccio
+    jpuigcerver@fp:~ $ cd git_introduccio
+    jpuigcerver@fp:~/git_introduccio $ ls -a # (1)!
+    .  ..
+    jpuigcerver@fp:~/git_introduccio $ git init
+    hint: Using 'master' as the name for the initial branch. This default branch name
+    hint: is subject to change. To configure the initial branch name to use in all
+    hint: of your new repositoris, which will suppress this warning, call:
+    hint:
+    hint: git config --global init.dafaultBranch <name>
+    hint:
+    hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+    hint: 'development'. The just-created branch can be renamed via this command:
+    hint:
+    hint: git branch -m <name>
+    Initialized empty Git repository in /home/jpuigcerver/git_introduccio/.git/
+    jpuigcerver@fp:~/git_introduccio (master) $ git branch -m main
+    jpuigcerver@fp:~/git_introduccio (main) $ ls -a # (2)!
+    .  ..  .git/
+    jpuigcerver@fp:~/git_introduccio (main) $ git status
+    On branch main
 
-No commits yet
+    No commits yet
 
-Nothing to commit (create/copy files and use "git add" to track)
-```
+    Nothing to commit (create/copy files and use "git add" to track)
+    ```
 
-1. L'opció `-a` mostra tots els fitxers, inclosos els ocults que comencen amb un punt.
-2. S'ha creat el directori ocult `.git` que conté tota la informació del repositori.
+    1. L'opció `-a` mostra tots els fitxers, inclosos els ocults que comencen amb un punt.
+    2. S'ha creat el directori ocult `.git` que conté tota la informació del repositori.
 
-L'ordre `git status` ens mostra l'estat actual del nostre repositori.
-Podem observar que estem en la branca `main` i que de moment no s'ha realitzat cap canvi.
+    L'ordre `git status` ens mostra l'estat actual del nostre repositori.
+    Podem observar que estem en la branca `main` i que de moment no s'ha realitzat cap canvi.
 
-!!! note
-    S'ha canviat el nom de la branca principal de `master` a `main` per a seguir les recomanacions de la comunitat de desenvolupament.
+    !!! note
+        S'ha canviat el nom de la branca principal de `master` a `main` per a seguir les recomanacions de la comunitat de desenvolupament.
 
-    Vegeu: [Regarding Git and Branch Naming](https://sfconservancy.org/news/2020/jun/23/gitbranchname/)
+        Vegeu: [Regarding Git and Branch Naming](https://sfconservancy.org/news/2020/jun/23/gitbranchname/)
 
 ### Eliminar un repositori
 Per a eliminar un repositori de Git, simplement cal eliminar el directori ocult `.git`.
@@ -177,18 +176,18 @@ rm -rf .git
 - `-r`: Opció per a eliminar de manera recursiva.
 - `-f`: Opció per a forçar l'eliminació sense confirmació dels elements protegits contra escriptura.
 
-```shellconsole
-jpuigcerver@fp:~/git_introduccio (main) $ ls -a
-.  ..  .git
-jpuigcerver@fp:~/git_introduccio (main) $ rm -rf .git
-jpuigcerver@fp:~/git_introduccio $ git status
-fatal: not a git repository (or any of the parent directories): .git
-```
-
 !!! danger
     Sigues extremadament cautelós amb l'ús de la comanda `rm -rf`,
     ja que elimina tots els fitxers, inclsos aquells protegits contra escritura.
 
+??? example "Exemple: Eliminar un repositori"
+    ```shellconsole
+    jpuigcerver@fp:~/git_introduccio (main) $ ls -a
+    .  ..  .git
+    jpuigcerver@fp:~/git_introduccio (main) $ rm -rf .git
+    jpuigcerver@fp:~/git_introduccio $ git status
+    fatal: not a git repository (or any of the parent directories): .git
+    ```
 
 ## Estructura d'un repositori de Git
 En aquesta introducció, ens centrarem en com funcionen els repositoris de Git d'una manera __local__,
@@ -437,7 +436,7 @@ git diff [--staged] [<path>]
 Resum de `git diff`.
 ///
 
-!!! example "Diferències entre el Directori de treball i el Repositori local"
+??? example "Exemple: Diferències entre el Directori de treball i el Repositori local"
     Observem les diferències entre el fitxer `README.md` del __Directori de treball__ i el __Repositori local__.
 
     ```shellconsole
@@ -462,7 +461,7 @@ Resum de `git diff`.
     +Aquesta és una línia nova
     ```
 
-!!! example "Diferències entre l'Àrea de Preparació i el Repositori local"
+??? example "Exemple: Diferències entre l'Àrea de Preparació i el Repositori local"
     Observem les diferències entre el fitxer `README.md` de l'_Àrea de Preparació_ i el __Repositori local__.
 
     ```shellconsole
@@ -527,7 +526,7 @@ Podeu consultar la [Figura 2](#figure-flux-treball) per a veure un resum del com
 !!! danger
     La comanda `git restore` descarta els canvis realitzats en els fitxers sense possibilitat de recuperar-los.
 
-!!! example "Descartar canvis en l'Àrea de Preparació"
+??? example "Exemple: Descartar canvis en l'Àrea de Preparació"
     Continuant amb l'exemple anterior, descartem els canvis realitzats en el fitxer `README.md` de l'_Àrea de Preparació_.
 
     ```shellconsole
@@ -557,7 +556,7 @@ Podeu consultar la [Figura 2](#figure-flux-treball) per a veure un resum del com
             modified:   README.md
     ```
 
-!!! example "Descartar canvis en el Directori de treball"
+ ??? example "Exemple: Descartar canvis en el Directori de treball"
     Descartem els canvis realitzats en el fitxer `README.md` del __Directori de treball__.
 
     !!! danger
@@ -601,7 +600,7 @@ git log [options]
 !!! docs
     Consulta totes les opcions a la documentació oficial de `git log`: https://git-scm.com/docs/git-log
 
-!!! example "Històric de canvis"
+??? example "Exemple: Històric de canvis"
     Modifiquem novament el fitxer `README.md` i realitzem un nou `commit`.
 
     ```shellconsole
@@ -640,7 +639,7 @@ Una possible combicació d'opcions per visualitzar l'històric de canvis de mane
 git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
 ```
 
-!!! example "Històric de canvis compacte"
+??? example "Exemple: Històric de canvis compacte"
     ```shellconsole
     jpuigcerver@FP:~/git_introduccio (main) $ git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
     * c9fc6c8 - (2 minutes ago) Added another line to README.md - Joan Puigcerver (HEAD -> main)
@@ -655,7 +654,7 @@ git config --global alias.lg "log --graph --abbrev-commit --decorate --format=fo
 git config --global alias.lga "lg --all"
 ```
 
-!!! example "Històric de canvis compacte amb àlias"
+??? example "Exemple: Històric de canvis compacte amb àlias"
     Després de configurar l'àlias `git lg` per a l'ordre anterior, podem cridar-lo de la següent manera:
 
     ```shellconsole
@@ -693,8 +692,8 @@ La configuració `--global` s'emmagatzema en el fitxer `.gitconfig`, situat del 
     C:\Users\<username>\.gitconfig
     ```
 
-!!! example "Exemple configuració"
-    ```cfg
+??? example "Exemple: Configuració"
+    ```cfg title=".gitconfig"
     [core]
         editor = vim # Editor per defecte
 
@@ -726,8 +725,8 @@ que complisquen algun dels patrons especificats.
     - https://git-scm.com/docs/gitignore#_pattern_format
     - https://www.w3schools.com/git/git_ignore.asp?remote=github
 
-!!! example "Exemple de `.gitignore`"
-    ```gitignore
+??? example "Exemple: Ignorar fitxers"
+    ```gitignore title=".gitignore"
     # ignore ALL .log files
     *.log
 
