@@ -13,31 +13,31 @@ alias: branques-slides
 
 ## Branques
 
-<img src="../../apunts/img/branques/create_docs.png">
+<img src="../img/create_docs.png">
 
 ---
 
 ## Canviar de branca
 
-<img src="../../apunts/img/branques/checkout_docs.png">
+<img src="../img/checkout_docs.png">
 
 ---
 
 ## Nous canvis en una branca
 
-<img src="../../apunts/img/branques/commit_docs.png">
+<img src="../img/commit_docs.png">
 
 ---
 
 ## Fusió directa de branques
 
-<img src="../../apunts/img/branques/before_ff.png">
+<img src="../img/before_ff.png">
 
 Abans
 
 --
 
-<img src="../../apunts/img/branques/after_ff.png">
+<img src="../img/after_ff.png">
 
 Després
 
@@ -46,13 +46,13 @@ Després
 ## Fusió de branques divergents
 
 
-<img src="../../apunts/img/branques/before_divergent.png">
+<img src="../img/before_divergent.png">
 
 Abans
 
 --
 
-<img src="../../apunts/img/branques/after_divergent.png">
+<img src="../img/after_divergent.png">
 
 Després
 
@@ -72,12 +72,12 @@ Contingut de la branca a fusionar
 
 ## Canvi de base
 
-<img src="../../apunts/img/branques/before_rebase.png">
+<img src="../img/before_rebase.png">
 
 Abans
 
 --
 
-<img src="../../apunts/img/branques/after_rebase.png">
+<img src="../img/after_rebase.png">
 
 Després

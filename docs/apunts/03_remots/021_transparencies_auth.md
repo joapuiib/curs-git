@@ -13,13 +13,13 @@ alias: remots-auth-slides
 
 ## Repositori remot
 
-<img src="../../apunts/img/introduccio/components.png">
+<img src="../../01_introduccio/img/components.png">
 
 ---
 
 ## Desenvolupament distribuït
 
-<img src="../../apunts/img/remots/multiple_local_repo.png">
+<img src="../img/multiple_local_repo.png">
 
 ---
 

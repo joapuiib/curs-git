@@ -33,13 +33,13 @@ __GitHub__ o __GitLab__ són un servei d'allotjament de repositoris de Git.
 <div class="container">
 
 <div class="col">
-<img src="../../apunts/img/logo_github.png" height="50%">
+<img src="../../img/logo_github.png" height="50%">
 
 https://github.com
 </div>
 
 <div class="col">
-<img src="../../apunts/img/logo_gitlab.png" height="50%">
+<img src="../../img/logo_gitlab.png" height="50%">
 
 https://gitlab.com
 </div>
@@ -50,7 +50,7 @@ https://gitlab.com
 
 ## Estructura d'un repositori
 
-<img src="../../apunts/img/introduccio/components.png">
+<img src="../img/components.png">
 
 ---
 
@@ -70,7 +70,7 @@ git init
 git add <files>
 ```
 
-<img src="../../apunts/img/introduccio/staged_readme.png">
+<img src="../img/staged_readme.png">
 
 ---
 
@@ -80,7 +80,7 @@ git add <files>
 git commit [-m <message>]
 ```
 
-<img src="../../apunts/img/introduccio/after_commit_readme.png">
+<img src="../img/after_commit_readme.png">
 
 ---
 
@@ -98,7 +98,7 @@ git show [ref]
 git diff [--staged]
 ```
 
-<img src="../../apunts/img/introduccio/resum_diff.png">
+<img src="../img//resum_diff.png">
 
 ---
 
@@ -122,4 +122,4 @@ git config --global alias.lga "lg --all"
 git restore <files>
 ```
 
-<img src="../../apunts/img/introduccio/flux_treball.png">
+<img src="../img/flux_treball.png">

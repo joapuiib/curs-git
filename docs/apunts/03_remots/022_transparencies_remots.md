@@ -13,13 +13,13 @@ alias: remots-slides
 
 ## Repositori remot
 
-<img src="../../apunts/img/introduccio/components.png">
+<img src="../../01_introduccio/img/components.png">
 
 ---
 
 ## Desenvolupament distribuït
 
-<img src="../../apunts/img/remots/multiple_local_repo.png">
+<img src="../img/multiple_local_repo.png">
 
 ---
 
@@ -32,7 +32,7 @@ git remote add origin <url>
 - (_HTTPS_) Personal Access Token (PAT)
 - (_SSH_) Clau SSH
 
-<img src="../../apunts/img/remots/add_remote.png" alt="Repsitori Local vinculat amb un Repositori Remot">
+<img src="../img/add_remote.png" alt="Repsitori Local vinculat amb un Repositori Remot">
 
 ---
 
@@ -42,7 +42,7 @@ git remote add origin <url>
 git push [-u | --set-upstream] origin <branca>
 ```
 
-<img src="../../apunts/img/remots/push_setupstream.png" alt="Associació d'una branca local a una branca remota">
+<img src="../img/push_setupstream.png" alt="Associació d'una branca local a una branca remota">
 
 ---
 
@@ -52,7 +52,7 @@ git push [-u | --set-upstream] origin <branca>
 git clone <url> [<directori>]
 ```
 
-<img src="../../apunts/img/remots/clone.png">
+<img src="../img/clone.png">
 
 ---
 
@@ -61,7 +61,7 @@ git clone <url> [<directori>]
 ```bash
 git fetch
 ```
-<img src="../../apunts/img/remots/fetch.png">
+<img src="../img/fetch.png">
 
 ---
 
@@ -71,4 +71,4 @@ git fetch
 git pull [--rebase]
 ```
 
-<img src="../../apunts/img/remots/pull.png">
+<img src="../img/pull.png">
