@@ -41,7 +41,7 @@ A més, les estratègies poden ser utilitzades en combinació amb altres tècniq
 [__Pull Requests__](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests){target=_blank},
 que veurem en [[projectes]].
 
-### Branques amb un propòsit únic
+## Branques amb un propòsit únic
 Les estratègies de ramificació més comuns es basen en la creació de diferents branques,
 cadascuna amb un propòsit concret i una sèrie de regles per aconseguir una integració
 eficient de les funcionalitats:
@@ -80,7 +80,7 @@ eficient de les funcionalitats:
         Aquestes branques poden dificultar el flux de treball,
         sobretot si es tracta de mantindra una __història lineal__ del projecte.
 
-#### Avantatges i desavantatges
+### Avantatges i desavantatges
 Utilitzar aquest tipus d'estratègies de ramificació presenta una sèrie d'avantatges i desavantatges
 que cal tindre en compte a l'hora de decidir si val la pena utilitzar-les.
 
@@ -100,7 +100,7 @@ A més, és important adaptar la metodologia a les necessitats del projecte
 i no seguir-la de forma estricta si no aporta valor afegit.
 
 
-#### Bones pràctiques
+### Bones pràctiques
 Per utilitzar les estràtegies de ramificació de forma eficient,
 és important seguir una sèrie de bones pràctiques que ajudaran a
 mantrindre l'ordre i la coherència en el projecte.
@@ -117,13 +117,14 @@ Algunes de les bones pràctiques més importants són:
     - `feature/frontend/landing-page` o `feature/backend/user-authentication`,
         com exemple de __branques de funcionalitats__.
     - `release/v1.0.0` o `release/v1.1.0`, com exemple de __branques de publicació__.
-    - `hotfix/bug-123`, com exemple de __branques de correcció__.
+    - `hotfix/issue-123`, com exemple de __branques de correcció__.
 
-- Incorporeu els canvis de `develop` a les branques `feature/*` de forma regular,
-    per mantindre-les actualitzades amb els canvis del projecte i evitar resolucions
-    de conflictes inmenses en el futur.
+- Incorporeu els canvis de `develop` a les branques `feature/*` de forma regular.
 
-### Integració de les funcionalitats
+    És preferible mantindre les branques de funcionalitat actualitzades amb els canvis del projecte,
+    i d'aquesta manera, evitar resolucions de conflictes inmenses en el moment d'integrar-les.
+
+## Integració de les funcionalitats
 
 El procés per integrar les funcionalitats a la branca de desenvolupament `develop`
 és el següent:
@@ -156,7 +157,7 @@ El procés per integrar les funcionalitats a la branca de desenvolupament `devel
 1. Eliminar les branques `feature/*` del repositori local i del remot.
 
 
-#### Fusió `merge -no-ff`
+### Fusió `merge -no-ff`
 __Gitflow__ és una de les estratègies de ramificació més conegudes
 i utilitzades en projectes de desenvolupament de programari.
 
@@ -171,7 +172,15 @@ La particularitat d'aquesta estratègia és que la fusió de les branques de fun
 és realitza mitjançant `merge --no-ff`, de manera que es conserva la història de les branques de funcionalitat que es fusionen mitjançant
 un __commit de fusió__.
 
-@TODO: Figura merge --no-ff
+```bash
+git checkout develop
+git merge --no-ff feature/A
+```
+
+![Fusió de branques mitjançant merge --no-ff](img/merge_no_ff.png)
+/// figure-caption
+Fusió de branques mitjançant `merge --no-ff`
+///
 
 Els avantatges principals són:
 
@@ -184,12 +193,23 @@ El principal desavantatge és:
 - En projectes amb moltes funcionalitats, la història pot ser difícil de seguir.
 
 
-#### Canvi de base `rebase`
-Aquest mètode per fusionar les branques de funcionalitat es basa en la utilització del canvi de base `rebase`.
+### Canvi de base `rebase` + `merge --ff-only`
+Aquest mètode per fusionar les branques de funcionalitat es basa en la utilització del canvi de base `rebase`,
+per després fusionar-la de manera linial amb `merge --ff-only`.
 
-@TODO: Figura rebase
+```bash
+git checkout feature/A
+git rebase develop
+git checkout develop
+git merge --ff-only feature/A
+```
 
-Els avantatges sóñ:
+![Fusió de branques mitjançant rebase](img/rebase_merge_ff.png)
+/// figure-caption
+Fusió de branques mitjançant `rebase` + `merge --ff-only`
+///
+
+Els avantatges són:
 
 - Manté la història lineal.
 - Permet resoldre els conflictes fàcilment en el procés de `rebase`.
@@ -200,14 +220,25 @@ Els principal desavantatges són:
 - Revertir una funcionalitat és complicat, ja que cal revertir múltiples _commits_.
 
 
-#### Fusió `rebase` + `merge --no-ff`
+### Fusió `rebase` + `merge --no-ff`
 Aquesta opció combina les dues opcions anteriors per tal d'aprofitar els avantatges de cadascuna
 i a la vegada minimitzar els seus desavantatges.
 
 Aquest mètode es basa en realitzar un canvi de base `rebase` i després fusionar la branca de funcionalitat
 mitjançant un __commit de fusió__ amb `merge --no-ff`.
 
-@TODO: Figura rebase + merge --no-ff
+```bash
+git checkout feature/A
+git rebase develop
+git checkout develop
+git merge --no-ff feature/A
+```
+
+![Fusió de branques mitjançant rebase + merge --no-ff](img/rebase_merge_no_ff.png)
+/// figure-caption
+Fusió de branques mitjançant `rebase` + `merge --no-ff`
+///
+
 
 Els avantatges principals són:
 
@@ -215,29 +246,49 @@ Els avantatges principals són:
 - Permet revertir una funcionalitat fàcilment, ja que sols cal revertir un únic _commit_.
 
 
-#### Fusió `merge --squash`
+### Fusió `merge --squash`
 Aquesta opció consisteix a fusionar les branques de funcionalitat amb la branca de desenvolupament `develop`
 mitjançant `merge --squash`, de manera que tots els _commits_ de la branca de funcionalitat es fusionen
 en un __únic *commit*__.
 
-@TODO: Figura merge --squash
+```bash
+git checkout develop
+git merge --squash feature/A
+git commit -m <missatge>
+```
+
+![Fusió de branques mitjançant merge --squash](img/merge_squash.png)
+/// figure-caption
+Fusió de branques mitjançant `merge --squash`
+///
 
 En el cas que hi hagen conflictes, una bona pràctica és integrar els canvis de `develop` a la branca de funcionalitat
 i resoldre'ls abans de realitzar la fusió.
 
-Per realitzar aquesta integració de canvis, es recomana utilitzar `git merge`.
+Per realitzar aquesta integració de canvis, es recomana utilitzar `git merge --no-ff`.
+
+```bash
+git checkout feature/A
+git merge --no-ff develop
+git checkout develop
+git merge --squash feature/A
+git commit -m <missatge>
+```
+
+![Fusió de branques mitjançant merge --no-ff + merge --squash](img/merge_no_ff_squash.png)
+/// figure-caption
+Fusió de branques mitjançant `merge --no-ff` + `merge --squash`
+///
+
 Com que la branca de funcionalitat serà eliminada després de la fusió,
 no importa si la història de la branca de funcionalitat es manté neta o no.
 
 !!! warning
     També es podria realitzar la fusió amb `rebase`,
-    però si hi ha molts commits a la branca de funcionalitat,
-    aquesta opció pot ser més complicada ja que podrien
-    sorgir conflictes en cada _commit_.
+    però en cas de conflicte, s'hauria de resoldre en cada _commit_
+    de la branca de funcionalitat.
 
-@TODO: Figura merge --no-ff + merge --squash
-
-Els avantatges principals són:
+Els avantatges principals d'aquesta opció són:
 
 - Manté la història lineal.
 - Permet revertir una funcionalitat fàcilment, ja que sols cal revertir un únic _commit_.
@@ -252,7 +303,7 @@ El principal desavantatge és:
 - No manté tot l'històric de canvis.
 - Dificulta la revisió de canvis individuals.
 
-### Branques de publicació
+## Branques de publicació
 Les branques de publicació són branques temporals
 que s'utilitzen per a preparar la publicació d'una versió.
 
@@ -262,20 +313,32 @@ Aquestes branques es creen a partir de la branca de desenvolupament `develop`
 i s'utilitzen per a realitzar tasques com:
 
 - Actualitzar la versió del projecte.
-- Realitzar proves de validació.
-- Corregir errors que han pogut passar desapercebuts.
 - Preparar paràmetres de configuració específics per a la publicació.
 
-Una vegada acabades aquestes tasques, s'ha fusionar a la branca principal `main`
-i a la branca de desenvolupament `develop`.
+El flux de treball amb aquestes branques és el següent:
+- Es creen a partir de la branca de desenvolupament `develop`.
+- Es realitzen les tasques de preparació per a la publicació.
+- S'integren els canvis a la branca de desenvolupament `develop`.
+- S'integren els canvis a la branca de desenvolupament `main`.
 
-@TODO: Figura branques de publicació
+
+![Branques de publicació](img/release.png)
+/// figure-caption
+Branques de publicació
+///
+
+!!! tip
+    Si el teu projecte no requereix de tasques específiques per a preparar la publicació,
+    pots prescindir de les branques de publicació i publicar directament des de la branca de desenvolupament `develop`.
 
 
-### Branques de correcció
+## Branques de correcció
 Les branques de correcció són branques temporals
 que s'utilitzen per a corregir errors crítics en el codi estable del projecte,
 quan la seua correcció no pot esperar a la següent versió.
+
+!!! danger
+    Aquestes branques sols han de ser utilitzades en casos d'extrema necessitat.
 
 Normalment, el prefix de les branques de correcció és `hotfix/`.
 
@@ -283,9 +346,13 @@ El flux de treball amb aquestes branques és el següent:
 
 - Es creen a partir de la branca principal `main`.
 - Es realitzen les correccions necessàries.
-- Els canvis d'integren a la branca de desenvolupament `develop` i a la branca principal `main`.
+- S'integren els canvis a la branca de desenvolupament `develop`.
+- S'integren els canvis a la branca de desenvolupament `main`.
 
-@TODO: Figura branques de correcció
+![Branques de correcció](img/hotfix.png)
+/// figure-caption
+Branques de correcció
+///
 
 
 ## Bibliografia
