@@ -8,6 +8,7 @@ tags:
     - tag
 ---
 
+@TODO: Revisar exemples i figures
 ## Git avançat
 En aquest bloc estudiarem algunes de les comandes
 avancades de Git que ens permetran realitzar tasques
@@ -27,6 +28,10 @@ Hi ha dos tipus d'etiquetes, les __etiquetes lleugeres__ i les __etiquetes anota
 
 - Una __etiqueta lleugera__ és una referència alfanumèrica que s'especifica a un commit.
 - Una __etiqueta anotada__ és un objecte de Git que, a més, conté qui ha creat l'etiqueta, la data de creació i un missatge.
+
+!!! docs
+    - Documentació oficial sobre [etiquetes](https://git-scm.com/docs/git-tag){target=_blank}.
+    - Apartat [2.6 Git Basics - Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging){target=_blank} del llibre Pro Git.
 
 ???+ prep "Preparació repositori"
     Repositori a GitHub.
@@ -145,18 +150,3 @@ git push [-d | --delete] origin <nom_etiqueta>
 ??? example "Exemple: Etiquetes en el repositori remot"
     pass
 
-
-
-## Eliminació de canvis
-### `revert`
-
-### `reset`
-
-
-## Reserva de canvis: `stash`
-
-
-## Còpia de canvis: `cherry-pick`
-
-
-## Fusió de canvis en un sol commit: `squash`
