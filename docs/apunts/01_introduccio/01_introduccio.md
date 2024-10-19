@@ -233,6 +233,7 @@ Per últim, tots els canvis de l'__Àrea de preparació__ es poden confirmar i f
 
 ![Flux de treball en un repositori de Git](img/flux_treball.png)
 /// figure-caption
+    attrs: { id: "figure-flux-treball" }
 Flux de treball en un repositori de Git.
 ///
 
@@ -516,7 +517,7 @@ git restore [--staged] <path>
     Si no s'indica, es descartaran els canvis realitzats en el __Directori de treball__.
 - `<path>`: Opcional. Fitxer o directori sobre el qual es vol descartar els canvis.
 
-Podeu consultar la [Figura 2](#figure-2) per a veure un resum del comportament de `git restore`.
+Podeu consultar la [Figura 2](#figure-flux-treball) per a veure un resum del comportament de `git restore`.
 
 !!! docs
     Documentació oficial de `git restore`: https://git-scm.com/docs/git-restore

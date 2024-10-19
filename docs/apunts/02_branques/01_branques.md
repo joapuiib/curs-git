@@ -70,13 +70,14 @@ que avança a mesura que es fan nous commits sobre aquesta.
 
 ![Estructura de branques](img/branques_inicial.png)
 /// figure-caption
+    attrs: { id: figure-estat-inicial }
 Estructura de branques inicial.
 ///
 
 !!! example
     L'estructura de branques inicial del repositori
     que utilitzarem en aquest material és la següent
-    és el que es mostra a la [Figura 1](#figure-1).
+    és el que es mostra a la [Figura 1](#figure-estat-inicial).
 
     ```shellconsole
     jpuigcerver@fp:~/git_branques (main) $ git lg
@@ -158,6 +159,7 @@ Aquesta ordre indicarà amb un `*` la branca activa (on es troba el `HEAD`).
 
     ![Estructura de branques després de crear la branca docs](img/create_docs.png)
     /// figure-caption
+        attrs: { id: figure-create-docs }
     Estructura de branques després de crear la branca `docs`.
     ///
 
@@ -185,11 +187,12 @@ En qualsevol cas, canviar de branca significa moure el punter `HEAD` a la branca
 El canvi de branca també implica modificar el contingut del __Directori de Treball__ a l'estat
 del `commit` al qual apunta la branca.
 
-La [Figura 2](#figure-2) mostra l'estat del repositori quan el `HEAD` apunta a la branca `main`.
-La [Figura 3](#figure-3) mostra l'estat del repositori després de canviar a la branca `docs`.
+La [Figura 2](#figure-create-docs) mostra l'estat del repositori quan el `HEAD` apunta a la branca `main`.
+La [Figura 3](#figure-checkout-docs) mostra l'estat del repositori després de canviar a la branca `docs`.
 
 ![Estructura de branques després de canviar a la branca docs](img/checkout_docs.png)
 /// figure-caption
+    attrs: { id: figure-checkout-docs }
 Estructura de branques després de canviar a la branca `docs`.
 ///
 
@@ -255,6 +258,7 @@ s'avança al nou `commit`.
 
     ![Estructura de branques després de fer un commit a la branca docs](img/commit_docs.png)
     /// figure-caption
+        attrs: { id: figure-commit-docs }
     Estructura de branques després de fer un `commit` a la branca `docs`.
     ///
 
@@ -354,7 +358,7 @@ fins on es troba la branca que es vol fusionar.
     En cas que la fusió no siga directa, Git mostrarà un error i no es realitzarà la fusió.
 
 !!! example annotate
-    Partint de la situació de la [Figura 4](#figure-4), on la branca `docs` té un `commit` més que la branca `main`,
+    Partint de la situació de la [Figura 4](#figure-commit-docs), on la branca `docs` té un `commit` més que la branca `main`,
     la fusió de la branca `docs` a la branca `main` serà una fusió directa.
 
     ![Estructura de branques abans de la fusió directa](img/before_ff.png)
@@ -469,6 +473,7 @@ i incorpora els canvis de les dues branques.
 
 ![Història després de la fusió en branques divergents](img/after_divergent.png)
 /// figure-caption
+    attrs: { id: figure-divergent }
 Història després de la fusió en branques divergents.
 ///
 
@@ -514,7 +519,7 @@ Si no se n'especifica cap, s'obrirà l'editor de text configurat per defecte per
 
     1. La opció `-m` permet afegir un missatge al `commit` de fusió.
 
-    En aquest punt ens trobem en la situació mostrada en la [Figura 8](#figure-8).
+    En aquest punt ens trobem en la situació mostrada en la [Figura 8](#figure-divergent).
     Vegem que el fitxer `README.md` ha incorporat els canvis de les dues branques.
 
 

@@ -160,10 +160,11 @@ En aquesta secció, crearem un repositori remot a GitHub.
 
     ![Repositori buit creat a GitHub](img/github_empty_repository.png)
     /// figure-caption
+        attrs: { id: figure-create-github-repo }
     Repositori buit creat a GitHub
     ///
 
-    La [Figura 3](#figure-3) mostra els passos per enllaçar el teu repositori local amb el repositori remot creat a GitHub.
+    La [Figura 3](#figure-create-github-repo) mostra els passos per enllaçar el teu repositori local amb el repositori remot creat a GitHub.
     En els següents apartats, explicarem aquestes ordres amb més detall.
 
 ## Mètodes d'autenticació a GitHub
@@ -381,7 +382,7 @@ Repositori Local vinculat amb un Repositori Remot
 ///
 
 !!! warning annotate
-    Si intentes publicar amb [`git push`](#publicacio-de-canvis)
+    Si intentes publicar amb `git push`
     els canvis en un repositori remot
     sense haver enllaçat el teu repositori local,
     Git et mostrarà un missatge d'error:
