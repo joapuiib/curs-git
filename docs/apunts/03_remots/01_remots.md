@@ -34,7 +34,7 @@ repositoris que es troben __allotjats en un servidor__, que permeten
 l'accés a altres usuaris i la col·laboració en el desenvolupament de
 projectes.
 
-!!! prep "Preparació repositori local"
+??? prep "Preparació repositori local"
     En aquest material treballarem sobre un nou repositori local.
 
     __Inicialització:__
@@ -48,28 +48,27 @@ projectes.
     git commit -a -m "README.md: Descripció"
     ```
 
-    ??? example "Exemple: Inicialització del repositori local"
-        ```shellconsole
-        jpuigcerver@fp:~ $ git init ~/git_remots
-        Initialized empty Git repository in /home/jpuigcerver/git_remots/.git/
-        jpuigcerver@fp:~ $ cd ~/git_remots
-        jpuigcerver@fp:~/git_remots (main) $ branch -m main # (1)!
-        jpuigcerver@fp:~/git_remots (main) $ echo "# Bloc: Remots" > README.md
-        jpuigcerver@fp:~/git_remots (main) $ git add README.md
-        jpuigcerver@fp:~/git_remots (main) $ git commit -m "README.md: Títol"
-        [master (root-commit) 0b1b3b4] README.md: Títol
-         1 file changed, 1 insertion(+)
-         create mode 100644 README.md
-        jpuigcerver@fp:~/git_remots (main) $ echo "Repositori del __Bloc: Remots__ del curs __\"Introducció a Git i la seua aplicació a l’aula\"__" >> README.md
-        jpuigcerver@fp:~/git_remots (main) $ git commit -a -m "README.md: Descripció"
-        [master 1b3b4b0] README.md: Descripció
-         1 file changed, 1 insertion(+)
-        jpuigcerver@fp:~/git_remots (main) $ git lg
-        * 1b3b4b0 - (2 minutes ago) README.md: Descripció - Joan Puigcerver (HEAD -> main)
-        * 0b1b3b4 - (3 minutes ago) README.md: Títol - Joan Puigcerver
-        ```
+    ```shellconsole
+    jpuigcerver@fp:~ $ git init ~/git_remots
+    Initialized empty Git repository in /home/jpuigcerver/git_remots/.git/
+    jpuigcerver@fp:~ $ cd ~/git_remots
+    jpuigcerver@fp:~/git_remots (main) $ branch -m main # (1)!
+    jpuigcerver@fp:~/git_remots (main) $ echo "# Bloc: Remots" > README.md
+    jpuigcerver@fp:~/git_remots (main) $ git add README.md
+    jpuigcerver@fp:~/git_remots (main) $ git commit -m "README.md: Títol"
+    [master (root-commit) 0b1b3b4] README.md: Títol
+     1 file changed, 1 insertion(+)
+     create mode 100644 README.md
+    jpuigcerver@fp:~/git_remots (main) $ echo "Repositori del __Bloc: Remots__ del curs __\"Introducció a Git i la seua aplicació a l’aula\"__" >> README.md
+    jpuigcerver@fp:~/git_remots (main) $ git commit -a -m "README.md: Descripció"
+    [master 1b3b4b0] README.md: Descripció
+     1 file changed, 1 insertion(+)
+    jpuigcerver@fp:~/git_remots (main) $ git lg
+    * 1b3b4b0 - (2 minutes ago) README.md: Descripció - Joan Puigcerver (HEAD -> main)
+    * 0b1b3b4 - (3 minutes ago) README.md: Títol - Joan Puigcerver
+    ```
 
-        1. Canviem el nom de la branca principal a `main`.
+    1. Canviem el nom de la branca principal a `main`.
 
 
 ## Repositori remot

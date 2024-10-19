@@ -17,6 +17,8 @@ tags:
   - gitignore
 ---
 
+@TODO: collapsable examples
+
 ## Què és Git?
 Git és __un sistema de control de versions lliure i distribuït__ dissenyat per gestionar xicotets i grans projectes
 amb rapidesa i eficiència. L'objectiu principal de Git és controlar i gestionar els canvis realitzats
