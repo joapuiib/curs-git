@@ -1,8 +1,8 @@
 ---
 template: document.html
-title: "Bloc 5: Estratègies de ramificació"
+title: "Estratègies de ramificació"
 icon: material/book-open-variant
-alias: bloc5
+alias: estrategies
 comments: true
 tags:
     - gitflow

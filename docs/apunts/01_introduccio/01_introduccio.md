@@ -2,7 +2,7 @@
 template: document.html
 title: "Introducció a Git"
 icon: material/book-open-variant
-alias: bloc1
+alias: introduccio
 comments: true
 tags:
   - git add

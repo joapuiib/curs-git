@@ -2,7 +2,7 @@
 template: document.html
 title: "Exercici: Introducció a Git"
 icon: material/pencil-outline
-alias: bloc1-exercicis
+alias: introduccio-exercici
 ---
 
 ## Objectius

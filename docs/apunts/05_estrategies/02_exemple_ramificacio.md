@@ -1,8 +1,8 @@
 ---
 template: document.html
-title: "Exemple 5: Estratègia de ramificació"
+title: "Exemple: Estratègia de ramificació en un projecte"
 icon: material/file-check-outline
-alias: bloc5-example
+alias: estrategies-example
 comments: true
 ---
 

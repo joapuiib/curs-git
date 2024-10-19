@@ -2,7 +2,7 @@
 template: document.html
 title: "Branques"
 icon: material/book-open-variant
-alias: bloc2
+alias: branques
 comments: true
 tags:
   - conflictes

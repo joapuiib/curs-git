@@ -1,8 +1,8 @@
 ---
 template: document.html
-title: "Bloc 6: Gestió de projectes"
+title: "Gestió de projectes"
 icon: material/book-open-variant
-alias: bloc6
+alias: projectes
 comments: true
 tags:
     - pull requests

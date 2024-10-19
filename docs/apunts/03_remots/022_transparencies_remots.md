@@ -2,7 +2,7 @@
 template: slides.html
 title: "Transparències: Remots"
 icon: material/presentation
-alias: bloc32-slides
+alias: remots-slides
 ---
 
 ## Remots

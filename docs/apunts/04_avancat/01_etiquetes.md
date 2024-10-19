@@ -1,16 +1,11 @@
 ---
 template: document.html
-title: "Bloc 4: Git avançat"
+title: "Etiquetes"
 icon: material/book-open-variant
-alias: bloc4
+alias: etiquetes
 comments: true
 tags:
     - tag
-    - squash
-    - reset
-    - revert
-    - cherry-pick
-    - stash
 ---
 
 ## Git avançat

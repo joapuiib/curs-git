@@ -2,7 +2,7 @@
 template: document.html
 title: "Exercici: Branques"
 icon: material/pencil-outline
-alias: bloc2-exercicis
+alias: branques-exercicis
 ---
 
 ## Objectius

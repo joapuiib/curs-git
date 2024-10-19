@@ -1,8 +1,8 @@
 ---
 template: document.html
-title: "Bloc 7: GitHub com a plataforma educativa"
+title: "GitHub com a plataforma educativa"
 icon: material/book-open-variant
-alias: bloc7
+alias: educativa
 comments: true
 tags:
     - GitHub Classroom

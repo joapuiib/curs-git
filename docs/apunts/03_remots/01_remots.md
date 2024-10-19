@@ -2,7 +2,7 @@
 template: document.html
 title: "Remots"
 icon: material/book-open-variant
-alias: bloc3
+alias: remots
 comments: true
 tags:
     - git clone

@@ -2,7 +2,7 @@
 template: slides.html
 title: "Transparències: Mètodes d'autenticació a GitHub"
 icon: material/presentation
-alias: bloc31-slides
+alias: remots-auth-slides
 ---
 
 ## Mètodes d'autenticació a GitHub

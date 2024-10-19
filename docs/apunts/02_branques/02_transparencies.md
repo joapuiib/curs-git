@@ -2,7 +2,7 @@
 template: slides.html
 title: "Transparències: Branques"
 icon: material/presentation
-alias: bloc2-slides
+alias: branques-slides
 ---
 
 ## Branques

@@ -2,7 +2,7 @@
 template: document.html
 title: "Exercici: Remots"
 icon: material/pencil-outline
-alias: bloc3-exercicis
+alias: remots-exercicis
 ---
 
 ## Objectius

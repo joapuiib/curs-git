@@ -2,7 +2,7 @@
 template: slides.html
 title: "Transparències: Introducció a Git"
 icon: material/presentation
-alias: bloc1-slides
+alias: introduccio-slides
 ---
 
 ## Introducció a Git
