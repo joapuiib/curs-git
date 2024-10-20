@@ -1,8 +1,8 @@
-mar@fp:~/gitflow $ cd ~/gitflow/mar
-mar@fp:~/gitflow/mar (feature/author) $ git fetch
-From ~/gitflow/remot
+mar@fp:~/git_estrategies $ cd ~/git_estrategies/mar
+mar@fp:~/git_estrategies/mar (feature/author) $ git fetch
+From ~/git_estrategies/remot
    ec0e2bd..b7bf0a5  develop    -> origin/develop
-mar@fp:~/gitflow/mar (feature/author) $ git lga
+mar@fp:~/git_estrategies/mar (feature/author) $ git lga
 * b7bf0a5 - (0 seconds ago) Merge branch 'feature/license' - Pau (origin/develop)
 * 2bc4029 - (1 second ago) Merge branch 'feature/readme' - Anna
 | * a216550 - (2 seconds ago) Autors: Mar - Mar (HEAD -> feature/author, origin/feature/author)

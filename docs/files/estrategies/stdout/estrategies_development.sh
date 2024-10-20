@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Elimina els repositoris si existeixen
-if [ -d ~/gitflow ]; then
-    rm -rf ~/gitflow
+if [ -d ~/git_estrategies ]; then
+    rm -rf ~/git_estrategies
 fi
 
 # Inicialització del repositori remot
-mkdir -p ~/gitflow/remot
-cd ~/gitflow/remot
+mkdir -p ~/git_estrategies/remot
+cd ~/git_estrategies/remot
 git init
 git branch -m main
 echo "# Estratègies de ramificació" > README.md
@@ -19,14 +19,14 @@ git config --bool core.bare true # (1)!
 git branch develop
 
 # Clonació del repositori
-cd ~/gitflow
+cd ~/git_estrategies
 git clone remot anna
 git clone remot pau
 git clone remot mar
 git clone remot carles
 
 # Desenvolupament de la branca feature/readme
-cd ~/gitflow/anna
+cd ~/git_estrategies/anna
 git config user.name "Anna"
 git config user.email "anna@fpmislata.com"
 git checkout develop
@@ -42,7 +42,7 @@ git commit -a -m "README.md: Branques propòsit únic"
 git push -u origin feature/readme
 
 # Desenvolupament de la branca feature/license
-cd ~/gitflow/pau
+cd ~/git_estrategies/pau
 git config user.name "Pau"
 git config user.email "pau@fpmislata.com"
 git checkout develop
@@ -58,7 +58,7 @@ git commit -a -m "LICENSE: Enllaç a la llicència"
 git push -u origin feature/license
 
 # Desenvolupament de la branca feature/author
-cd ~/gitflow/mar
+cd ~/git_estrategies/mar
 git config user.name "Mar"
 git config user.email "mar@fpmislata.com"
 git checkout develop
@@ -74,4 +74,4 @@ echo "- Mar (mar@fpmislata.com)" >> README.md
 git commit -a -m "Autors: Mar"
 git push -u origin feature/author
 
-cd ~/gitflow
+cd ~/git_estrategies

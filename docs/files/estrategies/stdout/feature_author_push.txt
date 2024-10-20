@@ -1,7 +1,7 @@
-mar@fp:~/gitflow/mar (develop) $ git push
-To ~/gitflow/remot
+mar@fp:~/git_estrategies/mar (develop) $ git push
+To ~/git_estrategies/remot
    b7bf0a5..f9152dc  develop -> develop
-mar@fp:~/gitflow/mar (develop) $ git lga
+mar@fp:~/git_estrategies/mar (develop) $ git lga
 * f9152dc - (0 seconds ago) Merge branch 'feature/author' - Mar (HEAD -> develop, origin/develop)
 | *   72afb5a - (0 seconds ago) Merge branch 'develop' into feature/author - Mar (feature/author)
 | |\  

@@ -1,9 +1,9 @@
-pau@fp:~/gitflow $ cd ~/gitflow/pau
-pau@fp:~/gitflow/pau (feature/license) $ git fetch
-From ~/gitflow/remot
+pau@fp:~/git_estrategies $ cd ~/git_estrategies/pau
+pau@fp:~/git_estrategies/pau (feature/license) $ git fetch
+From ~/git_estrategies/remot
    ec0e2bd..2bc4029  develop        -> origin/develop
  * [new branch]      feature/author -> origin/feature/author
-pau@fp:~/gitflow/pau (feature/license) $ git lga
+pau@fp:~/git_estrategies/pau (feature/license) $ git lga
 * 2bc4029 - (0 seconds ago) Merge branch 'feature/readme' - Anna (origin/develop)
 | * c213387 - (1 second ago) LICENSE: Enllaç a la llicència - Pau (HEAD -> feature/license, origin/feature/license)
 | * b11b498 - (1 second ago) LICENSE: Afegida llicència - Pau

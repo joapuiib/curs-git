@@ -1,10 +1,10 @@
-anna@fp:~/gitflow/anna (release/v1.0.0) $ echo "v1.0.0" > VERSION
-anna@fp:~/gitflow/anna (release/v1.0.0) $ git add VERSION
-anna@fp:~/gitflow/anna (release/v1.0.0) $ git commit -m "Publicada versió: v1.0.0"
+anna@fp:~/git_estrategies/anna (release/v1.0.0) $ echo "v1.0.0" > VERSION
+anna@fp:~/git_estrategies/anna (release/v1.0.0) $ git add VERSION
+anna@fp:~/git_estrategies/anna (release/v1.0.0) $ git commit -m "Publicada versió: v1.0.0"
 [release/v1.0.0 2c075dd] Publicada versió: v1.0.0
  1 file changed, 1 insertion(+)
  create mode 100644 VERSION
-anna@fp:~/gitflow/anna (release/v1.0.0) $ git lga
+anna@fp:~/git_estrategies/anna (release/v1.0.0) $ git lga
 * 2c075dd - (0 seconds ago) Publicada versió: v1.0.0 - Anna (HEAD -> release/v1.0.0)
 * f9152dc - (0 seconds ago) Merge branch 'feature/author' - Mar (origin/develop, develop)
 * b7bf0a5 - (1 second ago) Merge branch 'feature/license' - Pau

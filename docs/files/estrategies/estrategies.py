@@ -17,20 +17,20 @@ def develop_features():
     x.run('mkdir -p stdout')
 
     x.run('cd')
-    x.run('rm -rf ~/gitflow')
+    x.run('rm -rf ~/git_estrategies')
 
     # @TODO: remove directory if exists bash script
     x.log_bash('# Elimina els repositoris si existeixen')
-    x.log_bash('if [ -d ~/gitflow ]; then')
-    x.log_bash('    rm -rf ~/gitflow')
+    x.log_bash('if [ -d ~/git_estrategies ]; then')
+    x.log_bash('    rm -rf ~/git_estrategies')
     x.log_bash('fi')
     x.log_bash('')
 
     print('==================== REMOTE ========================')
     # Set up remote repository
     x.log_bash('# Inicialització del repositori remot')
-    x.x('mkdir -p ~/gitflow/remot')
-    x.x('cd ~/gitflow/remot')
+    x.x('mkdir -p ~/git_estrategies/remot')
+    x.x('cd ~/git_estrategies/remot')
     x.x('git init')
     x.x('git branch -m main')
     x.x('echo "# Estratègies de ramificació" > README.md')
@@ -55,7 +55,7 @@ def develop_features():
     x.log_file('stdout/clone.txt')
 
     x.log_bash('# Clonació del repositori')
-    x.x('cd ~/gitflow')
+    x.x('cd ~/git_estrategies')
     x.x('git clone remot anna')
     x.x('git clone remot pau')
     x.x('git clone remot mar')
@@ -69,8 +69,8 @@ def develop_features():
     x.set_user('anna')
 
     x.log_bash('# Desenvolupament de la branca feature/readme')
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/anna')
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/anna')
     x.x('git config user.name "Anna"')
     x.x('git config user.email "anna@fpmislata.com"')
     x.x('git checkout develop')
@@ -93,8 +93,8 @@ def develop_features():
     x.set_user('pau')
 
     x.log_bash('# Desenvolupament de la branca feature/license')
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/pau')
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/pau')
     x.x('git config user.name "Pau"')
     x.x('git config user.email "pau@fpmislata.com"')
     x.x('git checkout develop')
@@ -117,8 +117,8 @@ def develop_features():
     x.set_user('mar')
 
     x.log_bash('# Desenvolupament de la branca feature/author')
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/mar')
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/mar')
     x.x('git config user.name "Mar"')
     x.x('git config user.email "mar@fpmislata.com"')
     x.x('git checkout develop')
@@ -141,10 +141,10 @@ def develop_features():
     x.log_file('stdout/branques.txt')
     x.set_user('jpuigcerver')
 
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/remot', bash=False)
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/remot', bash=False)
     x.x('git lga', bash=False)
-    x.log_bash('cd ~/gitflow')
+    x.log_bash('cd ~/git_estrategies')
 
 def squash():
     print('================== SQUASH: MERGE FEATURE/README ====================')
@@ -154,8 +154,8 @@ def squash():
     ## 1. Sincronitzar l'estat
     x.log_file('stdout/feature_readme_fetch.txt')
 
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/anna')
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/anna')
     x.x('git fetch')
     x.x('git lga')
 
@@ -201,8 +201,8 @@ def squash():
     ## 1. Sincronitzar l'estat
     x.log_file('stdout/feature_license_fetch.txt')
 
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/pau')
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/pau')
     x.x('git fetch')
     x.x('git lga')
 
@@ -250,8 +250,8 @@ def squash():
     ## 1. Sincronitzar l'estat
     x.log_file('stdout/feature_author_fetch.txt')
 
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/mar')
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/mar')
     x.x('git fetch')
     x.x('git lga')
 
@@ -300,8 +300,8 @@ def squash():
     x.log_file('stdout/release_pull.txt')
     x.set_user('anna')
 
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/anna')
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/anna')
     x.x('git checkout develop')
     x.x('git fetch --prune')
     x.x('git pull --ff-only')
@@ -349,8 +349,8 @@ def squash():
     x.log_file('stdout/squash_final.txt')
     x.set_user('jpuigcerver')
 
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/remot')
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/remot')
     x.x('git lga')
 
 def merge_no_ff():
@@ -359,8 +359,8 @@ def merge_no_ff():
     x.set_user('anna')
 
     ## 1. Sincronitzar l'estat
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/anna')
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/anna')
     x.x('git fetch')
     x.x('git lga')
 
@@ -387,8 +387,8 @@ def merge_no_ff():
     x.set_user('pau')
 
     ## 1. Sincronitzar l'estat
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/pau')
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/pau')
     x.x('git fetch --prune')
     x.x('git lga')
 
@@ -416,8 +416,8 @@ def merge_no_ff():
     x.set_user('mar')
 
     ## 1. Sincronitzar l'estat
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/mar')
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/mar')
     x.x('git fetch')
     x.x('git lga')
 
@@ -447,8 +447,8 @@ def merge_no_ff():
     print('================== MERGE NO FF: RELEASE ====================')
     x.set_user('anna')
 
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/anna')
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/anna')
     x.x('git checkout develop')
     x.x('git fetch --prune')
     x.x('git pull --ff-only')
@@ -484,8 +484,8 @@ def merge_no_ff():
     x.log_file('stdout/merge_no_ff_final.txt')
     x.set_user('jpuigcerver')
 
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/remot')
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/remot')
     x.x('git lga')
 
 def rebase():
@@ -494,8 +494,8 @@ def rebase():
     x.set_user('anna')
 
     ## 1. Sincronitzar l'estat
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/anna')
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/anna')
     x.x('git fetch')
     x.x('git lga')
 
@@ -526,8 +526,8 @@ def rebase():
     x.set_user('pau')
 
     ## 1. Sincronitzar l'estat
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/pau')
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/pau')
     x.x('git fetch --prune')
     x.x('git lga')
 
@@ -559,8 +559,8 @@ def rebase():
     x.set_user('mar')
 
     ## 1. Sincronitzar l'estat
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/mar')
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/mar')
     x.x('git fetch')
     x.x('git lga')
 
@@ -603,8 +603,8 @@ def rebase():
     print('================== REBASE: RELEASE ====================')
     x.set_user('anna')
 
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/anna')
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/anna')
     x.x('git checkout develop')
     x.x('git fetch --prune')
     x.x('git pull --ff-only')
@@ -640,8 +640,8 @@ def rebase():
     x.log_file('stdout/rebase_final.txt')
     x.set_user('jpuigcerver')
 
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/remot')
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/remot')
     x.x('git lga')
 
 def rebase_merge_no_ff():
@@ -650,8 +650,8 @@ def rebase_merge_no_ff():
     x.set_user('anna')
 
     ## 1. Sincronitzar l'estat
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/anna')
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/anna')
     x.x('git fetch')
     x.x('git lga')
 
@@ -682,8 +682,8 @@ def rebase_merge_no_ff():
     x.set_user('pau')
 
     ## 1. Sincronitzar l'estat
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/pau')
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/pau')
     x.x('git fetch --prune')
     x.x('git lga')
 
@@ -715,8 +715,8 @@ def rebase_merge_no_ff():
     x.set_user('mar')
 
     ## 1. Sincronitzar l'estat
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/mar')
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/mar')
     x.x('git fetch')
     x.x('git lga')
 
@@ -759,8 +759,8 @@ def rebase_merge_no_ff():
     print('================== REBASE MERGE NO FF: RELEASE ====================')
     x.set_user('anna')
 
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/anna')
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/anna')
     x.x('git checkout develop')
     x.x('git fetch --prune')
     x.x('git pull --ff-only')
@@ -796,8 +796,8 @@ def rebase_merge_no_ff():
     x.log_file('stdout/rebase_merge_no_ff_final.txt')
     x.set_user('jpuigcerver')
 
-    x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/remot')
+    x.run('cd ~/git_estrategies/')
+    x.x('cd ~/git_estrategies/remot')
     x.x('git lga')
 
 parser = argparse.ArgumentParser(description='Estratègies de ramificació')
