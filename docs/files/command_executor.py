@@ -50,7 +50,7 @@ class CommandExecutor:
 
     def log_file(self, file):
         self.file = None
-        if self.logging:
+        if self.logging and file:
             self.set_file(file)
             self.rm_file()
 
