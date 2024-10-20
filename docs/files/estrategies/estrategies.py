@@ -19,8 +19,16 @@ def develop_features():
     x.run('cd')
     x.run('rm -rf ~/gitflow')
 
+    # @TODO: remove directory if exists bash script
+    x.log_bash('# Elimina els repositoris si existeixen')
+    x.log_bash('if [ -d ~/gitflow ]; then')
+    x.log_bash('    rm -rf ~/gitflow')
+    x.log_bash('fi')
+    x.log_bash('')
+
     print('==================== REMOTE ========================')
     # Set up remote repository
+    x.log_bash('# Inicialització del repositori remot')
     x.x('mkdir -p ~/gitflow/remot')
     x.x('cd ~/gitflow/remot')
     x.x('git init')
@@ -28,33 +36,39 @@ def develop_features():
     x.x('echo "# Estratègies de ramificació" > README.md')
     x.x('git add README.md')
     x.x('git commit -m "Commit inicial"')
-    x.x('git lga')
+    x.x('git lga', bash=False)
     x.x('git config --bool core.bare true # (1)!')
+    x.log_bash("")
 
     print('==================== DEVELOP ========================')
 
     # Development branch
     x.log_file('stdout/development.txt')
 
+    x.log_bash('# Inicialització del repositori de desenvolupament')
     x.x('git branch develop')
-    x.x('git lga')
+    x.x('git lga', bash=False)
+    x.log_bash('')
 
     print('==================== CLONE ========================')
     # Clone repository
     x.log_file('stdout/clone.txt')
 
+    x.log_bash('# Clonació del repositori')
     x.x('cd ~/gitflow')
     x.x('git clone remot anna')
     x.x('git clone remot pau')
     x.x('git clone remot mar')
     x.x('git clone remot carles')
-    x.x('tree .')
+    x.x('tree .', bash=False)
+    x.log_bash('')
 
     print('================== FEATURE/README ====================')
     # Anna `feature/readme`
     x.log_file('stdout/feature_readme.txt')
     x.set_user('anna')
 
+    x.log_bash('# Desenvolupament de la branca feature/readme')
     x.run('cd ~/gitflow/')
     x.x('cd ~/gitflow/anna')
     x.x('git config user.name "Anna"')
@@ -70,13 +84,15 @@ def develop_features():
     x.x('echo "de branques amb un únic propòsit." >> README.md')
     x.x('git commit -a -m "README.md: Branques propòsit únic"')
     x.x('git push -u origin feature/readme')
-    x.x('git lga')
+    x.x('git lga', bash=False)
+    x.log_bash('')
 
     print('================== FEATURE/LICENSE ====================')
     # Pau `feature/license`
     x.log_file('stdout/feature_license.txt')
     x.set_user('pau')
 
+    x.log_bash('# Desenvolupament de la branca feature/license')
     x.run('cd ~/gitflow/')
     x.x('cd ~/gitflow/pau')
     x.x('git config user.name "Pau"')
@@ -92,13 +108,15 @@ def develop_features():
     x.x('echo "Més informació: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" >> LICENSE')
     x.x('git commit -a -m "LICENSE: Enllaç a la llicència"')
     x.x('git push -u origin feature/license')
-    x.x('git lga')
+    x.x('git lga', bash=False)
+    x.log_bash('')
 
     print('================== FEATURE/AUTHOR ====================')
     # Mar `feature/author`
     x.log_file('stdout/feature_author.txt')
     x.set_user('mar')
 
+    x.log_bash('# Desenvolupament de la branca feature/author')
     x.run('cd ~/gitflow/')
     x.x('cd ~/gitflow/mar')
     x.x('git config user.name "Mar"')
@@ -115,7 +133,8 @@ def develop_features():
     x.x('echo "- Mar (mar@fpmislata.com)" >> README.md')
     x.x('git commit -a -m "Autors: Mar"')
     x.x('git push -u origin feature/author')
-    x.x('git lga')
+    x.x('git lga', bash=False)
+    x.log_bash('')
 
     print('================== ESTAT INICIAL ====================')
     # Estat remot
@@ -123,8 +142,9 @@ def develop_features():
     x.set_user('jpuigcerver')
 
     x.run('cd ~/gitflow/')
-    x.x('cd ~/gitflow/remot')
-    x.x('git lga')
+    x.x('cd ~/gitflow/remot', bash=False)
+    x.x('git lga', bash=False)
+    x.log_bash('cd ~/gitflow')
 
 def squash():
     print('================== SQUASH: MERGE FEATURE/README ====================')
@@ -791,7 +811,9 @@ if args.verbose:
 
 if args.action == 'squash':
     x.set_logging(True)
+    x.log_bash_file('stdout/estrategies_development.sh')
     develop_features()
+    x.log_bash_file(None)
     squash()
 
 elif args.action == 'merge_no_ff':

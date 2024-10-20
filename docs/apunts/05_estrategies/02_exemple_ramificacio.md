@@ -331,3 +331,11 @@ Els passos que ha de seguir són:
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/rebase_merge_no_ff_final.txt"
 ```
+
+## Codi font
+
+/// collapse-code
+```bash title="Bash script amb el desenvolupament de les funcionalitats"
+--8<-- "docs/files/estrategies/stdout/estrategies_development.sh"
+```
+///
