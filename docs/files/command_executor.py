@@ -148,3 +148,11 @@ class CommandExecutor:
 
         if bash:
             self.log_bash(cmd)
+
+    def swap_conflictes(self, filename):
+        with open(filename, "r+") as f:
+            content = f.read()
+            content = re.sub(r"<<<<<<< HEAD\n(.*?)=======\n(.*?)>>>>>>> (.*?)\n", r"\2\1", content, flags=re.DOTALL)
+            f.seek(0)
+            f.write(content)
+            f.truncate()
