@@ -12,8 +12,6 @@ tags:
     - git commit --amend
 ---
 
-
-@TODO: exemples
 ## Reset
 L'ordre `git reset` ens permet moure la referència de la branca actual a qualsevol
 altre _commit_ del repositori.
@@ -34,11 +32,16 @@ Algunes de les accions que podem fer mitjançant aquestes eines són:
     problemes entre els col·laboradors del repositori.
 
 ??? prep "Preparació repositori"
+
+    /// collapse-code
+    ```bash title="setup_reset.sh"
+    --8<-- "docs/files/avancat/stdout/reset/setup_reset.sh"
+    ```
+    ///
+
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/reset/inicial.txt"
     ```
-
-    @TODO: Afegir script de bash
 
 La sintaxi de l'ordre `git reset` és:
 ```bash
@@ -48,7 +51,7 @@ git reset [--soft | --mixed | --hard | --keep] <ref>
 - `ref`: La referència pot ser l'identificador de un commit, una branca o una etiqueta.
 
 !!! docs
-    Documentació oficial de [`git reset](https://git-scm.com/docs/git-reset){target=_blank}.
+    Documentació oficial de [`git reset`](https://git-scm.com/docs/git-reset){target=_blank}.
 
 El comportament de git reset depén del mode especificat. Per defecte, el mode és `--mixed`.
 
@@ -70,8 +73,19 @@ git reset --soft <ref>
 ```
 
 ??? example "Exemple: reset --soft"
+    Establim la referencia de la branca `main` al commit __Canvi B__.
+
+    En aquest cas, es perdran els canvis del commit __Canvi C__,
+    que es conservaran en l'__Àrea de Preparació__.
+
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/reset/soft.txt"
+    ```
+
+    Creem de nou el commit __Canvi C__.
+
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/reset/revert_soft.txt"
     ```
 
 ### Mixed
@@ -85,8 +99,19 @@ git reset --mixed <ref>
 ```
 
 ??? example "Exemple: reset --mixed"
+    Establim la referencia de la branca `main` al commit __Canvi B__.
+
+    En aquest cas, es perdran els canvis del commit __Canvi C__,
+    que es conservaran en el __Directori de Treball__.
+
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/reset/mixed.txt"
+    ```
+
+    Creem de nou el commit __Canvi C__.
+
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/reset/revert_mixed.txt"
     ```
 
 
@@ -102,6 +127,11 @@ git reset --hard <ref>
 ```
 
 ??? example "Exemple: reset --hard"
+    Establim la referencia de la branca `main` al commit __Canvi B__.
+
+    En aquest cas, es perdran els canvis del commit __Canvi C__,
+    que no es conservaran enlloc i no es podran recuperar.
+
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/reset/hard.txt"
     ```
@@ -119,6 +149,9 @@ git reset --keep <ref>
 ```
 
 ??? example "Exemple: reset --keep"
+    Com que realitzar el `reset` comportaria sobreesciure els canvis del __Directori de Treball__,
+    l'operació no es realitza.
+
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/reset/keep.txt"
     ```
@@ -141,6 +174,9 @@ git commit --amend [-m <missatge>]
 - `-m <missatge>`: Permet especificar un nou missatge per al commit.
 
 ??? example "Exemple: Amend"
+    Hem modificat l'últim _commit_ __Canvi B__,
+    on hem afegit canvis a `README.md` i modificat el missatge del commit.
+
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/reset/amend.txt"
     ```

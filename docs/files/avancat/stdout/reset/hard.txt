@@ -1,0 +1,9 @@
+jpuigcerver@fp:~/git_reset (main) $ git reset --hard 04fafb7
+HEAD is now at 04fafb7 Canvi B
+jpuigcerver@fp:~/git_reset (main) $ git status
+On branch main
+nothing to commit, working tree clean
+jpuigcerver@fp:~/git_reset (main) $ git lga
+* 04fafb7 - (0 seconds ago) Canvi B - Joan Puigcerver (HEAD -> main)
+* 4dc7c85 - (0 seconds ago) Canvi A - Joan Puigcerver
+* 16786db - (0 seconds ago) Commit inicial - Joan Puigcerver
