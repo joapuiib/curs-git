@@ -1,3 +1,4 @@
 nav:
     - ...
     - "Apunts": apunts
+    - "Informació": informacio.md
