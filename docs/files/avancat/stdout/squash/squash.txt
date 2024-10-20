@@ -1,0 +1,24 @@
+jpuigcerver@fp:~/git_squash (canvis) $ git checkout main
+Switched to branch 'main'
+jpuigcerver@fp:~/git_squash (main) $ git merge --squash canvis
+Updating 863c0b2..824cb01
+Fast-forward
+Squash commit -- not updating HEAD
+ README.md | 3 +++
+ 1 file changed, 3 insertions(+)
+jpuigcerver@fp:~/git_squash (main) $ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   README.md
+
+jpuigcerver@fp:~/git_squash (main) $ git commit -m "Canvis A, B i C"
+[main 00b7e27] Canvis A, B i C
+ 1 file changed, 3 insertions(+)
+jpuigcerver@fp:~/git_squash (main) $ git lga
+* 824cb01 - (0 seconds ago) Canvi C - Joan Puigcerver (canvis)
+* 58d9407 - (0 seconds ago) Canvi B - Joan Puigcerver
+* b460f08 - (0 seconds ago) Canvi A - Joan Puigcerver
+| * 00b7e27 - (0 seconds ago) Canvis A, B i C - Joan Puigcerver (HEAD -> main)
+|/  
+* 863c0b2 - (0 seconds ago) Commit inicial - Joan Puigcerver

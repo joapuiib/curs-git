@@ -8,8 +8,6 @@ tags:
     - git merge --squash
 ---
 
-@TODO: exemples
-
 ## `merge --squash`
 L'opció `--squash` de la comanda `git merge` permet fusionar els canvis d'una branca en una altra
 en un únic commit.
@@ -35,7 +33,21 @@ Funcionament de `git merge --squash`.
 ///
 
 ??? prep "Preparació repositori"
-    @TODO
+    /// collapse-code
+    ```bash title="setup_squash.sh"
+    --8<-- "docs/files/avancat/stdout/squash/setup_squash.sh"
+    ```
+    ///
+
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/squash/inicial.txt"
+    ```
 
 ??? example "Exemple: git merge --squash"
-    @TODO
+    S'han fusionat tots els canvis de la branca `canvis`
+    a la branca principal `main` en un únic commit.
+
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/squash/squash.txt"
+    ```
+
