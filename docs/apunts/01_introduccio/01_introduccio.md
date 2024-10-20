@@ -178,7 +178,7 @@ rm -rf .git
 
 !!! danger
     Sigues extremadament cautelós amb l'ús de la comanda `rm -rf`,
-    ja que elimina tots els fitxers, inclsos aquells protegits contra escritura.
+    ja que elimina tots els fitxers, inclsos aquells protegits contra escriptura.
 
 ??? example "Exemple: Eliminar un repositori"
     ```shellconsole
