@@ -114,6 +114,15 @@ i encara no han segut integrades a la branca de desenvolupament `develop`.
 --8<-- "docs/files/estrategies/stdout/branques.txt"
 ```
 
+!!! prep "Preparació del repositori"
+    Pots crear un repositor amb l'estat anterior executant el següent script:
+    /// collapse-code
+    ```bash title="Bash script amb el desenvolupament de les funcionalitats"
+    --8<-- "docs/files/estrategies/stdout/estrategies_development.sh"
+    ```
+    ///
+
+
 Anem a veure com integrar les funcionalitats amb la tècnica __`merge` + `merge --squash`__
 seguint el procés indicat a [[estrategies#integracio-de-les-funcionalitats]]{:target=_blank}.
 
@@ -331,11 +340,3 @@ Els passos que ha de seguir són:
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/rebase_merge_no_ff_final.txt"
 ```
-
-## Codi font
-
-/// collapse-code
-```bash title="Bash script amb el desenvolupament de les funcionalitats"
---8<-- "docs/files/estrategies/stdout/estrategies_development.sh"
-```
-///
