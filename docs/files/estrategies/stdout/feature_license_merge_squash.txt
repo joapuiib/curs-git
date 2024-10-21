@@ -1,14 +1,14 @@
-pau@fp:~/gitflow/pau (feature/license) $ git checkout develop
+pau@fp:~/git_estrategies/pau (feature/license) $ git checkout develop
 Your branch is up to date with 'origin/develop'.
 Switched to branch 'develop'
-pau@fp:~/gitflow/pau (develop) $ git merge --squash feature/license
+pau@fp:~/git_estrategies/pau (develop) $ git merge --squash feature/license
 Updating 2bc4029..5b6d510
 Fast-forward
 Squash commit -- not updating HEAD
  LICENSE | 5 +++++
  1 file changed, 5 insertions(+)
  create mode 100644 LICENSE
-pau@fp:~/gitflow/pau (develop) $ git status
+pau@fp:~/git_estrategies/pau (develop) $ git status
 On branch develop
 Your branch is up to date with 'origin/develop'.
 
@@ -16,7 +16,7 @@ Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
 	new file:   LICENSE
 
-pau@fp:~/gitflow/pau (develop) $ git diff --staged
+pau@fp:~/git_estrategies/pau (develop) $ git diff --staged
 diff --git a/LICENSE b/LICENSE
 new file mode 100644
 index 0000000..809d714
@@ -28,11 +28,11 @@ index 0000000..809d714
 +CC BY-NC-SA 4.0 DEED - Reconeixement-NoComercial-CompartirIgual 4.0 Internacional
 +
 +Més informació: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca
-pau@fp:~/gitflow/pau (develop) $ git commit -m "Merge branch 'feature/license'"
+pau@fp:~/git_estrategies/pau (develop) $ git commit -m "Merge branch 'feature/license'"
 [develop b7bf0a5] Merge branch 'feature/license'
  1 file changed, 5 insertions(+)
  create mode 100644 LICENSE
-pau@fp:~/gitflow/pau (develop) $ git lga
+pau@fp:~/git_estrategies/pau (develop) $ git lga
 * b7bf0a5 - (0 seconds ago) Merge branch 'feature/license' - Pau (HEAD -> develop)
 | *   5b6d510 - (0 seconds ago) Merge branch 'develop' into feature/license - Pau (feature/license)
 | |\  

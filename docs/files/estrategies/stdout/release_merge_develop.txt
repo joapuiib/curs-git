@@ -1,16 +1,16 @@
-anna@fp:~/gitflow/anna (release/v1.0.0) $ git checkout develop
+anna@fp:~/git_estrategies/anna (release/v1.0.0) $ git checkout develop
 Your branch is up to date with 'origin/develop'.
 Switched to branch 'develop'
-anna@fp:~/gitflow/anna (develop) $ git merge --ff-only release/v1.0.0
+anna@fp:~/git_estrategies/anna (develop) $ git merge --ff-only release/v1.0.0
 Updating f9152dc..2c075dd
 Fast-forward
  VERSION | 1 +
  1 file changed, 1 insertion(+)
  create mode 100644 VERSION
-anna@fp:~/gitflow/anna (develop) $ git push
-To ~/gitflow/remot
+anna@fp:~/git_estrategies/anna (develop) $ git push
+To ~/git_estrategies/remot
    f9152dc..2c075dd  develop -> develop
-anna@fp:~/gitflow/anna (develop) $ git lga
+anna@fp:~/git_estrategies/anna (develop) $ git lga
 * 2c075dd - (0 seconds ago) Publicada versió: v1.0.0 - Anna (HEAD -> develop, origin/develop, release/v1.0.0)
 * f9152dc - (0 seconds ago) Merge branch 'feature/author' - Mar
 * b7bf0a5 - (1 second ago) Merge branch 'feature/license' - Pau

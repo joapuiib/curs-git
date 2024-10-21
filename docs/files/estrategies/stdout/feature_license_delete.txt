@@ -1,9 +1,9 @@
-pau@fp:~/gitflow/pau (develop) $ git branch -D feature/license
+pau@fp:~/git_estrategies/pau (develop) $ git branch -D feature/license
 Deleted branch feature/license (was 5b6d510).
-pau@fp:~/gitflow/pau (develop) $ git push origin --delete feature/license
-To ~/gitflow/remot
+pau@fp:~/git_estrategies/pau (develop) $ git push origin --delete feature/license
+To ~/git_estrategies/remot
  - [deleted]         feature/license
-pau@fp:~/gitflow/pau (develop) $ git lga
+pau@fp:~/git_estrategies/pau (develop) $ git lga
 * b7bf0a5 - (0 seconds ago) Merge branch 'feature/license' - Pau (HEAD -> develop, origin/develop)
 * 2bc4029 - (1 second ago) Merge branch 'feature/readme' - Anna
 | * a216550 - (2 seconds ago) Autors: Mar - Mar (origin/feature/author)

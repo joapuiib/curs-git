@@ -102,6 +102,16 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.blocks.html
+  - pymdownx.blocks.caption:
+      auto: true
+      types:
+        - caption
+        - name: figure-caption
+          prefix: "Figura {}."
+        - name: "table-caption"
+          prefix: "Taula {}."
+        - name: attribution
+          class: attribution
   - pymdownx.details
   - pymdownx.critic
   - pymdownx.caret
@@ -133,3 +143,8 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 4
+  - material_joapuiib.extensions.collapse_code:
+      expand_text: ''
+      expand_title: ''
+      collapse_text: ''
+      collapse_title: ''

@@ -1,5 +1,5 @@
-jpuigcerver@fp:~/gitflow $ cd ~/gitflow/remot
-jpuigcerver@fp:~/gitflow/remot (main) $ git lga
+jpuigcerver@fp:~/git_estrategies $ cd ~/git_estrategies/remot
+jpuigcerver@fp:~/git_estrategies/remot (main) $ git lga
 * b65dd58 - (0 seconds ago) Publicada versió: v1.0.0 - Anna (HEAD -> main, tag: v1.0.0, develop)
 * 52b7a9f - (1 second ago) Autors: Mar - Mar
 * 08b5ed9 - (1 second ago) Autors: Pau - Mar

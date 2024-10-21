@@ -1,7 +1,7 @@
-anna@fp:~/gitflow/anna (develop) $ git checkout main
+anna@fp:~/git_estrategies/anna (develop) $ git checkout main
 Your branch is up to date with 'origin/main'.
 Switched to branch 'main'
-anna@fp:~/gitflow/anna (main) $ git merge --ff-only release/v1.0.0
+anna@fp:~/git_estrategies/anna (main) $ git merge --ff-only release/v1.0.0
 Updating ec0e2bd..2c075dd
 Fast-forward
  LICENSE   |  5 +++++
@@ -10,10 +10,10 @@ Fast-forward
  3 files changed, 17 insertions(+)
  create mode 100644 LICENSE
  create mode 100644 VERSION
-anna@fp:~/gitflow/anna (main) $ git push
-To ~/gitflow/remot
+anna@fp:~/git_estrategies/anna (main) $ git push
+To ~/git_estrategies/remot
    ec0e2bd..2c075dd  main -> main
-anna@fp:~/gitflow/anna (main) $ git lga
+anna@fp:~/git_estrategies/anna (main) $ git lga
 * 2c075dd - (0 seconds ago) Publicada versió: v1.0.0 - Anna (HEAD -> main, origin/main, origin/develop, origin/HEAD, release/v1.0.0, develop)
 * f9152dc - (0 seconds ago) Merge branch 'feature/author' - Mar
 * b7bf0a5 - (1 second ago) Merge branch 'feature/license' - Pau

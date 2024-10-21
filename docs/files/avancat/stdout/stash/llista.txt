@@ -1,0 +1,2 @@
+jpuigcerver@fp:~/git_stash (main) $ git stash list
+stash@{0}: On main: Text git stash

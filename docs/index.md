@@ -21,44 +21,44 @@ hide:
 
 
 ## Continguts
-- __[[bloc1]]__
+- __Bloc 1: [[introduccio]]__
     - Instal·lació.
     - Configuració.
     - Estructura d'un repositori.
     - Flux de treball.
     - Inicialització d'un repositori.
     - Realització de canvis: `add` i `commit`.
-- __[[bloc2]]__
+- __Bloc 2: [[branques]]__
     - Creació de branques.
     - Navegar entre branques.
     - Sincronització de branques.
     - Fusió de branques: `merge`.
     - Canvi de base: `rebase`.
     - Resolució de conflictes.
-- __[[bloc3]]__
+- __Bloc 3: [[remots]]__
     - Creació d'un repositori remot a GitHub.
     - Configurar un repositori remot.
     - Mètodes d'autenticació.
     - Associació entre branques locals i remotes.
     - Publicació i incorporació de canvis.
     - Clonació d'un repositori remot.
-- __[[bloc4]]__
+- __Bloc 4: [[etiquetes|Git avançat]]__
     - Eliminació de canvis: `reset` i `revert`.
     - Etiquetes: `tags`.
     - Reserva de canvis: `stash`.
     - Còpia de canvis: `cherry-pick`.
     - Fusió de canvis en un sol commit: `squash`.
-- __[[bloc5]]__
+- __Bloc 5: [[estrategies]]__
     - Branques de propòsit únic.
     - Mètodes d'integració de branques de funcionalitat.
-- __[[bloc6]]__
+- __Bloc 6: [[projectes]]__
     - Forks i Pull Requests.
     - Incidències (_issues_).
     - Debats (_discussions_).
     - GitHub Projects.
     - CI/CD amb GitHub Actions.
     - GitHub Pages.
-- __[[bloc7]]__
+- __Bloc 7: [[educativa]]__
     - Organitzacions a GitHub.
     - GitHub Classroom.
     - Estratègies per a l'ús de Git i GitHub a l'aula.
