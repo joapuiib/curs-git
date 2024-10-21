@@ -1,7 +1,7 @@
-pau@fp:~/gitflow/pau (develop) $ git push
-To ~/gitflow/remot
+pau@fp:~/git_estrategies/pau (develop) $ git push
+To ~/git_estrategies/remot
    2bc4029..b7bf0a5  develop -> develop
-pau@fp:~/gitflow/pau (develop) $ git lga
+pau@fp:~/git_estrategies/pau (develop) $ git lga
 * b7bf0a5 - (0 seconds ago) Merge branch 'feature/license' - Pau (HEAD -> develop, origin/develop)
 | *   5b6d510 - (0 seconds ago) Merge branch 'develop' into feature/license - Pau (feature/license)
 | |\  

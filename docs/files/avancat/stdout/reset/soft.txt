@@ -1,0 +1,11 @@
+jpuigcerver@fp:~/git_reset (main) $ git reset --soft 04fafb7
+jpuigcerver@fp:~/git_reset (main) $ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   README.md
+
+jpuigcerver@fp:~/git_reset (main) $ git lga
+* 04fafb7 - (0 seconds ago) Canvi B - Joan Puigcerver (HEAD -> main)
+* 4dc7c85 - (0 seconds ago) Canvi A - Joan Puigcerver
+* 16786db - (0 seconds ago) Commit inicial - Joan Puigcerver

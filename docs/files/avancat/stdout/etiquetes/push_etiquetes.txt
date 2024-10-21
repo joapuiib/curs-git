@@ -1,0 +1,5 @@
+jpuigcerver@fp:~/git_etiquetes (main) $ git push origin --tags
+To github.com:joapuiib/cursgit_etiquetes.git
+ * [new tag]         v1.0.0 -> v1.0.0
+ * [new tag]         v2.0.0 -> v2.0.0
+ * [new tag]         v2.1.0 -> v2.1.0

@@ -1,20 +1,20 @@
-anna@fp:~/gitflow $ cd ~/gitflow/anna
-anna@fp:~/gitflow/anna (develop) $ git checkout develop
+anna@fp:~/git_estrategies $ cd ~/git_estrategies/anna
+anna@fp:~/git_estrategies/anna (develop) $ git checkout develop
 Your branch is up to date with 'origin/develop'.
 Already on 'develop'
-anna@fp:~/gitflow/anna (develop) $ git fetch --prune
-From ~/gitflow/remot
+anna@fp:~/git_estrategies/anna (develop) $ git fetch --prune
+From ~/git_estrategies/remot
  - [deleted]         (none)     -> origin/feature/author
  - [deleted]         (none)     -> origin/feature/license
    2bc4029..f9152dc  develop    -> origin/develop
-anna@fp:~/gitflow/anna (develop) $ git pull --ff-only
+anna@fp:~/git_estrategies/anna (develop) $ git pull --ff-only
 Updating 2bc4029..f9152dc
 Fast-forward
  LICENSE   | 5 +++++
  README.md | 5 +++++
  2 files changed, 10 insertions(+)
  create mode 100644 LICENSE
-anna@fp:~/gitflow/anna (develop) $ git lga
+anna@fp:~/git_estrategies/anna (develop) $ git lga
 * f9152dc - (0 seconds ago) Merge branch 'feature/author' - Mar (HEAD -> develop, origin/develop)
 * b7bf0a5 - (1 second ago) Merge branch 'feature/license' - Pau
 * 2bc4029 - (2 seconds ago) Merge branch 'feature/readme' - Anna

@@ -1,0 +1,7 @@
+jpuigcerver@fp:~/git_etiquetes (main) $ git tag -a v1.0.0 -m "Primera versió: v1.0.0" 2dc09af
+jpuigcerver@fp:~/git_etiquetes (main) $ git tag -a v2.0.0 -m "Versió: v2.0.0" 7909b46
+jpuigcerver@fp:~/git_etiquetes (main) $ git lga
+* e29a607 - (0 seconds ago) README: Descripció tipus de etiquetes - Joan Puigcerver (HEAD -> main)
+* 7909b46 - (0 seconds ago) README: Apartat tipus de etiquetes - Joan Puigcerver (tag: v2.0.0)
+* da2c930 - (0 seconds ago) README: Descripció - Joan Puigcerver
+* 2dc09af - (0 seconds ago) Commit inicial - Joan Puigcerver (tag: v1.0.0)

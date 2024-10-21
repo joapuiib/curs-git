@@ -1,6 +1,4 @@
 nav:
     - ...
     - "Apunts": apunts
-    - "Vídeos": videos
-    # - "Exemples": exemples
-    - "Exercicis": exercicis
+    - "Informació": informacio.md

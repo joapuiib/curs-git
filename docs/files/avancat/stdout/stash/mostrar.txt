@@ -1,0 +1,13 @@
+jpuigcerver@fp:~/git_stash (main) $ git stash show
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+jpuigcerver@fp:~/git_stash (main) $ git stash show -p
+diff --git a/README.md b/README.md
+index dd979cc..a0acb65 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,4 @@
+ # Reserva de canvis
+ Repositori d'exemple amb reserva de canvis
++
++L'ordre git stash permet reservar els canvis temporalment per a poder fer altres tasques.

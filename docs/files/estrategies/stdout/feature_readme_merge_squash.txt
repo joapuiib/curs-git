@@ -1,13 +1,13 @@
-anna@fp:~/gitflow/anna (feature/readme) $ git checkout develop
+anna@fp:~/git_estrategies/anna (feature/readme) $ git checkout develop
 Your branch is up to date with 'origin/develop'.
 Switched to branch 'develop'
-anna@fp:~/gitflow/anna (develop) $ git merge --squash feature/readme
+anna@fp:~/git_estrategies/anna (develop) $ git merge --squash feature/readme
 Updating ec0e2bd..ea2559a
 Fast-forward
 Squash commit -- not updating HEAD
  README.md | 6 ++++++
  1 file changed, 6 insertions(+)
-anna@fp:~/gitflow/anna (develop) $ git status
+anna@fp:~/git_estrategies/anna (develop) $ git status
 On branch develop
 Your branch is up to date with 'origin/develop'.
 
@@ -15,7 +15,7 @@ Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
 	modified:   README.md
 
-anna@fp:~/gitflow/anna (develop) $ git diff --staged
+anna@fp:~/git_estrategies/anna (develop) $ git diff --staged
 diff --git a/README.md b/README.md
 index 05c1f5b..9e7f142 100644
 --- a/README.md
@@ -28,10 +28,10 @@ index 05c1f5b..9e7f142 100644
 +
 +La característica principal és la utilització
 +de branques amb un únic propòsit.
-anna@fp:~/gitflow/anna (develop) $ git commit -m "Merge branch 'feature/readme'"
+anna@fp:~/git_estrategies/anna (develop) $ git commit -m "Merge branch 'feature/readme'"
 [develop 2bc4029] Merge branch 'feature/readme'
  1 file changed, 6 insertions(+)
-anna@fp:~/gitflow/anna (develop) $ git lga
+anna@fp:~/git_estrategies/anna (develop) $ git lga
 * 2bc4029 - (0 seconds ago) Merge branch 'feature/readme' - Anna (HEAD -> develop)
 | * a216550 - (1 second ago) Autors: Mar - Mar (origin/feature/author)
 | * 1d5ba44 - (1 second ago) Autors: Pau - Mar

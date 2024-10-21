@@ -1,8 +1,9 @@
 # Apunts
 
-- [[bloc1]]
-- [[bloc2]]
-- [[bloc3]]
-- [[bloc4]]
-- [[bloc5]]
-- [[bloc6]]
+- Bloc 1: [[introduccio]]
+- Bloc 2: [[branques]]
+- Bloc 3: [[remots]]
+- Bloc 4: [[etiquetes|Git avançat]]
+- Bloc 5: [[estrategies]]
+- Bloc 6: [[projectes]]
+- Bloc 7: [[educativa]]

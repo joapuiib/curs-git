@@ -1,8 +1,8 @@
-anna@fp:~/gitflow/anna (main) $ git tag v1.0.0
-anna@fp:~/gitflow/anna (main) $ git push --tags
-To ~/gitflow/remot
+anna@fp:~/git_estrategies/anna (main) $ git tag v1.0.0
+anna@fp:~/git_estrategies/anna (main) $ git push --tags
+To ~/git_estrategies/remot
  * [new tag]         v1.0.0 -> v1.0.0
-anna@fp:~/gitflow/anna (main) $ git lga
+anna@fp:~/git_estrategies/anna (main) $ git lga
 * 2c075dd - (1 second ago) Publicada versió: v1.0.0 - Anna (HEAD -> main, tag: v1.0.0, origin/main, origin/develop, origin/HEAD, release/v1.0.0, develop)
 * f9152dc - (1 second ago) Merge branch 'feature/author' - Mar
 * b7bf0a5 - (2 seconds ago) Merge branch 'feature/license' - Pau

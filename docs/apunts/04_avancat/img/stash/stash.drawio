@@ -1,0 +1,62 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.8.0">
+  <diagram name="Pàgina-1" id="oMXp2A7B2WiK8wNI1ypx">
+    <mxGraphModel dx="1434" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DcFeNVow8eWx_2YF7XhF-1" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;stash{0}:&lt;/b&gt; Canvi B&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="150" y="140" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DcFeNVow8eWx_2YF7XhF-2" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;stash{1}:&lt;/b&gt; Canvi A&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="150" y="190" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DcFeNVow8eWx_2YF7XhF-8" value="List" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="170" y="359.37" width="120" height="80" as="geometry">
+            <mxRectangle x="10" y="380.63" width="60" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DcFeNVow8eWx_2YF7XhF-9" value="&lt;i&gt;Untracked&lt;/i&gt;: README.md" style="text;strokeColor=#82b366;fillColor=#d5e8d4;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=14;fontColor=#FF3333;" vertex="1" parent="DcFeNVow8eWx_2YF7XhF-8">
+          <mxGeometry y="30" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="DcFeNVow8eWx_2YF7XhF-10" value="&lt;b style=&quot;border-color: var(--border-color); font-size: 18px;&quot;&gt;Directori de treball&lt;/b&gt;&lt;br style=&quot;border-color: var(--border-color); font-size: 18px;&quot;&gt;&lt;i style=&quot;border-color: var(--border-color); font-size: 18px;&quot;&gt;Working directory&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="170" y="270" width="120" height="119.37" as="geometry" />
+        </mxCell>
+        <mxCell id="DcFeNVow8eWx_2YF7XhF-11" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#7EA6E0;strokeColor=#0066CC;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="310" as="sourcePoint" />
+            <mxPoint x="500" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DcFeNVow8eWx_2YF7XhF-12" value="&lt;b&gt;&lt;font color=&quot;#0066cc&quot; style=&quot;font-size: 18px;&quot;&gt;git stash -m &quot;Canvi C&quot;&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="300" y="330" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DcFeNVow8eWx_2YF7XhF-13" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;stash{1}:&lt;/b&gt; Canvi B&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="510" y="180" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DcFeNVow8eWx_2YF7XhF-14" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;stash{2}:&lt;/b&gt; Canvi A&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="510" y="230" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DcFeNVow8eWx_2YF7XhF-15" value="List" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="530" y="399.37" width="120" height="80" as="geometry">
+            <mxRectangle x="10" y="380.63" width="60" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DcFeNVow8eWx_2YF7XhF-16" value="&lt;font color=&quot;#000000&quot;&gt;Nothing to commit&lt;/font&gt;" style="text;strokeColor=#82b366;fillColor=#d5e8d4;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=14;fontColor=#FF3333;" vertex="1" parent="DcFeNVow8eWx_2YF7XhF-15">
+          <mxGeometry y="30" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="DcFeNVow8eWx_2YF7XhF-17" value="&lt;b style=&quot;border-color: var(--border-color); font-size: 18px;&quot;&gt;Directori de treball&lt;/b&gt;&lt;br style=&quot;border-color: var(--border-color); font-size: 18px;&quot;&gt;&lt;i style=&quot;border-color: var(--border-color); font-size: 18px;&quot;&gt;Working directory&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="530" y="310" width="120" height="119.37" as="geometry" />
+        </mxCell>
+        <mxCell id="DcFeNVow8eWx_2YF7XhF-21" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="510" y="110" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DcFeNVow8eWx_2YF7XhF-18" value="&lt;div&gt;&lt;span style=&quot;color: rgb(255, 51, 51); font-size: 14px; font-weight: 700;&quot;&gt;README.md&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;verticalAlign=bottom;" vertex="1" parent="DcFeNVow8eWx_2YF7XhF-21">
+          <mxGeometry width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DcFeNVow8eWx_2YF7XhF-20" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;stash{0}:&lt;/b&gt; Canvi C&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="DcFeNVow8eWx_2YF7XhF-21">
+          <mxGeometry width="160" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

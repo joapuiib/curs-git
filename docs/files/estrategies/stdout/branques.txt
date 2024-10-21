@@ -1,5 +1,5 @@
-jpuigcerver@fp:~/gitflow $ cd ~/gitflow/remot
-jpuigcerver@fp:~/gitflow/remot (main) $ git lga
+jpuigcerver@fp:~/git_estrategies $ cd ~/git_estrategies/remot
+jpuigcerver@fp:~/git_estrategies/remot (main) $ git lga
 * a216550 - (0 seconds ago) Autors: Mar - Mar (feature/author)
 * 1d5ba44 - (0 seconds ago) Autors: Pau - Mar
 * 8683319 - (0 seconds ago) Autors: Anna - Mar

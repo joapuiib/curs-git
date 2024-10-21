@@ -1,0 +1,23 @@
+jpuigcerver@fp:~/git_stash (main) $ git status
+On branch main
+nothing to commit, working tree clean
+jpuigcerver@fp:~/git_stash (main) $ git stash apply
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+jpuigcerver@fp:~/git_stash (main) $ git diff
+diff --git a/README.md b/README.md
+index dd979cc..a0acb65 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,4 @@
+ # Reserva de canvis
+ Repositori d'exemple amb reserva de canvis
++
++L'ordre git stash permet reservar els canvis temporalment per a poder fer altres tasques.
+jpuigcerver@fp:~/git_stash (main) $ git stash list
+stash@{0}: On main: Text git stash

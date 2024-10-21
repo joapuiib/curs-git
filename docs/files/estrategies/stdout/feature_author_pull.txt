@@ -1,15 +1,15 @@
-mar@fp:~/gitflow/mar (feature/author) $ git checkout develop
+mar@fp:~/git_estrategies/mar (feature/author) $ git checkout develop
 Your branch is behind 'origin/develop' by 2 commits, and can be fast-forwarded.
   (use "git pull" to update your local branch)
 Switched to branch 'develop'
-mar@fp:~/gitflow/mar (develop) $ git pull --ff-only
+mar@fp:~/git_estrategies/mar (develop) $ git pull --ff-only
 Updating ec0e2bd..b7bf0a5
 Fast-forward
  LICENSE   | 5 +++++
  README.md | 6 ++++++
  2 files changed, 11 insertions(+)
  create mode 100644 LICENSE
-mar@fp:~/gitflow/mar (develop) $ git lga
+mar@fp:~/git_estrategies/mar (develop) $ git lga
 * b7bf0a5 - (1 second ago) Merge branch 'feature/license' - Pau (HEAD -> develop, origin/develop)
 * 2bc4029 - (2 seconds ago) Merge branch 'feature/readme' - Anna
 | * a216550 - (3 seconds ago) Autors: Mar - Mar (origin/feature/author, feature/author)

@@ -1,0 +1,28 @@
+jpuigcerver@fp:~ $ mkdir -p ~/git_reset
+jpuigcerver@fp:~ $ cd ~/git_reset
+jpuigcerver@fp:~/git_reset $ git init
+Initialized empty Git repository in ~/git_reset/.git/
+jpuigcerver@fp:~/git_reset (main) $ git branch -m main
+jpuigcerver@fp:~/git_reset (main) $ echo "# Git reset i commit --amend" > README.md
+jpuigcerver@fp:~/git_reset (main) $ git add README.md
+jpuigcerver@fp:~/git_reset (main) $ git commit -m "Commit inicial"
+[main (root-commit) 16786db] Commit inicial
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+jpuigcerver@fp:~/git_reset (main) $ echo "- Canvi A" >> README.md
+jpuigcerver@fp:~/git_reset (main) $ git commit -a -m "Canvi A"
+[main 4dc7c85] Canvi A
+ 1 file changed, 1 insertion(+)
+jpuigcerver@fp:~/git_reset (main) $ echo "- Canvi B" >> README.md
+jpuigcerver@fp:~/git_reset (main) $ git commit -a -m "Canvi B"
+[main 04fafb7] Canvi B
+ 1 file changed, 1 insertion(+)
+jpuigcerver@fp:~/git_reset (main) $ echo "- Canvi C" >> README.md
+jpuigcerver@fp:~/git_reset (main) $ git commit -a -m "Canvi C"
+[main 0c65882] Canvi C
+ 1 file changed, 1 insertion(+)
+jpuigcerver@fp:~/git_reset (main) $ git lga
+* 0c65882 - (0 seconds ago) Canvi C - Joan Puigcerver (HEAD -> main)
+* 04fafb7 - (0 seconds ago) Canvi B - Joan Puigcerver
+* 4dc7c85 - (0 seconds ago) Canvi A - Joan Puigcerver
+* 16786db - (0 seconds ago) Commit inicial - Joan Puigcerver

@@ -1,0 +1,38 @@
+jpuigcerver@fp:~ $ mkdir -p ~/git_cherrypick
+jpuigcerver@fp:~ $ cd ~/git_cherrypick
+jpuigcerver@fp:~/git_cherrypick $ git init
+Initialized empty Git repository in ~/git_cherrypick/.git/
+jpuigcerver@fp:~/git_cherrypick (main) $ git branch -m main
+jpuigcerver@fp:~/git_cherrypick (main) $ echo "# Git revert i cherrypick" > README.md
+jpuigcerver@fp:~/git_cherrypick (main) $ git add README.md
+jpuigcerver@fp:~/git_cherrypick (main) $ git commit -m "Commit inicial"
+[main (root-commit) 810ec42] Commit inicial
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+jpuigcerver@fp:~/git_cherrypick (main) $ echo "- Canvi A" >> README.md
+jpuigcerver@fp:~/git_cherrypick (main) $ git commit -a -m "Canvi A"
+[main 4d18d71] Canvi A
+ 1 file changed, 1 insertion(+)
+jpuigcerver@fp:~/git_cherrypick (main) $ echo "- Canvi B" >> README.md
+jpuigcerver@fp:~/git_cherrypick (main) $ git commit -a -m "Canvi B"
+[main fad1ea7] Canvi B
+ 1 file changed, 1 insertion(+)
+jpuigcerver@fp:~/git_cherrypick (main) $ echo "- Canvi C" >> README.md
+jpuigcerver@fp:~/git_cherrypick (main) $ git commit -a -m "Canvi C"
+[main 75f51e1] Canvi C
+ 1 file changed, 1 insertion(+)
+jpuigcerver@fp:~/git_cherrypick (main) $ echo "- Canvi D" >> README.md
+jpuigcerver@fp:~/git_cherrypick (main) $ git commit -a -m "Canvi D"
+[main a079d5b] Canvi D
+ 1 file changed, 1 insertion(+)
+jpuigcerver@fp:~/git_cherrypick (main) $ echo "- Canvi E" >> README.md
+jpuigcerver@fp:~/git_cherrypick (main) $ git commit -a -m "Canvi E"
+[main ff4ae1c] Canvi E
+ 1 file changed, 1 insertion(+)
+jpuigcerver@fp:~/git_cherrypick (main) $ git lga
+* ff4ae1c - (0 seconds ago) Canvi E - Joan Puigcerver (HEAD -> main)
+* a079d5b - (0 seconds ago) Canvi D - Joan Puigcerver
+* 75f51e1 - (0 seconds ago) Canvi C - Joan Puigcerver
+* fad1ea7 - (0 seconds ago) Canvi B - Joan Puigcerver
+* 4d18d71 - (0 seconds ago) Canvi A - Joan Puigcerver
+* 810ec42 - (0 seconds ago) Commit inicial - Joan Puigcerver

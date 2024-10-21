@@ -1,2 +1,9 @@
 nav:
     - ...
+    - "Bloc 1: Introducció a Git": 01_introduccio
+    - "Bloc 2: Branques": 02_branques
+    - "Bloc 3: Remots": 03_remots
+    - "Bloc 4: Git avançat": 04_avancat
+    - "Bloc 5: Estratègies de ramificació": 05_estrategies
+    - "Bloc 6: Gestió de projectes": 06_projectes
+    - "Bloc 7: GitHub com a plataforma educativa": 07_educativa

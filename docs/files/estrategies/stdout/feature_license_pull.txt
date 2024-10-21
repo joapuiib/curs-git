@@ -1,13 +1,13 @@
-pau@fp:~/gitflow/pau (feature/license) $ git checkout develop
+pau@fp:~/git_estrategies/pau (feature/license) $ git checkout develop
 Your branch is behind 'origin/develop' by 1 commit, and can be fast-forwarded.
   (use "git pull" to update your local branch)
 Switched to branch 'develop'
-pau@fp:~/gitflow/pau (develop) $ git pull --ff-only
+pau@fp:~/git_estrategies/pau (develop) $ git pull --ff-only
 Updating ec0e2bd..2bc4029
 Fast-forward
  README.md | 6 ++++++
  1 file changed, 6 insertions(+)
-pau@fp:~/gitflow/pau (develop) $ git lga
+pau@fp:~/git_estrategies/pau (develop) $ git lga
 * 2bc4029 - (1 second ago) Merge branch 'feature/readme' - Anna (HEAD -> develop, origin/develop)
 | * c213387 - (2 seconds ago) LICENSE: Enllaç a la llicència - Pau (origin/feature/license, feature/license)
 | * b11b498 - (2 seconds ago) LICENSE: Afegida llicència - Pau

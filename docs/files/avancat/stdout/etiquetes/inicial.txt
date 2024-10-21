@@ -1,0 +1,29 @@
+jpuigcerver@fp:~ $ mkdir -p ~/git_etiquetes
+jpuigcerver@fp:~ $ cd ~/git_etiquetes
+jpuigcerver@fp:~/git_etiquetes $ git init
+Initialized empty Git repository in ~/git_etiquetes/.git/
+jpuigcerver@fp:~/git_etiquetes (main) $ git branch -m main
+jpuigcerver@fp:~/git_etiquetes (main) $ echo "# Etiquetes" > README.md
+jpuigcerver@fp:~/git_etiquetes (main) $ git add README.md
+jpuigcerver@fp:~/git_etiquetes (main) $ git commit -m "Commit inicial"
+[main (root-commit) 2dc09af] Commit inicial
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+jpuigcerver@fp:~/git_etiquetes (main) $ echo "Repositori d'exemple amb etiquetes" >> README.md
+jpuigcerver@fp:~/git_etiquetes (main) $ git commit -a -m "README: Descripció"
+[main da2c930] README: Descripció
+ 1 file changed, 1 insertion(+)
+jpuigcerver@fp:~/git_etiquetes (main) $ echo "" >> README.md
+jpuigcerver@fp:~/git_etiquetes (main) $ echo "## Tipus de etiquetes" >> README.md
+jpuigcerver@fp:~/git_etiquetes (main) $ git commit -a -m "README: Apartat tipus de etiquetes"
+[main 7909b46] README: Apartat tipus de etiquetes
+ 1 file changed, 2 insertions(+)
+jpuigcerver@fp:~/git_etiquetes (main) $ echo "Existeixen dos tipus de etiquetes: anotades i lleugeres" >> README.md
+jpuigcerver@fp:~/git_etiquetes (main) $ git commit -a -m "README: Descripció tipus de etiquetes"
+[main e29a607] README: Descripció tipus de etiquetes
+ 1 file changed, 1 insertion(+)
+jpuigcerver@fp:~/git_etiquetes (main) $ git lga
+* e29a607 - (0 seconds ago) README: Descripció tipus de etiquetes - Joan Puigcerver (HEAD -> main)
+* 7909b46 - (0 seconds ago) README: Apartat tipus de etiquetes - Joan Puigcerver
+* da2c930 - (0 seconds ago) README: Descripció - Joan Puigcerver
+* 2dc09af - (0 seconds ago) Commit inicial - Joan Puigcerver

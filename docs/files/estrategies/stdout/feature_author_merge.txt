@@ -1,15 +1,15 @@
-mar@fp:~/gitflow/mar (develop) $ git checkout feature/author
+mar@fp:~/git_estrategies/mar (develop) $ git checkout feature/author
 Your branch is up to date with 'origin/feature/author'.
 Switched to branch 'feature/author'
-mar@fp:~/gitflow/mar (feature/author) $ git merge --no-ff --no-edit develop # (1)!
+mar@fp:~/git_estrategies/mar (feature/author) $ git merge --no-ff --no-edit develop # (1)!
 Auto-merging README.md
 CONFLICT (content): Merge conflict in README.md
 Automatic merge failed; fix conflicts and then commit the result.
-mar@fp:~/gitflow/mar (feature/author|MERGING) $ vim README.md # (2)!
-mar@fp:~/gitflow/mar (feature/author|MERGING) $ git add README.md
-mar@fp:~/gitflow/mar (feature/author|MERGING) $ git commit --no-edit # (1)!
+mar@fp:~/git_estrategies/mar (feature/author|MERGING) $ vim README.md # (2)!
+mar@fp:~/git_estrategies/mar (feature/author|MERGING) $ git add README.md
+mar@fp:~/git_estrategies/mar (feature/author|MERGING) $ git commit --no-edit # (1)!
 [feature/author 72afb5a] Merge branch 'develop' into feature/author
-mar@fp:~/gitflow/mar (feature/author) $ git lga
+mar@fp:~/git_estrategies/mar (feature/author) $ git lga
 *   72afb5a - (0 seconds ago) Merge branch 'develop' into feature/author - Mar (HEAD -> feature/author)
 |\  
 | * b7bf0a5 - (1 second ago) Merge branch 'feature/license' - Pau (origin/develop, develop)

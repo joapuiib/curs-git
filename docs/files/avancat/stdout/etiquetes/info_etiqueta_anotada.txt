@@ -1,0 +1,20 @@
+jpuigcerver@fp:~/git_etiquetes (main) $ git show v1.0.0
+tag v1.0.0
+Tagger: Joan Puigcerver <j.puigcerveribanez@edu.gva.es>
+Date:   Sat Oct 19 20:51:43 2024 +0200
+
+Primera versió: v1.0.0
+
+commit 2dc09af5ba36816057c43a04f3d7f75cf3302bd0
+Author: Joan Puigcerver <j.puigcerveribanez@edu.gva.es>
+Date:   Sat Oct 19 20:51:43 2024 +0200
+
+    Commit inicial
+
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..81387f9
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1 @@
++# Etiquetes
