@@ -1,29 +1,29 @@
-pau@fp:~/gitflow $ cd ~/gitflow/pau
-pau@fp:~/gitflow/pau (main) $ git config user.name "Pau"
-pau@fp:~/gitflow/pau (main) $ git config user.email "pau@fpmislata.com"
-pau@fp:~/gitflow/pau (main) $ git checkout develop
+pau@fp:~/git_estrategies $ cd ~/git_estrategies/pau
+pau@fp:~/git_estrategies/pau (main) $ git config user.name "Pau"
+pau@fp:~/git_estrategies/pau (main) $ git config user.email "pau@fpmislata.com"
+pau@fp:~/git_estrategies/pau (main) $ git checkout develop
 branch 'develop' set up to track 'origin/develop'.
 Switched to a new branch 'develop'
-pau@fp:~/gitflow/pau (develop) $ git checkout -b feature/license
+pau@fp:~/git_estrategies/pau (develop) $ git checkout -b feature/license
 Switched to a new branch 'feature/license'
-pau@fp:~/gitflow/pau (feature/license) $ echo "" > LICENSE
-pau@fp:~/gitflow/pau (feature/license) $ echo "## Llicència" >> LICENSE
-pau@fp:~/gitflow/pau (feature/license) $ echo "CC BY-NC-SA 4.0 DEED - Reconeixement-NoComercial-CompartirIgual 4.0 Internacional" >> LICENSE
-pau@fp:~/gitflow/pau (feature/license) $ git add LICENSE
-pau@fp:~/gitflow/pau (feature/license) $ git commit -m "LICENSE: Afegida llicència"
+pau@fp:~/git_estrategies/pau (feature/license) $ echo "" > LICENSE
+pau@fp:~/git_estrategies/pau (feature/license) $ echo "## Llicència" >> LICENSE
+pau@fp:~/git_estrategies/pau (feature/license) $ echo "CC BY-NC-SA 4.0 DEED - Reconeixement-NoComercial-CompartirIgual 4.0 Internacional" >> LICENSE
+pau@fp:~/git_estrategies/pau (feature/license) $ git add LICENSE
+pau@fp:~/git_estrategies/pau (feature/license) $ git commit -m "LICENSE: Afegida llicència"
 [feature/license b11b498] LICENSE: Afegida llicència
  1 file changed, 3 insertions(+)
  create mode 100644 LICENSE
-pau@fp:~/gitflow/pau (feature/license) $ echo "" >> LICENSE
-pau@fp:~/gitflow/pau (feature/license) $ echo "Més informació: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" >> LICENSE
-pau@fp:~/gitflow/pau (feature/license) $ git commit -a -m "LICENSE: Enllaç a la llicència"
+pau@fp:~/git_estrategies/pau (feature/license) $ echo "" >> LICENSE
+pau@fp:~/git_estrategies/pau (feature/license) $ echo "Més informació: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" >> LICENSE
+pau@fp:~/git_estrategies/pau (feature/license) $ git commit -a -m "LICENSE: Enllaç a la llicència"
 [feature/license c213387] LICENSE: Enllaç a la llicència
  1 file changed, 2 insertions(+)
-pau@fp:~/gitflow/pau (feature/license) $ git push -u origin feature/license
+pau@fp:~/git_estrategies/pau (feature/license) $ git push -u origin feature/license
 branch 'feature/license' set up to track 'origin/feature/license'.
-To ~/gitflow/remot
+To ~/git_estrategies/remot
  * [new branch]      feature/license -> feature/license
-pau@fp:~/gitflow/pau (feature/license) $ git lga
+pau@fp:~/git_estrategies/pau (feature/license) $ git lga
 * c213387 - (0 seconds ago) LICENSE: Enllaç a la llicència - Pau (HEAD -> feature/license, origin/feature/license)
 * b11b498 - (0 seconds ago) LICENSE: Afegida llicència - Pau
 * ec0e2bd - (1 second ago) Commit inicial - Joan Puigcerver (origin/main, origin/develop, origin/HEAD, main, develop)

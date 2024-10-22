@@ -18,6 +18,9 @@ class CommandExecutor:
         self.logging = False
         self.script_dir = os.path.dirname(os.path.realpath(script_path or __file__))
 
+        # File to log the commands in a bash script
+        self.bash_file = None
+
 
     def __str__(self):
         return f"x{{file={self.file}, logging={self.logging}}}"
@@ -47,9 +50,17 @@ class CommandExecutor:
 
     def log_file(self, file):
         self.file = None
-        if self.logging:
+        if self.logging and file:
             self.set_file(file)
             self.rm_file()
+
+
+    def log_bash_file(self, file):
+        self.bash_file = None
+        if self.logging and file:
+            self.bash_file = self.path_from_script(file)
+            self.rm(self.bash_file)
+            self.log_bash_header()
 
 
     def set_user(self, user):
@@ -89,6 +100,23 @@ class CommandExecutor:
                 print(output, end="")
 
 
+    def log_prompt(self, cmd):
+        prompt = self.build_prompt()
+        output = f"{prompt} {cmd}\n"
+        self.log_output(output)
+
+
+    def log_bash(self, cmd):
+        if self.logging and self.bash_file:
+            with open(self.bash_file, "a") as f:
+                f.write(f"{cmd}\n")
+
+
+    def log_bash_header(self):
+        header = f"#!/bin/bash\n"
+        self.log_bash(header)
+
+
     def run(self, cmd, env=None):
         args = cmd.split()
         if args[0] == "cd":
@@ -113,15 +141,18 @@ class CommandExecutor:
         return output
 
 
-    def log_prompt(self, cmd):
-        prompt = self.build_prompt()
-        output = f"{prompt} {cmd}\n"
-        self.log_output(output)
-
-
-    def x(self, cmd, env=None):
+    def x(self, cmd, env=None, bash=True):
         self.log_prompt(cmd)
-
         output = self.run(cmd, env)
-
         self.log_output(output)
+
+        if bash:
+            self.log_bash(cmd)
+
+    def swap_conflictes(self, filename):
+        with open(filename, "r+") as f:
+            content = f.read()
+            content = re.sub(r"<<<<<<< HEAD\n(.*?)=======\n(.*?)>>>>>>> (.*?)\n", r"\2\1", content, flags=re.DOTALL)
+            f.seek(0)
+            f.write(content)
+            f.truncate()

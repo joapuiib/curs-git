@@ -1,9 +1,9 @@
-anna@fp:~/gitflow $ cd ~/gitflow/anna
-anna@fp:~/gitflow/anna (feature/readme) $ git fetch
-From ~/gitflow/remot
+anna@fp:~/git_estrategies $ cd ~/git_estrategies/anna
+anna@fp:~/git_estrategies/anna (feature/readme) $ git fetch
+From ~/git_estrategies/remot
  * [new branch]      feature/author  -> origin/feature/author
  * [new branch]      feature/license -> origin/feature/license
-anna@fp:~/gitflow/anna (feature/readme) $ git lga
+anna@fp:~/git_estrategies/anna (feature/readme) $ git lga
 * a216550 - (1 second ago) Autors: Mar - Mar (origin/feature/author)
 * 1d5ba44 - (1 second ago) Autors: Pau - Mar
 * 8683319 - (1 second ago) Autors: Anna - Mar

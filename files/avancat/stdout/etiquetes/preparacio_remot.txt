@@ -1,0 +1,10 @@
+jpuigcerver@fp:~/git_etiquetes (main) $ git remote add origin git@github.com:joapuiib/cursgit_etiquetes.git
+jpuigcerver@fp:~/git_etiquetes (main) $ git push -u origin main
+branch 'main' set up to track 'origin/main'.
+To github.com:joapuiib/cursgit_etiquetes.git
+ * [new branch]      main -> main
+jpuigcerver@fp:~/git_etiquetes (main) $ git lga
+* e29a607 - (2 seconds ago) README: Descripció tipus de etiquetes - Joan Puigcerver (HEAD -> main, tag: v2.1.0, origin/main)
+* 7909b46 - (2 seconds ago) README: Apartat tipus de etiquetes - Joan Puigcerver (tag: v2.0.0)
+* da2c930 - (2 seconds ago) README: Descripció - Joan Puigcerver
+* 2dc09af - (2 seconds ago) Commit inicial - Joan Puigcerver (tag: v1.0.0)

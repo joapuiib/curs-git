@@ -1,0 +1,14 @@
+jpuigcerver@fp:~/git_etiquetes (main) $ git show v1.1.0
+commit da2c93043a5ee159146b38a3f0d66ec6862312a6
+Author: Joan Puigcerver <j.puigcerveribanez@edu.gva.es>
+Date:   Sat Oct 19 20:51:43 2024 +0200
+
+    README: Descripció
+
+diff --git a/README.md b/README.md
+index 81387f9..199416c 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1,2 @@
+ # Etiquetes
++Repositori d'exemple amb etiquetes

@@ -1,0 +1,3 @@
+jpuigcerver@fp:~/git_etiquetes (main) $ git tag -l "v2.*"
+v2.0.0
+v2.1.0

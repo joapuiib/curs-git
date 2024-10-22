@@ -14,10 +14,27 @@
     position: relative;
 }
 
+.md-typeset figure > *,
+.md-typeset figcaption > * {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.md-typeset figure {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
 .md-typeset figcaption {
   color: var(--md-default-fg-color--light);
 }
 
+.md-typeset figure.attribution {
+    gap: 0;
+}
+
+.md-typeset figure.attribution figcaption,
 .md-typeset figcaption.attribution {
   text-align: left;
   font-size: 0.75em;

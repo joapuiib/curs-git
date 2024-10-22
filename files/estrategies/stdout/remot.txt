@@ -1,14 +1,14 @@
-jpuigcerver@fp:~ $ mkdir -p ~/gitflow/remot
-jpuigcerver@fp:~ $ cd ~/gitflow/remot
-jpuigcerver@fp:~/gitflow/remot $ git init
-Initialized empty Git repository in ~/gitflow/remot/.git/
-jpuigcerver@fp:~/gitflow/remot (main) $ git branch -m main
-jpuigcerver@fp:~/gitflow/remot (main) $ echo "# Estratègies de ramificació" > README.md
-jpuigcerver@fp:~/gitflow/remot (main) $ git add README.md
-jpuigcerver@fp:~/gitflow/remot (main) $ git commit -m "Commit inicial"
+jpuigcerver@fp:~ $ mkdir -p ~/git_estrategies/remot
+jpuigcerver@fp:~ $ cd ~/git_estrategies/remot
+jpuigcerver@fp:~/git_estrategies/remot $ git init
+Initialized empty Git repository in ~/git_estrategies/remot/.git/
+jpuigcerver@fp:~/git_estrategies/remot (main) $ git branch -m main
+jpuigcerver@fp:~/git_estrategies/remot (main) $ echo "# Estratègies de ramificació" > README.md
+jpuigcerver@fp:~/git_estrategies/remot (main) $ git add README.md
+jpuigcerver@fp:~/git_estrategies/remot (main) $ git commit -m "Commit inicial"
 [main (root-commit) ec0e2bd] Commit inicial
  1 file changed, 1 insertion(+)
  create mode 100644 README.md
-jpuigcerver@fp:~/gitflow/remot (main) $ git lga
+jpuigcerver@fp:~/git_estrategies/remot (main) $ git lga
 * ec0e2bd - (0 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main)
-jpuigcerver@fp:~/gitflow/remot (main) $ git config --bool core.bare true # (1)!
+jpuigcerver@fp:~/git_estrategies/remot (main) $ git config --bool core.bare true # (1)!
