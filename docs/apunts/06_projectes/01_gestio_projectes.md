@@ -5,11 +5,10 @@ icon: material/book-open-variant
 alias: projectes
 comments: true
 tags:
-    - pull requests
-    - actions
-    - pages
     - issues
-    - CI/CD
+    - discussions
+    - projects
+    - releases
 ---
 
 ## Gestió de projectes a GitHub
@@ -34,7 +33,7 @@ poden intercanviar idees, opinions, realitzar suggeriments o debatre sobre temes
     Podeu accedir mitjançant la secció "Discussions" del menú superior
     o en [aquest enllaç](https://github.com/joapuiib/curs-git/discussions){:target="_blank"}.
 
-    [![Exemple de debat en un repositori de GitHub](./img/exemple_debats.png)](https://github.com/joapuiib/curs-git/discussions){:target="_blank"}
+    [![Exemple de debat en un repositori de GitHub](./img/projectes/exemple_debats.png)](https://github.com/joapuiib/curs-git/discussions){:target="_blank"}
     /// figure-caption
     Exemple de debat en un repositori de GitHub
     ///
@@ -44,7 +43,7 @@ Aquesta funcionalitat no està habilitada per defecte.
 Per activar-la, cal anar al menú de configuració del repositori
 i habilitar la funcionalitat de debats.
 
-![Configuració de les Discussions en un repositori de GitHub](./img/habilitar_debats.png)
+![Configuració de les Discussions en un repositori de GitHub](./img/projectes/habilitar_debats.png)
 /// figure-caption
 Configuració de les Discussions en un repositori de GitHub
 ///
@@ -77,7 +76,7 @@ debatir sobre la seva resolució.
     mitjançant la secció "Issues" del menú superior
     o en [aquest enllaç](https://github.com/mkdocs/mkdocs/issues){:target="_blank"}.
 
-    [![Exemple d'incidències en un repositori de GitHub](./img/exemple_issues.png)](https://github.com/mkdocs/mkdocs/issues){:target="_blank"}.
+    [![Exemple d'incidències en un repositori de GitHub](./img/projectes/exemple_issues.png)](https://github.com/mkdocs/mkdocs/issues){:target="_blank"}.
 
 Les incidències contenen la següent informació:
 
@@ -110,7 +109,7 @@ les tasques d'un projecte.
     mitjançant la secció "Projects" del menú superior
     o en [aquest enllaç](https://github.com/joapuiib/curs-git/projects){:target="_blank"}.
 
-    [![Exemple de projecte en un repositori de GitHub](./img/exemple_projecte.png)](https://github.com/joapuiib/curs-git/projects){:target="_blank"}
+    [![Exemple de projecte en un repositori de GitHub](./img/projectes/exemple_projecte.png)](https://github.com/joapuiib/curs-git/projects){:target="_blank"}
     /// figure-caption
     Exemple de projecte en un repositori de GitHub
     ///
@@ -138,7 +137,13 @@ especificar:
 - La __data de finalització__.
 - La __iteració__ a la que pertany.
 
-![Exemple de tasca](./img/exemple_tasca.png)
+![Exemple de tasca](./img/projectes/exemple_tasca.png)
 /// figure-caption
 Exemple de tasca en un projecte de GitHub
 ///
+
+### Llançaments
+Els [__llançaments o *Releases*__](https://docs.github.com/es/github/administering-a-repository/releasing-projects-on-github/about-releases){:target="_blank"}
+és una funcionalitat que permet publicar versions del projecte.
+
+@TODO: Afegir exemple de llançament
