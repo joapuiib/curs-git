@@ -30,10 +30,12 @@ theme:
     logo: simple/git
 
   comments:
-    data_repo: joapuiib/curs-git
-    data_repo_id: R_kgDOMi7ohg
-    data_category: General
-    data_category_id: DIC_kwDOMi7ohs4Ch1Lw
+    repo: joapuiib/curs-git
+    repo_id: R_kgDOMi7ohg
+    category: General
+    category_id: DIC_kwDOMi7ohs4Ch1Lw
+    mapping: pathname
+    reactions-enabled: true
 
   # cover: 
   #   logo: false
