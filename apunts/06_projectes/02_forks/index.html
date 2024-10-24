@@ -10,13 +10,13 @@
         <meta name="author" content="Joan Puigcerver Ibáñez">
       
       
-        <link rel="canonical" href="https://joapuiib.github.io/curs-git/apunts/04_avancat/03_reset_amend/">
+        <link rel="canonical" href="https://joapuiib.github.io/curs-git/apunts/06_projectes/02_forks/">
       
       
-        <link rel="prev" href="../02_stash/">
+        <link rel="prev" href="../01_gestio_projectes/">
       
       
-        <link rel="next" href="../04_squash/">
+        <link rel="next" href="../../07_educativa/01_educativa/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Reset i Amend - Introducció a Git i la seua aplicació a l’aula</title>
+        <title>Forks i Pull Requests - Introducció a Git i la seua aplicació a l’aula</title>
       
     
     
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reset" class="md-skip">
+        <a href="#forks-i-pull-requests" class="md-skip">
           Salta el contingut
         </a>
       
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reset i Amend
+              Forks i Pull Requests
             
           </span>
         </div>
@@ -884,10 +884,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -909,11 +907,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
         
           
           <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
@@ -932,7 +930,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -952,7 +950,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../01_etiquetes/" class="md-nav__link">
+      <a href="../../04_avancat/01_etiquetes/" class="md-nav__link">
         
   
   
@@ -978,7 +976,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../02_stash/" class="md-nav__link">
+      <a href="../../04_avancat/02_stash/" class="md-nav__link">
         
   
   
@@ -1000,32 +998,11 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
+    <li class="md-nav__item">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg>
-  
-  
-  <span class="md-ellipsis">
-    Reset i Amend
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="../../04_avancat/03_reset_amend/" class="md-nav__link">
         
   
   
@@ -1038,93 +1015,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary " aria-label="Taula de continguts">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Taula de continguts
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#reset" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reset
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Reset">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#soft" class="md-nav__link">
-    <span class="md-ellipsis">
-      Soft
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mixed" class="md-nav__link">
-    <span class="md-ellipsis">
-      Mixed
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hard" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hard
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#keep" class="md-nav__link">
-    <span class="md-ellipsis">
-      Keep
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#amend" class="md-nav__link">
-    <span class="md-ellipsis">
-      Amend
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bibliografia" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bibliografia
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1138,7 +1028,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../04_squash/" class="md-nav__link">
+      <a href="../../04_avancat/04_squash/" class="md-nav__link">
         
   
   
@@ -1164,7 +1054,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../05_revert_cherrypick/" class="md-nav__link">
+      <a href="../../04_avancat/05_revert_cherrypick/" class="md-nav__link">
         
   
   
@@ -1190,7 +1080,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../06_exercici/" class="md-nav__link">
+      <a href="../../04_avancat/06_exercici/" class="md-nav__link">
         
   
   
@@ -1362,8 +1252,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1377,11 +1269,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
         
           
           <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
@@ -1400,7 +1292,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1420,7 +1312,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../../06_projectes/01_gestio_projectes/" class="md-nav__link">
+      <a href="../01_gestio_projectes/" class="md-nav__link">
         
   
   
@@ -1442,11 +1334,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
+  
+    <li class="md-nav__item md-nav__item--active">
       
-      <a href="../../06_projectes/02_forks/" class="md-nav__link">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg>
+  
+  
+  <span class="md-ellipsis">
+    Forks i Pull Requests
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1459,6 +1372,60 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary " aria-label="Taula de continguts">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#forks-i-pull-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forks i Pull Requests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pull-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pull Requests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flux-de-treball" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flux de treball
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1613,69 +1580,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#reset" class="md-nav__link">
+  <a href="#forks-i-pull-requests" class="md-nav__link">
     <span class="md-ellipsis">
-      Reset
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Reset">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#soft" class="md-nav__link">
-    <span class="md-ellipsis">
-      Soft
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mixed" class="md-nav__link">
-    <span class="md-ellipsis">
-      Mixed
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hard" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hard
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#keep" class="md-nav__link">
-    <span class="md-ellipsis">
-      Keep
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#amend" class="md-nav__link">
-    <span class="md-ellipsis">
-      Amend
+      Forks i Pull Requests
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bibliografia" class="md-nav__link">
+  <a href="#forks" class="md-nav__link">
     <span class="md-ellipsis">
-      Bibliografia
+      Forks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pull-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pull Requests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flux-de-treball" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flux de treball
     </span>
   </a>
   
@@ -1700,31 +1634,13 @@
     
     
     
-      <span class="md-tag">git reset</span>
+      <span class="md-tag">fork</span>
     
   
     
     
     
-      <span class="md-tag">soft reset</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">mixed reset</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">hard reset</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">git commit --amend</span>
+      <span class="md-tag">pull request</span>
     
   
 </nav>
@@ -2004,7 +1920,7 @@
   
 
 
-<h1>Reset i Amend</h1>
+<h1>Forks i Pull Requests</h1>
 
 
 
@@ -2044,281 +1960,146 @@
   
   
 
-    <h2 id="reset">Reset<a class="headerlink" href="#reset" title="Permanent link">&para;</a></h2>
-<p>L'ordre <code>git reset</code> ens permet moure la referència de la branca actual a qualsevol
-altre <em>commit</em> del repositori.
-Això significa que podem modificar l'història del repositori local local,
-per ajustar o refer la història a les nostres necessitats.</p>
-<p>Algunes de les accions que podem fer mitjançant aquestes eines són:</p>
+    <h2 id="forks-i-pull-requests">Forks i Pull Requests<a class="headerlink" href="#forks-i-pull-requests" title="Permanent link">&para;</a></h2>
+<p>Dins de les eines de col·laboració que ofereixen els serveis d'allotjament de repositoris en línia
+com <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span> GitHub o <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23.6 9.593-.033-.086L20.3.98a.85.85 0 0 0-.336-.405.875.875 0 0 0-1 .054.88.88 0 0 0-.29.44L16.47 7.818H7.537L5.333 1.07a.86.86 0 0 0-.29-.441.875.875 0 0 0-1-.054.86.86 0 0 0-.336.405L.433 9.502l-.032.086a6.066 6.066 0 0 0 2.012 7.01l.01.009.03.021 4.977 3.727 2.462 1.863 1.5 1.132a1.01 1.01 0 0 0 1.22 0l1.499-1.132 2.461-1.863 5.006-3.75.013-.01a6.07 6.07 0 0 0 2.01-7.002"/></svg></span> GitLab, hi ha dues funcionalitats clau:</p>
 <ul>
-<li>Desfer o modificar commits anteriors.</li>
-<li>Reorganitzar els commits abans de publicar-los.</li>
-<li>Moure punters de les branques.</li>
+<li>
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a3 3 0 0 1 3 3c0 1.28-.81 2.38-1.94 2.81.09.46.33 1.02.94 1.82 1 1.29 3 3.2 4 4.54 1-1.34 3-3.25 4-4.54.61-.8.85-1.36.94-1.82A3.015 3.015 0 0 1 15 5a3 3 0 0 1 3-3 3 3 0 0 1 3 3c0 1.32-.86 2.45-2.05 2.85-.08.52-.31 1.15-.95 1.98-1 1.34-3 3.25-4 4.55-.61.79-.85 1.35-.94 1.81C14.19 16.62 15 17.72 15 19a3 3 0 0 1-3 3 3 3 0 0 1-3-3c0-1.28.81-2.38 1.94-2.81-.09-.46-.33-1.02-.94-1.81-1-1.3-3-3.21-4-4.55-.64-.83-.87-1.46-.95-1.98A3.015 3.015 0 0 1 3 5a3 3 0 0 1 3-3m0 2a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m12 0a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m-6 14a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1"/></svg></span> Forks</strong>: permeten copiar un repositori d'un altre usuari o organització com a propi.</p>
+<p>En aquesta còpia, l'usuari pot realitzar canvis, afegir funcionalitats o corregir errors
+sense afectar el repositori original.</p>
+<p>El <em>fork</em> queda enllaçat amb el repositori original, de manera que es pot mantindre sincronitzat
+si el repositori original es modifica.</p>
+</li>
+<li>
+<p><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 3a3 3 0 0 1 3 3c0 1.31-.83 2.42-2 2.83v6.34c1.17.41 2 1.52 2 2.83a3 3 0 0 1-3 3 3 3 0 0 1-3-3c0-1.31.83-2.42 2-2.83V8.83A2.99 2.99 0 0 1 3 6a3 3 0 0 1 3-3m0 2a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m0 12a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m15 1a3 3 0 0 1-3 3 3 3 0 0 1-3-3c0-1.31.83-2.42 2-2.83V7h-2v3.25L10.75 6 15 1.75V5h2a2 2 0 0 1 2 2v8.17c1.17.41 2 1.52 2 2.83m-3-1a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1"/></svg></span> Pull Requests</strong>: permeten sol·licitar la incorporació de canvis d'un repositori a un altre.</p>
+<p>Si un usuari ha realitzat canvis en un <em>fork</em> i vol que aquests canvis es incorporin
+al repositori original, pot enviar una sol·licitud de <strong>pull request</strong>. Aquesta sol·licitud
+serà revisada pels propietaris del repositori original, que podran acceptar-la o rebutjar-la.</p>
+</li>
 </ul>
-<div class="admonition danger">
-<p class="admonition-title">Perill</p>
-<p>Aquestes eines són molt potents, però cal tindre en compte que modificar la història del repositori
-pot ser perillós.</p>
-<p>Especialment, en les branques que ja han segut publicades (<code>push</code>),  ja que pot ocasionar
-problemes entre els col·laboradors del repositori.</p>
-</div>
-<details class="prep">
-<summary>Preparació repositori</summary>
-<div class="collapse-code"><input checked="checked" id="__collapse0" name="__collapse0" type="checkbox" /><div class="language-bash highlight"><span class="filename">setup_reset.sh</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="ch">#!/bin/bash</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Elimina els repositoris si existeixen</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-d<span class="w"> </span>~/git_reset<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span>rm<span class="w"> </span>-rf<span class="w"> </span>~/git_reset
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">fi</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/git_reset
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nb">cd</span><span class="w"> </span>~/git_reset
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>git<span class="w"> </span>init
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>git<span class="w"> </span>branch<span class="w"> </span>-m<span class="w"> </span>main
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;# Git reset i commit --amend&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>README.md
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>git<span class="w"> </span>add<span class="w"> </span>README.md
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Commit inicial&quot;</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;- Canvi A&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Canvi A&quot;</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;- Canvi B&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Canvi B&quot;</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;- Canvi C&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Canvi C&quot;</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>git<span class="w"> </span>lga
-</span></code></pre></div>
-<div class="code-footer"><label class="expand" for="__collapse0" tabindex="0"></label><label class="collapse" for="__collapse0" tabindex="0"></label></div>
-</div>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/git_reset
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">cd</span><span class="w"> </span>~/git_reset
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>init
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="go">Initialized empty Git repository in ~/git_reset/.git/</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>branch<span class="w"> </span>-m<span class="w"> </span>main
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;# Git reset i commit --amend&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>README.md
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>add<span class="w"> </span>README.md
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Commit inicial&quot;</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="go">[main (root-commit) 16786db] Commit inicial</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="go"> 1 file changed, 1 insertion(+)</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="go"> create mode 100644 README.md</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;- Canvi A&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Canvi A&quot;</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="go">[main 4dc7c85] Canvi A</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="go"> 1 file changed, 1 insertion(+)</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;- Canvi B&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Canvi B&quot;</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="go">[main 04fafb7] Canvi B</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="go"> 1 file changed, 1 insertion(+)</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;- Canvi C&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Canvi C&quot;</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="go">[main 0c65882] Canvi C</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="go"> 1 file changed, 1 insertion(+)</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">0c65882</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Canvi C</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">04fafb7</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Canvi B</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">4dc7c85</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Canvi A</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">16786db</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Commit inicial</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
-</span></code></pre></div>
-</details>
-<p>La sintaxi de l'ordre <code>git reset</code> és:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>reset<span class="w"> </span><span class="o">[</span>--soft<span class="w"> </span><span class="p">|</span><span class="w"> </span>--mixed<span class="w"> </span><span class="p">|</span><span class="w"> </span>--hard<span class="w"> </span><span class="p">|</span><span class="w"> </span>--keep<span class="o">]</span><span class="w"> </span>&lt;ref&gt;
-</span></code></pre></div></p>
+<p>Aquestes dues funcionalitats són essencials per a la col·laboració en projectes
+de desenvolupament de programari de manera distribuïda i col·laborativa, sobretot
+en projectes de <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 22h-.19a.46.46 0 0 1-.26-.27l-2.22-5.8c-.09-.24.03-.51.26-.61.71-.26 1.28-.82 1.58-1.49.64-1.43 0-3.1-1.43-3.74s-3.1 0-3.74 1.41c-.3.71-.32 1.5-.05 2.19.3.74.89 1.31 1.64 1.59.24.09.37.36.28.61L9 21.69c-.04.12-.13.22-.25.27-.12.04-.25.04-.36 0C3.24 19.97.67 14.18 2.66 9.03s7.78-7.72 12.93-5.73c2.47.96 4.46 2.85 5.54 5.27a9.9 9.9 0 0 1 .2 7.65c-1.01 2.66-3.1 4.78-5.75 5.78zM12 3.59c-4.97-.13-9.1 3.8-9.23 8.77a9.01 9.01 0 0 0 5.55 8.54l1.89-4.9c-1.83-1-2.52-3.28-1.53-5.11a3.784 3.784 0 0 1 5.11-1.53 3.775 3.775 0 0 1 0 6.64l1.89 4.93a9.11 9.11 0 0 0 4.76-5c1.84-4.62-.4-9.85-5.02-11.7A9.1 9.1 0 0 0 12 3.59"/></svg></span> codi obert</strong>.</p>
+<h2 id="forks"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a3 3 0 0 1 3 3c0 1.28-.81 2.38-1.94 2.81.09.46.33 1.02.94 1.82 1 1.29 3 3.2 4 4.54 1-1.34 3-3.25 4-4.54.61-.8.85-1.36.94-1.82A3.015 3.015 0 0 1 15 5a3 3 0 0 1 3-3 3 3 0 0 1 3 3c0 1.32-.86 2.45-2.05 2.85-.08.52-.31 1.15-.95 1.98-1 1.34-3 3.25-4 4.55-.61.79-.85 1.35-.94 1.81C14.19 16.62 15 17.72 15 19a3 3 0 0 1-3 3 3 3 0 0 1-3-3c0-1.28.81-2.38 1.94-2.81-.09-.46-.33-1.02-.94-1.81-1-1.3-3-3.21-4-4.55-.64-.83-.87-1.46-.95-1.98A3.015 3.015 0 0 1 3 5a3 3 0 0 1 3-3m0 2a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m12 0a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m-6 14a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1"/></svg></span> Forks<a class="headerlink" href="#forks" title="Permanent link">&para;</a></h2>
+<p>Una <a href="https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo" target="_blank"><strong>bifurcació o <em>fork</em></strong></a>
+és una còpia d'un repositori que pertany a un usuari o organització
+com a propi.</p>
+<p>En el teu <em>fork</em> pots realitzar qualsevol canvi com:</p>
 <ul>
-<li><code>ref</code>: La referència pot ser l'identificador de un commit, una branca o una etiqueta.</li>
+<li>Corregir errors.</li>
+<li>Afegir funcionalitats.</li>
+<li>Millorar la documentació.</li>
+<li>Adaptar el codi a les teves necessitats.</li>
 </ul>
-<div class="admonition docs">
-<p class="admonition-title">Documentació</p>
-<p>Documentació oficial de <a href="https://git-scm.com/docs/git-reset" target="_blank"><code>git reset</code></a>.</p>
-</div>
-<p>El comportament de git reset depén del mode especificat. Per defecte, el mode és <code>--mixed</code>.</p>
+<p>Un <em>fork</em> sempre està enllaçat amb el repositori original,
+de manera que es si es realitzen canvis en el repositori original,
+pots decidir incorporar-lo al teu <em>fork</em>.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple de fork</p>
+<p>El repositori <code>pymdownx</code> és una col·lecció d'extensions per a Python Markdown,
+que ve inclosa en aquest lloc web.</p>
 <figure id="__figure-caption_1">
-<p><img alt="Resum de l'eina git reset" src="../img/reset/resum_reset.png" /></p>
+<p><a href="https://github.com/facelessuser/pymdown-extensions" target="_blank"><img alt="Repositori pymdownx original" src="../img/forks/pymdownx.png" /></a></p>
 <figcaption>
-<p><span class="caption-prefix">Figura 1.</span> Resum de l'eina <code>git reset</code>.</p>
+<p><span class="caption-prefix">Figura 1.</span> Repositori <code>pymdownx</code> original</p>
 </figcaption>
 </figure>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Aquesta ordre mou la referència de la branca actual, on està situat el <code>HEAD</code>.</p>
+<p>Per a poder realitzar canvis en aquesta col·lecció d'extensions,
+s'ha realitzat un <em>fork</em> del repositori original.</p>
+<figure id="__figure-caption_2">
+<p><a href="https://github.com/joapuiib/pymdown-extensions" target="_blank"><img alt="Repositori pymdownx bifurcat" src="../img/forks/pymdownx_fork.png" /></a></p>
+<figcaption>
+<p><span class="caption-prefix">Figura 2.</span> Repositori <code>pymdownx</code> bifurcat</p>
+</figcaption>
+</figure>
 </div>
-<h3 id="soft">Soft<a class="headerlink" href="#soft" title="Permanent link">&para;</a></h3>
-<p>El mode <code>reset --soft</code> mou la referència de la branca actual al <em>commit</em> especificat,
-conservant els canvis perduts a l'<strong>Àrea de Preparació (<em>Staging Area</em>)</strong>.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git reset --soft &lt;ref&gt;
-</span></code></pre></div>
-<details class="example">
-<summary>Exemple: reset --soft</summary>
-<p>Establim la referencia de la branca <code>main</code> al commit <strong>Canvi B</strong>.</p>
-<p>En aquest cas, es perdran els canvis del commit <strong>Canvi C</strong>,
-que es conservaran en l'<strong>Àrea de Preparació</strong>.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>reset<span class="w"> </span>--soft<span class="w"> </span>04fafb7
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="go">On branch main</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="go">Changes to be committed:</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="go">  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="git-stg">modified:   README.md</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">04fafb7</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Canvi B</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">4dc7c85</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Canvi A</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">16786db</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Commit inicial</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
-</span></code></pre></div>
-<p>Creem de nou el commit <strong>Canvi C</strong>.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Canvi C&quot;</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="go">[main 0c65882] Canvi C</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="go"> 1 file changed, 1 insertion(+)</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">0c65882</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Canvi C</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">04fafb7</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Canvi B</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">4dc7c85</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Canvi A</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">16786db</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Commit inicial</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
-</span></code></pre></div>
-</details>
-<h3 id="mixed">Mixed<a class="headerlink" href="#mixed" title="Permanent link">&para;</a></h3>
-<p>El mode <code>reset --mixed</code> mou la referència de la branca actual al <em>commit</em> especificat.
-Els canvis es conserven en el <strong>Directori de Treball</strong>.</p>
-<p>Aquest es el comportament per defecte si no s'especifica cap altra opció.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git reset --mixed &lt;ref&gt;
-</span></code></pre></div>
-<details class="example">
-<summary>Exemple: reset --mixed</summary>
-<p>Establim la referencia de la branca <code>main</code> al commit <strong>Canvi B</strong>.</p>
-<p>En aquest cas, es perdran els canvis del commit <strong>Canvi C</strong>,
-que es conservaran en el <strong>Directori de Treball</strong>.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>reset<span class="w"> </span>--mixed<span class="w"> </span>04fafb7
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="go">Unstaged changes after reset:</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="go">M   README.md</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="go">On branch main</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="go">Changes not staged for commit:</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="go">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="git-mod">modified:   README.md</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="go">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span>
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">04fafb7</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Canvi B</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
-</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">4dc7c85</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Canvi A</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
-</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">16786db</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Commit inicial</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
-</span></code></pre></div>
-<p>Creem de nou el commit <strong>Canvi C</strong>.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>add<span class="w"> </span>README.md
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Canvi C&quot;</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="go">[main 0c65882] Canvi C</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="go"> 1 file changed, 1 insertion(+)</span>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">0c65882</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Canvi C</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">04fafb7</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Canvi B</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">4dc7c85</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Canvi A</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">16786db</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Commit inicial</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
-</span></code></pre></div>
-</details>
-<h3 id="hard">Hard<a class="headerlink" href="#hard" title="Permanent link">&para;</a></h3>
-<p>El mode <code>reset --hard</code> mou la referència de la branca actual al <em>commit</em> especificat.
-modificant l'estat del repositori i revertint-lo a la referència especificada.</p>
-<div class="admonition danger">
-<p class="admonition-title">Perill</p>
-<p>Tots els canvis es descarten permanentment.</p>
+<p>Per realitzar un <em>fork</em> d'un repositori, cal accedir a la pàgina del repositori
+i fer clic al botó <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a3 3 0 0 1 3 3c0 1.28-.81 2.38-1.94 2.81.09.46.33 1.02.94 1.82 1 1.29 3 3.2 4 4.54 1-1.34 3-3.25 4-4.54.61-.8.85-1.36.94-1.82A3.015 3.015 0 0 1 15 5a3 3 0 0 1 3-3 3 3 0 0 1 3 3c0 1.32-.86 2.45-2.05 2.85-.08.52-.31 1.15-.95 1.98-1 1.34-3 3.25-4 4.55-.61.79-.85 1.35-.94 1.81C14.19 16.62 15 17.72 15 19a3 3 0 0 1-3 3 3 3 0 0 1-3-3c0-1.28.81-2.38 1.94-2.81-.09-.46-.33-1.02-.94-1.81-1-1.3-3-3.21-4-4.55-.64-.83-.87-1.46-.95-1.98A3.015 3.015 0 0 1 3 5a3 3 0 0 1 3-3m0 2a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m12 0a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m-6 14a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1"/></svg></span> Fork</strong> que apareix a la part superior dreta.</p>
+<div class="admonition example">
+<p class="admonition-title">Creació d'un fork</p>
+<p>Vegem el menú de creació d'un <em>fork</em> en el repositori <code>MkDocs</code>.</p>
+<figure id="__figure-caption_3">
+<p><img alt="Creació d'un fork" src="../img/forks/fork_mkdocs.png" /></p>
+<figcaption>
+<p><span class="caption-prefix">Figura 3.</span> Creació d'un fork en el repositori <code>MkDocs</code></p>
+</figcaption>
+</figure>
 </div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git reset --hard &lt;ref&gt;
-</span></code></pre></div>
-<details class="example">
-<summary>Exemple: reset --hard</summary>
-<p>Establim la referencia de la branca <code>main</code> al commit <strong>Canvi B</strong>.</p>
-<p>En aquest cas, es perdran els canvis del commit <strong>Canvi C</strong>,
-que no es conservaran enlloc i no es podran recuperar.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>04fafb7
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="go">HEAD is now at 04fafb7 Canvi B</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="go">On branch main</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="go">nothing to commit, working tree clean</span>
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">04fafb7</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Canvi B</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">4dc7c85</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Canvi A</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">16786db</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Commit inicial</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
-</span></code></pre></div>
-</details>
-<h3 id="keep">Keep<a class="headerlink" href="#keep" title="Permanent link">&para;</a></h3>
-<p>El mode <code>reset --keep</code> és molt similar al comportament per defecte.</p>
-<p>En aquest cas, no permet realitzar el <code>reset</code> si això comporta
-que els canvis actuals del <em>Directori de Treball</em> sigen sobrescrits
-per els canvis de l'operació de <code>reset</code>.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>git reset --keep &lt;ref&gt;
-</span></code></pre></div>
-<details class="example">
-<summary>Exemple: reset --keep</summary>
-<p>Com que realitzar el <code>reset</code> comportaria sobreesciure els canvis del <strong>Directori de Treball</strong>,
-l'operació no es realitza.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;- Canvi C&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="go">On branch main</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="go">Changes not staged for commit:</span>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span>
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="go">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)</span>
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span><span class="git-mod">modified:   README.md</span>
-</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
-</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="go">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span>
-</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>reset<span class="w"> </span>--keep<span class="w"> </span>4dc7c85
-</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="git-error">error: Entry &#39;README.md&#39; not uptodate. Cannot merge.</span>
-</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="git-fatal">fatal: Could not reset index file to revision &#39;4dc7c85&#39;.</span>
-</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
-</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">04fafb7</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Canvi B</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
-</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">4dc7c85</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Canvi A</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
-</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">16786db</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Commit inicial</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
-</span></code></pre></div>
-</details>
-<h2 id="amend">Amend<a class="headerlink" href="#amend" title="Permanent link">&para;</a></h2>
-<p>L'opció <code>git commit --amend</code> permet realitzar canvis a l'últim commit realitzat.</p>
-<p>Permet modificar el missatge de l'últim commit, afegir nous fitxers o afegir
-nous canvis els fitxers del repositori, inclòs els que han segut modificats en aquest últim commit.</p>
-<p>El funcionament d'aquesta ordre consisteix en crear un nou <em>commit</em> amb els canvis de l'<strong>Àrea de Preparació</strong>
-i els canvis del commit anterior. A més, el nou <em>commit</em> substitueix l'anterior.</p>
-<p>La sintaxi és:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>git<span class="w"> </span>commit<span class="w"> </span>--amend<span class="w"> </span><span class="o">[</span>-m<span class="w"> </span>&lt;missatge&gt;<span class="o">]</span>
-</span></code></pre></div></p>
+<h2 id="pull-requests"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 3a3 3 0 0 1 3 3c0 1.31-.83 2.42-2 2.83v6.34c1.17.41 2 1.52 2 2.83a3 3 0 0 1-3 3 3 3 0 0 1-3-3c0-1.31.83-2.42 2-2.83V8.83A2.99 2.99 0 0 1 3 6a3 3 0 0 1 3-3m0 2a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m0 12a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m15 1a3 3 0 0 1-3 3 3 3 0 0 1-3-3c0-1.31.83-2.42 2-2.83V7h-2v3.25L10.75 6 15 1.75V5h2a2 2 0 0 1 2 2v8.17c1.17.41 2 1.52 2 2.83m-3-1a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1"/></svg></span> Pull Requests<a class="headerlink" href="#pull-requests" title="Permanent link">&para;</a></h2>
+<p>Una <a href="https://docs.github.com/es/pull-requests/collaborating-with-pull-requests" target="_blank"><strong>Sol·licitud de Incorporació o <em>Pull Request (<abbr title="Pull Request">PR</abbr>)</em></strong></a>
+és una sol·licitud per a incorporar canvis a un repositori.</p>
+<p>Els <abbr title="Pull Request">PR</abbr> poden ser utilitzats per a:</p>
 <ul>
-<li><code>-m &lt;missatge&gt;</code>: Permet especificar un nou missatge per al commit.</li>
+<li>Incorporar canvis d'un <em>fork</em> a un repositori original.</li>
+<li>Incorporar canvis d'una branca a una altra branca.</li>
 </ul>
-<details class="example">
-<summary>Exemple: Amend</summary>
-<p>Hem modificat l'últim <em>commit</em> <strong>Canvi B</strong>,
-on hem afegit canvis a <code>README.md</code> i modificat el missatge del commit.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">04fafb7</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Canvi B</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">4dc7c85</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Canvi A</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">16786db</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Commit inicial</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="go">On branch main</span>
-</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="go">Changes not staged for commit:</span>
-</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span>
-</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="go">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)</span>
-</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">    </span><span class="git-mod">modified:   README.md</span>
-</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>
-</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="go">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span>
-</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>diff
-</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="gh">diff --git a/README.md b/README.md</span>
-</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="gh">index dc7fc7d..d05d0d2 100644</span>
-</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="gd">--- a/README.md</span>
-</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="gi">+++ b/README.md</span>
-</span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="gu">@@ -1,3 +1,4 @@</span>
-</span><span id="__span-14-19"><a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="gp-w"> </span><span class="gp">#</span><span class="gp-w"> </span>Git<span class="w"> </span>reset<span class="w"> </span>i<span class="w"> </span>commit<span class="w"> </span>--amend
-</span><span id="__span-14-20"><a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a><span class="go"> - Canvi A</span>
-</span><span id="__span-14-21"><a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a><span class="go"> - Canvi B</span>
-</span><span id="__span-14-22"><a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a><span class="go">+- Canvi C</span>
-</span><span id="__span-14-23"><a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>add<span class="w"> </span>README.md
-</span><span id="__span-14-24"><a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>commit<span class="w"> </span>--amend<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Canvi B i C&quot;</span>
-</span><span id="__span-14-25"><a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a><span class="go">[main 3aedfd5] Canvi B i C</span>
-</span><span id="__span-14-26"><a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a><span class="go"> Date: Sun Oct 20 20:21:37 2024 +0200</span>
-</span><span id="__span-14-27"><a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a><span class="go"> 1 file changed, 2 insertions(+)</span>
-</span><span id="__span-14-28"><a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_reset</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
-</span><span id="__span-14-29"><a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">3aedfd5</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Canvi B i C</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
-</span><span id="__span-14-30"><a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">4dc7c85</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Canvi A</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
-</span><span id="__span-14-31"><a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">16786db</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Commit inicial</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
-</span></code></pre></div>
-</details>
-<h2 id="bibliografia">Bibliografia<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
+<p>Aquesta funcionalitat es essencial per a la col·laboració en projectes, especialment els de <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 22h-.19a.46.46 0 0 1-.26-.27l-2.22-5.8c-.09-.24.03-.51.26-.61.71-.26 1.28-.82 1.58-1.49.64-1.43 0-3.1-1.43-3.74s-3.1 0-3.74 1.41c-.3.71-.32 1.5-.05 2.19.3.74.89 1.31 1.64 1.59.24.09.37.36.28.61L9 21.69c-.04.12-.13.22-.25.27-.12.04-.25.04-.36 0C3.24 19.97.67 14.18 2.66 9.03s7.78-7.72 12.93-5.73c2.47.96 4.46 2.85 5.54 5.27a9.9 9.9 0 0 1 .2 7.65c-1.01 2.66-3.1 4.78-5.75 5.78zM12 3.59c-4.97-.13-9.1 3.8-9.23 8.77a9.01 9.01 0 0 0 5.55 8.54l1.89-4.9c-1.83-1-2.52-3.28-1.53-5.11a3.784 3.784 0 0 1 5.11-1.53 3.775 3.775 0 0 1 0 6.64l1.89 4.93a9.11 9.11 0 0 0 4.76-5c1.84-4.62-.4-9.85-5.02-11.7A9.1 9.1 0 0 0 12 3.59"/></svg></span> codi obert.
+A més, aquesta funcionalitat pot ser implementada dins d'una <strong><a href="../../05_estrategies/01_estrategies_ramificacio/" target="_blank">estratègia de ramificació</a></strong>.</p>
+<p>A un <abbr title="Pull Request">PR</abbr> es pot afegir informació com:</p>
 <ul>
-<li><a href="https://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard">https://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard</a></li>
-<li><a href="https://git-scm.com/docs/git-reset">https://git-scm.com/docs/git-reset</a></li>
+<li>Títol i descripció dels canvis.</li>
+<li>Comentaris per als revisors.</li>
+<li>Referències a tasques o <a href="../01_gestio_projectes/#incidencies" target="_blank">Incidències</a>.</li>
 </ul>
+<p>A més, es pot consultar:</p>
+<ul>
+<li>Els canvis realitzats.</li>
+<li>Els fitxers modificats.</li>
+<li>Les [[actions|comprovacions automàtiques]]{:target="_blank"} realitzades.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exemple de Pull Request</p>
+<p>En el repositori <code>pymdownx</code> s'ha creat i fusionat un <abbr title="Pull Request">PR</abbr> per a afegir una nova extensió.</p>
+<figure id="__figure-caption_4">
+<p><a href="https://github.com/facelessuser/pymdown-extensions/pull/2455" target="_blank"><img alt="Sol·licitud de Pull Request" src="../img/forks/pull_request.png" /></a></p>
+<figcaption>
+<p><span class="caption-prefix">Figura 4.</span> Pull Request per a afegir una nova extensió a <code>pymdownx</code></p>
+</figcaption>
+</figure>
+</div>
+<p>Per crear un <abbr title="Pull Request">PR</abbr>, cal accedir al teu <em>fork</em> o branca i fer clic al botó <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 3a3 3 0 0 1 3 3c0 1.31-.83 2.42-2 2.83v6.34c1.17.41 2 1.52 2 2.83a3 3 0 0 1-3 3 3 3 0 0 1-3-3c0-1.31.83-2.42 2-2.83V8.83A2.99 2.99 0 0 1 3 6a3 3 0 0 1 3-3m0 2a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m0 12a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m15 1a3 3 0 0 1-3 3 3 3 0 0 1-3-3c0-1.31.83-2.42 2-2.83V7h-2v3.25L10.75 6 15 1.75V5h2a2 2 0 0 1 2 2v8.17c1.17.41 2 1.52 2 2.83m-3-1a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1"/></svg></span> Pull Request</strong>.</p>
+<p>En el procés de creació d'un <abbr title="Pull Request">PR</abbr>, es mostrarà una pantalla on es compararan els canvis realitzats
+amb la branca de destí i es podrà afegir informació addicional com el títol i la descripció.</p>
+<div class="admonition example">
+<p class="admonition-title">Creació d'un Pull Request</p>
+<p>A la branca <code>feature/time-range</code> del meu <em>fork</em> podem crear un <abbr title="Pull Request">PR</abbr> per a incorporar els canvis al repositori original.</p>
+<figure id="__figure-caption_5">
+<p><img alt="Creació d'un Pull Request" src="../img/forks/pull_request_create.png" /></p>
+<figcaption>
+<p><span class="caption-prefix">Figura 5.</span> Creació d'un Pull Request</p>
+</figcaption>
+</figure>
+<p>En la pantalla de creació d'un <abbr title="Pull Request">PR</abbr> es poden veure els canvis realitzats en la branca <code>feature/time-range</code>
+respecte a la branca de destí <code>verion3</code>.</p>
+<figure id="__figure-caption_6">
+<p><img alt="Comparació de canvis en un Pull Request" src="../img/forks/pull_request_compare.png" /></p>
+<figcaption>
+<p><span class="caption-prefix">Figura 6.</span> Comparació de canvis en un Pull Request</p>
+</figcaption>
+</figure>
+</div>
+<h2 id="flux-de-treball">Flux de treball<a class="headerlink" href="#flux-de-treball" title="Permanent link">&para;</a></h2>
+<p>Amb aquestes dues funcionalitats, es pot establir un flux de treball per a la col·laboració
+en projectes de desenvolupament de programari.</p>
+<figure id="__figure-caption_7">
+<p><img alt="Estructura de treball amb Forks i Pull Requests" src="../img/forks/fork.png" /></p>
+<figcaption>
+<p><span class="caption-prefix">Figura 7.</span> Estructura de treball amb Forks i Pull Requests</p>
+</figcaption>
+</figure>
+<p>Aquest flux de treball pot ser el següent:</p>
+<ol class="fancylists-decimal" type="1">
+<li>Realitzar un <em>fork</em> del repositori original.</li>
+<li>Clonar el <em>fork</em> en el teu entorn de desenvolupament.</li>
+<li>Crear una branca per a realitzar els canvis.</li>
+<li>Realitzar els canvis en la branca.</li>
+<li>Publicar la branca en el <em>fork</em>.</li>
+<li>Crear un <abbr title="Pull Request">PR</abbr> per a incorporar els canvis al repositori original.</li>
+<li>Revisar i debatre els canvis amb els revisors.</li>
+<li>Incorporar els canvis al repositori original.</li>
+<li>Actualitzar el <em>fork</em> amb els canvis del repositori original.</li>
+</ol>
     
 
 
@@ -2339,7 +2120,7 @@ on hem afegit canvis a <code>README.md</code> i modificat el missatge del commit
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">21 d’octubre del 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">24 d’octubre del 2024</span>
   </span>
 
     
@@ -2467,7 +2248,7 @@ on hem afegit canvis a <code>README.md</code> i modificat el missatge del commit
       <nav class="md-footer__inner md-grid" aria-label="Peu de pàgina" >
         
           
-          <a href="../02_stash/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Reserva de canvis (stash)">
+          <a href="../01_gestio_projectes/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Gestió de projectes a GitHub">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2477,20 +2258,20 @@ on hem afegit canvis a <code>README.md</code> i modificat el missatge del commit
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Reserva de canvis (stash)
+                Gestió de projectes a GitHub
               </div>
             </div>
           </a>
         
         
           
-          <a href="../04_squash/" class="md-footer__link md-footer__link--next" aria-label="Següent: Merge squash">
+          <a href="../../07_educativa/01_educativa/" class="md-footer__link md-footer__link--next" aria-label="Següent: GitHub com a plataforma educativa">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Següent
               </span>
               <div class="md-ellipsis">
-                Merge squash
+                GitHub com a plataforma educativa
               </div>
             </div>
             <div class="md-footer__button md-icon">
