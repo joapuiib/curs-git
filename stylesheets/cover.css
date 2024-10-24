@@ -1,5 +1,6 @@
 .cover {
   position: relative;
+  margin-bottom: 1.5rem;
 }
 
 .cover__background {
@@ -77,8 +78,4 @@
 }
 .cover__license-img img {
     max-height: 50px;
-}
-
-.cover + h1 {
-    margin-top: 1.6rem;
 }

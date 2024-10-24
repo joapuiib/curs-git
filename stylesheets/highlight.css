@@ -31,6 +31,8 @@
   background-color: unset;
 }
 
+.language-shellconsole.highlight .o,
+.language-shellconsole.highlight .nv,
 .language-shellconsole.highlight .nb {
   color: #B48EAD;
 }

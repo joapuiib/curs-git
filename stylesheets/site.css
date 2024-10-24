@@ -64,7 +64,15 @@
     color: #111111;
 }
 
+.center {
+    text-align: center;
+}
+
 p:has(img.center) {
+    text-align: center;
+}
+
+.mermaid {
     text-align: center;
 }
 
@@ -96,10 +104,6 @@ p:has(img.center) {
     color: gray;
 }
 
-.center {
-    text-align: center;
-}
-
 .opacity-25 {
     opacity: 0.25 !important;
 }
@@ -120,11 +124,31 @@ p:has(img.center) {
     content: counter(list-item, upper-alpha) ") ";
 }
 
+.md-encryption__input--password {
+    font-size: 1rem;
+    padding: 12px 40px 12px 15px;
+    border: 2px solid #d1d5db;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color: #fff;
+}
+
+#mkdocs-decrypt-msg:not(:empty) {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
 @page {
     size: A4;
     margin: 10mm;
 }
-
 
 @media print {
     .md-main__inner, .md-content__inner {
@@ -146,4 +170,3 @@ p:has(img.center) {
         display: none;
     }
 }
-

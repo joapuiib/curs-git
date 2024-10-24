@@ -1,0 +1,12 @@
+body {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+code, strong, div.allow-copy {
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
