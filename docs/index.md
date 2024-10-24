@@ -52,10 +52,10 @@ hide:
     - Branques de propòsit únic.
     - Mètodes d'integració de branques de funcionalitat.
 - __Bloc 6: [[projectes]]__
-    - Forks i Pull Requests.
-    - Incidències (_issues_).
     - Debats (_discussions_).
+    - Incidències (_issues_).
     - GitHub Projects.
+    - Forks i Pull Requests.
     - CI/CD amb GitHub Actions.
     - GitHub Pages.
 - __Bloc 7: [[educativa]]__
