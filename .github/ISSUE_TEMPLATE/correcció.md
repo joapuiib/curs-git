@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-**Descriu l'error**
+**Localització l'error**
 Indica l'enllaç a la pàgina que conté l'error.
 
 **Descriu l'error**
