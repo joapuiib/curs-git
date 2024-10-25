@@ -28,14 +28,14 @@ comparteixen els mateixos principis bàsics:
 - __Creació de branques de funcionalitat `feature/*`__: Es crea una branca independent per desenvolupar cada funcionalitat.
 - __Branca de desenvolupament `develop`__: Estat del projecte on s'incorporen les funcionalitats acabades, però que encara no han segut publicades.
 - __Branca principal `main`__: Branca on es troba la versió estable del projecte.
-- __Branca de publicació `release/*`__: Branca on es prepara la versió final del projecte abans de publicar-la.
+- __Branca de llançament `release/*`__: Branca on es prepara la versió final del projecte abans de publicar-la.
 - __Branca de correcció `hotfix/*`__: Branca per corregir errors en la versió estable del projecte.
 
 Utilitzant aquestes característiques, es pot adaptar el flux de treball a les necessitats del projecte,
 on podem decidir quin tipus de branca incorporar en la nostra metodologia de treball.
 
 !!! example
-    En projectes xicotets pot ser no és necessària una branca de desenvolupament `develop` o branques de publicació `release/*`.
+    En projectes xicotets pot ser no és necessària una branca de desenvolupament `develop` o branques de llançament `release/*`.
 
 A més, les estratègies poden ser utilitzades en combinació amb altres tècniques com les
 [__Pull Requests__](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests){target=_blank},
@@ -58,7 +58,7 @@ eficient de les funcionalitats:
     !!! info
         Depén de l'estratègia triada, el procés d'integració es realitzarà de diferents maneres.
 
-- __Branques de publicació (`release/*`):__ Branca on es preparen els canvis
+- __Branques de llançament (`release/*`):__ Branca on es preparen els canvis
     per poder publicar una nova versió del projecte.
 
     - Es creen a partir de la branca `develop`.
@@ -116,7 +116,7 @@ Algunes de les bones pràctiques més importants són:
 
     - `feature/frontend/landing-page` o `feature/backend/user-authentication`,
         com exemple de __branques de funcionalitats__.
-    - `release/v1.0.0` o `release/v1.1.0`, com exemple de __branques de publicació__.
+    - `release/v1.0.0` o `release/v1.1.0`, com exemple de __branques de llançament__.
     - `hotfix/issue-123`, com exemple de __branques de correcció__.
 
 - Incorporeu els canvis de `develop` a les branques `feature/*` de forma regular.
@@ -303,33 +303,33 @@ El principal desavantatge és:
 - No manté tot l'històric de canvis.
 - Dificulta la revisió de canvis individuals.
 
-## Branques de publicació
-Les branques de publicació són branques temporals
-que s'utilitzen per a preparar la publicació d'una versió.
+## Branques de llançament
+Les branques de llançament són branques temporals
+que s'utilitzen per a preparar el llançament d'una versió.
 
-Normalment, el prefix de les branques de publicació és `release/`.
+Normalment, el prefix de les branques de llançament és `release/`.
 
 Aquestes branques es creen a partir de la branca de desenvolupament `develop`
 i s'utilitzen per a realitzar tasques com:
 
 - Actualitzar la versió del projecte.
-- Preparar paràmetres de configuració específics per a la publicació.
+- Preparar paràmetres de configuració específics per a el llançament.
 
 El flux de treball amb aquestes branques és el següent:
 - Es creen a partir de la branca de desenvolupament `develop`.
-- Es realitzen les tasques de preparació per a la publicació.
+- Es realitzen les tasques de preparació per a el llançament.
 - S'integren els canvis a la branca de desenvolupament `develop`.
 - S'integren els canvis a la branca de desenvolupament `main`.
 
 
-![Branques de publicació](img/release.png)
+![Branques de llançament](img/release.png)
 /// figure-caption
-Branques de publicació
+Branques de llançament
 ///
 
 !!! tip
-    Si el teu projecte no requereix de tasques específiques per a preparar la publicació,
-    pots prescindir de les branques de publicació i publicar directament des de la branca de desenvolupament `develop`.
+    Si el teu projecte no requereix de tasques específiques per a preparar el llançament,
+    pots prescindir d'aquestes branques i publicar directament des de la branca de desenvolupament `develop`.
 
 
 ## Branques de correcció

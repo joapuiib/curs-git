@@ -269,8 +269,8 @@ Els passos que ha de seguir són:
     --8<-- "docs/files/estrategies/stdout/feature_author_delete.txt"
     ```
 
-### Publicació de la versió 1.0.0
-Anna és l'encarregada de preparar la publicació de la versió 1.0.0.
+### Llançament de la versió 1.0.0
+Anna és l'encarregada de preparar el llançament de la versió 1.0.0.
 
 Els passos que ha de seguir són:
 
@@ -280,13 +280,13 @@ Els passos que ha de seguir són:
     --8<-- "docs/files/estrategies/stdout/release_pull.txt"
     ```
 
-1. Crear la branca de publicació `release/v1.0.0` a partir de la branca `develop`.
+1. Crear la branca de llançament `release/v1.0.0` a partir de la branca `develop`.
     
     ```shellconsole
     --8<-- "docs/files/estrategies/stdout/release_create.txt"
     ```
 
-1. Realitzar les tasques necessàries per a preparar la publicació de la versió 1.0.0.
+1. Realitzar les tasques necessàries per a preparar el llançament de la versió 1.0.0.
 
     ```shellconsole
     --8<-- "docs/files/estrategies/stdout/release.txt"
@@ -310,7 +310,7 @@ Els passos que ha de seguir són:
     --8<-- "docs/files/estrategies/stdout/release_tag.txt"
     ```
 
-1. Eliminar la branca de publicació.
+1. Eliminar la branca de llançament.
 
     ```shellconsole
     --8<-- "docs/files/estrategies/stdout/release_delete.txt"
