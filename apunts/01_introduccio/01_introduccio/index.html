@@ -2289,7 +2289,7 @@ dels canvis realitzats en tot l'arbre de directoris i fitxers a partir d'aquest 
     Els desenvolupadors poden resoldre aquests conflictes manualment.</li>
 <li><strong>Col·laboració</strong>: Git facilita la col·laboració en projectes de codi obert o en equips,
     ja que permet a múltiples persones treballar en el mateix projecte de manera eficient.
-    Plataformes com GitHub, GitLab i Bitbucket s'utilitzen comunment per a allotjar repositoris Git en línia i col·laborar en projectes.</li>
+    Plataformes com GitHub, GitLab i Bitbucket s'utilitzen comunament per a allotjar repositoris Git en línia i col·laborar en projectes.</li>
 <li><strong>Codi obert i gratuït</strong>: Git és de codi obert i gratuït, la qual cosa significa que qualsevol pot utilitzar-lo sense cost i contribuir al desenvolupament de l'eina.</li>
 </ul>
 <h2 id="installacio">Instal·lació<a class="headerlink" href="#installacio" title="Permanent link">&para;</a></h2>
@@ -2420,7 +2420,7 @@ Podem observar que estem en la branca <code>main</code> i que de moment no s'ha 
 <div class="admonition danger">
 <p class="admonition-title">Perill</p>
 <p>Sigues extremadament cautelós amb l'ús de la comanda <code>rm -rf</code>,
-ja que elimina tots els fitxers, inclsos aquells protegits contra escriptura.</p>
+ja que elimina tots els fitxers, inclosos aquells protegits contra escriptura.</p>
 </div>
 <details class="example">
 <summary>Exemple: Eliminar un repositori</summary>
@@ -2441,7 +2441,7 @@ on encara no haurem connectat cap repositori <strong>remot</strong>.</p>
 <p><span class="caption-prefix">Figura 1.</span> Components d'un repositori de Git.</p>
 </figcaption>
 </figure>
-<p>En la figura anterior podem observar el que es coneix com <strong>Entorn de desenvolupament</strong> o <strong><em>Development Enviorment</em></strong>.
+<p>En la figura anterior podem observar el que es coneix com <strong>Entorn de desenvolupament</strong> o <strong><em>Development Environment</em></strong>,
 Aquesta part està present <strong>localment</strong> en el teu dispositiu on realitzaràs els canvis i desenvolupament del teu projecte.</p>
 <p>D'una altra banda, està el <strong>Repositori Remot</strong>, que normalment s'allotja a un servidor accessible per tots els
 desenvolupadors.</p>
@@ -2710,8 +2710,8 @@ en el <strong>Directori de treball</strong> o <strong>l'Àrea de Preparació</st
 <li><code>--- a/README.md</code>: Mostra la ruta del fitxer original.</li>
 <li><code>+++ b/README.md</code>: Mostra la ruta del fitxer modificat.</li>
 <li><code>@@ -1,2 +1,3 @@</code>: Mostra la posició de les línies modificades.<ul>
-<li><code>-1,2</code>: Els canvis començen a la línia 1 i afecten 2 línies en el fitxer original.</li>
-<li><code>+1,3</code>: Els canvis començen a la línia 1 i afecten 3 línies en el fitxer modificat.</li>
+<li><code>-1,2</code>: Els canvis comencen a la línia 1 i afecten 2 línies en el fitxer original.</li>
+<li><code>+1,3</code>: Els canvis comencen a la línia 1 i afecten 3 línies en el fitxer modificat.</li>
 </ul>
 </li>
 </ul>
@@ -2839,7 +2839,7 @@ L'històric de canvis es pot consultar amb l'ordre <code>git log</code>.</p>
 <p>S'observa tota la informació dels <code>commit</code> realitzats, com l'autor, la data, el missatge i l'identificador.</p>
 </details>
 <p>L'ordre <code>git log</code> admet moltes opcions per a personalitzar com es mostren els <code>commit</code> i la seua informació.</p>
-<p>Una possible combicació d'opcions per visualitzar l'històric de canvis de manera més compacta i intuïtiva és:</p>
+<p>Una possible combinació d'opcions per visualitzar l'històric de canvis de manera més compacta i intuïtiva és:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>git<span class="w"> </span>log<span class="w"> </span>--graph<span class="w"> </span>--abbrev-commit<span class="w"> </span>--decorate<span class="w"> </span>--format<span class="o">=</span>format:<span class="s1">&#39;%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)&#39;</span>
 </span></code></pre></div>
 <details class="example">
@@ -2855,8 +2855,8 @@ per a simplificar la seua crida.</p>
 </span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.lga<span class="w"> </span><span class="s2">&quot;lg --all&quot;</span>
 </span></code></pre></div>
 <details class="example">
-<summary>Exemple: Històric de canvis compacte amb àlias</summary>
-<p>Després de configurar l'àlias <code>git lg</code> per a l'ordre anterior, podem cridar-lo de la següent manera:</p>
+<summary>Exemple: Històric de canvis compacte amb àlies</summary>
+<p>Després de configurar l'àlies <code>git lg</code> per a l'ordre anterior, podem cridar-lo de la següent manera:</p>
 <div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lg
 </span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">c9fc6c8</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 minutes ago)</span><span class="w"> </span><span class="git-cm">Added another line to README.md</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
 </span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8e70293</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 days ago)</span><span class="w"> </span><span class="git-cm">Added README.md</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
@@ -2989,7 +2989,7 @@ que complisquen algun dels patrons especificats.</p>
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">14 d’octubre del 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">26 d’octubre del 2024</span>
   </span>
 
     

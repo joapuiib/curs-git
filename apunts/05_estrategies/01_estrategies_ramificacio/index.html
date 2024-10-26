@@ -2212,9 +2212,9 @@ eficient de les funcionalitats:</p>
 <p class="admonition-title">Danger</p>
 <p>Aquestes branques sols han de ser utilitzades per corregir errors crítics
 que afecten la versió publicada del projecte i han de corregir-se
-inmediatament.</p>
+immediatament.</p>
 <p>Aquestes branques poden dificultar el flux de treball,
-sobretot si es tracta de mantindra una <strong>història lineal</strong> del projecte.</p>
+sobretot si es tracta de mantindrà una <strong>història lineal</strong> del projecte.</p>
 </div>
 </li>
 </ul>
@@ -2236,9 +2236,9 @@ que cal tindre en compte a l'hora de decidir si val la pena utilitzar-les.</p>
 <p>A més, és important adaptar la metodologia a les necessitats del projecte
 i no seguir-la de forma estricta si no aporta valor afegit.</p>
 <h3 id="bones-practiques">Bones pràctiques<a class="headerlink" href="#bones-practiques" title="Permanent link">&para;</a></h3>
-<p>Per utilitzar les estràtegies de ramificació de forma eficient,
+<p>Per utilitzar les estratègies de ramificació de forma eficient,
 és important seguir una sèrie de bones pràctiques que ajudaran a
-mantrindre l'ordre i la coherència en el projecte.</p>
+mantindre l'ordre i la coherència en el projecte.</p>
 <p>Algunes de les bones pràctiques més importants són:</p>
 <ul>
 <li>
@@ -2259,7 +2259,7 @@ en el nom de la branca, separat per una barra <code>/</code>.</p>
 <li>
 <p>Incorporeu els canvis de <code>develop</code> a les branques <code>feature/*</code> de forma regular.</p>
 <p>És preferible mantindre les branques de funcionalitat actualitzades amb els canvis del projecte,
-i d'aquesta manera, evitar resolucions de conflictes inmenses en el moment d'integrar-les.</p>
+i d'aquesta manera, evitar resolucions de conflictes immenses en el moment d'integrar-les.</p>
 </li>
 </ul>
 <h2 id="integracio-de-les-funcionalitats">Integració de les funcionalitats<a class="headerlink" href="#integracio-de-les-funcionalitats" title="Permanent link">&para;</a></h2>
@@ -2333,7 +2333,7 @@ un <strong>commit de fusió</strong>.</p>
 </ul>
 <h3 id="canvi-de-base-rebase-merge-ff-only">Canvi de base <code>rebase</code> + <code>merge --ff-only</code><a class="headerlink" href="#canvi-de-base-rebase-merge-ff-only" title="Permanent link">&para;</a></h3>
 <p>Aquest mètode per fusionar les branques de funcionalitat es basa en la utilització del canvi de base <code>rebase</code>,
-per després fusionar-la de manera linial amb <code>merge --ff-only</code>.</p>
+per després fusionar-la de manera lineal amb <code>merge --ff-only</code>.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>feature/A
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>git<span class="w"> </span>rebase<span class="w"> </span>develop
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>git<span class="w"> </span>checkout<span class="w"> </span>develop
@@ -2420,7 +2420,7 @@ de la branca de funcionalitat.</p>
 <li>Facilita la revisió de codi, ja que tots els canvis es troben en un únic <em>commit</em>.</li>
 <li>Evita la sobrecàrrega de <em>commits</em> en la branca de desenvolupament <code>develop</code>.</li>
 <li>Els desenvolupador poden despreocupar-se de com queda la història de la branca de funcionalitat,
-    on es poden permetre escriure <em>microcommits</em>, ja que aquests desapareixeran una vegada s'hagen
+    on es poden permetre escriure <em>micro-commits</em>, ja que aquests desapareixeran una vegada s'hagen
     integrat es canvis.</li>
 </ul>
 <p>El principal desavantatge és:</p>
@@ -2504,7 +2504,7 @@ quan la seua correcció no pot esperar a la següent versió.</p>
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">25 d’octubre del 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">26 d’octubre del 2024</span>
   </span>
 
     
