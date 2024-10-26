@@ -1,3 +1,6 @@
+# Pyspelling dictionary
+dictionary.dic
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

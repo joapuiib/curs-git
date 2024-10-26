@@ -27,7 +27,7 @@ Les accions `revert` i `cherry-pick` són eines poc comuns, però poden ser úti
 La comanda `revert` és útil per desfer els canvis d'un commit concret,
 sense alterar la història del repositori.
 
-El seu funcionament consiteix en crear un nou commit que inverteix els canvis del commit que desitgem desfer.
+El seu funcionament consisteix en crear un nou commit que inverteix els canvis del commit que desitgem desfer.
 
 !!! docs
     Documentació oficial de [`git revert`](https://git-scm.com/docs/git-revert){target=_blank}

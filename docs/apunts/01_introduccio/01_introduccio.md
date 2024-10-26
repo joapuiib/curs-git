@@ -43,7 +43,7 @@ Els principals objectius i característiques de Git són:
     Els desenvolupadors poden resoldre aquests conflictes manualment.
 - __Col·laboració__: Git facilita la col·laboració en projectes de codi obert o en equips,
     ja que permet a múltiples persones treballar en el mateix projecte de manera eficient.
-    Plataformes com GitHub, GitLab i Bitbucket s'utilitzen comunment per a allotjar repositoris Git en línia i col·laborar en projectes.
+    Plataformes com GitHub, GitLab i Bitbucket s'utilitzen comunament per a allotjar repositoris Git en línia i col·laborar en projectes.
 - __Codi obert i gratuït__: Git és de codi obert i gratuït, la qual cosa significa que qualsevol pot utilitzar-lo sense cost i contribuir al desenvolupament de l'eina.
 
 
@@ -178,7 +178,7 @@ rm -rf .git
 
 !!! danger
     Sigues extremadament cautelós amb l'ús de la comanda `rm -rf`,
-    ja que elimina tots els fitxers, inclsos aquells protegits contra escriptura.
+    ja que elimina tots els fitxers, inclosos aquells protegits contra escriptura.
 
 ??? example "Exemple: Eliminar un repositori"
     ```shellconsole
@@ -200,7 +200,7 @@ Abans que res, hem de conéixer l'estructura d'un repositori de Git.
 Components d'un repositori de Git.
 ///
 
-En la figura anterior podem observar el que es coneix com __Entorn de desenvolupament__ o __*Development Enviorment*__.
+En la figura anterior podem observar el que es coneix com __Entorn de desenvolupament__ o __*Development Environment*__,
 Aquesta part està present __localment__ en el teu dispositiu on realitzaràs els canvis i desenvolupament del teu projecte.
 
 D'una altra banda, està el __Repositori Remot__, que normalment s'allotja a un servidor accessible per tots els
@@ -494,8 +494,8 @@ Resum de `git diff`.
     - `--- a/README.md`: Mostra la ruta del fitxer original.
     - `+++ b/README.md`: Mostra la ruta del fitxer modificat.
     - `@@ -1,2 +1,3 @@`: Mostra la posició de les línies modificades.
-        - `-1,2`: Els canvis començen a la línia 1 i afecten 2 línies en el fitxer original.
-        - `+1,3`: Els canvis començen a la línia 1 i afecten 3 línies en el fitxer modificat.
+        - `-1,2`: Els canvis comencen a la línia 1 i afecten 2 línies en el fitxer original.
+        - `+1,3`: Els canvis comencen a la línia 1 i afecten 3 línies en el fitxer modificat.
 
     Després, es mostren les línies modificades:
 
@@ -633,7 +633,7 @@ git log [options]
 
 L'ordre `git log` admet moltes opcions per a personalitzar com es mostren els `commit` i la seua informació.
 
-Una possible combicació d'opcions per visualitzar l'històric de canvis de manera més compacta i intuïtiva és:
+Una possible combinació d'opcions per visualitzar l'històric de canvis de manera més compacta i intuïtiva és:
 
 ```bash
 git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
@@ -654,8 +654,8 @@ git config --global alias.lg "log --graph --abbrev-commit --decorate --format=fo
 git config --global alias.lga "lg --all"
 ```
 
-??? example "Exemple: Històric de canvis compacte amb àlias"
-    Després de configurar l'àlias `git lg` per a l'ordre anterior, podem cridar-lo de la següent manera:
+??? example "Exemple: Històric de canvis compacte amb àlies"
+    Després de configurar l'àlies `git lg` per a l'ordre anterior, podem cridar-lo de la següent manera:
 
     ```shellconsole
     jpuigcerver@FP:~/git_introduccio (main) $ git lg

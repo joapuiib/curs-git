@@ -65,7 +65,7 @@ MAJOR.MINOR.PATCH
 ### Creació d'etiquetes
 L'ordre `git tag` ens permet crear etiquetes lleugeres o anotades.
 
-La sintaixi és la següent:
+La sintaxi és la següent:
 ```bash
 git tag [-a] <nom_etiqueta> [-m "missatge"] [<ref>]
 ```
@@ -138,7 +138,7 @@ git show <nom_etiqueta>
 ??? example "Exemple: Consultar informació d'una etiqueta anotada"
     Mostrem la informació de l'etiqueta anotada `v1.0.0`.
 
-    Podem obervar:
+    Podem observar:
 
     - La persona que ha creat l'etiqueta.
     - La data de creació.

@@ -52,7 +52,7 @@ Reservar canvis amb `stash`
 ??? example "Exemple: Crear una reserva de canvis"
     En aquest exemple, es guardaran els canvis realitzats al fitxer `README.md` al `stash`.
 
-    Com que canviar a la branca `feature/documentacio` sobrescriuria el contingut de `README.md`,
+    Com que canviar a la branca `feature/documentacio` sobreescriuria el contingut de `README.md`,
     Git no ens ho permet i ens recomana reservar els canvis o confirmar-los.
 
     ```shellconsole
@@ -94,7 +94,7 @@ mostrarà per defecte el `stash@{0}`.
     ```
 
 ### Recuperar els canvis
-Els canvis reservats poden recuperar-se mitjancant l'acció `apply`.
+Els canvis reservats poden recuperar-se mitjançant l'acció `apply`.
 
 ```bash
 git stash apply [index]
@@ -126,7 +126,7 @@ Recuperar canvis i esborrar la reserva amb `stash pop`
     ```
 
 ### Descartar els canvis
-Una reserva de canvis pot ser elminada de la pila de canvis mitjançant
+Una reserva de canvis pot ser eliminada de la pila de canvis mitjançant
 l'acció `drop`.
 
 ```bash

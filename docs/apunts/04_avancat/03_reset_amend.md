@@ -15,7 +15,7 @@ tags:
 ## Reset
 L'ordre `git reset` ens permet moure la referència de la branca actual a qualsevol
 altre _commit_ del repositori.
-Això significa que podem modificar l'història del repositori local local,
+Això significa que podem modificar la història del repositori local local,
 per ajustar o refer la història a les nostres necessitats.
 
 Algunes de les accions que podem fer mitjançant aquestes eines són:
@@ -141,7 +141,7 @@ git reset --hard <ref>
 El mode `reset --keep` és molt similar al comportament per defecte.
 
 En aquest cas, no permet realitzar el `reset` si això comporta
-que els canvis actuals del _Directori de Treball_ sigen sobrescrits
+que els canvis actuals del _Directori de Treball_ siguen sobreescrits
 per els canvis de l'operació de `reset`.
 
 ```
@@ -149,7 +149,7 @@ git reset --keep <ref>
 ```
 
 ??? example "Exemple: reset --keep"
-    Com que realitzar el `reset` comportaria sobreesciure els canvis del __Directori de Treball__,
+    Com que realitzar el `reset` comportaria sobreescriure els canvis del __Directori de Treball__,
     l'operació no es realitza.
 
     ```shellconsole

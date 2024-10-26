@@ -65,7 +65,7 @@ són una eina de creació i seguiment d'incidències relacionades amb un project
 
 En aquest espai, també es permet la comunicació i la col·laboració
 entre els membres del projecte per a aportar informació sobre la incidència,
-debatir sobre la seva resolució.
+debatre sobre la seva resolució.
 
 !!! example "Incidències en aquest repositori"
     La ferramenta [MkDocs](https://www.mkdocs.org/){:target="_blank"}
@@ -120,7 +120,7 @@ que inclouen diferents vistes i organització de les tasques:
 - __Backlog__: un tauler Kanban amb les tasques pendents organitzades per columnes.
 - __Current iteration__: tasques que s'han planificat per a la iteració o Sprint actual.
 - __Roadmap__: un diagrama de Gantt amb les tasques planificades al llarg del temps.
-- __Team planning__: Mostra una vista més detellada de cada tasca, organitzades per estat, prioritat i assignació.
+- __Team planning__: Mostra una vista més detallada de cada tasca, organitzades per estat, prioritat i assignació.
 - __My items__: Semblant a la vista de "Team planning", però mostra només les tasques assignades a l'usuari.
 
 Cada tasca es crea com un __esborrany__, que pot ser
@@ -131,7 +131,7 @@ especificar:
 
 - La __persona assignada__.
 - La __prioritat__.
-- El __tamany__.
+- La __mida__.
 - L'__estimació de temps__.
 - La __data d'inici__
 - La __data de finalització__.

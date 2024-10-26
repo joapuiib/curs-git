@@ -21,7 +21,7 @@ Els objectius d'aquests exercici són:
 ### Creació repositori remot
 0. Crea un compte a [:material-github: GitHub](https://github.com) si no en tens un.
 1. Crea un repositori remot anomenat `bloc3_exercici` completament __buit__:
-    1. No afegisques cap fitxer (README.md, LICENCE, .gitignore, etc.).
+    1. No afegisques cap fitxer (README.md, LICENSE, .gitignore, etc.).
 
 ### Creació repositori local
 1. Crea un directori anomenat `bloc3_exercici` en la teua carpeta de treball.
@@ -40,7 +40,7 @@ Els objectius d'aquests exercici són:
     Comprova a [:material-github: GitHub](https://github.com) que el repositori remot
     conté el fitxer `llibres.txt`.
 
-### Clonacló del repositori remot
+### Clonació del repositori remot
 1. Clona el repositori remot a un directori anomenat
     `bloc3_exercici_clone` en la teua carpeta de treball.
 1. Comprova que el directori `bloc3_exercici_clone` conté el fitxer
@@ -101,8 +101,8 @@ Des del repositori `bloc3_exercici`:
 
 Des del repositori `bloc3_exercici_clone`:
 
-1. Sinconitza el repositori local amb el repositori remot (`git fetch`).
-1. Afegeix la pel·lícula __El sentido de la vida__ al fitxer `pelicules.txt`.
+1. Sincronitza el repositori local amb el repositori remot (`git fetch`).
+1. Afegeix la pel·lícula __El sentit de la vida__ al fitxer `pelicules.txt`.
 1. Realitza un _commit_.
 1. Incorpora els canvis de la branca `origin/main` a la branca `main` local
     amb un canvi de base.

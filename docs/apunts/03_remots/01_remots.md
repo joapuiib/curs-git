@@ -10,7 +10,7 @@ tags:
     - git pull
     - git push
     - git remote
-    - github
+    - GitHub
     - ssh
     - personal access token
     - origin
@@ -115,7 +115,7 @@ Alguns dels serveis d'allotjament repositoris remots en línia més coneguts só
     També ofereix plans de pagament per projectes empresarials.
 
 - __[:simple-gitlab: GitLab](https://gitlab.com/)__: Servei d'allotjament de repositoris. GitLab és una plataforma de codi obert.
-- __[:simple-bitbucket: BitBucket](https://bitbucket.org/)__: Servei d'allotjament de repositoris propietat de l'empresa Atlassian,
+- __[:simple-bitbucket: Bitbucket](https://bitbucket.org/)__: Servei d'allotjament de repositoris propietat de l'empresa Atlassian,
     s'integra estretament amb altres eines d'aquesta empresa, com Jira.
 
 !!! info
@@ -206,7 +206,7 @@ que permet autenticar-se amb el servidor de GitHub mitjançant el protocol HTTPS
 
 !!! docs
     - [GitHub: Managing your personal access tokens](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
-    - [Stackoverflow: Message "Support for password authentication was removed."](https://stackoverflow.com/questions/68775869/message-support-for-password-authentication-was-removed)
+    - [StackOverflow: Message "Support for password authentication was removed."](https://stackoverflow.com/questions/68775869/message-support-for-password-authentication-was-removed)
 
 Per crear un token d'accés personal, segueix els següents passos:
 
@@ -291,7 +291,7 @@ Per generar una clau SSH, segueix els següents passos.
         - Pots indicar la ruta on guardar la clau. Per defecte, es guarda en `/home/<usuari>/.ssh/id_rsa`.
         - Pots indicar una contrasenya per protegir la clau. Si no vols protegir-la, deixa el camp buit.
 
-    - Còpia el contingut de la clau pública (`id_rsa.pub`) al portaretalls.
+    - Còpia el contingut de la clau pública (`id_rsa.pub`) al porta-retalls.
 
         ```shellconsole
         jpuigcerver@fp:~ $ cat ~/.ssh/id_rsa.pub
@@ -315,7 +315,7 @@ Per generar una clau SSH, segueix els següents passos.
     - Fes clic a __Generate Key__.
         - Indica una contrasenya (_passphrase_) per protegir la clau (opcional)
             o deixa el camp buit per no protegir-la.
-    - Fes clic a __Copy to Clipboard__ per copiar la clau pública al portaretalls.
+    - Fes clic a __Copy to Clipboard__ per copiar la clau pública al porta-retalls.
 
         ![Git GUI: clau SSH generada](img/git_gui_key_generated.png)
         /// caption
@@ -420,7 +420,7 @@ Repositori Local vinculat amb un Repositori Remot
 
 1. Utilitzem la URL __SSH__ ja que he decidit utilitzar aquest mètode d'autenticació.
 
-### Renombrar un repositori remot
+### Reanomenar un repositori remot
 L'ordre `git remote rename` permet canviar el nom
 d'un repositori remot associat al teu repositori local.
 
@@ -579,7 +579,7 @@ Clonació d'un repositori remot
     que conté els fitxers i la història de canvis del repositori remot.
 
 
-## Sincronitzacio entre repositoris (`git fetch`)
+## Sincronització entre repositoris (`git fetch`)
 
 ??? prep "Preparació: Pau realitza canvis"
     Pau crea el fitxer `pau.txt` amb el contingut `Canvi realitzat per Pau`.
@@ -720,13 +720,13 @@ git pull [<options>] [<remot> [<branca>]
     Documentació oficial de `git pull`: https://git-scm.com/docs/git-pull
 
 !!! warning
-    La fusió (`merge`) implicita de `git pull` pot ser una [[branques#fusio-directa]]{: target="_blank"}
+    La fusió (`merge`) implícita de `git pull` pot ser una [[branques#fusio-directa]]{: target="_blank"}
     o es pot produir una [[branques#fusio-de-branques-divergents]]{: target="_blank"} si
     la branca local i la branca remota divergeixen.
 
     En aquest últim cas:
 
-    - __Poden produïr conflictes__. Si es produeixen, caldrà resoldre'ls manualment.
+    - __Poden produir conflictes__. Si es produeixen, caldrà resoldre'ls manualment.
     - Executar directament `git pull` __generarà un commit de fusió__,
         que pot ser no és desitjable si es vol mantenir __una història lineal__.
     
@@ -812,7 +812,7 @@ git pull [<options>] [<remot> [<branca>]
     Una de les situacions més comunes que ens porten a que la branca local divergisca de la branca remota és
     quan realitzem canvis sobre la branca local sense haver sincronitzat abans el seu estat amb la branca remota associada.
 
-    En aquest cas, Pau ha realitzat un altre canvi en el repositori remot, que nosaltrens no hem incorporat.
+    En aquest cas, Pau ha realitzat un altre canvi en el repositori remot, que nosaltres no hem incorporat.
 
     No obstant això, anem a fer un canvi a la branca local `main`, simulant la situació anteriorment descrita.
 
@@ -893,7 +893,7 @@ git pull [<options>] [<remot> [<branca>]
     * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
     ```
 
-## Elminar una branca remota
+## Eliminar una branca remota
 Per eliminar una branca remota, cal utilitzar `git push` amb l'opció `-d`:
 
 ```bash

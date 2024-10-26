@@ -9,7 +9,7 @@ alias: avancat-exercicis
 Els objectius d'aquest exercici són:
 
 - Conéixer i saber aplicar els mètodes per modificar la història del repositori.
-- Conéixer com modificar el commit anteior, canviant els canvis realitzats i el seu missatge.
+- Conéixer com modificar el commit anterior, canviant els canvis realitzats i el seu missatge.
 - Conéixer com fusionar de branques en un sol _commit_.
 - Conéixer com aplicar la còpia de _commits_.
 
@@ -40,15 +40,15 @@ quede com es mostra a continuació.
 ```
 
 ### Tasca 2
-Modifica el missatge del _commit_ __canviA__
-per __Canvi A__.
+Modifica el missatge del _commit_ __`canviA`__
+per __`Canvi A`__.
 
 ```shellconsole
 --8<-- "docs/files/avancat/stdout/exercici/estructura_amend.txt"
 ```
 
 ### Tasca 3
-Còpia els continguts dels _commits_ __Canvi A__, __Canvi B__ i __Canvi C__
+Còpia els continguts dels _commits_ __`Canvi A`__, __`Canvi B`__ i __`Canvi C`__
 a la branca `canvis`.
 
 ```shellconsole

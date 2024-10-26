@@ -7,7 +7,7 @@ hide:
   - navigation
 ---
 
-*[CI/CD]: Continous Integration/Continous Deployment
+*[CI/CD]: Continuous Integration/Continuous Deployment
 
 ## Objectius
 

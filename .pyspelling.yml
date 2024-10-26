@@ -1,0 +1,27 @@
+spellchecker: hunspell
+jobs: 4
+
+matrix:
+  - name: mkdocs
+    pipeline:
+      - pyspelling.filters.html:
+          comments: false
+          attributes:
+          - title
+          - alt
+          ignores:
+          - ':matches(code, pre)'
+          - 'a:matches(.magiclink-compare, .magiclink-commit, .magiclink-repository)'
+          - '.md-social__link'
+          - 'span.keys'
+          - '.arithmatex, .md-nav__link, .md-footer-custom-text, .md-source__repository, .headerlink, .md-icon'
+          - 'div.language-bash.highlight'
+      - pyspelling.filters.url:
+    sources:
+      - site/**/*.html
+    hunspell:
+      r: True
+      d: ca-ES-valencia,en_US
+    dictionary:
+      wordlists:
+      - docs/src/dictionary/hunspell/custom.txt

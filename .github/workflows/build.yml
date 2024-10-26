@@ -1,0 +1,50 @@
+name: build
+
+on:
+  push:
+    branches:
+      - 'main'
+    tags:
+    - '**'
+  pull_request:
+    branches:
+    - '**'
+  workflow_dispatch:
+
+jobs:
+  documents:
+    runs-on: ubuntu-latest
+    env:
+      DICPATH: .hunspell/
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure Git Credentials
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+          cache: 'pip'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Install hunspell
+        run: sudo apt install hunspell
+      - name: Build documents
+        run: mkdocs build --clean
+
+      - name: Set up dictionary cache
+        id: cache-file
+        uses: actions/cache@v3
+        with:
+          path: .hunspell/ca_ES_valencia.dic
+          key: ${{ runner.os }}-downloaded-file-${{ hashFiles('.hunspell/ca_ES_valencia.dic') }}
+          restore-keys: |
+            ${{ runner.os }}-downloaded-file-
+      - name: Download dictionary
+        if: steps.cache-file.outputs.cache-hit != 'true'
+        run: |
+          curl -L https://github.com/Softcatala/catalan-dict-tools/blob/master/resultats/hunspell/catalan-valencia.dic
+               -o .hunspell/ca_ES_valencia.dic
+          curl -L https://raw.githubusercontent.com/Softcatala/catalan-dict-tools/refs/heads/master/resultats/hunspell/catalan-valencia.aff
+               -o .hunspell/ca_ES_valencia.aff
+      - name: Spell check
+        run: pyspelling

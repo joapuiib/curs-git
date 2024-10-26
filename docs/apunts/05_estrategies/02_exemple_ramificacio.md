@@ -49,7 +49,7 @@ Cada desenvolupador començarà a treballar en una nova funcionalitat.
 
 - Anna treballarà en la funcionalitat `feature/readme`, que consistirà a afegir una descripció del projecte al README.
 - Pau treballarà en la funcionalitat `feature/license`, que consistirà a afegir una llicència al projecte.
-- Mar treballarà en la funcionalitat `feature/author`, que consistirà a afegir el nom de l'autors del projecte al README.
+- Mar treballarà en la funcionalitat `feature/author`, que consistirà a afegir el nom dels autors del projecte al README.
 
 A partir d'aquest moment, cada desenvolupador treballarà en el seu propi repositori,
 en la seua pròpia branca de funcionalitat de manera independent i paral·lela.
@@ -57,7 +57,7 @@ en la seua pròpia branca de funcionalitat de manera independent i paral·lela.
 !!! important
     És important que cada desenvolupador treballe en una única branca per funcionalitat, i que una mateixa branca no es compartisca entre desenvolupadors.
 
-    Si existeix la necessitat de compartir una branca, segurament siga perque la funcionalitat no està ben definida i podrà ser dividida en diverses funcionalitats més xicotetes.
+    Si existeix la necessitat de compartir una branca, segurament siga perquè la funcionalitat no està ben definida i podrà ser dividida en diverses funcionalitats més xicotetes.
 
 #### Branca `feature/readme`
 Anna començarà a treballar en la seua funcionalitat `feature/readme` en el seu repositori local.
@@ -127,7 +127,7 @@ Anem a veure com integrar les funcionalitats amb la tècnica __`merge` + `merge 
 seguint el procés indicat a [[estrategies#integracio-de-les-funcionalitats]]{:target=_blank}.
 
 
-#### Integracó de `feature/readme`
+#### Integració de `feature/readme`
 Anna ja ha acabat la seua funcionalitat `feature/readme` i vol integrar-la a la branca `develop`.
 
 Els passos que ha de seguir són:

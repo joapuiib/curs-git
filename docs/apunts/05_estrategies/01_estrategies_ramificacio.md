@@ -75,10 +75,10 @@ eficient de les funcionalitats:
     !!! danger
         Aquestes branques sols han de ser utilitzades per corregir errors crítics
         que afecten la versió publicada del projecte i han de corregir-se
-        inmediatament.
+        immediatament.
 
         Aquestes branques poden dificultar el flux de treball,
-        sobretot si es tracta de mantindra una __història lineal__ del projecte.
+        sobretot si es tracta de mantindrà una __història lineal__ del projecte.
 
 ### Avantatges i desavantatges
 Utilitzar aquest tipus d'estratègies de ramificació presenta una sèrie d'avantatges i desavantatges
@@ -101,9 +101,9 @@ i no seguir-la de forma estricta si no aporta valor afegit.
 
 
 ### Bones pràctiques
-Per utilitzar les estràtegies de ramificació de forma eficient,
+Per utilitzar les estratègies de ramificació de forma eficient,
 és important seguir una sèrie de bones pràctiques que ajudaran a
-mantrindre l'ordre i la coherència en el projecte.
+mantindre l'ordre i la coherència en el projecte.
 
 Algunes de les bones pràctiques més importants són:
 
@@ -122,7 +122,7 @@ Algunes de les bones pràctiques més importants són:
 - Incorporeu els canvis de `develop` a les branques `feature/*` de forma regular.
 
     És preferible mantindre les branques de funcionalitat actualitzades amb els canvis del projecte,
-    i d'aquesta manera, evitar resolucions de conflictes inmenses en el moment d'integrar-les.
+    i d'aquesta manera, evitar resolucions de conflictes immenses en el moment d'integrar-les.
 
 ## Integració de les funcionalitats
 
@@ -195,7 +195,7 @@ El principal desavantatge és:
 
 ### Canvi de base `rebase` + `merge --ff-only`
 Aquest mètode per fusionar les branques de funcionalitat es basa en la utilització del canvi de base `rebase`,
-per després fusionar-la de manera linial amb `merge --ff-only`.
+per després fusionar-la de manera lineal amb `merge --ff-only`.
 
 ```bash
 git checkout feature/A
@@ -295,7 +295,7 @@ Els avantatges principals d'aquesta opció són:
 - Facilita la revisió de codi, ja que tots els canvis es troben en un únic _commit_.
 - Evita la sobrecàrrega de _commits_ en la branca de desenvolupament `develop`.
 - Els desenvolupador poden despreocupar-se de com queda la història de la branca de funcionalitat,
-    on es poden permetre escriure _microcommits_, ja que aquests desapareixeran una vegada s'hagen
+    on es poden permetre escriure _micro-commits_, ja que aquests desapareixeran una vegada s'hagen
     integrat es canvis.
 
 El principal desavantatge és:

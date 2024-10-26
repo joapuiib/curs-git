@@ -47,7 +47,7 @@ pots triar entre les següents opcions:
     !!! note
         Modifica `genereX` per un gènere de pel·lícules o sèries que t'agrade.
 
-6. En cada branca de funcionlitat:
+6. En cada branca de funcionalitat:
     - `feature/pelicules-genere1`: Afegeix 2 pel·lícules del gènere 1 a `pelicules.txt`.
     - `feature/pelicules-genere2`: Afegeix 2 pel·lícules del gènere 2 a `pelicules.txt`.
     - `feature/series-genere3`: Afegeix 2 sèries del gènere 3 a `series.txt`.

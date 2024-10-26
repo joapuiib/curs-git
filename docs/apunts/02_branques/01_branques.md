@@ -182,7 +182,7 @@ per evitar confusions.
     - Documentació de la ordre `git switch`: https://git-scm.com/docs/git-switch
 
 !!! info
-    Més informació: [Stack Overflow: What's the difference between 'git switch' and 'git checkout' &lt;branch&gt;?](https://stackoverflow.com/questions/57265785/whats-the-difference-between-git-switch-and-git-checkout-branch)
+    Més informació: [Stack Overflow: What's the difference between `git switch` and `git checkout` &lt;branch&gt;?](https://stackoverflow.com/questions/57265785/whats-the-difference-between-git-switch-and-git-checkout-branch)
 
 En qualsevol cas, canviar de branca significa moure el punter `HEAD` a la branca desitjada.
 El canvi de branca també implica modificar el contingut del __Directori de Treball__ a l'estat
@@ -289,7 +289,7 @@ git branch [-d | --delete] [-D] [-f | --force] <nom>
 
 !!! warning
     Quan un `commit` perd totes les referències per a ser accedit,
-    es diu que és un `commit` __orfre__ i serà eliminat pel
+    es diu que és un `commit` __orfe__ i serà eliminat pel
     __recol·lector de brossa__ (_garbage collector_) de Git.
 
     L'eliminació d'una branca pot provocar la pèrdua de commits.
@@ -336,7 +336,7 @@ git merge <branca>
 !!! docs
     Documentació de la ordre `git merge`: https://git-scm.com/docs/git-merge
 
-Segons l'estrucura de les branques, la fusió pot ser [__directa__](#fusio-directa) (_fast-forward_)
+Segons l'estructura de les branques, la fusió pot ser [__directa__](#fusio-directa) (_fast-forward_)
 o mitjançant [__commit de fusió__](#fusio-de-branques-divergents) (_merge commit_).
 
 
@@ -352,7 +352,7 @@ mantenint una __història lineal__.
 Estructura de branques abans de la fusió directa.
 ///
 
-Aquesta fusió consiteix a avançar el punter de la branca actual (`HEAD`)
+Aquesta fusió consisteix a avançar el punter de la branca actual (`HEAD`)
 fins on es troba la branca que es vol fusionar.
 
 ![Estructura de branques després de la fusió directa](img/after_ff.png)
@@ -661,9 +661,9 @@ Una vegada resolt el conflicte, caldrà confirmar els canvis amb `git add` i `gi
 
 ## Canvi de base (`rebase`)
 El __canvi de base__ (`rebase`) és una altra manera de fusionar canvis de branques __divergents__,
-que consiteix en aplicar els canvis dels `commit` d'una branca sobre una altra branca, en ordre cronològic.
+que consisteix en aplicar els canvis dels `commit` d'una branca sobre una altra branca, en ordre cronològic.
 
-Aquesta tècnica permet eliminar les branques diveregents i mantenir una __història lineal__.
+Aquesta tècnica permet eliminar les branques divergents i mantindre una __història lineal__.
 
 Aquest procés es realitza amb l'ordre:
 ```bash
