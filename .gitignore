@@ -1,5 +1,6 @@
 # Pyspelling dictionary
 dictionary.dic
+.hunspell/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -19,13 +19,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Configure Git Credentials
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
           cache: 'pip'
       - name: Install dependencies
         run: pip install -r requirements.txt
+      - name: Install pyspelling
+        run: pip install pyspelling
       - name: Install hunspell
         run: sudo apt install hunspell
       - name: Build documents
@@ -42,9 +43,9 @@ jobs:
       - name: Download dictionary
         if: steps.cache-file.outputs.cache-hit != 'true'
         run: |
-          curl -L https://github.com/Softcatala/catalan-dict-tools/blob/master/resultats/hunspell/catalan-valencia.dic
-               -o .hunspell/ca_ES_valencia.dic
-          curl -L https://raw.githubusercontent.com/Softcatala/catalan-dict-tools/refs/heads/master/resultats/hunspell/catalan-valencia.aff
-               -o .hunspell/ca_ES_valencia.aff
+          hunspell -D
+          mkdir -p .hunspell
+          curl -L https://raw.githubusercontent.com/Softcatala/catalan-dict-tools/refs/heads/master/resultats/hunspell/catalan-valencia.dic -o .hunspell/ca_ES_valencia.dic
+          curl -L https://raw.githubusercontent.com/Softcatala/catalan-dict-tools/refs/heads/master/resultats/hunspell/catalan-valencia.aff -o .hunspell/ca_ES_valencia.aff
       - name: Spell check
         run: pyspelling

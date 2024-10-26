@@ -21,7 +21,7 @@ matrix:
       - site/**/*.html
     hunspell:
       r: True
-      d: ca-ES-valencia,en_US
+      d: ca_ES_valencia,en_US
     dictionary:
       wordlists:
       - docs/src/dictionary/hunspell/custom.txt
