@@ -20,7 +20,7 @@ matrix:
     sources:
       - site/**/*.html
     hunspell:
-      r: True
+      # r: True
       d: ca_ES_valencia,en_US
     dictionary:
       wordlists:

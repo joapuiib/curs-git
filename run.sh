@@ -8,11 +8,17 @@ function print {
 
 BUILD=0
 INSTALL_VENV=0
+SPELL=0
 ARGS=''
 while [ $# -gt 0 ] ; do
     case $1 in
         -b)
             BUILD=1
+            ;;
+        --spell)
+            BUILD=1
+            SPELL=1
+            ARGS="$ARGS --clean"
             ;;
         --install-venv)
             INSTALL_VENV=1
@@ -41,9 +47,34 @@ if [ $INSTALL_VENV -eq 1 ]; then
     ./venv/bin/pip install -r requirements.txt
 fi
 
+source venv/bin/activate
+
 COMMAND="serve"
 if [ $BUILD -eq 1 ]; then
     COMMAND="build"
 fi
 
-./venv/bin/mkdocs $COMMAND $ARGS
+mkdocs $COMMAND $ARGS
+
+if [ $SPELL -eq 1 ]; then
+    export DICPATH=.hunspell
+    print "Checking spelling..."
+    mkdir -p .hunspell
+
+    if ! python -c 'import pyspelling' 2>/dev/null; then
+        print "Installing pyspelling..."
+        pip install pyspelling
+    fi
+
+    if [ ! -f .hunspell/ca_ES_valencia.dic ]; then
+        print "Downloading ca_ES_valencia dictionary..."
+        curl -L https://raw.githubusercontent.com/Softcatala/catalan-dict-tools/refs/heads/master/resultats/hunspell/catalan-valencia.dic -o .hunspell/ca_ES_valencia.dic
+    fi
+    if [ ! -f .hunspell/ca_ES_valencia.aff ]; then
+        print "Downloading ca_ES_valencia affix file..."
+        curl -L https://raw.githubusercontent.com/Softcatala/catalan-dict-tools/refs/heads/master/resultats/hunspell/catalan-valencia.aff -o .hunspell/ca_ES_valencia.aff
+    fi
+
+    print "Running pyspelling..."
+    pyspelling -vv
+fi
