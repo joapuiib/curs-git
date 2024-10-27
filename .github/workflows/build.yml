@@ -9,7 +9,6 @@ on:
   pull_request:
     branches:
     - '**'
-  workflow_dispatch:
 
 jobs:
   documents:
@@ -34,8 +33,6 @@ jobs:
       - name: Build documents
         run: mkdocs build --clean
 
-      - name: Set up dictionary cache
-        id: cache-file
       - name: Download dictionary
         run: |
           mkdir -p .hunspell
