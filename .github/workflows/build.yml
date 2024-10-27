@@ -36,18 +36,11 @@ jobs:
 
       - name: Set up dictionary cache
         id: cache-file
-        uses: actions/cache@v3
-        with:
-          path: .hunspell/ca_ES_valencia.dic
-          key: ${{ runner.os }}-downloaded-file-${{ hashFiles('.hunspell/ca_ES_valencia.dic') }}
-          restore-keys: |
-            ${{ runner.os }}-downloaded-file-
       - name: Download dictionary
-        if: steps.cache-file.outputs.cache-hit != 'true'
         run: |
           mkdir -p .hunspell
           curl -L https://raw.githubusercontent.com/Softcatala/catalan-dict-tools/refs/heads/master/resultats/hunspell/catalan-valencia.dic -o .hunspell/ca_ES_valencia.dic
           curl -L https://raw.githubusercontent.com/Softcatala/catalan-dict-tools/refs/heads/master/resultats/hunspell/catalan-valencia.aff -o .hunspell/ca_ES_valencia.aff
           hunspell -D
       - name: Spell check
-        run: pyspelling -vv
+        run: pyspelling
