@@ -145,6 +145,12 @@
         <xhtml:link rel="alternate" hreflang="ca" href="https://joapuiib.github.io/curs-git/apunts/06_projectes/02_forks/"/>
     </url>
     <url>
+        <loc>https://joapuiib.github.io/curs-git/apunts/06_projectes/03_actions/</loc>
+        <lastmod>2024-10-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ca" href="https://joapuiib.github.io/curs-git/apunts/06_projectes/03_actions/"/>
+    </url>
+    <url>
         <loc>https://joapuiib.github.io/curs-git/apunts/07_educativa/01_educativa/</loc>
         <lastmod>2024-10-27</lastmod>
         <changefreq>daily</changefreq>
