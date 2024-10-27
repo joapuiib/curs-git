@@ -10,6 +10,7 @@ BUILD=0
 INSTALL_VENV=0
 SPELL=0
 ARGS=''
+ACT=''
 while [ $# -gt 0 ] ; do
     case $1 in
         -b)
@@ -23,12 +24,33 @@ while [ $# -gt 0 ] ; do
         --install-venv)
             INSTALL_VENV=1
             ;;
+        --act)
+            ACT=$2
+            if [ -z "$ACT" ]; then
+                print "Missing workflow name."
+                exit 1
+            fi
+            shift
+            ;;
         *)
             ARGS="$ARGS $1"
             ;;
     esac
     shift
 done
+
+if [ -n "$ACT" ]; then
+    if ! which act 2>/dev/null; then
+        print "act not found."
+        exit 1
+    fi
+    if [ ! -f ".github/workflows/$ACT" ]; then
+        print "Workflow $ACT not found."
+        exit 1
+    fi
+    act -W .github/workflows/$ACT
+    exit
+fi
 
 if [ ! -d "venv" ]; then
     INSTALL_VENV=1
@@ -57,7 +79,7 @@ fi
 mkdocs $COMMAND $ARGS
 
 if [ $SPELL -eq 1 ]; then
-    export DICPATH=.hunspell
+    export DICPATH=.hunspell/
     print "Checking spelling..."
     mkdir -p .hunspell
 
@@ -76,5 +98,5 @@ if [ $SPELL -eq 1 ]; then
     fi
 
     print "Running pyspelling..."
-    pyspelling -vv
+    pyspelling
 fi

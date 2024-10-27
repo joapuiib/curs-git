@@ -1,26 +1,29 @@
-name: deploy
-on:
+name: deploy # Nom de l'automatització
+on: # Events que disparen l'automatització
   push:
     branches:
-      - main
-permissions:
-  contents: write
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+      - main # Quan es fa un push a la branca main
+
+permissions: # Permisos que es concedeixen a l'automatització
+  contents: write # Permet escriure al repositori
+
+jobs: # Llista de tasques a executar
+  deploy: # Nom de la tasca
+    runs-on: ubuntu-latest # Sistema operatiu on s'executarà la tasca
+
+    steps: # Passos a executar
+      - uses: actions/checkout@v4 # Acció per clonar i còpiar el repositori a l'entorn d'execució
         with:
           fetch-depth: 0
-      - name: Configure Git Credentials
+      - name: Configure Git Credentials # Acció per configurar les credencials de Git
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5 # Acció per configurar Python
         with:
           python-version: 3.x
           cache: 'pip'
-      - name: Install dependencies
+      - name: Install dependencies # Acció per instal·lar les dependències
         run: pip install -r requirements.txt
-      - name: Build and deploy
+      - name: Build and deploy # Acció per compilar i desplegar la documentació
         run: mkdocs gh-deploy --force

@@ -30,7 +30,7 @@ poden intercanviar idees, opinions, realitzar suggeriments o debatre sobre temes
     Aquest lloc web està allotjat a :simple-github: GitHub i s'ha
     habilitat la funcionalitat de debats.
 
-    Podeu accedir mitjançant la secció "Discussions" del menú superior
+    Podeu accedir mitjançant la secció __:octicons-comment-discussion-16: Discussions__ del menú superior
     o en [aquest enllaç](https://github.com/joapuiib/curs-git/discussions){:target="_blank"}.
 
     [![Exemple de debat en un repositori de GitHub](./img/projectes/exemple_debats.png)](https://github.com/joapuiib/curs-git/discussions){:target="_blank"}
@@ -40,7 +40,7 @@ poden intercanviar idees, opinions, realitzar suggeriments o debatre sobre temes
 
 
 Aquesta funcionalitat no està habilitada per defecte.
-Per activar-la, cal anar al menú de configuració del repositori
+Per activar-la, cal anar al menú de configuració del repositori __:octicons-gear-16: Settings__
 i habilitar la funcionalitat de debats.
 
 ![Configuració de les Discussions en un repositori de GitHub](./img/projectes/habilitar_debats.png)
@@ -73,7 +73,7 @@ debatre sobre la seva resolució.
     propi [repositori a :simple-github: GitHub](https://github.com/mkdocs/mkdocs){:target="_blank"}.
 
     Podeu accedir a les incidències d'aquesta ferramenta
-    mitjançant la secció "Issues" del menú superior
+    mitjançant la secció __:octicons-issue-opened-16: Issues__ del menú superior
     o en [aquest enllaç](https://github.com/mkdocs/mkdocs/issues){:target="_blank"}.
 
     [![Exemple d'incidències en un repositori de GitHub](./img/projectes/exemple_issues.png)](https://github.com/mkdocs/mkdocs/issues){:target="_blank"}.
@@ -144,6 +144,36 @@ Exemple de tasca en un projecte de GitHub
 
 ### Llançaments
 Els [__llançaments o *Releases*__](https://docs.github.com/es/github/administering-a-repository/releasing-projects-on-github/about-releases){:target="_blank"}
-és una funcionalitat que permet publicar versions del projecte.
+és una funcionalitat que permet indicar quan una versió del projecte ha segut llançada, incloent informació rellevant sobre els canvis realitzats i les persones
+que han contribuït.
 
-@TODO: Afegir exemple de llançament
+Els llançaments sempre estan associats a una __[[etiquetes|etiqueta]]{:target="_blank"}__ del repositori.
+
+!!! example "Llançaments en `mkdocs-material`"
+    El repositori de [`mkdocs-material`](https://github.com/squidfunk/mkdocs-material/){:target="_blank"}
+    és un tema per a MkDocs sobre el que es basa aquest lloc web.
+
+    Podeu accedir als llançaments d'aquest repositori mitjançant la secció __Releases__ de
+    la barrar lateral o en [aquest enllaç](https://github.com/squidfunk/mkdocs-material/releases){:target="_blank"}.
+
+    ![Exemple de llançament en un repositori de GitHub](./img/projectes/release.png)
+    /// figure-caption
+    Exemple de llançament en un repositori de GitHub
+    ///
+
+Des de la secció de llançaments es pot crear un nou llançament,
+on cal incloure la següent informació:
+
+- __Títol__: descripció breu del llançament o número de versió.
+- __Descripció__: informació detallada dels canvis realitzats.
+- __Etiqueta__: etiqueta associada al llançament.
+- __Arxius binaris__: arxius binaris associats al llançament.
+
+A més, existeix l'opció de [generar les notes de llançament](https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes){:target="_blank"},
+que inclouran informació sobre les [[forks#pull-requests|:material-source-pull: Pull requests]]{:target="_blank"} i les persones que han contribuït
+de manera automàtica.
+
+![Creació d'un llançament](./img/projectes/release_create.png)
+/// figure-caption
+Creació d'un llançament en un repositori de GitHub
+///

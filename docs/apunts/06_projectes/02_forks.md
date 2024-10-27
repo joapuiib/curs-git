@@ -7,6 +7,7 @@ comments: true
 tags:
     - fork
     - pull request
+    - ruleset
 ---
 
 *[PR]: Pull Request
@@ -66,7 +67,8 @@ pots decidir incorporar-lo al teu _fork_.
     Repositori `pymdownx` bifurcat
     ///
 
-Per realitzar un _fork_ d'un repositori, cal accedir a la pàgina del repositori
+### Creació d'un Fork
+Per crear un _fork_ d'un repositori, cal accedir a la pàgina del repositori
 i fer clic al botó __:material-source-fork: Fork__ que apareix a la part superior dreta.
 
 !!! example "Creació d'un fork"
@@ -110,6 +112,7 @@ A més, es pot consultar:
     Pull Request per a afegir una nova extensió a `pymdownx`
     ///
 
+### Creació d'un Pull Request
 Per crear un PR, cal accedir al teu _fork_ o branca i fer clic al botó __:material-source-pull: Pull Request__.
 
 En el procés de creació d'un PR, es mostrarà una pantalla on es compararan els canvis realitzats
@@ -132,6 +135,33 @@ amb la branca de destí i es podrà afegir informació addicional com el títol 
     Comparació de canvis en un Pull Request
     ///
 
+Una vegada creat la PR, es pot sol·licitar la revisió dels canvis a altres usuaris
+i realitzar els canvis necessaris fins a la seva acceptació.
+
+### Incorporació de la Pull Request
+Quan un PR és acceptat, els canvis es fusionen amb la branca de destí i es tanca la PR.
+
+La fusió del PR pot ser de diferents tipus:
+
+- __Crear un _commit_ de fusió__: es crea un nou _commit_ que incorpora els canvis de la PR, com en una [[branques#fusio-de-branques-divergents]]{:target="_blank"}.
+- __Fusió en un sol _commit_ (`squash`)__: es fusionen tots els canvis de la PR en un sol _commit_ mitjançant [[squash]]{:target="_blank"}.
+- __Canvi de base (`rebase`)__: es realitza un [[branques#canvi-de-base-rebase]]{:target="_blank"} de la branca de la PR respecte a la branca de destí
+    i es fusiona amb una [[branques#fusio-directa]]{:target="_blank"}.
+
+![Tipus de fusió d'una Pull Request](./img/forks/merge-pull-request-options.webp){: style="max-height: 300px;"}
+/// figure-caption
+Tipus de fusió d'una Pull Request
+///
+
+### Configuració de les Pull Requests
+El repositori pot ser configurat per habilitar els diferents tipus de fusió,
+entre altres configuracions a l'apartat __:octicons-gear-16: Settings__
+
+![Configuració de les opcions de les Pull Requests](./img/forks/pull_request_config.png)
+/// figure-caption
+Configuració de les opcions de les Pull Requests
+///
+
 ## Flux de treball
 Amb aquestes dues funcionalitats, es pot establir un flux de treball per a la col·laboració
 en projectes de desenvolupament de programari.
@@ -152,3 +182,31 @@ Aquest flux de treball pot ser el següent:
 7. Revisar i debatre els canvis amb els revisors.
 8. Incorporar els canvis al repositori original.
 9. Actualitzar el _fork_ amb els canvis del repositori original.
+
+## Protecció de branques
+Per a evitar canvis no desitjats en les branques principals
+i evitar problemes deguts a una mala aplicació de les [[estrategies]],
+les branques importants `main` i `develop` poden ser protegides
+mitjançant [__conjunts de regles (_Rulesets_)__](https://docs.github.com/es/github/administering-a-repository/defining-the-mergeability-of-pull-requests){:target="_blank"}.
+
+Per configurar les regles de protecció de branques, cal accedir a la configuració del repositori __:octicons-gear-16: Settings__
+i buscar l'apartat __:material-book-arrow-up-outline: Rules__.
+
+![Protecció de branques](./img/forks/ruleset.png)
+/// figure-caption
+Protecció de branques
+///
+
+Aquestes regles permeten definir les condicions per modificar la branca especificada,
+com ara:
+
+- Protegir-les contra creació, modificació o eliminació.
+- Obligar a mantindre una història lineal.
+- No permetre publicacions forçades (`push --force`).
+- Requerir que les [[actions|comprovacions automàtiques]]{:target="_blank"} s'hagen realitzat correctament.
+- Requerir que la fusió es realitze mitjançant un PR.
+    
+    En aquest cas, es poden configurar altres opcions com:
+
+    - Requerir revisió d'un nombre mínim de revisors.
+    - Requerir una resolució dels conflictes abans de la fusió.
