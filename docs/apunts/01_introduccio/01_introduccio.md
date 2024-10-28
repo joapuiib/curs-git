@@ -385,6 +385,38 @@ git diff [--staged] [<path>]
 Resum de `git diff`.
 ///
 
+!!! info "Interpretació de `diff`"
+    ```shellconsole
+    jpuigcerver@FP:~/git_introduccio (main) $ git diff
+    diff --git a/README.md b/README.md
+    index 6d747b3..f3b3b3e 100644
+    --- a/README.md
+    +++ b/README.md
+    @@ -1,2 +1,3 @@
+     # 01 - Introducció a Git
+     Estem aprenent a utilitzar Git!
+    +Aquesta és una línia nova
+    ```
+
+    El format d'un `diff` és el següent:
+
+    - `diff --git a/README.md b/README.md`: Mostra els fitxers comparats.
+        - `a/README.md`: Fitxer original.
+        - `b/README.md`: Fitxer modificat.
+    - `index 6d747b3..f3b3b3e 100644`: Mostra el hash dels fitxers comparats i els permisos.
+    - `--- a/README.md`: Mostra la ruta del fitxer original.
+    - `+++ b/README.md`: Mostra la ruta del fitxer modificat.
+    - `@@ -1,2 +1,3 @@`: Mostra la posició de les línies modificades.
+        - `-1,2`: Els canvis comencen a la línia 1 i afecten 2 línies en el fitxer original.
+        - `+1,3`: Els canvis comencen a la línia 1 i afecten 3 línies en el fitxer modificat.
+
+    Després, es mostren les línies modificades:
+
+    - `-`: Línia eliminada.
+    - `+`: Línia afegida.
+
+    En aquest cas, s'ha afegit la línia `Aquesta és una línia nova` al fitxer `README.md`.
+
 ??? example "Exemple: Diferències entre el Directori de treball i el Repositori local"
     Observem les diferències entre el fitxer `README.md` del __Directori de treball__ i el __Repositori local__.
 
@@ -433,25 +465,6 @@ Resum de `git diff`.
     +Aquesta és una línia nova
     ```
 
-!!! info "Interpretació de `git diff`"
-    El format de les línies de `git diff` és el següent:
-
-    - `diff --git a/README.md b/README.md`: Mostra els fitxers comparats.
-        - `a/README.md`: Fitxer original.
-        - `b/README.md`: Fitxer modificat.
-    - `index 6d747b3..f3b3b3e 100644`: Mostra el hash dels fitxers comparats i els permisos.
-    - `--- a/README.md`: Mostra la ruta del fitxer original.
-    - `+++ b/README.md`: Mostra la ruta del fitxer modificat.
-    - `@@ -1,2 +1,3 @@`: Mostra la posició de les línies modificades.
-        - `-1,2`: Els canvis comencen a la línia 1 i afecten 2 línies en el fitxer original.
-        - `+1,3`: Els canvis comencen a la línia 1 i afecten 3 línies en el fitxer modificat.
-
-    Després, es mostren les línies modificades:
-
-    - `-`: Línia eliminada.
-    - `+`: Línia afegida.
-
-    En l'exemple anterior, s'ha afegit la línia `Aquesta és una línia nova` al fitxer `README.md`.
 
 
 ## Descartar canvis (`git restore`)
@@ -505,7 +518,7 @@ Podeu consultar la [Figura 2](#figure-flux-treball) per a veure un resum del com
             modified:   README.md
     ```
 
- ??? example "Exemple: Descartar canvis en el Directori de treball"
+??? example "Exemple: Descartar canvis en el Directori de treball"
     Descartem els canvis realitzats en el fitxer `README.md` del __Directori de treball__.
 
     !!! danger
