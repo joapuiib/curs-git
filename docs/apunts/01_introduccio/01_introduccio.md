@@ -199,18 +199,39 @@ Flux de treball en un repositori de Git.
 
 
 ## Afegir fitxers a l'Àrea de Preparació (`git add`)
-Afegim el primer fitxer `README.md` al nostre repositori.
-
-!!! info
+!!! tip
     És recomanable crear un fitxer `README.md` en tots els projectes per a descriure el seu propòsit,
     com s'utilitza i qualsevol altra informació rellevant.
 
-```shellconsole
-jpuigcerver@fp:~/git_introduccio (main) $ echo "# 01 - Introducció a Git" > README.md
-jpuigcerver@fp:~/git_introduccio (main) $ echo "Estem aprenent a utilitzar Git!" >> README.md
-jpuigcerver@fp:~/git_introduccio (main) $ cat README.md
+Afegim el primer fitxer `README.md` al nostre repositori amb
+el contingut:
+
+```md
 # 01 - Introducció a Git
 Estem aprenent a utilitzar Git!
+```
+
+=== ":octicons-terminal-24: Terminal"
+    ```shellconsole
+    jpuigcerver@fp:~/git_introduccio (main) $ echo "# 01 - Introducció a Git" > README.md
+    jpuigcerver@fp:~/git_introduccio (main) $ echo "Estem aprenent a utilitzar Git!" >> README.md
+    jpuigcerver@fp:~/git_introduccio (main) $ cat README.md
+    # 01 - Introducció a Git
+    Estem aprenent a utilitzar Git!
+    ```
+
+=== ":material-microsoft-visual-studio-code: VS Code"
+    Crea el fitxer __README.md__ amb el contingut anterior.
+
+
+Una vegada creat el fitxer, comprovem l'estat del nostre repositori amb `git status`.
+
+Vegem que Git reconeix aquest nou fitxer,que ara mateix resideix en el __Directori de treball__.
+
+La comanda `git status` ens mostra que no s'està realitzant cap seguiment del fitxer `README.md`,
+que es troba en l'estat __Untracked__.
+
+```shellconsole
 jpuigcerver@fp:~/git_introduccio (main) $ git status
 On branch main
 
@@ -222,11 +243,6 @@ Untracked files:
 
 Nothing added to commit but untracked files present (use "git add" to track)
 ```
-
-S'ha creat el fitxer `README.md` i s'ha afegit el seu contingut. Aquest fitxer resideix en el __Directori de treball__.
-
-La comanda `git status` ens mostra que no s'està realitzant cap seguiment del fitxer `README.md`,
-que es troba en l'estat __Untracked__.
 
 ![Fitxer sense seguiment](img/untracked_readme.png)
 /// figure-caption
