@@ -63,6 +63,10 @@
     background-color: #ffd914;
     color: #111111;
 }
+.md-banner .under-construction .twemoji {
+    border-radius: unset;
+    box-shadow: unset;
+}
 
 .center {
     text-align: center;
