@@ -10,6 +10,7 @@ Gascón
 gitconfig
 gitflow
 Gitflow
+GitGraph
 GitHub
 gitignore
 GitLab
@@ -28,6 +29,7 @@ md
 MkDocs
 MoureDev
 OneFlow
+PowerShell
 Pygments
 PyMdown
 pymdownx

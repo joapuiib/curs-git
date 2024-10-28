@@ -47,57 +47,6 @@ Els principals objectius i característiques de Git són:
 - __Codi obert i gratuït__: Git és de codi obert i gratuït, la qual cosa significa que qualsevol pot utilitzar-lo sense cost i contribuir al desenvolupament de l'eina.
 
 
-## Instal·lació
-Git està disponible a https://git-scm.com/ per a Windows, macOS i Linux.
-
-=== "Ubuntu"
-
-    ```bash
-    sudo apt update
-    sudo apt install git
-    ```
-
-=== "Windows"
-
-    Descarrega i executa l'instal·lador de Git des de https://git-scm.com/
-
-    Una vegada instal·lat, pots utilitzar la consola __Git Bash__.
-    És una terminal basada l'intèrpret __Bash__, que et permetrà
-    realitzar les comandes de Git en la consola.
-
----
-
-Per defecte, Git utilitza l'editor [`ViM`](https://www.vim.org/),
-un editor de text per terminal molt potent, però difícil i poc intuïtiu
-per treballar.
-
-Si desitgeu canviar l'editor per defecte, podeu utilitzar
-la següent comanda des de la consola:
-
-```bash
-git config --global core.editor <editor>
-```
-
-!!! tip "Editors de text"
-
-    === "Windows"
-
-        - `notepad`. Ve instal·lat per defecte.
-        - [Notepad++.](https://notepad-plus-plus.org/)
-
-    === "Linux"
-
-        - `gedit`. Ve instal·lat per defecte en Ubuntu.
-        - `nano`. Editor de text bàsic per terminal.
-        - `vim`. Editor de text avançat per terminal.
-            - `:w` per guardar.
-            - `:q` per eixir.
-
-    === "Multiplataforma"
-
-        - [Visual Estudio Code](https://code.visualstudio.com/)
-
-
 ## Per què la terminal?
 En aquest material, utilitzarem la terminal per a interactuar amb Git, però això no significa que siga l'única manera de fer-ho.
 De fet, pràcticament tots els entorns de desenvolupament moderns tenen integració amb Git, la qual cosa permet realitzar
