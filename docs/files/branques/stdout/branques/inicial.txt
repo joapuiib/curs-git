@@ -1,0 +1,13 @@
+jpuigcerver@fp:~ $ mkdir -p ~/git_branques
+jpuigcerver@fp:~ $ cd ~/git_branques
+jpuigcerver@fp:~/git_branques $ git init
+Initialized empty Git repository in ~/git_branques/.git/
+jpuigcerver@fp:~/git_branques (main) $ git branch -m main # (1)!
+jpuigcerver@fp:~/git_branques (main) $ echo "# Branques a Git" > README.md
+jpuigcerver@fp:~/git_branques (main) $ git add README.md
+jpuigcerver@fp:~/git_branques (main) $ git commit -m "Commit inicial"
+[main (root-commit) ec4c927] Commit inicial
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+jpuigcerver@fp:~/git_branques (main) $ git lga
+* ec4c927 - (0 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main)

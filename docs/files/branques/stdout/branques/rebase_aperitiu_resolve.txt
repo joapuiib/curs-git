@@ -1,0 +1,25 @@
+jpuigcerver@fp:~/git_branques (aperitiu|REBASE 1/1) $ code menjar.txt # (1)!
+jpuigcerver@fp:~/git_branques (aperitiu|REBASE 1/1) $ git add menjar.txt
+jpuigcerver@fp:~/git_branques (aperitiu|REBASE 1/1) $ git status
+interactive rebase in progress; onto 0d71e2b
+Last command done (1 command done):
+   pick f3c59a0 Menjar aperitiu
+No commands remaining.
+You are currently rebasing branch 'aperitiu' on '0d71e2b'.
+  (all conflicts fixed: run "git rebase --continue")
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   menjar.txt
+
+jpuigcerver@fp:~/git_branques (aperitiu|REBASE 1/1) $ git rebase --continue
+[detached HEAD 0a53b4b] Menjar aperitiu
+ Author: Joan Puigcerver <j.puigcerveribanez@edu.gva.es>
+ 1 file changed, 1 insertion(+)
+
+                                                                                
+Successfully rebased and updated refs/heads/aperitiu.
+jpuigcerver@fp:~/git_branques (aperitiu) $ git lga -3
+* 0a53b4b - (0 seconds ago) Menjar aperitiu - Joan Puigcerver (HEAD -> aperitiu)
+* 0d71e2b - (0 seconds ago) Menjar postre - Joan Puigcerver (postre, main)
+* 8c43498 - (0 seconds ago) Menjar paella - Joan Puigcerver (paella)

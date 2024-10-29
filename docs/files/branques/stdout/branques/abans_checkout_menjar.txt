@@ -1,0 +1,9 @@
+jpuigcerver@fp:~/git_branques (main) $ cat README.md
+# Branques a Git
+jpuigcerver@fp:~/git_branques (main) $ git branch
+  beguda
+* main
+  menjar
+  neteja
+jpuigcerver@fp:~/git_branques (main) $ git lga
+* ec4c927 - (0 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main, neteja, menjar, beguda)

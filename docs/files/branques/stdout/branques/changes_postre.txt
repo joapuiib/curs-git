@@ -1,0 +1,11 @@
+jpuigcerver@fp:~/git_branques (main) $ git checkout postre
+Switched to branch 'postre'
+jpuigcerver@fp:~/git_branques (postre) $ echo "Iogurt" >> menjar.txt
+jpuigcerver@fp:~/git_branques (postre) $ git add menjar.txt
+jpuigcerver@fp:~/git_branques (postre) $ git commit -m "Menjar postre"
+[postre 0d71e2b] Menjar postre
+ 1 file changed, 1 insertion(+)
+jpuigcerver@fp:~/git_branques (postre) $ git lga -3
+* 0d71e2b - (0 seconds ago) Menjar postre - Joan Puigcerver (HEAD -> postre)
+* 8c43498 - (0 seconds ago) Menjar paella - Joan Puigcerver (paella, main, aperitiu)
+* 8a3c34b - (0 seconds ago) Beguda desdejuni - Joan Puigcerver (desdejuni)

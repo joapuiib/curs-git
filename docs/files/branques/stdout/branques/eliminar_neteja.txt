@@ -1,0 +1,20 @@
+jpuigcerver@fp:~/git_branques (neteja) $ git checkout main
+Switched to branch 'main'
+jpuigcerver@fp:~/git_branques (main) $ git lga
+* 7540d67 - (0 seconds ago) Beguda - Joan Puigcerver (beguda)
+| * a7ef672 - (0 seconds ago) Menjar - Joan Puigcerver (menjar)
+|/  
+| * 06d7d94 - (0 seconds ago) Neteja - Joan Puigcerver (neteja)
+|/  
+* ec4c927 - (0 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main)
+jpuigcerver@fp:~/git_branques (main) $ git branch -d neteja
+error: the branch 'neteja' is not fully merged
+hint: If you are sure you want to delete it, run 'git branch -D neteja'
+hint: Disable this message with "git config advice.forceDeleteBranch false"
+jpuigcerver@fp:~/git_branques (main) $ git branch -D neteja
+Deleted branch neteja (was 06d7d94).
+jpuigcerver@fp:~/git_branques (main) $ git lga
+* 7540d67 - (0 seconds ago) Beguda - Joan Puigcerver (beguda)
+| * a7ef672 - (0 seconds ago) Menjar - Joan Puigcerver (menjar)
+|/  
+* ec4c927 - (0 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main)

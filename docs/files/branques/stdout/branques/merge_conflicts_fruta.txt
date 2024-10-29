@@ -1,0 +1,24 @@
+jpuigcerver@fp:~/git_branques (main) $ git checkout fruta
+Switched to branch 'fruta'
+jpuigcerver@fp:~/git_branques (fruta) $ echo "Pomes" >> menjar.txt
+jpuigcerver@fp:~/git_branques (fruta) $ echo "Bresquilles" >> menjar.txt
+jpuigcerver@fp:~/git_branques (fruta) $ git status
+On branch fruta
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   menjar.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+jpuigcerver@fp:~/git_branques (fruta) $ git add menjar.txt
+jpuigcerver@fp:~/git_branques (fruta) $ git commit -m "Fruta"
+[fruta d32e3ba] Fruta
+ 1 file changed, 2 insertions(+)
+jpuigcerver@fp:~/git_branques (fruta) $ git lga
+* d32e3ba - (1 second ago) Fruta - Joan Puigcerver (HEAD -> fruta)
+*   d71a079 - (1 second ago) Merge branch 'beguda' into 'main' - Joan Puigcerver (verdura, main)
+|\  
+| * 7540d67 - (1 second ago) Beguda - Joan Puigcerver (beguda)
+* | a7ef672 - (1 second ago) Menjar - Joan Puigcerver (menjar)
+|/  
+* ec4c927 - (1 second ago) Commit inicial - Joan Puigcerver

@@ -1,0 +1,41 @@
+jpuigcerver@fp:~/git_branques (verdura) $ git checkout main
+Switched to branch 'main'
+jpuigcerver@fp:~/git_branques (main) $ git lg
+*   d71a079 - (1 second ago) Merge branch 'beguda' into 'main' - Joan Puigcerver (HEAD -> main)
+|\  
+| * 7540d67 - (1 second ago) Beguda - Joan Puigcerver (beguda)
+* | a7ef672 - (1 second ago) Menjar - Joan Puigcerver (menjar)
+|/  
+* ec4c927 - (1 second ago) Commit inicial - Joan Puigcerver
+jpuigcerver@fp:~/git_branques (main) $ git show fruta
+commit d32e3bac4fc8792f3c13805d983a926c72841fb5
+Author: Joan Puigcerver <j.puigcerveribanez@edu.gva.es>
+Date:   Tue Oct 29 16:23:59 2024 +0100
+
+    Fruta
+
+diff --git a/menjar.txt b/menjar.txt
+index c8d5456..312ebef 100644
+--- a/menjar.txt
++++ b/menjar.txt
+@@ -1,2 +1,4 @@
+ Pa
+ Macarrons
++Pomes
++Bresquilles
+jpuigcerver@fp:~/git_branques (main) $ git show verdura
+commit e4cfd4d48cb94e0e87c573f14f6eed310bb12750
+Author: Joan Puigcerver <j.puigcerveribanez@edu.gva.es>
+Date:   Tue Oct 29 16:24:00 2024 +0100
+
+    Verdura
+
+diff --git a/menjar.txt b/menjar.txt
+index c8d5456..03fb9ab 100644
+--- a/menjar.txt
++++ b/menjar.txt
+@@ -1,2 +1,4 @@
+ Pa
+ Macarrons
++Tomaques
++Creïlles

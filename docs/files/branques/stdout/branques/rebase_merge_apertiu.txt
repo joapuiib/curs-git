@@ -1,0 +1,11 @@
+jpuigcerver@fp:~/git_branques (aperitiu) $ git checkout main
+Switched to branch 'main'
+jpuigcerver@fp:~/git_branques (main) $ git merge aperitiu
+Updating 0d71e2b..0a53b4b
+Fast-forward
+ menjar.txt | 1 +
+ 1 file changed, 1 insertion(+)
+jpuigcerver@fp:~/git_branques (main) $ git lga -3
+* 0a53b4b - (0 seconds ago) Menjar aperitiu - Joan Puigcerver (HEAD -> main, aperitiu)
+* 0d71e2b - (0 seconds ago) Menjar postre - Joan Puigcerver (postre)
+* 8c43498 - (0 seconds ago) Menjar paella - Joan Puigcerver (paella)

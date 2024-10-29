@@ -1,0 +1,10 @@
+jpuigcerver@fp:~/git_branques (main) $ git checkout paella
+Switched to branch 'paella'
+jpuigcerver@fp:~/git_branques (paella) $ git rebase main
+Rebasing (1/1)
+Successfully rebased and updated refs/heads/paella.
+jpuigcerver@fp:~/git_branques (paella) $ git lga -3
+* 8c43498 - (0 seconds ago) Menjar paella - Joan Puigcerver (HEAD -> paella)
+* 8a3c34b - (0 seconds ago) Beguda desdejuni - Joan Puigcerver (main, desdejuni)
+*   ce43962 - (0 seconds ago) Merge branch 'verdura' into 'main' - Joan Puigcerver
+|\  

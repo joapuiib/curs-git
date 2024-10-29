@@ -1,0 +1,12 @@
+jpuigcerver@fp:~/git_branques (paella) $ git checkout main
+Switched to branch 'main'
+jpuigcerver@fp:~/git_branques (main) $ git merge paella
+Updating 8a3c34b..8c43498
+Fast-forward
+ menjar.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+jpuigcerver@fp:~/git_branques (main) $ git lga -3
+* 8c43498 - (0 seconds ago) Menjar paella - Joan Puigcerver (HEAD -> main, paella)
+* 8a3c34b - (0 seconds ago) Beguda desdejuni - Joan Puigcerver (desdejuni)
+*   ce43962 - (0 seconds ago) Merge branch 'verdura' into 'main' - Joan Puigcerver
+|\  

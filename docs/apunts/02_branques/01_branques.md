@@ -38,26 +38,11 @@ que té connotacions racistes.
 
     __Inicialització:__
     ```bash
-    git init ~/git_branques
-    cd ~/git_branques
-    echo "# Bloc: Branques" > README.md
-    git add README.md
-    git commit -m "Títol"
+    --8<-- "docs/files/branques/stdout/branques/setup_branques.sh"
     ```
 
     ```shellconsole
-    jpuigcerver@fp:~ $ git init ~/git_branques
-    Initialized empty Git repository in /home/jpuigcerver/git_branques/.git/
-    jpuigcerver@fp:~ $ cd ~/git_branques
-    jpuigcerver@fp:~/git_branques (main) $ branch -m main # (1)!
-    jpuigcerver@fp:~/git_branques (main) $ echo "# Bloc: Branques" > README.md
-    jpuigcerver@fp:~/git_branques (main) $ git add README.md
-    jpuigcerver@fp:~/git_branques (main) $ git commit -m "Títol"
-    [master (root-commit) 0b1b3b4] Títol
-     1 file changed, 1 insertion(+)
-     create mode 100644 README.md
-    jpuigcerver@fp:~/git_branques (main) $ git lg
-    * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> main)
+    --8<-- "docs/files/branques/stdout/branques/inicial.txt"
     ```
 
     1. Canviem el nom de la branca principal a `main`.
@@ -80,13 +65,11 @@ Estructura de branques inicial.
     és el que es mostra a la [Figura 1](#figure-estat-inicial).
 
     ```shellconsole
-    jpuigcerver@fp:~/git_branques (main) $ git lg
-    * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> main)
+    --8<-- "docs/files/branques/stdout/branques/estructura_inicial.txt"
     ```
 
-    Vegem que tenim un únic `commit` amb l'identificador `0b1b3b4`.
-    A més, existeix una única branca anomenada `main`
-    que apunta a aquest `commit`.
+    Vegem que tenim un únic _commit_ on està situada
+    l'única branca que existeix, anomenada `main`.
 
     També observem que el `HEAD` apunta a la branca `main`,
     indicant que és la branca activa i que el
@@ -98,7 +81,7 @@ La ordre `git branch` ens permet veure i manipular les branques
 d'un repositori.
 
 !!! docs
-    Documentació de la ordre `git branch`: https://git-scm.com/docs/git-branch
+    Documentació oficial de l'ordre [`git branch`](https://git-scm.com/docs/git-branch){:target="_blank"}
 
 ### Mostrar les branques
 Per mostrar les branques d'un repositori, utilitzem l'ordre:
@@ -120,8 +103,7 @@ Més opcions:
     Mostrem les branques del nostre repositori.
 
     ```shellconsole
-    jpuigcerver@fp:~/git_branques (main) $ git branch
-    * main
+    --8<-- "docs/files/branques/stdout/branques/branch_show.txt"
     ```
 
     Vegem que tenim una única branca anomenada `main`.
@@ -142,26 +124,23 @@ git branch [-f | --force] <nom>
     no s'utilitza l'opció `-f` o `--force`,
     l'ordre mostrarà un error i no es crearà la branca.
 
-??? example "Exemple: Crear la branca docs"
-    Creem la branca `docs`.
+??? example "Exemple: Creació de les branques `menjar`, `beguda` i `neteja`"
+    Creem les branca `menjar`, `beguda` i `neteja` on es realitzaran
+    canvis relacionats amb una llista de la compra.
+
     ```shellconsole
-    jpuigcerver@fp:~/git_branques (main) $ git branch docs
-    jpuigcerver@fp:~/git_branques (main) $ git branch
-    * main
-      docs
-    jpuigcerver@fp:~/git_branques (main) $ git lg
-    * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> main, docs)
+    --8<-- "docs/files/branques/stdout/branques/branch_create.txt"
     ```
 
-    Vegem que s'ha creat la branca `docs` que apunta
-    al commit `0b1b3b4`.
+    Vegem que s'ha creat les branques s'han creat
+    al mateix _commit_ on estàvem situats.
 
-    No obstant això,la branca activa continua sent `main`.
+    No obstant això, la branca activa (`HEAD`) continua sent `main`.
 
-![Estructura de branques després de crear la branca docs](img/create_docs.png)
+![Estructura de branques després de crear les branques](img/create_branches.png)
 /// figure-caption
-    attrs: { id: figure-create-docs }
-Estructura de branques després de crear la branca `docs`.
+    attrs: { id: figure-create-menjar }
+Estructura de branques després de crear les branques `menjar`, `beguda` i `neteja`.
 ///
 
 
@@ -172,52 +151,44 @@ git checkout <nom>
 git switch <nom>
 ```
 
-Originalment, s'utilitzava l'ordre `git checkout` per canviar de branca,
-però com que aquesta ordre té moltes altres funcions,
-s'ha introduït l'ordre `git switch` a partir de la versió 2.23 de Git
-per evitar confusions.
-
 !!! docs
-    - Documentació de la ordre `git checkout`: https://git-scm.com/docs/git-checkout
-    - Documentació de la ordre `git switch`: https://git-scm.com/docs/git-switch
+    - Documentació de la ordre [`git checkout`](https://git-scm.com/docs/git-checkout){:target="_blank"}
+    - Documentació de la ordre [`git switch`](https://git-scm.com/docs/git-switch){:target="_blank"}
 
 !!! info
+    Originalment, s'utilitzava l'ordre `git checkout` per canviar de branca,
+    però com que aquesta ordre té moltes altres funcions,
+    s'ha introduït l'ordre `git switch` a partir de la versió 2.23 de Git
+    per evitar confusions.
+
     Més informació: [Stack Overflow: What's the difference between `git switch` and `git checkout` &lt;branch&gt;?](https://stackoverflow.com/questions/57265785/whats-the-difference-between-git-switch-and-git-checkout-branch)
 
 En qualsevol cas, canviar de branca significa moure el punter `HEAD` a la branca desitjada.
 El canvi de branca també implica modificar el contingut del __Directori de Treball__ a l'estat
-del `commit` al qual apunta la branca.
+del _commit_ al qual apunta la branca.
 
-La [Figura 2](#figure-create-docs) mostra l'estat del repositori quan el `HEAD` apunta a la branca `main`.
-La [Figura 3](#figure-checkout-docs) mostra l'estat del repositori després de canviar a la branca `docs`.
+- La [Figura 2](#figure-create-menjar) mostra l'estat del repositori quan el `HEAD` apunta a la branca `main`.
+- La [Figura 3](#figure-checkout-menjar) mostra l'estat del repositori després de canviar a la branca `menjar`.
 
-??? example annotate "Exemple: Canviar a la branca docs"
-    Podeu observar com l'estat del repositori és el mateix, ja que les dues branques
-    apunten al mateix `commit`, però el `HEAD` apunta a la branca `docs`.
+??? example annotate "Exemple: Canviar a la branca `menjar`"
+    L'estat del repositori abans de canviar a la branca `menjar` és el següent:
 
     ```shellconsole
-    jpuigcerver@fp:~/git_branques (main) $ git branch
-    * main
-      docs
-    jpuigcerver@fp:~/git_branques (main) $ git lg
-    * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> main, docs)
-    jpuigcerver@fp:~/git_branques (main) $ cat README.md
-    # Bloc: Branques
-    jpuigcerver@fp:~/git_branques (main) $ git switch docs
-    Switched to branch 'docs'
-    jpuigcerver@fp:~/git_branques (docs) $ git branch
-      main
-    * docs
-    jpuigcerver@fp:~/git_branques (docs) $ git lg
-    * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> docs, main)
-    jpuigcerver@fp:~/git_branques (docs) $ cat README.md
-    # Bloc: Branques
+    --8<-- "docs/files/branques/stdout/branques/abans_checkout_menjar.txt"
     ```
 
-![Estructura de branques després de canviar a la branca docs](img/checkout_docs.png)
+    Després de canviar de branca, vegem que `HEAD` s'ha desplaçat a la branca `menjar`.
+
+    No obstant això, l'estat del repositori és el mateix ja que les dues branques apunten al mateix _commit_.
+
+    ```shellconsole
+    --8<-- "docs/files/branques/stdout/branques/checkout_menjar.txt"
+    ```
+
+![Estructura de branques després de canviar a la branca menjar](img/checkout_branch.png)
 /// figure-caption
-    attrs: { id: figure-checkout-docs }
-Estructura de branques després de canviar a la branca `docs`.
+    attrs: { id: figure-checkout-menjar }
+Estructura de branques després de canviar a la branca `menjar`.
 ///
 
 ### Canvis en una branca
@@ -227,41 +198,55 @@ Per fer canvis en una branca cal:
 - Realitzar els canvis desitjats.
 - Confirmar els canvis amb `git commit`.
 
-Quan es realitza un `commit` en una branca, el punter de la branca actual (`HEAD`)
-s'avança al nou `commit`.
+Quan es realitza un _commit_ en una branca, el punter de la branca actual (`HEAD`)
+s'avança al nou _commit_.
 
-??? example "Exemple: Canvis en la branca docs"
-    Afegim un subtítol al nostre fitxer `README.md` a la branca `docs`.
+??? example "Exemple: Canvis en la branca `menjar`"
+    Anem a afegir dos productes al fitxer `menjar.txt` en la branca `menjar`.
 
     ```shellconsole
-    jpuigcerver@fp:~/git_branques (main) $ git checkout docs
-    jpuigcerver@fp:~/git_branques (docs) $ echo >> README.md
-    jpuigcerver@fp:~/git_branques (docs) $ echo "## Documentació" >> README.md
-    jpuigcerver@fp:~/git_branques (docs) $ git diff
-    diff --git a/README.md b/README.md
-    index 4efb7a9..3e27f51 100644
-    --- a/README.md
-    +++ b/README.md
-    @@ -1 +1,3 @@
-     # Bloc: Branques
-    +
-    +## Documentació
-    jpuigcerver@fp:~/git_branques (docs) $ git add README.md
-    jpuigcerver@fp:~/git_branques (docs) $ git commit -m "Subtítol documentació"
-    [docs 1b2c5d6] Subtítol documentació
-     1 file changed, 1 insertion(+)
-    jpuigcerver@fp:~/git_branques (docs) $ git lg
-    * 1b2c5d6 - (3 seconds ago) Subtítol documentació - Joan Puigcerver (HEAD -> docs)
-    * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (main)
+    --8<-- "docs/files/branques/stdout/branques/canvis_menjar.txt"
     ```
 
-    Vegem que la branca `docs` ha avançat al nou `commit` `1b2c5d6`, mentre que la branca `main` continua apuntant al `commit` `0b1b3b4`.
+    Vegem que la branca `menjar` i el `HEAD` han avançat al nou _commit_,
+    mentre que les altres branques no han canviat i continuen apuntant al _commit_ anterior.
 
-![Estructura de branques després de fer un commit a la branca docs](img/commit_docs.png)
+![Estructura de branques després de fer un commit a la branca menjar](img/commit_menjar.png)
 /// figure-caption
-    attrs: { id: figure-commit-docs }
-Estructura de branques després de fer un `commit` a la branca `docs`.
+    attrs: { id: figure-commit-menjar }
+Estructura de branques després de fer un _commit_ a la branca `menjar`.
 ///
+
+??? example "Exemple: Canvis en la branca `beguda`"
+    Anem a afegir dos productes al fitxer `beguda.txt` en la branca `beguda`.
+
+    ```shellconsole
+    --8<-- "docs/files/branques/stdout/branques/canvis_beguda.txt"
+    ```
+
+    Vegem que la branca `beguda` i el `HEAD` han avançat al nou _commit_.
+
+![Estructura de branques després de fer un commit a la branca beguda](img/commit_beguda.png)
+/// figure-caption
+    attrs: { id: figure-commit-beguda }
+Estructura de branques després de fer un _commit_ a la branca `beguda`.
+///
+
+??? example "Exemple: Canvis en la branca `neteja`"
+    Anem a afegir dos productes al fitxer `neteja.txt` en la branca `neteja`.
+
+    ```shellconsole
+    --8<-- "docs/files/branques/stdout/branques/canvis_neteja.txt"
+    ```
+
+    Vegem que la branca `neteja` i el `HEAD` han avançat al nou _commit_.
+
+![Estructura de branques després de fer un commit a la branca neteja](img/commit_neteja.png)
+/// figure-caption
+    attrs: { id: figure-commit-neteja }
+Estructura de branques després de fer un _commit_ a la branca `neteja`.
+///
+
 
 ### Reanomenar una branca
 Per reanomenar una branca, utilitzem l'ordre:
@@ -276,6 +261,10 @@ git branch [-m | --move] <nou_nom>
     En la [Introducció](#introduccio) s'ha utilitzat aquesta opció
     per canviar el nom de la branca principal de `master` a `main`.
 
+    ```bash
+    git branch -m main
+    ```
+
 
 ### Eliminar una branca
 Per eliminar una branca, utilitzem l'ordre:
@@ -288,34 +277,34 @@ git branch [-d | --delete] [-D] [-f | --force] <nom>
 - `[-D]`: Opcional. Abreviatura de `--delete --force`.
 
 !!! warning
-    Quan un `commit` perd totes les referències per a ser accedit,
-    es diu que és un `commit` __orfe__ i serà eliminat pel
+    Quan un _commit_ perd totes les referències per a ser accedit,
+    es diu que és un _commit_ __orfe__ i serà eliminat pel
     __recol·lector de brossa__ (_garbage collector_) de Git.
 
     L'eliminació d'una branca pot provocar la pèrdua de commits.
     En aquest cas, Git mostrarà un error i no es podrà eliminar la branca
     a no ser que s'utilitze l'opció `-D` o `--delete --force`.
 
-??? example annotate "Exemple: Eliminar la branca docs"
-    Eliminem la branca `docs`.
+??? example annotate "Exemple: Eliminació de la branca `neteja`"
+
+    Tractem d'eliminar la branca `neteja` amb l'opció `-d`.
+    Com que aquests canvis no han segut fusionats,
+    l'eliminació de la branca provocarà la pèrdua dels _commit_ realitzats.
+
+    Per poder esborrar-la, caldrà utilitzar l'opció `-D`.
 
     ```shellconsole
-    jpuigcerver@fp:~/git_branques (docs) $ git checkout main
-    jpuigcerver@fp:~/git_branques (main) $ git lg
-    * 1b2c5d6 - (3 seconds ago) Subtítol documentació - Joan Puigcerver (docs)
-    * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> main)
-    jpuigcerver@fp:~/git_branques (main) $ git branch -d docs
-    error: the branch 'docs' is not fully merged
-    hint: If you are sure you want to delete it, run 'git branch -D docs'
-    hint: Disable this message with "git config advice.forceDeleteBranch false"
-    jpuigcerver@fp:~/git_branques (main) $ git branch -D docs
-    Deleted branch docs (was 1b2c5d6).
-    jpuigcerver@fp:~/git_branques (main) $ git lg
-    * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> main)
+    --8<-- "docs/files/branques/stdout/branques/eliminar_neteja.txt"
     ```
 
-    La branca `docs` ha estat eliminada i, per tant, el `commit` `1b2c5d6` s'ha convertit en un `commit` orfe
-    i serà eliminat pel recol·lector de brossa de Git.
+    La branca `neteja` ha estat eliminada i, per tant, el _commit_ __Productes de neteja__
+    s'ha convertit en un _commit_ orfe i serà eliminat pel recol·lector de brossa de Git.
+
+![Estructura de branques després d'eliminar la branca neteja](img/delete_neteja.png)
+/// figure-caption
+    attrs: { id: figure-delete-neteja }
+Estructura de branques després d'eliminar la branca `neteja`.
+///
 
 
 ## Fusió de branques (`git merge`)
@@ -327,14 +316,15 @@ Aquest procés es realitza amb l'ordre:
 git merge <branca>
 ```
 
-- `<branca>`: Branca que es vol fusionar amb la __branca actual__.
+- `<branca>`: Nom de la branca que es vol fusionar amb la __branca actual__.
 
 !!! important
     La __fusió de branques__ sempre incorpora els canvis de la branca
-    especificada a la __branca actual__ (on es troba el `HEAD`).
+    indicada sobre la __branca actual__ (on es troba el `HEAD`).
 
 !!! docs
-    Documentació de la ordre `git merge`: https://git-scm.com/docs/git-merge
+    - Documentació de la ordre [`git merge`](https://git-scm.com/docs/git-merge){:target="_blank"}
+    - [Pro Git - Capítol 3.2 Git Branching - Basic Branching and Merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging){:target="_blank"}
 
 Segons l'estructura de les branques, la fusió pot ser [__directa__](#fusio-directa) (_fast-forward_)
 o mitjançant [__commit de fusió__](#fusio-de-branques-divergents) (_merge commit_).
@@ -342,7 +332,7 @@ o mitjançant [__commit de fusió__](#fusio-de-branques-divergents) (_merge comm
 
 ### Fusió directa
 La __fusió directa__ (_fast-forward_) és un tipus de fusió que es produeix
-quan la branca actual (`HEAD`) no té cap nou `commit` des de que es va crear la branca
+quan la branca actual (`HEAD`) no té cap nou _commit_ des de que es va crear la branca
 que es vol fusionar. És a dir, la branca que es vol fusionar està __darrere__ de la branca actual,
 mantenint una __història lineal__.
 
@@ -357,132 +347,70 @@ fins on es troba la branca que es vol fusionar.
 
 ![Estructura de branques després de la fusió directa](img/after_ff.png)
 /// figure-caption
-Estructura de branques després de la fusió directa.
+    attrs: { id: figure-after-ff }
+Estructura de branques després de la fusió directa de la branca `menjar` a la branca `main`.
 ///
 
 !!! important
     La __fusió directa__ és la forma més senzilla i neta de fusionar branques,
-    ja que no es crea cap `commit` addicional per fusionar les branques i
+    ja que no es crea cap _commit_ addicional per fusionar les branques i
     manté una __història lineal__ i fàcil de seguir.
 
 !!! info
     Per assegurar-se que la fusió siga directa, es pot utilitzar l'opció `--ff-only`
 
-    En cas que la fusió no siga directa, Git mostrarà un error i no es realitzarà la fusió.
+    - En cas que la fusió no siga directa, Git mostrarà un error i no es realitzarà la fusió.
 
-??? example annotate "Exemple: Fusió directa de la branca docs"
-    Partint de la situació de la [Figura 5](#figure-before-ff), on la branca `docs` té un `commit` més que la branca `main`,
-    la fusió de la branca `docs` a la branca `main` serà una fusió directa.
+    Git pot ser configurat per sempre tractar de realitzar una fusió directa:
+
+    ```bash
+    git config --global merge.ff only
+    ```
+    
+
+??? example annotate "Exemple: Fusió directa de la branca `menjar` a la branca `main`"
+    Partint de la situació de la [Figura 5](#figure-before-ff), on la branca `menjar` té un _commit_ més que la branca `main`,
+    la fusió de la branca `menjar` a la branca `main` serà una fusió directa.
 
     ```shellconsole
-    jpuigcerver@fp:~/git_branques (docs) $ git checkout main
-    Switched to branch 'main'
-    jpuigcerver@fp:~/git_branques (main) $ cat README.md
-    # Bloc: Branques
-    jpuigcerver@fp:~/git_branques (main) $ git lg
-    * 1b2c5d6 - (3 seconds ago) Subtítol documentació - Joan Puigcerver (docs)
-    * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver (HEAD -> main)
+    --8<-- "docs/files/branques/stdout/branques/before_ff.txt"
     ```
 
-    En aquest cas, la fusió es portarà a terme avançant el punter de la branca `main` fins al punt on es troba la branca `docs`.
+    En aquest cas, la fusió es portarà a terme avançant el punter de la branca `main` fins al punt on es troba la branca `docs`,
+    tal i com es mostra en la [Figura 6](#figure-after-ff).
 
     ```shellconsole
-    jpuigcerver@fp:~/git_branques (main) $ git merge docs
-    Updating 0b1b3b4..1b2c5d6
-    Fast-forward
-     README.md | 1 +
-     1 file changed, 1 insertion(+)
-    jpuigcerver@fp:~/git_branques (main) $ cat README.md # (1)!
-    # Bloc: Branques
-
-    ## Documentació
-    jpuigcerver@fp:~/git_branques (main) $ git lg
-    * 1b2c5d6 - (3 seconds ago) Subtítol documentació - Joan Puigcerver (HEAD -> main, docs)
-    * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver
+    --8<-- "docs/files/branques/stdout/branques/after_ff.txt"
     ```
 
-    1. Vegem que el fitxer `README.md` ha incorporat els canvis de la branca `docs`.
+    1. Vegem que el s'ha incorporat el fitxer `menjar.txt` amb els canvis de la branca `menjar`.
 
 ### Fusió de branques divergents
 No sempre és possible realitzar fusió mitjançant una [__fusió directa__ (_fast-forward_)](#fusio-directa).
 Pot donar-se el cas que les dues branques hagen __divergit__, és a dir, que cada branca haja
 realitzat canvis que no estan presents en l'altra branca.
 
-??? prep annotate "Preparació branques divergents"
-    1. Realitzem canvis en la branca `docs`.
-
-    ```shellconsole
-    jpuigcerver@fp:~/git_branques (main) $ git checkout docs
-    Switched to branch 'docs'
-    jpuigcerver@fp:~/git_branques (docs) $ echo "https://git-scm.com/" >> README.md
-    jpuigcerver@fp:~/git_branques (docs) $ git diff
-    diff --git a/README.md b/README.md
-    index 4efb7a9..3e27f51 100644
-    --- a/README.md
-    +++ b/README.md
-    @@ -1,3 +1,4 @@
-     # Bloc: Branques
-
-     ## Documentació
-    +- https://git-scm.com/
-    jpuigcerver@fp:~/git_branques (docs) $ git commit -a -m "Documentació oficial"
-    [docs 3d4e5f6] Documentació oficial
-     1 file changed, 1 insertion(+)
-    jpuigcerver@fp:~/git_branques (docs) $ git lg
-    * 3d4e5f6 - (3 seconds ago) Documentació oficial - Joan Puigcerver (HEAD -> docs)
-    * 1b2c5d6 - (3 minutes ago) Subtítol documentació - Joan Puigcerver (main)
-    * 0b1b3b4 - (3 minutes ago) Títol - Joan Puigcerver
-    ```
-
-    2. Realitzem canvis en la branca `main`.
-
-    ```shellconsole
-    jpuigcerver@fp:~/git_branques (docs) $ git checkout main
-    Switched to branch 'main'
-    jpuigcerver@fp:~/git_branques (main) $ vim README.md # (1)!
-    jpuigcerver@fp:~/git_branques (main) $ git diff
-    diff --git a/README.md b/README.md
-    index 3e27f51..4efb7a9 100644
-    --- a/README.md
-    +++ b/README.md
-    @@ -1,2 +1,3 @@
-     # Bloc: Branques
-    +__Autor:__ Joan Puigcerver
-
-     ## Documentació
-    jpuigcerver@fp:~/git_branques (main) $ git commit -a -m "Autor"
-    [main 2a3b4c5] Autor
-     1 file changed, 1 insertion(+)
-    jpuigcerver@fp:~/git_branques (main) $ git lg -a
-    * 2a3b4c5 - (5 seconds ago) Autor - Joan Puigcerver (HEAD -> main)
-    | * 3d4e5f6 - (3 minutes ago) Documentació oficial - Joan Puigcerver (docs)
-    |/
-    * 1b2c5d6 - (10 minutes ago) Subtítol documentació - Joan Puigcerver (docs)
-    * 0b1b3b4 - (13 minutes ago) Títol - Joan Puigcerver
-    ```
-
-    1. Modifiquem el fitxer `README.md`. Pots utilitzar l'editor de text que preferisques.
-
 
 ![Història abans de la fusió en branques divergents](img/before_divergent.png)
 /// figure-caption
+    attrs: { id: figure-before-no-ff }
 Història abans de la fusió en branques divergents.
 ///
 
 En aquest cas, la fusió es realitza mitjançant un __commit de fusió__ (_merge commit_).
-Aquest `commit` de fusió té dos pares, un per cada branca que es fusiona
+Aquest _commit_ de fusió té dos pares, un per cada branca que es fusiona
 i incorpora els canvis de les dues branques.
 
 ![Història després de la fusió en branques divergents](img/after_divergent.png)
 /// figure-caption
-    attrs: { id: figure-divergent }
-Història després de la fusió en branques divergents.
+    attrs: { id: figure-after-no-ff }
+Història després de la fusió en branques divergents de la branca `beguda` a la branca `main`.
 ///
 
 En el moment de realitzar la fusió (`git merge`),
-Git crearà un nou `commit` de fusió que incorporarà els canvis de les dues branques.
+Git crearà un nou _commit_ de fusió que incorporarà els canvis de les dues branques.
 
-Aquest `commit` necessita d'un missatge, per tant, es pot utilitzar l'opció `-m` per afegir un missatge al `commit`.
+Aquest _commit_ necessita d'un missatge, per tant, es pot utilitzar l'opció `-m` per afegir un missatge al _commit_.
 Si no se n'especifica cap, s'obrirà l'editor de text configurat per defecte per a afegir el missatge.
 (Vegeu [[introduccio#confirmar-canvis-git-commit]])
 
@@ -494,35 +422,34 @@ Si no se n'especifica cap, s'obrirà l'editor de text configurat per defecte per
     Per forçar que la fusió es realitze amb un __commit de fusió__ (_merge commit_),
     es pot utilitzar l'opció `--no-ff`.
 
-??? example annotate "Exemple: Fusió de docs divergent amb main"
-    Realitzem la fusió de les dues branques.
+    Git pot ser configurat per sempre realitze una fusió amb un __commit de fusió__ (_merge commit_):
 
-    ```shellconsole
-    jpuigcerver@fp:~/git_branques (main) $ git merge docs -m "Merge branch 'docs' into main" # (1)!
-    Auto-merging README.md
-    Merge made by the 'ort' strategy.
-     README.md | 1 +
-     1 file changed, 1 insertion(+)
-    jpuigcerver@fp:~/git_branques (main) $ git lg
-    *   b6aa5c3 - (3 seconds ago) Merge branch 'docs' into main - Joan Puigcerver (HEAD -> main)
-    |\
-    | * 3d4e5f6 - (3 minutes ago) Documentació oficial - Joan Puigcerver (docs)
-    * | 2a3b4c5 - (5 seconds ago) Autor - Joan Puigcerver
-    |/
-    * 1b2c5d6 - (10 minutes ago) Subtítol documentació - Joan Puigcerver
-    * 0b1b3b4 - (13 minutes ago) Títol - Joan Puigcerver
-    jpuigcerver@fp:~/git_branques (main) $ cat README.md
-    # Bloc: Branques
-    __Autor:__ Joan Puigcerver
-
-    ## Documentació
-    - https://git-scm.com/
+    ```bash
+    git config --global merge.ff no
     ```
 
-    1. La opció `-m` permet afegir un missatge al `commit` de fusió.
+??? example annotate "Exemple: Fusió de branques divergents `beguda` a la branca `main`"
 
-    En aquest punt ens trobem en la situació mostrada en la [Figura 8](#figure-divergent).
-    Vegem que el fitxer `README.md` ha incorporat els canvis de les dues branques.
+    Partim de la situació de la [Figura 8](#figure-before-no-ff), on la branca `beguda` ha divergit de la branca `main`.
+
+    ```shellconsole
+    --8<-- "docs/files/branques/stdout/branques/before_no_ff.txt"
+    ```
+
+    Realitzem la fusió de la branca `beguda` sobre la branca `main.
+
+    Després ens ens trobem en la situació mostrada en la [Figura 9](#figure-after-no-ff),
+    on s'ha creat un __*commit* de fusió__ que incorpora els canvis de la branca `beguda` a la branca `main`.
+
+    ```shellconsole
+    --8<-- "docs/files/branques/stdout/branques/after_no_ff.txt"
+    ```
+
+    1. La opció `-m` permet afegir un missatge al _commit_ de fusió.
+        
+        Si no s'especifica, s'obrirà l'editor de text per a afegir el missatge.
+
+    2. Vegem com s'hagen incorporat els canvis de la branca `beguda` a la branca `main`.
 
 
 ### Resolució de conflictes
@@ -553,117 +480,76 @@ Una vegada resolt el conflicte, caldrà confirmar els canvis amb `git add` i `gi
 !!! info
     En cas que es desitge cancel·lar el procés de fusió, es pot utilitzar l'ordre `git merge --abort`.
 
-??? prep annotate "Preparació branques divergents amb conflicte"
-    1. Creem la branca `conflictes` i realitzem canvis en la descripció del fitxer `README.md`.
+??? prep annotate "Preparació branques divergents `fruta` i `verdura`"
+    1. Creem les branques `fruta` i `verdura` des de la branca `main`.
 
     ```shellconsole
-    jpuigcerver@fp:~/git_branques (main) $ git branch conflictes
-    jpuigcerver@fp:~/git_branques (main) $ git checkout conflictes
-    Switched to branch 'conflictes'
-    jpuigcerver@fp:~/git_branques (conflictes) $ vim README.md
-    jpuigcerver@fp:~/git_branques (conflictes) $ git diff
-    diff --git a/README.md b/README.md
-    index f94383b..c9b0a17 100644
-    --- a/README.md
-    +++ b/README.md
-    @@ -1,5 +1,7 @@
-     # Bloc: Branques
-     __Autor__: Joan Puigcerver
-     
-    +Estem aprenent a resoldre conflictes.
-    +
-     ## Documentació
-     - https://git-scm.com/
-    jpuigcerver@fp:~/git_branques (conflictes) $ git commit -a -m "Text conflictes"
-    [conflictes 4e5f6d7] Text conflictes
-     1 file changed, 2 insertions(+)
-    jpuigcerver@fp:~/git_branques (conflictes) $ git lg
-    * 4e5f6d7 - (3 seconds ago) Text conflictes - Joan Puigcerver (HEAD -> conflictes)
-    * b6aa5c3 - (3 minutes ago) Merge branch 'docs' into main - Joan Puigcerver (main)
-    ...
+    --8<-- "docs/files/branques/stdout/branques/merge_conflicts_branch_create.txt"
     ```
 
-    2. Realitzem canvis en la descripció en la branca `main`.
+    2. Afegim dues fruites al fitxer `menjar.txt` en la branca `fruta`.
 
     ```shellconsole
-    jpuigcerver@fp:~/git_branques (main) $ git checkout main
-    Switched to branch 'main'
-    jpuigcerver@fp:~/git_branques (main) $ vim README.md
-    jpuigcerver@fp:~/git_branques (main) $ git diff
-    diff --git a/README.md b/README.md
-    index f94383b..a03cd9d 100644
-    --- a/README.md
-    +++ b/README.md
-    @@ -1,5 +1,7 @@
-     # Bloc: Branques
-     __Autor__: Joan Puigcerver
-     
-    +Estem aprenent a fusionar branques.
-    +
-     ## Documentació
-     - https://git-scm.com/
-    jpuigcerver@fp:~/git_branques (main) $ git commit -a -m "Text fusió"
-    [main 072e36a] Text fusió
-     1 file changed, 2 insertions(+)
-    jpuigcerver@fp:~/git_branques (main) $ git lg -a
-    * 072e36a - (3 seconds ago) Text fusió - Joan Puigcerver (HEAD -> main)
-    | * 4e5f6d7 - (3 minutes ago) Text conflictes - Joan Puigcerver (conflictes)
-    |/
-    * b6aa5c3 - (3 minutes ago) Merge branch 'docs' into main - Joan Puigcerver
-    ...
+    --8<-- "docs/files/branques/stdout/branques/merge_conflicts_fruta.txt"
     ```
 
-??? example annotate "Exemple: Fusió amb resolució de conflictes"
-    Realitzem la fusió de la branca `conflictes` a la branca `main`.
+    3. Afegim dues verdures al fitxer `menjar.txt` en la branca `verdura`.
 
     ```shellconsole
-    jpuigcerver@fp:~/git_branques (main) $ git merge conflictes
-    Auto-merging README.md
-    CONFLICT (content): Merge conflict in README.md
-    Automatic merge failed; fix conflicts and then commit the result.
-    jpuigcerver@fp:~/git_branques (main|MERGING) $ cat README.md
-    # Bloc: Branques
-    __Autor__: Joan Puigcerver
-
-    <<<<<<< HEAD
-    Estem aprenent a fusionar branques.
-    =======
-    Estem aprenent a resoldre conflictes.
-    >>>>>>> conflictes
-
-    ## Documentació
-    - https://git-scm.com/
-    jpuigcerver@fp:~/git_branques (main|MERGING) $ vim README.md # (1)!
-    jpuigcerver@fp:~/git_branques (main|MERGING) $ cat README.md
-    jpuigcerver@fedora:~/git_branques (main|MERGING) $ cat README.md 
-    # Bloc: Branques
-    __Autor__: Joan Puigcerver
-
-    Estem aprenent a fusionar branques i resoldre conflictes.
-
-    ## Documentació
-    - https://git-scm.com/
-    jpuigcerver@fp:~/git_branques (main|MERGING) $ git add README.md
-    jpuigcerver@fp:~/git_branques (main|MERGING) $ git commit -m "Resolució conflicte"
-    [main 8a9b0c1] Resolució conflicte
-    jpuigcerver@fp:~/git_branques (main) $ git lg
-    * 8a9b0c1 - (3 seconds ago) Resolució conflicte - Joan Puigcerver (HEAD -> main)
-    |\
-    | * 4e5f6d7 - (3 minutes ago) Text conflictes - Joan Puigcerver (conflictes)
-    * | 072e36a - (3 minutes ago) Text fusió - Joan Puigcerver
-    |/
-    * b6aa5c3 - (3 minutes ago) Merge branch 'docs' into main - Joan Puigcerver
-    ...
+    --8<-- "docs/files/branques/stdout/branques/merge_conflicts_verdura.txt"
     ```
 
-    1. Hem combinat els dos textos i hem eliminat les marques de conflicte.
+??? example annotate "Exemple: Fusió de branques `fruta` i `verdura` amb conflictes"
+    Les branques `fruta` i `verdura` han modificat la mateixa secció del fitxer `menjar.txt`,
+    per tant, quan les fusionem, es produirà un conflicte.
+
+    ```shellconsole
+    --8<-- "docs/files/branques/stdout/branques/merge_conflicts_show.txt"
+    ```
+
+    1. Primer, realitzem una [[branques#fusio-directa]] entre de la branca `fruta` a la branca `main`,
+        on no hi haurà conflictes.
+
+    ```shellconsole
+    --8<-- "docs/files/branques/stdout/branques/merge_conflicts_merge_fruta.txt"
+    ```
+
+    2. Després, realitzarem la fusió de la branca `verdura` a la branca `main`,
+        on es produirà un conflicte.
+
+    ```shellconsole
+    --8<-- "docs/files/branques/stdout/branques/merge_conflicts_merge_verdura.txt"
+    ```
+
+    3. En aquest cas, resoldrem els conflictes eliminant les marques de conflicte i
+        mantenint els canvis de les dues branques.
+
+        Després, marcarem els fitxers com a resolts amb `git add` i confirmarem els canvis amb `git commit`.
+
+    === "Abans"
+        ```text
+        --8<-- "docs/files/branques/stdout/branques/menjar_before_resolve.txt"
+        ```
+
+    === "Després"
+        ```text
+        --8<-- "docs/files/branques/stdout/branques/menjar_after_resolve.txt"
+        ```
+
+    ```shellconsole
+    --8<-- "docs/files/branques/stdout/branques/merge_conflicts_resolve.txt"
+    ```
+
+    1. Editem el fitxer `menjar.txt` per eliminar les marques de conflicte i mantenir els canvis de les dues branques.
+
 
 
 ## Canvi de base (`rebase`)
 El __canvi de base__ (`rebase`) és una altra manera de fusionar canvis de branques __divergents__,
-que consisteix en aplicar els canvis dels `commit` d'una branca sobre una altra branca, en ordre cronològic.
+que consisteix en aplicar els canvis dels _commit_ d'una branca sobre una altra branca, en ordre cronològic.
 
-Aquesta tècnica permet eliminar les branques divergents i mantindre una __història lineal__.
+!!! important
+    Aquesta tècnica permet eliminar les branques divergents i mantindre una __història lineal__.
 
 Aquest procés es realitza amb l'ordre:
 ```bash
@@ -671,7 +557,8 @@ git rebase <branca>
 ```
 
 !!! docs
-    Documentació de la ordre `git rebase`: https://git-scm.com/docs/git-rebase
+    - Documentació de la ordre [`git rebase`](https://git-scm.com/docs/git-rebase){:target="_blank"}
+    - [Pro Git - Capítol 3.6 Git Branching - Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing){:target="_blank"}
 
 ![Història abans del canvi de base](img/before_rebase.png)
 /// figure-caption
@@ -685,120 +572,54 @@ Història després del canvi de base.
 !!! important
     L'ordre `git rebase` canviarà la base de la branca actual (`HEAD`).
 
-??? prep annotate "Preparació branques divergents"
-    1. Creem la branca `llicencia` i realitzem canvis en la descripció del fitxer `README.md`.
+??? prep annotate "Preparació branques divergents `desdejuni` i `paella`"
+    1. Creem les branques `desdejuni` i `paella` des de la branca `main`.
 
     ```shellconsole
-    jpuigcerver@fp:~/git_branques (main) $ git checkout -b llicencia # (1)!
-    Switched to a new branch 'llicencia'
-    jpuigcerver@fp:~/git_branques (llicencia) $ echo >> README.md
-    jpuigcerver@fp:~/git_branques (llicencia) $ echo "## Llicència" >> README.md
-    jpuigcerver@fp:~/git_branques (llicencia) $ echo "CC BY-NC-SA 4.0" >> README.md
-    jpuigcerver@fp:~/git_branques (llicencia) $ git diff
-    diff --git a/README.md b/README.md
-    index 2ca252f..6aa790e 100644
-    --- a/README.md
-    +++ b/README.md
-    @@ -5,3 +5,6 @@ Estem aprenent a fusionar branques i resoldre conflictes.
-     
-     ## Documentació
-     - https://git-scm.com/
-    +
-    +## Llicència
-    +CC BY-NC-SA 4.0
-    jpuigcerver@fp:~/git_branques (llicencia) $ git commit -a -m "Llicència"
-    [llicencia e474d76] Llicència
-     1 file changed, 3 insertions(+)
-    jpuigcerver@fp:~/git_branques (llicencia) $ git lg
-    * e474d76 - (14 seconds ago) Llicència - Joan Puigcerver (HEAD -> llicencia)
-    * 8a9b0c1 - (3 minutes ago) Resolució conflicte - Joan Puigcerver (main)
-    ...
+    --8<-- "docs/files/branques/stdout/branques/rebase_branch_create.txt"
     ```
 
-    2. Realitzem canvis en la descripció en la branca `main`.
+    2. Afegim un producte al fitxer `beguda.txt` en la branca `desdejuni`.
 
     ```shellconsole
-    jpuigcerver@fp:~/git_branques (llicencia) $ git checkout main
-    Switched to branch 'main'
-    jpuigcerver@fp:~/git_branques (main) $ vim README.md
-    jpuigcerver@fp:~/git_branques (main) $ git diff
-    diff --git a/README.md b/README.md
-    index 2ca252f..3a3fe02 100644
-    --- a/README.md
-    +++ b/README.md
-    @@ -2,6 +2,7 @@
-     __Autor__: Joan Puigcerver
-     
-     Estem aprenent a fusionar branques i resoldre conflictes.
-    +També a canviar la base d'una branca.
-     
-     ## Documentació
-     - https://git-scm.com/
-    jpuigcerver@fp:~/git_branques (main) $ git commit -a -m "Text rebase"
-    [main 1b2c3d4] Text rebase
-     1 file changed, 1 insertion(+)
-    jpuigcerver@fp:~/git_branques (main) $ git lg -a
-    * 1b2c3d4 - (3 seconds ago) Text rebase - Joan Puigcerver (HEAD -> main)
-    | * e474d76 - (3 minutes ago) Llicència - Joan Puigcerver (llicencia)
-    |/
-    * 8a9b0c1 - (3 minutes ago) Resolució conflicte - Joan Puigcerver
-    ...
+    --8<-- "docs/files/branques/stdout/branques/changes_desdejuni.txt"
     ```
 
-1. L'opció `git checkout -b` permet crear una nova branca i situar-se en ella directament.
-
-
-??? example "Exemple: Canvi de base"
-    Canviem la base de la branca `llicencia` a la branca `main`.
+    3. Afegim alguns producte al fitxer `menjar.txt` en la branca `paella`.
 
     ```shellconsole
-    jpuigcerver@fp:~/git_branques (main) $ git checkout llicencia
-    Switched to branch 'llicencia'
-    jpuigcerver@fp:~/git_branques (llicencia) $ git rebase main
-    Successfully rebased and updated refs/heads/llicencia.
-    jpuigcerver@fp:~/git_branques (llicencia) $ git lg
-    * 8bad4a1 - (3 seconds ago) Llicència - Joan Puigcerver (HEAD -> llicencia)
-    * 1b2c3d4 - (3 minutes ago) Text rebase - Joan Puigcerver (main)
-    * 8a9b0c1 - (3 minutes ago) Resolució conflicte - Joan Puigcerver
-    ...
-    jpuigcerver@fp:~/git_branques (llicencia) $ cat README.md
-    # Bloc: Branques
-    __Autor__: Joan Puigcerver
-
-    Estem aprenent a fusionar branques i resoldre conflictes.
-    També a canviar la base d'una branca.
-
-    ## Documentació
-    - https://git-scm.com/
-
-    ## Llicència
-    CC BY-NC-SA 4.0
+    --8<-- "docs/files/branques/stdout/branques/changes_paella.txt"
     ```
 
-    Vegem que la branca `llicencia` ha canviat la seva base a la branca `main` i ha incorporat els seus canvis.
-
-    !!! notice
-        L'identificador (_hash_) del `commit` __Llicència__ ha canviat després del `rebase`.
-
-        Això és degut a que s'ha creat un nou `commit` amb els canvis de l'anterior.
+1. L'opció `git log -3` permet consultar els últims tres _commit_
+    de la història del repositori.
 
 
-    En aquest punt, si volem incorporar els canvis de la branca `llicencia` a la branca `main`, podem fer-ho
-    mitjançant una [__fusió directa__ (_fast-forward_)](#fusio-directa).
+??? example "Exemple: Fusió de les branques `desdejuni` i `paella` amb canvi de base"
+    Anem a fusionar les branques `desdejuni` i `paella` a la branca `main`
+    mantenint una __història lineal__.
+
+    1. Fusionem la branca `desdejuni` a la branca `main` amb una __fusió directa__ (_fast-forward_).
 
     ```shellconsole
-    jpuigcerver@fp:~/git_branques (llicencia) $ git checkout main
-    Switched to branch 'main'
-    jpuigcerver@fp:~/git_branques (main) $ git merge llicencia
-    Updating 1b2c3d4..8bad4a1
-    Fast-forward
-     README.md | 3 +++
-     1 file changed, 3 insertions(+)
-    jpuigcerver@fp:~/git_branques (main) $ git lg
-    * 8bad4a1 - (3 seconds ago) Llicència - Joan Puigcerver (HEAD -> main, llicencia)
-    * 1b2c3d4 - (3 minutes ago) Text rebase - Joan Puigcerver
-    ...
+    --8<-- "docs/files/branques/stdout/branques/rebase_merge_desdejuni.txt"
     ```
+
+    2. La branca `paella` ha divergit de la branca `main`, i per tal de mantindre una __història lineal__,
+        canviarem la base de la branca `paella` a la branca `main`.
+
+    ```shellconsole
+    --8<-- "docs/files/branques/stdout/branques/rebase_paella.txt"
+    ```
+
+    3. Després del canvi de base, es possible fusionar la branca `paella` a la branca `main` amb una __fusió directa__ (_fast-forward_).
+
+    ```shellconsole
+    --8<-- "docs/files/branques/stdout/branques/rebase_merge_paella.txt"
+    ```
+    
+
+
 ### Resolució de conflictes
 El __canvi de base__ (`rebase`) també pot provocar conflictes si les dues branques
 han modificat la mateixa part d'un fitxer.
@@ -806,163 +627,81 @@ han modificat la mateixa part d'un fitxer.
 Git ens indicarà que hi ha conflictes i caldrà resoldre'ls manualment,
 d'una manera similar a [__la resolució de conflictes en la fusió de branques__](#resolucio-de-conflictes).
 
-En aquest cas, caldrà resoldre els conflictes per a cada `commit` en el que s'està canviant la base.
+En aquest cas, caldrà resoldre els conflictes per a cada _commit_ en el que s'està canviant la base.
 
-Després de resoldre els conflictes d'un `commit`, caldrà continuar amb el procés de `rebase` amb l'ordre `git rebase --continue`
-fins que s'haja aplicat el canvi de base a tots els `commit` de la branca.
+Després de resoldre els conflictes d'un _commit_, caldrà continuar amb el procés de `rebase` amb l'ordre `git rebase --continue`
+fins que s'haja aplicat el canvi de base a tots els _commit_ de la branca.
 
-??? prep "Preparació branques divergents amb conflictes"
-    1. Creem la branca `docs/git_training` i realitzem canvis en la descripció del fitxer `README.md`.
-
-    ```shellconsole
-    jpuigcerver@fp:~/git_branques (main) $ git checkout -b docs_git_training
-    Switched to a new branch 'docs_git_training'
-    jpuigcerver@fp:~/git_branques (docs_git_training) $ vim README.md
-    jpuigcerver@fp:~/git_branques (docs_git_training) $ git diff
-    diff --git a/README.md b/README.md
-    index 54f292f..271a617 100644
-    --- a/README.md
-    +++ b/README.md
-    @@ -6,6 +6,7 @@ També a canviar la base d'una branca.
-     
-     ## Documentació
-     - https://git-scm.com/
-    +- https://github.com/UnseenWizzard/git_training 
-     
-     ## Llicència
-     CC BY-NC-SA 4.0
-    jpuigcerver@fp:~/git_branques (docs_git_training) $ git commit -a -m "Documentació git_training"
-    [docs_git_training a136424] Documentació git_training
-     1 file changed, 1 insertion(+)
-    jpuigcerver@fp:~/git_branques (docs_git_training) $ git lg
-    * a136424 - (3 seconds ago) Documentació git_training - Joan Puigcerver (HEAD -> docs_git_training)
-    * 1b2c3d4 - (3 minutes ago) Text rebase - Joan Puigcerver (main)
-    ...
-    ```
-
-    2. Realitzem canvis en la descripció en la branca `main`.
+??? prep annotate "Preparació branques divergents `postre` i `aperitiu`"
+    1. Creem les branques `postre` i `aperitiu` des de la branca `main`.
 
     ```shellconsole
-    jpuigcerver@fp:~/git_branques (docs_git_training) $ git checkout main
-    Switched to branch 'main'
-    jpuigcerver@fp:~/git_branques (main) $ vim README.md
-    jpuigcerver@fp:~/git_branques (main) $ git diff
-    diff --git a/README.md b/README.md
-    index 54f292f..6f65136 100644
-    --- a/README.md
-    +++ b/README.md
-    @@ -6,6 +6,7 @@ També a canviar la base d'una branca.
-     
-     ## Documentació
-     - https://git-scm.com/
-    +- https://www.w3schools.com/git/
-     
-     ## Llicència
-     CC BY-NC-SA 4.0
-    jpuigcerver@fp:~/git_branques (main) $ git commit -a -m "Documentació w3schools"
-    [main 0230b1b] Documentació w3schools
-     1 file changed, 1 insertion(+)
-    jpuigcerver@fp:~/git_branques (main) $ git lg -a
-    * 0230b1b - (3 seconds ago) Documentació w3schools - Joan Puigcerver (HEAD -> main)
-    | * a136424 - (3 minutes ago) Documentació git_training - Joan Puigcerver (docs_git_training)
-    |/
-    * 1b2c3d4 - (3 minutes ago) Text rebase - Joan Puigcerver
-    ...
+    --8<-- "docs/files/branques/stdout/branques/rebase_conflicts_branch_create.txt"
     ```
 
-??? example "Exemple: Canvi de base amb conflictes"
-    Canviem la base de la branca `docs_git_training` a la branca `main`.
+    2. Afegim un producte al fitxer `menjar.txt` en la branca `postre`.
 
     ```shellconsole
-    jpuigcerver@fp:~/git_branques (main) $ git checkout docs_git_training
-    Switched to branch 'docs_git_training'
-    jpuigcerver@fp:~/git_branques (docs_git_training) $ git rebase main
-    Auto-merging README.md
-    CONFLICT (content): Merge conflict in README.md
-    error: could not apply a136424... git_training
-    hint: Resolve all conflicts manually, mark them as resolved with
-    hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
-    hint: You can instead skip this commit: run "git rebase --skip".
-    hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
-    hint: Disable this message with "git config advice.mergeConflict false"
-    Could not apply a136424... Documentació git_training
-    jpuigcerver@fp:~/git_branques (docs_git_training|REBASE 1/1) $ git status
-    interactive rebase in progress; onto 0230b1b
-    Last command done (1 command done):
-       pick a136424 git_training
-    No commands remaining.
-    You are currently rebasing branch 'docs_git_training' on '0230b1b'.
-      (fix conflicts and then run "git rebase --continue")
-      (use "git rebase --skip" to skip this patch)
-      (use "git rebase --abort" to check out the original branch)
-
-    Unmerged paths:
-      (use "git restore --staged <file>..." to unstage)
-      (use "git add <file>..." to mark resolution)
-        both modified:   README.md
-
-    no changes added to commit (use "git add" and/or "git commit -a")
-    jpuigcerver@fp:~/git_branques (docs_git_training|REBASE 1/1) $ cat README.md
-    # Bloc: Branques
-    __Autor__: Joan Puigcerver
-
-    Estem aprenent a fusionar branques i resoldre conflictes.
-    També a canviar la base d'una branca.
-
-    ## Documentació
-    - https://git-scm.com/
-    <<<<<<< HEAD
-    - https://www.w3schools.com/git/
-    =======
-    - https://github.com/UnseenWizzard/git_training 
-    >>>>>>> a136424 (git_training)
-
-    ## Llicència
-    CC BY-NC-SA 4.0
+    --8<-- "docs/files/branques/stdout/branques/changes_postre.txt"
     ```
 
-    Vegem que hi ha conflictes en el fitxer `README.md`. Hem de resoldre'ls manualment.
+    3. Afegim alguns producte al fitxer `menjar.txt` en la branca `aperitiu`.
 
     ```shellconsole
-    jpuigcerver@fp:~/git_branques (docs_git_training|REBASE 1/1) $ vim README.md # (1)!
-    jpuigcerver@fp:~/git_branques (docs_git_training|REBASE 1/1) $ cat README.md
-    # Bloc: Branques
-    __Autor__: Joan Puigcerver
-
-    Estem aprenent a fusionar branques i resoldre conflictes.
-    També a canviar la base d'una branca.
-
-    ## Documentació
-    - https://git-scm.com/
-    - https://www.w3schools.com/git/
-    - https://github.com/UnseenWizzard/git_training 
-
-    ## Llicència
-    CC BY-NC-SA 4.0
-    jpuigcerver@fp:~/git_branques (docs_git_training|REBASE 1/1) $ git add README.md # (2)!
-    jpuigcerver@fp:~/git_branques (docs_git_training|REBASE 1/1) $ git status
-    interactive rebase in progress; onto 0230b1b
-    Last command done (1 command done):
-       pick a136424 git_training
-    No commands remaining.
-    You are currently rebasing branch 'docs_git_training' on '0230b1b'.
-      (all conflicts fixed: run "git rebase --continue")
-
-    Changes to be committed:
-      (use "git restore --staged <file>..." to unstage)
-        modified:   README.md
-
-    jpuigcerver@fp:~/git_branques (docs_git_training|REBASE 1/1) $ git rebase --continue --no-edit # (3)!
-    Successfully rebased and updated refs/heads/docs_git_training.
-    jpuigcerver@fp:~/git_branques (docs_git_training) $ git lg
-    * 8bad4a1 - (3 seconds ago) Documentació git_training - Joan Puigcerver (HEAD -> docs_git_training)
-    * 0230b1b - (3 minutes ago) Documentació w3schools - Joan Puigcerver (main)
-    ...
+    --8<-- "docs/files/branques/stdout/branques/changes_apertiu.txt"
     ```
 
-    1. Hem eliminat les marques de conflicte i hem combinat els dos textos.
-    2. Hem marcat el fitxer `README.md` com a resolt.
-    3. L'opció `--no-edit` permet continuar el procés de `rebase`, utilitzant el missatge del `commit` original.
+??? example annotate "Exemple: Fusió de les branques `postre` i `aperitiu` amb canvi de base amb conflictes"
+    Les branques `postre` i `aperitiu` han modificat la mateixa secció del fitxer `menjar.txt`,
+    per tant, quan realitzem el canvi de base es produiran conflictes.
+
+    ```shellconsole
+    --8<-- "docs/files/branques/stdout/branques/rebase_conflicts_show.txt"
+    ```
+
+    1. Primer, realitzem una [[branques#fusio-directa]] entre de la branca `postre` a la branca `main`,
+        on no hi haurà conflictes.
+
+    ```shellconsole
+    --8<-- "docs/files/branques/stdout/branques/rebase_merge_postre.txt"
+    ```
+
+    2. La branca `aperitiu` ha divergit de la branca `main`, i per tal de mantindre una __història lineal__,
+        canviarem la base de la branca `paella` a la branca `main`.
+
+        Com que han s'ha modificat la mateixa secció del fitxer `menjar.txt`,
+        es produiran conflictes.
+
+    ```shellconsole
+    --8<-- "docs/files/branques/stdout/branques/rebase_apertiu.txt"
+    ```
+
+    3. En aquest cas, resoldrem els conflictes eliminant les marques de conflicte i
+        mantenint els canvis de les dues branques.
+
+        Després, marcarem els fitxers com a resolts amb `git add` i continuarem amb el procés de `rebase`.
+
+    === "Abans"
+        ```text
+        --8<-- "docs/files/branques/stdout/branques/menjar_before_rebase_resolve.txt"
+        ```
+
+    === "Després"
+        ```text
+        --8<-- "docs/files/branques/stdout/branques/menjar_after_rebase_resolve.txt"
+        ```
+
+    ```shellconsole
+    --8<-- "docs/files/branques/stdout/branques/rebase_aperitiu_resolve.txt"
+    ```
+
+    3. Després del canvi de base, es possible fusionar la branca `apeririu` a la branca `main` amb una __fusió directa__ (_fast-forward_).
+
+    ```shellconsole
+    --8<-- "docs/files/branques/stdout/branques/rebase_merge_apertiu.txt"
+    ```
+
+1. Hem eliminat les marques de conflicte i hem combinat els dos textos.
 
 ## Recursos addicionals
 - [Curs de Git des de zero per MoureDev](https://www.youtube.com/watch?v=3GymExBkKjE&ab_channel=MoureDevbyBraisMoure)
