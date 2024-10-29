@@ -1,0 +1,39 @@
+jpuigcerver@fp:~/git_branques (aperitiu) $ git checkout main
+Switched to branch 'main'
+jpuigcerver@fp:~/git_branques (main) $ git lga -3
+* f3c59a0 - (0 seconds ago) Menjar aperitiu - Joan Puigcerver (aperitiu)
+| * 0d71e2b - (0 seconds ago) Menjar postre - Joan Puigcerver (postre)
+|/  
+* 8c43498 - (0 seconds ago) Menjar paella - Joan Puigcerver (HEAD -> main, paella)
+jpuigcerver@fp:~/git_branques (main) $ git show postre
+commit 0d71e2b271221eaffbd345ef63010188981a973a
+Author: Joan Puigcerver <j.puigcerveribanez@edu.gva.es>
+Date:   Tue Oct 29 16:24:00 2024 +0100
+
+    Menjar postre
+
+diff --git a/menjar.txt b/menjar.txt
+index 1a238ca..aef7ce7 100644
+--- a/menjar.txt
++++ b/menjar.txt
+@@ -6,3 +6,4 @@ Tomaques
+ Creïlles
+ Arròs
+ Pollastre
++Iogurt
+jpuigcerver@fp:~/git_branques (main) $ git show aperitiu
+commit f3c59a0b667fa226aa7b6c8918d7ed27c377bbc9
+Author: Joan Puigcerver <j.puigcerveribanez@edu.gva.es>
+Date:   Tue Oct 29 16:24:00 2024 +0100
+
+    Menjar aperitiu
+
+diff --git a/menjar.txt b/menjar.txt
+index 1a238ca..c6c2b2b 100644
+--- a/menjar.txt
++++ b/menjar.txt
+@@ -6,3 +6,4 @@ Tomaques
+ Creïlles
+ Arròs
+ Pollastre
++Olives

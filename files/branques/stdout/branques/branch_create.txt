@@ -1,0 +1,12 @@
+jpuigcerver@fp:~/git_branques (main) $ git lga
+* ec4c927 - (0 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main)
+jpuigcerver@fp:~/git_branques (main) $ git branch menjar
+jpuigcerver@fp:~/git_branques (main) $ git branch beguda
+jpuigcerver@fp:~/git_branques (main) $ git branch neteja
+jpuigcerver@fp:~/git_branques (main) $ git branch
+  beguda
+* main
+  menjar
+  neteja
+jpuigcerver@fp:~/git_branques (main) $ git lga
+* ec4c927 - (0 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main, neteja, menjar, beguda)

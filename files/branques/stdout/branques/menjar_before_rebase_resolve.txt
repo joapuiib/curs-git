@@ -1,0 +1,13 @@
+Pa
+Macarrons
+Pomes
+Bresquilles
+Tomaques
+Creïlles
+Arròs
+Pollastre
+<<<<<<< HEAD
+Iogurt
+=======
+Olives
+>>>>>>> f3c59a0 (Menjar aperitiu)

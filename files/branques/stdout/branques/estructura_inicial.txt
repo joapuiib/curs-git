@@ -1,0 +1,2 @@
+jpuigcerver@fp:~/git_branques (main) $ git lga
+* ec4c927 - (0 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main)

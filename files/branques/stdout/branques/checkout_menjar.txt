@@ -1,0 +1,11 @@
+jpuigcerver@fp:~/git_branques (main) $ git checkout menjar
+Switched to branch 'menjar'
+jpuigcerver@fp:~/git_branques (menjar) $ cat README.md
+# Branques a Git
+jpuigcerver@fp:~/git_branques (menjar) $ git branch
+  beguda
+  main
+* menjar
+  neteja
+jpuigcerver@fp:~/git_branques (menjar) $ git lga
+* ec4c927 - (0 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> menjar, neteja, main, beguda)

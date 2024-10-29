@@ -1,0 +1,21 @@
+jpuigcerver@fp:~/git_branques (main) $ git checkout main
+Already on 'main'
+jpuigcerver@fp:~/git_branques (main) $ git merge beguda --no-ff -m "Merge branch 'beguda' into 'main'" # (1)!
+Merge made by the 'ort' strategy.
+ beguda.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 beguda.txt
+jpuigcerver@fp:~/git_branques (main) $ ls # (2)!
+beguda.txt
+menjar.txt
+README.md
+jpuigcerver@fp:~/git_branques (main) $ cat beguda.txt
+Aigua
+Orxata
+jpuigcerver@fp:~/git_branques (main) $ git lga
+*   d71a079 - (0 seconds ago) Merge branch 'beguda' into 'main' - Joan Puigcerver (HEAD -> main)
+|\  
+| * 7540d67 - (0 seconds ago) Beguda - Joan Puigcerver (beguda)
+* | a7ef672 - (0 seconds ago) Menjar - Joan Puigcerver (menjar)
+|/  
+* ec4c927 - (0 seconds ago) Commit inicial - Joan Puigcerver

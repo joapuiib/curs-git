@@ -1,0 +1,29 @@
+jpuigcerver@fp:~/git_branques (main) $ git checkout aperitiu
+Switched to branch 'aperitiu'
+jpuigcerver@fp:~/git_branques (aperitiu) $ git rebase main
+Auto-merging menjar.txt
+CONFLICT (content): Merge conflict in menjar.txt
+Rebasing (1/1)
+error: could not apply f3c59a0... Menjar aperitiu
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+hint: Disable this message with "git config advice.mergeConflict false"
+Could not apply f3c59a0... Menjar aperitiu
+jpuigcerver@fp:~/git_branques (aperitiu|REBASE 1/1) $ git status
+interactive rebase in progress; onto 0d71e2b
+Last command done (1 command done):
+   pick f3c59a0 Menjar aperitiu
+No commands remaining.
+You are currently rebasing branch 'aperitiu' on '0d71e2b'.
+  (fix conflicts and then run "git rebase --continue")
+  (use "git rebase --skip" to skip this patch)
+  (use "git rebase --abort" to check out the original branch)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+	both modified:   menjar.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")

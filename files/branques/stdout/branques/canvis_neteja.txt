@@ -1,0 +1,23 @@
+jpuigcerver@fp:~/git_branques (beguda) $ git checkout neteja
+Switched to branch 'neteja'
+jpuigcerver@fp:~/git_branques (neteja) $ echo "Paper higiènic" >> neteja.txt
+jpuigcerver@fp:~/git_branques (neteja) $ echo "Fregall" >> neteja.txt
+jpuigcerver@fp:~/git_branques (neteja) $ git status
+On branch neteja
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	neteja.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+jpuigcerver@fp:~/git_branques (neteja) $ git add neteja.txt
+jpuigcerver@fp:~/git_branques (neteja) $ git commit -m "Neteja"
+[neteja 06d7d94] Neteja
+ 1 file changed, 2 insertions(+)
+ create mode 100644 neteja.txt
+jpuigcerver@fp:~/git_branques (neteja) $ git lga
+* 7540d67 - (0 seconds ago) Beguda - Joan Puigcerver (beguda)
+| * a7ef672 - (0 seconds ago) Menjar - Joan Puigcerver (menjar)
+|/  
+| * 06d7d94 - (0 seconds ago) Neteja - Joan Puigcerver (HEAD -> neteja)
+|/  
+* ec4c927 - (0 seconds ago) Commit inicial - Joan Puigcerver (main)

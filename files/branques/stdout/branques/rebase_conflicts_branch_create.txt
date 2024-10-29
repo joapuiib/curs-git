@@ -1,0 +1,9 @@
+jpuigcerver@fp:~/git_branques (main) $ git checkout main
+Already on 'main'
+jpuigcerver@fp:~/git_branques (main) $ git branch postre
+jpuigcerver@fp:~/git_branques (main) $ git branch aperitiu
+jpuigcerver@fp:~/git_branques (main) $ git lga -3
+* 8c43498 - (0 seconds ago) Menjar paella - Joan Puigcerver (HEAD -> main, postre, paella, aperitiu)
+* 8a3c34b - (0 seconds ago) Beguda desdejuni - Joan Puigcerver (desdejuni)
+*   ce43962 - (0 seconds ago) Merge branch 'verdura' into 'main' - Joan Puigcerver
+|\  

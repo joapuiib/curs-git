@@ -1,0 +1,2 @@
+jpuigcerver@fp:~/git_branques (main) $ git branch
+* main

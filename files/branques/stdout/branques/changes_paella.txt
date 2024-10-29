@@ -1,0 +1,14 @@
+jpuigcerver@fp:~/git_branques (desdejuni) $ git checkout paella
+Switched to branch 'paella'
+jpuigcerver@fp:~/git_branques (paella) $ echo "Arròs" >> menjar.txt
+jpuigcerver@fp:~/git_branques (paella) $ echo "Pollastre" >> menjar.txt
+jpuigcerver@fp:~/git_branques (paella) $ git add menjar.txt
+jpuigcerver@fp:~/git_branques (paella) $ git commit -m "Menjar paella"
+[paella 641c594] Menjar paella
+ 1 file changed, 2 insertions(+)
+jpuigcerver@fp:~/git_branques (paella) $ git lga -3
+* 8a3c34b - (0 seconds ago) Beguda desdejuni - Joan Puigcerver (desdejuni)
+| * 641c594 - (0 seconds ago) Menjar paella - Joan Puigcerver (HEAD -> paella)
+|/  
+*   ce43962 - (0 seconds ago) Merge branch 'verdura' into 'main' - Joan Puigcerver (main)
+|\  

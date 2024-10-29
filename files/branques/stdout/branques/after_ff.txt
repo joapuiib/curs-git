@@ -1,0 +1,19 @@
+jpuigcerver@fp:~/git_branques (main) $ git checkout main
+Already on 'main'
+jpuigcerver@fp:~/git_branques (main) $ git merge menjar
+Updating ec4c927..a7ef672
+Fast-forward
+ menjar.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 menjar.txt
+jpuigcerver@fp:~/git_branques (main) $ ls # (1)!
+menjar.txt
+README.md
+jpuigcerver@fp:~/git_branques (main) $ cat menjar.txt
+Pa
+Macarrons
+jpuigcerver@fp:~/git_branques (main) $ git lga
+* 7540d67 - (0 seconds ago) Beguda - Joan Puigcerver (beguda)
+| * a7ef672 - (0 seconds ago) Menjar - Joan Puigcerver (HEAD -> main, menjar)
+|/  
+* ec4c927 - (0 seconds ago) Commit inicial - Joan Puigcerver

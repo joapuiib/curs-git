@@ -1,0 +1,12 @@
+jpuigcerver@fp:~/git_branques (main) $ git checkout desdejuni
+Switched to branch 'desdejuni'
+jpuigcerver@fp:~/git_branques (desdejuni) $ echo "Café" >> beguda.txt
+jpuigcerver@fp:~/git_branques (desdejuni) $ git add beguda.txt
+jpuigcerver@fp:~/git_branques (desdejuni) $ git commit -m "Beguda desdejuni"
+[desdejuni 8a3c34b] Beguda desdejuni
+ 1 file changed, 1 insertion(+)
+jpuigcerver@fp:~/git_branques (desdejuni) $ git lga -3
+* 8a3c34b - (0 seconds ago) Beguda desdejuni - Joan Puigcerver (HEAD -> desdejuni)
+*   ce43962 - (0 seconds ago) Merge branch 'verdura' into 'main' - Joan Puigcerver (paella, main)
+|\  
+| * e4cfd4d - (0 seconds ago) Verdura - Joan Puigcerver (verdura)

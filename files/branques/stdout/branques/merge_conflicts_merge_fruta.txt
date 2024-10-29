@@ -1,0 +1,15 @@
+jpuigcerver@fp:~/git_branques (main) $ git merge fruta
+Updating d71a079..d32e3ba
+Fast-forward
+ menjar.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+jpuigcerver@fp:~/git_branques (main) $ git lga
+* e4cfd4d - (0 seconds ago) Verdura - Joan Puigcerver (verdura)
+| * d32e3ba - (1 second ago) Fruta - Joan Puigcerver (HEAD -> main, fruta)
+|/  
+*   d71a079 - (1 second ago) Merge branch 'beguda' into 'main' - Joan Puigcerver
+|\  
+| * 7540d67 - (1 second ago) Beguda - Joan Puigcerver (beguda)
+* | a7ef672 - (1 second ago) Menjar - Joan Puigcerver (menjar)
+|/  
+* ec4c927 - (1 second ago) Commit inicial - Joan Puigcerver

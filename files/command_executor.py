@@ -156,3 +156,11 @@ class CommandExecutor:
             f.seek(0)
             f.write(content)
             f.truncate()
+
+
+    def log_file_content(self, filename, log_filename):
+        with open(filename, "r") as f:
+            content = f.read()
+            log_file = os.path.join(self.script_dir, log_filename)
+            with open(log_file, "w") as lf:
+                lf.write(content)

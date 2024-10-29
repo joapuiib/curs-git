@@ -1,0 +1,25 @@
+jpuigcerver@fp:~/git_branques (main) $ git merge verdura
+Auto-merging menjar.txt
+CONFLICT (content): Merge conflict in menjar.txt
+Automatic merge failed; fix conflicts and then commit the result.
+jpuigcerver@fp:~/git_branques (main|MERGING) $ git status
+On branch main
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	both modified:   menjar.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+jpuigcerver@fp:~/git_branques (main|MERGING) $ cat menjar.txt
+Pa
+Macarrons
+<<<<<<< HEAD
+Pomes
+Bresquilles
+=======
+Tomaques
+Creïlles
+>>>>>>> verdura

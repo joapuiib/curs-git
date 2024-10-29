@@ -1,0 +1,10 @@
+jpuigcerver@fp:~/git_branques (main) $ git checkout main
+Already on 'main'
+jpuigcerver@fp:~/git_branques (main) $ ls
+menjar.txt
+README.md
+jpuigcerver@fp:~/git_branques (main) $ git lga
+* 7540d67 - (0 seconds ago) Beguda - Joan Puigcerver (beguda)
+| * a7ef672 - (0 seconds ago) Menjar - Joan Puigcerver (HEAD -> main, menjar)
+|/  
+* ec4c927 - (0 seconds ago) Commit inicial - Joan Puigcerver
