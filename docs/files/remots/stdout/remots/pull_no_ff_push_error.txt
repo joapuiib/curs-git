@@ -1,0 +1,18 @@
+jpuigcerver@fp:~/git_remots (main) $ git push
+To github.com:joapuiib/git_remots.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:joapuiib/git_remots.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+jpuigcerver@fp:~/git_remots (main) $ git fetch
+From github.com:joapuiib/git_remots
+   8594cb9..8c604a3  main       -> origin/main
+jpuigcerver@fp:~/git_remots (main) $ git lga
+* 95b8d62 - (4 seconds ago) Beguda - Joan Puigcerver (HEAD -> main)
+| * 8c604a3 - (6 seconds ago) Més menjar - Joan Puigcerver (origin/main, origin/HEAD)
+|/  
+* 8594cb9 - (12 seconds ago) Menjar - Joan Puigcerver
+* 113f1d4 - (22 seconds ago) Commit inicial - Joan Puigcerver

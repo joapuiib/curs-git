@@ -1,0 +1,9 @@
+jpuigcerver@fp:~/git_remots (main) $ cd ~
+jpuigcerver@fp:~ $ rm -rf ~/git_remots
+jpuigcerver@fp:~ $ ls -l ~/git_remots
+ls: cannot access '~/git_remots': No such file or directory
+jpuigcerver@fp:~ $ git clone git@github.com:joapuiib/git_remots.git
+Cloning into 'git_remots'...
+jpuigcerver@fp:~ $ cd ~/git_remots
+jpuigcerver@fp:~/git_remots (main) $ git lga
+* 113f1d4 - (8 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main, origin/main, origin/HEAD)

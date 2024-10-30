@@ -39,36 +39,18 @@ projectes.
 
     __Inicialització:__
     ```bash
-    git init ~/git_remots
-    cd ~/git_remots
-    echo "# Bloc: Remots" > README.md
-    git add README.md
-    git commit -m "README.md: Títol"
-    echo "Repositori del __Bloc: Remots__ del curs __\"Introducció a Git i la seua aplicació a l’aula\"__" >> README.md
-    git commit -a -m "README.md: Descripció"
+    --8<-- "docs/files/remots/stdout/remots/setup_remots.sh"
     ```
 
     ```shellconsole
-    jpuigcerver@fp:~ $ git init ~/git_remots
-    Initialized empty Git repository in /home/jpuigcerver/git_remots/.git/
-    jpuigcerver@fp:~ $ cd ~/git_remots
-    jpuigcerver@fp:~/git_remots (main) $ branch -m main # (1)!
-    jpuigcerver@fp:~/git_remots (main) $ echo "# Bloc: Remots" > README.md
-    jpuigcerver@fp:~/git_remots (main) $ git add README.md
-    jpuigcerver@fp:~/git_remots (main) $ git commit -m "README.md: Títol"
-    [master (root-commit) 0b1b3b4] README.md: Títol
-     1 file changed, 1 insertion(+)
-     create mode 100644 README.md
-    jpuigcerver@fp:~/git_remots (main) $ echo "Repositori del __Bloc: Remots__ del curs __\"Introducció a Git i la seua aplicació a l’aula\"__" >> README.md
-    jpuigcerver@fp:~/git_remots (main) $ git commit -a -m "README.md: Descripció"
-    [master 1b3b4b0] README.md: Descripció
-     1 file changed, 1 insertion(+)
-    jpuigcerver@fp:~/git_remots (main) $ git lg
-    * 1b3b4b0 - (2 minutes ago) README.md: Descripció - Joan Puigcerver (HEAD -> main)
-    * 0b1b3b4 - (3 minutes ago) README.md: Títol - Joan Puigcerver
+    --8<-- "docs/files/remots/stdout/remots/inicial.txt"
     ```
 
     1. Canviem el nom de la branca principal a `main`.
+
+    ```md title="README.md"
+    --8<-- "docs/files/remots/stdout/remots/README.txt"
+    ```
 
 
 ## Repositori remot
@@ -170,15 +152,14 @@ En aquesta secció, crearem un repositori remot a GitHub.
 Per poder enllaçar el teu repositori local amb el repositori remot
 i fer canvis en aquest, necessites autenticar-te amb el servidor de GitHub.
 
-GitHub ofereix diferents mètodes d'autenticació, utilitzant dos protocols diferents:
-
-!!! tip
-    Per seguretat i reutilització, es recomana utilitzar el __mètode SSH__ per autenticar-se
+!!! recommend
+    Per seguretat i fàcil reutilització, es recomana utilitzar el __mètode SSH__ per autenticar-se
     amb el servidor de GitHub.
 
-    Consulta l'apartat [Configuració de la clau SSH](#configuracio-de-la-clau-ssh) si
-    vols anar directament a aquest mètode.
+    Pots consultar l'apartat [Configuració de la clau SSH](#configuracio-de-la-clau-ssh)
+    per configurar aquest mètode d'autenticació directament.
 
+GitHub ofereix diferents mètodes d'autenticació, utilitzant dos protocols diferents:
 
 - __Protocol HTTPS__: Utilitza el protocol HTTPS per autenticar-se amb el servidor de GitHub.
 
@@ -270,7 +251,7 @@ Per autenticar-te amb el servidor de GitHub mitjançant el protocol SSH,
 has de configurar una clau SSH en el teu sistema local i afegir-la al teu compte de GitHub.
 
 !!! docs
-    - https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh
+    - [Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh){:target="_blank"}
 
 Per generar una clau SSH, segueix els següents passos.
 
@@ -385,20 +366,10 @@ Repositori Local vinculat amb un Repositori Remot
     els canvis en un repositori remot
     sense haver enllaçat el teu repositori local,
     Git et mostrarà un missatge d'error:
+
     ```shellconsole
-    jpuigcerver@fp:~/git_remots (main) $ git remote # (1)!
-    jpuigcerver@fp:~/git_remots (main) $ git push
-    fatal: No configured push destination.
-    Either specify the URL from the command-line or configure a remote repository using
-
-        git remote add <name> <url>
-
-    and then push using the remote name
-
-        git push <name>
+    --8<-- "docs/files/remots/stdout/remots/no_remote.txt"
     ```
-
-1. Aquesta ordre no mostra res perquè encara no hi ha configurat cap remot.
 
 ??? example annotate "Exemple: Afegir un repositori remot"
     Enllaçarem el nostre repositori local amb el repositori
@@ -407,15 +378,7 @@ Repositori Local vinculat amb un Repositori Remot
     La URL del repositori remot és `git@github.com:jpuigcerver/git_remots.git`(1).
     
     ```shellconsole
-    jpuigcerver@fp:~/git_remots (main) $ git remote
-    jpuigcerver@fp:~/git_remots (main) $ git remote add origin git@github.com:jpuigcerver/git_remots.git
-    jpuigcerver@fp:~/git_remots (main) $ git remote
-    origin
-    jpuigcerver@fp:~/git_remots (main) $ git remote show origin
-    * remote origin
-      Fetch URL: git@github.com:jpuigcerver/git_remots.git
-      Push  URL: git@github.com:jpuigcerver/git_remots.git
-      HEAD branch: (unknown)
+    --8<-- "docs/files/remots/stdout/remots/add_remote.txt"
     ```
 
 1. Utilitzem la URL __SSH__ ja que he decidit utilitzar aquest mètode d'autenticació.
@@ -488,18 +451,7 @@ Associació d'una branca local a una branca remota
     hem d'anar associar una branca remota.
 
     ```shellconsole
-    jpuigcerver@fp:~/git_remots (main) $ git lga
-    * b7adb78 - (2 seconds ago) README.md: Descripció - Joan Puigcerver (HEAD -> main)
-    * a41ab9e - (2 seconds ago) README.md: Títol - Joan Puigcerver
-    jpuigcerver@fp:~/git_remots (main) $ git push
-    fatal: The current branch main has no upstream branch.
-    To push the current branch and set the remote as upstream, use
-
-        git push --set-upstream origin main
-
-    To have this happen automatically for branches without a tracking
-    upstream, see 'push.autoSetupRemote' in 'git help config'.
-
+    --8<-- "docs/files/remots/stdout/remots/push_no_upstream.txt"
     ```
 
     Associem les branques `main` local i remota amb l'ordre `git push --set-upstream`.
@@ -508,27 +460,14 @@ Associació d'una branca local a una branca remota
 
 
     ```shellconsole
-    jpuigcerver@fp:~/git_remots (main) $ git push --set-upstream origin main
-    Enumerating objects: 6, done.
-    Counting objects: 100% (6/6), done.
-    Delta compression using up to 12 threads
-    Compressing objects: 100% (3/3), done.
-    Writing objects: 100% (6/6), 503 bytes | 503.00 KiB/s, done.
-    Total 6 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
-    remote: Resolving deltas: 100% (1/1), done.
-    To github.com:jpuigcerver/git_remots.git
-     * [new branch]      main -> main
-    branch 'main' set up to track 'origin/main'.
-    jpuigcerver@fp:~/git_remots (main) $ git lga
-    * b7adb78 - (2 seconds ago) README.md: Descripció - Joan Puigcerver (HEAD -> main, origin/main)
-    * a41ab9e - (2 seconds ago) README.md: Títol - Joan Puigcerver
+    --8<-- "docs/files/remots/stdout/remots/push_upstream.txt"
     ```
 
     Vegem que els canvis s'han publicat correctament al repositori remot:
 
     ![Canvis publicats a GitHub](img/github_push.png)
-    /// figure-caption
-    Canvis publicats a GitHub
+    /// figure-caption | ^1
+    Canvis publicats a :material-github: GitHub
     ///
 
 ## Clonació d'un repositori remot (`git clone`)
@@ -552,77 +491,23 @@ git clone <url> [<directori>]
 Clonació d'un repositori remot
 ///
 
-??? example "Exemple: Pau clona el repositori remot"
-    En aquest exemple, el desenvolupador Pau clonarà el repositori remot `git_remots`
-    sobre el directori `~/git_remots_pau` del seu sistema.
+??? example "Exemple: Clonació d'un repositori remot"
+    Com que ja tenim els canvis publicats al repositori remot,
+    podem clonar el repositori remot al nostre sistema local.
 
-    > S'ha modificat el _prompt_ per indicar les comandes que executaria Pau.
+    Esborrem el directori `git_remots` i el clonarem des del repositori remot.
+
 
     ```shellconsole
-    pau@fp:~ $ git clone git@github.com:jpuigcerver/git_remots.git ~/git_remots_pau
-    Cloning into '/home/pau/git_remots_pau'...
-    remote: Enumerating objects: 6, done.
-    remote: Counting objects: 100% (6/6), done.
-    remote: Compressing objects: 100% (2/2), done.
-    remote: Total 6 (delta 1), reused 6 (delta 1), pack-reused 0 (from 0)
-    Receiving objects: 100% (6/6), done.
-    Resolving deltas: 100% (1/1), done.
-    pau@fp:~ $ cd ~/git_remots_pau
-    pau@fp:~/git_remots_pau (main) $ ls
-    README.md
-    pau@fp:~/git_remots_pau (main) $ git lg
-    * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver (HEAD -> main, origin/main)
-    * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
+    --8<-- "docs/files/remots/stdout/remots/clone.txt"
     ```
 
-    S'observa que s'ha clonat correctament el repositori remot `git_remots` al directori `~/git_remots_pau`,
+    S'observa que s'ha clonat correctament el repositori remot `git_remots`
     que conté els fitxers i la història de canvis del repositori remot.
 
 
 ## Sincronització entre repositoris (`git fetch`)
 
-??? prep "Preparació: Pau realitza canvis"
-    Pau crea el fitxer `pau.txt` amb el contingut `Canvi realitzat per Pau`.
-
-    ```shellconsole
-    pau@fp:~/git_remots_pau (main) $ echo "Canvi realitzat per Pau" > pau.txt
-    pau@fp:~/git_remots_pau (main) $ git status
-        On branch main
-    Your branch is up to date with 'origin/main'.
-
-    Untracked files:
-      (use "git add <file>..." to include in what will be committed)
-        pau.txt
-
-    nothing added to commit but untracked files present (use "git add" to track)
-    pau@fp:~/git_remots_pau (main) $ git add pau.txt
-    pau@fp:~/git_remots_pau (main) $ git commit -m "pau.txt: Canvi realitzat per Pau"
-    [main 1b3b4b0] pau.txt: Canvi realitzat per Pau
-     1 file changed, 1 insertion(+)
-     create mode 100644 pau.txt
-    pau@fp:~/git_remots_pau (main) $ git lg
-    * 1b3b4b0 - (2 minutes ago) pau.txt: Canvi realitzat per Pau - Pau (HEAD -> main)
-    * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver (origin/main)
-    * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
-    ```
-
-    Després, Pau puja els canvis al repositori remot.
-
-    ```shellconsole
-    pau@fp:~/git_remots_pau (main) $ git push
-    Enumerating objects: 4, done.
-    Counting objects: 100% (4/4), done.
-    Delta compression using up to 12 threads
-    Compressing objects: 100% (2/2), done.
-    Writing objects: 100% (3/3), 303 bytes | 303.00 KiB/s, done.
-    Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-    To github.com:jpuigcerver/git_remots.git
-       b7adb78..1b3b4b0  main -> main
-    pau@fp:~/git_remots_pau (main) $ git lg
-    * 1b3b4b0 - (2 minutes ago) pau.txt: Canvi realitzat per Pau - Pau (HEAD -> main, origin/main)
-    * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver
-    * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
-    ```
 
 L'ordre `git fetch` actualitza la informació de les branques remotes `origin/<branca>`
 al nostre repositori local, però no aplica els canvis a les nostres branques locals.
@@ -662,36 +547,58 @@ i decidir si volem incorporar-los al nostre repositori local.
     git config --global remote.origin.prune true
     ```
 
-??? example "Exemple: Pau sincronitza el repositori remot"
-    En aquest moment, Pau ha realitzat un canvi en el repositori remot, que no està reflectit
-    en el nostre repositori local.
+??? prep "Preparació: Canvis en el repositori remot"
+    Anem a realitzar un canvi en el repositori remot directament a :material-github: GitHub.
+
+    1. Creem un fitxer `menjar.txt` amb el contingut:
+
+        ```plaintext title="menjar.txt"
+        Pa
+        Macarrons
+        ```
+
+    ![Crear un nou fitxer a GitHub](img/github_create_new_file.png)
+    /// figure-caption | ^1
+    Crear un nou fitxer a :material-github: GitHub
+    ///
+
+    ![Afegir contingut a un fitxer en GitHub](img/github_create_menjar.png)
+    /// figure-caption | ^1
+    Afegir contingut a `menjar.txt` en :material-github: GitHub
+    ///
+
+    2. Creem un _commit_ amb el missatge __Menjar__.
+
+    ![Crear un commit a GitHub](img/github_commit_menjar.png)
+    /// figure-caption | ^1
+    Crear un commit a :material-github: GitHub
+    ///
+
+    3. Comprovem que el canvi s'ha realitzat correctament.
+
+    ![Canvi realitzat a GitHub](img/github_after_commit_menjar.png)
+    /// figure-caption | ^1
+    Canvi realitzat a :material-github: GitHub
+    ///
+
+
+??? example "Exemple: Sincronització entre repositoris (`fetch`)"
+    En aquest moment, s'ha realitzat un canvi en el repositori remot,
+    que no figura en el nostre repositori local.
 
     ```shellconsole
-    jpuigcerver@fp:~/git_remots (main) $ git lg
-    * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver (HEAD -> main, origin/main)
-    * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
+    --8<-- "docs/files/remots/stdout/remots/before_fetch.txt"
     ```
 
-    Sincronitzem el repositori local amb el repositori remot, que conté els canvis
-    realitzats per Pau.
+    Sincronitzem el repositori local amb el repositori remot,
+    que conté els nous canvis realitzats.
     
     ```shellconsole
-    jpuigcerver@fp:~/git_remots (main) $ git fetch
-    remote: Enumerating objects: 4, done.
-    remote: Counting objects: 100% (4/4), done.
-    remote: Compressing objects: 100% (2/2), done.
-    remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-    Unpacking objects: 100% (3/3), done.
-    From github.com:jpuigcerver/git_remots
-       b7adb78..1b3b4b0  main     -> origin/main
-    jpuigcerver@fp:~/git_remots (main) $ git lg
-    * 1b3b4b0 - (2 minutes ago) pau.txt: Canvi realitzat per Pau - Pau (origin/main)
-    * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver (HEAD -> main)
-    * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
+    --8<-- "docs/files/remots/stdout/remots/after_fetch.txt"
     ```
 
-    S'observa que la branca `origin/main` s'ha actualitzat amb el canvi realitzat per Pau,
-    però la branca `main` continua en el commit anterior.
+    S'observa que la branca `origin/main` s'ha actualitzat amb el nou canvi,
+    però la branca local `main` no s'ha modificat.
 
 
 ## Incorporació de canvis (`git pull`)
@@ -754,108 +661,56 @@ git pull [<options>] [<remot> [<branca>]
         git config --global pull.rebase true
         ```
 
-??? example "Exemple: Incorporació de canvis fusió directa"
+??? example "Exemple: Incorporació de canvis fusió directa (`pull --ff-only`)"
     Vegem com el commit `1b3b4b0` forma part de la branca remota `origin/main`,
     però no de la branca local `main`.
 
     ```shellconsole
-    jpuigcerver@fp:~/git_remots (main) $ git lg
-    * 1b3b4b0 - (2 minutes ago) pau.txt: Canvi realitzat per Pau - Pau (origin/main)
-    * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver (HEAD -> main)
-    * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
-    jpuigcerver@fp:~/git_remots (main) $ git status
-    On branch main
-    Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
-      (use "git pull" to update your local branch)
-
-    nothing to commit, working tree clean
+    --8<-- "docs/files/remots/stdout/remots/before_pull_ff.txt"
     ```
 
     Incorporem els canvis de la branca remota `origin/main` a la branca local `main`.
 
     ```shellconsole
-    jpuigcerver@fp:~/git_remots (main) $ git pull
-    Updating b7adb78..1b3b4b0
-    Fast-forward
-     pau.txt | 1 +
-     1 file changed, 1 insertion(+)
-     create mode 100644 pau.txt
-    jpuigcerver@fp:~/git_remots (main) $ git lg
-    * 1b3b4b0 - (2 minutes ago) pau.txt: Canvi realitzat per Pau - Pau (HEAD -> main, origin/main)
-    * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver
-    * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
+    --8<-- "docs/files/remots/stdout/remots/after_pull_ff.txt"
     ```
 
-??? example annotate "Exemple: Incorporació de canvis canvi de base"
-    ??? prep "Preparació: Més canvis de Pau"
-        ```shellconsole
-        pau@fp:~/git_remots_pau (main) $ echo "Un altre canvi de Pau" >> pau.txt
-        pau@fp:~/git_remots_pau (main) $ git commit -a -m "pau.txt: Un altre canvi de Pau"
-        [main 2b3b4b0] pau.txt: Un altre canvi de Pau
-         1 file changed, 1 insertion(+)
-        pau@fp:~/git_remots_pau (main) $ git push
-        Enumerating objects: 4, done.
-        Counting objects: 100% (4/4), done.
-        Delta compression using up to 12 threads
-        Compressing objects: 100% (2/2), done.
-        Writing objects: 100% (3/3), 303 bytes | 303.00 KiB/s, done.
-        Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-        To github.com:jpuigcerver/git_remots.git
-           1b3b4b0..2b3b4b0  main -> main
-        pau@fp:~/git_remots_pau (main) $ git lg
-        * 2b3b4b0 - (2 minutes ago) pau.txt: Un altre canvi de Pau - Pau (HEAD -> main, origin/main)
-        * 1b3b4b0 - (10 minutes ago) pau.txt: Canvi realitzat per Pau - Pau
-        * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver
-        * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
+??? prep "Preparació: Més canvis en el repositori remot"
+    Realitza els següents canvis en el repositori remot directament a :material-github: GitHub.
+
+    - Modifica el fitxer `menjar.txt` amb el següent contingut:
+
+        ```plaintext title="menjar.txt"
+        Pa
+        Macarrons
+        Pomes
         ```
+
+    - Crea un _commit_ amb el missatge __Més menjar__.
+
+??? example annotate "Exemple: Incorporació de canvis amb fusió de branques divergents (`pull --no-ff` i `pull --rebase`)"
 
     Una de les situacions més comunes que ens porten a que la branca local divergisca de la branca remota és
     quan realitzem canvis sobre la branca local sense haver sincronitzat abans el seu estat amb la branca remota associada.
 
-    En aquest cas, Pau ha realitzat un altre canvi en el repositori remot, que nosaltres no hem incorporat.
+    En aquest cas, s'ha realitzat un altre canvi en el repositori remot,
+    que nosaltres no hem incorporat.
 
-    No obstant això, anem a fer un canvi a la branca local `main`, simulant la situació anteriorment descrita.
+    No obstant això, anem a fer un canvi a la branca local `main`,
+    simulant la situació anteriorment descrita.
 
     ```shellconsole
-    jpuigcerver@fp:~/git_remots (main) $ git lg # (1)!
-    * 1b3b4b0 - (2 minutes ago) pau.txt: Canvi realitzat per Pau - Pau (HEAD -> main, origin/main)
-    * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver
-    * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
-    jpuigcerver@fp:~/git_remots (main) $ echo "Canvi realitzat per Joan" >> joan.txt
-    jpuigcerver@fp:~/git_remots (main) $ git add joan.txt
-    jpuigcerver@fp:~/git_remots (main) $ git commit -m "joan.txt: Canvi realitzat per Joan"
-    [main 3b4b0b0] joan.txt: Canvi realitzat per Joan
-     1 file changed, 1 insertion(+)
-     create mode 100644 joan.txt
-    jpuigcerver@fp:~/git_remots (main) $ git lg
-    * 3b4b0b0 - (2 minutes ago) joan.txt: Canvi realitzat per Joan - Joan Puigcerver (HEAD -> main)
-    * 1b3b4b0 - (10 minutes ago) pau.txt: Canvi realitzat per Pau - Pau (origin/main)
-    * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver
-    * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
+    --8<-- "docs/files/remots/stdout/remots/prepare_local_pull_no_ff.txt"
     ```
 
-    1. En aquest moment, el canvi de Pau `2b3b4b0` no està reflectit en el nostre repositori local.
+    1. En aquest moment, el nou canvi __Més menjar__ no està reflectit en la branca remota `origin/main`.
 
     En aquest moment, podríem intentar publicar aquest canvi al repositori remot,
-    però ens mostrarà un error com que el repositori remot té canvis que no estan reflectits en el nostre repositori local.
+    però com  que el repositori remot té canvis que no estan reflectits en el nostre repositori local,
+    Git ens mostrarà un missatge d'error.
 
     ```shellconsole
-    jpuigcerver@fp:~/git_remots (main) $ git push
-    To github.com:jpuigcerver/git_remots.git
-    ! [rejected]        main -> main (fetch first)
-    error: failed to push some refs to 'github.com:jpuigcerver/git_remots.git'
-    hint: Updates were rejected because the remote contains work that you do not
-    hint: have locally. This is usually caused by another repository pushing to
-    hint: the same ref. If you want to integrate the remote changes, use
-    hint: 'git pull' before pushing again.
-    hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-    jpuigcerver@fp:~/git_remots (main) $ git lga
-    * 3b4b0b0 - (2 minutes ago) joan.txt: Canvi realitzat per Joan - Joan Puigcerver (HEAD -> main)
-    | * 2b3b4b0 - (2 minutes ago) pau.txt: Un altre canvi de Pau - Pau (origin/main)
-    |/
-    * 1b3b4b0 - (10 minutes ago) pau.txt: Canvi realitzat per Pau - Pau
-    * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver
-    * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
+    --8<-- "docs/files/remots/stdout/remots/pull_no_ff_push_error.txt"
     ```
 
     Vegem que l'ordre `git push` ens recomana fer un `git pull` per incorporar els canvis,
@@ -864,34 +719,31 @@ git pull [<options>] [<remot> [<branca>]
     Si executem `git pull`, es produirà una fusió de branques divergents, que crearà un commit de fusió
     i resultarà en una història no lineal.
 
-    Intentem fer un `git pull --ff-only` per veure-ho.
+    Vegem que no podem incorporar els canvis amb una fusió directa `git pull --ff-only`.
 
     ```shellconsole
-    jpuigcerver@fp:~/git_remots (main) $ git pull --ff-only
-    hint: Diverging branches can't be fast-forwarded, you need to either:
-    hint:
-    hint:   git merge --no-ff
-    hint:
-    hint: or:
-    hint:
-    hint:   git rebase
-    hint:
-    hint: Disable this message with "git config advice.diverging false"
-    fatal: Not possible to fast-forward, aborting.
+    --8<-- "docs/files/remots/stdout/remots/pull_ff_only_error.txt"
     ```
 
-    Si volem conservar una història lineal, haurem de fer un __canvi de base__ amb `git pull --rebase`.
+    En aquest cas, haurem d'incorporar els canvis de dues maneres diferents.
 
-    ```shellconsole
-    jpuigcerver@fp:~/git_remots (main) $ git pull --rebase
-    Successfully rebased and updated refs/heads/main.
-    jpuigcerver@fp:~/git_remots (main) $ git lga
-    * 3b4b0b0 - (2 minutes ago) joan.txt: Canvi realitzat per Joan - Joan Puigcerver (HEAD -> main)
-    * 2b3b4b0 - (2 minutes ago) pau.txt: Un altre canvi de Pau - Pau (origin/main)
-    * 1b3b4b0 - (10 minutes ago) pau.txt: Canvi realitzat per Pau - Pau
-    * b7adb78 - (10 minutes ago) README.md: Descripció - Joan Puigcerver
-    * a41ab9e - (10 minutes ago) README.md: Títol - Joan Puigcerver
-    ```
+    !!! warning "Un _commit_ de fusió: `git pull --no-ff`."
+        Aquesta opció crearà un commit de fusió, que no és desitjable si es vol mantenir una història lineal.
+
+        ```shellconsole
+        --8<-- "docs/files/remots/stdout/remots/pull_no_ff.txt"
+        ```
+
+        1. L'opció `--no-edit` indica que no volem editar el missatge de commit de fusió i deixem el missatge per defecte.
+
+    !!! recommend "Un canvi de base: `git pull --rebase`."
+        Aquesta opció aplica els canvis de la branca local després dels canvis de la branca remota,
+        mantenint una història lineal.
+
+        ```shellconsole
+        --8<-- "docs/files/remots/stdout/remots/pull_rebase.txt"
+        ```
+
 
 ## Eliminar una branca remota
 Per eliminar una branca remota, cal utilitzar `git push` amb l'opció `-d`:

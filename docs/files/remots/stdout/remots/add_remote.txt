@@ -1,0 +1,6 @@
+jpuigcerver@fp:~/git_remots (main) $ git remote add origin git@github.com:joapuiib/git_remots.git
+jpuigcerver@fp:~/git_remots (main) $ git remote show origin
+* remote origin
+  Fetch URL: git@github.com:joapuiib/git_remots.git
+  Push  URL: git@github.com:joapuiib/git_remots.git
+  HEAD branch: (unknown)

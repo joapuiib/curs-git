@@ -1,0 +1,10 @@
+jpuigcerver@fp:~/git_remots (main) $ echo "Aigua" >> beguda.txt
+jpuigcerver@fp:~/git_remots (main) $ git add beguda.txt
+jpuigcerver@fp:~/git_remots (main) $ git commit -m "Beguda"
+[main 95b8d62] Beguda
+ 1 file changed, 1 insertion(+)
+ create mode 100644 beguda.txt
+jpuigcerver@fp:~/git_remots (main) $ git lga # (1)!
+* 95b8d62 - (0 seconds ago) Beguda - Joan Puigcerver (HEAD -> main)
+* 8594cb9 - (8 seconds ago) Menjar - Joan Puigcerver (origin/main, origin/HEAD)
+* 113f1d4 - (18 seconds ago) Commit inicial - Joan Puigcerver
