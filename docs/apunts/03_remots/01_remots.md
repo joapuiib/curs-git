@@ -745,7 +745,49 @@ git pull [<options>] [<remot> [<branca>]
         ```
 
 
-## Eliminar una branca remota
+## Treball amb branques
+En aquests apunts, hem treballat les diferents operacions de sincronització entre repositoris
+sobre la branca principal `main`. Les mateixes operacions poden ser realitzades sobre altres branques
+de la mateixa manera.
+
+### Crear una branca
+```bash
+git branch <branca>
+```
+
+### Canviar de branca
+```bash
+git checkout <branca>
+```
+
+### Enllaçar una branca local amb una branca remota
+!!! info
+    Aquesta operació es realitzarà sobre la branca actual (`HEAD`).
+
+```bash
+git push [-u | --set-upstream] origin <branca>
+```
+
+### Publicar canvis d'una branca
+!!! info
+    Aquesta operació es realitzarà sobre la branca actual (`HEAD`).
+
+    Prèviament cal haver [enllaçat la branca local amb la branca remota](#enllacar-una-branca-local-amb-una-branca-remota).
+
+```bash
+git push
+```
+
+### Incorporar canvis d'una branca remota
+!!! info
+    Aquesta operació es realitzarà sobre la branca actual (`HEAD`).
+
+```bash
+git pull [--rebase]
+```
+
+
+### Eliminar una branca remota
 Per eliminar una branca remota, cal utilitzar `git push` amb l'opció `-d`:
 
 ```bash
