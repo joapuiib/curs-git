@@ -33,9 +33,9 @@ poden intercanviar idees, opinions, realitzar suggeriments o debatre sobre temes
     Podeu accedir mitjançant la secció __:octicons-comment-discussion-16: Discussions__ del menú superior
     o en [aquest enllaç](https://github.com/joapuiib/curs-git/discussions){:target="_blank"}.
 
-    [![Exemple de debat en un repositori de GitHub](./img/projectes/exemple_debats.png)](https://github.com/joapuiib/curs-git/discussions){:target="_blank"}
-    /// figure-caption
-    Exemple de debat en un repositori de GitHub
+    ![Exemple de debat en un repositori de GitHub](./img/projectes/exemple_debats.png)
+    /// shadow-figure-caption
+    Debats en en [repositori d'aquest curs a :simple-github: GitHub](https://github.com/joapuiib/curs-git/discussions){:target="_blank"}
     ///
 
 
@@ -44,7 +44,7 @@ Per activar-la, cal anar al menú de configuració del repositori __:octicons-ge
 i habilitar la funcionalitat de debats.
 
 ![Configuració de les Discussions en un repositori de GitHub](./img/projectes/habilitar_debats.png)
-/// figure-caption
+/// shadow-figure-caption
 Configuració de les Discussions en un repositori de GitHub
 ///
 
@@ -60,23 +60,29 @@ Les categories per defecte són les següents:
 - __Show and Tell__: per a compartir projectes i treballs relacionats amb el repositori.
 
 ### Incidències
-Les [__incidències o *Issues*__](https://guides.github.com/features/issues/){:target="_blank"}
+Les [__Incidències o *Issues*__](https://guides.github.com/features/issues/){:target="_blank"}
 són una eina de creació i seguiment d'incidències relacionades amb un projecte.
 
 En aquest espai, també es permet la comunicació i la col·laboració
 entre els membres del projecte per a aportar informació sobre la incidència,
 debatre sobre la seva resolució.
 
-!!! example "Incidències en aquest repositori"
-    La ferramenta [MkDocs](https://www.mkdocs.org/){:target="_blank"}
-    que s'utilitza per a generar aquest lloc web, també té el seu
-    propi [repositori a :simple-github: GitHub](https://github.com/mkdocs/mkdocs){:target="_blank"}.
+!!! example "Incidències a :simple-materialformkdocs: Material for MkDocs"
+    [:simple-materialformkdocs: Material for MkDocs](https://squidfunk.github.io/mkdocs-material/){:target="_blank"}
+    és tema per al generador de llocs web estàtics [MkDocs](https://www.mkdocs.org/){:target="_blank}
+    utilitzat per a generar aquest lloc web.
+
+    El codi font d'aquest tema està allotjat en seu
+    [repositori a :simple-github: GitHub](https://github.com/squidfunk/mkdocs-material/){:target="_blank"}
+    on la comunitat pot comunicar les incidències que troba.
 
     Podeu accedir a les incidències d'aquesta ferramenta
-    mitjançant la secció __:octicons-issue-opened-16: Issues__ del menú superior
-    o en [aquest enllaç](https://github.com/mkdocs/mkdocs/issues){:target="_blank"}.
+    mitjançant la secció __:octicons-issue-opened-16: Issues__ del menú superior.
 
-    [![Exemple d'incidències en un repositori de GitHub](./img/projectes/exemple_issues.png)](https://github.com/mkdocs/mkdocs/issues){:target="_blank"}.
+    ![Exemple d'incidències en un repositori de GitHub](./img/projectes/exemple_issues.png)
+    /// shadow-figure-caption
+    Exemple d'incidències en el [repositori `mkdocs-material` a :simple-github: GitHub](https://github.com/squidfunk/mkdocs-material/issues){:target="_blank"}
+    ///
 
 Les incidències contenen la següent informació:
 
@@ -110,7 +116,7 @@ les tasques d'un projecte.
     o en [aquest enllaç](https://github.com/joapuiib/curs-git/projects){:target="_blank"}.
 
     [![Exemple de projecte en un repositori de GitHub](./img/projectes/exemple_projecte.png)](https://github.com/joapuiib/curs-git/projects){:target="_blank"}
-    /// figure-caption
+    /// shadow-figure-caption
     Exemple de projecte en un repositori de GitHub
     ///
 
@@ -123,8 +129,8 @@ que inclouen diferents vistes i organització de les tasques:
 - __Team planning__: Mostra una vista més detallada de cada tasca, organitzades per estat, prioritat i assignació.
 - __My items__: Semblant a la vista de "Team planning", però mostra només les tasques assignades a l'usuari.
 
-Cada tasca es crea com un __esborrany__, que pot ser
-convertida a una __incidència__ en el repositori.
+Cada tasca es crea com un __:material-dots-circle: Esborrany (_Draft_)__, que pot ser
+convertida a una __:octicons-issue-opened-16: Incidència__ en el repositori.
 
 Cada tasca conté la mateixa informació que una incidència, però a més, es pot
 especificar:
@@ -138,7 +144,7 @@ especificar:
 - La __iteració__ a la que pertany.
 
 ![Exemple de tasca](./img/projectes/exemple_tasca.png)
-/// figure-caption
+/// shadow-figure-caption
 Exemple de tasca en un projecte de GitHub
 ///
 
@@ -147,18 +153,18 @@ Els [__llançaments o *Releases*__](https://docs.github.com/es/github/administer
 és una funcionalitat que permet indicar quan una versió del projecte ha segut llançada, incloent informació rellevant sobre els canvis realitzats i les persones
 que han contribuït.
 
-Els llançaments sempre estan associats a una __[[etiquetes|etiqueta]]{:target="_blank"}__ del repositori.
+Els llançaments sempre estan associats a una __[[etiquetes|:octicons-tag-16: etiqueta]]{:target="_blank"}__ del repositori.
 
-!!! example "Llançaments en `mkdocs-material`"
-    El repositori de [`mkdocs-material`](https://github.com/squidfunk/mkdocs-material/){:target="_blank"}
-    és un tema per a MkDocs sobre el que es basa aquest lloc web.
+!!! example "Llançaments a :simple-materialformkdocs: Material for MkDocs"
+    [:simple-materialformkdocs: Material for MkDocs](https://squidfunk.github.io/mkdocs-material/){:target="_blank"}
+    també utilitza la funcionalitat de llançaments per a indicar quan una nova versió del tema ha sigut llançada.
 
     Podeu accedir als llançaments d'aquest repositori mitjançant la secció __Releases__ de
-    la barrar lateral o en [aquest enllaç](https://github.com/squidfunk/mkdocs-material/releases){:target="_blank"}.
+    la barrar lateral.
 
     ![Exemple de llançament en un repositori de GitHub](./img/projectes/release.png)
-    /// figure-caption
-    Exemple de llançament en un repositori de GitHub
+    /// shadow-figure-caption
+    Exemple de llançament en el [repositori `mkdocs-material` a :simple-github: GitHub](https://github.com/squidfunk/mkdocs-material/releases){:target="_blank"}
     ///
 
 Des de la secció de llançaments es pot crear un nou llançament,
@@ -174,6 +180,6 @@ que inclouran informació sobre les [[forks#pull-requests|:material-source-pull:
 de manera automàtica.
 
 ![Creació d'un llançament](./img/projectes/release_create.png)
-/// figure-caption
+/// shadow-figure-caption
 Creació d'un llançament en un repositori de GitHub
 ///

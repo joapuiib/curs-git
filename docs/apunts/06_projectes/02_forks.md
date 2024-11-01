@@ -50,33 +50,39 @@ Un _fork_ sempre està enllaçat amb el repositori original,
 de manera que es si es realitzen canvis en el repositori original,
 pots decidir incorporar-lo al teu _fork_.
 
-!!! example "Exemple de fork"
-    El repositori `pymdownx` és una col·lecció d'extensions per a Python Markdown,
-    que ve inclosa en aquest lloc web.
+![Estructura de treball amb Forks i Pull Requests](./img/forks/fork.png)
+/// shadow-figure-caption
+    attrs: { class: "no-shadow" }
+Estructura de treball amb Forks i Pull Requests
+///
 
-    [![Repositori `pymdownx` original](./img/forks/pymdownx.png)](https://github.com/facelessuser/pymdown-extensions){:target="_blank"}
-    /// figure-caption
-    Repositori `pymdownx` original
+
+??? example "Exemple de bifurcació de :simple-materialformkdocs: Material for MkDocs"
+
+    ![Repositori Material for MkDocs principal](./img/forks/fork_principal.png)
+    /// shadow-figure-caption
+    [Repositori :simple-materialformkdocs: Material for MkDocs](https://github.com/squidfunk/mkdocs-material){:target="_blank"} principal
     ///
 
-    Per a poder realitzar canvis en aquesta col·lecció d'extensions,
-    s'ha realitzat un _fork_ del repositori original.
+    Per a poder realitzar contribucions,
+    s'ha creat un _fork_ del repositori original.
 
-    [![Repositori `pymdownx` bifurcat](./img/forks/pymdownx_fork.png)](https://github.com/joapuiib/pymdown-extensions){:target="_blank"}
-    /// figure-caption
-    Repositori `pymdownx` bifurcat
+    ![Repositori Material for MkDocs bifurcat](./img/forks/fork_forked.png)
+    /// shadow-figure-caption
+    [Repositori :simple-materialformkdocs: Material for MkDocs](https://github.com/joapuiib/mkdocs-material){:target="_blank"} bifurcat
     ///
+
 
 ### Creació d'un Fork
 Per crear un _fork_ d'un repositori, cal accedir a la pàgina del repositori
 i fer clic al botó __:material-source-fork: Fork__ que apareix a la part superior dreta.
 
-!!! example "Creació d'un fork"
-    Vegem el menú de creació d'un _fork_ en el repositori `MkDocs`.
+??? example "Creació d'un fork de :simple-materialformkdocs: Material for MkDocs"
+    Vegem el menú de creació d'un _fork_ en el repositori :simple-materialformkdocs: Material for MkDocs.
 
-    ![Creació d'un fork](./img/forks/fork_mkdocs.png)
-    /// figure-caption
-    Creació d'un fork en el repositori `MkDocs`
+    ![Creació d'un fork](./img/forks/fork_create.png)
+    /// shadow-figure-caption
+    Creació d'un fork en el repositori :simple-materialformkdocs: Material for MkDocs
     ///
 
 
@@ -104,12 +110,21 @@ A més, es pot consultar:
 - Els fitxers modificats.
 - Les [[actions|comprovacions automàtiques]]{:target="_blank"} realitzades.
 
-!!! example "Exemple de Pull Request"
-    En el repositori `pymdownx` s'ha creat i fusionat un PR per a afegir una nova extensió.
+Les PR poden estar en quatre estats diferents:
 
-    [![Sol·licitud de Pull Request](./img/forks/pull_request.png)](https://github.com/facelessuser/pymdown-extensions/pull/2455){:target="_blank"}
-    /// figure-caption
-    Pull Request per a afegir una nova extensió a `pymdownx`
+- __:octicons-git-pull-request-draft-24: Esborrany o *Draft*__: En procés de creació.
+- __:octicons-git-pull-request-24: Obert__: En procés de revisió i llest per a ser fusionat.
+- __:material-source-merge: Fusionat__: acceptat i incorporat al repositori.
+- __:octicons-git-pull-request-closed-24: Tancat__: rebutjat o tancat sense incorporar.
+
+??? example "Exemple de Pull Request a :simple-materialformkdocs: Material for MkDocs"
+    En el repositori :simple-materialformkdocs: Material for MkDocs
+    existeixen múltiples PR on s'han realitzat canvis per a millorar el tema
+    o actualitzar la documentació.
+
+    ![Sol·licitud de Pull Request](./img/forks/pull_request.png)
+    /// shadow-figure-caption
+    Exemple de [Pull Request en el repositori :simple-materialformkdocs: Material for MkDocs](https://github.com/squidfunk/mkdocs-material/pulls){:target="_blank"}
     ///
 
 ### Creació d'un Pull Request
@@ -118,11 +133,11 @@ Per crear un PR, cal accedir al teu _fork_ o branca i fer clic al botó __:mater
 En el procés de creació d'un PR, es mostrarà una pantalla on es compararan els canvis realitzats
 amb la branca de destí i es podrà afegir informació addicional com el títol i la descripció.
 
-!!! example "Creació d'un Pull Request"
+??? example "Creació d'un Pull Request"
     A la branca `feature/time-range` del meu _fork_ podem crear un PR per a incorporar els canvis al repositori original.
 
     ![Creació d'un Pull Request](./img/forks/pull_request_create.png)
-    /// figure-caption
+    /// shadow-figure-caption
     Creació d'un Pull Request
     ///
 
@@ -131,7 +146,7 @@ amb la branca de destí i es podrà afegir informació addicional com el títol 
     respecte a la branca de destí `verion3`.
 
     ![Comparació de canvis en un Pull Request](./img/forks/pull_request_compare.png)
-    /// figure-caption
+    /// shadow-figure-caption
     Comparació de canvis en un Pull Request
     ///
 
@@ -149,7 +164,7 @@ La fusió del PR pot ser de diferents tipus:
     i es fusiona amb una [[branques#fusio-directa]]{:target="_blank"}.
 
 ![Tipus de fusió d'una Pull Request](./img/forks/merge-pull-request-options.webp){: style="max-height: 300px;"}
-/// figure-caption
+/// shadow-figure-caption
 Tipus de fusió d'una Pull Request
 ///
 
@@ -158,18 +173,13 @@ El repositori pot ser configurat per habilitar els diferents tipus de fusió,
 entre altres configuracions a l'apartat __:octicons-gear-16: Settings__
 
 ![Configuració de les opcions de les Pull Requests](./img/forks/pull_request_config.png)
-/// figure-caption
+/// shadow-figure-caption
 Configuració de les opcions de les Pull Requests
 ///
 
 ## Flux de treball
 Amb aquestes dues funcionalitats, es pot establir un flux de treball per a la col·laboració
 en projectes de desenvolupament de programari.
-
-![Estructura de treball amb Forks i Pull Requests](./img/forks/fork.png)
-/// figure-caption
-Estructura de treball amb Forks i Pull Requests
-///
 
 Aquest flux de treball pot ser el següent:
 
@@ -193,7 +203,7 @@ Per configurar les regles de protecció de branques, cal accedir a la configurac
 i buscar l'apartat __:material-book-arrow-up-outline: Rules__.
 
 ![Protecció de branques](./img/forks/ruleset.png)
-/// figure-caption
+/// shadow-figure-caption
 Protecció de branques
 ///
 
