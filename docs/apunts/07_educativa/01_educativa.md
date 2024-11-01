@@ -72,7 +72,7 @@ s'utilitzen per a allotjar projectes d'una empresa o d'un projecte de codi obert
 projectes educatius.
 
 ![Organització Softcatalà a GitHub](img/softcatala.png)
-/// figure-caption
+/// shadow-figure-caption
 Organització [Softcatalà a GitHub](https://github.com/Softcatala){:target="_blank"}.
 ///
 
@@ -86,9 +86,19 @@ Quan crees una organització, et demanarà quin pla vols utilitzar.
     En l'àmbit educatiu, podem utilitzar el pla gratuït i després sol·licitar la millora a GitHub Team a través de
     [GitHub Global Campus](https://education.github.com/globalcampus/teacher){:target="_blank"}.
 
+Després, es demanarà especificar la següent informació:
+
+- Nom per a la organització, que ha de ser únic a GitHub.
+- Correu electrònic de contacte.
+- A qui pertany la organització (personal, empresa o institució).
+
+    !!! recommend
+        Es recomana configurar la organització com a propietat __personal__
+        per tindre control absolut sobre la organització.
+
 
 ![Crear una organització a GitHub](img/create_org.png)
-/// figure-caption
+/// shadow-figure-caption
 Crear una organització a GitHub.
 ///
 
@@ -97,7 +107,7 @@ Pot sol·licitar la millora d'una organització a GitHub Team a través de
 [GitHub Global Campus](https://education.github.com/globalcampus/teacher){:target="_blank"}.
 
 ![Millorar una organització a GitHub Team](img/upgrade_org.png)
-/// figure-caption
+/// shadow-figure-caption
 Millorar una organització a GitHub Team.
 ///
 
@@ -106,7 +116,7 @@ Per a convidar membres a una organització, cal anar a l'apartat __:material-acc
 de la organització i afegir els membres manualment.
 
 ![Convidar membres a una organització](img/invite_members.png)
-/// figure-caption
+/// shadow-figure-caption
 Convidar membres a una organització.
 ///
 
@@ -124,3 +134,7 @@ dels permisos dels membres de l'organització a l'apartat __:material-account-mu
     D'aquesta manera, els estudiants no podran veure els repositoris privats
     d'altres companys de classe.
 
+![Configuració dels permisos de l'organització](img/base_permissions.png)
+/// shadow-figure-caption
+Configuració dels permisos de l'organització.
+///
