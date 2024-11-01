@@ -18,6 +18,8 @@ GPG
 hotfix
 IDE
 init
+IntelliJ
+JetBrains
 Jira
 Kanban
 l'
@@ -30,6 +32,7 @@ MkDocs
 MoureDev
 OneFlow
 PowerShell
+PyCharm
 Pygments
 PyMdown
 pymdownx
