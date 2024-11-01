@@ -76,6 +76,7 @@ if [ $BUILD -eq 1 ]; then
     COMMAND="build"
 fi
 
+print "Running 'mkdocs $COMMAND $ARGS'"
 mkdocs $COMMAND $ARGS
 
 if [ $SPELL -eq 1 ]; then
