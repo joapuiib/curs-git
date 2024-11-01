@@ -1,0 +1,12 @@
+jpuigcerver@fp:~/git_remots (main) $ git pull --no-ff --no-edit # (1)!
+Merge made by the 'ort' strategy.
+ menjar.txt | 1 +
+ 1 file changed, 1 insertion(+)
+jpuigcerver@fp:~/git_remots (main) $ git lga
+*   a0b012f - (1 second ago) Merge branch 'main' of github.com:joapuiib/git_remots - Joan Puigcerver (HEAD -> main)
+|\  
+| * 8c604a3 - (10 seconds ago) Més menjar - Joan Puigcerver (origin/main, origin/HEAD)
+* | 95b8d62 - (8 seconds ago) Beguda - Joan Puigcerver
+|/  
+* 8594cb9 - (16 seconds ago) Menjar - Joan Puigcerver
+* 113f1d4 - (26 seconds ago) Commit inicial - Joan Puigcerver

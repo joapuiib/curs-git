@@ -1,0 +1,6 @@
+jpuigcerver@fp:~/git_remots (main) $ git push --set-upstream origin main
+branch 'main' set up to track 'origin/main'.
+To github.com:joapuiib/git_remots.git
+ * [new branch]      main -> main
+jpuigcerver@fp:~/git_remots (main) $ git lga
+* 113f1d4 - (6 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main, origin/main)

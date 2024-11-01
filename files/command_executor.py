@@ -1,6 +1,8 @@
 import os
 import subprocess
 import re
+from inspect import getfile
+
 
 """
 @TODO:
@@ -164,3 +166,13 @@ class CommandExecutor:
             log_file = os.path.join(self.script_dir, log_filename)
             with open(log_file, "w") as lf:
                 lf.write(content)
+
+
+    def set_env(self, key, value):
+        os.environ[key] = value
+
+
+    def load_config(self):
+        root = os.path.dirname(getfile(CommandExecutor))
+        config = os.path.join(root, "gitconfig")
+        self.set_env("GIT_CONFIG_GLOBAL", config)

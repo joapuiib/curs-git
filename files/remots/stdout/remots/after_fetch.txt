@@ -1,0 +1,6 @@
+jpuigcerver@fp:~/git_remots (main) $ git fetch
+From github.com:joapuiib/git_remots
+   113f1d4..8594cb9  main       -> origin/main
+jpuigcerver@fp:~/git_remots (main) $ git lga
+* 8594cb9 - (4 seconds ago) Menjar - Joan Puigcerver (origin/main, origin/HEAD)
+* 113f1d4 - (14 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main)

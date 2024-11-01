@@ -1,0 +1,14 @@
+jpuigcerver@fp:~ $ mkdir -p ~/git_remots
+jpuigcerver@fp:~ $ cd ~/git_remots
+jpuigcerver@fp:~/git_remots $ git init
+Initialized empty Git repository in ~/git_remots/.git/
+jpuigcerver@fp:~/git_remots (main) $ git branch -m main # (1)!
+jpuigcerver@fp:~/git_remots (main) $ echo "# Remots a Git" > README.md
+jpuigcerver@fp:~/git_remots (main) $ echo "Repositori del __Bloc: Remots__ del curs __\"Introducció a Git i la seua aplicació a l’aula\"__" >> README.md
+jpuigcerver@fp:~/git_remots (main) $ git add README.md
+jpuigcerver@fp:~/git_remots (main) $ git commit -m "Commit inicial"
+[main (root-commit) 113f1d4] Commit inicial
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+jpuigcerver@fp:~/git_remots (main) $ git lga
+* 113f1d4 - (0 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main)

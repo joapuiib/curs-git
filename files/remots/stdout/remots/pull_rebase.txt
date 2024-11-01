@@ -1,0 +1,8 @@
+jpuigcerver@fp:~/git_remots (main) $ git pull --rebase
+Rebasing (1/1)
+Successfully rebased and updated refs/heads/main.
+jpuigcerver@fp:~/git_remots (main) $ git lga
+* e191e2d - (9 seconds ago) Beguda - Joan Puigcerver (HEAD -> main)
+* 8c604a3 - (11 seconds ago) Més menjar - Joan Puigcerver (origin/main, origin/HEAD)
+* 8594cb9 - (17 seconds ago) Menjar - Joan Puigcerver
+* 113f1d4 - (27 seconds ago) Commit inicial - Joan Puigcerver
