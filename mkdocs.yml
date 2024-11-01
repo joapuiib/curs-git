@@ -92,6 +92,10 @@ plugins:
             prep: Preparació
             recommend: Recomanació
   - git-revision-date-localized # Després de i18n o falla
+  - git-committers:
+      enabled: !ENV [CI, false]
+      repository: joapuiib/curs-git
+      branch: main
 
 markdown_extensions:
   - abbr
@@ -111,6 +115,9 @@ markdown_extensions:
         - caption
         - name: figure-caption
           prefix: "Figura {}."
+        - name: shadow-figure-caption
+          prefix: "Figura {}."
+          classes: shadow
         - name: "table-caption"
           prefix: "Taula {}."
         - name: attribution

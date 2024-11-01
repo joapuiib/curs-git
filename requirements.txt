@@ -1,1 +1,2 @@
 mkdocs-material-joapuiib~=1.7
+mkdocs-git-committers-plugin-2~=2.4
