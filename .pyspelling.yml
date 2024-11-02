@@ -16,6 +16,7 @@ matrix:
           - 'span.keys'
           - '.arithmatex, .md-nav__link, .md-footer-custom-text, .md-source__repository, .headerlink, .md-icon'
           - 'span.filename'
+          - '.md-author'
       - pyspelling.filters.url:
     sources:
       - site/**/*.html
