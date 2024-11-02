@@ -5,6 +5,7 @@ by-nc-sa
 cherrypick
 config
 d'
+d'elles
 Gantt
 Gascón
 gitconfig

@@ -2,7 +2,7 @@
 template: document.html
 title: "Exercici: Estratègies de ramificació"
 icon: material/pencil-outline
-alias: estrategies-exercicis
+alias: estrategies-exercici
 ---
 
 ## Objectius

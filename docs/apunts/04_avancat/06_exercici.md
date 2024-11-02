@@ -2,7 +2,7 @@
 template: document.html
 title: "Exercici: Git avançat"
 icon: material/pencil-outline
-alias: avancat-exercicis
+alias: avancat-exercici
 ---
 
 ## Objectius
