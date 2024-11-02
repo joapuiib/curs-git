@@ -1293,6 +1293,8 @@
       
         
       
+        
+      
     
     
       
@@ -1535,6 +1537,32 @@
   
   <span class="md-ellipsis">
     Automatització
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      
+      <a href="../04_exercici/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.06 9 .94.94L5.92 19H5v-.92zm3.6-6c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29m-3.6 3.19L3 17.25V21h3.75L17.81 9.94z"/></svg>
+  
+  
+  <span class="md-ellipsis">
+    Exercici: Col·laboració mitjançant Pull Requests
   </span>
   
 
@@ -2171,38 +2199,42 @@ com a propi.</p>
 <p>Un <em>fork</em> sempre està enllaçat amb el repositori original,
 de manera que es si es realitzen canvis en el repositori original,
 pots decidir incorporar-lo al teu <em>fork</em>.</p>
-<div class="admonition example">
-<p class="admonition-title">Exemple de fork</p>
-<p>El repositori <code>pymdownx</code> és una col·lecció d'extensions per a Python Markdown,
-que ve inclosa en aquest lloc web.</p>
-<figure id="__figure-caption_1">
-<p><a href="https://github.com/facelessuser/pymdown-extensions" target="_blank"><img alt="Repositori pymdownx original" src="../img/forks/pymdownx.png" /></a></p>
+<figure class="shadow no-shadow" id="__shadow-figure-caption_1">
+<p><img alt="Estructura de treball amb Forks i Pull Requests" src="../img/forks/fork.png" /></p>
 <figcaption>
-<p><span class="caption-prefix">Figura 1.</span> Repositori <code>pymdownx</code> original</p>
+<p><span class="caption-prefix">Figura 1.</span> Estructura de treball amb Forks i Pull Requests</p>
 </figcaption>
 </figure>
-<p>Per a poder realitzar canvis en aquesta col·lecció d'extensions,
-s'ha realitzat un <em>fork</em> del repositori original.</p>
-<figure id="__figure-caption_2">
-<p><a href="https://github.com/joapuiib/pymdown-extensions" target="_blank"><img alt="Repositori pymdownx bifurcat" src="../img/forks/pymdownx_fork.png" /></a></p>
+<details class="example">
+<summary>Exemple de bifurcació de <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.029 18.772.777 1.166-5.417 2.709L0 16.451V4.063l5.417-2.709 5.298 7.948 7.867-5.24L24 1.354V16.84l-5.417 2.709zm2.023-13.827v13.253l3.949-1.975V2.97zM5.076 2.642 1.458 4.45 12.73 21.358l3.618-1.809z"/></svg></span> Material for MkDocs</summary>
+<figure class="shadow" id="__shadow-figure-caption_2">
+<p><img alt="Repositori Material for MkDocs principal" src="../img/forks/fork_principal.png" /></p>
 <figcaption>
-<p><span class="caption-prefix">Figura 2.</span> Repositori <code>pymdownx</code> bifurcat</p>
+<p><span class="caption-prefix">Figura 2.</span><a href="https://github.com/squidfunk/mkdocs-material" target="_blank">Repositori <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.029 18.772.777 1.166-5.417 2.709L0 16.451V4.063l5.417-2.709 5.298 7.948 7.867-5.24L24 1.354V16.84l-5.417 2.709zm2.023-13.827v13.253l3.949-1.975V2.97zM5.076 2.642 1.458 4.45 12.73 21.358l3.618-1.809z"/></svg></span> Material for MkDocs</a> principal</p>
 </figcaption>
 </figure>
-</div>
+<p>Per a poder realitzar contribucions,
+s'ha creat un <em>fork</em> del repositori original.</p>
+<figure class="shadow" id="__shadow-figure-caption_3">
+<p><img alt="Repositori Material for MkDocs bifurcat" src="../img/forks/fork_forked.png" /></p>
+<figcaption>
+<p><span class="caption-prefix">Figura 3.</span><a href="https://github.com/joapuiib/mkdocs-material" target="_blank">Repositori <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.029 18.772.777 1.166-5.417 2.709L0 16.451V4.063l5.417-2.709 5.298 7.948 7.867-5.24L24 1.354V16.84l-5.417 2.709zm2.023-13.827v13.253l3.949-1.975V2.97zM5.076 2.642 1.458 4.45 12.73 21.358l3.618-1.809z"/></svg></span> Material for MkDocs</a> bifurcat</p>
+</figcaption>
+</figure>
+</details>
 <h3 id="creacio-dun-fork">Creació d'un Fork<a class="headerlink" href="#creacio-dun-fork" title="Permanent link">&para;</a></h3>
 <p>Per crear un <em>fork</em> d'un repositori, cal accedir a la pàgina del repositori
 i fer clic al botó <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a3 3 0 0 1 3 3c0 1.28-.81 2.38-1.94 2.81.09.46.33 1.02.94 1.82 1 1.29 3 3.2 4 4.54 1-1.34 3-3.25 4-4.54.61-.8.85-1.36.94-1.82A3.015 3.015 0 0 1 15 5a3 3 0 0 1 3-3 3 3 0 0 1 3 3c0 1.32-.86 2.45-2.05 2.85-.08.52-.31 1.15-.95 1.98-1 1.34-3 3.25-4 4.55-.61.79-.85 1.35-.94 1.81C14.19 16.62 15 17.72 15 19a3 3 0 0 1-3 3 3 3 0 0 1-3-3c0-1.28.81-2.38 1.94-2.81-.09-.46-.33-1.02-.94-1.81-1-1.3-3-3.21-4-4.55-.64-.83-.87-1.46-.95-1.98A3.015 3.015 0 0 1 3 5a3 3 0 0 1 3-3m0 2a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m12 0a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m-6 14a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1"/></svg></span> Fork</strong> que apareix a la part superior dreta.</p>
-<div class="admonition example">
-<p class="admonition-title">Creació d'un fork</p>
-<p>Vegem el menú de creació d'un <em>fork</em> en el repositori <code>MkDocs</code>.</p>
-<figure id="__figure-caption_3">
-<p><img alt="Creació d'un fork" src="../img/forks/fork_mkdocs.png" /></p>
+<details class="example">
+<summary>Creació d'un fork de <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.029 18.772.777 1.166-5.417 2.709L0 16.451V4.063l5.417-2.709 5.298 7.948 7.867-5.24L24 1.354V16.84l-5.417 2.709zm2.023-13.827v13.253l3.949-1.975V2.97zM5.076 2.642 1.458 4.45 12.73 21.358l3.618-1.809z"/></svg></span> Material for MkDocs</summary>
+<p>Vegem el menú de creació d'un <em>fork</em> en el repositori <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.029 18.772.777 1.166-5.417 2.709L0 16.451V4.063l5.417-2.709 5.298 7.948 7.867-5.24L24 1.354V16.84l-5.417 2.709zm2.023-13.827v13.253l3.949-1.975V2.97zM5.076 2.642 1.458 4.45 12.73 21.358l3.618-1.809z"/></svg></span> Material for MkDocs.</p>
+<figure class="shadow" id="__shadow-figure-caption_4">
+<p><img alt="Creació d'un fork" src="../img/forks/fork_create.png" /></p>
 <figcaption>
-<p><span class="caption-prefix">Figura 3.</span> Creació d'un fork en el repositori <code>MkDocs</code></p>
+<p><span class="caption-prefix">Figura 4.</span> Creació d'un fork en el repositori <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.029 18.772.777 1.166-5.417 2.709L0 16.451V4.063l5.417-2.709 5.298 7.948 7.867-5.24L24 1.354V16.84l-5.417 2.709zm2.023-13.827v13.253l3.949-1.975V2.97zM5.076 2.642 1.458 4.45 12.73 21.358l3.618-1.809z"/></svg></span> Material for MkDocs</p>
 </figcaption>
 </figure>
-</div>
+</details>
 <h2 id="pull-requests"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 3a3 3 0 0 1 3 3c0 1.31-.83 2.42-2 2.83v6.34c1.17.41 2 1.52 2 2.83a3 3 0 0 1-3 3 3 3 0 0 1-3-3c0-1.31.83-2.42 2-2.83V8.83A2.99 2.99 0 0 1 3 6a3 3 0 0 1 3-3m0 2a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m0 12a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m15 1a3 3 0 0 1-3 3 3 3 0 0 1-3-3c0-1.31.83-2.42 2-2.83V7h-2v3.25L10.75 6 15 1.75V5h2a2 2 0 0 1 2 2v8.17c1.17.41 2 1.52 2 2.83m-3-1a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1"/></svg></span> Pull Requests<a class="headerlink" href="#pull-requests" title="Permanent link">&para;</a></h2>
 <p>Una <a href="https://docs.github.com/es/pull-requests/collaborating-with-pull-requests" target="_blank"><strong>Sol·licitud de Incorporació o <em>Pull Request (<abbr title="Pull Request">PR</abbr>)</em></strong></a>
 és una sol·licitud per a incorporar canvis a un repositori.</p>
@@ -2225,38 +2257,47 @@ A més, aquesta funcionalitat pot ser implementada dins d'una <strong><a href=".
 <li>Els fitxers modificats.</li>
 <li>Les <a href="../03_actions/" target="_blank">comprovacions automàtiques</a> realitzades.</li>
 </ul>
-<div class="admonition example">
-<p class="admonition-title">Exemple de Pull Request</p>
-<p>En el repositori <code>pymdownx</code> s'ha creat i fusionat un <abbr title="Pull Request">PR</abbr> per a afegir una nova extensió.</p>
-<figure id="__figure-caption_4">
-<p><a href="https://github.com/facelessuser/pymdown-extensions/pull/2455" target="_blank"><img alt="Sol·licitud de Pull Request" src="../img/forks/pull_request.png" /></a></p>
+<p>Les <abbr title="Pull Request">PR</abbr> poden estar en quatre estats diferents:</p>
+<ul>
+<li><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.75 1.5a3.25 3.25 0 0 1 .745 6.414A1 1 0 0 1 5.5 8v8a1 1 0 0 1-.005.086A3.25 3.25 0 0 1 4.75 22.5a3.25 3.25 0 0 1-.745-6.414A1 1 0 0 1 4 16V8q0-.043.005-.086A3.25 3.25 0 0 1 4.75 1.5M16 19.25a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0M3 4.75a1.75 1.75 0 1 0 3.501-.001A1.75 1.75 0 0 0 3 4.75m0 14.5a1.75 1.75 0 1 0 3.501-.001A1.75 1.75 0 0 0 3 19.25m16.25-1.75a1.75 1.75 0 1 0 .001 3.501 1.75 1.75 0 0 0-.001-3.501m0-11.5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5M21 11.25a1.75 1.75 0 1 1-3.5 0 1.75 1.75 0 0 1 3.5 0"/></svg></span> Esborrany o <em>Draft</em></strong>: En procés de creació.</li>
+<li><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 19.25a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0m-14.5 0a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0m0-14.5a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0M4.75 3a1.75 1.75 0 1 0 .001 3.501A1.75 1.75 0 0 0 4.75 3m0 14.5a1.75 1.75 0 1 0 .001 3.501A1.75 1.75 0 0 0 4.75 17.5m14.5 0a1.75 1.75 0 1 0 .001 3.501 1.75 1.75 0 0 0-.001-3.501"/><path d="M13.405 1.72a.75.75 0 0 1 0 1.06L12.185 4h4.065A3.75 3.75 0 0 1 20 7.75v8.75a.75.75 0 0 1-1.5 0V7.75a2.25 2.25 0 0 0-2.25-2.25h-4.064l1.22 1.22a.75.75 0 0 1-1.061 1.06l-2.5-2.5a.75.75 0 0 1 0-1.06l2.5-2.5a.75.75 0 0 1 1.06 0M4.75 7.25A.75.75 0 0 1 5.5 8v8A.75.75 0 0 1 4 16V8a.75.75 0 0 1 .75-.75"/></svg></span> Obert</strong>: En procés de revisió i llest per a ser fusionat.</li>
+<li><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 3a3 3 0 0 1 3 3c0 1.29-.81 2.39-1.96 2.81.54 5 5.04 5.96 7.15 6.15A2.985 2.985 0 0 1 18 13a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.31 0-2.43-.84-2.84-2-4.25-.2-5.72-1.81-7.16-3.61v1.78c1.17.41 2 1.52 2 2.83a3 3 0 0 1-3 3 3 3 0 0 1-3-3c0-1.31.83-2.42 2-2.83V8.83A2.99 2.99 0 0 1 4 6a3 3 0 0 1 3-3m0 2a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m0 12a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m11-2a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1"/></svg></span> Fusionat</strong>: acceptat i incorporat al repositori.</li>
+<li><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.266 2.711a.75.75 0 1 0-1.061-1.06l-1.983 1.983-1.984-1.983a.75.75 0 1 0-1.06 1.06l1.983 1.983-1.983 1.984a.75.75 0 0 0 1.06 1.06l1.984-1.983 1.983 1.983a.75.75 0 0 0 1.06-1.06l-1.983-1.984zM4.75 1.5a3.25 3.25 0 0 1 .745 6.414A1 1 0 0 1 5.5 8v8a1 1 0 0 1-.005.086A3.25 3.25 0 0 1 4.75 22.5a3.25 3.25 0 0 1-.745-6.414A1 1 0 0 1 4 16V8q0-.043.005-.086A3.25 3.25 0 0 1 4.75 1.5M16 19.25a3.25 3.25 0 0 1 2.5-3.163V9.625a.75.75 0 0 1 1.5 0v6.462a3.252 3.252 0 0 1-.75 6.413A3.25 3.25 0 0 1 16 19.25M3 4.75a1.75 1.75 0 1 0 3.501-.001A1.75 1.75 0 0 0 3 4.75m0 14.5a1.75 1.75 0 1 0 3.501-.001A1.75 1.75 0 0 0 3 19.25m16.25-1.75a1.75 1.75 0 1 0 .001 3.501 1.75 1.75 0 0 0-.001-3.501"/></svg></span> Tancat</strong>: rebutjat o tancat sense incorporar.</li>
+</ul>
+<details class="example">
+<summary>Exemple de Pull Request a <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.029 18.772.777 1.166-5.417 2.709L0 16.451V4.063l5.417-2.709 5.298 7.948 7.867-5.24L24 1.354V16.84l-5.417 2.709zm2.023-13.827v13.253l3.949-1.975V2.97zM5.076 2.642 1.458 4.45 12.73 21.358l3.618-1.809z"/></svg></span> Material for MkDocs</summary>
+<p>En el repositori <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.029 18.772.777 1.166-5.417 2.709L0 16.451V4.063l5.417-2.709 5.298 7.948 7.867-5.24L24 1.354V16.84l-5.417 2.709zm2.023-13.827v13.253l3.949-1.975V2.97zM5.076 2.642 1.458 4.45 12.73 21.358l3.618-1.809z"/></svg></span> Material for MkDocs
+existeixen múltiples <abbr title="Pull Request">PR</abbr> on s'han realitzat canvis per a millorar el tema
+o actualitzar la documentació.</p>
+<figure class="shadow" id="__shadow-figure-caption_5">
+<p><img alt="Sol·licitud de Pull Request" src="../img/forks/pull_request.png" /></p>
 <figcaption>
-<p><span class="caption-prefix">Figura 4.</span> Pull Request per a afegir una nova extensió a <code>pymdownx</code></p>
+<p><span class="caption-prefix">Figura 5.</span> Exemple de <a href="https://github.com/squidfunk/mkdocs-material/pulls" target="_blank">Pull Request en el repositori <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.029 18.772.777 1.166-5.417 2.709L0 16.451V4.063l5.417-2.709 5.298 7.948 7.867-5.24L24 1.354V16.84l-5.417 2.709zm2.023-13.827v13.253l3.949-1.975V2.97zM5.076 2.642 1.458 4.45 12.73 21.358l3.618-1.809z"/></svg></span> Material for MkDocs</a></p>
 </figcaption>
 </figure>
-</div>
+</details>
 <h3 id="creacio-dun-pull-request">Creació d'un Pull Request<a class="headerlink" href="#creacio-dun-pull-request" title="Permanent link">&para;</a></h3>
 <p>Per crear un <abbr title="Pull Request">PR</abbr>, cal accedir al teu <em>fork</em> o branca i fer clic al botó <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 3a3 3 0 0 1 3 3c0 1.31-.83 2.42-2 2.83v6.34c1.17.41 2 1.52 2 2.83a3 3 0 0 1-3 3 3 3 0 0 1-3-3c0-1.31.83-2.42 2-2.83V8.83A2.99 2.99 0 0 1 3 6a3 3 0 0 1 3-3m0 2a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m0 12a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m15 1a3 3 0 0 1-3 3 3 3 0 0 1-3-3c0-1.31.83-2.42 2-2.83V7h-2v3.25L10.75 6 15 1.75V5h2a2 2 0 0 1 2 2v8.17c1.17.41 2 1.52 2 2.83m-3-1a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1"/></svg></span> Pull Request</strong>.</p>
 <p>En el procés de creació d'un <abbr title="Pull Request">PR</abbr>, es mostrarà una pantalla on es compararan els canvis realitzats
 amb la branca de destí i es podrà afegir informació addicional com el títol i la descripció.</p>
-<div class="admonition example">
-<p class="admonition-title">Creació d'un Pull Request</p>
+<details class="example">
+<summary>Creació d'un Pull Request</summary>
 <p>A la branca <code>feature/time-range</code> del meu <em>fork</em> podem crear un <abbr title="Pull Request">PR</abbr> per a incorporar els canvis al repositori original.</p>
-<figure id="__figure-caption_5">
+<figure class="shadow" id="__shadow-figure-caption_6">
 <p><img alt="Creació d'un Pull Request" src="../img/forks/pull_request_create.png" /></p>
 <figcaption>
-<p><span class="caption-prefix">Figura 5.</span> Creació d'un Pull Request</p>
+<p><span class="caption-prefix">Figura 6.</span> Creació d'un Pull Request</p>
 </figcaption>
 </figure>
 <p>En la pantalla de creació d'un <abbr title="Pull Request">PR</abbr> es poden veure els canvis realitzats en la branca <code>feature/time-range</code>
 respecte a la branca de destí <code>verion3</code>.</p>
-<figure id="__figure-caption_6">
+<figure class="shadow" id="__shadow-figure-caption_7">
 <p><img alt="Comparació de canvis en un Pull Request" src="../img/forks/pull_request_compare.png" /></p>
 <figcaption>
-<p><span class="caption-prefix">Figura 6.</span> Comparació de canvis en un Pull Request</p>
+<p><span class="caption-prefix">Figura 7.</span> Comparació de canvis en un Pull Request</p>
 </figcaption>
 </figure>
-</div>
+</details>
 <p>Una vegada creat la <abbr title="Pull Request">PR</abbr>, es pot sol·licitar la revisió dels canvis a altres usuaris
 i realitzar els canvis necessaris fins a la seva acceptació.</p>
 <h3 id="incorporacio-de-la-pull-request">Incorporació de la Pull Request<a class="headerlink" href="#incorporacio-de-la-pull-request" title="Permanent link">&para;</a></h3>
@@ -2268,30 +2309,24 @@ i realitzar els canvis necessaris fins a la seva acceptació.</p>
 <li><strong>Canvi de base (<code>rebase</code>)</strong>: es realitza un <a href="../../02_branques/01_branques/#canvi-de-base-rebase" target="_blank">Canvi de base (rebase)</a> de la branca de la <abbr title="Pull Request">PR</abbr> respecte a la branca de destí
     i es fusiona amb una <a href="../../02_branques/01_branques/#fusio-directa" target="_blank">Fusió directa</a>.</li>
 </ul>
-<figure id="__figure-caption_7">
+<figure class="shadow" id="__shadow-figure-caption_8">
 <p><img alt="Tipus de fusió d'una Pull Request" src="../img/forks/merge-pull-request-options.webp" style="max-height: 300px;" /></p>
 <figcaption>
-<p><span class="caption-prefix">Figura 7.</span> Tipus de fusió d'una Pull Request</p>
+<p><span class="caption-prefix">Figura 8.</span> Tipus de fusió d'una Pull Request</p>
 </figcaption>
 </figure>
 <h3 id="configuracio-de-les-pull-requests">Configuració de les Pull Requests<a class="headerlink" href="#configuracio-de-les-pull-requests" title="Permanent link">&para;</a></h3>
 <p>El repositori pot ser configurat per habilitar els diferents tipus de fusió,
 entre altres configuracions a l'apartat <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 0a8 8 0 0 1 .701.031C9.444.095 9.99.645 10.16 1.29l.288 1.107c.018.066.079.158.212.224q.347.171.668.386c.123.082.233.09.299.071l1.103-.303c.644-.176 1.392.021 1.82.63q.406.578.704 1.218c.315.675.111 1.422-.364 1.891l-.814.806c-.049.048-.098.147-.088.294q.024.386 0 .772c-.01.147.038.246.088.294l.814.806c.475.469.679 1.216.364 1.891a8 8 0 0 1-.704 1.217c-.428.61-1.176.807-1.82.63l-1.102-.302c-.067-.019-.177-.011-.3.071a6 6 0 0 1-.668.386c-.133.066-.194.158-.211.224l-.29 1.106c-.168.646-.715 1.196-1.458 1.26a8 8 0 0 1-1.402 0c-.743-.064-1.289-.614-1.458-1.26l-.289-1.106c-.018-.066-.079-.158-.212-.224a6 6 0 0 1-.668-.386c-.123-.082-.233-.09-.299-.071l-1.103.303c-.644.176-1.392-.021-1.82-.63a8 8 0 0 1-.704-1.218c-.315-.675-.111-1.422.363-1.891l.815-.806c.05-.048.098-.147.088-.294a6 6 0 0 1 0-.772c.01-.147-.038-.246-.088-.294l-.815-.806C.635 6.045.431 5.298.746 4.623a8 8 0 0 1 .704-1.217c.428-.61 1.176-.807 1.82-.63l1.102.302c.067.019.177.011.3-.071q.321-.215.668-.386c.133-.066.194-.158.211-.224l.29-1.106C6.009.645 6.556.095 7.299.03Q7.646 0 8 0m-.571 1.525c-.036.003-.108.036-.137.146l-.289 1.105c-.147.561-.549.967-.998 1.189q-.26.13-.5.29c-.417.278-.97.423-1.529.27l-1.103-.303c-.109-.03-.175.016-.195.045q-.33.47-.573.99c-.014.031-.021.11.059.19l.815.806c.411.406.562.957.53 1.456a5 5 0 0 0 0 .582c.032.499-.119 1.05-.53 1.456l-.815.806c-.081.08-.073.159-.059.19q.243.52.573.989c.02.03.085.076.195.046l1.102-.303c.56-.153 1.113-.008 1.53.27q.242.16.501.29c.447.222.85.629.997 1.189l.289 1.105c.029.109.101.143.137.146a6.6 6.6 0 0 0 1.142 0c.036-.003.108-.036.137-.146l.289-1.105c.147-.561.549-.967.998-1.189q.26-.13.5-.29c.417-.278.97-.423 1.529-.27l1.103.303c.109.029.175-.016.195-.045q.33-.47.573-.99c.014-.031.021-.11-.059-.19l-.815-.806c-.411-.406-.562-.957-.53-1.456a5 5 0 0 0 0-.582c-.032-.499.119-1.05.53-1.456l.815-.806c.081-.08.073-.159.059-.19a6.5 6.5 0 0 0-.573-.989c-.02-.03-.085-.076-.195-.046l-1.102.303c-.56.153-1.113.008-1.53-.27a4.4 4.4 0 0 0-.501-.29c-.447-.222-.85-.629-.997-1.189l-.289-1.105c-.029-.11-.101-.143-.137-.146a6.6 6.6 0 0 0-1.142 0M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0M9.5 8a1.5 1.5 0 1 0-3.001.001A1.5 1.5 0 0 0 9.5 8"/></svg></span> Settings</strong></p>
-<figure id="__figure-caption_8">
+<figure class="shadow" id="__shadow-figure-caption_9">
 <p><img alt="Configuració de les opcions de les Pull Requests" src="../img/forks/pull_request_config.png" /></p>
 <figcaption>
-<p><span class="caption-prefix">Figura 8.</span> Configuració de les opcions de les Pull Requests</p>
+<p><span class="caption-prefix">Figura 9.</span> Configuració de les opcions de les Pull Requests</p>
 </figcaption>
 </figure>
 <h2 id="flux-de-treball">Flux de treball<a class="headerlink" href="#flux-de-treball" title="Permanent link">&para;</a></h2>
 <p>Amb aquestes dues funcionalitats, es pot establir un flux de treball per a la col·laboració
 en projectes de desenvolupament de programari.</p>
-<figure id="__figure-caption_9">
-<p><img alt="Estructura de treball amb Forks i Pull Requests" src="../img/forks/fork.png" /></p>
-<figcaption>
-<p><span class="caption-prefix">Figura 9.</span> Estructura de treball amb Forks i Pull Requests</p>
-</figcaption>
-</figure>
 <p>Aquest flux de treball pot ser el següent:</p>
 <ol class="fancylists-decimal" type="1">
 <li>Realitzar un <em>fork</em> del repositori original.</li>
@@ -2311,7 +2346,7 @@ les branques importants <code>main</code> i <code>develop</code> poden ser prote
 mitjançant <a href="https://docs.github.com/es/github/administering-a-repository/defining-the-mergeability-of-pull-requests" target="_blank"><strong>conjunts de regles (<em>Rulesets</em>)</strong></a>.</p>
 <p>Per configurar les regles de protecció de branques, cal accedir a la configuració del repositori <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 0a8 8 0 0 1 .701.031C9.444.095 9.99.645 10.16 1.29l.288 1.107c.018.066.079.158.212.224q.347.171.668.386c.123.082.233.09.299.071l1.103-.303c.644-.176 1.392.021 1.82.63q.406.578.704 1.218c.315.675.111 1.422-.364 1.891l-.814.806c-.049.048-.098.147-.088.294q.024.386 0 .772c-.01.147.038.246.088.294l.814.806c.475.469.679 1.216.364 1.891a8 8 0 0 1-.704 1.217c-.428.61-1.176.807-1.82.63l-1.102-.302c-.067-.019-.177-.011-.3.071a6 6 0 0 1-.668.386c-.133.066-.194.158-.211.224l-.29 1.106c-.168.646-.715 1.196-1.458 1.26a8 8 0 0 1-1.402 0c-.743-.064-1.289-.614-1.458-1.26l-.289-1.106c-.018-.066-.079-.158-.212-.224a6 6 0 0 1-.668-.386c-.123-.082-.233-.09-.299-.071l-1.103.303c-.644.176-1.392-.021-1.82-.63a8 8 0 0 1-.704-1.218c-.315-.675-.111-1.422.363-1.891l.815-.806c.05-.048.098-.147.088-.294a6 6 0 0 1 0-.772c.01-.147-.038-.246-.088-.294l-.815-.806C.635 6.045.431 5.298.746 4.623a8 8 0 0 1 .704-1.217c.428-.61 1.176-.807 1.82-.63l1.102.302c.067.019.177.011.3-.071q.321-.215.668-.386c.133-.066.194-.158.211-.224l.29-1.106C6.009.645 6.556.095 7.299.03Q7.646 0 8 0m-.571 1.525c-.036.003-.108.036-.137.146l-.289 1.105c-.147.561-.549.967-.998 1.189q-.26.13-.5.29c-.417.278-.97.423-1.529.27l-1.103-.303c-.109-.03-.175.016-.195.045q-.33.47-.573.99c-.014.031-.021.11.059.19l.815.806c.411.406.562.957.53 1.456a5 5 0 0 0 0 .582c.032.499-.119 1.05-.53 1.456l-.815.806c-.081.08-.073.159-.059.19q.243.52.573.989c.02.03.085.076.195.046l1.102-.303c.56-.153 1.113-.008 1.53.27q.242.16.501.29c.447.222.85.629.997 1.189l.289 1.105c.029.109.101.143.137.146a6.6 6.6 0 0 0 1.142 0c.036-.003.108-.036.137-.146l.289-1.105c.147-.561.549-.967.998-1.189q.26-.13.5-.29c.417-.278.97-.423 1.529-.27l1.103.303c.109.029.175-.016.195-.045q.33-.47.573-.99c.014-.031.021-.11-.059-.19l-.815-.806c-.411-.406-.562-.957-.53-1.456a5 5 0 0 0 0-.582c-.032-.499.119-1.05.53-1.456l.815-.806c.081-.08.073-.159.059-.19a6.5 6.5 0 0 0-.573-.989c-.02-.03-.085-.076-.195-.046l-1.102.303c-.56.153-1.113.008-1.53-.27a4.4 4.4 0 0 0-.501-.29c-.447-.222-.85-.629-.997-1.189l-.289-1.105c-.029-.11-.101-.143-.137-.146a6.6 6.6 0 0 0-1.142 0M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0M9.5 8a1.5 1.5 0 1 0-3.001.001A1.5 1.5 0 0 0 9.5 8"/></svg></span> Settings</strong>
 i buscar l'apartat <strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.09 20c.12.72.37 1.39.72 2H6c-1.11 0-2-.89-2-2V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9.09c-.33-.05-.66-.09-1-.09s-.67.04-1 .09V4h-5v8l-2.5-2.25L8 12V4H6v16zM19 15l-3 3h2v4h2v-4h2z"/></svg></span> Rules</strong>.</p>
-<figure id="__figure-caption_10">
+<figure class="shadow" id="__shadow-figure-caption_10">
 <p><img alt="Protecció de branques" src="../img/forks/ruleset.png" /></p>
 <figcaption>
 <p><span class="caption-prefix">Figura 10.</span> Protecció de branques</p>
@@ -2353,12 +2388,35 @@ com ara:</p>
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">27 d’octubre del 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">1 de novembre del 2024</span>
   </span>
 
     
     
     
+    
+      
+  <span class="md-source-file__fact">
+    
+      
+  <span class="md-icon" title="Col·laboradors">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </span>
+  <span>GitHub</span>
+
+    
+    <nav>
+      
+        <a href="https://github.com/joapuiib" class="md-author" title="@joapuiib">
+          
+          <img src="https://avatars.githubusercontent.com/u/25437671?v=4&size=72" alt="joapuiib">
+        </a>
+      
+      
+      
+    </nav>
+  </span>
+
     
   </aside>
 

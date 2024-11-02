@@ -30,6 +30,20 @@
   color: var(--md-default-fg-color--light);
 }
 
+.md-typeset figure.shadow > p > img,
+.md-typeset figure.shadow > p > svg {
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 0.2rem 0.5rem #0000001a, 0 0 0.05rem #00000040;
+}
+
+.md-typeset figure.no-shadow > p > img,
+.md-typeset figure.no-shadow > p > svg {
+    padding: revert-layer;
+    border-radius: revert-layer;
+    box-shadow: revert-layer;
+}
+
 .md-typeset figure.attribution {
     gap: 0;
 }
