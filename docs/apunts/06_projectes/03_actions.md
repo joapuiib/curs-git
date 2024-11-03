@@ -139,7 +139,7 @@ GitHub Pages pot ser habilitat i configurat en la secció __:octicons-gear-24: S
 dins de l'apartat __:material-application-outline: Pages__.
 
 ![Configuració de GitHub Pages](./img/actions/pages.png)
-/// figure-caption
+/// shadow-figure-caption
 Configuració de GitHub Pages en aquest repositori
 ///
 
