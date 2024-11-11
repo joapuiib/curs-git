@@ -29,6 +29,10 @@ theme:
   icon:
     logo: simple/git
 
+  cover:
+    logo: 'img/cefire.png'
+    background: false
+
   comments:
     repo: joapuiib/curs-git
     repo_id: R_kgDOMi7ohg
