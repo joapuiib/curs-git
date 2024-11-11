@@ -1,5 +1,5 @@
 spellchecker: hunspell
-jobs: 4
+jobs: 8
 
 matrix:
   - name: mkdocs
@@ -16,6 +16,9 @@ matrix:
           - 'span.keys'
           - '.arithmatex, .md-nav__link, .md-footer-custom-text, .md-source__repository, .headerlink, .md-icon'
           - 'span.filename'
+          - '.spell-ignore'
+          - '.md-footer__link--prev'
+          - '.md-footer__link--next'
           - '.md-author'
           - '.spell-ignore'
       - pyspelling.filters.url:
