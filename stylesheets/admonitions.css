@@ -25,6 +25,10 @@
 .md-typeset details.docs {
   border-color: rgb(var(--md-admonition-color--docs));
 }
+.md-typeset .admonition.docs:focus-within,
+.md-typeset details.docs:focus-within {
+    box-shadow: 0 0 0 .2rem rgba(var(--md-admonition-color--docs), 0.1);
+}
 .md-typeset .docs > .admonition-title,
 .md-typeset .docs > summary {
   background-color: rgba(var(--md-admonition-color--docs), 0.1);
@@ -39,6 +43,10 @@
 .md-typeset .admonition.spoiler,
 .md-typeset details.spoiler {
   border-color: rgb(var(--md-admonition-color--spoiler));
+}
+.md-typeset .admonition.spoiler:focus-within,
+.md-typeset details.spoiler:focus-within {
+    box-shadow: 0 0 0 .2rem rgba(var(--md-admonition-color--spoiler), 0.1);
 }
 .md-typeset .spoiler > .admonition-title,
 .md-typeset .spoiler > summary {
@@ -56,6 +64,12 @@
 .md-typeset .admonition.recommend,
 .md-typeset details.recommend {
   border-color: rgb(var(--md-admonition-color--success));
+}
+.md-typeset .admonition.solution:focus-within,
+.md-typeset details.solution:focus-within,
+.md-typeset .admonition.recommend:focus-within,
+.md-typeset details.recommend:focus-within {
+    box-shadow: 0 0 0 .2rem rgba(var(--md-admonition-color--success), 0.1);
 }
 .md-typeset .solution > .admonition-title,
 .md-typeset .solution > summary,
@@ -80,6 +94,10 @@
 .md-typeset details.important {
   border-color: rgb(var(--md-admonition-color--important));
 }
+.md-typeset .admonition.important:focus-within,
+.md-typeset details.important:focus-within {
+    box-shadow: 0 0 0 .2rem rgba(var(--md-admonition-color--important), 0.1);
+}
 .md-typeset .important > .admonition-title,
 .md-typeset .important > summary {
   background-color: rgba(var(--md-admonition-color--important), 0.1);
@@ -95,6 +113,10 @@
 .md-typeset details.notice {
   border-color: rgb(var(--md-admonition-color--notice));
 }
+.md-typeset .admonition.notice:focus-within,
+.md-typeset details.notice:focus-within {
+    box-shadow: 0 0 0 .2rem rgba(var(--md-admonition-color--notice), 0.1);
+}
 .md-typeset .notice > .admonition-title,
 .md-typeset .notice > summary {
   background-color: rgba(var(--md-admonition-color--notice), 0.1);
@@ -109,6 +131,10 @@
 .md-typeset .admonition.prep,
 .md-typeset details.prep {
   border-color: rgb(var(--md-admonition-color--info));
+}
+.md-typeset .admonition.prep:focus-within,
+.md-typeset details.prep:focus-within {
+    box-shadow: 0 0 0 .2rem rgba(var(--md-admonition-color--info), 0.1);
 }
 .md-typeset .prep > .admonition-title,
 .md-typeset .prep > summary {

@@ -1,0 +1,48 @@
+:root {
+  --md-download-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg>');
+}
+:hover>.md-download {
+    color: var(--md-default-fg-color--light);
+}
+
+.md-download,
+a.md-download {
+    border-radius: .1rem;
+    color: var(--md-default-fg-color--lightest);
+    cursor: pointer;
+    height: 1.5em;
+    outline-color: var(--md-accent-fg-color);
+    outline-offset: .1rem;
+    position: absolute;
+    right: 2em;
+    top: .5em;
+    transition: color .25s;
+    width: 1.5em;
+    z-index: 1;
+}
+
+a.md-download {
+    display: flex;
+    align-items: center;
+}
+
+.md-download:after {
+    background-color: currentcolor;
+    content: "";
+    display: block;
+    height: 1.125em;
+    margin: 0 auto;
+    -webkit-mask-image: var(--md-download-icon);
+    mask-image: var(--md-download-icon);
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    width: 1.125em;
+}
+
+.md-download:focus, .md-download:hover {
+    color: var(--md-accent-fg-color);
+}

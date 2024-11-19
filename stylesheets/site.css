@@ -1,10 +1,14 @@
+[data-md-color-scheme=slate] {
+    --md-shadow-z1: 0 0.4rem 0.5rem #0001, 0 0 0.05rem #0004;
+    --md-shadow-z2: 0 0.4rem 0.5rem #0004, 0 0 0.05rem #0006;
+    --md-shadow-z3: 0 0.4rem 0.5rem #0008, 0 0 0.05rem #000a;
+}
 [data-md-color-primary=brown] {
     --md-typeset-a-color: #c1775c;
 }
 
 .md-main__inner {
     max-width: 84rem;
-    padding: 0 1.5rem;
 }
 
 .md-nav__title svg {
@@ -30,16 +34,14 @@
   color: var(--md-default-fg-color--light);
 }
 
-.md-typeset figure.shadow > p > img,
-.md-typeset figure.shadow > p > svg {
-    padding: 0.5rem;
+.md-typeset figure.shadow > p img,
+.md-typeset figure.shadow > p svg {
     border-radius: 0.2rem;
-    box-shadow: 0 0.2rem 0.5rem #0000001a, 0 0 0.05rem #00000040;
+    box-shadow: var(--md-shadow-z2);
 }
 
 .md-typeset figure.no-shadow > p > img,
 .md-typeset figure.no-shadow > p > svg {
-    padding: revert-layer;
     border-radius: revert-layer;
     box-shadow: revert-layer;
 }
@@ -187,4 +189,11 @@ p:has(img.center) {
     .md-source-file {
         display: none;
     }
+}
+
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
