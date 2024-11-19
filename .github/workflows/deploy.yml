@@ -3,6 +3,7 @@ on: # Events que disparen l'automatització
   push:
     branches:
       - main # Quan es fa un push a la branca main
+  workflow_dispatch:
 
 permissions: # Permisos que es concedeixen a l'automatització
   contents: write # Permet escriure al repositori
