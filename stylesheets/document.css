@@ -8,16 +8,12 @@
     padding: 0;
 }
 
-/*
-.md-document__print-layout thead,
-.md-document__print-layout tbody,
-.md-document__print-layout tfoot,
-.md-document__print-layout tr,
-.md-document__print-layout td {
+.md-document__print-layout > :is(thead, tbody, tfoot) > :is(th, tr) > td,
+.md-document__print-layout > :is(thead, tbody, tfoot) > :is(th, tr),
+.md-document__print-layout > :is(thead, tbody, tfoot) {
     padding: 0;
     display: block;
 }
-*/
 
 .md-document__header-space, .md-document__footer-space {
     display: none;
