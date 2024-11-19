@@ -9,20 +9,31 @@ function print {
 BUILD=0
 INSTALL_VENV=0
 SPELL=0
-ARGS=''
 ACT=''
+ALL=0
+SOURCES=''
+
+ARGS=''
+SPELL_ARGS=''
 while [ $# -gt 0 ] ; do
     case $1 in
         -b)
             BUILD=1
+            ;;
+        --install-venv)
+            INSTALL_VENV=1
             ;;
         --spell)
             BUILD=1
             SPELL=1
             ARGS="$ARGS --clean"
             ;;
-        --install-venv)
-            INSTALL_VENV=1
+        --source | -S)
+            SOURCES="$SOURCES -S $2"
+            shift
+            ;;
+        --all)
+            ALL=1
             ;;
         --act)
             ACT=$2
@@ -76,8 +87,11 @@ if [ $BUILD -eq 1 ]; then
     COMMAND="build"
 fi
 
-print "Running 'mkdocs $COMMAND $ARGS'"
 mkdocs $COMMAND $ARGS
+if [ $? -ne 0 ]; then
+    print "Error building site."
+    exit 1
+fi
 
 if [ $SPELL -eq 1 ]; then
     export DICPATH=.hunspell/
@@ -98,6 +112,26 @@ if [ $SPELL -eq 1 ]; then
         curl -L https://raw.githubusercontent.com/Softcatala/catalan-dict-tools/refs/heads/master/resultats/hunspell/catalan-valencia.aff -o .hunspell/ca_ES_valencia.aff
     fi
 
+    if [ $ALL -eq 0 ]; then
+        if [ -z "$SOURCES" ]; then
+            CHANGED_FILES=$(git status --porcelain | grep '\.md$' | awk '{print $2}' | sed 's/docs/site/' | sed 's/.md$/\/index.html/')
+            if [ -z "$CHANGED_FILES" ]; then
+                print "No changes found."
+                exit
+            fi
+            for FILE in $CHANGED_FILES; do
+                if [ -f $FILE ]; then
+                    SOURCES="$SOURCES -S $FILE"
+                fi
+            done
+        fi
+        SPELL_ARGS="$SPELL_ARGS --name mkdocs $SOURCES"
+    fi
+
     print "Running pyspelling..."
-    pyspelling
+    echo "pyspelling $SPELL_ARGS"
+    pyspelling $SPELL_ARGS | tee pyspelling.log
+    if [ ${PIPESTATUS[0]} -ne 0 ]; then
+        less pyspelling.log
+    fi
 fi

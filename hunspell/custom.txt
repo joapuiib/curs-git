@@ -48,3 +48,4 @@ SemVer
 StackOverflow
 TODO
 untracked
+PySpelling

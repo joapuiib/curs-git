@@ -17,6 +17,7 @@ matrix:
           - '.arithmatex, .md-nav__link, .md-footer-custom-text, .md-source__repository, .headerlink, .md-icon'
           - 'span.filename'
           - '.md-author'
+          - '.spell-ignore'
       - pyspelling.filters.url:
     sources:
       - site/**/*.html
@@ -25,4 +26,4 @@ matrix:
       d: ca_ES_valencia,en_US
     dictionary:
       wordlists:
-      - docs/src/dictionary/hunspell/custom.txt
+      - hunspell/custom.txt
