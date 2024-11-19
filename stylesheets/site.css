@@ -197,3 +197,6 @@ p:has(img.center) {
     justify-content: space-around;
     align-items: center;
 }
+.columns > figure {
+    margin: revert-layer;
+}
