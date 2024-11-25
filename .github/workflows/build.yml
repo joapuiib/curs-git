@@ -4,10 +4,10 @@ on: # Events que disparen l'automatització
     branches:
       - 'main' # Quan es fa un push a la branca main
     tags:
-    - '**' # Quan es crea qualsevol etiqueta
+      - '**' # Quan es crea qualsevol etiqueta
   pull_request:
     branches:
-    - '**' # Quan s'obri un pull request a qualsevol branca
+      - '**' # Quan s'obri un pull request a qualsevol branca
 
 jobs: # Llista de tasques a executar
   documents: # Nom de la tasca
