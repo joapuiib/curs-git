@@ -89,3 +89,14 @@
         left:.8rem
     }
 }
+
+@media print {
+    .md-typeset .collapse-code input:checked+div.highlight code,
+    .md-typeset .collapse-code input:checked+div.highlight .linenodiv{
+        max-height:unset;
+        overflow:revert-layer;
+    }
+    .md-typeset .collapse-code input:checked~.code-footer{
+        display:none
+    }
+}
