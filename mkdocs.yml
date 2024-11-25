@@ -67,6 +67,8 @@ plugins:
   - macros
   - material/tags
   - material/search
+  - material/social:
+      enabled: !ENV [CI, false]
   - material-joapuiib/enviorment
   - sectionicons
   - i18n:
@@ -75,6 +77,7 @@ plugins:
           default: true
           name: Valencià
           admonition_translations:
+            info: Informació
             note: Nota
             abstract: Resum
             tip: Consell
