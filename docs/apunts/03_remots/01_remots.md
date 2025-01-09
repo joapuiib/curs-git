@@ -703,10 +703,12 @@ git pull [<options>] [<remot> [<branca>]
     --8<-- "docs/files/remots/stdout/remots/prepare_local_pull_no_ff.txt"
     ```
 
-    1. En aquest moment, el nou canvi __Més menjar__ no està reflectit en la branca remota `origin/main`.
+    1. El canvi __Més menjar__ no està reflectit en la branca remota `origin/main`
+    perquè no hem sincronitzat el nostre repositori local amb el repositori remot.
+
 
     En aquest moment, podríem intentar publicar aquest canvi al repositori remot,
-    però com  que el repositori remot té canvis que no estan reflectits en el nostre repositori local,
+    però com que el repositori remot té canvis que no estan reflectits en el nostre repositori local,
     Git ens mostrarà un missatge d'error.
 
     ```shellconsole
@@ -728,7 +730,11 @@ git pull [<options>] [<remot> [<branca>]
     En aquest cas, haurem d'incorporar els canvis de dues maneres diferents.
 
     !!! warning "Un _commit_ de fusió: `git pull --no-ff`."
-        Aquesta opció crearà un commit de fusió, que no és desitjable si es vol mantenir una història lineal.
+        Aquest és el procés que seguirà `git pull` si no
+        indiquem cap opció addicional.
+
+        En aquest cas crearà un commit de fusió,
+        que no és desitjable si es vol mantenir una història lineal.
 
         ```shellconsole
         --8<-- "docs/files/remots/stdout/remots/pull_no_ff.txt"
@@ -786,7 +792,6 @@ git push
 git pull [--rebase]
 ```
 
-
 ### Eliminar una branca remota
 Per eliminar una branca remota, cal utilitzar `git push` amb l'opció `-d`:
 
@@ -797,10 +802,10 @@ git push -d origin <ref>
 - `ref`: Referència a esborrar, que inclou branques i etiquetes.
 
 
-
 ## Recursos addicionals
 - [Curs de Git des de zero per MoureDev](https://www.youtube.com/watch?v=3GymExBkKjE&ab_channel=MoureDevbyBraisMoure)
 - https://github.com/UnseenWizzard/git_training
+
 
 ## Bibliografia
 - https://git-scm.com/book/en/v2
