@@ -24,13 +24,17 @@ exclude_docs: |
   *_excluded.md
   _*
 
+watch:
+  - overrides
+
 theme:
   name: material-joapuiib
+  custom_dir: overrides
   icon:
     logo: simple/git
 
   cover:
-    logo: 'img/cefire.png'
+    logo: false
     background: false
 
   comments:
