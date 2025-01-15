@@ -6,6 +6,12 @@ hide:
   - navigation
 ---
 
+## :fontawesome-regular-face-smile-beam: Si t'ha agradat aquest curs...
+Si aquest curs t'ha semblat útil i interessant,
+dona-li una :star: al [__repositori de :simple-github: GitHub__][curs-git]!
+
+  [curs-git]: https://github.com/joapuiib/curs-git
+
 ## :simple-creativecommons: Llicència
 Aquest material està llicenciat baix la llicència
 [Creative Commons :simple-creativecommons: Reconeixement-NoComercial-CompartirIgual 4.0 Internacional](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca){:target="_blank"}.
