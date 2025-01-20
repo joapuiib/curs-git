@@ -1,12 +1,11 @@
 ---
 template: document.html
-title: "Revert i cherry-pick"
+title: "Revert"
 icon: material/book-open-variant
-alias: cherrypick
+alias: revert
 comments: true
 tags:
     - git revert
-    - git cherry-pick
 ---
 
 ## Introducció
