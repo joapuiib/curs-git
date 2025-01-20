@@ -27,6 +27,12 @@ Hi ha dos tipus d'etiquetes, les __etiquetes lleugeres__ i les __etiquetes anota
     - Apartat [2.6 Git Basics - Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging){target=_blank} del llibre Pro Git.
 
 ??? prep "Preparació repositori"
+    /// collapse-code
+    ```bash title="setup.sh"
+    --8<-- "docs/files/avancat/stdout/etiquetes/setup.sh"
+    ```
+
+    ///
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/etiquetes/inicial.txt"
     ```
@@ -193,6 +199,9 @@ En cas de voler eliminar una etiqueta del repositori remot, utilitzarem l'opció
 git push [-d | --delete] origin <nom_etiqueta>
 ```
 ??? prep "Enllaç amb el repositori remot"
+    !!! warning
+        Cal que crees i configures el teu propi repositori remot per a poder realitzar aquesta secció.
+
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/etiquetes/preparacio_remot.txt"
     ```

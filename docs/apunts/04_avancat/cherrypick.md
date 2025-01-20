@@ -13,8 +13,8 @@ Les accions `revert` i `cherry-pick` són eines poc comuns, però poden ser úti
 
 ??? prep "Preparació repositori"
     /// collapse-code
-    ```bash title="setup_cherrypick.sh"
-    --8<-- "docs/files/avancat/stdout/cherrypick/setup_cherrypick.sh"
+    ```bash title="setup.sh"
+    --8<-- "docs/files/avancat/stdout/cherrypick/setup.sh"
     ```
     ///
 
