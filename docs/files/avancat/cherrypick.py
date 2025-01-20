@@ -105,7 +105,7 @@ def cherry_pick():
     x.x(f"cat README.md")
 
 def cherry_pick_conflictes():
-    x.log_file('stdout/cherrypick/cherrypick_conflictes.txt')
+    x.log_file('stdout/cherrypick/conflictes.txt')
     print('==================== CHERRY PICK CONFLICTES ========================')
     hash_A = x.run('git log --oneline --grep="^Canvi A$"').split()[0]
 
@@ -118,10 +118,10 @@ def cherry_pick_conflictes():
     x.x('git revert --continue --no-edit')
     x.x(f"git lga")
 
+
 parser = argparse.ArgumentParser(description='Squash')
 parser.add_argument('-v', "--verbose", action='store_true')
 args = parser.parse_args()
-
 
 if args.verbose:
     x.verbose = True

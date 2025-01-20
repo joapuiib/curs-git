@@ -12,6 +12,10 @@ tags:
 La comanda `cherry-pick` permet aplicar els canvis d'un commit concret
 sobre la branca actual.
 
+Aquesta ordre pot ser útil si has realitzat un canvi en una branca
+incorrecta i vols copiar-lo a la branca correcta sense haver de
+fusionar les branques.
+
 !!! docs
     Documentació oficial de [`git cherry-pick`](https://git-scm.com/docs/git-cherry-pick){target=_blank}
 
@@ -58,7 +62,7 @@ manualment, de la mateixa manera que es fa en una [[branques#resolucio-de-confli
     __Canvi A__ modificava la mateixa línia que __Canvi B__.
 
     ```shellconsole
-    --8<-- "docs/files/avancat/stdout/cherrypick/cherrypick_conflictes.txt"
+    --8<-- "docs/files/avancat/stdout/cherrypick/conflictes.txt"
     ```
 
     1. S'ha editat manualment el fitxer per eliminar els marcadors de
