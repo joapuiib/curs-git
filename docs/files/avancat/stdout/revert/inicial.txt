@@ -3,7 +3,7 @@ jpuigcerver@fp:~ $ cd ~/git_revert
 jpuigcerver@fp:~/git_revert $ git init
 Initialized empty Git repository in ~/git_revert/.git/
 jpuigcerver@fp:~/git_revert (main) $ git branch -m main
-jpuigcerver@fp:~/git_revert (main) $ echo "# Git revert i revert" > README.md
+jpuigcerver@fp:~/git_revert (main) $ echo "# Git revert" > README.md
 jpuigcerver@fp:~/git_revert (main) $ git add README.md
 jpuigcerver@fp:~/git_revert (main) $ git commit -m "Commit inicial"
 [main (root-commit) a5ce960] Commit inicial

@@ -8,7 +8,7 @@ jpuigcerver@fp:~/git_revert (main) $ git lga
 * cebb303 - (0 seconds ago) Canvi A - Joan Puigcerver
 * a5ce960 - (1 second ago) Commit inicial - Joan Puigcerver
 jpuigcerver@fp:~/git_revert (main) $ cat README.md
-# Git revert i revert
+# Git revert
 - Canvi A
 - Canvi B
 jpuigcerver@fp:~/git_revert (main) $ git revert cebb303
@@ -37,7 +37,7 @@ Unmerged paths:
 no changes added to commit (use "git add" and/or "git commit -a")
 jpuigcerver@fp:~/git_revert (main|REVERTING) $ vim README.md # (1)!
 jpuigcerver@fp:~/git_revert (main|REVERTING) $ cat README.md
-# Git revert i revert
+# Git revert
 - Canvi B
 jpuigcerver@fp:~/git_revert (main|REVERTING) $ git diff
 diff --cc README.md
@@ -45,7 +45,7 @@ index b4f9000,3243c7e..0000000
 --- a/README.md
 +++ b/README.md
 @@@ -1,3 -1,1 +1,2 @@@
-  # Git revert i revert
+  # Git revert
 - - Canvi A
  +- Canvi B
 jpuigcerver@fp:~/git_revert (main|REVERTING) $ git add README.md

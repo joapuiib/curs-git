@@ -9,7 +9,7 @@ mkdir -p ~/git_revert
 cd ~/git_revert
 git init
 git branch -m main
-echo "# Git revert i revert" > README.md
+echo "# Git revert" > README.md
 git add README.md
 git commit -m "Commit inicial"
 echo "- Canvi A" >> README.md

@@ -1,33 +1,29 @@
+jpuigcerver@fp:~/git_cherrypick (main) $ git checkout main
+Already on 'main'
 jpuigcerver@fp:~/git_cherrypick (main) $ git lga
-* 6a5c752 - (0 seconds ago) Revert "Canvi A" - Joan Puigcerver (HEAD -> main)
-* aa99382 - (0 seconds ago) Revert "Canvi C i D" - Joan Puigcerver
-* 2f610b9 - (1 second ago) Revert "Canvi E" - Joan Puigcerver
-* ff4ae1c - (1 second ago) Canvi E - Joan Puigcerver
-* a079d5b - (1 second ago) Canvi D - Joan Puigcerver
-* 75f51e1 - (1 second ago) Canvi C - Joan Puigcerver
-* fad1ea7 - (1 second ago) Canvi B - Joan Puigcerver
-* 4d18d71 - (1 second ago) Canvi A - Joan Puigcerver
-* 810ec42 - (1 second ago) Commit inicial - Joan Puigcerver
+* 63bc96c - (0 seconds ago) Canvi D - Joan Puigcerver (branca1)
+* 57e4510 - (0 seconds ago) Canvi C - Joan Puigcerver
+* b257248 - (0 seconds ago) Canvi B - Joan Puigcerver
+| * e41eeb7 - (0 seconds ago) Canvi E - Joan Puigcerver (branca2)
+|/  
+* b619158 - (0 seconds ago) Canvi A - Joan Puigcerver (HEAD -> main)
+* 2573bfa - (0 seconds ago) Commit inicial - Joan Puigcerver
 jpuigcerver@fp:~/git_cherrypick (main) $ cat README.md
-# Git revert i cherrypick
-- Canvi B
-jpuigcerver@fp:~/git_cherrypick (main) $ git cherry-pick 75f51e1
-Auto-merging README.md
-[main 0c28064] Canvi C
- Date: Sun Oct 20 22:15:45 2024 +0200
+# Git cherrypick
+- Canvi A
+jpuigcerver@fp:~/git_cherrypick (main) $ git cherry-pick b257248
+[main b257248] Canvi B
+ Date: Mon Jan 20 18:57:59 2025 +0100
  1 file changed, 1 insertion(+)
 jpuigcerver@fp:~/git_cherrypick (main) $ git lga
-* 0c28064 - (1 second ago) Canvi C - Joan Puigcerver (HEAD -> main)
-* 6a5c752 - (0 seconds ago) Revert "Canvi A" - Joan Puigcerver
-* aa99382 - (0 seconds ago) Revert "Canvi C i D" - Joan Puigcerver
-* 2f610b9 - (1 second ago) Revert "Canvi E" - Joan Puigcerver
-* ff4ae1c - (1 second ago) Canvi E - Joan Puigcerver
-* a079d5b - (1 second ago) Canvi D - Joan Puigcerver
-* 75f51e1 - (1 second ago) Canvi C - Joan Puigcerver
-* fad1ea7 - (1 second ago) Canvi B - Joan Puigcerver
-* 4d18d71 - (1 second ago) Canvi A - Joan Puigcerver
-* 810ec42 - (1 second ago) Commit inicial - Joan Puigcerver
+* 63bc96c - (0 seconds ago) Canvi D - Joan Puigcerver (branca1)
+* 57e4510 - (0 seconds ago) Canvi C - Joan Puigcerver
+* b257248 - (0 seconds ago) Canvi B - Joan Puigcerver (HEAD -> main)
+| * e41eeb7 - (0 seconds ago) Canvi E - Joan Puigcerver (branca2)
+|/  
+* b619158 - (0 seconds ago) Canvi A - Joan Puigcerver
+* 2573bfa - (0 seconds ago) Commit inicial - Joan Puigcerver
 jpuigcerver@fp:~/git_cherrypick (main) $ cat README.md
-# Git revert i cherrypick
+# Git cherrypick
+- Canvi A
 - Canvi B
-- Canvi C

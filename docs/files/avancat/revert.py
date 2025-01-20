@@ -35,7 +35,7 @@ def init_repositori():
     x.x('git init')
     x.run('git config user.email "j.puigcerveribanez@edu.gva.es"')
     x.x('git branch -m main')
-    x.x('echo "# Git revert i revert" > README.md')
+    x.x('echo "# Git revert" > README.md')
     x.x('git add README.md')
     x.x('git commit -m "Commit inicial"')
     x.x('echo "- Canvi A" >> README.md')
