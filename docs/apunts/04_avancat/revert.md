@@ -74,12 +74,18 @@ git revert --no-commit <ref>
 
 ### Resolució de conflictes
 Aquesta acció pot generar conflictes si els canvis que es volen desfer
-han estat modificats en commits posteriors.
+han estat modificats posteriorment.
 
 En aquest cas, passarem a l'estat `REVERTING` i caldrà resoldre els conflictes
 manualment, de la mateixa manera que es fa en una [[branques#resolucio-de-conflictes|fusió de branques (`merge`)]].
 
 ??? example "Exemple: Resolució de conflictes en git revert"
+    Volem desfer el _commit_ __Canvi A__, però els canvis de __Canvi B__
+    depenen del primer _commit_.
+
+    En aquest cas, `git revert` ha genera un conflicte i haurem de indicar manualment
+    quin serà l'estat final del fitxer.
+
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/revert/revert_conflictes.txt"
     ```

@@ -40,6 +40,12 @@ class CommandExecutor:
         return os.path.join(self.script_dir, path)
 
 
+    def create_dir(self, path):
+        dir = os.path.dirname(path)
+        if not os.path.exists(dir):
+            os.makedirs(dir)
+
+
     def rm(self, filename):
         if os.path.exists(filename):
             os.remove(filename)
@@ -55,12 +61,14 @@ class CommandExecutor:
         if self.logging and file:
             self.set_file(file)
             self.rm_file()
+            self.create_dir(self.file)
 
 
     def log_bash_file(self, file):
         self.bash_file = None
         if self.logging and file:
             self.bash_file = self.path_from_script(file)
+            self.create_dir(self.bash_file)
             self.rm(self.bash_file)
             self.log_bash_header()
 
