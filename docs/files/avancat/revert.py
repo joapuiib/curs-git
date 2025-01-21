@@ -90,7 +90,7 @@ def revert_conflictes():
     x.x(f"git status")
     x.run('sed -i \'/^- Canvi A$/d\' README.md')
     x.run('sed -i \'/^<<<<<<<.*$/d; /^=======/d; /^>>>>>>>.*$/d\' README.md')
-    x.log_prompt('vim README.md # (1)!')
+    x.log_prompt('code README.md # (1)!')
     x.x(f"cat README.md")
     x.x('git diff')
     x.x('git add README.md')

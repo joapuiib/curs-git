@@ -1,15 +1,15 @@
 jpuigcerver@fp:~/git_revert (main) $ git lga
-* 176fb18 - (0 seconds ago) Revert "Canvi E" - Joan Puigcerver (HEAD -> main)
-* 638323d - (0 seconds ago) Canvi E - Joan Puigcerver
-* 6ee1512 - (0 seconds ago) Canvi D - Joan Puigcerver
-* ca9c622 - (0 seconds ago) Canvi C - Joan Puigcerver
-* 3301ec5 - (0 seconds ago) Canvi B - Joan Puigcerver
-* 662daed - (0 seconds ago) Canvi A - Joan Puigcerver
-* ea15df3 - (0 seconds ago) Commit inicial - Joan Puigcerver
-jpuigcerver@fp:~/git_revert (main) $ git revert 6ee1512 --no-commit
+* 54e6def - (0 seconds ago) Revert "Canvi E" - Joan Puigcerver (HEAD -> main)
+* 1e5c1df - (0 seconds ago) Canvi E - Joan Puigcerver
+* 9f735e9 - (0 seconds ago) Canvi D - Joan Puigcerver
+* 3102fd3 - (0 seconds ago) Canvi C - Joan Puigcerver
+* e4b3412 - (0 seconds ago) Canvi B - Joan Puigcerver
+* aef9ebe - (0 seconds ago) Canvi A - Joan Puigcerver
+* 2c18085 - (0 seconds ago) Commit inicial - Joan Puigcerver
+jpuigcerver@fp:~/git_revert (main) $ git revert 9f735e9 --no-commit
 jpuigcerver@fp:~/git_revert (main|REVERTING) $ git status
 On branch main
-You are currently reverting commit 6ee1512.
+You are currently reverting commit 9f735e9.
   (all conflicts fixed: run "git revert --continue")
   (use "git revert --skip" to skip this patch)
   (use "git revert --abort" to cancel the revert operation)
@@ -28,10 +28,10 @@ index 2a58c68..aa091c8 100644
  - Canvi B
  - Canvi C
 -- Canvi D
-jpuigcerver@fp:~/git_revert (main|REVERTING) $ git revert ca9c622 --no-commit
+jpuigcerver@fp:~/git_revert (main|REVERTING) $ git revert 3102fd3 --no-commit
 jpuigcerver@fp:~/git_revert (main|REVERTING) $ git status
 On branch main
-You are currently reverting commit ca9c622.
+You are currently reverting commit 3102fd3.
   (all conflicts fixed: run "git revert --continue")
   (use "git revert --skip" to skip this patch)
   (use "git revert --abort" to cancel the revert operation)
@@ -52,21 +52,21 @@ index 2a58c68..395c8c6 100644
 -- Canvi C
 -- Canvi D
 jpuigcerver@fp:~/git_revert (main|REVERTING) $ git commit -m "Revert \"Canvi C i D\"" # (1)!
-[main 48997dd] Revert "Canvi C i D"
+[main 5ab52e3] Revert "Canvi C i D"
  1 file changed, 2 deletions(-)
 jpuigcerver@fp:~/git_revert (main) $ git lga
-* 48997dd - (0 seconds ago) Revert "Canvi C i D" - Joan Puigcerver (HEAD -> main)
-* 176fb18 - (0 seconds ago) Revert "Canvi E" - Joan Puigcerver
-* 638323d - (0 seconds ago) Canvi E - Joan Puigcerver
-* 6ee1512 - (0 seconds ago) Canvi D - Joan Puigcerver
-* ca9c622 - (0 seconds ago) Canvi C - Joan Puigcerver
-* 3301ec5 - (0 seconds ago) Canvi B - Joan Puigcerver
-* 662daed - (0 seconds ago) Canvi A - Joan Puigcerver
-* ea15df3 - (0 seconds ago) Commit inicial - Joan Puigcerver
+* 5ab52e3 - (0 seconds ago) Revert "Canvi C i D" - Joan Puigcerver (HEAD -> main)
+* 54e6def - (0 seconds ago) Revert "Canvi E" - Joan Puigcerver
+* 1e5c1df - (0 seconds ago) Canvi E - Joan Puigcerver
+* 9f735e9 - (0 seconds ago) Canvi D - Joan Puigcerver
+* 3102fd3 - (0 seconds ago) Canvi C - Joan Puigcerver
+* e4b3412 - (0 seconds ago) Canvi B - Joan Puigcerver
+* aef9ebe - (0 seconds ago) Canvi A - Joan Puigcerver
+* 2c18085 - (0 seconds ago) Commit inicial - Joan Puigcerver
 jpuigcerver@fp:~/git_revert (main) $ git show
-commit 48997dd0ec11c63c25e7e71f82bf0c6b6f4bfd21
+commit 5ab52e3a58485be85012a623d474942bf56b0e4f
 Author: Joan Puigcerver <j.puigcerveribanez@edu.gva.es>
-Date:   Tue Jan 21 12:13:30 2025 +0100
+Date:   Tue Jan 21 12:40:44 2025 +0100
 
     Revert "Canvi C i D"
 

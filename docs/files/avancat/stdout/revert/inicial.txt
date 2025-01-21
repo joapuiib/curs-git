@@ -6,33 +6,33 @@ jpuigcerver@fp:~/git_revert (main) $ git branch -m main
 jpuigcerver@fp:~/git_revert (main) $ echo "# Git revert" > README.md
 jpuigcerver@fp:~/git_revert (main) $ git add README.md
 jpuigcerver@fp:~/git_revert (main) $ git commit -m "Commit inicial"
-[main (root-commit) ea15df3] Commit inicial
+[main (root-commit) 2c18085] Commit inicial
  1 file changed, 1 insertion(+)
  create mode 100644 README.md
 jpuigcerver@fp:~/git_revert (main) $ echo "- Canvi A" >> README.md
 jpuigcerver@fp:~/git_revert (main) $ git commit -a -m "Canvi A"
-[main 662daed] Canvi A
+[main aef9ebe] Canvi A
  1 file changed, 1 insertion(+)
 jpuigcerver@fp:~/git_revert (main) $ echo "- Canvi B" >> README.md
 jpuigcerver@fp:~/git_revert (main) $ git commit -a -m "Canvi B"
-[main 3301ec5] Canvi B
+[main e4b3412] Canvi B
  1 file changed, 1 insertion(+)
 jpuigcerver@fp:~/git_revert (main) $ echo "- Canvi C" >> README.md
 jpuigcerver@fp:~/git_revert (main) $ git commit -a -m "Canvi C"
-[main ca9c622] Canvi C
+[main 3102fd3] Canvi C
  1 file changed, 1 insertion(+)
 jpuigcerver@fp:~/git_revert (main) $ echo "- Canvi D" >> README.md
 jpuigcerver@fp:~/git_revert (main) $ git commit -a -m "Canvi D"
-[main 6ee1512] Canvi D
+[main 9f735e9] Canvi D
  1 file changed, 1 insertion(+)
 jpuigcerver@fp:~/git_revert (main) $ echo "- Canvi E" >> README.md
 jpuigcerver@fp:~/git_revert (main) $ git commit -a -m "Canvi E"
-[main 638323d] Canvi E
+[main 1e5c1df] Canvi E
  1 file changed, 1 insertion(+)
 jpuigcerver@fp:~/git_revert (main) $ git lga
-* 638323d - (0 seconds ago) Canvi E - Joan Puigcerver (HEAD -> main)
-* 6ee1512 - (0 seconds ago) Canvi D - Joan Puigcerver
-* ca9c622 - (0 seconds ago) Canvi C - Joan Puigcerver
-* 3301ec5 - (0 seconds ago) Canvi B - Joan Puigcerver
-* 662daed - (0 seconds ago) Canvi A - Joan Puigcerver
-* ea15df3 - (0 seconds ago) Commit inicial - Joan Puigcerver
+* 1e5c1df - (0 seconds ago) Canvi E - Joan Puigcerver (HEAD -> main)
+* 9f735e9 - (0 seconds ago) Canvi D - Joan Puigcerver
+* 3102fd3 - (0 seconds ago) Canvi C - Joan Puigcerver
+* e4b3412 - (0 seconds ago) Canvi B - Joan Puigcerver
+* aef9ebe - (0 seconds ago) Canvi A - Joan Puigcerver
+* 2c18085 - (0 seconds ago) Commit inicial - Joan Puigcerver

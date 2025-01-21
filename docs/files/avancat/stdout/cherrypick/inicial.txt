@@ -6,7 +6,7 @@ jpuigcerver@fp:~/git_cherrypick (main) $ git branch -m main
 jpuigcerver@fp:~/git_cherrypick (main) $ echo "# Git cherrypick" > README.md
 jpuigcerver@fp:~/git_cherrypick (main) $ git add README.md
 jpuigcerver@fp:~/git_cherrypick (main) $ git commit -m "Commit inicial"
-[main (root-commit) d5ab1f2] Commit inicial
+[main (root-commit) f21f6f7] Commit inicial
  1 file changed, 1 insertion(+)
  create mode 100644 README.md
 jpuigcerver@fp:~/git_cherrypick (main) $ git branch begudes
@@ -16,16 +16,16 @@ Switched to branch 'begudes'
 jpuigcerver@fp:~/git_cherrypick (begudes) $ echo "Aigua" >> begudes.txt
 jpuigcerver@fp:~/git_cherrypick (begudes) $ git add begudes.txt
 jpuigcerver@fp:~/git_cherrypick (begudes) $ git commit -m "Begudes: aigua"
-[begudes 6c46784] Begudes: aigua
+[begudes 5b87d79] Begudes: aigua
  1 file changed, 1 insertion(+)
  create mode 100644 begudes.txt
 jpuigcerver@fp:~/git_cherrypick (begudes) $ echo "Refresc" >> begudes.txt
 jpuigcerver@fp:~/git_cherrypick (begudes) $ git commit -a -m "Begudes: refresc"
-[begudes 426ff20] Begudes: refresc
+[begudes 054e4e0] Begudes: refresc
  1 file changed, 1 insertion(+)
 jpuigcerver@fp:~/git_cherrypick (begudes) $ git checkout main
 Switched to branch 'main'
 jpuigcerver@fp:~/git_cherrypick (main) $ git lga
-* 426ff20 - (0 seconds ago) Begudes: refresc - Joan Puigcerver (begudes)
-* 6c46784 - (0 seconds ago) Begudes: aigua - Joan Puigcerver
-* d5ab1f2 - (0 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main, menjar)
+* 054e4e0 - (0 seconds ago) Begudes: refresc - Joan Puigcerver (begudes)
+* 5b87d79 - (0 seconds ago) Begudes: aigua - Joan Puigcerver
+* f21f6f7 - (0 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main, menjar)
