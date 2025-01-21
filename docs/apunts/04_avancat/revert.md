@@ -70,7 +70,7 @@ git revert --no-commit <ref>
     --8<-- "docs/files/avancat/stdout/revert/revert_multiple.txt"
     ```
 
-    1. Per eixir de l'estat `REVERTING` també es pot fer un `git commit`.
+    1. Per eixir de l'estat `REVERTING` també es pot fer un `git commit` per poder especificar un missatge.
 
 ### Resolució de conflictes
 Aquesta acció pot generar conflictes si els canvis que es volen desfer

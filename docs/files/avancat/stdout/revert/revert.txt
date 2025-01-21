@@ -1,26 +1,26 @@
-jpuigcerver@fp:~/git_revert (main) $ git revert 6cd09f9 --no-edit
-[main f08c8ae] Revert "Canvi E"
- Date: Mon Jan 20 18:36:46 2025 +0100
+jpuigcerver@fp:~/git_revert (main) $ git revert 638323d --no-edit
+[main 176fb18] Revert "Canvi E"
+ Date: Tue Jan 21 12:13:30 2025 +0100
  1 file changed, 1 deletion(-)
 jpuigcerver@fp:~/git_revert (main) $ git lga
-* f08c8ae - (0 seconds ago) Revert "Canvi E" - Joan Puigcerver (HEAD -> main)
-* 6cd09f9 - (0 seconds ago) Canvi E - Joan Puigcerver
-* ca42076 - (0 seconds ago) Canvi D - Joan Puigcerver
-* 78c0b3b - (0 seconds ago) Canvi C - Joan Puigcerver
-* a9eea89 - (0 seconds ago) Canvi B - Joan Puigcerver
-* cebb303 - (0 seconds ago) Canvi A - Joan Puigcerver
-* a5ce960 - (1 second ago) Commit inicial - Joan Puigcerver
+* 176fb18 - (0 seconds ago) Revert "Canvi E" - Joan Puigcerver (HEAD -> main)
+* 638323d - (0 seconds ago) Canvi E - Joan Puigcerver
+* 6ee1512 - (0 seconds ago) Canvi D - Joan Puigcerver
+* ca9c622 - (0 seconds ago) Canvi C - Joan Puigcerver
+* 3301ec5 - (0 seconds ago) Canvi B - Joan Puigcerver
+* 662daed - (0 seconds ago) Canvi A - Joan Puigcerver
+* ea15df3 - (0 seconds ago) Commit inicial - Joan Puigcerver
 jpuigcerver@fp:~/git_revert (main) $ git show
-commit f08c8aef1852d20d003a5a7dbdacf507d717acea
+commit 176fb18895cb722e184839d7cb7387d9d040f491
 Author: Joan Puigcerver <j.puigcerveribanez@edu.gva.es>
-Date:   Mon Jan 20 18:36:46 2025 +0100
+Date:   Tue Jan 21 12:13:30 2025 +0100
 
     Revert "Canvi E"
     
-    This reverts commit 6cd09f922ef95041bbba1954a723aec3c5b67115.
+    This reverts commit 638323d50f4eaf2d944b4f77138a072080c607c3.
 
 diff --git a/README.md b/README.md
-index f1afd49..4150acc 100644
+index 4869b5e..2a58c68 100644
 --- a/README.md
 +++ b/README.md
 @@ -3,4 +3,3 @@

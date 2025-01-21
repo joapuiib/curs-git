@@ -1,20 +1,20 @@
-jpuigcerver@fp:~/git_revert (main) $ git lga
-* e21e6e4 - (0 seconds ago) Revert "Canvi C i D" - Joan Puigcerver (HEAD -> main)
-* f08c8ae - (0 seconds ago) Revert "Canvi E" - Joan Puigcerver
-* 6cd09f9 - (0 seconds ago) Canvi E - Joan Puigcerver
-* ca42076 - (0 seconds ago) Canvi D - Joan Puigcerver
-* 78c0b3b - (0 seconds ago) Canvi C - Joan Puigcerver
-* a9eea89 - (0 seconds ago) Canvi B - Joan Puigcerver
-* cebb303 - (0 seconds ago) Canvi A - Joan Puigcerver
-* a5ce960 - (1 second ago) Commit inicial - Joan Puigcerver
 jpuigcerver@fp:~/git_revert (main) $ cat README.md
 # Git revert
 - Canvi A
 - Canvi B
-jpuigcerver@fp:~/git_revert (main) $ git revert cebb303
+jpuigcerver@fp:~/git_revert (main) $ git lga
+* 48997dd - (0 seconds ago) Revert "Canvi C i D" - Joan Puigcerver (HEAD -> main)
+* 176fb18 - (0 seconds ago) Revert "Canvi E" - Joan Puigcerver
+* 638323d - (0 seconds ago) Canvi E - Joan Puigcerver
+* 6ee1512 - (0 seconds ago) Canvi D - Joan Puigcerver
+* ca9c622 - (0 seconds ago) Canvi C - Joan Puigcerver
+* 3301ec5 - (0 seconds ago) Canvi B - Joan Puigcerver
+* 662daed - (0 seconds ago) Canvi A - Joan Puigcerver
+* ea15df3 - (0 seconds ago) Commit inicial - Joan Puigcerver
+jpuigcerver@fp:~/git_revert (main) $ git revert 662daed
 Auto-merging README.md
 CONFLICT (content): Merge conflict in README.md
-error: could not revert cebb303... Canvi A
+error: could not revert 662daed... Canvi A
 hint: After resolving the conflicts, mark them with
 hint: "git add/rm <pathspec>", then run
 hint: "git revert --continue".
@@ -24,7 +24,7 @@ hint: run "git revert --abort".
 hint: Disable this message with "git config advice.mergeConflict false"
 jpuigcerver@fp:~/git_revert (main|REVERTING) $ git status
 On branch main
-You are currently reverting commit cebb303.
+You are currently reverting commit 662daed.
   (fix conflicts and run "git revert --continue")
   (use "git revert --skip" to skip this patch)
   (use "git revert --abort" to cancel the revert operation)
@@ -41,7 +41,7 @@ jpuigcerver@fp:~/git_revert (main|REVERTING) $ cat README.md
 - Canvi B
 jpuigcerver@fp:~/git_revert (main|REVERTING) $ git diff
 diff --cc README.md
-index b4f9000,3243c7e..0000000
+index 395c8c6,9f757b1..0000000
 --- a/README.md
 +++ b/README.md
 @@@ -1,3 -1,1 +1,2 @@@
@@ -50,15 +50,15 @@ index b4f9000,3243c7e..0000000
  +- Canvi B
 jpuigcerver@fp:~/git_revert (main|REVERTING) $ git add README.md
 jpuigcerver@fp:~/git_revert (main|REVERTING) $ git revert --continue --no-edit
-[main 6d56a3a] Revert "Canvi A"
+[main 1d5cd2a] Revert "Canvi A"
  1 file changed, 1 deletion(-)
 jpuigcerver@fp:~/git_revert (main) $ git lga
-* 6d56a3a - (0 seconds ago) Revert "Canvi A" - Joan Puigcerver (HEAD -> main)
-* e21e6e4 - (0 seconds ago) Revert "Canvi C i D" - Joan Puigcerver
-* f08c8ae - (0 seconds ago) Revert "Canvi E" - Joan Puigcerver
-* 6cd09f9 - (0 seconds ago) Canvi E - Joan Puigcerver
-* ca42076 - (0 seconds ago) Canvi D - Joan Puigcerver
-* 78c0b3b - (0 seconds ago) Canvi C - Joan Puigcerver
-* a9eea89 - (0 seconds ago) Canvi B - Joan Puigcerver
-* cebb303 - (0 seconds ago) Canvi A - Joan Puigcerver
-* a5ce960 - (1 second ago) Commit inicial - Joan Puigcerver
+* 1d5cd2a - (0 seconds ago) Revert "Canvi A" - Joan Puigcerver (HEAD -> main)
+* 48997dd - (0 seconds ago) Revert "Canvi C i D" - Joan Puigcerver
+* 176fb18 - (0 seconds ago) Revert "Canvi E" - Joan Puigcerver
+* 638323d - (0 seconds ago) Canvi E - Joan Puigcerver
+* 6ee1512 - (0 seconds ago) Canvi D - Joan Puigcerver
+* ca9c622 - (0 seconds ago) Canvi C - Joan Puigcerver
+* 3301ec5 - (0 seconds ago) Canvi B - Joan Puigcerver
+* 662daed - (0 seconds ago) Canvi A - Joan Puigcerver
+* ea15df3 - (0 seconds ago) Commit inicial - Joan Puigcerver
