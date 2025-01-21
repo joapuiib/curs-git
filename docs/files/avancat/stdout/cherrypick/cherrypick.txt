@@ -1,29 +1,26 @@
-jpuigcerver@fp:~/git_cherrypick (main) $ git checkout main
-Already on 'main'
-jpuigcerver@fp:~/git_cherrypick (main) $ git lga
-* 63bc96c - (0 seconds ago) Canvi D - Joan Puigcerver (branca1)
-* 57e4510 - (0 seconds ago) Canvi C - Joan Puigcerver
-* b257248 - (0 seconds ago) Canvi B - Joan Puigcerver
-| * e41eeb7 - (0 seconds ago) Canvi E - Joan Puigcerver (branca2)
-|/  
-* b619158 - (0 seconds ago) Canvi A - Joan Puigcerver (HEAD -> main)
-* 2573bfa - (0 seconds ago) Commit inicial - Joan Puigcerver
-jpuigcerver@fp:~/git_cherrypick (main) $ cat README.md
-# Git cherrypick
-- Canvi A
-jpuigcerver@fp:~/git_cherrypick (main) $ git cherry-pick b257248
-[main b257248] Canvi B
- Date: Mon Jan 20 18:57:59 2025 +0100
+jpuigcerver@fp:~/git_cherrypick (begudes) $ git checkout menjar
+Switched to branch 'menjar'
+jpuigcerver@fp:~/git_cherrypick (menjar) $ git lga
+* bb49923 - (0 seconds ago) Menjar: pa - Joan Puigcerver (begudes)
+* 426ff20 - (1 second ago) Begudes: refresc - Joan Puigcerver
+* 6c46784 - (1 second ago) Begudes: aigua - Joan Puigcerver
+* d5ab1f2 - (1 second ago) Commit inicial - Joan Puigcerver (HEAD -> menjar, main)
+jpuigcerver@fp:~/git_cherrypick (menjar) $ ls
+README.md
+jpuigcerver@fp:~/git_cherrypick (menjar) $ git cherry-pick bb49923
+[menjar daefdc1] Menjar: pa
+ Date: Tue Jan 21 12:11:19 2025 +0100
  1 file changed, 1 insertion(+)
-jpuigcerver@fp:~/git_cherrypick (main) $ git lga
-* 63bc96c - (0 seconds ago) Canvi D - Joan Puigcerver (branca1)
-* 57e4510 - (0 seconds ago) Canvi C - Joan Puigcerver
-* b257248 - (0 seconds ago) Canvi B - Joan Puigcerver (HEAD -> main)
-| * e41eeb7 - (0 seconds ago) Canvi E - Joan Puigcerver (branca2)
+ create mode 100644 menjar.txt
+jpuigcerver@fp:~/git_cherrypick (menjar) $ git lga
+* bb49923 - (0 seconds ago) Menjar: pa - Joan Puigcerver (begudes)
+* 426ff20 - (1 second ago) Begudes: refresc - Joan Puigcerver
+* 6c46784 - (1 second ago) Begudes: aigua - Joan Puigcerver
+| * daefdc1 - (0 seconds ago) Menjar: pa - Joan Puigcerver (HEAD -> menjar)
 |/  
-* b619158 - (0 seconds ago) Canvi A - Joan Puigcerver
-* 2573bfa - (0 seconds ago) Commit inicial - Joan Puigcerver
-jpuigcerver@fp:~/git_cherrypick (main) $ cat README.md
-# Git cherrypick
-- Canvi A
-- Canvi B
+* d5ab1f2 - (1 second ago) Commit inicial - Joan Puigcerver (main)
+jpuigcerver@fp:~/git_cherrypick (menjar) $ ls
+menjar.txt
+README.md
+jpuigcerver@fp:~/git_cherrypick (menjar) $ cat menjar.txt
+Pa

@@ -32,6 +32,9 @@ Funcionament de `git cherry-pick`.
 ///
 
 ??? prep "Preparació repositori"
+    Per a aquest exemple, crearem un nou repositori per emmagatzemar
+    begudes i menjars en els seus fitxers corresponents.
+
     /// collapse-code
     ```bash title="setup.sh"
     --8<-- "docs/files/avancat/stdout/cherrypick/setup.sh"
@@ -43,11 +46,23 @@ Funcionament de `git cherry-pick`.
     ```
 
 ??? example "Exemple: git cherry-pick"
-    En aquest cas, tornem a aplicar el __Canvi C__ després
-    de __Canvi B__ amb `git cherry-pick`.
+    En aquest cas, ens hem enganyat i hem creat el _commit_ __Menjar: pa__
+    a la branca `begudes` en lloc de la branca `menjar`.
+
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/cherrypick/prep_cherrypick.txt"
+    ```
+
+    Copiem aquest _commit_ a la branca `menjar`.
 
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/cherrypick/cherrypick.txt"
+    ```
+
+    Esborrem el commit de la branca `begudes`.
+
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/cherrypick/post_cherrypick.txt"
     ```
 
 ### Resolució de conflictes
@@ -58,12 +73,26 @@ En aquest cas, passarem a l'estat `CHERRY-PICKING` i caldrà resoldre els confli
 manualment, de la mateixa manera que es fa en una [[branques#resolucio-de-conflictes|fusió de branques (`merge`)]].
 
 ??? example "Exemple: Resolució de conflictes en git cherry-pick"
-    En aquest cas, `git cherry-pick` ha generat un conflicte ja que
-    __Canvi A__ modificava la mateixa línia que __Canvi B__.
+    Vaja, ens hem tornat a enganyar de branca i hem creat el _commit_
+    __Menjar: taronges__ a la branca `begudes` en lloc de la branca `menjar`.
+
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/cherrypick/prep_conflictes.txt"
+    ```
+
+    Tornem a copiar aquest _commit_ a la branca `menjar`,
+    però en aquest cas hi ha conflictes, ja que el fitxer `menjar.txt`
+    ha estat modificat en ambdues branques.
 
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/cherrypick/conflictes.txt"
     ```
 
     1. S'ha editat manualment el fitxer per eliminar els marcadors de
-        conflicte i posar __Canvi A__ abans de __Canvi B__.
+        conflictes i deixar el contingut desitjat.
+
+    Per últim, esborrem el commit de la branca `begudes`.
+
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/cherrypick/post_conflictes.txt"
+    ```

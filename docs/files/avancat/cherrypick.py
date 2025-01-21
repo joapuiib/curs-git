@@ -38,20 +38,14 @@ def init_repositori():
     x.x('echo "# Git cherrypick" > README.md')
     x.x('git add README.md')
     x.x('git commit -m "Commit inicial"')
-    x.x('echo "- Canvi A" >> README.md')
-    x.x('git commit -a -m "Canvi A"')
-    x.x('git branch branca1')
-    x.x('git branch branca2')
-    x.x('git checkout branca1')
-    x.x('echo "- Canvi B" >> README.md')
-    x.x('git commit -a -m "Canvi B"')
-    x.x('echo "- Canvi C" >> README.md')
-    x.x('git commit -a -m "Canvi C"')
-    x.x('echo "- Canvi D" >> README.md')
-    x.x('git commit -a -m "Canvi D"')
-    x.x('git checkout branca2')
-    x.x('echo "- Canvi E" >> README.md')
-    x.x('git commit -a -m "Canvi E"')
+    x.x('git branch begudes')
+    x.x('git branch menjar')
+    x.x('git checkout begudes')
+    x.x('echo "Aigua" >> begudes.txt')
+    x.x('git add begudes.txt')
+    x.x('git commit -m "Begudes: aigua"')
+    x.x('echo "Refresc" >> begudes.txt')
+    x.x('git commit -a -m "Begudes: refresc"')
     x.x('git checkout main')
     x.x('git lga')
 
@@ -59,30 +53,64 @@ def init_repositori():
 
 
 def cherry_pick():
+    x.log_file('stdout/cherrypick/prep_cherrypick.txt')
+    print('==================== PREP CHERRY PICK ========================')
+    x.x('git checkout begudes')
+    x.x('echo "Pa" >> menjar.txt')
+    x.x('git add menjar.txt')
+    x.x('git commit -m "Menjar: pa"')
+    x.x('git lga')
+
     x.log_file('stdout/cherrypick/cherrypick.txt')
     print('==================== CHERRY PICK ========================')
-    hash_B = x.run('git log --all --oneline --grep="^Canvi B$"').split()[0]
+    hash_pa = x.run('git log --all --oneline --grep="^Menjar: pa$"').split()[0]
 
-    x.x('git checkout main')
+    x.x('git checkout menjar')
     x.x(f"git lga")
-    x.x(f"cat README.md")
-    x.x(f"git cherry-pick {hash_B}")
+    x.x(f"ls")
+    x.x(f"git cherry-pick {hash_pa}")
     x.x(f"git lga")
-    x.x(f"cat README.md")
+    x.x(f"ls")
+    x.x(f"cat menjar.txt")
+
+    x.log_file('stdout/cherrypick/post_cherrypick.txt')
+    print('==================== POST CHERRY PICK ========================')
+    hash_refresc = x.run('git log --all --oneline --grep="^Begudes: refresc$"').split()[0]
+    x.x('git checkout begudes')
+    x.x(f"git reset --hard {hash_refresc}")
+    x.x(f"git lga")
+
 
 def cherry_pick_conflictes():
+    x.log_file('stdout/cherrypick/prep_conflictes.txt')
+    print('================ PREP CHERRY PICK CONFLICTES ========================')
+    x.x('git checkout begudes')
+    x.x('echo "Taronges" >> menjar.txt')
+    x.x('git add menjar.txt')
+    x.x('git commit -m "Menjar: taronges"')
+    x.x('git lga')
+
     x.log_file('stdout/cherrypick/conflictes.txt')
     print('==================== CHERRY PICK CONFLICTES ========================')
-    hash_B = x.run('git log --all --oneline --grep="^Canvi B$"').split()[0]
+    hash_taronges = x.run('git log --all --oneline --grep="^Menjar: taronges$"').split()[0]
 
-    x.x('git checkout branca2')
+    x.x('git checkout menjar')
     x.x(f"git lga")
-    x.x(f"git cherry-pick {hash_B}")
-    x.swap_conflictes("README.md")
-    x.log_prompt('vim README.md # (1)!')
+    x.x(f"git cherry-pick {hash_taronges}")
+    x.x(f"cat menjar.txt")
+    x.remove_conflictes("menjar.txt")
+    x.log_prompt('vim menjar.txt # (1)!')
     x.x('git diff')
-    x.x('git add README.md')
-    x.x('git revert --continue --no-edit')
+    x.x('git add menjar.txt')
+    x.x('git cherry-pick --continue --no-edit')
+    x.x(f"git lga")
+
+    x.log_file('stdout/cherrypick/post_conflictes.txt')
+    print('==================== POST CHERRY PICK CONFLICTES ========================')
+    hash_refresc = x.run('git log --all --oneline --grep="^Begudes: refresc$"').split()[0]
+
+    x.x('git checkout begudes')
+    x.x(f"git reset --hard {hash_refresc}")
     x.x(f"git lga")
 
 

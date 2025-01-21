@@ -167,6 +167,14 @@ class CommandExecutor:
             f.write(content)
             f.truncate()
 
+    def remove_conflictes(self, filename):
+        with open(filename, "r+") as f:
+            content = f.read()
+            content = re.sub(r"<<<<<<< HEAD\n(.*?)=======\n(.*?)>>>>>>> (.*?)\n", r"\1\2", content, flags=re.DOTALL)
+            f.seek(0)
+            f.write(content)
+            f.truncate()
+
 
     def log_file_content(self, filename, log_filename):
         with open(filename, "r") as f:

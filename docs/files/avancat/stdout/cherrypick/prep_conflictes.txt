@@ -1,0 +1,15 @@
+jpuigcerver@fp:~/git_cherrypick (begudes) $ git checkout begudes
+Already on 'begudes'
+jpuigcerver@fp:~/git_cherrypick (begudes) $ echo "Taronges" >> menjar.txt
+jpuigcerver@fp:~/git_cherrypick (begudes) $ git add menjar.txt
+jpuigcerver@fp:~/git_cherrypick (begudes) $ git commit -m "Menjar: taronges"
+[begudes e8a9028] Menjar: taronges
+ 1 file changed, 1 insertion(+)
+ create mode 100644 menjar.txt
+jpuigcerver@fp:~/git_cherrypick (begudes) $ git lga
+* e8a9028 - (0 seconds ago) Menjar: taronges - Joan Puigcerver (HEAD -> begudes)
+* 426ff20 - (1 second ago) Begudes: refresc - Joan Puigcerver
+* 6c46784 - (1 second ago) Begudes: aigua - Joan Puigcerver
+| * daefdc1 - (0 seconds ago) Menjar: pa - Joan Puigcerver (menjar)
+|/  
+* d5ab1f2 - (1 second ago) Commit inicial - Joan Puigcerver (main)

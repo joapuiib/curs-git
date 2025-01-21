@@ -1,17 +1,16 @@
-jpuigcerver@fp:~/git_cherrypick (main) $ git checkout branca2
-Switched to branch 'branca2'
-jpuigcerver@fp:~/git_cherrypick (branca2) $ git lga
-* 63bc96c - (0 seconds ago) Canvi D - Joan Puigcerver (branca1)
-* 57e4510 - (0 seconds ago) Canvi C - Joan Puigcerver
-* b257248 - (0 seconds ago) Canvi B - Joan Puigcerver (main)
-| * e41eeb7 - (0 seconds ago) Canvi E - Joan Puigcerver (HEAD -> branca2)
+jpuigcerver@fp:~/git_cherrypick (begudes) $ git checkout menjar
+Switched to branch 'menjar'
+jpuigcerver@fp:~/git_cherrypick (menjar) $ git lga
+* e8a9028 - (0 seconds ago) Menjar: taronges - Joan Puigcerver (begudes)
+* 426ff20 - (1 second ago) Begudes: refresc - Joan Puigcerver
+* 6c46784 - (1 second ago) Begudes: aigua - Joan Puigcerver
+| * daefdc1 - (0 seconds ago) Menjar: pa - Joan Puigcerver (HEAD -> menjar)
 |/  
-* b619158 - (0 seconds ago) Canvi A - Joan Puigcerver
-* 2573bfa - (0 seconds ago) Commit inicial - Joan Puigcerver
-jpuigcerver@fp:~/git_cherrypick (branca2) $ git cherry-pick b257248
-Auto-merging README.md
-CONFLICT (content): Merge conflict in README.md
-error: could not apply b257248... Canvi B
+* d5ab1f2 - (1 second ago) Commit inicial - Joan Puigcerver (main)
+jpuigcerver@fp:~/git_cherrypick (menjar) $ git cherry-pick e8a9028
+Auto-merging menjar.txt
+CONFLICT (add/add): Merge conflict in menjar.txt
+error: could not apply e8a9028... Menjar: taronges
 hint: After resolving the conflicts, mark them with
 hint: "git add/rm <pathspec>", then run
 hint: "git cherry-pick --continue".
@@ -19,28 +18,31 @@ hint: You can instead skip this commit with "git cherry-pick --skip".
 hint: To abort and get back to the state before "git cherry-pick",
 hint: run "git cherry-pick --abort".
 hint: Disable this message with "git config advice.mergeConflict false"
-jpuigcerver@fp:~/git_cherrypick (branca2|CHERRY-PICKING) $ vim README.md # (1)!
-jpuigcerver@fp:~/git_cherrypick (branca2|CHERRY-PICKING) $ git diff
-diff --cc README.md
-index cc7a435,96d14f1..0000000
---- a/README.md
-+++ b/README.md
-@@@ -1,3 -1,3 +1,4 @@@
-  # Git cherrypick
-  - Canvi A
-+ - Canvi B
- +- Canvi E
-jpuigcerver@fp:~/git_cherrypick (branca2|CHERRY-PICKING) $ git add README.md
-jpuigcerver@fp:~/git_cherrypick (branca2|CHERRY-PICKING) $ git revert --continue --no-edit
-[branca2 0852f07] Canvi B
- Date: Mon Jan 20 18:57:59 2025 +0100
+jpuigcerver@fp:~/git_cherrypick (menjar|CHERRY-PICKING) $ cat menjar.txt
+<<<<<<< HEAD
+Pa
+=======
+Taronges
+>>>>>>> e8a9028 (Menjar: taronges)
+jpuigcerver@fp:~/git_cherrypick (menjar|CHERRY-PICKING) $ vim menjar.txt # (1)!
+jpuigcerver@fp:~/git_cherrypick (menjar|CHERRY-PICKING) $ git diff
+diff --cc menjar.txt
+index 6b24a67,694e2da..0000000
+--- a/menjar.txt
++++ b/menjar.txt
+@@@ -1,1 -1,1 +1,2 @@@
+ +Pa
++ Taronges
+jpuigcerver@fp:~/git_cherrypick (menjar|CHERRY-PICKING) $ git add menjar.txt
+jpuigcerver@fp:~/git_cherrypick (menjar|CHERRY-PICKING) $ git cherry-pick --continue --no-edit
+[menjar 1b6fd8f] Menjar: taronges
+ Date: Tue Jan 21 12:11:19 2025 +0100
  1 file changed, 1 insertion(+)
-jpuigcerver@fp:~/git_cherrypick (branca2) $ git lga
-* 63bc96c - (0 seconds ago) Canvi D - Joan Puigcerver (branca1)
-* 57e4510 - (0 seconds ago) Canvi C - Joan Puigcerver
-* b257248 - (0 seconds ago) Canvi B - Joan Puigcerver (main)
-| * 0852f07 - (0 seconds ago) Canvi B - Joan Puigcerver (HEAD -> branca2)
-| * e41eeb7 - (0 seconds ago) Canvi E - Joan Puigcerver
+jpuigcerver@fp:~/git_cherrypick (menjar) $ git lga
+* e8a9028 - (0 seconds ago) Menjar: taronges - Joan Puigcerver (begudes)
+* 426ff20 - (1 second ago) Begudes: refresc - Joan Puigcerver
+* 6c46784 - (1 second ago) Begudes: aigua - Joan Puigcerver
+| * 1b6fd8f - (0 seconds ago) Menjar: taronges - Joan Puigcerver (HEAD -> menjar)
+| * daefdc1 - (0 seconds ago) Menjar: pa - Joan Puigcerver
 |/  
-* b619158 - (0 seconds ago) Canvi A - Joan Puigcerver
-* 2573bfa - (0 seconds ago) Commit inicial - Joan Puigcerver
+* d5ab1f2 - (1 second ago) Commit inicial - Joan Puigcerver (main)
