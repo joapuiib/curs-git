@@ -19,7 +19,7 @@ i els canvis del commit anterior. A més, el nou _commit_ substitueix l'anterior
 
 !!! warning
     Cal tindre en compte que el _commit_ original serà substituït pel nou _commit_,
-    però si aquest ja ha estat publicat al repositori remot o té alres referències,
+    però si aquest ja ha estat publicat al repositori remot o té altres referències,
     aquestes referències no seran modificades i es podrien produir problemes
     en el repositori.
 
