@@ -5,7 +5,7 @@ mar@fp:~/git_estrategies/mar (feature/author) $ git merge --no-ff --no-edit deve
 Auto-merging README.md
 CONFLICT (content): Merge conflict in README.md
 Automatic merge failed; fix conflicts and then commit the result.
-mar@fp:~/git_estrategies/mar (feature/author|MERGING) $ vim README.md # (2)!
+mar@fp:~/git_estrategies/mar (feature/author|MERGING) $ code README.md # (2)!
 mar@fp:~/git_estrategies/mar (feature/author|MERGING) $ git add README.md
 mar@fp:~/git_estrategies/mar (feature/author|MERGING) $ git commit --no-edit # (1)!
 [feature/author 72afb5a] Merge branch 'develop' into feature/author
