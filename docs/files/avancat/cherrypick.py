@@ -99,7 +99,7 @@ def cherry_pick_conflictes():
     x.x(f"git cherry-pick {hash_taronges}")
     x.x(f"cat menjar.txt")
     x.remove_conflictes("menjar.txt")
-    x.log_prompt('vim menjar.txt # (1)!')
+    x.log_prompt('code menjar.txt # (1)!')
     x.x('git diff')
     x.x('git add menjar.txt')
     x.x('git cherry-pick --continue --no-edit')

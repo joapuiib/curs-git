@@ -17,6 +17,18 @@ nous canvis els fitxers del repositori, inclòs els que han segut modificats en 
 El funcionament d'aquesta ordre consisteix en crear un nou _commit_ amb els canvis de l'__Àrea de Preparació__
 i els canvis del commit anterior. A més, el nou _commit_ substitueix l'anterior.
 
+!!! warning
+    Cal tindre en compte que el _commit_ original serà substituït pel nou _commit_,
+    però si aquest ja ha estat publicat al repositori remot o té alres referències,
+    aquestes referències no seran modificades i es podrien produir problemes
+    en el repositori.
+
+![Funcionament de git commit --amend](img/amend/amend.png)
+/// figure-caption
+Funcionament de `git commit --amend`.
+///
+
+
 La sintaxi és:
 ```bash
 git commit --amend [-m <missatge>]
@@ -28,20 +40,31 @@ git commit --amend [-m <missatge>]
     Inicialitzem un repositori amb un fitxer `README.md` i realitzem el primer commit.
 
     ```bash
-    --8<-- "docs/files/avancat/stdout/amend/setup.txt"
-    ```
-
-    ```shellconsole
     --8<-- "docs/files/avancat/stdout/amend/setup.sh"
     ```
 
-??? example "Exemple: Amend"
-    Hem modificat l'últim _commit_ __Canvi B__,
-    on hem afegit canvis a `README.md` i modificat el missatge del commit.
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/amend/setup.txt"
+    ```
+
+??? example "Exemple: Canviar el nom de l'últim commit"
+    Vegem que el missatge de l'últim _commit_ __Canvi C__ no és correcte
+    i volem canviar-lo a __Canvi B__.
 
     ```shellconsole
-    --8<-- "docs/files/avancat/stdout/amend/amend.txt"
+    --8<-- "docs/files/avancat/stdout/amend/amend_canvi_nom.txt"
     ```
+
+??? example "Exemple: Modificar els canvis de l'últim commit"
+    A més, vegem que el text del fitxer `README.md` no és correcte
+    i volem canviar el text "canvi" a majúscules.
+
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/amend/amend_canvi_contingut.txt"
+    ```
+
+    1. Editem el fitxer `README.md` manualment a través de l'editor de text.
+    2. L'opció `--no-edit` permet deixar el missatge del commit original.
 
 ## Bibliografia
 - https://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard
