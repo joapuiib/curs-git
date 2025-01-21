@@ -673,7 +673,7 @@ La configuració `--global` s'emmagatzema en el fitxer `.gitconfig`, situat del 
 ??? example "Exemple: Configuració"
     ```cfg title=".gitconfig"
     [core]
-        editor = vim # Editor per defecte
+        editor = code --wait # Editor per defecte
 
     [init]
         defaultBranch = main # Nom de la branca principal per defecte
