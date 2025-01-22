@@ -1,9 +1,9 @@
-jpuigcerver@fp:~/git_reset (main) $ git add README.md
-jpuigcerver@fp:~/git_reset (main) $ git commit -m "Canvi C"
-[main 0c65882] Canvi C
+jpuigcerver@fp:~/git_reset $ git add README.md
+jpuigcerver@fp:~/git_reset $ git commit -m "Canvi C"
+[main 99d1cc1] Canvi C
  1 file changed, 1 insertion(+)
-jpuigcerver@fp:~/git_reset (main) $ git lga
-* 0c65882 - (0 seconds ago) Canvi C - Joan Puigcerver (HEAD -> main)
-* 04fafb7 - (0 seconds ago) Canvi B - Joan Puigcerver
-* 4dc7c85 - (0 seconds ago) Canvi A - Joan Puigcerver
-* 16786db - (0 seconds ago) Commit inicial - Joan Puigcerver
+jpuigcerver@fp:~/git_reset $ git lga
+* 99d1cc1 - (0 seconds ago) Canvi C - Joan Puigcerver (HEAD -> main)
+* 8999e85 - (0 seconds ago) Canvi B - Joan Puigcerver
+* ff64d47 - (0 seconds ago) Canvi A - Joan Puigcerver
+* 5f92181 - (0 seconds ago) Commit inicial - Joan Puigcerver
