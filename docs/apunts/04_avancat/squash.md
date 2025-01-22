@@ -34,7 +34,7 @@ Funcionament de `git merge --squash`.
 
 ??? prep "Preparació repositori"
     /// collapse-code
-    ```bash title="setup_squash.sh"
+    ```bash title="setup.sh"
     --8<-- "docs/files/avancat/stdout/squash/setup_squash.sh"
     ```
     ///

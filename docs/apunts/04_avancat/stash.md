@@ -23,12 +23,43 @@ posteriorment quan siga necessari.
 
 ??? prep "Preparació repositori"
     Inicialitzem un repositori amb canvis en el fitxer `README.md`
-    i una branca addicional `feature/documentacio` on s'han fet canvis al mateix fitxer.
+    i una branca addicional `altres_canvis` on s'han fet canvis al mateix fitxer.
+
+    /// collapse-code
+    ```bash title="setup.sh"
+    --8<-- "docs/files/avancat/stdout/stash/setup.sh"
+    ```
+    ///
 
     ```shellconsole
-    --8<-- "docs/files/avancat/stdout/stash/inicial.txt"
+    --8<-- "docs/files/avancat/stdout/stash/setup.txt"
     ```
 
+??? question "Per què és útil `git stash`?"
+    Imaginem que estem treballant en la branca principal `main` i hem
+    realitzat canvis al fitxer `README.md`.
+
+    Aquests canvis resideixen en el __Directori de Treball__ i encara
+    no han estat confirmats (_commit_).
+
+    En aquest moment, podem decidir canviar a una altra branca.
+    En el cas que aquesta operació modifique la mateixa part
+    dels fitxers on hem realitzat canvis, Git ens impedirà
+    per no perdre aquests canvis.
+
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/stash/perque_es_util.txt"
+    ```
+
+    Si llegim el missatge d'error, Git ens recomana alguna de les següents
+    opcions.
+
+    La primera opció és __confirmar (_commit_) els canvis__ realitzats.
+    Això ens permetria canviar de branca sense problemes, no obstant això,
+    pot ser que no vulguem confirmar els canvis en aquest moment.
+
+    La segona opció és __guardar els canvis__ de manera temporal
+    mitjançant la comanda `git stash`.
 
 ### Crear una reserva de canvis
 La comanda `git stash` permet guardar els canvis que s'han realitzat al directori de treball.
@@ -37,26 +68,54 @@ La comanda `git stash` permet guardar els canvis que s'han realitzat al director
 git stash [-m <missatge>]
 ```
 
-Aquesta comanda inclourà els canvis a una pila de canvis:
+!!! tip
+    Amb l'opció `-m` podem afegir un missatge al `stash` per
+    identificar millor els canvis guardats.
 
-- Els nous canvis es guardaran a la primera posició del `stash` com a `stash@{0}`.
-- La resta de canvis es desplaçaran una posició a la dreta, incrementant l'índex en 1.
 
-A més, es pot afegir un missatge al `stash` per identificar millor els canvis guardats.
+Els canvis s'emmagatzemen de manera temporal a una __pila__:
 
-![Reservar de canvis amb stash](img/stash/stash.png)
-/// figure-caption
-Reservar canvis amb `stash`
-///
+- Els nous canvis es guardaran a la primera posició de la pila amb l'índex 0: `stash@{0}`.
+
+    D'aquesta manera, els canvis més actuals es troben a la part superior
+    de la pila i són més fàcils d'accedir (la majoria de comandes `stash`
+    treballen per defecte amb el `stash@{0}`).
+
+    ![Reserva de canvis una única entrada](img/stash/single_stash.png)
+    /// figure-caption
+    Reserva canvis amb una única entrada
+    ///
+
+- L'índex dels canvis presents anteriorment a la pila incrementarà en 1.
+
+    ![Reservar de canvis amb entrades existents anteriorment](img/stash/stash.png)
+    /// figure-caption
+    Reservar canvis amb entrades existents anteriorment
+    ///
+
 
 ??? example "Exemple: Crear una reserva de canvis"
-    En aquest exemple, es guardaran els canvis realitzats al fitxer `README.md` al `stash`.
+    Després de guardar els canvis amb `git stash`, podem observar que:
 
-    Com que canviar a la branca `feature/documentacio` sobreescriuria el contingut de `README.md`,
-    Git no ens ho permet i ens recomana reservar els canvis o confirmar-los.
+    - Els canvis ja no es troben al __Directori de Treball__.
+    - Podem canviar de branca sense problemes.
 
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/stash/stash.txt"
+    ```
+
+
+??? example "Exemple: Crear vàries reserves de canvis"
+    Vegem com l'índex dels canvis incrementa en cada nova reserva.
+
+    - __Canvi B__:
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/stash/canvi_b.txt"
+    ```
+
+    - __Canvi C__:
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/stash/canvi_c.txt"
     ```
 
 ### Mostrar les reserves de canvis
@@ -110,6 +169,11 @@ s'aplicarà per defecte el `stash@{0}`.
 Recuperar canvis amb `stash apply`
 ///
 
+??? example "Exemple: Recuperar els canvis amb `apply`"
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/stash/apply.txt"
+    ```
+
 Si a més, volem esborrar la reserva de canvis, podem utilitzar l'opció `pop`.
 ```bash
 git stash pop [index]
@@ -120,10 +184,13 @@ git stash pop [index]
 Recuperar canvis i esborrar la reserva amb `stash pop`
 ///
 
-??? example "Exemple: Recuperar els canvis"
+??? example "Exemple: Recuperar els canvis amb `pop`"
     ```shellconsole
-    --8<-- "docs/files/avancat/stdout/stash/apply.txt"
+    --8<-- "docs/files/avancat/stdout/stash/pop.txt"
     ```
+
+    1. Descartem els canvis del __Directori de Treball__ que
+        teníem de l'exemple anterior.
 
 ### Descartar els canvis
 Una reserva de canvis pot ser eliminada de la pila de canvis mitjançant

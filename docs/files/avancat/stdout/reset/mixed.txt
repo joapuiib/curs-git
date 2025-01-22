@@ -1,7 +1,7 @@
-jpuigcerver@fp:~/git_reset (main) $ git reset --mixed 04fafb7
+jpuigcerver@fp:~/git_reset $ git reset --mixed 8999e85
 Unstaged changes after reset:
 M	README.md
-jpuigcerver@fp:~/git_reset (main) $ git status
+jpuigcerver@fp:~/git_reset $ git status
 On branch main
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
@@ -9,7 +9,17 @@ Changes not staged for commit:
 	modified:   README.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
-jpuigcerver@fp:~/git_reset (main) $ git lga
-* 04fafb7 - (0 seconds ago) Canvi B - Joan Puigcerver (HEAD -> main)
-* 4dc7c85 - (0 seconds ago) Canvi A - Joan Puigcerver
-* 16786db - (0 seconds ago) Commit inicial - Joan Puigcerver
+jpuigcerver@fp:~/git_reset $ git diff
+diff --git a/README.md b/README.md
+index dc7fc7d..d05d0d2 100644
+--- a/README.md
++++ b/README.md
+@@ -1,3 +1,4 @@
+ # Git reset i commit --amend
+ - Canvi A
+ - Canvi B
++- Canvi C
+jpuigcerver@fp:~/git_reset $ git lga
+* 8999e85 - (0 seconds ago) Canvi B - Joan Puigcerver (HEAD -> main)
+* ff64d47 - (0 seconds ago) Canvi A - Joan Puigcerver
+* 5f92181 - (0 seconds ago) Commit inicial - Joan Puigcerver

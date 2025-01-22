@@ -16,8 +16,16 @@ def remove_repositori_if_exists():
 
 def init_repositori():
     x.log_file('stdout/etiquetes/inicial.txt')
+    x.log_bash_file('stdout/etiquetes/setup.sh')
     x.set_user('jpuigcerver')
     x.run('mkdir -p stdout/etiquetes')
+
+    # remove directory if exists bash script
+    x.log_bash('# Elimina els repositori si existeix')
+    x.log_bash('if [ -d ~/git_etiquetes ]; then')
+    x.log_bash('    rm -rf ~/git_etiquetes')
+    x.log_bash('fi')
+    x.log_bash('')
 
     print('==================== INICIAL ========================')
     x.run('cd')
@@ -37,6 +45,8 @@ def init_repositori():
     x.x('echo "Existeixen dos tipus de etiquetes: anotades i lleugeres" >> README.md')
     x.x('git commit -a -m "README: Descripció tipus de etiquetes"')
     x.x('git lga')
+
+    x.log_bash_file(None)
 
 def crear_etiqueta_anotada():
     x.log_file('stdout/etiquetes/etiqueta_anotada.txt')
