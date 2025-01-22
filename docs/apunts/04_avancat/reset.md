@@ -38,7 +38,7 @@ Funcionament de `git reset`
 ///
 
 Al moure la referència d'una branca, podem deixar enrere _commits_ amb els seus canvis corresponents.
-El com es gesionen aquests canvis dependrà del mode amb el qual executem l'ordre `git reset`:
+El com es gestionen aquests canvis dependrà del mode amb el qual executem l'ordre `git reset`:
 
 - __`--soft`__: Els canvis es conservaran a l'Àrea de Preparació.
 - __`--mixed`__: Comportament per defecte. Els canvis es conservaran al Directori de Treball.
@@ -49,7 +49,7 @@ El com es gesionen aquests canvis dependrà del mode amb el qual executem l'ordr
 Resum de l'eina `git reset`.
 ///
 
-A més, aquesta ordre pot provocar que alguns __commits__ perden totes les refèrencies i,
+A més, aquesta ordre pot provocar que alguns __commits__ perden totes les referències i,
 per tant, seran esborrats pel __recol·lector de brossa de Git__.
 
 !!! example
