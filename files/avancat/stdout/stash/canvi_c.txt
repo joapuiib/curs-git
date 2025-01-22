@@ -1,0 +1,10 @@
+jpuigcerver@fp:~/git_stash (main) $ echo "Canvi C" >> README.md
+jpuigcerver@fp:~/git_stash (main) $ git stash -m "Canvi C"
+Saved working directory and index state On main: Canvi C
+jpuigcerver@fp:~/git_stash (main) $ git status
+On branch main
+nothing to commit, working tree clean
+jpuigcerver@fp:~/git_stash (main) $ git stash list
+stash@{0}: On main: Canvi C
+stash@{1}: On main: Canvi B
+stash@{2}: On main: Canvi A

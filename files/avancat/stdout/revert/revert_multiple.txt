@@ -1,0 +1,82 @@
+jpuigcerver@fp:~/git_revert (main) $ git lga
+* 54e6def - (0 seconds ago) Revert "Canvi E" - Joan Puigcerver (HEAD -> main)
+* 1e5c1df - (0 seconds ago) Canvi E - Joan Puigcerver
+* 9f735e9 - (0 seconds ago) Canvi D - Joan Puigcerver
+* 3102fd3 - (0 seconds ago) Canvi C - Joan Puigcerver
+* e4b3412 - (0 seconds ago) Canvi B - Joan Puigcerver
+* aef9ebe - (0 seconds ago) Canvi A - Joan Puigcerver
+* 2c18085 - (0 seconds ago) Commit inicial - Joan Puigcerver
+jpuigcerver@fp:~/git_revert (main) $ git revert 9f735e9 --no-commit
+jpuigcerver@fp:~/git_revert (main|REVERTING) $ git status
+On branch main
+You are currently reverting commit 9f735e9.
+  (all conflicts fixed: run "git revert --continue")
+  (use "git revert --skip" to skip this patch)
+  (use "git revert --abort" to cancel the revert operation)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   README.md
+
+jpuigcerver@fp:~/git_revert (main|REVERTING) $ git diff --staged
+diff --git a/README.md b/README.md
+index 2a58c68..aa091c8 100644
+--- a/README.md
++++ b/README.md
+@@ -2,4 +2,3 @@
+ - Canvi A
+ - Canvi B
+ - Canvi C
+-- Canvi D
+jpuigcerver@fp:~/git_revert (main|REVERTING) $ git revert 3102fd3 --no-commit
+jpuigcerver@fp:~/git_revert (main|REVERTING) $ git status
+On branch main
+You are currently reverting commit 3102fd3.
+  (all conflicts fixed: run "git revert --continue")
+  (use "git revert --skip" to skip this patch)
+  (use "git revert --abort" to cancel the revert operation)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   README.md
+
+jpuigcerver@fp:~/git_revert (main|REVERTING) $ git diff --staged
+diff --git a/README.md b/README.md
+index 2a58c68..395c8c6 100644
+--- a/README.md
++++ b/README.md
+@@ -1,5 +1,3 @@
+ # Git revert
+ - Canvi A
+ - Canvi B
+-- Canvi C
+-- Canvi D
+jpuigcerver@fp:~/git_revert (main|REVERTING) $ git commit -m "Revert \"Canvi C i D\"" # (1)!
+[main 5ab52e3] Revert "Canvi C i D"
+ 1 file changed, 2 deletions(-)
+jpuigcerver@fp:~/git_revert (main) $ git lga
+* 5ab52e3 - (0 seconds ago) Revert "Canvi C i D" - Joan Puigcerver (HEAD -> main)
+* 54e6def - (0 seconds ago) Revert "Canvi E" - Joan Puigcerver
+* 1e5c1df - (0 seconds ago) Canvi E - Joan Puigcerver
+* 9f735e9 - (0 seconds ago) Canvi D - Joan Puigcerver
+* 3102fd3 - (0 seconds ago) Canvi C - Joan Puigcerver
+* e4b3412 - (0 seconds ago) Canvi B - Joan Puigcerver
+* aef9ebe - (0 seconds ago) Canvi A - Joan Puigcerver
+* 2c18085 - (0 seconds ago) Commit inicial - Joan Puigcerver
+jpuigcerver@fp:~/git_revert (main) $ git show
+commit 5ab52e3a58485be85012a623d474942bf56b0e4f
+Author: Joan Puigcerver <j.puigcerveribanez@edu.gva.es>
+Date:   Tue Jan 21 12:40:44 2025 +0100
+
+    Revert "Canvi C i D"
+
+diff --git a/README.md b/README.md
+index 2a58c68..395c8c6 100644
+--- a/README.md
++++ b/README.md
+@@ -1,5 +1,3 @@
+ # Git revert
+ - Canvi A
+ - Canvi B
+-- Canvi C
+-- Canvi D

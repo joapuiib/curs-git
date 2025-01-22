@@ -268,7 +268,7 @@ def squash():
     x.x('git checkout feature/author')
     x.x('git merge --no-ff --no-edit develop # (1)!')
     x.run('sed -i \'/^<<<<<<<.*$/d; /^=======/d; /^>>>>>>>.*$/d\' README.md')
-    x.log_prompt('vim README.md # (2)!')
+    x.log_prompt('code README.md # (2)!')
     x.x('git add README.md')
     x.x('git commit --no-edit # (1)!', env={'GIT_EDITOR': 'true'})
     x.x('git lga')
@@ -430,7 +430,7 @@ def merge_no_ff():
     x.x('git checkout develop')
     x.x('git merge --no-ff --no-edit feature/author')
     x.run('sed -i \'/^<<<<<<<.*$/d; /^=======/d; /^>>>>>>>.*$/d\' README.md')
-    x.log_prompt('vim README.md # (2)!')
+    x.log_prompt('code README.md # (2)!')
     x.x('git add README.md')
     x.x('git commit --no-edit # (1)!')
     x.x('git lga')
@@ -573,7 +573,7 @@ def rebase():
     x.x('git checkout feature/author')
     x.x('git rebase develop') ## Conflictes
     x.run('sed -i \'/^<<<<<<<.*$/d; /^=======/d; /^>>>>>>>.*$/d\' README.md')
-    x.log_prompt('vim README.md # (2)!')
+    x.log_prompt('code README.md # (2)!')
     x.x('git add README.md')
     x.x('git rebase --continue', env={'GIT_EDITOR': 'true'})
 
@@ -586,7 +586,7 @@ def rebase():
     x.x('git checkout develop')
     x.x('git merge --no-ff --no-edit feature/author')
     x.run('sed -i \'/^<<<<<<<.*$/d; /^=======/d; /^>>>>>>>.*$/d\' README.md')
-    x.log_prompt('vim README.md # (2)!')
+    x.log_prompt('code README.md # (2)!')
     x.x('git add README.md')
     x.x('git commit --no-edit # (1)!', env={'GIT_EDITOR': 'true'})
     x.x('git lga')
@@ -729,7 +729,7 @@ def rebase_merge_no_ff():
     x.x('git checkout feature/author')
     x.x('git rebase develop') ## Conflictes
     x.run('sed -i \'/^<<<<<<<.*$/d; /^=======/d; /^>>>>>>>.*$/d\' README.md')
-    x.log_prompt('vim README.md # (2)!')
+    x.log_prompt('code README.md # (2)!')
     x.x('git add README.md')
     x.x('git rebase --continue', env={'GIT_EDITOR': 'true'})
 
@@ -742,7 +742,7 @@ def rebase_merge_no_ff():
     x.x('git checkout develop')
     x.x('git merge --no-ff --no-edit feature/author')
     x.run('sed -i \'/^<<<<<<<.*$/d; /^=======/d; /^>>>>>>>.*$/d\' README.md')
-    x.log_prompt('vim README.md # (2)!')
+    x.log_prompt('code README.md # (2)!')
     x.x('git add README.md')
     x.x('git commit --no-edit # (1)!', env={'GIT_EDITOR': 'true'})
     x.x('git lga')

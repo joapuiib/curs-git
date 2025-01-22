@@ -1,0 +1,14 @@
+jpuigcerver@fp:~/git_stash (main) $ echo "Canvi A" >> README.md
+jpuigcerver@fp:~/git_stash (main) $ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+jpuigcerver@fp:~/git_stash (main) $ git checkout altres_canvis
+error: Your local changes to the following files would be overwritten by checkout:
+	README.md
+Please commit your changes or stash them before you switch branches.
+Aborting

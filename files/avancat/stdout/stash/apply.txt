@@ -9,15 +9,23 @@ Changes not staged for commit:
 	modified:   README.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
+jpuigcerver@fp:~/git_stash (main) $ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
 jpuigcerver@fp:~/git_stash (main) $ git diff
 diff --git a/README.md b/README.md
-index dd979cc..a0acb65 100644
+index d6704e3..208685c 100644
 --- a/README.md
 +++ b/README.md
-@@ -1,2 +1,4 @@
+@@ -1 +1,2 @@
  # Reserva de canvis
- Repositori d'exemple amb reserva de canvis
-+
-+L'ordre git stash permet reservar els canvis temporalment per a poder fer altres tasques.
++Canvi C
 jpuigcerver@fp:~/git_stash (main) $ git stash list
-stash@{0}: On main: Text git stash
+stash@{0}: On main: Canvi C
+stash@{1}: On main: Canvi B
+stash@{2}: On main: Canvi A

@@ -1,5 +1,7 @@
 jpuigcerver@fp:~/git_stash (main) $ git stash list
-stash@{0}: On main: Text git stash
+stash@{0}: On main: Canvi B
+stash@{1}: On main: Canvi A
 jpuigcerver@fp:~/git_stash (main) $ git stash drop
-Dropped refs/stash@{0} (6454e0cf44cfd7835b14d1baec30e4cdf71a8640)
+Dropped refs/stash@{0} (a1be7febfb9e812173942ae63be37375e8d27d13)
 jpuigcerver@fp:~/git_stash (main) $ git stash list
+stash@{0}: On main: Canvi A

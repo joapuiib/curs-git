@@ -1,0 +1,22 @@
+.mdx-badge {
+	 font-size: 0.85em;
+}
+ .mdx-badge--right {
+	 float: right;
+	 margin-left: 0.35em;
+}
+ .mdx-badge__icon {
+	 padding: .2rem;
+	 background: var(--md-accent-fg-color--transparent);
+     border-bottom-left-radius: .1rem;
+     border-top-left-radius: .1rem;
+}
+ .mdx-badge__icon:last-child {
+	 border-radius: px2rem(2px);
+}
+ .mdx-badge__text {
+	 padding: .2rem .3rem;
+	 border-bottom-right-radius: .1rem;
+     border-top-right-radius: .1rem;
+	 box-shadow: 0 0 0 1px inset var(--md-accent-fg-color--transparent);
+}

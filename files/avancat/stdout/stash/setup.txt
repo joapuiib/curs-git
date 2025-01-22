@@ -1,0 +1,22 @@
+jpuigcerver@fp:~ $ mkdir -p ~/git_stash
+jpuigcerver@fp:~ $ cd ~/git_stash
+jpuigcerver@fp:~/git_stash $ git init
+Initialized empty Git repository in ~/git_stash/.git/
+jpuigcerver@fp:~/git_stash (main) $ git branch -m main
+jpuigcerver@fp:~/git_stash (main) $ echo "# Reserva de canvis" > README.md
+jpuigcerver@fp:~/git_stash (main) $ git add README.md
+jpuigcerver@fp:~/git_stash (main) $ git commit -m "Commit inicial"
+[main (root-commit) 5cc4104] Commit inicial
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+jpuigcerver@fp:~/git_stash (main) $ git checkout -b altres_canvis
+Switched to a new branch 'altres_canvis'
+jpuigcerver@fp:~/git_stash (altres_canvis) $ echo "Altres canvis" >> README.md
+jpuigcerver@fp:~/git_stash (altres_canvis) $ git commit -a -m "Altres canvis"
+[altres_canvis 602f4b0] Altres canvis
+ 1 file changed, 1 insertion(+)
+jpuigcerver@fp:~/git_stash (altres_canvis) $ git checkout main
+Switched to branch 'main'
+jpuigcerver@fp:~/git_stash (main) $ git lga
+* 602f4b0 - (0 seconds ago) Altres canvis - Joan Puigcerver (altres_canvis)
+* 5cc4104 - (0 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main)

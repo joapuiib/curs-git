@@ -1,0 +1,39 @@
+jpuigcerver@fp:~/git_amend (main) $ cat README.md
+# Git amend
+- Canvi A
+- canvi B
+jpuigcerver@fp:~/git_amend (main) $ code README.md # (1)!
+jpuigcerver@fp:~/git_amend (main) $ git diff
+diff --git a/README.md b/README.md
+index 99116bf..47cf8c5 100644
+--- a/README.md
++++ b/README.md
+@@ -1,3 +1,3 @@
+ # Git amend
+ - Canvi A
+-- canvi B
++- Canvi B
+jpuigcerver@fp:~/git_amend (main) $ git add README.md
+jpuigcerver@fp:~/git_amend (main) $ git commit --amend --no-edit # (2)!
+[main 290f771] Canvi B
+ Date: Tue Jan 21 12:38:11 2025 +0100
+ 1 file changed, 1 insertion(+)
+jpuigcerver@fp:~/git_amend (main) $ git lga
+* 290f771 - (0 seconds ago) Canvi B - Joan Puigcerver (HEAD -> main)
+* 4f61eca - (0 seconds ago) Canvi A - Joan Puigcerver
+* c73703f - (0 seconds ago) Commit inicial - Joan Puigcerver
+jpuigcerver@fp:~/git_amend (main) $ git show
+commit 290f771141eff61f5363beb24589da58550b466a
+Author: Joan Puigcerver <j.puigcerveribanez@edu.gva.es>
+Date:   Tue Jan 21 12:38:11 2025 +0100
+
+    Canvi B
+
+diff --git a/README.md b/README.md
+index 927b2f6..47cf8c5 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,3 @@
+ # Git amend
+ - Canvi A
++- Canvi B

@@ -1,5 +1,5 @@
-jpuigcerver@fp:~/git_reset (main) $ echo "- Canvi C" >> README.md
-jpuigcerver@fp:~/git_reset (main) $ git status
+jpuigcerver@fp:~/git_reset $ echo "- Canvi C" >> README.md
+jpuigcerver@fp:~/git_reset $ git status
 On branch main
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
@@ -7,10 +7,10 @@ Changes not staged for commit:
 	modified:   README.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
-jpuigcerver@fp:~/git_reset (main) $ git reset --keep 4dc7c85
+jpuigcerver@fp:~/git_reset $ git reset --keep ff64d47
 error: Entry 'README.md' not uptodate. Cannot merge.
-fatal: Could not reset index file to revision '4dc7c85'.
-jpuigcerver@fp:~/git_reset (main) $ git lga
-* 04fafb7 - (0 seconds ago) Canvi B - Joan Puigcerver (HEAD -> main)
-* 4dc7c85 - (0 seconds ago) Canvi A - Joan Puigcerver
-* 16786db - (0 seconds ago) Commit inicial - Joan Puigcerver
+fatal: Could not reset index file to revision 'ff64d47'.
+jpuigcerver@fp:~/git_reset $ git lga
+* 8999e85 - (0 seconds ago) Canvi B - Joan Puigcerver (HEAD -> main)
+* ff64d47 - (0 seconds ago) Canvi A - Joan Puigcerver
+* 5f92181 - (0 seconds ago) Commit inicial - Joan Puigcerver

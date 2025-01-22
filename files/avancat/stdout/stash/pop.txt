@@ -1,0 +1,32 @@
+jpuigcerver@fp:~/git_stash (main) $ git restore README.md # (1)!
+jpuigcerver@fp:~/git_stash (main) $ git status
+On branch main
+nothing to commit, working tree clean
+jpuigcerver@fp:~/git_stash (main) $ git stash pop
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (5421da4ebcbd229b003f105eeefea1b6cfa13f3e)
+jpuigcerver@fp:~/git_stash (main) $ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+jpuigcerver@fp:~/git_stash (main) $ git diff
+diff --git a/README.md b/README.md
+index d6704e3..208685c 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1,2 @@
+ # Reserva de canvis
++Canvi C
+jpuigcerver@fp:~/git_stash (main) $ git stash list
+stash@{0}: On main: Canvi B
+stash@{1}: On main: Canvi A

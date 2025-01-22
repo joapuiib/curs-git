@@ -1,0 +1,11 @@
+jpuigcerver@fp:~/git_cherrypick (menjar) $ git checkout begudes
+Switched to branch 'begudes'
+jpuigcerver@fp:~/git_cherrypick (begudes) $ git reset --hard 054e4e0
+HEAD is now at 054e4e0 Begudes: refresc
+jpuigcerver@fp:~/git_cherrypick (begudes) $ git lga
+* 054e4e0 - (0 seconds ago) Begudes: refresc - Joan Puigcerver (HEAD -> begudes)
+* 5b87d79 - (0 seconds ago) Begudes: aigua - Joan Puigcerver
+| * 63d71c6 - (0 seconds ago) Menjar: taronges - Joan Puigcerver (menjar)
+| * 604897c - (0 seconds ago) Menjar: pa - Joan Puigcerver
+|/  
+* f21f6f7 - (0 seconds ago) Commit inicial - Joan Puigcerver (main)
