@@ -25,9 +25,11 @@ posteriorment quan siga necessari.
     Inicialitzem un repositori amb canvis en el fitxer `README.md`
     i una branca addicional `altres_canvis` on s'han fet canvis al mateix fitxer.
 
-    ```bash
+    /// collapse-code
+    ```bash title="setup.sh"
     --8<-- "docs/files/avancat/stdout/stash/setup.sh"
     ```
+    ///
 
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/stash/setup.txt"

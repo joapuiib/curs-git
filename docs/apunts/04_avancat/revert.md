@@ -31,7 +31,7 @@ Funcionament de `git revert`.
 
 ??? prep "Preparació repositori"
     /// collapse-code
-    ```bash title="setup_cherrypick.sh"
+    ```bash title="setup.sh"
     --8<-- "docs/files/avancat/stdout/revert/setup.sh"
     ```
     ///

@@ -39,9 +39,11 @@ git commit --amend [-m <missatge>]
 ??? prep "Preparació del repositori"
     Inicialitzem un repositori amb un fitxer `README.md` i realitzem el primer commit.
 
-    ```bash
+    /// collapse-code
+    ```bash title="setup.sh"
     --8<-- "docs/files/avancat/stdout/amend/setup.sh"
     ```
+    ///
 
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/amend/setup.txt"

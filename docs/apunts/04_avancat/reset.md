@@ -59,7 +59,7 @@ per tant, seran esborrats pel __recol·lector de brossa de Git__.
 ??? prep "Preparació del repositori"
 
     /// collapse-code
-    ```bash title="setup_reset.sh"
+    ```bash title="setup.sh"
     --8<-- "docs/files/avancat/stdout/reset/setup_reset.sh"
     ```
     ///
