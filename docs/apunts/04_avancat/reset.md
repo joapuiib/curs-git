@@ -14,7 +14,7 @@ tags:
 ## Reset
 L'ordre `git reset` ens permet moure la referència de la branca actual a qualsevol
 altre _commit_ del repositori.
-Això significa que podem modificar la història del repositori local local,
+Això significa que podem modificar la història del repositori local,
 per ajustar o refer la història a les nostres necessitats.
 
 Algunes de les accions que podem fer mitjançant aquestes eines són:
@@ -30,6 +30,32 @@ Algunes de les accions que podem fer mitjançant aquestes eines són:
     Especialment, en les branques que ja han segut publicades (`push`),  ja que pot ocasionar
     problemes entre els col·laboradors del repositori.
 
+
+![Funcionament de git reset](img/reset/reset.png)
+/// figure-caption
+    attrs: {id: figure-reset}
+Funcionament de `git reset`
+///
+
+Al moure la referència d'una branca, podem deixar enrere _commits_ amb els seus canvis corresponents.
+El com es gesionen aquests canvis dependrà del mode amb el qual executem l'ordre `git reset`:
+
+- __`--soft`__: Els canvis es conservaran a l'Àrea de Preparació.
+- __`--mixed`__: Comportament per defecte. Els canvis es conservaran al Directori de Treball.
+- __`--hard`__: Els canvis es descartaran.
+
+![Resum de l'eina git reset](img/reset/resum_reset.png)
+/// figure-caption
+Resum de l'eina `git reset`.
+///
+
+A més, aquesta ordre pot provocar que alguns __commits__ perden totes les refèrencies i,
+per tant, seran esborrats pel __recol·lector de brossa de Git__.
+
+!!! example
+    A la [Figura 1](#figure-reset) els _commits_ __Canvi B__ i __Canvi C__
+    seran esborrats perquè han perdut tots les referències.
+
 ??? prep "Preparació del repositori"
 
     /// collapse-code
@@ -42,6 +68,11 @@ Algunes de les accions que podem fer mitjançant aquestes eines són:
     --8<-- "docs/files/avancat/stdout/reset/inicial.txt"
     ```
 
+### Sintaxi general
+
+!!! info
+    Aquesta ordre mou la referència de la branca actual, on està situat el `HEAD`.
+
 La sintaxi de l'ordre `git reset` és:
 ```bash
 git reset [--soft | --mixed | --hard | --keep] <ref>
@@ -51,16 +82,6 @@ git reset [--soft | --mixed | --hard | --keep] <ref>
 
 !!! docs
     Documentació oficial de [`git reset`](https://git-scm.com/docs/git-reset){target=_blank}.
-
-El comportament de git reset depén del mode especificat. Per defecte, el mode és `--mixed`.
-
-![Resum de l'eina git reset](img/reset/resum_reset.png)
-/// figure-caption
-Resum de l'eina `git reset`.
-///
-
-!!! info
-    Aquesta ordre mou la referència de la branca actual, on està situat el `HEAD`.
 
 
 ### Soft

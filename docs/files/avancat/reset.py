@@ -54,6 +54,7 @@ def reset_soft():
     print('==================== SOFT ========================')
     x.x(f"git reset --soft {hash_B}")
     x.x('git status')
+    x.x('git diff --staged')
     x.x('git lga')
 
     x.log_file('stdout/reset/revert_soft.txt')
@@ -67,6 +68,7 @@ def reset_mixed():
     print('==================== MIXED ========================')
     x.x(f"git reset --mixed {hash_B}")
     x.x('git status')
+    x.x('git diff')
     x.x('git lga')
 
     x.log_file('stdout/reset/revert_mixed.txt')
