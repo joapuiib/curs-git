@@ -29,6 +29,9 @@ posteriorment quan siga necessari.
     --8<-- "docs/files/avancat/stdout/stash/inicial.txt"
     ```
 
+??? question "Per què és útil `git stash`?"
+    TODO
+
 
 ### Crear una reserva de canvis
 La comanda `git stash` permet guardar els canvis que s'han realitzat al directori de treball.
@@ -37,17 +40,27 @@ La comanda `git stash` permet guardar els canvis que s'han realitzat al director
 git stash [-m <missatge>]
 ```
 
-Aquesta comanda inclourà els canvis a una pila de canvis:
+!!! tip
+    Amb l'opció `-m` podem afegir un missatge al `stash` per
+    identificar millor els canvis guardats.
 
-- Els nous canvis es guardaran a la primera posició del `stash` com a `stash@{0}`.
-- La resta de canvis es desplaçaran una posició a la dreta, incrementant l'índex en 1.
 
-A més, es pot afegir un missatge al `stash` per identificar millor els canvis guardats.
+Els canvis s'emmagatzemen de manera temporal a una __pila__:
 
-![Reservar de canvis amb stash](img/stash/stash.png)
-/// figure-caption
-Reservar canvis amb `stash`
-///
+- Els nous canvis es guardaran a la primera posició de la pila amb l'índex 0: `stash@{0}`.
+
+    ![Reserva de canvis una única entrada](img/stash/single_stash.png)
+    /// figure-caption
+    Reserva canvis amb una única entrada
+    ///
+
+- L'índex dels canvis presents anteriorment a la pila incrementarà en 1.
+
+    ![Reservar de canvis amb entrades existents anteriorment](img/stash/stash.png)
+    /// figure-caption
+    Reservar canvis amb entrades existents anteriorment
+    ///
+
 
 ??? example "Exemple: Crear una reserva de canvis"
     En aquest exemple, es guardaran els canvis realitzats al fitxer `README.md` al `stash`.
