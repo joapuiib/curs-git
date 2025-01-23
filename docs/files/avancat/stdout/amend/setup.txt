@@ -1,0 +1,23 @@
+jpuigcerver@fp:~ $ mkdir -p ~/git_amend
+jpuigcerver@fp:~ $ cd ~/git_amend
+jpuigcerver@fp:~/git_amend $ git init
+Initialized empty Git repository in ~/git_amend/.git/
+jpuigcerver@fp:~/git_amend (main) $ git branch -m main
+jpuigcerver@fp:~/git_amend (main) $ echo "# Git amend" > README.md
+jpuigcerver@fp:~/git_amend (main) $ git add README.md
+jpuigcerver@fp:~/git_amend (main) $ git commit -m "Commit inicial"
+[main (root-commit) c73703f] Commit inicial
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+jpuigcerver@fp:~/git_amend (main) $ echo "- Canvi A" >> README.md
+jpuigcerver@fp:~/git_amend (main) $ git commit -a -m "Canvi A"
+[main 4f61eca] Canvi A
+ 1 file changed, 1 insertion(+)
+jpuigcerver@fp:~/git_amend (main) $ echo "- canvi B" >> README.md
+jpuigcerver@fp:~/git_amend (main) $ git commit -a -m "Canvi C"
+[main 348d5ee] Canvi C
+ 1 file changed, 1 insertion(+)
+jpuigcerver@fp:~/git_amend (main) $ git lga
+* 348d5ee - (0 seconds ago) Canvi C - Joan Puigcerver (HEAD -> main)
+* 4f61eca - (0 seconds ago) Canvi A - Joan Puigcerver
+* c73703f - (0 seconds ago) Commit inicial - Joan Puigcerver

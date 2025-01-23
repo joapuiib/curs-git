@@ -1,0 +1,10 @@
+nav:
+    - etiquetes.md
+    - stash.md
+    - reset.md
+    - amend.md
+    - revert.md
+    - cherrypick.md
+    - squash.md
+    - exercici.md
+    - ...

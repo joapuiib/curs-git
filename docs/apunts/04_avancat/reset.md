@@ -1,6 +1,6 @@
 ---
 template: document.html
-title: "Reset i Amend"
+title: "Reset"
 icon: material/book-open-variant
 alias: reset
 comments: true
@@ -9,13 +9,12 @@ tags:
     - soft reset
     - mixed reset
     - hard reset
-    - git commit --amend
 ---
 
 ## Reset
 L'ordre `git reset` ens permet moure la referència de la branca actual a qualsevol
 altre _commit_ del repositori.
-Això significa que podem modificar la història del repositori local local,
+Això significa que podem modificar la història del repositori local,
 per ajustar o refer la història a les nostres necessitats.
 
 Algunes de les accions que podem fer mitjançant aquestes eines són:
@@ -31,10 +30,36 @@ Algunes de les accions que podem fer mitjançant aquestes eines són:
     Especialment, en les branques que ja han segut publicades (`push`),  ja que pot ocasionar
     problemes entre els col·laboradors del repositori.
 
-??? prep "Preparació repositori"
+
+![Funcionament de git reset](img/reset/reset.png)
+/// figure-caption
+    attrs: {id: figure-reset}
+Funcionament de `git reset`
+///
+
+Al moure la referència d'una branca, podem deixar enrere _commits_ amb els seus canvis corresponents.
+El com es gestionen aquests canvis dependrà del mode amb el qual executem l'ordre `git reset`:
+
+- __`--soft`__: Els canvis es conservaran a l'Àrea de Preparació.
+- __`--mixed`__: Comportament per defecte. Els canvis es conservaran al Directori de Treball.
+- __`--hard`__: Els canvis es descartaran.
+
+![Resum de l'eina git reset](img/reset/resum_reset.png)
+/// figure-caption
+Resum de l'eina `git reset`.
+///
+
+A més, aquesta ordre pot provocar que alguns __commits__ perden totes les referències i,
+per tant, seran esborrats pel __recol·lector de brossa de Git__.
+
+!!! example
+    A la [Figura 1](#figure-reset) els _commits_ __Canvi B__ i __Canvi C__
+    seran esborrats perquè han perdut tots les referències.
+
+??? prep "Preparació del repositori"
 
     /// collapse-code
-    ```bash title="setup_reset.sh"
+    ```bash title="setup.sh"
     --8<-- "docs/files/avancat/stdout/reset/setup_reset.sh"
     ```
     ///
@@ -42,6 +67,11 @@ Algunes de les accions que podem fer mitjançant aquestes eines són:
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/reset/inicial.txt"
     ```
+
+### Sintaxi general
+
+!!! info
+    Aquesta ordre mou la referència de la branca actual, on està situat el `HEAD`.
 
 La sintaxi de l'ordre `git reset` és:
 ```bash
@@ -52,16 +82,6 @@ git reset [--soft | --mixed | --hard | --keep] <ref>
 
 !!! docs
     Documentació oficial de [`git reset`](https://git-scm.com/docs/git-reset){target=_blank}.
-
-El comportament de git reset depén del mode especificat. Per defecte, el mode és `--mixed`.
-
-![Resum de l'eina git reset](img/reset/resum_reset.png)
-/// figure-caption
-Resum de l'eina `git reset`.
-///
-
-!!! info
-    Aquesta ordre mou la referència de la branca actual, on està situat el `HEAD`.
 
 
 ### Soft
@@ -156,30 +176,6 @@ git reset --keep <ref>
     --8<-- "docs/files/avancat/stdout/reset/keep.txt"
     ```
 
-
-## Amend
-L'opció `git commit --amend` permet realitzar canvis a l'últim commit realitzat.
-
-Permet modificar el missatge de l'últim commit, afegir nous fitxers o afegir
-nous canvis els fitxers del repositori, inclòs els que han segut modificats en aquest últim commit.
-
-El funcionament d'aquesta ordre consisteix en crear un nou _commit_ amb els canvis de l'__Àrea de Preparació__
-i els canvis del commit anterior. A més, el nou _commit_ substitueix l'anterior.
-
-La sintaxi és:
-```bash
-git commit --amend [-m <missatge>]
-```
-
-- `-m <missatge>`: Permet especificar un nou missatge per al commit.
-
-??? example "Exemple: Amend"
-    Hem modificat l'últim _commit_ __Canvi B__,
-    on hem afegit canvis a `README.md` i modificat el missatge del commit.
-
-    ```shellconsole
-    --8<-- "docs/files/avancat/stdout/reset/amend.txt"
-    ```
 
 ## Bibliografia
 - https://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard

@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # Elimina els repositori si existeix
-if [ -d ~/git_cherrypick ]; then
-    rm -rf ~/git_cherrypick
+if [ -d ~/git_revert ]; then
+    rm -rf ~/git_revert
 fi
 
-mkdir -p ~/git_cherrypick
-cd ~/git_cherrypick
+mkdir -p ~/git_revert
+cd ~/git_revert
 git init
 git branch -m main
-echo "# Git revert i cherrypick" > README.md
+echo "# Git revert" > README.md
 git add README.md
 git commit -m "Commit inicial"
 echo "- Canvi A" >> README.md
