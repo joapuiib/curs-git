@@ -39,14 +39,10 @@ git commit --amend [-m <missatge>]
 ??? prep "Preparació del repositori"
     Inicialitzem un repositori amb un fitxer `README.md` i realitzem el primer commit.
 
-    /// collapse-code
-    ```bash title="setup.sh"
-    --8<-- "docs/files/avancat/stdout/amend/setup.sh"
-    ```
-    ///
+    !load_file "avancat/stdout/amend/setup_amend.sh"
 
     ```shellconsole
-    --8<-- "docs/files/avancat/stdout/amend/setup.txt"
+    --8<-- "docs/files/avancat/stdout/amend/setup_amend.txt"
     ```
 
 ??? example "Exemple: Canviar el nom de l'últim commit"
