@@ -35,14 +35,10 @@ Funcionament de `git cherry-pick`.
     Per a aquest exemple, crearem un nou repositori per emmagatzemar
     begudes i menjars en els seus fitxers corresponents.
 
-    /// collapse-code
-    ```bash title="setup.sh"
-    --8<-- "docs/files/avancat/stdout/cherrypick/setup.sh"
-    ```
-    ///
+    !load_file "avancat/stdout/cherrypick/setup_cherrypick.sh"
 
     ```shellconsole
-    --8<-- "docs/files/avancat/stdout/cherrypick/inicial.txt"
+    --8<-- "docs/files/avancat/stdout/cherrypick/setup_cherrypick.txt"
     ```
 
 ??? example "Exemple: git cherry-pick"
