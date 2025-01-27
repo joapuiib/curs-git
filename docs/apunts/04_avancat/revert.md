@@ -31,13 +31,13 @@ Funcionament de `git revert`.
 
 ??? prep "Preparació repositori"
     /// collapse-code
-    ```bash title="setup.sh"
-    --8<-- "docs/files/avancat/stdout/revert/setup.sh"
+    ```bash title="setup_revert.sh"
+    --8<-- "docs/files/avancat/stdout/revert/setup_revert.sh"
     ```
     ///
 
     ```shellconsole
-    --8<-- "docs/files/avancat/stdout/revert/inicial.txt"
+    --8<-- "docs/files/avancat/stdout/revert/setup_revert.txt"
     ```
 
 ??? example "Exemple: git revert"
