@@ -1,6 +1,6 @@
 ---
 template: document.html
-title: "Amend"
+title: "Commit amend"
 icon: material/book-open-variant
 alias: amend
 comments: true
