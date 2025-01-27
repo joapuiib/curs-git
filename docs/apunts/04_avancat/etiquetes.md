@@ -33,13 +33,13 @@ Hi ha dos tipus d'etiquetes, les __etiquetes lleugeres__ i les __etiquetes anota
 
 ??? prep "Preparació repositori"
     /// collapse-code
-    ```bash title="setup.sh"
-    --8<-- "docs/files/avancat/stdout/etiquetes/setup.sh"
+    ```bash title="setup_tags.sh"
+    --8<-- "docs/files/avancat/stdout/etiquetes/setup_tags.sh"
     ```
     ///
 
     ```shellconsole
-    --8<-- "docs/files/avancat/stdout/etiquetes/inicial.txt"
+    --8<-- "docs/files/avancat/stdout/etiquetes/setup_tags.txt"
     ```
 
 

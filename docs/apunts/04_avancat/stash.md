@@ -26,13 +26,13 @@ posteriorment quan siga necessari.
     i una branca addicional `altres_canvis` on s'han fet canvis al mateix fitxer.
 
     /// collapse-code
-    ```bash title="setup.sh"
-    --8<-- "docs/files/avancat/stdout/stash/setup.sh"
+    ```bash title="setup_stash.sh"
+    --8<-- "docs/files/avancat/stdout/stash/setup_stash.sh"
     ```
     ///
 
     ```shellconsole
-    --8<-- "docs/files/avancat/stdout/stash/setup.txt"
+    --8<-- "docs/files/avancat/stdout/stash/setup_stash.txt"
     ```
 
 ??? question "Per què és útil `git stash`?"
