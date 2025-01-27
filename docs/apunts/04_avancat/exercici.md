@@ -23,11 +23,7 @@ A partir del següent repositori inicial:
 !!! prep "Preparació repositori inicial"
     Pots executar el següent script per obtenir el repositori inicial:
 
-    /// collapse-code
-    ```bash title="setup_exercici_avancat.sh"
-    --8<-- "docs/files/avancat/stdout/exercici/setup_exercici_avancat.sh"
-    ```
-    ///
+    !load_file "avancat/stdout/exercici/setup_exercici_avancat.sh"
 
 
 ### Tasca 1
