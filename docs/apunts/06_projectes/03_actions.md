@@ -82,8 +82,8 @@ Cada tasca té les següents seccions:
         ```
 
     === "Correcció ortogràfica"
-        ```yaml title=".github/workflows/build.yml"
-        --8<-- ".github/workflows/build.yml"
+        ```yaml title=".github/workflows/spellcheck.yml"
+        --8<-- ".github/workflows/spellcheck.yml"
         ```
 
 ### Execució d'una automatització
@@ -92,7 +92,7 @@ quan es compleixen les condicions definides en la secció `on`
 de la configuració.
 
 No obstant, podem configurar una tasca perquè es puga executar manualment.
-Hem de definir un esdeveniment `workflow_dispatch` en la secció `on` de la configuració.
+Hem de definir un esdeveniment `workflow_dispatch` en la secció `on` de la configuració
 que permet llançar la tasca des de l'apartat __:material-arrow-right-drop-circle-outline: Actions__
 del repositori.
 

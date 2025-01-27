@@ -1,16 +1,14 @@
-name: build # Nom de l'automatització
+name: spellcheck # Nom de l'automatització
 on: # Events que disparen l'automatització
-  push:
-    branches:
-      - 'main' # Quan es fa un push a la branca main
-    tags:
-      - '**' # Quan es crea qualsevol etiqueta
   pull_request:
+    # Tipus d'events sobre la pull request
+    types: ['opened', 'edited', 'reopened', 'synchronize', 'ready_for_review']
     branches:
       - '**' # Quan s'obri un pull request a qualsevol branca
 
 jobs: # Llista de tasques a executar
   documents: # Nom de la tasca
+    if: github.event.pull_request.draft == false # Condició per executar la tasca
     runs-on: ubuntu-latest # Sistema operatiu on s'executarà la tasca
     env: # Variables d'entorn
       DICPATH: .hunspell/
@@ -30,7 +28,7 @@ jobs: # Llista de tasques a executar
           sudo apt update
           sudo apt install hunspell -y
       - name: Build documents # Acció per compilar la documentació
-        run: mkdocs build --clean
+        run: CI=false mkdocs build --clean
 
       - name: Download dictionary # Acció per descarregar el diccionari que s'utilitzarà en el corrector ortogràfic
         run: |
