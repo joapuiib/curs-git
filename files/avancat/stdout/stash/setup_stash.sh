@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Elimina els repositori si existeix
-if [ -d ~/git_etiquetes ]; then
-    rm -rf ~/git_etiquetes
+if [ -d ~/git_stash ]; then
+    rm -rf ~/git_stash
 fi
 
 mkdir -p ~/git_stash

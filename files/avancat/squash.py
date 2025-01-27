@@ -15,7 +15,7 @@ def remove_repositori_if_exists():
     x.run('rm -rf ~/git_squash')
 
 def init_repositori():
-    x.log_file('stdout/squash/inicial.txt')
+    x.log_file('stdout/squash/setup_squash.txt')
     x.log_bash_file('stdout/squash/setup_squash.sh')
 
     x.set_user('jpuigcerver')

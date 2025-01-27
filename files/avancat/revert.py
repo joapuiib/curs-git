@@ -15,8 +15,8 @@ def remove_repositori_if_exists():
     x.run('rm -rf ~/git_revert')
 
 def init_repositori():
-    x.log_file('stdout/revert/inicial.txt')
-    x.log_bash_file('stdout/revert/setup.sh')
+    x.log_file('stdout/revert/setup_revert.txt')
+    x.log_bash_file('stdout/revert/setup_revert.sh')
 
     x.set_user('jpuigcerver')
     x.run('mkdir -p stdout/revert')

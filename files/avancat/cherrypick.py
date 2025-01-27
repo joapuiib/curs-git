@@ -15,8 +15,8 @@ def remove_repositori_if_exists():
     x.run('rm -rf ~/git_cherrypick')
 
 def init_repositori():
-    x.log_file('stdout/cherrypick/inicial.txt')
-    x.log_bash_file('stdout/cherrypick/setup.sh')
+    x.log_file('stdout/cherrypick/setup_cherrypick.txt')
+    x.log_bash_file('stdout/cherrypick/setup_cherrypick.sh')
 
     x.set_user('jpuigcerver')
     x.run('mkdir -p stdout/cherrypick')

@@ -15,15 +15,15 @@ def remove_repositori_if_exists():
     x.run('rm -rf ~/git_stash')
 
 def init_repositori():
-    x.log_file('stdout/stash/setup.txt')
-    x.log_bash_file('stdout/stash/setup.sh')
+    x.log_file('stdout/stash/setup_stash.txt')
+    x.log_bash_file('stdout/stash/setup_stash.sh')
     x.set_user('jpuigcerver')
     x.run('mkdir -p stdout/stash')
 
     # remove directory if exists bash script
     x.log_bash('# Elimina els repositori si existeix')
-    x.log_bash('if [ -d ~/git_etiquetes ]; then')
-    x.log_bash('    rm -rf ~/git_etiquetes')
+    x.log_bash('if [ -d ~/git_stash ]; then')
+    x.log_bash('    rm -rf ~/git_stash')
     x.log_bash('fi')
     x.log_bash('')
 

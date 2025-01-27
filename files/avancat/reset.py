@@ -15,7 +15,7 @@ def remove_repositori_if_exists():
     x.run('rm -rf ~/git_reset')
 
 def init_repositori():
-    x.log_file('stdout/reset/inicial.txt')
+    x.log_file('stdout/reset/setup_reset.txt')
     x.log_bash_file('stdout/reset/setup_reset.sh')
 
     x.set_user('jpuigcerver')
