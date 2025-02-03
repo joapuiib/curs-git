@@ -102,6 +102,8 @@ plugins:
       enabled: !ENV [CI, false]
       repository: joapuiib/curs-git
       branch: main
+      exclude_committers:
+        - web-flow
 
 markdown_extensions:
   - abbr
