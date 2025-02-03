@@ -1,0 +1,29 @@
+.rubric__criteria-title {
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.rubric__criteria-description {
+  font-style: italic;
+}
+
+.rubric__criteria-element.checked {
+  background-color: var(--md-typeset-table-color--light);
+}
+tr:hover .rubric__criteria-element.checked {
+  background-color: rgba(0, 0, 0, 0.10);
+}
+
+
+.rubric__criteria-element.checked::after {
+  content: '✓';
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.rubric__level-score,
+.rubric__criteria-score,
+.rubric__criteria-element-score {
+  color: var(--md-default-fg-color--light)
+}
