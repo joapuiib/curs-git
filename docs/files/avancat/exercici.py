@@ -134,6 +134,14 @@ def cherry_pick():
     x.log_file('stdout/exercici/estructura_cherrypick.txt')
     x.x('git lga')
 
+    x.log_file(None)
+    x.x('git branch -D canvi/A')
+    x.x('git branch -D canvi/B')
+    x.x('git branch -D canvi/C')
+
+    x.log_file('stdout/exercici/estructura_cherrypick_eliminar_branques.txt')
+    x.x('git lga')
+
 def squash():
     x.log_file(None)
 
@@ -145,6 +153,12 @@ def squash():
 
     x.run('git checkout main')
     x.log_file('stdout/exercici/estructura_squash.txt')
+    x.x('git lga')
+
+    x.log_file(None)
+    x.x('git branch -D canvis')
+
+    x.log_file('stdout/exercici/estructura_squash_eliminar_branques.txt')
     x.x('git lga')
 
 

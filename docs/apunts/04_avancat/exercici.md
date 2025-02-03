@@ -71,3 +71,9 @@ Estat final després de l'exercici de Git avançat
 ```shellconsole
 --8<-- "docs/files/avancat/stdout/exercici/estructura_squash.txt"
 ```
+
+Per últim, també pots eliminar la branca `canvis`
+
+```shellconsole
+--8<-- "docs/files/avancat/stdout/exercici/estructura_squash_eliminar_branques.txt"
+```

@@ -1,0 +1,3 @@
+jpuigcerver@fp:~/git_avancat_exericici $ git lga
+* ed0201e - (0 seconds ago) Canvis A, B i C - Joan Puigcerver (HEAD -> main, tag: GitAvançat)
+* 0050132 - (0 seconds ago) Commit inicial - Joan Puigcerver
