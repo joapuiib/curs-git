@@ -7,6 +7,7 @@ function print {
 }
 
 BUILD=0
+CI=0
 INSTALL_VENV=0
 SPELL=0
 ACT=''
@@ -19,6 +20,9 @@ while [ $# -gt 0 ] ; do
     case $1 in
         -b)
             BUILD=1
+            ;;
+        --ci)
+            CI=1
             ;;
         --install-venv)
             INSTALL_VENV=1
@@ -87,7 +91,11 @@ if [ $BUILD -eq 1 ]; then
     COMMAND="build"
 fi
 
-mkdocs $COMMAND $ARGS
+if [ $CI -eq 0 ]; then
+    mkdocs $COMMAND $ARGS
+else
+    CI=true mkdocs $COMMAND $ARGS
+fi
 if [ $? -ne 0 ]; then
     print "Error building site."
     exit 1
@@ -114,7 +122,7 @@ if [ $SPELL -eq 1 ]; then
 
     if [ $ALL -eq 0 ]; then
         if [ -z "$SOURCES" ]; then
-            CHANGED_FILES=$(git status --porcelain | grep '\.md$' | awk '{print $2}' | sed 's/docs/site/' | sed 's/.md$/\/index.html/')
+            CHANGED_FILES=$(git diff --name-only main HEAD | grep '\.md$' | sed 's/docs/site/' | sed 's/.md$/\/index.html/')
             if [ -z "$CHANGED_FILES" ]; then
                 print "No changes found."
                 exit
