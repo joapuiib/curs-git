@@ -51,12 +51,29 @@ a la branca `canvis`.
 --8<-- "docs/files/avancat/stdout/exercici/estructura_cherrypick.txt"
 ```
 
+Després, elimina les branques `canvi/A`, `canvi/B` i `canvi/C`
+
+```shellconsole
+--8<-- "docs/files/avancat/stdout/exercici/estructura_cherrypick_eliminar_branques.txt"
+```
+
 ### Tasca 4
 Fusiona la branca `canvis` amb la branca `main`
 en un sol _commit_.
 
-Crea una etiqueta anotada amb el nom `GitAvançat` en aquest _commit_.
+Crea una etiqueta anotada amb el nom `GitAvançat` en aquest _commit_
+amb el missatge:
+
+```text
+Estat final després de l'exercici de Git avançat
+```
 
 ```shellconsole
 --8<-- "docs/files/avancat/stdout/exercici/estructura_squash.txt"
+```
+
+Per últim, també pots eliminar la branca `canvis`
+
+```shellconsole
+--8<-- "docs/files/avancat/stdout/exercici/estructura_squash_eliminar_branques.txt"
 ```
