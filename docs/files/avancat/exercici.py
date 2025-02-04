@@ -149,10 +149,11 @@ def squash():
     x.x('git checkout main')
     x.x('git merge --squash canvis')
     x.x('git commit -m "Canvis A, B i C"')
-    x.x('git tag GitAvançat')
+    x.x('git tag -a GitAvançat -m "Estat final després de l\'exercici de Git avançat"')
 
     x.run('git checkout main')
     x.log_file('stdout/exercici/estructura_squash.txt')
+    x.x('git show GitAvançat')
     x.x('git lga')
 
     x.log_file(None)
