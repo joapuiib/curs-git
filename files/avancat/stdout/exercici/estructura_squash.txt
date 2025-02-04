@@ -1,14 +1,31 @@
+jpuigcerver@fp:~/git_avancat_exericici (main) $ git show GitAvançat
+tag GitAvançat
+Tagger: Joan Puigcerver <j.puigcerveribanez@edu.gva.es>
+Date:   Tue Feb 4 12:14:35 2025 +0100
+
+Estat final després de l'exercici de Git avançat
+
+commit 703c0ed2e01461da14bfe392db9491171430e93f
+Author: Joan Puigcerver <j.puigcerveribanez@edu.gva.es>
+Date:   Tue Feb 4 12:14:35 2025 +0100
+
+    Canvis A, B i C
+
+diff --git a/README.md b/README.md
+index 46444c7..e51158f 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1,5 @@
+ # Exerici Git avançat
++__Canvis__: 
++- Canvi A
++- Canvi B
++- Canvi C
 jpuigcerver@fp:~/git_avancat_exericici (main) $ git lga
-* ddbc142 - (1 second ago) Canvi A - Joan Puigcerver (canvi/A)
-| * a45b26b - (1 second ago) Canvi C - Joan Puigcerver (canvis)
-| * ad44b74 - (1 second ago) Canvi B - Joan Puigcerver
-| * 01d6f19 - (1 second ago) Canvi A - Joan Puigcerver
-| * 1ea8b07 - (1 second ago) Canvis - Joan Puigcerver
+* 703c0ed - (0 seconds ago) Canvis A, B i C - Joan Puigcerver (HEAD -> main, tag: GitAvançat)
+| * 98f43bf - (1 second ago) Canvi C - Joan Puigcerver (canvis)
+| * 038b917 - (1 second ago) Canvi B - Joan Puigcerver
+| * ff6f107 - (1 second ago) Canvi A - Joan Puigcerver
+| * f872a43 - (1 second ago) Canvis - Joan Puigcerver
 |/  
-| * dcccfbc - (0 seconds ago) Canvis A, B i C - Joan Puigcerver (HEAD -> main, tag: GitAvançat)
-|/  
-| * 47c3abe - (1 second ago) Canvi B - Joan Puigcerver (canvi/B)
-|/  
-| * 2ff2d5d - (1 second ago) Canvi C - Joan Puigcerver (canvi/C)
-|/  
-* 33e06bb - (1 second ago) Commit inicial - Joan Puigcerver
+* cca01c4 - (1 second ago) Commit inicial - Joan Puigcerver

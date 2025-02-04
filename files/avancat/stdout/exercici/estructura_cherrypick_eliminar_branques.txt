@@ -1,0 +1,6 @@
+jpuigcerver@fp:~/git_avancat_exericici (main) $ git lga
+* 98f43bf - (0 seconds ago) Canvi C - Joan Puigcerver (canvis)
+* 038b917 - (0 seconds ago) Canvi B - Joan Puigcerver
+* ff6f107 - (0 seconds ago) Canvi A - Joan Puigcerver
+* f872a43 - (0 seconds ago) Canvis - Joan Puigcerver
+* cca01c4 - (0 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main)

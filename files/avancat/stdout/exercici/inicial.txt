@@ -6,7 +6,7 @@ jpuigcerver@fp:~/git_avancat_exericici (main) $ git branch -m main
 jpuigcerver@fp:~/git_avancat_exericici (main) $ echo "# Exerici Git avançat" > README.md
 jpuigcerver@fp:~/git_avancat_exericici (main) $ git add README.md
 jpuigcerver@fp:~/git_avancat_exericici (main) $ git commit -m "Commit inicial"
-[main (root-commit) 33e06bb] Commit inicial
+[main (root-commit) cca01c4] Commit inicial
  1 file changed, 1 insertion(+)
  create mode 100644 README.md
 jpuigcerver@fp:~/git_avancat_exericici (main) $ git branch canvis
@@ -17,25 +17,25 @@ jpuigcerver@fp:~/git_avancat_exericici (main) $ git checkout canvis
 Switched to branch 'canvis'
 jpuigcerver@fp:~/git_avancat_exericici (canvis) $ echo "__Canvis__: " >> README.md
 jpuigcerver@fp:~/git_avancat_exericici (canvis) $ git commit -a -m "Canvis"
-[canvis 1ea8b07] Canvis
+[canvis f872a43] Canvis
  1 file changed, 1 insertion(+)
 jpuigcerver@fp:~/git_avancat_exericici (canvis) $ git checkout canvi/A
 Switched to branch 'canvi/A'
 jpuigcerver@fp:~/git_avancat_exericici (canvi/A) $ echo "- Canvi A" >> README.md
 jpuigcerver@fp:~/git_avancat_exericici (canvi/A) $ git commit -a -m "canviA"
-[canvi/A e9902d3] canviA
+[canvi/A 4060f3a] canviA
  1 file changed, 1 insertion(+)
 jpuigcerver@fp:~/git_avancat_exericici (canvi/A) $ git checkout canvi/B
 Switched to branch 'canvi/B'
 jpuigcerver@fp:~/git_avancat_exericici (canvi/B) $ echo "- Canvi B" >> README.md
 jpuigcerver@fp:~/git_avancat_exericici (canvi/B) $ git commit -a -m "Canvi B"
-[canvi/B 47c3abe] Canvi B
+[canvi/B dc48c81] Canvi B
  1 file changed, 1 insertion(+)
 jpuigcerver@fp:~/git_avancat_exericici (canvi/B) $ git checkout canvi/C
 Switched to branch 'canvi/C'
 jpuigcerver@fp:~/git_avancat_exericici (canvi/C) $ echo "- Canvi C" >> README.md
 jpuigcerver@fp:~/git_avancat_exericici (canvi/C) $ git commit -a -m "Canvi C"
-[canvi/C 2ff2d5d] Canvi C
+[canvi/C 1c6a633] Canvi C
  1 file changed, 1 insertion(+)
 jpuigcerver@fp:~/git_avancat_exericici (canvi/C) $ git checkout canvi/B
 Switched to branch 'canvi/B'
@@ -45,7 +45,7 @@ CONFLICT (content): Merge conflict in README.md
 Automatic merge failed; fix conflicts and then commit the result.
 jpuigcerver@fp:~/git_avancat_exericici (canvi/B|MERGING) $ sed -i '/^<<<<<<<.*$/d; /^=======/d; /^>>>>>>>.*$/d' README.md # Elimina les marques de conflicte
 jpuigcerver@fp:~/git_avancat_exericici (canvi/B|MERGING) $ git commit -a -m "Merge 'canvi/A' a 'canvi/B'"
-[canvi/B 6117be3] Merge 'canvi/A' a 'canvi/B'
+[canvi/B ab98f7b] Merge 'canvi/A' a 'canvi/B'
 jpuigcerver@fp:~/git_avancat_exericici (canvi/B) $ git checkout canvi/C
 Switched to branch 'canvi/C'
 jpuigcerver@fp:~/git_avancat_exericici (canvi/C) $ git merge --no-ff canvi/B
@@ -54,7 +54,7 @@ CONFLICT (content): Merge conflict in README.md
 Automatic merge failed; fix conflicts and then commit the result.
 jpuigcerver@fp:~/git_avancat_exericici (canvi/C|MERGING) $ sed -i '/^<<<<<<<.*$/d; /^=======/d; /^>>>>>>>.*$/d' README.md
 jpuigcerver@fp:~/git_avancat_exericici (canvi/C|MERGING) $ git commit -a -m "Merge 'canvi/B' a 'canvi/C'"
-[canvi/C d53c298] Merge 'canvi/B' a 'canvi/C'
+[canvi/C 47b307d] Merge 'canvi/B' a 'canvi/C'
 jpuigcerver@fp:~/git_avancat_exericici (canvi/C) $ git checkout canvis
 Switched to branch 'canvis'
 jpuigcerver@fp:~/git_avancat_exericici (canvis) $ git merge --no-ff canvi/C
@@ -63,19 +63,19 @@ CONFLICT (content): Merge conflict in README.md
 Automatic merge failed; fix conflicts and then commit the result.
 jpuigcerver@fp:~/git_avancat_exericici (canvis|MERGING) $ sed -i '/^<<<<<<<.*$/d; /^=======/d; /^>>>>>>>.*$/d' README.md
 jpuigcerver@fp:~/git_avancat_exericici (canvis|MERGING) $ git commit -a -m "Merge 'canvi/C' a 'canvis'"
-[canvis a606c9b] Merge 'canvi/C' a 'canvis'
+[canvis b1d1706] Merge 'canvi/C' a 'canvis'
 jpuigcerver@fp:~/git_avancat_exericici (canvis) $ git lga
-*   a606c9b - (0 seconds ago) Merge 'canvi/C' a 'canvis' - Joan Puigcerver (HEAD -> canvis)
+*   b1d1706 - (0 seconds ago) Merge 'canvi/C' a 'canvis' - Joan Puigcerver (HEAD -> canvis)
 |\  
-| *   d53c298 - (0 seconds ago) Merge 'canvi/B' a 'canvi/C' - Joan Puigcerver (canvi/C)
+| *   47b307d - (0 seconds ago) Merge 'canvi/B' a 'canvi/C' - Joan Puigcerver (canvi/C)
 | |\  
-| | *   6117be3 - (1 second ago) Merge 'canvi/A' a 'canvi/B' - Joan Puigcerver (canvi/B)
+| | *   ab98f7b - (0 seconds ago) Merge 'canvi/A' a 'canvi/B' - Joan Puigcerver (canvi/B)
 | | |\  
-| | | * e9902d3 - (1 second ago) canviA - Joan Puigcerver (canvi/A)
-| | * | 47c3abe - (1 second ago) Canvi B - Joan Puigcerver
+| | | * 4060f3a - (0 seconds ago) canviA - Joan Puigcerver (canvi/A)
+| | * | dc48c81 - (0 seconds ago) Canvi B - Joan Puigcerver
 | | |/  
-| * / 2ff2d5d - (1 second ago) Canvi C - Joan Puigcerver
+| * / 1c6a633 - (0 seconds ago) Canvi C - Joan Puigcerver
 | |/  
-* / 1ea8b07 - (1 second ago) Canvis - Joan Puigcerver
+* / f872a43 - (0 seconds ago) Canvis - Joan Puigcerver
 |/  
-* 33e06bb - (1 second ago) Commit inicial - Joan Puigcerver (main)
+* cca01c4 - (0 seconds ago) Commit inicial - Joan Puigcerver (main)
