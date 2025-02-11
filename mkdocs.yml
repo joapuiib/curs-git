@@ -24,10 +24,18 @@ exclude_docs: |
   *_excluded.md
   _*
 
+watch:
+  - overrides
+
 theme:
   name: material-joapuiib
+  custom_dir: overrides
   icon:
     logo: simple/git
+
+  cover:
+    logo: false
+    background: false
 
   comments:
     repo: joapuiib/curs-git
