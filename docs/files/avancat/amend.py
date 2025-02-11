@@ -15,8 +15,8 @@ def remove_repositori_if_exists():
     x.run('rm -rf ~/git_amend')
 
 def init_repositori():
-    x.log_file('stdout/amend/setup.txt')
-    x.log_bash_file('stdout/amend/setup.sh')
+    x.log_file('stdout/amend/setup_amend.txt')
+    x.log_bash_file('stdout/amend/setup_amend.sh')
 
     x.set_user('jpuigcerver')
     x.run('mkdir -p stdout/amend')

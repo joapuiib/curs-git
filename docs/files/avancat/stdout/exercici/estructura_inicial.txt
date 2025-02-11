@@ -1,15 +1,15 @@
 jpuigcerver@fp:~/git_avancat_exericici (canvis) $ git lga
-*   a606c9b - (0 seconds ago) Merge 'canvi/C' a 'canvis' - Joan Puigcerver (HEAD -> canvis)
+*   b1d1706 - (0 seconds ago) Merge 'canvi/C' a 'canvis' - Joan Puigcerver (HEAD -> canvis)
 |\  
-| *   d53c298 - (0 seconds ago) Merge 'canvi/B' a 'canvi/C' - Joan Puigcerver (canvi/C)
+| *   47b307d - (0 seconds ago) Merge 'canvi/B' a 'canvi/C' - Joan Puigcerver (canvi/C)
 | |\  
-| | *   6117be3 - (1 second ago) Merge 'canvi/A' a 'canvi/B' - Joan Puigcerver (canvi/B)
+| | *   ab98f7b - (0 seconds ago) Merge 'canvi/A' a 'canvi/B' - Joan Puigcerver (canvi/B)
 | | |\  
-| | | * e9902d3 - (1 second ago) canviA - Joan Puigcerver (canvi/A)
-| | * | 47c3abe - (1 second ago) Canvi B - Joan Puigcerver
+| | | * 4060f3a - (0 seconds ago) canviA - Joan Puigcerver (canvi/A)
+| | * | dc48c81 - (0 seconds ago) Canvi B - Joan Puigcerver
 | | |/  
-| * / 2ff2d5d - (1 second ago) Canvi C - Joan Puigcerver
+| * / 1c6a633 - (0 seconds ago) Canvi C - Joan Puigcerver
 | |/  
-* / 1ea8b07 - (1 second ago) Canvis - Joan Puigcerver
+* / f872a43 - (0 seconds ago) Canvis - Joan Puigcerver
 |/  
-* 33e06bb - (1 second ago) Commit inicial - Joan Puigcerver (main)
+* cca01c4 - (0 seconds ago) Commit inicial - Joan Puigcerver (main)

@@ -15,8 +15,8 @@ def remove_repositori_if_exists():
     x.run('rm -rf ~/git_etiquetes')
 
 def init_repositori():
-    x.log_file('stdout/etiquetes/inicial.txt')
-    x.log_bash_file('stdout/etiquetes/setup.sh')
+    x.log_file('stdout/etiquetes/setup_tags.txt')
+    x.log_bash_file('stdout/etiquetes/setup_tags.sh')
     x.set_user('jpuigcerver')
     x.run('mkdir -p stdout/etiquetes')
 

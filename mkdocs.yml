@@ -78,7 +78,10 @@ plugins:
   - material/social:
       enabled: !ENV [CI, false]
   - material-joapuiib/enviorment
-  - sectionicons
+  - material-joapuiib/functions:
+      load_file:
+        files_dir: files
+  - material-joapuiib/sectionicons
   - i18n:
       languages:
         - locale: ca
@@ -107,6 +110,8 @@ plugins:
       enabled: !ENV [CI, false]
       repository: joapuiib/curs-git
       branch: main
+      exclude_committers:
+        - web-flow
 
 markdown_extensions:
   - abbr

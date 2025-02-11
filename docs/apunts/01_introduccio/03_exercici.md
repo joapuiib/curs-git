@@ -35,7 +35,7 @@ Els objectius d'aquests exercici són:
 1. Modifica el fitxer `llibres.txt` per a eliminar un dels llibres.
 1. Fes un cinqué _commit_.
 1. Modifica el fitxer `pelicules.txt` per a afegir una pel·lícula.
-1. Desfés aquest canvi.
+1. Sense modificar el fitxer manualment, descarta el canvi de `pelicules.txt` mitjançant una ordre de Git.
 1. Afegeix el fitxer `{data}.log` amb qualsevol contingut.
     - `{data}` és la data actual en format `YYYYMMDD`.
 1. Configura el repositori perquè ignore els fitxers amb extensió `.log`.
