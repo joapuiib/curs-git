@@ -316,6 +316,7 @@ i s'utilitzen per a realitzar tasques com:
 - Preparar paràmetres de configuració específics per a el llançament.
 
 El flux de treball amb aquestes branques és el següent:
+
 - Es creen a partir de la branca de desenvolupament `develop`.
 - Es realitzen les tasques de preparació per a el llançament.
 - S'integren els canvis a la branca de desenvolupament `develop`.
