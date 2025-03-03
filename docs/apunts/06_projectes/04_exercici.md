@@ -46,7 +46,6 @@ en el teu repositori local amb la informació corresponent.
 
         ```md
         # Títol del llibre
-
         - Autor: Autor del llibre
         - Any: Any de publicació
 
@@ -54,7 +53,9 @@ en el teu repositori local amb la informació corresponent.
         Sinopsi del llibre.
 
         ## Gènere
-        Gèneres del llibre.
+        - Gènere 1
+        - Gènere 2
+        - ...
         ```
 
 === "Pel·lícula"
@@ -69,7 +70,9 @@ en el teu repositori local amb la informació corresponent.
         Sinopsi de la pel·lícula.
 
         ## Gènere
-        Gèneres de la pel·lícula.
+        - Gènere 1
+        - Gènere 2
+        - ...
 
         ## Repartiment
         Indica els directors, actrius i actors principals.
@@ -88,9 +91,12 @@ en el teu repositori local amb la informació corresponent.
 
         ## Gènere
         Gèneres de la sèrie.
+        - Gènere 1
+        - Gènere 2
+        - ...
 
         ## Temporades
-        Número de temporades de la sèrie i títol de cada temporada.
+        Número de temporades de la sèrie i títol de cada temporada (format de llista).
         ```
 
 3. Publica la branca amb els canvis realitzats al teu repositori.
