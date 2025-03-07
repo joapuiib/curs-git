@@ -1,121 +1,34 @@
 ---
 template: document.html
-title: "Forks i Pull Requests"
+title: "Pull Requests"
 icon: material/book-open-variant
-alias: forks
+alias: pull-requests
 comments: true
 tags:
-    - fork
     - pull request
     - ruleset
 ---
 
 *[PR]: Pull Request
 
-## Forks i Pull Requests
-Dins de les eines de col·laboració que ofereixen els serveis d'allotjament de repositoris en línia
-com :simple-github: GitHub o :simple-gitlab: GitLab, hi ha dues funcionalitats clau:
-
-- __:material-source-fork: Forks__: permeten copiar un repositori d'un altre usuari o organització com a propi.
-
-    En aquesta còpia, l'usuari pot realitzar canvis, afegir funcionalitats o corregir errors
-    sense afectar el repositori original.
-
-    El _fork_ queda enllaçat amb el repositori original, de manera que es pot mantindre sincronitzat
-    si el repositori original es modifica.
-
-- __:material-source-pull: Pull Requests__: permeten sol·licitar la incorporació de canvis d'un repositori a un altre.
-
-    Si un usuari ha realitzat canvis en un _fork_ i vol que aquests canvis es incorporin
-    al repositori original, pot enviar una sol·licitud de __pull request__. Aquesta sol·licitud
-    serà revisada pels propietaris del repositori original, que podran acceptar-la o rebutjar-la.
-
-Aquestes dues funcionalitats són essencials per a la col·laboració en projectes
-de desenvolupament de programari de manera distribuïda i col·laborativa, sobretot
-en projectes de __:material-open-source-initiative: codi obert__.
-
-## :material-source-fork: Forks
-Una [__bifurcació o *fork*__](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo){:target="_blank"}
-és una còpia d'un repositori que pertany a un usuari o organització
-com a propi.
-
-En el teu _fork_ pots realitzar qualsevol canvi com:
-
-- Corregir errors.
-- Afegir funcionalitats.
-- Millorar la documentació.
-- Adaptar el codi a les teves necessitats.
-
-Un _fork_ sempre està enllaçat amb el repositori original,
-de manera que es si es realitzen canvis en el repositori original,
-pots decidir incorporar-lo al teu _fork_.
-
-![Estructura de treball amb Forks i Pull Requests](./img/forks/fork.png)
-/// shadow-figure-caption
-    attrs: { class: "no-shadow" }
-Estructura de treball amb Forks i Pull Requests
-///
-
-
-??? example "Exemple de bifurcació de :simple-materialformkdocs: Material for MkDocs"
-
-    ![Repositori Material for MkDocs principal](./img/forks/fork_principal.png)
-    /// shadow-figure-caption
-    [Repositori :simple-materialformkdocs: Material for MkDocs](https://github.com/squidfunk/mkdocs-material){:target="_blank"} principal
-    ///
-
-    Per a poder realitzar contribucions,
-    s'ha creat un _fork_ del repositori original.
-
-    ![Repositori Material for MkDocs bifurcat](./img/forks/fork_forked.png)
-    /// shadow-figure-caption
-    [Repositori :simple-materialformkdocs: Material for MkDocs](https://github.com/joapuiib/mkdocs-material){:target="_blank"} bifurcat
-    ///
-
-
-### Creació d'un Fork
-Per crear un _fork_ d'un repositori, cal accedir a la pàgina del repositori
-i fer clic al botó __:material-source-fork: Fork__ que apareix a la part superior dreta.
-
-??? example "Creació d'un fork de :simple-materialformkdocs: Material for MkDocs"
-    Vegem el menú de creació d'un _fork_ en el repositori :simple-materialformkdocs: Material for MkDocs.
-
-    ![Creació d'un fork](./img/forks/fork_create.png)
-    /// shadow-figure-caption
-    Creació d'un fork en el repositori :simple-materialformkdocs: Material for MkDocs
-    ///
-
-
 ## :material-source-pull: Pull Requests
 Una [__Sol·licitud de Incorporació o *Pull Request (PR)*__](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests){:target="_blank"}
-és una sol·licitud per a incorporar canvis a un repositori.
+és una sol·licitud per a incorporar canvis realitzats a una branca sobre una altra branca del repositori.
 
 Els PR poden ser utilitzats per a:
 
-- Incorporar canvis d'un _fork_ a un repositori original.
 - Incorporar canvis d'una branca a una altra branca.
+- Incorporar canvis d'una [:material-source-fork: __bifurcació o *fork*__][fork] al repositori principal.
 
-Aquesta funcionalitat es essencial per a la col·laboració en projectes, especialment els de :material-open-source-initiative: codi obert.
-A més, aquesta funcionalitat pot ser implementada dins d'una __[[estrategies|estratègia de ramificació]]{:target="_blank"}__.
+[fork]: ../forks/
 
-A un PR es pot afegir informació com:
+Aquesta funcionalitat és essencial per a la col·laboració en projectes,
+especialment els de __:material-open-source-initiative: codi obert__,
+on els mantenidors poden revisar els canvis proposats per la comunitat.
 
-- Títol i descripció dels canvis.
-- Comentaris per als revisors.
-- Referències a tasques o [[projectes#incidencies]]{:target="_blank"}.
-
-A més, es pot consultar:
-
-- Els canvis realitzats.
-- Els fitxers modificats.
-- Les [[actions|comprovacions automàtiques]]{:target="_blank"} realitzades.
-
-Les PR poden estar en quatre estats diferents:
-
-- __:octicons-git-pull-request-draft-24: Esborrany o *Draft*__: En procés de creació.
-- __:octicons-git-pull-request-24: Obert__: En procés de revisió i llest per a ser fusionat.
-- __:material-source-merge: Fusionat__: acceptat i incorporat al repositori.
-- __:octicons-git-pull-request-closed-24: Tancat__: rebutjat o tancat sense incorporar.
+A més, moltes entitats i empreses utilitzen aquestes funcionalitats
+per revisar els canvis realitzat per els desenvolupadors,
+que s'implementet dins d'una __[[estrategies|estratègia de ramificació]]{:target="_blank"}__.
 
 ??? example "Exemple de Pull Request a :simple-materialformkdocs: Material for MkDocs"
     En el repositori :simple-materialformkdocs: Material for MkDocs
@@ -152,6 +65,14 @@ amb la branca de destí i es podrà afegir informació addicional com el títol 
 
 Una vegada creat la PR, es pot sol·licitar la revisió dels canvis a altres usuaris
 i realitzar els canvis necessaris fins a la seva acceptació.
+
+Les PR poden estar en quatre estats diferents:
+
+- __:octicons-git-pull-request-draft-24: Esborrany o *Draft*__: En procés de creació.
+- __:octicons-git-pull-request-24: Obert__: En procés de revisió i llest per a ser fusionat.
+- __:material-source-merge: Fusionat__: acceptat i incorporat al repositori.
+- __:octicons-git-pull-request-closed-24: Tancat__: rebutjat o tancat sense incorporar.
+
 
 ### Incorporació de la Pull Request
 Quan un PR és acceptat, els canvis es fusionen amb la branca de destí i es tanca la PR.

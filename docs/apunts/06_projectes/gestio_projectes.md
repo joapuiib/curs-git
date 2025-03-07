@@ -51,13 +51,13 @@ Configuració de les Discussions en un repositori de GitHub
 Els debats estan organitzats per categories, que poden ser editades.
 Les categories per defecte són les següents:
 
-- __Announcements__: per a anuncis oficials.
+- __:mega: Announcements__: per a anuncis oficials.
     Sols els propietaris del repositori poden crear debats en aquesta categoria.
-- __General__: per a debats generals.
-- __Idees__: per a suggeriments i propostes.
-- __Polls__: per realitzar enquestes.
-- __Qüestions (_Q&A_)__: per a preguntes i respostes.
-- __Show and Tell__: per a compartir projectes i treballs relacionats amb el repositori.
+- __:speech_balloon: General__: per a debats generals.
+- __:bulb: Ideas__: per a suggeriments i propostes.
+- __:ballot_box: Polls__: per realitzar enquestes.
+- __:pray_tone1: Qüestions (_Q&A_)__: per a preguntes i respostes.
+- __:raised_hands_tone1: Show and Tell__: per a compartir projectes i treballs relacionats amb el repositori.
 
 ### Incidències
 Les [__Incidències o *Issues*__](https://guides.github.com/features/issues/){:target="_blank"}
@@ -73,16 +73,19 @@ debatre sobre la seva resolució.
     utilitzat per a generar aquest lloc web.
 
     El codi font d'aquest tema està allotjat en seu
-    [repositori a :simple-github: GitHub](https://github.com/squidfunk/mkdocs-material/){:target="_blank"}
+    [repositori a :simple-github: GitHub][mkdocs-material]{:target="_blank"}
     on la comunitat pot comunicar les incidències que troba.
 
     Podeu accedir a les incidències d'aquesta ferramenta
-    mitjançant la secció __:octicons-issue-opened-16: Issues__ del menú superior.
+    mitjançant la secció [__:octicons-issue-opened-16: Issues__][mkdocs.material-issues] del menú superior.
 
     ![Exemple d'incidències en un repositori de GitHub](./img/projectes/exemple_issues.png)
     /// shadow-figure-caption
-    Exemple d'incidències en el [repositori `mkdocs-material` a :simple-github: GitHub](https://github.com/squidfunk/mkdocs-material/issues){:target="_blank"}
+    Exemple d'incidències en el [repositori `mkdocs-material` a :simple-github: GitHub][mkdocs-material-issues]{:target="_blank"}
     ///
+
+[mkdocs-material]: https://github.com/squidfunk/mkdocs-material
+[mkdocs-material-issues]: https://github.com/squidfunk/mkdocs-material/issues
 
 Les incidències contenen la següent informació:
 
@@ -110,10 +113,9 @@ Els [__projectes de GitHub__](https://docs.github.com/es/issues/planning-and-tra
 és una eina de gestió de tasques que permet organitzar, classificar i prioritzar
 les tasques d'un projecte.
 
-!!! example "Projectes en aquest repositori"
-    Podeu accedir al projectes d'aquest repositori
-    mitjançant la secció "Projects" del menú superior
-    o en [aquest enllaç](https://github.com/joapuiib/curs-git/projects){:target="_blank"}.
+!!! example "Projecte d'exemple"
+    He creat un GitHub Project d'exemple a
+    [aquest enllaç](https://github.com/orgs/cursgit/projects/1){:target="_blank"}.
 
     [![Exemple de projecte en un repositori de GitHub](./img/projectes/exemple_projecte.png)](https://github.com/joapuiib/curs-git/projects){:target="_blank"}
     /// shadow-figure-caption
@@ -124,7 +126,7 @@ Els projectes estan organitzats en diferents pestanyes,
 que inclouen diferents vistes i organització de les tasques:
 
 - __Backlog__: un tauler Kanban amb les tasques pendents organitzades per columnes.
-- __Current iteration__: tasques que s'han planificat per a la iteració o Sprint actual.
+- __Current iteration__: tasques que s'han planificat per a la iteració o _Sprint_ actual.
 - __Roadmap__: un diagrama de Gantt amb les tasques planificades al llarg del temps.
 - __Team planning__: Mostra una vista més detallada de cada tasca, organitzades per estat, prioritat i assignació.
 - __My items__: Semblant a la vista de "Team planning", però mostra només les tasques assignades a l'usuari.
@@ -150,10 +152,12 @@ Exemple de tasca en un projecte de GitHub
 
 ### Llançaments
 Els [__llançaments o *Releases*__](https://docs.github.com/es/github/administering-a-repository/releasing-projects-on-github/about-releases){:target="_blank"}
-és una funcionalitat que permet indicar quan una versió del projecte ha segut llançada, incloent informació rellevant sobre els canvis realitzats i les persones
-que han contribuït.
+és una funcionalitat de GitHub que permet indicar quan una versió del projecte ha segut llançada, incloent informació rellevant sobre els canvis realitzats i les persones
+que han contribuït. Els llançaments sempre estan associats a una __[[etiquetes|:octicons-tag-16: etiqueta]]{:target="_blank"}__,
+que pot existir prèviament o es pot crear al moment.
 
-Els llançaments sempre estan associats a una __[[etiquetes|:octicons-tag-16: etiqueta]]{:target="_blank"}__ del repositori.
+Encara que són similars, no hem de confondre un llancament amb una etiqueta.
+Els llançaments són elements de GitHub i, en canvi, les etiquetes són objectes de Git.
 
 !!! example "Llançaments a :simple-materialformkdocs: Material for MkDocs"
     [:simple-materialformkdocs: Material for MkDocs](https://squidfunk.github.io/mkdocs-material/){:target="_blank"}
