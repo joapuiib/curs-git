@@ -101,10 +101,7 @@ en el teu repositori local amb la informació corresponent.
 
 3. Publica la branca amb els canvis realitzats al teu repositori.
 1. Crea un :material-source-pull: Pull Request amb els canvis realitzats a la branca `main` del repositori original.
-    - Afegeix un títol
-    - Afegeix una descripció.
-    - Assigna't a tu mateix com a responsable.
-    - Assigna a l'usuari `@joapuiib` com a revisor.
+    - Afegeix un títol i una descripció.
 
 ## Ampliació
 Com a ampliació, pots revisar el repositori en busca d'incidències,
