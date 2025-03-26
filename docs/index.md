@@ -1,12 +1,15 @@
 ---
+template: theme-base.html
 title: Inici
-cover:
-    title: Introducció a Git i la seua aplicació a l’aula
+#cover:
+#title: Introducció a Git i la seua aplicació a l’aula
 hide:
   - navigation
 ---
 
 *[CI/CD]: Continuous Integration/Continuous Deployment
+
+![Portada](img/portada-cefire.png)
 
 ## Objectius
 
