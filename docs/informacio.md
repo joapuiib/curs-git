@@ -1,10 +1,9 @@
 ---
-template: document.html
-cover:
-    title: Informació
 hide:
   - navigation
 ---
+
+# Informació
 
 ## :fontawesome-regular-face-smile-beam: Si t'ha agradat aquest curs...
 Si aquest curs t'ha semblat útil i interessant,
