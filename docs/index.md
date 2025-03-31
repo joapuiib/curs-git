@@ -1,8 +1,9 @@
 ---
-template: theme-base.html
+template: landing.html
 title: Inici
-#cover:
-#title: Introducció a Git i la seua aplicació a l’aula
+cover:
+    title: Introducció a Git i la seua aplicació a l’aula
+    icon: simple/git
 hide:
   - navigation
 ---
