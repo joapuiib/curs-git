@@ -71,4 +71,4 @@ hide:
     - Estratègies per a l'ús de Git i GitHub a l'aula.
 
 ## Dirigit a
-- Professorat de la família d'Informàtica i Comunicacions.
+- Professorat de la família professional d'Informàtica i Comunicacions.
