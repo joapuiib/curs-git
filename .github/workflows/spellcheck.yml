@@ -17,8 +17,8 @@ jobs: # Llista de tasques a executar
 
     steps: # Passos a executar
       - uses: actions/checkout@v4 # Acció per clonar i còpiar el repositori a l'entorn d'execució
-      - name: Fetch main branch
-        run: git fetch origin main
+        with:
+          fetch-depth: 0
       - name: Get changed files
         id: get-changed-files
         run: |
