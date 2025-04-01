@@ -201,8 +201,11 @@ p:has(img.center) {
         break-before: always;
     }
     
+    .md-tags {
+        display: none !important;
+    }
     .md-source-file {
-        display: none;
+        display: none !important;
     }
 }
 
