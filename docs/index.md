@@ -1,13 +1,20 @@
 ---
-template: document.html
+template: landing.html
 title: Inici
 cover:
     title: Introducció a Git i la seua aplicació a l’aula
+    icon: simple/git
 hide:
   - navigation
 ---
 
 *[CI/CD]: Continuous Integration/Continuous Deployment
+
+## Característiques
+
+- __:octicons-calendar-16: Temporització__: Del 5 de maig al 15 de juny.
+- __:material-laptop: Modalitat__: En línia.
+- __:octicons-clock-16: Durada__: 30 hores.
 
 ## Objectius
 
@@ -64,4 +71,4 @@ hide:
     - Estratègies per a l'ús de Git i GitHub a l'aula.
 
 ## Dirigit a
-- Professorat de la família d'Informàtica i Comunicacions.
+- Professorat de la família professional d'Informàtica i Comunicacions.
