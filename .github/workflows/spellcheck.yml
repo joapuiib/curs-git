@@ -22,11 +22,7 @@ jobs: # Llista de tasques a executar
       - name: Get changed files
         id: get-changed-files
         run: |
-          echo "REFS"
-          echo $(git show-ref)
-          echo "BRANCHES"
-          echo $(git branch -a)
-          CHANGED_FILES=$(git diff --name-only origin/main HEAD | grep 'docs/.*\.md$')
+          CHANGED_FILES=$(git diff --name-only origin/main HEAD | grep 'docs/.*\.md$' || true)
           echo "CHANGED_FILES=$CHANGED_FILES" >> $GITHUB_ENV
           echo "::set-output name=CHANGED_FILES::$CHANGED_FILES"
           if [ -z "$CHANGED_FILES" ]; then
