@@ -13,22 +13,29 @@ tags:
 
 ## :material-source-pull: Pull Requests
 Una [__Sol·licitud de Incorporació o *Pull Request (PR)*__](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests){:target="_blank"}
-és una sol·licitud per a incorporar canvis realitzats a una branca sobre una altra branca del repositori.
+és una sol·licitud per a incorporar canvis a una branca d'un repositori.
 
-Els PR poden ser utilitzats per a:
+Les PR poden ser utilitzats per a:
 
-- Incorporar canvis d'una branca a una altra branca.
+- Incorporar canvis d'una branca a una altra branca dins del mateix repositori.
 - Incorporar canvis d'una [:material-source-fork: __bifurcació o *fork*__][fork] al repositori principal.
 
 [fork]: forks.md
 
+La utilització de les PR aporta molts avantatges, com ara:
+
+- __Revisió de canvis__: Permet revisar els canvis realitzats abans de la seua integració al projecte.
+- __Debat de canvis__: Facilita el debat i la revisió conjunta dels canvis amb altres desenvolupadors o col·laboradors.
+- __[Automatització de tasques][automatitzacio]__: Ofereix la possibilitat d'executar tasques automàtiques abans de la incorporació dels canvis,
+    com ara la realització de proves o la comprovació de la qualitat del codi.
+- __[Estratègia de ramificació][estrategies]__: Permet incorporar els canvis de manera ordenada i controlada.
+
+[automatitzacio]: automatitzacio.md
+[estrategies]: ../05_estrategies/01_estrategies_ramificacio.md
+
 Aquesta funcionalitat és essencial per a la col·laboració en projectes,
 especialment els de __:material-open-source-initiative: codi obert__,
 on els mantenidors poden revisar els canvis proposats per la comunitat.
-
-A més, moltes entitats i empreses utilitzen aquestes funcionalitats
-per revisar els canvis realitzat per els desenvolupadors,
-que s'implementet dins d'una __[[estrategies|estratègia de ramificació]]{:target="_blank"}__.
 
 ??? example "Exemple de Pull Request a :simple-materialformkdocs: Material for MkDocs"
     En el repositori :simple-materialformkdocs: Material for MkDocs
@@ -40,27 +47,27 @@ que s'implementet dins d'una __[[estrategies|estratègia de ramificació]]{:targ
     Exemple de [Pull Request en el repositori :simple-materialformkdocs: Material for MkDocs](https://github.com/squidfunk/mkdocs-material/pulls){:target="_blank"}
     ///
 
-### Creació d'un Pull Request
-Per crear un PR, cal accedir al teu _fork_ o branca i fer clic al botó __:material-source-pull: Pull Request__.
+### Creació d'una Pull Request
+Per crear una PR, cal accedir al teu _fork_ o branca i fer clic al botó __:material-source-pull: Pull Request__.
 
-En el procés de creació d'un PR, es mostrarà una pantalla on es compararan els canvis realitzats
+En el procés de creació d'una PR, es mostrarà una pantalla on es compararan els canvis realitzats
 amb la branca de destí i es podrà afegir informació addicional com el títol i la descripció.
 
-??? example "Creació d'un Pull Request"
-    A la branca `feature/time-range` del meu _fork_ podem crear un PR per a incorporar els canvis al repositori original.
+??? example "Creació d'una Pull Request"
+    A la branca `feature/time-range` del meu _fork_ podem crear una PR per a incorporar els canvis al repositori original.
 
-    ![Creació d'un Pull Request](./img/forks/pull_request_create.png)
+    ![Creació d'una Pull Request](./img/forks/pull_request_create.png)
     /// shadow-figure-caption
-    Creació d'un Pull Request
+    Creació d'una Pull Request
     ///
 
 
-    En la pantalla de creació d'un PR es poden veure els canvis realitzats en la branca `feature/time-range`
+    En la pantalla de creació d'una PR es poden veure els canvis realitzats en la branca `feature/time-range`
     respecte a la branca de destí `verion3`.
 
-    ![Comparació de canvis en un Pull Request](./img/forks/pull_request_compare.png)
+    ![Comparació de canvis en una Pull Request](./img/forks/pull_request_compare.png)
     /// shadow-figure-caption
-    Comparació de canvis en un Pull Request
+    Comparació de canvis en una Pull Request
     ///
 
 Una vegada creat la PR, es pot sol·licitar la revisió dels canvis a altres usuaris
@@ -74,8 +81,8 @@ Les PR poden estar en quatre estats diferents:
 - __:octicons-git-pull-request-closed-24: Tancat__: rebutjat o tancat sense incorporar.
 
 
-### Incorporació de la Pull Request
-Quan un PR és acceptat, els canvis es fusionen amb la branca de destí i es tanca la PR.
+### Incorporació d'una Pull Request
+Quan una PR és acceptat, els canvis es fusionen amb la branca de destí i es tanca la PR.
 
 La fusió del PR pot ser de diferents tipus:
 
@@ -109,7 +116,7 @@ Aquest flux de treball pot ser el següent:
 3. Crear una branca per a realitzar els canvis.
 4. Realitzar els canvis en la branca.
 5. Publicar la branca en el _fork_.
-6. Crear un PR per a incorporar els canvis al repositori original.
+6. Crear una PR per a incorporar els canvis al repositori original.
 7. Revisar i debatre els canvis amb els revisors.
 8. Incorporar els canvis al repositori original.
 9. Actualitzar el _fork_ amb els canvis del repositori original.
@@ -135,7 +142,7 @@ com ara:
 - Obligar a mantindre una història lineal.
 - No permetre publicacions forçades (`push --force`).
 - Requerir que les [[actions|comprovacions automàtiques]]{:target="_blank"} s'hagen realitzat correctament.
-- Requerir que la fusió es realitze mitjançant un PR.
+- Requerir que la fusió es realitze mitjançant una PR.
     
     En aquest cas, es poden configurar altres opcions com:
 
