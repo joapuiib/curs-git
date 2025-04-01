@@ -17,11 +17,11 @@ jobs: # Llista de tasques a executar
 
     steps: # Passos a executar
       - uses: actions/checkout@v4 # Acció per clonar i còpiar el repositori a l'entorn d'execució
-        with:
-          ref: main
       - name: Get changed files
         id: get-changed-files
         run: |
+          echo $(git show-ref)
+          echo $(git branch -a)
           CHANGED_FILES=$(git diff --name-only main HEAD | grep 'docs/.*\.md$')
           echo "CHANGED_FILES=$CHANGED_FILES" >> $GITHUB_ENV
           echo "::set-output name=CHANGED_FILES::$CHANGED_FILES"
