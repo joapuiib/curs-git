@@ -122,11 +122,12 @@ if [ $SPELL -eq 1 ]; then
 
     if [ $ALL -eq 0 ]; then
         if [ -z "$SOURCES" ]; then
-            CHANGED_FILES=$(git diff --name-only main HEAD | grep '\.md$' | sed 's/docs/site/' | sed 's/.md$/\/index.html/')
+            CHANGED_FILES=$(git diff --name-only main HEAD | grep 'docs/.*\.md$' | sed 's/\/index//' | sed 's/docs/site/' | sed 's/.md$/\/index.html/')
             if [ -z "$CHANGED_FILES" ]; then
                 print "No changes found."
                 exit
             fi
+            echo "Changed files:" $CHANGED_FILES
             for FILE in $CHANGED_FILES; do
                 if [ -f $FILE ]; then
                     SOURCES="$SOURCES -S $FILE"

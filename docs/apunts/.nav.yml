@@ -1,5 +1,5 @@
 nav:
-    - ...
+    - "*"
     - "Bloc 1: Introducció a Git": 01_introduccio
     - "Bloc 2: Branques": 02_branques
     - "Bloc 3: Remots": 03_remots

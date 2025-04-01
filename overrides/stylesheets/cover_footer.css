@@ -1,0 +1,11 @@
+.cover__footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.cover__footer svg,
+.cover__footer img {
+    max-height: 2.5rem;
+}
