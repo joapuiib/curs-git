@@ -73,7 +73,7 @@ theme:
 plugins:
   - alias:
       use_anchor_titles: true
-  - awesome-pages # Navegació
+  - awesome-nav
   - drawio
   - macros
   - material/tags
