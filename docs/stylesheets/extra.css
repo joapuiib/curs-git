@@ -1,0 +1,11 @@
+@keyframes star {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+.star {
+  animation: star 500ms infinite;
+}

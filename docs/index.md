@@ -10,7 +10,11 @@ hide:
 
 *[CI/CD]: Continuous Integration/Continuous Deployment
 
-![Portada](img/portada-cefire.png)
+## Característiques
+
+- __:octicons-calendar-16: Temporització__: Del 5 de maig al 15 de juny.
+- __:material-laptop: Modalitat__: En línia.
+- __:octicons-clock-16: Durada__: 30 hores.
 
 ## Objectius
 

@@ -16,6 +16,9 @@ extra:
       link: https://www.linkedin.com/in/joanpuigcerver/
       name: Joan Puigcerver a LinkedIn
 
+extra_css:
+  - stylesheets/extra.css
+
 draft_docs: |
   *_unpublished.md
   *_draft.md
