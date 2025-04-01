@@ -1,8 +1,8 @@
 ---
 template: document.html
-title: "Gestió de projectes a GitHub"
+title: "Eines de gestió de projectes a GitHub"
 icon: material/book-open-variant
-alias: projectes
+alias: eines-gestio
 comments: true
 tags:
     - issues
@@ -11,7 +11,7 @@ tags:
     - releases
 ---
 
-## Gestió de projectes a GitHub
+## Eines de gestió de projectes a GitHub
 Els serveis d'allotjament de repositoris en línia,
 com [:simple-github: GitHub][github] o [:simple-gitlab: GitLab][gitlab],
 ofereixen una sèrie d'eines i funcionalitats que permeten
@@ -232,7 +232,7 @@ on cal incloure la següent informació:
 
 !!! info
     A més, existeix l'opció de [__generar les notes de llançament__](https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes),
-    que inclouran informació sobre les __[[forks#pull-requests|:material-source-pull: Pull requests]]__ i les persones que han contribuït
+    que inclouran informació sobre les __[:material-source-pull: Pull requests][pr]__ i les persones que han contribuït
     de manera automàtica.
 
 ![Creació d'un llançament](./img/projectes/release_create.png)

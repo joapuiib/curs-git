@@ -100,7 +100,7 @@ A un PR es pot afegir informació com:
 
 - Títol i descripció dels canvis.
 - Comentaris per als revisors.
-- Referències a tasques o [[projectes#incidencies]]{:target="_blank"}.
+- Referències a tasques o [[eines-gestio#incidencies]]{:target="_blank"}.
 
 A més, es pot consultar:
 
