@@ -60,7 +60,7 @@ Configuració de les Discussions en un repositori de GitHub
     on s'han habilitat els debats i la comunitat pot intercanviar idees, suggeriments
     o plantejar dubtes.
 
-    ![Debats a Material for MkDocs](./img/projectes/debats_mkdocs.png)
+    ![Debats a Material for MkDocs](./img/projectes/exemple_debats_mkdocs_material.png)
     /// shadow-figure-caption
     Debats en el [repositori `mkdocs-material` a :simple-github: GitHub][mkdocs-material-discussions]
     ///
@@ -99,9 +99,9 @@ debatre sobre la seva resolució.
     Podeu accedir a les incidències d'aquesta ferramenta
     mitjançant la secció [__:octicons-issue-opened-16: Issues__][mkdocs-material-issues] del menú superior.
 
-    ![Exemple d'incidències en un repositori de GitHub](./img/projectes/exemple_issues.png)
+    ![Llista d'incidències en un repositori de GitHub](./img/projectes/exemple_issues.png)
     /// shadow-figure-caption
-    Exemple d'incidències en el [repositori `mkdocs-material` a :simple-github: GitHub][mkdocs-material-issues]
+    Llista d'incidències en el [repositori `mkdocs-material` a :simple-github: GitHub][mkdocs-material-issues]
     ///
 
 [mkdocs-material-issues]: https://github.com/squidfunk/mkdocs-material/issues
@@ -126,7 +126,22 @@ Les incidències contenen la següent informació:
 
 [pr]: pull_requests.md
 
-??? example "Exemple d'incidència"
+Les incidències es creen amb l'estat de __:octicons-issue-opened-16:{ .issue-open } Oberta__,
+que pot ser canviat a __:octicons-issue-closed-16:{ .issue-closed } Tancada__ una vegada
+ha sigut resolta.
+
+
+??? example "Exemple d'incidència a :simple-materialformkdocs: Material for MkDocs"
+    La següent imatge mostra una incidència en el repositori
+    [:simple-materialformkdocs: Material for MkDocs][mkdocs-material],
+    on s'informa d'un problema per deshabilitar la barra de cerca.
+
+    ![Incidència en un repositori de GitHub](./img/projectes/exemple_issue.png)
+    /// shadow-figure-caption
+    [Incidència][mkdocs-material-issue] en el repositori `mkdocs-material` a :simple-github: GitHub
+    ///
+    
+[mkdocs-material-issue]: https://github.com/squidfunk/mkdocs-material/issues/8128
 
 ??? example "Exemple de plantilla per a incidències"
     En aquest repositori s'ha configurat una plantilla per informar
@@ -141,9 +156,6 @@ Les incidències contenen la següent informació:
     ```
 
 [new-issue]: https://github.com/joapuiib/curs-git/issues
-
-Una vegada finalitzada la resolució de la incidència, aquesta pot ser tancada
-per l'usuari que l'ha oberta o per un membre del projecte.
 
 ### :octicons-table-16: GitHub Projects
 Els [__projectes de GitHub__](https://docs.github.com/es/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)

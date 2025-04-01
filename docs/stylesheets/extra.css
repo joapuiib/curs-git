@@ -9,3 +9,11 @@
 .star {
   animation: star 500ms infinite;
 }
+
+.issue-open {
+  color: #1a7f37;
+}
+
+.issue-closed {
+  color: #8250df;
+}
