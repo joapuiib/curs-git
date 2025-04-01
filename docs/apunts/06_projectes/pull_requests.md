@@ -20,7 +20,7 @@ Els PR poden ser utilitzats per a:
 - Incorporar canvis d'una branca a una altra branca.
 - Incorporar canvis d'una [:material-source-fork: __bifurcació o *fork*__][fork] al repositori principal.
 
-[fork]: ../forks/
+[fork]: forks.md
 
 Aquesta funcionalitat és essencial per a la col·laboració en projectes,
 especialment els de __:material-open-source-initiative: codi obert__,

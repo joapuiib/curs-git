@@ -13,42 +13,66 @@ tags:
 
 ## Gestió de projectes a GitHub
 Els serveis d'allotjament de repositoris en línia,
-com :simple-github: GitHub o :simple-gitlab: GitLab,
+com [:simple-github: GitHub][github] o [:simple-gitlab: GitLab][gitlab],
 ofereixen una sèrie d'eines i funcionalitats que permeten
 gestionar projectes de desenvolupament de programari col·laboratiu
 de manera fàcil i eficaç.
 
+[github]: https://github.com/
+[gitlab]: https://about.gitlab.com/
+
 En aquests apunts ens centrarem en la part de gestió de projectes,
 com crear debats, comunicar incidències i organitzar tasques.
 
-### Debats
-Els [__debats o *Discussions*__](https://github.com/features/discussions){:target="_blank"}
+### :octicons-comment-discussion-16: Debats
+Els [__debats o *Discussions*__](https://github.com/features/discussions)
 és un espai de comunicació on els membres d'un projecte o els membres d'una comunitat
 poden intercanviar idees, opinions, realitzar suggeriments o debatre sobre temes concrets.
 
-!!! example "Debats en aquest repositori"
-    Aquest lloc web està allotjat a :simple-github: GitHub i s'ha
-    habilitat la funcionalitat de debats.
-
-    Podeu accedir mitjançant la secció __:octicons-comment-discussion-16: Discussions__ del menú superior
-    o en [aquest enllaç](https://github.com/joapuiib/curs-git/discussions){:target="_blank"}.
-
-    ![Exemple de debat en un repositori de GitHub](./img/projectes/exemple_debats.png)
-    /// shadow-figure-caption
-    Debats en en [repositori d'aquest curs a :simple-github: GitHub](https://github.com/joapuiib/curs-git/discussions){:target="_blank"}
-    ///
-
-
 Aquesta funcionalitat no està habilitada per defecte.
 Per activar-la, cal anar al menú de configuració del repositori __:octicons-gear-16: Settings__
-i habilitar la funcionalitat de debats.
+i habilitar-la.
 
 ![Configuració de les Discussions en un repositori de GitHub](./img/projectes/habilitar_debats.png)
 /// shadow-figure-caption
 Configuració de les Discussions en un repositori de GitHub
 ///
 
-Els debats estan organitzats per categories, que poden ser editades.
+??? example "Debats a aquest repositori"
+    Aquest lloc web està allotjat a :simple-github: GitHub i s'ha
+    habilitat la funcionalitat de debats.
+
+    Podeu accedir mitjançant la secció __:octicons-comment-discussion-16: Discussions__ del menú superior
+    o en [aquest enllaç](https://github.com/joapuiib/curs-git/discussions).
+
+    ![Exemple de debat en un repositori de GitHub](./img/projectes/exemple_debats.png)
+    /// shadow-figure-caption
+    Debats en en [repositori d'aquest curs a :simple-github: GitHub](https://github.com/joapuiib/curs-git/discussions)
+    ///
+
+??? example "Debats a :simple-materialformkdocs: Material for MkDocs"
+    [:simple-materialformkdocs: Material for MkDocs][mkdocs-material]
+    és tema per al generador de llocs web estàtics [MkDocs][mkdocs]
+    utilitzat per a generar aquest lloc web.
+
+    El codi font d'aquest tema està allotjat en seu
+    [repositori a :simple-github: GitHub][mkdocs-material]{
+    on s'han habilitat els debats i la comunitat pot intercanviar idees, suggeriments
+    o plantejar dubtes.
+
+    ![Debats a Material for MkDocs](./img/projectes/debats_mkdocs.png)
+    /// shadow-figure-caption
+    Debats en el [repositori `mkdocs-material` a :simple-github: GitHub][mkdocs-material-discussions]
+    ///
+
+[mkdocs]: https://www.mkdocs.org/
+[mkdocs-material]: https://github.com/squidfunk/mkdocs-material
+[mkdocs-material-discussions]: https://github.com/squidfunk/mkdocs-material/discussions
+
+Els debats estan organitzats per categories, que permeten classificar-los
+per temes i facilitar-ne la cerca. També es poden afegir noves categories
+o eliminar les existents.
+
 Les categories per defecte són les següents:
 
 - __:mega: Announcements__: per a anuncis oficials.
@@ -59,32 +83,27 @@ Les categories per defecte són les següents:
 - __:pray_tone1: Qüestions (_Q&A_)__: per a preguntes i respostes.
 - __:raised_hands_tone1: Show and Tell__: per a compartir projectes i treballs relacionats amb el repositori.
 
-### Incidències
-Les [__Incidències o *Issues*__](https://guides.github.com/features/issues/){:target="_blank"}
+### :octicons-issue-opened-16: Incidències
+Les [__Incidències o *Issues*__](https://guides.github.com/features/issues/)
 són una eina de creació i seguiment d'incidències relacionades amb un projecte.
 
 En aquest espai, també es permet la comunicació i la col·laboració
 entre els membres del projecte per a aportar informació sobre la incidència,
 debatre sobre la seva resolució.
 
-!!! example "Incidències a :simple-materialformkdocs: Material for MkDocs"
-    [:simple-materialformkdocs: Material for MkDocs](https://squidfunk.github.io/mkdocs-material/){:target="_blank"}
-    és tema per al generador de llocs web estàtics [MkDocs](https://www.mkdocs.org/){:target="_blank}
-    utilitzat per a generar aquest lloc web.
-
-    El codi font d'aquest tema està allotjat en seu
-    [repositori a :simple-github: GitHub][mkdocs-material]{:target="_blank"}
-    on la comunitat pot comunicar les incidències que troba.
+??? example "Incidències a :simple-materialformkdocs: Material for MkDocs"
+    [:simple-materialformkdocs: Material for MkDocs][mkdocs-material]
+    també utilitza la funcionalitat d'incidències per informar sobre
+    problemes, suggeriments o millores del tema.
 
     Podeu accedir a les incidències d'aquesta ferramenta
-    mitjançant la secció [__:octicons-issue-opened-16: Issues__][mkdocs.material-issues] del menú superior.
+    mitjançant la secció [__:octicons-issue-opened-16: Issues__][mkdocs-material-issues] del menú superior.
 
     ![Exemple d'incidències en un repositori de GitHub](./img/projectes/exemple_issues.png)
     /// shadow-figure-caption
-    Exemple d'incidències en el [repositori `mkdocs-material` a :simple-github: GitHub][mkdocs-material-issues]{:target="_blank"}
+    Exemple d'incidències en el [repositori `mkdocs-material` a :simple-github: GitHub][mkdocs-material-issues]
     ///
 
-[mkdocs-material]: https://github.com/squidfunk/mkdocs-material
 [mkdocs-material-issues]: https://github.com/squidfunk/mkdocs-material/issues
 
 Les incidències contenen la següent informació:
@@ -95,7 +114,7 @@ Les incidències contenen la següent informació:
     En aquesta secció és important proporcionar tota la informació
     necessària per a entendre la incidència i poder resoldre-la.
 
-    A més, els propietaris del repositori poden configurar [plantilles](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository){:target="_blank"}
+    A més, els propietaris del repositori poden configurar [plantilles](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository)
     per a la creació d'incidències, que faciliten la recopilació
     de la informació necessària.
 
@@ -103,23 +122,52 @@ Les incidències contenen la següent informació:
 - __Assignació__: assignació de la incidència a un o més membres del projecte.
 - __Referències__: en una incidència es poden referenciar altres incidències,
     o es pot veure si aquesta incidència ha segut referenciada en altres llocs.
-- __Pull Requests__: si la incidència està relacionada amb un [[forks#pull-requests]]{:target="_blank"}.
+- __Pull Requests__: si la incidència està relacionada amb una [:material-source-pull: Pull Request][pr].
+
+[pr]: pull_requests.md
+
+??? example "Exemple d'incidència"
+
+??? example "Exemple de plantilla per a incidències"
+    En aquest repositori s'ha configurat una plantilla per informar
+    d'una correcció en la documentació. Podeu veure el seu funcionament
+    si trieu la plantilla __Correcció__ en la [creació d'una nova incidència][new-issue].
+
+    Les plantilles es defineixen en firxers :simple-markdown: Markdown,
+    que s'han de guardar en la carpeta `.github/ISSUE_TEMPLATE`.
+
+    ```markdown title=".github/ISSUE_TEMPLATE/correccio.md"
+    --8<-- ".github/ISSUE_TEMPLATE/correccio.md"
+    ```
+
+[new-issue]: https://github.com/joapuiib/curs-git/issues
 
 Una vegada finalitzada la resolució de la incidència, aquesta pot ser tancada
 per l'usuari que l'ha oberta o per un membre del projecte.
 
-### GitHub Projects
-Els [__projectes de GitHub__](https://docs.github.com/es/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects){:target="_blank"}
+### :octicons-table-16: GitHub Projects
+Els [__projectes de GitHub__](https://docs.github.com/es/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
 és una eina de gestió de tasques que permet organitzar, classificar i prioritzar
 les tasques d'un projecte.
 
-!!! example "Projecte d'exemple"
-    He creat un GitHub Project d'exemple a
-    [aquest enllaç](https://github.com/orgs/cursgit/projects/1){:target="_blank"}.
+??? example "Projecte d'exemple"
+    He creat un [__:octicons-table-16: Projecte d'exemple__][projecte-exemple] dins de l'organitació del curs.
+    Aquest projecte està buit, però és útil perquè pugueu entrar i veure les diferents vistes i opcions que ofereix.
 
-    [![Exemple de projecte en un repositori de GitHub](./img/projectes/exemple_projecte.png)](https://github.com/joapuiib/curs-git/projects){:target="_blank"}
+    [projecte-exemple]: https://github.com/orgs/cursgit/projects/1
+
+    [![Exemple de projecte en un repositori de GitHub](./img/projectes/exemple_projecte.png)](https://github.com/joapuiib/curs-git/projects)
     /// shadow-figure-caption
     Exemple de projecte en un repositori de GitHub
+    ///
+
+??? example "Exemple de projecte utilitzat a l'aula"
+    La següent imatge mostra l'estat d'un projecte utilitzat a l'aula per a organitzar les tasques
+    dels alumnes en un projecte de desenvolupament de programari col·laboratiu.
+
+    ![Exemple de projecte en un repositori de GitHub utilitzat a l'aula](./img/projectes/exemple_projecte_daw1.png)
+    /// shadow-figure-caption
+    Exemple de projecte en un repositori de GitHub utilitzat a l'aula
     ///
 
 Els projectes estan organitzats en diferents pestanyes,
@@ -150,26 +198,29 @@ especificar:
 Exemple de tasca en un projecte de GitHub
 ///
 
-### Llançaments
-Els [__llançaments o *Releases*__](https://docs.github.com/es/github/administering-a-repository/releasing-projects-on-github/about-releases){:target="_blank"}
+### :material-tray-arrow-up: Llançaments
+Els [__llançaments o *Releases*__](https://docs.github.com/es/github/administering-a-repository/releasing-projects-on-github/about-releases)
 és una funcionalitat de GitHub que permet indicar quan una versió del projecte ha segut llançada, incloent informació rellevant sobre els canvis realitzats i les persones
-que han contribuït. Els llançaments sempre estan associats a una __[[etiquetes|:octicons-tag-16: etiqueta]]{:target="_blank"}__,
-que pot existir prèviament o es pot crear al moment.
+que han contribuït.
 
-Encara que són similars, no hem de confondre un llancament amb una etiqueta.
+Els llançaments __sempre estan associats__ a una __[[etiquetes|:octicons-tag-16: etiqueta]]__,
+que pot existir prèviament o es pot crear al moment. Encara que són similars, no hem de confondre un llancament amb una etiqueta.
 Els llançaments són elements de GitHub i, en canvi, les etiquetes són objectes de Git.
 
-!!! example "Llançaments a :simple-materialformkdocs: Material for MkDocs"
-    [:simple-materialformkdocs: Material for MkDocs](https://squidfunk.github.io/mkdocs-material/){:target="_blank"}
-    també utilitza la funcionalitat de llançaments per a indicar quan una nova versió del tema ha sigut llançada.
+??? example "Llançaments a :simple-materialformkdocs: Material for MkDocs"
+    [:simple-materialformkdocs: Material for MkDocs][mkdocs-material]
+    també utilitza la funcionalitat de llançaments per a indicar que s'ha
+    publicat una nova versió del tema.
 
-    Podeu accedir als llançaments d'aquest repositori mitjançant la secció __Releases__ de
-    la barrar lateral.
+    Podeu accedir als llançaments d'aquest repositori mitjançant la secció [__Releases__][mkdocs-material-releases]
+    de la secció lateral de la pàgina principal del repositori.
 
     ![Exemple de llançament en un repositori de GitHub](./img/projectes/release.png)
     /// shadow-figure-caption
-    Exemple de llançament en el [repositori `mkdocs-material` a :simple-github: GitHub](https://github.com/squidfunk/mkdocs-material/releases){:target="_blank"}
+    Exemple de llançament en el [repositori `mkdocs-material` a :simple-github: GitHub][mkdocs-material-releases]
     ///
+
+[mkdocs-material-releases]: https://github.com/squidfunk/mkdocs-material/releases
 
 Des de la secció de llançaments es pot crear un nou llançament,
 on cal incloure la següent informació:
@@ -179,9 +230,10 @@ on cal incloure la següent informació:
 - __Etiqueta__: etiqueta associada al llançament.
 - __Arxius binaris__: arxius binaris associats al llançament.
 
-A més, existeix l'opció de [generar les notes de llançament](https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes){:target="_blank"},
-que inclouran informació sobre les [[forks#pull-requests|:material-source-pull: Pull requests]]{:target="_blank"} i les persones que han contribuït
-de manera automàtica.
+!!! info
+    A més, existeix l'opció de [__generar les notes de llançament__](https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes),
+    que inclouran informació sobre les __[[forks#pull-requests|:material-source-pull: Pull requests]]__ i les persones que han contribuït
+    de manera automàtica.
 
 ![Creació d'un llançament](./img/projectes/release_create.png)
 /// shadow-figure-caption

@@ -1,5 +1,4 @@
 nav:
-    - ...
     - gestio_projectes.md
     - pull_requests.md
     - forks.md
