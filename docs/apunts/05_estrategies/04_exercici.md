@@ -40,6 +40,9 @@ Per a lliurar aquest exercici podeu triar entre una de les següents opcions:
         per poder mostrar-les en el vídeo.
 
     - La durada __màxima__ del vídeo ha de ser 10 minuts.
+
+En qualsevol cas, també cal lliurar la carpeta amb el repositori de Git
+que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
         
 
 ## Enunciat

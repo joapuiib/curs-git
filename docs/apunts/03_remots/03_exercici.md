@@ -41,14 +41,30 @@ Per a lliurar aquest exercici podeu triar entre una de les següents opcions:
 
     - La durada __màxima__ del vídeo ha de ser 10 minuts.
 
+En qualsevol cas, també cal lliurar la carpeta amb el repositori de Git
+que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
+
 
 ## Exercici
+!!! important
+    Comprova l'estat del repositori amb `git status` i `git lga` (1) després de cada ordre
+    per entendre els diferents estats dels fitxers.
+    {: .annotate}
+
+    1. Revisa [[introduccio#historic-de-canvis-git-log]] per veure
+        la configuració de l'àlies `git lga`.
+
 ### Creació repositori remot
 0. Crea un compte a [:material-github: GitHub](https://github.com) si no en tens un.
 1. Crea un repositori remot anomenat `bloc3_exercici` completament __buit__:
     1. No afegisques cap fitxer (README.md, LICENSE, .gitignore, etc.).
 
 ### Creació repositori local
+
+!!! danger
+    Crea el nou repositori __en una carpeta independent__ per evitar
+    problemes amb els exemples i exercicis anteriors.
+
 1. Crea un directori anomenat `bloc3_exercici` en la teua carpeta de treball.
 1. Inicialitza un repositori de Git en aquest directori.
 1. Crea un fitxer anomenat `llibres.txt` i afegeix tres llibres que t'agraden.
@@ -66,6 +82,10 @@ Per a lliurar aquest exercici podeu triar entre una de les següents opcions:
     conté el fitxer `llibres.txt`.
 
 ### Clonació del repositori remot
+!!! danger
+    Clona el repositori __en una carpeta independent__ per evitar
+    problemes amb els exemples i exercicis anteriors.
+
 1. Clona el repositori remot a un directori anomenat
     `bloc3_exercici_clone` en la teua carpeta de treball.
 1. Comprova que el directori `bloc3_exercici_clone` conté el fitxer

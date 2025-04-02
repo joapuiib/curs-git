@@ -40,6 +40,9 @@ Per a lliurar aquest exercici podeu triar entre una de les següents opcions:
 
     - La durada __màxima__ del vídeo ha de ser 10 minuts.
 
+En qualsevol cas, també cal lliurar la carpeta amb el repositori de Git
+que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
+
 
 ## Exercici
 
@@ -51,6 +54,10 @@ Per a lliurar aquest exercici podeu triar entre una de les següents opcions:
 
     1. Revisa [[introduccio#historic-de-canvis-git-log]] per veure
         la configuració de l'àlies `git lga`.
+
+!!! danger
+    Crea el nou repositori __en una carpeta independent__ per evitar
+    problemes amb els exemples i exercicis anteriors.
 
 
 1. Crea un directori anomenat `bloc2_exercici` en la teua carpeta de treball.
