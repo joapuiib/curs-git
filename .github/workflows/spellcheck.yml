@@ -13,7 +13,7 @@ jobs: # Llista de tasques a executar
     runs-on: ubuntu-latest # Sistema operatiu on s'executarà la tasca
 
     outputs:
-      CHANGED_FILES: ${{ steps.get-changed-files.outputs.CHANGED_FILES }}
+      EXIST_CHANGED_FILES: ${{ steps.get-changed-files.outputs.EXIST_CHANGED_FILES }}
 
     steps: # Passos a executar
       - uses: actions/checkout@v4 # Acció per clonar i còpiar el repositori a l'entorn d'execució
@@ -23,17 +23,16 @@ jobs: # Llista de tasques a executar
         id: get-changed-files
         run: |
           CHANGED_FILES=$(git diff --name-only origin/main HEAD | grep 'docs/.*\.md$' || true)
-          echo "CHANGED_FILES=$CHANGED_FILES" >> $GITHUB_OUTPUT
-          if [ -z "$CHANGED_FILES" ]; then
-              echo "No files to check"
-          else
-              echo "Files to check: $CHANGED_FILES"
+          EXIST_CHANGED_FILES=0
+          if [ -n "$CHANGED_FILES" ]; then
+              EXIST_CHANGED_FILES=1
           fi
+          echo "EXIST_CHANGED_FILES=$EXIST_CHANGED_FILES" >> $GITHUB_OUTPUT
 
 
   spellcheck: # Nom de la tasca
     needs: changed-files # Tasca que s'executarà abans
-    if: github.event.pull_request.draft == false && needs.changed-files.outputs.CHANGED_FILES != '' # Condició per executar la tasca
+    if: github.event.pull_request.draft == false && needs.changed-files.outputs.EXIST_CHANGED_FILES == '1' # Condició per executar la tasca
 
     runs-on: ubuntu-latest # Sistema operatiu on s'executarà la tasca
 
@@ -43,6 +42,8 @@ jobs: # Llista de tasques a executar
 
     steps: # Passos a executar
       - uses: actions/checkout@v4 # Acció per clonar i còpiar el repositori a l'entorn d'execució
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5 # Acció per configurar Python
         with:
           python-version: 3.x
@@ -66,7 +67,7 @@ jobs: # Llista de tasques a executar
           hunspell -D
       - name: Spell check # Acció per comprovar l'ortografia dels documents
         run: |
-          CHANGED_FILES=$(echo "$CHANGED_FILES" | sed 's/\/index//' | sed 's/docs/site/' | sed 's/.md$/\/index.html/')
+          CHANGED_FILES=$(git diff --name-only origin/main HEAD | grep 'docs/.*\.md$' | sed 's/\/index//' | sed 's/docs/site/' | sed 's/.md$/\/index.html/')
           echo "CHANGED_FILES=$CHANGED_FILES"
           for FILE in $(echo "$CHANGED_FILES"); do
               if [ -f $FILE ]; then

@@ -5,6 +5,11 @@ function print {
     RESET="\033[0m"
     echo -e "${GREEN}$1${RESET}"
 }
+function print_error {
+    RED="\033[0;31m"
+    RESET="\033[0m"
+    echo -e "${RED}$1${RESET}"
+}
 
 BUILD=0
 CI=0
@@ -55,12 +60,12 @@ while [ $# -gt 0 ] ; do
 done
 
 if [ -n "$ACT" ]; then
-    if ! which act 2>/dev/null; then
-        print "act not found."
+    if ! which act &>/dev/null; then
+        print_error "act not found."
         exit 1
     fi
     if [ ! -f ".github/workflows/$ACT" ]; then
-        print "Workflow $ACT not found."
+        print_error "Workflow $ACT not found."
         exit 1
     fi
     act -W .github/workflows/$ACT
@@ -105,6 +110,12 @@ if [ $SPELL -eq 1 ]; then
     export DICPATH=.hunspell/
     print "Checking spelling..."
     mkdir -p .hunspell
+
+    if ! which hunspell &>/dev/null; then
+        print_error "hunspell not found"
+        echo "    sudo apt install hunspell"
+        exit 1
+    fi
 
     if ! python -c 'import pyspelling' 2>/dev/null; then
         print "Installing pyspelling..."

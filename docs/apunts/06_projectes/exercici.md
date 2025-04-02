@@ -10,9 +10,9 @@ alias: projectes-exercici
 ## Objectius
 Els objectius d'aquests exercici són:
 
-- Conéixer com col·laborar en un projecte mitjançant _Pull Requests_.
-- Conéixer com fer un fork d'un projecte.
+- Conéixer com crear una bifurcació o _fork_ d'un projecte.
 - Conéixer com crear una _Pull Request_.
+- Conéixer com col·laborar en un projecte mitjançant _Pull Requests_.
 
 ## Enunciat
 El repositori [Filmoteca] conté diversos directoris amb informació sobre llibres, sèries i pel·lícules.
@@ -97,7 +97,7 @@ en el teu repositori local amb la informació corresponent.
         - ...
 
         ## Temporades
-        [Número de temporades de la sèrie i títol de cada temporada.]
+        [Nombre de temporades de la sèrie i títol de cada temporada.]
         ```
         > Edita els camps marcats entre els caràcters`[` i `]`.
 
@@ -105,8 +105,10 @@ en el teu repositori local amb la informació corresponent.
 1. Crea una :material-source-pull: _Pull Request_ amb els canvis realitzats a la branca `main` del repositori original.
     - Afegeix un títol i una descripció.
 
-A partir d'aquest punt __estigues atent!__ Aniré revisant les sol·licituds d'incorporació i
-pot ser indique que heu de fer alguna modificació.
+!!! important
+    A partir d'aquest punt __estigues atent!__
+
+    Aniré revisant les sol·licituds d'incorporació i pot ser indique que heu de fer alguna modificació.
 
 ## Ampliació
 Com a ampliació, pots revisar el repositori en busca d'incidències,

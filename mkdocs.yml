@@ -2,7 +2,7 @@ site_name: "Introducció a Git i la seua aplicació a l’aula"
 site_author: "Joan Puigcerver Ibáñez"
 site_email: "j.puigcerveribanez@edu.gva.es"
 site_url: https://joapuiib.github.io/curs-git/
-dev_addr: 127.0.0.1:4568
+dev_addr: 127.0.0.1:4567
 
 repo_name: joapuiib/curs-git
 repo_url: https://github.com/joapuiib/curs-git
@@ -73,6 +73,7 @@ theme:
 plugins:
   - alias:
       use_anchor_titles: true
+      use_page_icon: true
   - awesome-nav
   - drawio
   - macros
@@ -133,12 +134,12 @@ markdown_extensions:
       types:
         - caption
         - name: figure-caption
-          prefix: "Figura {}."
+          prefix: "Figura {}. "
         - name: shadow-figure-caption
-          prefix: "Figura {}."
+          prefix: "Figura {}. "
           classes: shadow
         - name: "table-caption"
-          prefix: "Taula {}."
+          prefix: "Taula {}. "
         - name: attribution
           classes: attribution
   - pymdownx.details

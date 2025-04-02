@@ -9,3 +9,21 @@
 .star {
   animation: star 500ms infinite;
 }
+
+.pr-draft {
+  color: #6a737d;
+}
+
+.issue-open,
+.pr-open {
+  color: #1a7f37;
+}
+
+.issue-closed,
+.pr-merged {
+  color: #8250df;
+}
+
+.pr-closed {
+  color: #b60205;
+}
