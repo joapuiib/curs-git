@@ -57,7 +57,7 @@ Estructura de treball amb Forks i Pull Requests
 
 
 ??? example "Exemple de bifurcació de :simple-materialformkdocs: Material for MkDocs"
-    La següent imatge mostra el repostori de [:simple-materialformkdocs: Material for MkDocs][mkdocs-material]
+    La següent imatge mostra el repositori de [:simple-materialformkdocs: Material for MkDocs][mkdocs-material]
 
     ![Repositori Material for MkDocs original](./img/forks/fork_principal.png)
     /// shadow-figure-caption
@@ -104,7 +104,7 @@ pots incorporar-los al teu _fork_ per mantindre'l actualitzat amb el botó __:oc
 
 
 ### :octicons-git-pull-request-24: Pull Request
-En cas que volguerem contribuir al repositori original,
+En cas que volguérem contribuir al repositori original,
 podem crear una [__sol·licitud d'incorporació de canvis__ o __:octicons-git-pull-request-24: Pull Request__][pr],
 que veurem en els següents apunts.
 

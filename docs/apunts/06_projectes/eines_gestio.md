@@ -119,7 +119,7 @@ Les incidències contenen la següent informació:
     per a la creació d'incidències, que faciliten la recopilació
     de la informació necessària.
 
-- __:fontawesome-solid-circle-user: Assignació__: Permeten assignar a un o més membres del projecte a l'incidència.
+- __:fontawesome-solid-circle-user: Assignació__: Permeten assignar a un o més membres del projecte a la incidència.
 - __:octicons-tag-24: Etiquetes__: Permeten categoritzar les incidències per a facilitar-ne la gestió.
 - __[:octicons-milestone-24: Fites](#fites)__: Permeten organitzar les incidències per complir un objectiu específic.
 - __:octicons-link-external-16: Referències__: Permeten relacionar aquesta incidència amb altres incidències
@@ -150,7 +150,7 @@ ha sigut resolta.
     d'una correcció en la documentació. Podeu veure el seu funcionament
     si trieu la plantilla __Correcció__ en la [creació d'una nova incidència][new-issue].
 
-    Les plantilles es defineixen en firxers :simple-markdown: Markdown,
+    Les plantilles es defineixen en fitxers :simple-markdown: Markdown,
     que s'han de guardar en la carpeta `.github/ISSUE_TEMPLATE`.
 
     ```markdown title=".github/ISSUE_TEMPLATE/correccio.md"
@@ -165,7 +165,7 @@ Els [__projectes de GitHub__](https://docs.github.com/es/issues/planning-and-tra
 les tasques d'un projecte.
 
 ??? example "Projecte d'exemple"
-    He creat un [__:octicons-table-16: Projecte d'exemple__][projecte-exemple] dins de l'organitació del curs.
+    He creat un [__:octicons-table-16: Projecte d'exemple__][projecte-exemple] dins de l'organització del curs.
     Aquest projecte està buit, però és útil perquè pugueu entrar i veure les diferents vistes i opcions que ofereix.
 
     [projecte-exemple]: https://github.com/orgs/cursgit/projects/1
@@ -231,7 +231,7 @@ Cada __fita__ conté la següent informació:
 
 
 Podeu accedir a les fites amb el botó __:octicons-milestone-24: Milestones__,
-desde la vista de __:octicons-issue-opened-16: Issues__ o 
+des de la vista de __:octicons-issue-opened-16: Issues__ o 
 __:material-source-pull: Pull Requests__ del repositori.
 
 ??? example "Fites a aquest repositori"
@@ -253,7 +253,7 @@ Els [__llançaments o *Releases*__](https://docs.github.com/es/github/administer
 que han contribuït.
 
 Els llançaments __sempre estan associats__ a una __[[etiquetes|:octicons-tag-16: etiqueta]]__,
-que pot existir prèviament o es pot crear al moment. Encara que són similars, no hem de confondre un llancament amb una etiqueta.
+que pot existir prèviament o es pot crear al moment. Encara que són similars, no hem de confondre un llançament amb una etiqueta.
 Els llançaments són elements de GitHub i, en canvi, les etiquetes són objectes de Git.
 
 ??? example "Llançaments a :simple-materialformkdocs: Material for MkDocs"

@@ -10,7 +10,7 @@ alias: projectes-exercici
 ## Objectius
 Els objectius d'aquests exercici són:
 
-- Conéixer com crear una bifuració o _fork_ d'un projecte.
+- Conéixer com crear una bifurcació o _fork_ d'un projecte.
 - Conéixer com crear una _Pull Request_.
 - Conéixer com col·laborar en un projecte mitjançant _Pull Requests_.
 

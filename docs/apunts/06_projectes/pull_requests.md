@@ -90,7 +90,7 @@ Les PR poden estar en quatre estats diferents:
 - __:octicons-git-pull-request-draft-24:{ .pr-draft } Esborrany (*Draft*)__: Creada, però no s'ha finalitzada.
 - __:octicons-git-pull-request-24:{ .pr-open } Oberta (*Open*)__: En procés de revisió i a punt per a ser fusionat.
 - __:material-source-merge:{ .pr-merged } Fusionada (*Merged*)__: Acceptada i incorporada al repositori.
-- __:octicons-git-pull-request-closed-24:{ .pr-closed } Tancada (*Closed*)__: Rebujtada o tancada sense incorporar.
+- __:octicons-git-pull-request-closed-24:{ .pr-closed } Tancada (*Closed*)__: Rebutjada o tancada sense incorporar.
 
 
 ### Enllaçar incidències a una Pull Request
