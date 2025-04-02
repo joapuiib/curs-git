@@ -60,7 +60,7 @@ while [ $# -gt 0 ] ; do
 done
 
 if [ -n "$ACT" ]; then
-    if ! which act 2>/dev/null; then
+    if ! which act &>/dev/null; then
         print_error "act not found."
         exit 1
     fi
@@ -111,7 +111,7 @@ if [ $SPELL -eq 1 ]; then
     print "Checking spelling..."
     mkdir -p .hunspell
 
-    if ! which hunspell 2>/dev/null; then
+    if ! which hunspell &>/dev/null; then
         print_error "hunspell not found"
         echo "    sudo apt install hunspell"
         exit 1
