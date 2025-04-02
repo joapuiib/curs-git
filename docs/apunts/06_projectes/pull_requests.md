@@ -53,10 +53,10 @@ Per crear una PR, cal accedir al teu _fork_ o branca i fer clic al botó __:mate
 En el procés de creació d'una PR s'han de seleccionar els repositori i les branques
 associades a la PR:
 
-    - __Base repository__: Repositori on s'incorporaran els canvis.
-    - __Base__: Branca de destí on s'incorporaran els canvis.
-    - __Head repository__: Repositori on es troba la branca amb els canvis.
-    - __Compare__: Branca amb els canvis que es volen incorporar.
+- __Base repository__: Repositori on s'incorporaran els canvis.
+- __Base__: Branca de destí on s'incorporaran els canvis.
+- __Head repository__: Repositori on es troba la branca amb els canvis.
+- __Compare__: Branca amb els canvis que es volen incorporar.
 
 A més, es pot afegir informació addicional com:
 
@@ -91,6 +91,55 @@ Les PR poden estar en quatre estats diferents:
 - __:octicons-git-pull-request-24:{ .pr-open } Oberta (*Open*)__: En procés de revisió i a punt per a ser fusionat.
 - __:material-source-merge:{ .pr-merged } Fusionada (*Merged*)__: Acceptada i incorporada al repositori.
 - __:octicons-git-pull-request-closed-24:{ .pr-closed } Tancada (*Closed*)__: Rebujtada o tancada sense incorporar.
+
+
+### Enllaçar incidències a una Pull Request
+Quan es treballa en un projecte, sovint les Pull Request estan relacionades amb
+[:octicons-issue-opened-16: incidències][issues] específiques.
+GitHub permet enllaçar-les de tal manera que,
+quan la PR és acceptada, les incidències es tancaran automàticament.
+
+[issues]: eines_gestio.md#incidencies
+
+A més, __millora la traçabilitat__ del desenvolupament i __facilita el seguiment dels canvis__
+realitzats per a la resolució de les incidències.
+
+!!! docs
+    - [:octicons-link-external-16: Linking a pull request to an issue | :simple-github: GitHub Docs](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue)
+
+Les incidències poden ser enllaçades a una PR de dues maneres:
+
+- Mitjançant l'apartat __Development__ en la barra lateral en la pàgina.
+- Utilitzant __paraules clau__ amb el número incidència en la descripció.
+    - `close`
+    - `closes`
+    - `closed`
+    - `fix`
+    - `fixes`
+    - `fixed`
+    - `resolve`
+    - `resolves`
+    - `resolved`
+
+    Un exemple de sintaxi és:
+
+    ```text
+    Closes #10
+    ```
+    > On `#10` és el número d'incidència que es desitja enllaçar.
+
+
+??? example "Exemple d'incidències enllaçades a una PR"
+    La següent imatge mostra una [PR sobre el repositori :simple-materialformkdocs: Material for MkDocs][mkdocs-material-pr-issue]
+    s'ha referenciat una incidència per resoldre la barra lateral en el navegador :simple-firefox: Firefox.
+
+    ![Incidència enllaçada a una Pull Request](./img/pr/reference-issue.png)
+    /// shadow-figure-caption
+    Incidència enllaçada a una Pull Request
+    ///
+
+[mkdocs-material-pr-issue]: https://github.com/squidfunk/mkdocs-material/pull/8085
+
 
 
 ### Incorporació d'una Pull Request
