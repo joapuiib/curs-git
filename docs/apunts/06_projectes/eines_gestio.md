@@ -5,8 +5,9 @@ icon: material/book-open-variant
 alias: eines-gestio
 comments: true
 tags:
-    - issues
     - discussions
+    - issues
+    - milestones
     - projects
     - releases
 ---
@@ -118,11 +119,12 @@ Les incidències contenen la següent informació:
     per a la creació d'incidències, que faciliten la recopilació
     de la informació necessària.
 
-- __Etiquetes__: permeten categoritzar les incidències per a facilitar-ne la gestió.
-- __Assignació__: assignació de la incidència a un o més membres del projecte.
-- __Referències__: en una incidència es poden referenciar altres incidències,
-    o es pot veure si aquesta incidència ha segut referenciada en altres llocs.
-- __Pull Requests__: si la incidència està relacionada amb una [:material-source-pull: Pull Request][pr].
+- __:fontawesome-solid-circle-user: Assignació__: Permeten assignar a un o més membres del projecte a l'incidència.
+- __:octicons-tag-24: Etiquetes__: Permeten categoritzar les incidències per a facilitar-ne la gestió.
+- __[:octicons-milestone-24: Fites](#fites)__: Permeten organitzar les incidències per complir un objectiu específic.
+- __:octicons-link-external-16: Referències__: Permeten relacionar aquesta incidència amb altres incidències
+    o consultar si aquesta ha segut referenciada per altres.
+- __[:material-source-pull: Pull Requests][pr]__: si la incidència està relacionada amb una __sol·licitud de incorporació__.
 
 [pr]: pull_requests.md
 
@@ -192,7 +194,7 @@ que inclouen diferents vistes i organització de les tasques:
 - __My items__: Semblant a la vista de "Team planning", però mostra només les tasques assignades a l'usuari.
 
 Cada tasca es crea com un __:material-dots-circle: Esborrany (_Draft_)__, que pot ser
-convertida a una __:octicons-issue-opened-16: Incidència__ en el repositori.
+convertida a una __[:octicons-issue-opened-16: Incidència](#incidencies)__ en el repositori.
 
 Cada tasca conté la mateixa informació que una incidència, però a més, es pot
 especificar:
@@ -209,6 +211,41 @@ especificar:
 /// shadow-figure-caption
 Exemple de tasca en un projecte de GitHub
 ///
+
+
+### :octicons-milestone-24: Fites
+Les [__fites o *Milestones*__][milestones] són un mecanisme per organitzar
+[:octicons-issue-opened-16: Incidències](#incidencies)
+i [:material-source-pull: _Pull Requests_][pr]
+dins d'un repositori. S'utilitzen per __definir objectius específics__
+en el desenvolupament del projecte.
+
+[milestones]: https://docs.github.com/es/issues/using-labels-and-milestones-to-track-work/about-milestones
+
+Cada __fita__ conté la següent informació:
+
+- __Títol__
+- __Descripció__
+- __Data de venciment__ (Opcional)
+- __Percentatge de progrés__, calculat respecte de les incidències obertes i tancades.
+
+
+Podeu accedir a les fites amb el botó __:octicons-milestone-24: Milestones__,
+desde la vista de __:octicons-issue-opened-16: Issues__ o 
+__:material-source-pull: Pull Requests__ del repositori.
+
+??? example "Fites a aquest repositori"
+    En [aquest repositori][curs-git] s'ha creat [una fita][curs-git-milestone]
+    per a organitzar les incidències relacionades amb la preparació de la documentació
+    per a portar a terme el curs.
+
+    ![Fita en aquest repositori](./img/projectes/milestones.png)
+    /// shadow-figure-caption
+    [Fita en aquest repositori][curs-git-milestone]
+    ///
+
+[curs-git]: https://github.com/joapuiib/curs-git/
+[curs-git-milestone]: https://github.com/joapuiib/curs-git/milestone/1
 
 ### :material-tray-arrow-up: Llançaments
 Els [__llançaments o *Releases*__](https://docs.github.com/es/github/administering-a-repository/releasing-projects-on-github/about-releases)

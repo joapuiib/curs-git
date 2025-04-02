@@ -108,4 +108,4 @@ En cas que volguerem contribuir al repositori original,
 podem crear una [__sol·licitud d'incorporació de canvis__ o __:octicons-git-pull-request-24: Pull Request__][pr],
 que veurem en els següents apunts.
 
-[pr]: pull-requests.md
+[pr]: pull_requests.md
