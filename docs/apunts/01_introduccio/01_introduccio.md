@@ -253,12 +253,14 @@ Per afegir els canvis al nostre repositori, el següent pas és afegir
 els canvis a l'_Àrea de Preparació_ amb l'ordre `git add`.
 Aquesta comanda permet especificar quins canvis es desitja afegir.
 
-!!! info
-    ```bash
-    git add <path>
-    ```
+La sintaxi és la següent:
 
-    - `path`: Ruta del fitxer o directori que es vol afegir a l'_Àrea de Preparació_.
+```bash
+git add [--all] <path>
+```
+
+- `path`: Ruta del fitxer o directori que es vol afegir a l'_Àrea de Preparació_.
+- `--all`: Opcional. Afegix tots els fitxers modificats i eliminats a l'_Àrea de Preparació_.
 
 
 ```shellconsole
