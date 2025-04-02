@@ -47,5 +47,5 @@ Els objectius d'aquests exercici són:
 
 ## Bibliografia
 - Basat en l'exercici de la sessió 1 del curs
-    [Gestió de la tasca docent con GitHub](https://github.com/pedroprieto/curso-github){:target="_blank"}
+    [Gestió de la tasca docent amb GitHub](https://github.com/pedroprieto/curso-github){:target="_blank"}
     de Pedro Prieto.
