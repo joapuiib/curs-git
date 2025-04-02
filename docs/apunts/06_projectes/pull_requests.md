@@ -12,7 +12,7 @@ tags:
 *[PR]: Pull Request
 
 ## :material-source-pull: Pull Requests
-Una [__Sol·licitud de Incorporació o *Pull Request (PR)*__](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests){:target="_blank"}
+Una [__Sol·licitud de Incorporació o *Pull Request (PR)*__](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests)
 és una sol·licitud per a incorporar canvis a una branca d'un repositori.
 
 Les PR poden ser utilitzats per a:
@@ -42,109 +42,147 @@ on els mantenidors poden revisar els canvis proposats per la comunitat.
     existeixen múltiples PR on s'han realitzat canvis per a millorar el tema
     o actualitzar la documentació.
 
-    ![Sol·licitud de Pull Request](./img/forks/pull_request.png)
+    ![Sol·licitud de Pull Request](./img/pr/pull_request.png)
     /// shadow-figure-caption
-    Exemple de [Pull Request en el repositori :simple-materialformkdocs: Material for MkDocs](https://github.com/squidfunk/mkdocs-material/pulls){:target="_blank"}
+    Exemple de [Pull Request en el repositori :simple-materialformkdocs: Material for MkDocs](https://github.com/squidfunk/mkdocs-material/pulls)
     ///
 
 ### Creació d'una Pull Request
 Per crear una PR, cal accedir al teu _fork_ o branca i fer clic al botó __:material-source-pull: Pull Request__.
 
-En el procés de creació d'una PR, es mostrarà una pantalla on es compararan els canvis realitzats
-amb la branca de destí i es podrà afegir informació addicional com el títol i la descripció.
+En el procés de creació d'una PR s'han de seleccionar els repositori i les branques
+associades a la PR:
+
+    - __Base repository__: Repositori on s'incorporaran els canvis.
+    - __Base__: Branca de destí on s'incorporaran els canvis.
+    - __Head repository__: Repositori on es troba la branca amb els canvis.
+    - __Compare__: Branca amb els canvis que es volen incorporar.
+
+A més, es pot afegir informació addicional com:
+
+- __Títol__: Breu descripció dels canvis realitzats.
+- __Descripció__: Informació addicional sobre els canvis realitzats.
+
 
 ??? example "Creació d'una Pull Request"
-    A la branca `feature/time-range` del meu _fork_ podem crear una PR per a incorporar els canvis al repositori original.
+    En aquest exemple s'ha creat una PR per incorporar nous canvis a la documentació
+    de [:simple-materialformkdocs: Material for MkDocs][mkdocs-material].
 
-    ![Creació d'una Pull Request](./img/forks/pull_request_create.png)
-    /// shadow-figure-caption
-    Creació d'una Pull Request
-    ///
+    - __Base repository__: [`squidfunk/mkdocs-material`][mkdocs-material]
+    - __Base__: Branca `master`
+    - __Head repository__: El fork [`joapuiib/mkdocs-material`][mkdocs-material-fork]
+    - __Compare__: Branca `feature/caption-docs`
 
 
-    En la pantalla de creació d'una PR es poden veure els canvis realitzats en la branca `feature/time-range`
-    respecte a la branca de destí `verion3`.
-
-    ![Comparació de canvis en una Pull Request](./img/forks/pull_request_compare.png)
+    ![Comparació de canvis en una Pull Request](./img/pr/pull_request_compare.png)
     /// shadow-figure-caption
     Comparació de canvis en una Pull Request
     ///
 
+[mkdocs-material]: https://github.com/squidfunk/mkdocs-material
+[mkdocs-material-fork]: https://github.com/joapuiib/mkdocs-material
+
 Una vegada creat la PR, es pot sol·licitar la revisió dels canvis a altres usuaris
-i realitzar els canvis necessaris fins a la seva acceptació.
+i realitzar els canvis necessaris fins a la seua acceptació.
 
 Les PR poden estar en quatre estats diferents:
 
-- __:octicons-git-pull-request-draft-24: Esborrany o *Draft*__: En procés de creació.
-- __:octicons-git-pull-request-24: Obert__: En procés de revisió i llest per a ser fusionat.
-- __:material-source-merge: Fusionat__: acceptat i incorporat al repositori.
-- __:octicons-git-pull-request-closed-24: Tancat__: rebutjat o tancat sense incorporar.
+- __:octicons-git-pull-request-draft-24:{ .pr-draft } Esborrany (*Draft*)__: Creada, però no s'ha finalitzada.
+- __:octicons-git-pull-request-24:{ .pr-open } Oberta (*Open*)__: En procés de revisió i a punt per a ser fusionat.
+- __:material-source-merge:{ .pr-merged } Fusionada (*Merged*)__: Acceptada i incorporada al repositori.
+- __:octicons-git-pull-request-closed-24:{ .pr-closed } Tancada (*Closed*)__: Rebujtada o tancada sense incorporar.
 
 
 ### Incorporació d'una Pull Request
-Quan una PR és acceptat, els canvis es fusionen amb la branca de destí i es tanca la PR.
+Quan una PR és acceptada, els canvis s'incorporen a la branca de destí i la PR és marcada com a fusionada.
 
-La fusió del PR pot ser de diferents tipus:
+La incorporació del PR es pot realitzar de tres maneres diferents:
 
-- __Crear un _commit_ de fusió__: es crea un nou _commit_ que incorpora els canvis de la PR, com en una [[branques#fusio-de-branques-divergents]]{:target="_blank"}.
-- __Fusió en un sol _commit_ (`squash`)__: es fusionen tots els canvis de la PR en un sol _commit_ mitjançant [[squash]]{:target="_blank"}.
-- __Canvi de base (`rebase`)__: es realitza un [[branques#canvi-de-base-rebase]]{:target="_blank"} de la branca de la PR respecte a la branca de destí
-    i es fusiona amb una [[branques#fusio-directa]]{:target="_blank"}.
+- __Crear un _commit_ de fusió__: es crea un nou _commit_ que incorpora els canvis de la PR, com en una [[branques#fusio-de-branques-divergents]].
+- __Fusió en un sol _commit_ (`squash`)__: es fusionen tots els canvis de la PR en un sol _commit_ mitjançant [[squash]].
+- __Canvi de base (`rebase`)__: es realitza un [[branques#canvi-de-base-rebase]] de la branca de la PR respecte a la branca de destí
+    i es fusiona mitjançant una [[branques#fusio-directa]].
 
-![Tipus de fusió d'una Pull Request](./img/forks/merge-pull-request-options.webp){: style="max-height: 300px;"}
+!!! recommend
+    La fusió en un sol _commit_ (`squash`) és útil per a mantindre una història de _commits_
+    més clara, ordenada i concisa.
+
+    Si es desitja consultar el procés de revisió de la branca, sempre es pot accedir a la PR
+    on es troben tots els canvis realitzats.
+
+![Tipus de fusió d'una Pull Request](./img/pr/merge-pull-request-options.webp){: style="max-height: 300px;"}
 /// shadow-figure-caption
 Tipus de fusió d'una Pull Request
 ///
 
-### Configuració de les Pull Requests
-El repositori pot ser configurat per habilitar els diferents tipus de fusió,
-entre altres configuracions a l'apartat __:octicons-gear-16: Settings__
 
-![Configuració de les opcions de les Pull Requests](./img/forks/pull_request_config.png)
+### Configuració de les Pull Requests
+El repositori pot ser configurat per habilitar les diferents tècniques de incorporació,
+entre altres configuracions a l'__apartat Pull Requests__ de la configuració
+del repositori (__:octicons-gear-16: Settings__).
+
+![Configuració de les opcions de les Pull Requests](./img/pr/pull_request_config.png)
 /// shadow-figure-caption
 Configuració de les opcions de les Pull Requests
 ///
 
 ## Flux de treball
-Amb aquestes dues funcionalitats, es pot establir un flux de treball per a la col·laboració
-en projectes de desenvolupament de programari.
+El flux de treball amb les PR no és diferent a les a [[estrategies]],
+sinó que ens proporciona un mecanisme addicional per a la revisió i incorporació de canvis.
 
 Aquest flux de treball pot ser el següent:
 
-1. Realitzar un _fork_ del repositori original.
-2. Clonar el _fork_ en el teu entorn de desenvolupament.
-3. Crear una branca per a realitzar els canvis.
-4. Realitzar els canvis en la branca.
-5. Publicar la branca en el _fork_.
-6. Crear una PR per a incorporar els canvis al repositori original.
-7. Revisar i debatre els canvis amb els revisors.
-8. Incorporar els canvis al repositori original.
-9. Actualitzar el _fork_ amb els canvis del repositori original.
+=== "En el mateix repositori"
+
+    1. Crear una nova branca per a realitzar els canvis.
+    1. Realitzar els canvis en la branca.
+    1. Crear una PR per a incorporar els canvis a la branca principal o de desenvolupament.
+    1. Revisar i debatre els canvis amb els revisors.
+    1. Actualitzar la PR amb els canvis necessaris o amb l'estat més recent
+        de la branca de destí.
+    1. Incorporar els canvis al repositori original.
+
+=== "En un _fork_ (:material-open-source-initiative: Codi obert)"
+
+    1. Crear un _fork_ del repositori principal.
+    1. Clonar el _fork_ en el teu entorn de desenvolupament.
+    1. Crear una branca per a realitzar els canvis.
+    1. Realitzar els canvis en la branca.
+    1. Publicar la branca en el _fork_.
+    1. Crear una PR per a incorporar els canvis del _fork_ al repositori principal.
+    1. Revisar i debatre els canvis amb els revisors.
+    1. Actualitzar la PR amb els canvis necessaris o amb l'estat més recent
+        de la branca de destí.
+    1. Incorporar els canvis al repositori original.
+    1. Sincronitzar (:octicons-sync-24: _Sync_) el _fork_ amb els nous canvis
+        del repositori original.
 
 ## Protecció de branques
 Per a evitar canvis no desitjats en les branques principals
 i evitar problemes deguts a una mala aplicació de les [[estrategies]],
-les branques importants `main` i `develop` poden ser protegides
-mitjançant [__conjunts de regles (_Rulesets_)__](https://docs.github.com/es/github/administering-a-repository/defining-the-mergeability-of-pull-requests){:target="_blank"}.
+les branques importants (com `main` o `develop`) poden ser protegides
+mitjançant [__conjunts de regles (_Rulesets_)__](https://docs.github.com/es/github/administering-a-repository/defining-the-mergeability-of-pull-requests).
 
 Per configurar les regles de protecció de branques, cal accedir a la configuració del repositori __:octicons-gear-16: Settings__
 i buscar l'apartat __:material-book-arrow-up-outline: Rules__.
-
-![Protecció de branques](./img/forks/ruleset.png)
-/// shadow-figure-caption
-Protecció de branques
-///
 
 Aquestes regles permeten definir les condicions per modificar la branca especificada,
 com ara:
 
 - Protegir-les contra creació, modificació o eliminació.
-- Obligar a mantindre una història lineal.
+- Requerir mantindre una història lineal.
 - No permetre publicacions forçades (`push --force`).
-- Requerir que les [[actions|comprovacions automàtiques]]{:target="_blank"} s'hagen realitzat correctament.
+- Requerir que les [[actions|comprovacions automàtiques]] s'hagen completat satisfactòriament.
 - Requerir que la fusió es realitze mitjançant una PR.
     
     En aquest cas, es poden configurar altres opcions com:
 
+    - Requerir que la branca estiga actualitzada amb la branca de destí.
     - Requerir revisió d'un nombre mínim de revisors.
     - Requerir una resolució dels conflictes abans de la fusió.
+
+![Protecció de branques](./img/pr/ruleset.png)
+/// shadow-figure-caption
+Protecció de branques
+///
+
