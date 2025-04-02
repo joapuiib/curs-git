@@ -134,12 +134,12 @@ markdown_extensions:
       types:
         - caption
         - name: figure-caption
-          prefix: "Figura {}."
+          prefix: "Figura {}. "
         - name: shadow-figure-caption
-          prefix: "Figura {}."
+          prefix: "Figura {}. "
           classes: shadow
         - name: "table-caption"
-          prefix: "Taula {}."
+          prefix: "Taula {}. "
         - name: attribution
           classes: attribution
   - pymdownx.details
