@@ -13,6 +13,10 @@ Els objectius d'aquest exercici són:
 - Conéixer com fusionar de branques en un sol _commit_.
 - Conéixer com aplicar la còpia de _commits_.
 
+
+## Lliurament
+No es requereix lliurament d'aquest exercici.
+
 ## Exercici
 A partir del següent repositori inicial:
 
