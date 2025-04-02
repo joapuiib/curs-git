@@ -15,7 +15,7 @@ Els objectius d'aquest exercici són:
 
 
 ## Lliurament
-No es requereix lliurament d'aquest exercici.
+No es requereix el lliurament d'aquest exercici.
 
 
 ## Exercici
