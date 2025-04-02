@@ -6,6 +6,7 @@ alias: forks
 comments: true
 tags:
     - fork
+    - sync
 ---
 
 *[PR]: Pull Request
@@ -89,7 +90,7 @@ i fer clic al botó __:material-source-fork: Fork__ que apareix a la part superi
 
 ### :octicons-sync-24: Sincronització amb el repositori original
 Si el repositori original ha realitzat nous canvis des de la creació del _fork_,
-pots incorporar-los al teu _fork_ per mantindre'l actualitzat amb el botó __:octicons-sync-24: Sync__.
+pots incorporar-los al teu _fork_ per mantindre'l actualitzat amb el botó __:octicons-sync-24: Sync fork__.
 
 ??? example "Sincronització amb el repositori original"
     Com que el repositori original :simple-materialformkdocs: Material for MkDocs té nous canvis
