@@ -37,6 +37,10 @@ projectes.
 ??? prep "Preparació repositori local"
     En aquest material treballarem sobre un nou repositori local.
 
+    !!! danger
+        Crea el nou repositori __en una carpeta independent__ per evitar
+        problemes amb els exemples i exercicis anteriors.
+
     __Inicialització:__
     ```bash
     --8<-- "docs/files/remots/stdout/remots/setup_remots.sh"

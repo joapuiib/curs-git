@@ -26,6 +26,11 @@ A partir del següent repositori inicial:
 ```
 
 !!! prep "Preparació repositori inicial"
+
+    !!! danger
+        Crea el nou repositori __en una carpeta independent__ per evitar
+        problemes amb els exemples i exercicis anteriors.
+
     Pots executar el següent script per obtenir el repositori inicial:
 
     !load_file "avancat/stdout/exercici/setup_exercici_avancat.sh"

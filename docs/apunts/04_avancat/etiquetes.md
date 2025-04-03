@@ -32,6 +32,11 @@ Hi ha dos tipus d'etiquetes, les __etiquetes lleugeres__ i les __etiquetes anota
     - Apartat [2.6 Git Basics - Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging){target=_blank} del llibre Pro Git.
 
 ??? prep "Preparació repositori"
+
+    !!! danger
+        Crea el nou repositori __en una carpeta independent__ per evitar
+        problemes amb els exemples i exercicis anteriors.
+
     /// collapse-code
     ```bash title="setup_tags.sh"
     --8<-- "docs/files/avancat/stdout/etiquetes/setup_tags.sh"

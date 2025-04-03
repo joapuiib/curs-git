@@ -36,6 +36,10 @@ que té connotacions racistes.
 ??? prep "Preparació repositori d'exemple"
     En aquest material treballarem sobre un nou repositori local.
 
+    !!! danger
+        Crea el nou repositori __en una carpeta independent__ per evitar
+        problemes amb els exemples i exercicis anteriors.
+
     __Inicialització:__
     ```bash
     --8<-- "docs/files/branques/stdout/branques/setup_branques.sh"
