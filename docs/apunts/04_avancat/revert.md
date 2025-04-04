@@ -30,11 +30,12 @@ Funcionament de `git revert`.
 ///
 
 ??? prep "Preparació repositori"
-    /// collapse-code
-    ```bash title="setup_revert.sh"
-    --8<-- "docs/files/avancat/stdout/revert/setup_revert.sh"
-    ```
-    ///
+
+    !!! danger
+        Crea el nou repositori __en una carpeta independent__ per evitar
+        problemes amb els exemples i exercicis anteriors.
+
+    !load_file "avancat/stdout/revert/setup_revert.sh"
 
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/revert/setup_revert.txt"

@@ -7,7 +7,7 @@ comments: true
 ---
 
 ## Exemple: Estratègia de ramificació
-En aquest material veurem com es pot utilitzar una estratègia de ramificació
+En aquests apunts veurem com es pot utilitzar una estratègia de ramificació
 en un projecte de desenvolupament de programari.
 
 En aquest projecte utilitzarem la tècnica d'integració [[estrategies#fusio-merge-squash]]{:target=_blank}.

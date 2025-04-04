@@ -25,11 +25,11 @@ posteriorment quan siga necessari.
     Inicialitzem un repositori amb canvis en el fitxer `README.md`
     i una branca addicional `altres_canvis` on s'han fet canvis al mateix fitxer.
 
-    /// collapse-code
-    ```bash title="setup_stash.sh"
-    --8<-- "docs/files/avancat/stdout/stash/setup_stash.sh"
-    ```
-    ///
+    !!! danger
+        Crea el nou repositori __en una carpeta independent__ per evitar
+        problemes amb els exemples i exercicis anteriors.
+
+    !load_file "avancat/stdout/stash/setup_stash.sh"
 
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/stash/setup_stash.txt"
