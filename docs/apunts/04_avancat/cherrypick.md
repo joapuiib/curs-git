@@ -35,6 +35,10 @@ Funcionament de `git cherry-pick`.
     Per a aquest exemple, crearem un nou repositori per emmagatzemar
     begudes i menjars en els seus fitxers corresponents.
 
+    !!! danger
+        Crea el nou repositori __en una carpeta independent__ per evitar
+        problemes amb els exemples i exercicis anteriors.
+
     !load_file "avancat/stdout/cherrypick/setup_cherrypick.sh"
 
     ```shellconsole

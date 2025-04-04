@@ -13,6 +13,38 @@ Els objectius d'aquests exercici són:
 - Identificar els principals avantatges i desavantatges de cada estratègia de ramificació.
 - Identificar i saber solucionar els problemes associats a cada estratègia de ramificació.
 
+
+# Lliurament
+Per a lliurar aquest exercici podeu triar entre una de les següents opcions:
+
+=== "Document PDF"
+    Documenteu els passos realitzats en un document de text.
+
+    - Cal incloure captures de pantalla amb els passos realitzats
+        i els resultats obtinguts.
+
+        > És recomanable mostrar l'estat del repositori amb `git status` o `git lga`
+
+        > Retalla les captures de pantalla per mostrar sols la informació rellevant.
+    
+    - S'ha de lliurar en format __PDF__.
+
+=== "Vídeo de la pantalla"
+    Una vegada acabat l'exercici, graveu un vídeo de la pantalla
+    mostrant i explicant els passos realitzats i el resultat final.
+
+    > No cal que es graveu a vosaltres mateixos, només la pantalla.
+
+    !!! important
+        No esborreu les branques de funcionalitat en l'exercici,
+        per poder mostrar-les en el vídeo.
+
+    - La durada __màxima__ del vídeo ha de ser 10 minuts.
+
+En qualsevol cas, també cal lliurar la carpeta amb el repositori de Git
+que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
+        
+
 ## Enunciat
 Crea un repositori de Git per guardar les teues pel·lícules i sèries preferides.
 
@@ -29,7 +61,7 @@ pots triar entre les següents opcions:
 - [[estrategies#fusio-merge-no-ff]]{:target="_blank"}
 - [[estrategies#canvi-de-base-rebase-merge-ff-only]]{:target="_blank"}
 - [[estrategies#fusio-rebase-merge-no-ff]]{:target="_blank"}
-- [[estrategies##fusio-merge-squash-ff-only]]{:target="_blank"}
+- :octicons-thumbsup-16:{ .success title="Opció recomanada" } [[estrategies#fusio-merge-squash]]{:target="_blank"}
 
 ### Tasca
 
@@ -59,5 +91,6 @@ pots triar entre les següents opcions:
 8. Publica els canvis a la branca principal `main`.
 
 ## Ampliació
-Realitza l'exercici amb totes les estratègies d'integració de
+Repeteix l'exercici utilitzant cada vegada una
+de les estratègies d'integració de les
 branques de funcionalitat.

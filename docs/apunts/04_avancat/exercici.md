@@ -13,6 +13,11 @@ Els objectius d'aquest exercici són:
 - Conéixer com fusionar de branques en un sol _commit_.
 - Conéixer com aplicar la còpia de _commits_.
 
+
+## Lliurament
+No es requereix el lliurament d'aquest exercici.
+
+
 ## Exercici
 A partir del següent repositori inicial:
 
@@ -21,6 +26,11 @@ A partir del següent repositori inicial:
 ```
 
 !!! prep "Preparació repositori inicial"
+
+    !!! danger
+        Crea el nou repositori __en una carpeta independent__ per evitar
+        problemes amb els exemples i exercicis anteriors.
+
     Pots executar el següent script per obtenir el repositori inicial:
 
     !load_file "avancat/stdout/exercici/setup_exercici_avancat.sh"

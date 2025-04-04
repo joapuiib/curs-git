@@ -14,6 +14,12 @@ Els objectius d'aquests exercici són:
 - Conéixer com crear una _Pull Request_.
 - Conéixer com col·laborar en un projecte mitjançant _Pull Requests_.
 
+
+# Lliurament
+Per a lliurar aquest exercici sols heu d'indicar la URL
+de la _Pull Request_ que heu creat en la bústia de l'exercici.
+
+
 ## Enunciat
 El repositori [Filmoteca] conté diversos directoris amb informació sobre llibres, sèries i pel·lícules.
 

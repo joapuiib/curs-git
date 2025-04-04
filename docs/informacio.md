@@ -57,8 +57,11 @@ Aquest lloc web està desenvolupat amb les següents eines i llibreries:
 - __[PyMdown Extensions](https://facelessuser.github.io/pymdown-extensions/){:target="_blank"}__: Extensions per a Python Markdown.
 - __[Pygments](https://pygments.org/){:target="_blank"}__: Ressaltat de sintaxi del codi per a Python.
 - __[:simple-git: Git](https://git-scm.com/){:target="_blank"}__: Sistema de control de versions.
-- __[GitHub Pages](https://pages.github.com/){:target="_blank"}__: Servei de pàgines web estàtiques de :simple-github: GitHub.
-- __[GitHub Actions](https://github.com/features/actions){:target="_blank"}__: Automatització de tasques de :simple-github: GitHub.
+- __[:simple-github: GitHub](https://github.com/){:target="_blank"}__: Allotjament del codi font i la documentació.
+- __[:octicons-browser-24: GitHub Pages](https://pages.github.com/){:target="_blank"}__: Servei de pàgines web estàtiques de :simple-github: GitHub.
+- __[:octicons-play-24: GitHub Actions](https://github.com/features/actions){:target="_blank"}__: Automatització de tasques de :simple-github: GitHub.
 - __[Diccionaris](https://github.com/Softcatala/catalan-dict-tools){:target="_blank"} de [:simple-softcatala: Softcatalà](https://www.softcatala.org/){:target="_blank"}__:
     Diccionaris utilitzats per a la correcció ortogràfica dels textos.
 - __[PySpelling](https://facelessuser.github.io/pyspelling/){:target="_blank"}__: Corrector ortogràfic.
+- __[:simple-diagramsdotnet: draw.io](https://app.diagrams.net/){:target="_blank"}__: Web per a la creació de diagrames en línia.
+    {.spell-ignore}

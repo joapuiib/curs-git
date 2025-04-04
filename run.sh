@@ -17,7 +17,7 @@ INSTALL_VENV=0
 SPELL=0
 ACT=''
 ALL=0
-SOURCES=''
+SPELL_SOURCES=''
 
 ARGS=''
 SPELL_ARGS=''
@@ -38,7 +38,7 @@ while [ $# -gt 0 ] ; do
             ARGS="$ARGS --clean"
             ;;
         --source | -S)
-            SOURCES="$SOURCES -S $2"
+            SPELL_SOURCES="$SPELL_SOURCES -S $2"
             shift
             ;;
         --all)
@@ -132,19 +132,20 @@ if [ $SPELL -eq 1 ]; then
     fi
 
     if [ $ALL -eq 0 ]; then
-        if [ -z "$SOURCES" ]; then
-            CHANGED_FILES=$(git diff --name-only main HEAD | grep 'docs/.*\.md$' | sed 's/\/index//' | sed 's/docs/site/' | sed 's/.md$/\/index.html/')
-            if [ -z "$CHANGED_FILES" ]; then
+        if [ -z "$SPELL_SOURCES" ]; then
+            SPELL_SOURCES=$(git diff --name-only main HEAD)
+            if [ -z "$SPELL_SOURCES" ]; then
                 print "No changes found."
                 exit
             fi
-            echo "Changed files:" $CHANGED_FILES
-            for FILE in $CHANGED_FILES; do
-                if [ -f $FILE ]; then
-                    SOURCES="$SOURCES -S $FILE"
-                fi
-            done
         fi
+        SPELL_SOURCES=$(echo "$SPELL_SOURCES" | grep 'docs/.*\.md$' | sed 's/\/index//' | sed 's/docs/site/' | sed 's/.md$/\/index.html/')
+
+        for FILE in $SPELL_SOURCES; do
+            if [ -f $FILE ]; then
+                SOURCES="$SOURCES -S $FILE"
+            fi
+        done
         SPELL_ARGS="$SPELL_ARGS --name mkdocs $SOURCES"
     fi
 
