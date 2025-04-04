@@ -1,7 +1,7 @@
 ---
 template: document.html
 title: "Preparació de l'entorn"
-icon: material/book-open-variant
+icon: material/tools
 alias: preparacio
 comments: true
 tags:
