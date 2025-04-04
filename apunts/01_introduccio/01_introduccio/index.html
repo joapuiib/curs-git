@@ -42,10 +42,11 @@
     
     <link rel="stylesheet" href="../../../stylesheets/site.css">
     <link rel="stylesheet" href="../../../stylesheets/admonitions.css">
-    <link rel="stylesheet" href="../../../stylesheets/highlight.css">
-    <link rel="stylesheet" href="../../../stylesheets/collapse-code.css">
-    <link rel="stylesheet" href="../../../stylesheets/download-button.css">
     <link rel="stylesheet" href="../../../stylesheets/badges.css">
+    <link rel="stylesheet" href="../../../stylesheets/code-block.css">
+    <link rel="stylesheet" href="../../../stylesheets/collapse-code.css">
+    <link rel="stylesheet" href="../../../stylesheets/highlight.css">
+    <link rel="stylesheet" href="../../../stylesheets/download-button.css">
     <link rel="stylesheet" href="../../../stylesheets/rubric.css">
     <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
@@ -2344,7 +2345,7 @@ dels canvis realitzats en tot l'arbre de directoris i fitxers a partir d'aquest 
 <li><strong>Codi obert i gratuït</strong>: Git és de codi obert i gratuït, la qual cosa significa que qualsevol pot utilitzar-lo sense cost i contribuir al desenvolupament de l'eina.</li>
 </ul>
 <h2 id="per-que-la-terminal">Per què la terminal?<a class="headerlink" href="#per-que-la-terminal" title="Permanent link">&para;</a></h2>
-<p>En aquest material, utilitzarem la terminal per a interactuar amb Git, però això no significa que siga l'única manera de fer-ho.
+<p>En aquests apunts, utilitzarem la terminal per a interactuar amb Git, però això no significa que siga l'única manera de fer-ho.
 De fet, pràcticament tots els entorns de desenvolupament moderns tenen integració amb Git, la qual cosa permet realitzar
 les mateixes operacions que proporciona la terminal, però de manera més visual i intuïtiva.</p>
 <p>No obstant això, és important conéixer com funcionen les comandes de Git en la terminal, per diferents raons:</p>
@@ -2365,6 +2366,27 @@ que conté tota la informació relativa al <strong>Repositori Local</strong>.</p
 <div class="admonition docs">
 <p class="admonition-title">Documentació</p>
 <p>Documentació oficial de <code>git init</code>: <a href="https://git-scm.com/docs/git-init">https://git-scm.com/docs/git-init</a></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Advertència</p>
+<p>Tingues en compte els següents aspectes importants a l'hora d'inicialitzar un repositori
+amb <code>git init</code>:</p>
+<ul>
+<li>
+<p>No has d'inicialitzar el repositori cada vegada que vulgues treballar en ell.
+    L'estat del repositori s'emmagatzema d'una manera persistent en
+    el directori ocult <code>.git</code>.</p>
+</li>
+<li>
+<p>Si inicialitzes un repositori en un directori que ja conté un repositori,
+    es crearà un nou repositori i el contingut del directori <code>.git</code> es sobreescriurà,
+    eliminant tota la informació anterior.</p>
+</li>
+<li>
+<p>Encara que és possible<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, no és recomanable inicialitzar un repositori en un directori
+    contingut dins d'un altre repositori.</p>
+</li>
+</ul>
 </div>
 <details class="example">
 <summary>Exemple: Inicialització d'un repositori</summary>
@@ -2991,6 +3013,15 @@ que complisquen algun dels patrons especificats.</p>
 <li><a href="https://stackoverflow.com/questions/35430584/how-is-the-git-hash-calculated">https://stackoverflow.com/questions/35430584/how-is-the-git-hash-calculated</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Diff">https://en.wikipedia.org/wiki/Diff</a></li>
 </ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Aquests repositoris es coneixen com a <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span> Submòduls</a>,
+que està fora de l'abast d'aquest curs.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
     </td></tr></tbody>
@@ -3024,7 +3055,7 @@ que complisquen algun dels patrons especificats.</p>
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2 d’abril del 2025 16:06:27">2 d’abril del 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="4 d’abril del 2025 14:29:05">4 d’abril del 2025</span>
   </span>
 
     

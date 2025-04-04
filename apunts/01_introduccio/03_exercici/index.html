@@ -42,10 +42,11 @@
     
     <link rel="stylesheet" href="../../../stylesheets/site.css">
     <link rel="stylesheet" href="../../../stylesheets/admonitions.css">
-    <link rel="stylesheet" href="../../../stylesheets/highlight.css">
-    <link rel="stylesheet" href="../../../stylesheets/collapse-code.css">
-    <link rel="stylesheet" href="../../../stylesheets/download-button.css">
     <link rel="stylesheet" href="../../../stylesheets/badges.css">
+    <link rel="stylesheet" href="../../../stylesheets/code-block.css">
+    <link rel="stylesheet" href="../../../stylesheets/collapse-code.css">
+    <link rel="stylesheet" href="../../../stylesheets/highlight.css">
+    <link rel="stylesheet" href="../../../stylesheets/download-button.css">
     <link rel="stylesheet" href="../../../stylesheets/rubric.css">
     <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
@@ -678,6 +679,15 @@
   <a href="#objectius" class="md-nav__link">
     <span class="md-ellipsis">
       Objectius
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lliurament" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lliurament
     </span>
   </a>
   
@@ -1817,6 +1827,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#lliurament" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lliurament
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercici" class="md-nav__link">
     <span class="md-ellipsis">
       Exercici
@@ -2002,11 +2021,51 @@
 <li>Conéixer com consultar la història de canvis del repositori local.</li>
 <li>Conéixer les configuracions bàsiques de Git.</li>
 </ul>
+<h2 id="lliurament">Lliurament<a class="headerlink" href="#lliurament" title="Permanent link">&para;</a></h2>
+<p>Per a lliurar aquest exercici podeu triar entre una de les següents opcions:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Document PDF</label><label for="__tabbed_1_2">Vídeo de la pantalla</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Documenteu els passos realitzats en un document de text.</p>
+<ul>
+<li>
+<p>Cal incloure captures de pantalla amb els passos realitzats
+    i els resultats obtinguts.</p>
+<blockquote>
+<p>És recomanable mostrar l'estat del repositori amb <code>git status</code> o <code>git lga</code></p>
+<p>Retalla les captures de pantalla per mostrar sols la informació rellevant.</p>
+</blockquote>
+</li>
+<li>
+<p>S'ha de lliurar en format <strong>PDF</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Una vegada acabat l'exercici, graveu un vídeo de la pantalla
+mostrant i explicant els passos realitzats i el resultat final.</p>
+<blockquote>
+<p>No cal que es graveu a vosaltres mateixos, només la pantalla.</p>
+</blockquote>
+<ul>
+<li>La durada <strong>màxima</strong> del vídeo ha de ser 10 minuts.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>En qualsevol cas, també cal lliurar la carpeta amb el repositori de Git
+que has creat durant l'exercici de forma comprimida en format <code>.zip</code> o <code>.tgz</code>.</p>
 <h2 id="exercici">Exercici<a class="headerlink" href="#exercici" title="Permanent link">&para;</a></h2>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Comprova l'estat del repositori amb <code>git status</code> després de cada ordre
-per entendre els diferents estats dels fitxers.</p>
+<p>Comprova l'estat del repositori amb <code>git status</code> i <code>git diff</code> després de cada pas
+per entendre els estats en el qual es pot trobar
+el repositori i els fitxers.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Perill</p>
+<p>Crea el nou repositori <strong>en una carpeta independent</strong> per evitar
+problemes amb els exemples i exercicis anteriors.</p>
 </div>
 <ol class="fancylists-decimal" type="1">
 <li>Crea un directori anomenat <code>bloc1_exercici</code> en la teua carpeta de treball.</li>
@@ -2074,7 +2133,7 @@ per entendre els diferents estats dels fitxers.</p>
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2 d’abril del 2025 16:06:27">2 d’abril del 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="4 d’abril del 2025 14:29:05">4 d’abril del 2025</span>
   </span>
 
     
