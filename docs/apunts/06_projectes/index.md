@@ -19,7 +19,7 @@ per gestionar projectes de programari.
 - [[forks]]: Creació i gestió de :material-source-fork: bifurcacions (_forks_).
 - [[pull-requests]]: Creació i gestió de :material-source-pull: sol·licituds d'incorporació de canvis (_pull requests_).
 - [[actions]]: Automatització de tasques amb :octicons-play-24: GitHub Actions.
-- [[projectes-exercici]]: Exercici pràctic d'aquet bloc.
+- [[projectes-exercici]]: Exercici pràctic d'aquest bloc.
 
 [discussions]: eines_gestio.md#debats
 [issues]: eines_gestio.md#incidencies
