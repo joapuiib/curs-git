@@ -64,3 +64,4 @@ Aquest lloc web està desenvolupat amb les següents eines i llibreries:
     Diccionaris utilitzats per a la correcció ortogràfica dels textos.
 - __[PySpelling](https://facelessuser.github.io/pyspelling/){:target="_blank"}__: Corrector ortogràfic.
 - __[:simple-diagramsdotnet: draw.io](https://app.diagrams.net/){:target="_blank"}__: Web per a la creació de diagrames en línia.
+    {.spell-ignore}
