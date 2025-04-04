@@ -19,6 +19,12 @@
         <xhtml:link rel="alternate" hreflang="ca" href="https://joapuiib.github.io/curs-git/apunts/"/>
     </url>
     <url>
+        <loc>https://joapuiib.github.io/curs-git/apunts/01_introduccio/</loc>
+        <lastmod>2025-04-04</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ca" href="https://joapuiib.github.io/curs-git/apunts/01_introduccio/"/>
+    </url>
+    <url>
         <loc>https://joapuiib.github.io/curs-git/apunts/01_introduccio/00_preparacio/</loc>
         <lastmod>2025-04-04</lastmod>
         <changefreq>daily</changefreq>
@@ -43,6 +49,12 @@
         <xhtml:link rel="alternate" hreflang="ca" href="https://joapuiib.github.io/curs-git/apunts/01_introduccio/03_exercici/"/>
     </url>
     <url>
+        <loc>https://joapuiib.github.io/curs-git/apunts/02_branques/</loc>
+        <lastmod>2025-04-04</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ca" href="https://joapuiib.github.io/curs-git/apunts/02_branques/"/>
+    </url>
+    <url>
         <loc>https://joapuiib.github.io/curs-git/apunts/02_branques/01_branques/</loc>
         <lastmod>2025-04-04</lastmod>
         <changefreq>daily</changefreq>
@@ -59,6 +71,12 @@
         <lastmod>2025-04-04</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ca" href="https://joapuiib.github.io/curs-git/apunts/02_branques/03_exercici/"/>
+    </url>
+    <url>
+        <loc>https://joapuiib.github.io/curs-git/apunts/03_remots/</loc>
+        <lastmod>2025-04-04</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ca" href="https://joapuiib.github.io/curs-git/apunts/03_remots/"/>
     </url>
     <url>
         <loc>https://joapuiib.github.io/curs-git/apunts/03_remots/01_remots/</loc>
@@ -83,6 +101,12 @@
         <lastmod>2025-04-04</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ca" href="https://joapuiib.github.io/curs-git/apunts/03_remots/03_exercici/"/>
+    </url>
+    <url>
+        <loc>https://joapuiib.github.io/curs-git/apunts/04_avancat/</loc>
+        <lastmod>2025-04-04</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ca" href="https://joapuiib.github.io/curs-git/apunts/04_avancat/"/>
     </url>
     <url>
         <loc>https://joapuiib.github.io/curs-git/apunts/04_avancat/amend/</loc>
@@ -131,6 +155,12 @@
         <lastmod>2025-04-04</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ca" href="https://joapuiib.github.io/curs-git/apunts/04_avancat/stash/"/>
+    </url>
+    <url>
+        <loc>https://joapuiib.github.io/curs-git/apunts/05_estrategies/</loc>
+        <lastmod>2025-04-04</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ca" href="https://joapuiib.github.io/curs-git/apunts/05_estrategies/"/>
     </url>
     <url>
         <loc>https://joapuiib.github.io/curs-git/apunts/05_estrategies/01_estrategies_ramificacio/</loc>
@@ -185,6 +215,12 @@
         <lastmod>2025-04-04</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ca" href="https://joapuiib.github.io/curs-git/apunts/06_projectes/pull_requests/"/>
+    </url>
+    <url>
+        <loc>https://joapuiib.github.io/curs-git/apunts/07_educativa/</loc>
+        <lastmod>2025-04-04</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ca" href="https://joapuiib.github.io/curs-git/apunts/07_educativa/"/>
     </url>
     <url>
         <loc>https://joapuiib.github.io/curs-git/apunts/07_educativa/01_educativa/</loc>

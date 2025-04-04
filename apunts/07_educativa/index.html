@@ -10,37 +10,45 @@
         <meta name="author" content="Joan Puigcerver Ibáñez">
       
       
+        <link rel="canonical" href="https://joapuiib.github.io/curs-git/apunts/07_educativa/">
       
       
+        <link rel="prev" href="../06_projectes/exercici/">
       
-      <link rel="icon" href="/curs-git/assets/images/favicon.png">
+      
+        <link rel="next" href="01_educativa/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
     
     
       
-        <title>Introducció a Git i la seua aplicació a l’aula</title>
+        <title>Bloc 7: GitHub com a plataforma educativa - Introducció a Git i la seua aplicació a l’aula</title>
       
     
     
     
-      <link rel="stylesheet" href="/curs-git/assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
       
         
-        <link rel="stylesheet" href="/curs-git/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
 
     
-    <link rel="stylesheet" href="/curs-git/stylesheets/site.css">
-    <link rel="stylesheet" href="/curs-git/stylesheets/admonitions.css">
-    <link rel="stylesheet" href="/curs-git/stylesheets/badges.css">
-    <link rel="stylesheet" href="/curs-git/stylesheets/code-block.css">
-    <link rel="stylesheet" href="/curs-git/stylesheets/collapse-code.css">
-    <link rel="stylesheet" href="/curs-git/stylesheets/highlight.css">
-    <link rel="stylesheet" href="/curs-git/stylesheets/download-button.css">
-    <link rel="stylesheet" href="/curs-git/stylesheets/rubric.css">
+    <link rel="stylesheet" href="../../stylesheets/site.css">
+    <link rel="stylesheet" href="../../stylesheets/admonitions.css">
+    <link rel="stylesheet" href="../../stylesheets/badges.css">
+    <link rel="stylesheet" href="../../stylesheets/code-block.css">
+    <link rel="stylesheet" href="../../stylesheets/collapse-code.css">
+    <link rel="stylesheet" href="../../stylesheets/highlight.css">
+    <link rel="stylesheet" href="../../stylesheets/download-button.css">
+    <link rel="stylesheet" href="../../stylesheets/rubric.css">
     <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    
     
 
     
@@ -56,13 +64,39 @@
       
     
     
-      <link rel="stylesheet" href="/curs-git/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/curs-git/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Bloc 7: GitHub com a plataforma educativa - Introducció a Git i la seua aplicació a l’aula" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="https://joapuiib.github.io/curs-git/assets/images/social/apunts/07_educativa/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://joapuiib.github.io/curs-git/apunts/07_educativa/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Bloc 7: GitHub com a plataforma educativa - Introducció a Git i la seua aplicació a l’aula" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="https://joapuiib.github.io/curs-git/assets/images/social/apunts/07_educativa/index.png" >
+      
     
     
   </head>
@@ -83,6 +117,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#bloc-7-github-com-a-plataforma-educativa" class="md-skip">
+          Salta el contingut
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -93,7 +132,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Capçalera">
-    <a href="/curs-git/." title="Introducció a Git i la seua aplicació a l’aula" class="md-header__button md-logo" aria-label="Introducció a Git i la seua aplicació a l’aula" data-md-component="logo">
+    <a href="../.." title="Introducció a Git i la seua aplicació a l’aula" class="md-header__button md-logo" aria-label="Introducció a Git i la seua aplicació a l’aula" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.546 10.93 13.067.452a1.55 1.55 0 0 0-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 0 1 2.327 2.341l2.658 2.66a1.838 1.838 0 0 1 1.9 3.039 1.837 1.837 0 0 1-2.6 0 1.85 1.85 0 0 1-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348a1.85 1.85 0 0 1 0 2.6 1.844 1.844 0 0 1-2.609 0 1.834 1.834 0 0 1 0-2.598c.182-.18.387-.316.605-.406V8.835a1.834 1.834 0 0 1-.996-2.41L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477a1.545 1.545 0 0 0 2.186 0l10.43-10.43a1.544 1.544 0 0 0 0-2.187"/></svg>
@@ -113,7 +152,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Bloc 7: GitHub com a plataforma educativa
             
           </span>
         </div>
@@ -224,7 +263,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/curs-git/." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -241,11 +280,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/curs-git/apunts/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -265,7 +306,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/curs-git/informacio/" class="md-tabs__link">
+      <a href="../../informacio/" class="md-tabs__link">
         
   
   
@@ -300,7 +341,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegació" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/curs-git/." title="Introducció a Git i la seua aplicació a l’aula" class="md-nav__button md-logo" aria-label="Introducció a Git i la seua aplicació a l’aula" data-md-component="logo">
+    <a href="../.." title="Introducció a Git i la seua aplicació a l’aula" class="md-nav__button md-logo" aria-label="Introducció a Git i la seua aplicació a l’aula" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.546 10.93 13.067.452a1.55 1.55 0 0 0-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 0 1 2.327 2.341l2.658 2.66a1.838 1.838 0 0 1 1.9 3.039 1.837 1.837 0 0 1-2.6 0 1.85 1.85 0 0 1-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348a1.85 1.85 0 0 1 0 2.6 1.844 1.844 0 0 1-2.609 0 1.834 1.834 0 0 1 0-2.598c.182-.18.387-.316.605-.406V8.835a1.834 1.834 0 0 1-.996-2.41L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477a1.545 1.545 0 0 0 2.186 0l10.43-10.43a1.544 1.544 0 0 0 0-2.187"/></svg>
@@ -331,7 +372,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -350,6 +391,8 @@
       
   
   
+    
+  
   
   
     
@@ -376,19 +419,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/curs-git/apunts/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -401,13 +447,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -457,7 +503,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/curs-git/apunts/01_introduccio/" class="md-nav__link ">
+            <a href="../01_introduccio/" class="md-nav__link ">
               
   
   
@@ -498,7 +544,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/01_introduccio/00_preparacio/" class="md-nav__link">
+      <a href="../01_introduccio/00_preparacio/" class="md-nav__link">
         
   
   
@@ -524,7 +570,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/01_introduccio/01_introduccio/" class="md-nav__link">
+      <a href="../01_introduccio/01_introduccio/" class="md-nav__link">
         
   
   
@@ -550,7 +596,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/01_introduccio/02_transparencies/" class="md-nav__link">
+      <a href="../01_introduccio/02_transparencies/" class="md-nav__link">
         
   
   
@@ -576,7 +622,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/01_introduccio/03_exercici/" class="md-nav__link">
+      <a href="../01_introduccio/03_exercici/" class="md-nav__link">
         
   
   
@@ -636,7 +682,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/curs-git/apunts/02_branques/" class="md-nav__link ">
+            <a href="../02_branques/" class="md-nav__link ">
               
   
   
@@ -677,7 +723,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/02_branques/01_branques/" class="md-nav__link">
+      <a href="../02_branques/01_branques/" class="md-nav__link">
         
   
   
@@ -703,7 +749,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/02_branques/02_transparencies/" class="md-nav__link">
+      <a href="../02_branques/02_transparencies/" class="md-nav__link">
         
   
   
@@ -729,7 +775,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/02_branques/03_exercici/" class="md-nav__link">
+      <a href="../02_branques/03_exercici/" class="md-nav__link">
         
   
   
@@ -791,7 +837,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/curs-git/apunts/03_remots/" class="md-nav__link ">
+            <a href="../03_remots/" class="md-nav__link ">
               
   
   
@@ -832,7 +878,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/03_remots/01_remots/" class="md-nav__link">
+      <a href="../03_remots/01_remots/" class="md-nav__link">
         
   
   
@@ -858,7 +904,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/03_remots/03_exercici/" class="md-nav__link">
+      <a href="../03_remots/03_exercici/" class="md-nav__link">
         
   
   
@@ -884,7 +930,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/03_remots/021_transparencies_auth/" class="md-nav__link">
+      <a href="../03_remots/021_transparencies_auth/" class="md-nav__link">
         
   
   
@@ -910,7 +956,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/03_remots/022_transparencies_remots/" class="md-nav__link">
+      <a href="../03_remots/022_transparencies_remots/" class="md-nav__link">
         
   
   
@@ -980,7 +1026,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/curs-git/apunts/04_avancat/" class="md-nav__link ">
+            <a href="../04_avancat/" class="md-nav__link ">
               
   
   
@@ -1021,7 +1067,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/04_avancat/etiquetes/" class="md-nav__link">
+      <a href="../04_avancat/etiquetes/" class="md-nav__link">
         
   
   
@@ -1047,7 +1093,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/04_avancat/stash/" class="md-nav__link">
+      <a href="../04_avancat/stash/" class="md-nav__link">
         
   
   
@@ -1073,7 +1119,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/04_avancat/reset/" class="md-nav__link">
+      <a href="../04_avancat/reset/" class="md-nav__link">
         
   
   
@@ -1099,7 +1145,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/04_avancat/amend/" class="md-nav__link">
+      <a href="../04_avancat/amend/" class="md-nav__link">
         
   
   
@@ -1125,7 +1171,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/04_avancat/revert/" class="md-nav__link">
+      <a href="../04_avancat/revert/" class="md-nav__link">
         
   
   
@@ -1151,7 +1197,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/04_avancat/cherrypick/" class="md-nav__link">
+      <a href="../04_avancat/cherrypick/" class="md-nav__link">
         
   
   
@@ -1177,7 +1223,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/04_avancat/squash/" class="md-nav__link">
+      <a href="../04_avancat/squash/" class="md-nav__link">
         
   
   
@@ -1203,7 +1249,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/04_avancat/exercici/" class="md-nav__link">
+      <a href="../04_avancat/exercici/" class="md-nav__link">
         
   
   
@@ -1263,7 +1309,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/curs-git/apunts/05_estrategies/" class="md-nav__link ">
+            <a href="../05_estrategies/" class="md-nav__link ">
               
   
   
@@ -1304,7 +1350,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/05_estrategies/01_estrategies_ramificacio/" class="md-nav__link">
+      <a href="../05_estrategies/01_estrategies_ramificacio/" class="md-nav__link">
         
   
   
@@ -1330,7 +1376,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/05_estrategies/02_exemple_ramificacio/" class="md-nav__link">
+      <a href="../05_estrategies/02_exemple_ramificacio/" class="md-nav__link">
         
   
   
@@ -1356,7 +1402,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/05_estrategies/04_exercici/" class="md-nav__link">
+      <a href="../05_estrategies/04_exercici/" class="md-nav__link">
         
   
   
@@ -1420,7 +1466,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/curs-git/apunts/06_projectes/" class="md-nav__link ">
+            <a href="../06_projectes/" class="md-nav__link ">
               
   
   
@@ -1461,7 +1507,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/06_projectes/eines_gestio/" class="md-nav__link">
+      <a href="../06_projectes/eines_gestio/" class="md-nav__link">
         
   
   
@@ -1487,7 +1533,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/06_projectes/forks/" class="md-nav__link">
+      <a href="../06_projectes/forks/" class="md-nav__link">
         
   
   
@@ -1513,7 +1559,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/06_projectes/pull_requests/" class="md-nav__link">
+      <a href="../06_projectes/pull_requests/" class="md-nav__link">
         
   
   
@@ -1539,7 +1585,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/06_projectes/automatitzacio/" class="md-nav__link">
+      <a href="../06_projectes/automatitzacio/" class="md-nav__link">
         
   
   
@@ -1565,7 +1611,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/06_projectes/exercici/" class="md-nav__link">
+      <a href="../06_projectes/exercici/" class="md-nav__link">
         
   
   
@@ -1595,6 +1641,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1612,16 +1660,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/curs-git/apunts/07_educativa/" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
               
   
   
@@ -1634,13 +1682,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+              <label class="md-nav__link md-nav__link--active" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_8">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1662,7 +1710,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/apunts/07_educativa/01_educativa/" class="md-nav__link">
+      <a href="01_educativa/" class="md-nav__link">
         
   
   
@@ -1703,7 +1751,7 @@
   
     <li class="md-nav__item">
       
-      <a href="/curs-git/informacio/" class="md-nav__link">
+      <a href="../../informacio/" class="md-nav__link">
         
   
   
@@ -1740,6 +1788,23 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bloc-7-github-com-a-plataforma-educativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bloc 7: GitHub com a plataforma educativa
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1752,8 +1817,77 @@
   <div class="md-content" data-md-component="content">
     <article class="md-content__inner md-typeset">
       
-  <h1>404 - Not found</h1>
+        
 
+  
+  
+
+<h2 id="bloc-7-github-com-a-plataforma-educativa">Bloc 7: GitHub com a plataforma educativa<a class="headerlink" href="#bloc-7-github-com-a-plataforma-educativa" title="Permanent link">&para;</a></h2>
+<p>Per últim, en aquest bloc veurem com podem aprofitar les eines
+i funcionalitats que ens ofereix <a href="https://github.com/"><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span> GitHub</strong></a>
+per gestionar treball d'aula i projectes educatius col·laboratius.</p>
+<div class="walkthrough">
+<ul>
+<li><a href="01_educativa/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg></span> GitHub com a plataforma educativa</a>: GitHub com a plataforma educativa.</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Darrera actualització">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="4 d’abril del 2025 21:06:56">4 d’abril del 2025</span>
+  </span>
+
+    
+    
+    
+    
+      
+  <span class="md-source-file__fact">
+    
+      
+  <span class="md-icon" title="Col·laboradors">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </span>
+  <span>GitHub</span>
+
+    
+    <nav>
+      
+        <a href="https://github.com/joapuiib" class="md-author" title="@joapuiib">
+          
+          <img src="https://avatars.githubusercontent.com/u/25437671?v=4&size=72" alt="joapuiib">
+        </a>
+      
+      
+      
+    </nav>
+  </span>
+
+    
+  </aside>
+
+
+
+
+
+      
     </article>
   </div>
 
@@ -1774,10 +1908,54 @@
         <footer class="md-footer">
   
     
+      
+      <nav class="md-footer__inner md-grid" aria-label="Peu de pàgina" >
+        
+          
+          <a href="../06_projectes/exercici/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Exercici: Col·laboració mitjançant Pull Requests">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Exercici: Col·laboració mitjançant Pull Requests
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="01_educativa/" class="md-footer__link md-footer__link--next" aria-label="Següent: GitHub com a plataforma educativa">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Següent
+              </span>
+              <div class="md-ellipsis">
+                GitHub com a plataforma educativa
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       
+
+
+
+
+
+
 
 
 
@@ -1833,20 +2011,22 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/curs-git/", "features": ["announce.dismiss", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips", "navigation.top", "navigation.footer", "navigation.indexes", "navigation.tabs", "toc.follow"], "search": "/curs-git/assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips", "navigation.top", "navigation.footer", "navigation.indexes", "navigation.tabs", "toc.follow"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}, "version": null}</script>
     
     
     
-      <script src="/curs-git/assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
     <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
     <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
-    <script src="/curs-git/javascript/katex.js"></script>
+    <script src="../../javascript/katex.js"></script>
     <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
-    <script src="/curs-git/javascript/tablesort.js"></script>
-    <script src="/curs-git/javascript/download-button.js"></script>
-    <script src="/curs-git/javascript/encrypt-content.js"></script>
+    <script src="../../javascript/tablesort.js"></script>
+    <script src="../../javascript/download-button.js"></script>
+    <script src="../../javascript/encrypt-content.js"></script>
+    
+    
     
 
   </body>
