@@ -20,6 +20,10 @@ de manera independent.
 Per evitar haver de crear un repositori a [:material-github: GitHub](https://github.com){target=_blank},
 crearem un repositori remot en la màquina local.
 
+!!! warning
+    Tracteu de seguir la mateixa estructura de directoris per seguir l'exemple
+    correctament.
+
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/remot.txt"
 ```
