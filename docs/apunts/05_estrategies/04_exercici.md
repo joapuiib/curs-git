@@ -58,10 +58,10 @@ utilitzant les següents branques:
 Per integrar les branques de funcionalitat a la branca de desenvolupament,
 pots triar entre les següents opcions:
 
-- [[estrategies#fusio-merge-no-ff]]{:target="_blank"}
-- [[estrategies#canvi-de-base-rebase-merge-ff-only]]{:target="_blank"}
-- [[estrategies#fusio-rebase-merge-no-ff]]{:target="_blank"}
-- :octicons-thumbsup-16:{ .success title="Opció recomanada" } [[estrategies#fusio-merge-squash]]{:target="_blank"}
+- :octicons-thumbsup-16:{ .success title="Opció recomanada" } [[estrategies#merge-squash]]
+- [[estrategies#merge-no-ff]]
+- [[estrategies#rebase-merge-ff-only]]
+- [[estrategies#rebase-merge-no-ff]]
 
 ### Tasca
 
@@ -71,13 +71,14 @@ pots triar entre les següents opcions:
 3. Crea un primer commit amb el fitxer `README.md`.
 4. Crea una branca `develop` a partir de la branca `main`.
 5. Crea les següents branques de funcionalitat:
+
+    !!! note
+        Modifica `genereX` per un gènere de pel·lícules o sèries que t'agrade.
+
     - `feature/pelicules-genere1`
     - `feature/pelicules-genere2`
     - `feature/series-genere3`
     - `feature/series-genere4`
-
-    !!! note
-        Modifica `genereX` per un gènere de pel·lícules o sèries que t'agrade.
 
 6. En cada branca de funcionalitat:
     - `feature/pelicules-genere1`: Afegeix 2 pel·lícules del gènere 1 a `pelicules.txt`.

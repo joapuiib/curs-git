@@ -175,7 +175,7 @@ El procés per integrar les funcionalitats a la branca de desenvolupament `devel
     
 
 
-### `merge -no-ff`
+### `merge --no-ff`
 __Gitflow__ és una de les estratègies de ramificació més conegudes
 i utilitzades en projectes de desenvolupament de programari.
 
