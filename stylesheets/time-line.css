@@ -1,0 +1,63 @@
+:nth-child(1 of .timeline) {
+  counter-reset: timeline-item;
+}
+
+/* Timeline card style */
+.timeline {
+  position: relative;
+  margin-left: 3rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: var(--md-shadow-z1);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+/* Numbered bullet */
+.timeline::before {
+  counter-increment: timeline-item;
+  content: counter(timeline-item);
+  position: absolute;
+  left: -3rem;
+  top: 1rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: var(--md-shadow-z2);
+  z-index: 2;
+}
+
+/* Full vertical line going through the bullet */
+.timeline::after {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: calc(1rem + 1rem); /* padding-top + bullet height / 2 */
+  bottom: calc(-1rem - 1rem - 1rem); /* margin-bottom + padding-top + bullet height / 2 */
+  width: 2px;
+  border-left: 2px solid var(--md-default-fg-color--lighter);
+  z-index: 1;
+}
+
+.timeline.dashed::after {
+    border-left-style: dashed;
+}
+
+/* Remove the line for the last item */
+:nth-last-child(1 of .timeline)::after {
+  border-left: none;
+}
+
+.timeline>:first-child {
+  margin-top: 0;
+}
+.timeline>:last-child {
+  margin-bottom: 0;
+}
