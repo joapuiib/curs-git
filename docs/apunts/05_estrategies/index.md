@@ -16,7 +16,7 @@ projectes col·laboratius.
 
 /// html | div.walkthrough
 - [[estrategies]]
-    - Branques per diferents propòsits.
+    - Branques amb diferents propòsits.
     - Tècniques d'incorporació de canvis.
     - Flux de treball.
 - [[estrategies-example]]: Exemple d'estratègia de ramificació

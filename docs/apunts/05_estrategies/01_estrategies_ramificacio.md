@@ -47,9 +47,10 @@ i no seguir-la de forma estricta si no aporta valor afegit.
 Les estratègies de ramificació més comuns es basen en la creació de diferents _tipologies_ branques,
 cadascuna amb un __propòsit concret__ i una sèrie de regles per crear-les, incorporar-les i destruir-les.
 
-- __Branca principal (`main`):__ Branca on es troba la __versió estable__ del projecte.
+- __[Branca principal](#branca-principal-i-de-desenvolupament) (`main`):__ Branca on es troba la __versió estable__ del projecte.
 
-- __Branca de desenvolupament (`develop`):__ Branca on es troba l'estat actual del projecte, on s'incorporen les funcionalitats provades i acabades.
+- __[Branca de desenvolupament](#branca-principal-i-de-desenvolupament) (`develop`):__ Branca on es troba l'estat actual del projecte,
+    on s'incorporen les funcionalitats provades i acabades.
 
 - __[Branques de funcionalitat](#branques-de-funcionalitat) (`feature/*`):__ Per cada nova funcionalitat es crea una branca independent,
     on es codifica i es prova la nova funcionalitat.
@@ -69,16 +70,32 @@ cadascuna amb un __propòsit concret__ i una sèrie de regles per crear-les, inc
     - Es fusionen amb les branques `develop` i `main` una vegada acabades.
 
 
-
-
 ## Branca principal i de desenvolupament
+La __branca principal__ és la branca on es troba la versió publicada i estable del projecte,
+normalment anomenada `main`.
+
+La __branca de desenvolupament__ és la branca on es troba l'estat actual del projecte,
+on s'incorporen les noves funcionalitats que ja estan implementades i provades,
+però encara no s'han publicat.
+Aquesta branca és normalment reb el nom de `dev`, `develop` o `development`.
+
+![Branca principal i de desenvolupament](img/main-develop.png)
+/// figure-caption
+Branca principal i de desenvolupament
+///
+
 
 ## Branques de funcionalitat
 Les __branques de funcionalitat__ són les branques on cada desenvolupador realitza
-les seues contribucions, de manera __paral·lela i independent__ a la resta
-de funcionalitats.
+les seues contribucions, de manera __paral·lela i independent__ de la resta.
 
-![Branques de funcionalitat](img/features.png)
+Normalment, s'utilitza un prefix comú identificar aquestes branques.
+El prefix més comú és `feature/`, seguit del nom de la funcionalitat.
+
+No obstant això, el prefix utilizat pot variar, fins i tot per indicar el tipus de funcionalitat
+o la naturalesa dels canvis: `feat/`, `feature/`, `fix/`, `bugfix/`, `enhancement/`, ...
+
+![Branques de funcionalitat](img/feature.png)
 /// figure-caption
 Branques de funcionalitat
 ///
@@ -91,7 +108,7 @@ El flux de treball amb aquestes branques és el següent:
     > han segut creades a partir de la branca `develop`, però
     > no necessàriament en el mateix punt.
 
-- S'[integren](#integracio) a la branca `develop` una vegada acabades.
+- S'[integren](#integracio) a la branca `develop` una vegada s'han implementat i provat els canvis.
 - Poden ser eliminades després de ser integrades.
 
 
@@ -183,14 +200,11 @@ git merge --no-ff feature/A
 Fusió de branques mitjançant `merge --no-ff`
 ///
 
-Els avantatges principals són:
+Les característiques d'aquesta opció són:
 
 - Manté tot l'històric de canvis[^1].
-- Permet revertir una funcionalitat fàcilment, ja que sols cal revertir un únic _commit_.
-
-Els principals desavantatges són:
-
 - No manté una història lineal.
+- Permet revertir una funcionalitat fàcilment, ja que sols cal revertir un únic _commit_.
 - En projectes amb moltes funcionalitats, la història pot ser difícil de seguir.
 
 
@@ -210,15 +224,14 @@ git merge --ff-only feature/A
 Fusió de branques mitjançant `rebase` + `merge --ff-only`
 ///
 
-Els avantatges són:
+Les característiques d'aquesta opció són:
 
+- Manté tot l'històric de canvis[^1].
 - Manté la història lineal.
 - Permet resoldre els conflictes fàcilment en el procés de `rebase`.
-
-Els principal desavantatges són:
-
-- Realitzar el canvi de base de funcionalitats amb molts _commits_ pot ser complicat.
-- Revertir una funcionalitat és complicat, ja que cal revertir múltiples _commits_.
+- Realitzar el canvi de base de funcionalitats amb molts _commits_ pot ser complicat
+    quan hi ha conflictes.
+- Revertir una funcionalitat no és trivial, ja que cal revertir múltiples _commits_.
 
 
 ### `rebase` + `merge --no-ff`
@@ -240,11 +253,12 @@ git merge --no-ff feature/A
 Fusió de branques mitjançant `rebase` + `merge --no-ff`
 ///
 
+Les característiques d'aquesta opció són:
 
-Els avantatges principals són:
-
+- Manté tot l'històric de canvis[^1].
 - Manté la història neta i semi-lineal, on les funcionalitats s'integren una després de l'altra.
 - Permet revertir una funcionalitat fàcilment, ja que sols cal revertir un únic _commit_.
+- Realitzar el canvi de base de funcionalitats amb molts _commits_ pot ser complicat.
 
 
 ### `merge --squash`
@@ -289,20 +303,16 @@ no importa si la història de la branca de funcionalitat es manté neta o no.
     però en cas de conflicte, s'hauria de resoldre en cada _commit_
     de la branca de funcionalitat.
 
-Els avantatges principals d'aquesta opció són:
+Les característiques d'aquesta opció són:
 
+- No manté tot l'històric de canvis[^1].
 - Manté la història lineal.
 - Permet revertir una funcionalitat fàcilment, ja que sols cal revertir un únic _commit_.
 - Facilita la revisió de codi, ja que tots els canvis es troben en un únic _commit_.
 - Evita la sobrecàrrega de _commits_ en la branca de desenvolupament `develop`.
 - Els desenvolupador poden despreocupar-se de com queda la història de la branca de funcionalitat,
-    on es poden permetre escriure _micro-commits_, ja que aquests desapareixeran una vegada s'hagen
-    integrat es canvis.
-
-El principal desavantatge és:
-
-- No manté tot l'històric de canvis.
-- Dificulta la revisió de canvis individuals.
+    on es poden permetre escriure _micro-commits_, ja que aquests desapareixeran
+    quen la branca s'esborre després d'integrar-la[^1].
 
 ## Branques de llançament
 Les branques de llançament són branques temporals
@@ -361,6 +371,9 @@ El flux de treball amb aquestes branques és el següent:
 /// figure-caption
 Branques de correcció
 ///
+
+[^1]: Segons el punt de vista, mantindre l'històric de tots els _commits_
+    pot ser un avantatge o un inconvenient.
 
 
 ## Bibliografia
