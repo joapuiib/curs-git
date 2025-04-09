@@ -13,52 +13,49 @@ tags:
 ---
 
 ## Estratègies de ramificació
-En un projecte de desenvolupament de programari que utilitza __Git__ com a sistema de control de versions,
-la gestió de les branques és important per aconseguir un flux de treball eficient i ordenat.
+Quan es treballa en un projecte, sobretot quan moltes persones estan involucrades,
+és imprescindible adoptar una metodologia de treball que facilite la gestió i el desenvolupament
+del projecte.
 
-Les metodologies de treball amb branques s'anomenen __estratègies de ramificació__, que son un conjunt
-de regles i pautes que defineixen com s'han de crear, fusionar i mantindre les branques en un projecte.
+Si a més, s'utilitza __:simple-git: Git__ com a sistema de control de versions,
+necessitem una __estratègia de ramificació__; un conjunt de regles i pautes
+que defineixen __el flux de treball mitjançant branques__, amb els següents objectius:
 
-Aquesta part és essencial, ja que permet el desenvolupament en paral·lel de diferents funcionalitats
-i garanteix la correcta integració de les diferents parts del projecte.
+- Proporciona un flux de treball clar i coherent per gestionar els canvis de codi.
+- Permet el desenvolupament paral·lel.
+- Facilita la col·laboració entre els membres de l'equip.
+- Ajuda a mantindre un codi estable i preparat per posat en producció.
+- Manté un ordre coherent en la història del projecte.
 
-Existeixen diverses estratègies de ramificació però, totes, en certa manera,
-comparteixen els mateixos principis bàsics:
+A més, les estratègies poden ser utilitzades en combinació amb
+altres ferramentes com les [[pull-requests]],
+que veurem en el [[projectes-index]].
 
-- __Creació de branques de funcionalitat `feature/*`__: Es crea una branca independent per desenvolupar cada funcionalitat.
-- __Branca de desenvolupament `develop`__: Estat del projecte on s'incorporen les funcionalitats acabades, però que encara no han segut publicades.
-- __Branca principal `main`__: Branca on es troba la versió estable del projecte.
-- __Branca de llançament `release/*`__: Branca on es prepara la versió final del projecte abans de publicar-la.
-- __Branca de correcció `hotfix/*`__: Branca per corregir errors en la versió estable del projecte.
+No obstant això, pot suposar una sobrecàrrega en projectes xicotets o amb pocs membres.
+És important adaptar la metodologia a les necessitats del projecte
+i no seguir-la de forma estricta si no aporta valor afegit.
 
-Utilitzant aquestes característiques, es pot adaptar el flux de treball a les necessitats del projecte,
-on podem decidir quin tipus de branca incorporar en la nostra metodologia de treball.
+!!! note
+    No és necessari utilitzar tots els tipus de branques. És recomanable adaptar
+    el flux de treball a les necessitats i envergadura del projecte.
 
-!!! example
-    En projectes xicotets pot ser no és necessària una branca de desenvolupament `develop` o branques de llançament `release/*`.
+    En projectes xicotets pot ser no és necessària una branca de desenvolupament `develop`
+    o branques de llançament `release/*`.
 
-A més, les estratègies poden ser utilitzades en combinació amb altres tècniques com les
-[__Pull Requests__](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests){target=_blank},
-que veurem en els apunts [[pull-requests]] del següent [[projectes-index|bloc]].
 
 ## Branques amb un propòsit únic
-Les estratègies de ramificació més comuns es basen en la creació de diferents branques,
-cadascuna amb un propòsit concret i una sèrie de regles per aconseguir una integració
-eficient de les funcionalitats:
+Les estratègies de ramificació més comuns es basen en la creació de diferents _tipologies_ branques,
+cadascuna amb un __propòsit concret__ i una sèrie de regles per crear-les, incorporar-les i destruir-les.
 
-- __Branca principal (`main`):__ Branca on es troba la versió publicada i estable del projecte.
-- __Branca de desenvolupament (`develop`):__ Branca on es troba l'estat actual del projecte, on s'incorporen les funcionalitats acabades.
-- __Branques de funcionalitats (`feature/*`):__ Per cada nova funcionalitat es crea una branca independent,
+- __[Branca principal](#branca-principal-i-de-desenvolupament) (`main`):__ Branca on es troba la __versió estable__ del projecte.
+
+- __[Branca de desenvolupament](#branca-principal-i-de-desenvolupament) (`develop`):__ Branca on es troba l'estat actual del projecte,
+    on s'incorporen les funcionalitats provades i acabades.
+
+- __[Branques de funcionalitat](#branques-de-funcionalitat) (`feature/*`):__ Per cada nova funcionalitat es crea una branca independent,
     on es codifica i es prova la nova funcionalitat.
 
-    - Es creen a partir de la branca `develop`.
-    - S'integren a la branca `develop` una vegada acabades.
-    - Es poden eliminar després de ser integrades.
-    
-    !!! info
-        Depén de l'estratègia triada, el procés d'integració es realitzarà de diferents maneres.
-
-- __Branques de llançament (`release/*`):__ Branca on es preparen els canvis
+- __[Branques de llançament](#branques-de-llancament) (`release/*`):__ Branca on es preparen els canvis
     per poder publicar una nova versió del projecte.
 
     - Es creen a partir de la branca `develop`.
@@ -66,98 +63,119 @@ eficient de les funcionalitats:
     - Es poden eliminar una vegada fusionades.
     - Normalment, es crea una __etiqueta__ amb la versió publicada.
 
-- __Branques de correcció (`hotfix/*`):__ Branca per corregir errors
+- __[Branques de correcció](#branques-de-correccio) (`hotfix/*`):__ Branca per corregir errors
     crítics en la versió publicada del projecte.
 
     - Es creen a partir de la branca `main`.
     - Es fusionen amb les branques `develop` i `main` una vegada acabades.
-    
-    !!! danger
-        Aquestes branques sols han de ser utilitzades per corregir errors crítics
-        que afecten la versió publicada del projecte i han de corregir-se
-        immediatament.
-
-        Aquestes branques poden dificultar el flux de treball,
-        sobretot si es tracta de mantindrà una __història lineal__ del projecte.
-
-### Avantatges i desavantatges
-Utilitzar aquest tipus d'estratègies de ramificació presenta una sèrie d'avantatges i desavantatges
-que cal tindre en compte a l'hora de decidir si val la pena utilitzar-les.
-
-Els avantatges principals són:
-
-- Proporciona un flux de treball clar i coherent per gestionar els canvis de codi.
-- Permet el desenvolupament paral·lel i la prova de diferents funcions i correccions d'errors.
-- Ajuda a mantenir un codi estable i preparat per posat en producció.
-- Facilita la col·laboració entre els membres de l'equip.
-- Manté un ordre coherent en la història del projecte.
-
-El principal desavantatge és:
-
-- Pot suposar una sobrecàrrega en projectes xicotets o amb pocs membres.
-
-A més, és important adaptar la metodologia a les necessitats del projecte
-i no seguir-la de forma estricta si no aporta valor afegit.
 
 
-### Bones pràctiques
-Per utilitzar les estratègies de ramificació de forma eficient,
-és important seguir una sèrie de bones pràctiques que ajudaran a
-mantindre l'ordre i la coherència en el projecte.
+## Branca principal i de desenvolupament
+La __branca principal__ és la branca on es troba la versió publicada i estable del projecte,
+normalment anomenada `main`.
 
-Algunes de les bones pràctiques més importants són:
+La __branca de desenvolupament__ és la branca on es troba l'estat actual del projecte,
+on s'incorporen les noves funcionalitats que ja estan implementades i provades,
+però encara no s'han publicat.
+Aquesta branca és normalment rep el nom de `dev`, `develop` o `development`.
 
-- Utilitzar noms de branques descriptius i coherents, que indiquen clarament el seu propòsit i contingut.
-    Una bona manera de fer-ho és utilitzar un prefix comú per cada tipus de branca.
+![Branca principal i de desenvolupament](img/main-develop.png)
+/// figure-caption
+Branca principal i de desenvolupament
+///
 
-    !!! tip
-        Pots organitzar les branques en "directoris" utilitzant el mateix prefixe
-        en el nom de la branca, separat per una barra `/`.
 
-    - `feature/frontend/landing-page` o `feature/backend/user-authentication`,
-        com exemple de __branques de funcionalitats__.
-    - `release/v1.0.0` o `release/v1.1.0`, com exemple de __branques de llançament__.
-    - `hotfix/issue-123`, com exemple de __branques de correcció__.
+## Branques de funcionalitat
+Les __branques de funcionalitat__ són les branques on cada desenvolupador realitza
+les seues contribucions, de manera __paral·lela i independent__ de la resta.
 
-- Incorporeu els canvis de `develop` a les branques `feature/*` de forma regular.
+Normalment, s'utilitza un prefix comú identificar aquestes branques.
+El prefix més comú és `feature/`, seguit del nom de la funcionalitat.
 
-    És preferible mantindre les branques de funcionalitat actualitzades amb els canvis del projecte,
-    i d'aquesta manera, evitar resolucions de conflictes immenses en el moment d'integrar-les.
+No obstant això, el prefix utilitzat pot variar, fins i tot per indicar el tipus de funcionalitat
+o la naturalesa dels canvis: `feat/`, `feature/`, `fix/`, `bugfix/`, `enhancement/`, ...
 
-## Integració de les funcionalitats
+![Branques de funcionalitat](img/feature.png)
+/// figure-caption
+Branques de funcionalitat
+///
 
+El flux de treball amb aquestes branques és el següent:
+
+- Són creades a partir de la branca `develop`.
+
+    > En la figura anterior, poden veure que totes les branques `feature/`
+    > han segut creades a partir de la branca `develop`, però
+    > no necessàriament en el mateix punt.
+
+- [S'integren](#integracio) a la branca `develop` una vegada s'han implementat i provat els canvis.
+- Poden ser eliminades després de ser integrades.
+
+
+!!! recommend
+    - Utilitzeu noms descriptius i coherents, que indiquen clarament el propòsit i contingut de les branques,
+        evitant noms genèrics o massa concrets.
+
+    - Incorporeu els canvis de `develop` de forma regular.
+
+        > És preferible mantindre les branques de funcionalitat actualitzades amb els canvis del projecte,
+        > i d'aquesta manera, evitar resolucions de conflictes immenses en el moment d'integrar-les.
+
+### Integració
 El procés per integrar les funcionalitats a la branca de desenvolupament `develop`
 és el següent:
 
-!!! important
-    Segons la tècnica d'integració triada, els punts 3 i 4 poden variar.
+1. Sincronitzar l'estat del repositori local amb el remot.
 
-1. Sincronitzar l'estat del repositori local amb el remot amb `git fetch`.
+    ```bash
+    git fetch
+    ```
+
 2. Actualitzar la branca local `develop` amb els canvis del remot `git pull`.
 
-    !!! tip
-        Per evitar possibles conflictes i errors, es recomana configurar `git pull`
-        perquè sols puga incorporar els canvis de manera __directa (_fast-forward_)__.
+    ```bash
+    git checkout develop
+    git pull --ff-only #(1)!
+    ```
+
+    1. Per evitar possibles conflictes i errors, es recomana configurar `git pull`
+       perquè sols puga incorporar els canvis de manera __directa (_fast-forward_)__.
 
         ```bash
         git config [--global] pull.ff only
         ```
 
 3. Actualitzar la branca `feature/*` amb els nous canvis de `develop`.
+
+    > Vegeu cada tècnica d'integració
+
 4. Incorporar els canvis de la branca `feature/*` amb la branca `develop` amb la tècnica triada.
+
+    > Vegeu cada tècnica d'integració
+
 5. Publicar els canvis de la branca `develop` al repositori remot amb `git push`.
 
     !!! danger
         En aquest punt podria passar que mentre has realitzat aquest procés,
-        altres desenvolupadors hagen publicat nous canvis.
+        altres desenvolupadors hagen publicat nous canvis a la branca
+        `develop`.
 
-        En aquest cas, caldria integrar els canvis de `develop`
-        amb `git pull --rebase`.
+        En aquest cas, caldria integrar els canvis de `develop`:
 
-1. Eliminar les branques `feature/*` del repositori local i del remot.
+        ```bash
+        git pull --rebase
+        ```
+
+1. Eliminar la branca `feature/*` del repositori local i del remot.
+
+    ```bash
+    git branch -D feature/nom-funcionalitat
+    git push -d origin feature/nom-funcionalitat
+    ```
+    
 
 
-### Fusió `merge -no-ff`
+### `merge --no-ff`
 __Gitflow__ és una de les estratègies de ramificació més conegudes
 i utilitzades en projectes de desenvolupament de programari.
 
@@ -182,18 +200,15 @@ git merge --no-ff feature/A
 Fusió de branques mitjançant `merge --no-ff`
 ///
 
-Els avantatges principals són:
+Les característiques d'aquesta opció són:
 
-- Manté tot l'històric de canvis.
-- Permet revertir una funcionalitat fàcilment, ja que sols cal revertir un únic _commit_.
-
-El principal desavantatge és:
-
+- Manté tot l'històric de canvis[^1].
 - No manté una història lineal.
+- Permet revertir una funcionalitat fàcilment, ja que sols cal revertir un únic _commit_.
 - En projectes amb moltes funcionalitats, la història pot ser difícil de seguir.
 
 
-### Canvi de base `rebase` + `merge --ff-only`
+### `rebase` + `merge --ff-only`
 Aquest mètode per fusionar les branques de funcionalitat es basa en la utilització del canvi de base `rebase`,
 per després fusionar-la de manera lineal amb `merge --ff-only`.
 
@@ -209,18 +224,17 @@ git merge --ff-only feature/A
 Fusió de branques mitjançant `rebase` + `merge --ff-only`
 ///
 
-Els avantatges són:
+Les característiques d'aquesta opció són:
 
+- Manté tot l'històric de canvis[^1].
 - Manté la història lineal.
 - Permet resoldre els conflictes fàcilment en el procés de `rebase`.
-
-Els principal desavantatges són:
-
-- Realitzar el canvi de base de funcionalitats amb molts _commits_ pot ser complicat.
-- Revertir una funcionalitat és complicat, ja que cal revertir múltiples _commits_.
+- Realitzar el canvi de base de funcionalitats amb molts _commits_ pot ser complicat
+    quan hi ha conflictes.
+- Revertir una funcionalitat no és trivial, ja que cal revertir múltiples _commits_.
 
 
-### Fusió `rebase` + `merge --no-ff`
+### `rebase` + `merge --no-ff`
 Aquesta opció combina les dues opcions anteriors per tal d'aprofitar els avantatges de cadascuna
 i a la vegada minimitzar els seus desavantatges.
 
@@ -239,14 +253,15 @@ git merge --no-ff feature/A
 Fusió de branques mitjançant `rebase` + `merge --no-ff`
 ///
 
+Les característiques d'aquesta opció són:
 
-Els avantatges principals són:
-
+- Manté tot l'històric de canvis[^1].
 - Manté la història neta i semi-lineal, on les funcionalitats s'integren una després de l'altra.
 - Permet revertir una funcionalitat fàcilment, ja que sols cal revertir un únic _commit_.
+- Realitzar el canvi de base de funcionalitats amb molts _commits_ pot ser complicat.
 
 
-### Fusió `merge --squash`
+### `merge --squash`
 Aquesta opció consisteix a fusionar les branques de funcionalitat amb la branca de desenvolupament `develop`
 mitjançant `merge --squash`, de manera que tots els _commits_ de la branca de funcionalitat es fusionen
 en un __únic *commit*__.
@@ -288,20 +303,16 @@ no importa si la història de la branca de funcionalitat es manté neta o no.
     però en cas de conflicte, s'hauria de resoldre en cada _commit_
     de la branca de funcionalitat.
 
-Els avantatges principals d'aquesta opció són:
+Les característiques d'aquesta opció són:
 
+- No manté tot l'històric de canvis[^1].
 - Manté la història lineal.
 - Permet revertir una funcionalitat fàcilment, ja que sols cal revertir un únic _commit_.
 - Facilita la revisió de codi, ja que tots els canvis es troben en un únic _commit_.
 - Evita la sobrecàrrega de _commits_ en la branca de desenvolupament `develop`.
 - Els desenvolupador poden despreocupar-se de com queda la història de la branca de funcionalitat,
-    on es poden permetre escriure _micro-commits_, ja que aquests desapareixeran una vegada s'hagen
-    integrat es canvis.
-
-El principal desavantatge és:
-
-- No manté tot l'històric de canvis.
-- Dificulta la revisió de canvis individuals.
+    on es poden permetre escriure _micro-commits_, ja que aquests desapareixeran
+    quan la branca s'esborre després d'integrar-la[^1].
 
 ## Branques de llançament
 Les branques de llançament són branques temporals
@@ -339,7 +350,13 @@ que s'utilitzen per a corregir errors crítics en el codi estable del projecte,
 quan la seua correcció no pot esperar a la següent versió.
 
 !!! danger
-    Aquestes branques sols han de ser utilitzades en casos d'extrema necessitat.
+    Aquestes branques sols han de ser utilitzades per corregir errors crítics
+    que afecten la versió publicada del projecte i han de corregir-se
+    immediatament.
+
+    Aquestes branques poden dificultar el flux de treball,
+    sobretot si es tracta de mantindre
+    una __història lineal__ del projecte.
 
 Normalment, el prefix de les branques de correcció és `hotfix/`.
 
@@ -355,10 +372,15 @@ El flux de treball amb aquestes branques és el següent:
 Branques de correcció
 ///
 
+[^1]: Segons el punt de vista, mantindre l'històric de tots els _commits_
+    pot ser un avantatge o un inconvenient.
+
 
 ## Bibliografia
-- [Apunts de Desplegament d'Aplicacions Web de Lorenzo González Gascón](https://logongas.es/doku.php?id=clase:daw:daw:2eval:tema06){target=_blank}
-- [War of the Git Flows](https://dev.to/scottshipp/war-of-the-git-flows-3ec2)
-- [Gitflow: A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
-- [OneFlow](https://www.endoflineblog.com/oneflow-a-git-branching-model-and-workflow)
-- [Trunk Based Development](https://trunkbaseddevelopment.com/)
+/// html | div.spell-ignore
+- [:octicons-link-external-16: 6. Control de Versiones Avanzado | Lorenzo González Gascón](https://logongas.es/doku.php?id=clase:daw:daw:2eval:tema06)
+- [:octicons-link-external-16: War of the Git Flows](https://dev.to/scottshipp/war-of-the-git-flows-3ec2)
+- [:octicons-link-external-16: Gitflow: A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
+- [:octicons-link-external-16: OneFlow](https://www.endoflineblog.com/oneflow-a-git-branching-model-and-workflow)
+- [:octicons-link-external-16: Trunk Based Development](https://trunkbaseddevelopment.com/)
+///
