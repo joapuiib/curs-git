@@ -14,7 +14,7 @@ Els objectius d'aquests exercici són:
 - Identificar i saber solucionar els problemes associats a cada estratègia de ramificació.
 
 
-# Lliurament
+## Lliurament
 Per a lliurar aquest exercici podeu triar entre una de les següents opcions:
 
 === "Document PDF"

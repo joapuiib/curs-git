@@ -15,7 +15,7 @@ Els objectius d'aquests exercici són:
 - Conéixer com col·laborar en un projecte mitjançant _Pull Requests_.
 
 
-# Lliurament
+## Lliurament
 Per a lliurar aquest exercici sols heu d'indicar la URL
 de la _Pull Request_ que heu creat en la bústia de l'exercici.
 
