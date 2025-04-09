@@ -77,7 +77,7 @@ normalment anomenada `main`.
 La __branca de desenvolupament__ és la branca on es troba l'estat actual del projecte,
 on s'incorporen les noves funcionalitats que ja estan implementades i provades,
 però encara no s'han publicat.
-Aquesta branca és normalment reb el nom de `dev`, `develop` o `development`.
+Aquesta branca és normalment rep el nom de `dev`, `develop` o `development`.
 
 ![Branca principal i de desenvolupament](img/main-develop.png)
 /// figure-caption
@@ -92,7 +92,7 @@ les seues contribucions, de manera __paral·lela i independent__ de la resta.
 Normalment, s'utilitza un prefix comú identificar aquestes branques.
 El prefix més comú és `feature/`, seguit del nom de la funcionalitat.
 
-No obstant això, el prefix utilizat pot variar, fins i tot per indicar el tipus de funcionalitat
+No obstant això, el prefix utilitzat pot variar, fins i tot per indicar el tipus de funcionalitat
 o la naturalesa dels canvis: `feat/`, `feature/`, `fix/`, `bugfix/`, `enhancement/`, ...
 
 ![Branques de funcionalitat](img/feature.png)
@@ -108,7 +108,7 @@ El flux de treball amb aquestes branques és el següent:
     > han segut creades a partir de la branca `develop`, però
     > no necessàriament en el mateix punt.
 
-- S'[integren](#integracio) a la branca `develop` una vegada s'han implementat i provat els canvis.
+- [S'integren](#integracio) a la branca `develop` una vegada s'han implementat i provat els canvis.
 - Poden ser eliminades després de ser integrades.
 
 
@@ -312,7 +312,7 @@ Les característiques d'aquesta opció són:
 - Evita la sobrecàrrega de _commits_ en la branca de desenvolupament `develop`.
 - Els desenvolupador poden despreocupar-se de com queda la història de la branca de funcionalitat,
     on es poden permetre escriure _micro-commits_, ja que aquests desapareixeran
-    quen la branca s'esborre després d'integrar-la[^1].
+    quan la branca s'esborre després d'integrar-la[^1].
 
 ## Branques de llançament
 Les branques de llançament són branques temporals
