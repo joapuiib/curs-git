@@ -35,7 +35,11 @@ l'accés a altres usuaris i la col·laboració en el desenvolupament de
 projectes.
 
 ??? prep "Preparació repositori local"
-    En aquest material treballarem sobre un nou repositori local.
+    En aquests apunts treballarem sobre un nou repositori local.
+
+    !!! danger
+        Crea el nou repositori __en una carpeta independent__ per evitar
+        problemes amb els exemples i exercicis anteriors.
 
     __Inicialització:__
     ```bash

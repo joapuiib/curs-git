@@ -16,6 +16,34 @@ Els objectius d'aquests exercici són:
 - Conéixer com resoldre conflictes en la fusió de branques.
 - Conéixer com resoldre conflictes en el canvi de base d'una branca.
 
+
+## Lliurament
+Per a lliurar aquest exercici podeu triar entre una de les següents opcions:
+
+=== "Document PDF"
+    Documenteu els passos realitzats en un document de text.
+
+    - Cal incloure captures de pantalla amb els passos realitzats
+        i els resultats obtinguts.
+
+        > És recomanable mostrar l'estat del repositori amb `git status` o `git lga`
+
+        > Retalla les captures de pantalla per mostrar sols la informació rellevant.
+    
+    - S'ha de lliurar en format __PDF__.
+
+=== "Vídeo de la pantalla"
+    Una vegada acabat l'exercici, graveu un vídeo de la pantalla
+    mostrant i explicant els passos realitzats i el resultat final.
+
+    > No cal que es graveu a vosaltres mateixos, només la pantalla.
+
+    - La durada __màxima__ del vídeo ha de ser 10 minuts.
+
+En qualsevol cas, també cal lliurar la carpeta amb el repositori de Git
+que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
+
+
 ## Exercici
 
 ### Inicialització
@@ -26,6 +54,10 @@ Els objectius d'aquests exercici són:
 
     1. Revisa [[introduccio#historic-de-canvis-git-log]] per veure
         la configuració de l'àlies `git lga`.
+
+!!! danger
+    Crea el nou repositori __en una carpeta independent__ per evitar
+    problemes amb els exemples i exercicis anteriors.
 
 
 1. Crea un directori anomenat `bloc2_exercici` en la teua carpeta de treball.

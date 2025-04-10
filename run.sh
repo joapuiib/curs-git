@@ -5,13 +5,19 @@ function print {
     RESET="\033[0m"
     echo -e "${GREEN}$1${RESET}"
 }
+function print_error {
+    RED="\033[0;31m"
+    RESET="\033[0m"
+    echo -e "${RED}$1${RESET}"
+}
 
 BUILD=0
+CI=0
 INSTALL_VENV=0
 SPELL=0
 ACT=''
 ALL=0
-SOURCES=''
+SPELL_SOURCES=''
 
 ARGS=''
 SPELL_ARGS=''
@@ -19,6 +25,9 @@ while [ $# -gt 0 ] ; do
     case $1 in
         -b)
             BUILD=1
+            ;;
+        --ci)
+            CI=1
             ;;
         --install-venv)
             INSTALL_VENV=1
@@ -29,7 +38,7 @@ while [ $# -gt 0 ] ; do
             ARGS="$ARGS --clean"
             ;;
         --source | -S)
-            SOURCES="$SOURCES -S $2"
+            SPELL_SOURCES="$SPELL_SOURCES -S $2"
             shift
             ;;
         --all)
@@ -51,12 +60,12 @@ while [ $# -gt 0 ] ; do
 done
 
 if [ -n "$ACT" ]; then
-    if ! which act 2>/dev/null; then
-        print "act not found."
+    if ! which act &>/dev/null; then
+        print_error "act not found."
         exit 1
     fi
     if [ ! -f ".github/workflows/$ACT" ]; then
-        print "Workflow $ACT not found."
+        print_error "Workflow $ACT not found."
         exit 1
     fi
     act -W .github/workflows/$ACT
@@ -87,7 +96,11 @@ if [ $BUILD -eq 1 ]; then
     COMMAND="build"
 fi
 
-mkdocs $COMMAND $ARGS
+if [ $CI -eq 0 ]; then
+    mkdocs $COMMAND $ARGS
+else
+    CI=true mkdocs $COMMAND $ARGS
+fi
 if [ $? -ne 0 ]; then
     print "Error building site."
     exit 1
@@ -97,6 +110,12 @@ if [ $SPELL -eq 1 ]; then
     export DICPATH=.hunspell/
     print "Checking spelling..."
     mkdir -p .hunspell
+
+    if ! which hunspell &>/dev/null; then
+        print_error "hunspell not found"
+        echo "    sudo apt install hunspell"
+        exit 1
+    fi
 
     if ! python -c 'import pyspelling' 2>/dev/null; then
         print "Installing pyspelling..."
@@ -113,18 +132,20 @@ if [ $SPELL -eq 1 ]; then
     fi
 
     if [ $ALL -eq 0 ]; then
-        if [ -z "$SOURCES" ]; then
-            CHANGED_FILES=$(git status --porcelain | grep '\.md$' | awk '{print $2}' | sed 's/docs/site/' | sed 's/.md$/\/index.html/')
-            if [ -z "$CHANGED_FILES" ]; then
+        if [ -z "$SPELL_SOURCES" ]; then
+            SPELL_SOURCES=$(git diff --name-only main HEAD)
+            if [ -z "$SPELL_SOURCES" ]; then
                 print "No changes found."
                 exit
             fi
-            for FILE in $CHANGED_FILES; do
-                if [ -f $FILE ]; then
-                    SOURCES="$SOURCES -S $FILE"
-                fi
-            done
         fi
+        SPELL_SOURCES=$(echo "$SPELL_SOURCES" | grep 'docs/.*\.md$' | sed 's/\/index//' | sed 's/docs/site/' | sed 's/.md$/\/index.html/')
+
+        for FILE in $SPELL_SOURCES; do
+            if [ -f $FILE ]; then
+                SOURCES="$SOURCES -S $FILE"
+            fi
+        done
         SPELL_ARGS="$SPELL_ARGS --name mkdocs $SOURCES"
     fi
 

@@ -48,7 +48,7 @@ Els principals objectius i característiques de Git són:
 
 
 ## Per què la terminal?
-En aquest material, utilitzarem la terminal per a interactuar amb Git, però això no significa que siga l'única manera de fer-ho.
+En aquests apunts, utilitzarem la terminal per a interactuar amb Git, però això no significa que siga l'única manera de fer-ho.
 De fet, pràcticament tots els entorns de desenvolupament moderns tenen integració amb Git, la qual cosa permet realitzar
 les mateixes operacions que proporciona la terminal, però de manera més visual i intuïtiva.
 
@@ -73,6 +73,24 @@ que conté tota la informació relativa al __Repositori Local__.
 
 !!! docs
     Documentació oficial de `git init`: https://git-scm.com/docs/git-init
+
+!!! warning
+    Tingues en compte els següents aspectes importants a l'hora d'inicialitzar un repositori
+    amb `git init`:
+
+    - No has d'inicialitzar el repositori cada vegada que vulgues treballar en ell.
+        L'estat del repositori s'emmagatzema d'una manera persistent en
+        el directori ocult `.git`.
+
+    - Si inicialitzes un repositori en un directori que ja conté un repositori,
+        es crearà un nou repositori i el contingut del directori `.git` es sobreescriurà,
+        eliminant tota la informació anterior.
+
+    - Encara que és possible[^1], no és recomanable inicialitzar un repositori en un directori
+        contingut dins d'un altre repositori.
+
+[^1]: Aquests repositoris es coneixen com a [:octicons-link-external-16: Submòduls](https://git-scm.com/book/en/v2/Git-Tools-Submodules),
+    que està fora de l'abast d'aquest curs.
 
 
 ??? example "Exemple: Inicialització d'un repositori"
@@ -253,12 +271,14 @@ Per afegir els canvis al nostre repositori, el següent pas és afegir
 els canvis a l'_Àrea de Preparació_ amb l'ordre `git add`.
 Aquesta comanda permet especificar quins canvis es desitja afegir.
 
-!!! info
-    ```bash
-    git add <path>
-    ```
+La sintaxi és la següent:
 
-    - `path`: Ruta del fitxer o directori que es vol afegir a l'_Àrea de Preparació_.
+```bash
+git add [--all] <path>
+```
+
+- `path`: Ruta del fitxer o directori que es vol afegir a l'_Àrea de Preparació_.
+- `--all`: Opcional. Afegix tots els fitxers modificats i eliminats a l'_Àrea de Preparació_.
 
 
 ```shellconsole
@@ -673,7 +693,7 @@ La configuració `--global` s'emmagatzema en el fitxer `.gitconfig`, situat del 
 ??? example "Exemple: Configuració"
     ```cfg title=".gitconfig"
     [core]
-        editor = vim # Editor per defecte
+        editor = code --wait # Editor per defecte
 
     [init]
         defaultBranch = main # Nom de la branca principal per defecte

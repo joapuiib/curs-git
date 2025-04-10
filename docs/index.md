@@ -1,13 +1,20 @@
 ---
-template: document.html
+template: landing.html
 title: Inici
 cover:
     title: Introducció a Git i la seua aplicació a l’aula
+    icon: simple/git
 hide:
   - navigation
 ---
 
 *[CI/CD]: Continuous Integration/Continuous Deployment
+
+## Característiques
+
+- __:octicons-calendar-16: Temporització__: Del 5 de maig al 15 de juny.
+- __:material-laptop: Modalitat__: En línia.
+- __:octicons-clock-16: Durada__: 30 hores.
 
 ## Objectius
 
@@ -21,47 +28,48 @@ hide:
 
 
 ## Continguts
-- __Bloc 1: [[introduccio]]__
+- __[[introduccio-index]]__
     - Instal·lació.
     - Configuració.
     - Estructura d'un repositori.
     - Flux de treball.
     - Inicialització d'un repositori.
     - Realització de canvis: `add` i `commit`.
-- __Bloc 2: [[branques]]__
+- __[[branques-index]]__
     - Creació de branques.
     - Navegar entre branques.
     - Sincronització de branques.
     - Fusió de branques: `merge`.
     - Canvi de base: `rebase`.
     - Resolució de conflictes.
-- __Bloc 3: [[remots]]__
+- __[[remots-index]]__
     - Creació d'un repositori remot a GitHub.
     - Configurar un repositori remot.
     - Mètodes d'autenticació.
     - Associació entre branques locals i remotes.
     - Publicació i incorporació de canvis.
     - Clonació d'un repositori remot.
-- __Bloc 4: [[etiquetes|Git avançat]]__
+- __[[avancat-index]]__
     - Eliminació de canvis: `reset` i `revert`.
     - Etiquetes: `tags`.
     - Reserva de canvis: `stash`.
     - Còpia de canvis: `cherry-pick`.
     - Fusió de canvis en un sol commit: `squash`.
-- __Bloc 5: [[estrategies]]__
+- __[[estrategies-index]]__
     - Branques de propòsit únic.
     - Mètodes d'integració de branques de funcionalitat.
-- __Bloc 6: [[projectes]]__
+- __[[projectes-index]]__
     - Debats (_discussions_).
     - Incidències (_issues_).
     - GitHub Projects.
-    - Forks i Pull Requests.
-    - CI/CD amb GitHub Actions.
+    - Forks
+    - Pull Requests.
+    - Automatització de tasques amb GitHub Actions.
     - GitHub Pages.
-- __Bloc 7: [[educativa]]__
+- __[[educativa-index]]__
     - Organitzacions a GitHub.
     - GitHub Classroom.
     - Estratègies per a l'ús de Git i GitHub a l'aula.
 
 ## Dirigit a
-- Professorat de la família d'Informàtica i Comunicacions.
+- Professorat de la família professional d'Informàtica i Comunicacions.

@@ -1,0 +1,48 @@
+jpuigcerver@fp:~/git_cherrypick (begudes) $ git checkout menjar
+Switched to branch 'menjar'
+jpuigcerver@fp:~/git_cherrypick (menjar) $ git lga
+* 2b643ff - (0 seconds ago) Menjar: taronges - Joan Puigcerver (begudes)
+* 054e4e0 - (0 seconds ago) Begudes: refresc - Joan Puigcerver
+* 5b87d79 - (0 seconds ago) Begudes: aigua - Joan Puigcerver
+| * 604897c - (0 seconds ago) Menjar: pa - Joan Puigcerver (HEAD -> menjar)
+|/  
+* f21f6f7 - (0 seconds ago) Commit inicial - Joan Puigcerver (main)
+jpuigcerver@fp:~/git_cherrypick (menjar) $ git cherry-pick 2b643ff
+Auto-merging menjar.txt
+CONFLICT (add/add): Merge conflict in menjar.txt
+error: could not apply 2b643ff... Menjar: taronges
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+hint: Disable this message with "git config advice.mergeConflict false"
+jpuigcerver@fp:~/git_cherrypick (menjar|CHERRY-PICKING) $ cat menjar.txt
+<<<<<<< HEAD
+Pa
+=======
+Taronges
+>>>>>>> 2b643ff (Menjar: taronges)
+jpuigcerver@fp:~/git_cherrypick (menjar|CHERRY-PICKING) $ code menjar.txt # (1)!
+jpuigcerver@fp:~/git_cherrypick (menjar|CHERRY-PICKING) $ git diff
+diff --cc menjar.txt
+index 6b24a67,694e2da..0000000
+--- a/menjar.txt
++++ b/menjar.txt
+@@@ -1,1 -1,1 +1,2 @@@
+ +Pa
++ Taronges
+jpuigcerver@fp:~/git_cherrypick (menjar|CHERRY-PICKING) $ git add menjar.txt
+jpuigcerver@fp:~/git_cherrypick (menjar|CHERRY-PICKING) $ git cherry-pick --continue --no-edit
+[menjar 63d71c6] Menjar: taronges
+ Date: Tue Jan 21 12:40:47 2025 +0100
+ 1 file changed, 1 insertion(+)
+jpuigcerver@fp:~/git_cherrypick (menjar) $ git lga
+* 2b643ff - (0 seconds ago) Menjar: taronges - Joan Puigcerver (begudes)
+* 054e4e0 - (0 seconds ago) Begudes: refresc - Joan Puigcerver
+* 5b87d79 - (0 seconds ago) Begudes: aigua - Joan Puigcerver
+| * 63d71c6 - (0 seconds ago) Menjar: taronges - Joan Puigcerver (HEAD -> menjar)
+| * 604897c - (0 seconds ago) Menjar: pa - Joan Puigcerver
+|/  
+* f21f6f7 - (0 seconds ago) Commit inicial - Joan Puigcerver (main)

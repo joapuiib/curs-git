@@ -1,0 +1,83 @@
+name: spellcheck # Nom de l'automatització
+on: # Events que disparen l'automatització
+  pull_request:
+    # Tipus d'events sobre la pull request
+    types: ['opened', 'edited', 'reopened', 'synchronize', 'ready_for_review']
+    branches:
+      - '**' # Quan s'obri un pull request a qualsevol branca
+
+jobs: # Llista de tasques a executar
+  changed-files: # Nom de la tasca
+    if: github.event.pull_request.draft == false # Condició per executar la tasca
+
+    runs-on: ubuntu-latest # Sistema operatiu on s'executarà la tasca
+
+    outputs:
+      EXIST_CHANGED_FILES: ${{ steps.get-changed-files.outputs.EXIST_CHANGED_FILES }}
+
+    steps: # Passos a executar
+      - uses: actions/checkout@v4 # Acció per clonar i còpiar el repositori a l'entorn d'execució
+        with:
+          fetch-depth: 0
+      - name: Get changed files
+        id: get-changed-files
+        run: |
+          CHANGED_FILES=$(git diff --name-only origin/main HEAD | grep 'docs/.*\.md$' || true)
+          EXIST_CHANGED_FILES=0
+          if [ -n "$CHANGED_FILES" ]; then
+              EXIST_CHANGED_FILES=1
+          fi
+          echo "EXIST_CHANGED_FILES=$EXIST_CHANGED_FILES" >> $GITHUB_OUTPUT
+
+
+  spellcheck: # Nom de la tasca
+    needs: changed-files # Tasca que s'executarà abans
+    if: github.event.pull_request.draft == false && needs.changed-files.outputs.EXIST_CHANGED_FILES == '1' # Condició per executar la tasca
+
+    runs-on: ubuntu-latest # Sistema operatiu on s'executarà la tasca
+
+    env: # Variables d'entorn
+      DICPATH: .hunspell/
+      CHANGED_FILES: ${{ needs.changed-files.outputs.CHANGED_FILES }}
+
+    steps: # Passos a executar
+      - uses: actions/checkout@v4 # Acció per clonar i còpiar el repositori a l'entorn d'execució
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5 # Acció per configurar Python
+        with:
+          python-version: 3.x
+          cache: 'pip'
+      - name: Install dependencies # Acció per instal·lar les dependències
+        run: pip install -U -r requirements.txt
+      - name: Install pyspelling # Acció per instal·lar el paquet pyspelling
+        run: pip install pyspelling
+      - name: Install hunspell # Acció per instal·lar el corrector ortogràfic hunspell
+        run: |
+          sudo apt update
+          sudo apt install hunspell -y
+      - name: Build documents # Acció per compilar la documentació
+        run: CI=false mkdocs build --clean
+
+      - name: Download dictionary # Acció per descarregar el diccionari que s'utilitzarà en el corrector ortogràfic
+        run: |
+          mkdir -p .hunspell
+          curl -L https://raw.githubusercontent.com/Softcatala/catalan-dict-tools/refs/heads/master/resultats/hunspell/catalan-valencia.dic -o .hunspell/ca_ES_valencia.dic
+          curl -L https://raw.githubusercontent.com/Softcatala/catalan-dict-tools/refs/heads/master/resultats/hunspell/catalan-valencia.aff -o .hunspell/ca_ES_valencia.aff
+          hunspell -D
+      - name: Spell check # Acció per comprovar l'ortografia dels documents
+        run: |
+          CHANGED_FILES=$(git diff --name-only origin/main HEAD | grep 'docs/.*\.md$' | sed 's/\/index//' | sed 's/docs/site/' | sed 's/.md$/\/index.html/')
+          echo "CHANGED_FILES=$CHANGED_FILES"
+          for FILE in $(echo "$CHANGED_FILES"); do
+              if [ -f $FILE ]; then
+                  SOURCES="$SOURCES -S $FILE"
+              fi
+          done
+          echo "SOURCES=$SOURCES"
+          if [ -z "$SOURCES" ]; then
+              echo "No files to check"
+              exit 0
+          fi
+          SPELL_ARGS="$SPELL_ARGS --name mkdocs $SOURCES"
+          pyspelling $SPELL_ARGS

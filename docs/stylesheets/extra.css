@@ -1,0 +1,30 @@
+@keyframes star {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+.star {
+  animation: star 500ms infinite;
+}
+
+.pr-draft {
+  color: #6a737d;
+}
+
+.success,
+.issue-open,
+.pr-open {
+  color: #1a7f37;
+}
+
+.issue-closed,
+.pr-merged {
+  color: #8250df;
+}
+
+.pr-closed {
+  color: #b60205;
+}

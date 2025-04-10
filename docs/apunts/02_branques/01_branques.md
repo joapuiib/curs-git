@@ -34,7 +34,11 @@ que té connotacions racistes.
 
 
 ??? prep "Preparació repositori d'exemple"
-    En aquest material treballarem sobre un nou repositori local.
+    En aquests apunts treballarem sobre un nou repositori local.
+
+    !!! danger
+        Crea el nou repositori __en una carpeta independent__ per evitar
+        problemes amb els exemples i exercicis anteriors.
 
     __Inicialització:__
     ```bash
@@ -61,7 +65,7 @@ Estructura de branques inicial.
 
 ??? example  "Exemple: Estructura de branques inicial"
     L'estructura de branques inicial del repositori
-    que utilitzarem en aquest material és la següent
+    que utilitzarem en aquests apunts és la següent
     és el que es mostra a la [Figura 1](#figure-estat-inicial).
 
     ```shellconsole

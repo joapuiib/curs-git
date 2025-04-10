@@ -7,10 +7,10 @@ comments: true
 ---
 
 ## Exemple: Estratègia de ramificació
-En aquest material veurem com es pot utilitzar una estratègia de ramificació
+En aquests apunts veurem com es pot utilitzar una estratègia de ramificació
 en un projecte de desenvolupament de programari.
 
-En aquest projecte utilitzarem la tècnica d'integració [[estrategies#fusio-merge-squash]]{:target=_blank}.
+En aquest projecte utilitzarem la tècnica d'integració [[estrategies#merge-squash]].
 
 ### Repositori remot
 Anem a simular un projecte de desenvolupament de programari
@@ -19,6 +19,10 @@ de manera independent.
 
 Per evitar haver de crear un repositori a [:material-github: GitHub](https://github.com){target=_blank},
 crearem un repositori remot en la màquina local.
+
+!!! warning
+    Tracteu de seguir la mateixa estructura de directoris per seguir l'exemple
+    correctament.
 
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/remot.txt"
@@ -123,8 +127,8 @@ i encara no han segut integrades a la branca de desenvolupament `develop`.
     ///
 
 
-Anem a veure com integrar les funcionalitats amb la tècnica __`merge` + `merge --squash`__
-seguint el procés indicat a [[estrategies#integracio-de-les-funcionalitats]]{:target=_blank}.
+Anem a veure com integrar les funcionalitats amb la tècnica __`merge --no-ff` + `merge --squash`__
+seguint el procés indicat a [[estrategies#integracio]].
 
 
 #### Integració de `feature/readme`
@@ -317,26 +321,25 @@ Els passos que ha de seguir són:
     ```
 
 ### Estat final
-#### `merge` + `merge --squash`
+L'estat final del repositori segons l'estratègia d'integració utilitzada
+és el següent.
 
+#### `merge` + `merge --squash`
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/squash_final.txt"
 ```
 
 #### `merge --no-ff`
-
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/merge_no_ff_final.txt"
 ```
 
 #### `rebase`
-
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/rebase_final.txt"
 ```
 
 #### `rebase` + `merge --no-ff`
-
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/rebase_merge_no_ff_final.txt"
 ```

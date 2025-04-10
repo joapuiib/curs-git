@@ -73,7 +73,7 @@ projectes educatius.
 
 ![Organització Softcatalà a GitHub](img/softcatala.png)
 /// shadow-figure-caption
-Organització [Softcatalà a GitHub](https://github.com/Softcatala){:target="_blank"}.
+Organització [:simple-softcatala: Softcatalà a GitHub](https://github.com/Softcatala){:target="_blank"}.
 ///
 
 ### Crear una organització

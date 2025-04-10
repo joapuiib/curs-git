@@ -1,9 +1,10 @@
 # Apunts
+Els apunts d'aquest curs estan dividits en els següents blocs:
 
-- Bloc 1: [[introduccio]]
-- Bloc 2: [[branques]]
-- Bloc 3: [[remots]]
-- Bloc 4: [[etiquetes|Git avançat]]
-- Bloc 5: [[estrategies]]
-- Bloc 6: [[projectes]]
-- Bloc 7: [[educativa]]
+- [[introduccio-index]]
+- [[branques-index]]
+- [[remots-index]]
+- [[avancat-index]]
+- [[estrategies-index]]
+- [[projectes-index]]
+- [[educativa-index]]
