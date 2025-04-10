@@ -104,8 +104,8 @@ Alguns dels serveis d'allotjament repositoris remots en línia més coneguts só
 - __[:simple-bitbucket: Bitbucket](https://bitbucket.org/)__: Servei d'allotjament de repositoris propietat de l'empresa Atlassian,
     s'integra estretament amb altres eines d'aquesta empresa, com Jira.
 
-!!! info
-    Més informació: https://prismic.io/blog/gitlab-vs-github#similarities-between-github-and-gitlab
+!!! info "Més informació"
+    [GitLab vs. GitHub: Which is Better in 2025? | :simple-prismic: prismic Blog](https://prismic.io/blog/gitlab-vs-github#similarities-between-github-and-gitlab)
 
 
 ## Creació d'un repositori remot a GitHub
