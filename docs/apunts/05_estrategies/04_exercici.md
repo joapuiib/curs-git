@@ -58,7 +58,7 @@ utilitzant les següents branques:
 Per integrar les branques de funcionalitat a la branca de desenvolupament,
 pots triar entre les següents opcions:
 
-- :octicons-thumbsup-16:{ .success title="Opció recomanada" } [[estrategies#merge-squash]]
+- :octicons-thumbsup-16:{ .text-success title="Opció recomanada" } [[estrategies#merge-squash]]
 - [[estrategies#merge-no-ff]]
 - [[estrategies#rebase-merge-ff-only]]
 - [[estrategies#rebase-merge-no-ff]]

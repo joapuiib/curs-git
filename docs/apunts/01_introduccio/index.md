@@ -12,8 +12,12 @@ de [__:simple-git: Git__][git] i com configurar-lo localment.
 [git]: https://git-scm.com/
 
 
-/// html | div.walkthrough
-- [[preparacio]]: Configuració inicial del nostre entorn de treball.
-- [[introduccio]]: Introducció i conceptes bàsics.
-- [[introduccio-exercici]]: Exercici pràctic d'aquest bloc.
+/// html | div.timeline
+[[preparacio]]: Configuració inicial del nostre entorn de treball.
+///
+/// html | div.timeline.dashed
+[[introduccio]]: Introducció i conceptes bàsics.
+///
+/// html | div.timeline.success.check
+[[introduccio-exercici]]: Exercici pràctic d'aquest bloc.
 ///

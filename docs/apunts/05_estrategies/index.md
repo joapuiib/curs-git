@@ -14,12 +14,17 @@ projectes col·laboratius.
 
 [git]: https://git-scm.com/
 
-/// html | div.walkthrough
-- [[estrategies]]
-    - Branques amb diferents propòsits.
-    - Tècniques d'incorporació de canvis.
-    - Flux de treball.
-- [[estrategies-example]]: Exemple d'estratègia de ramificació
+/// html | div.timeline.dashed
+[[estrategies]]
+
+- Branques amb diferents propòsits.
+- Tècniques d'incorporació de canvis.
+- Flux de treball.
+
+[[estrategies-example]]: Exemple d'estratègia de ramificació
     en un projecte simulat entre diversos col·laboradors.
-- [[estrategies-exercici]]: Exercici pràctic d'aquest bloc.
+///
+
+/// html | div.timeline.success.check
+[[estrategies-exercici]]: Exercici pràctic d'aquest bloc.
 ///

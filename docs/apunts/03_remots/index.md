@@ -11,10 +11,14 @@ i com crear-los i allotjar-los a __[:simple-github: GitHub][github]__.
 
 [github]: https://github.com/
 
-/// html | div.walkthrough
-- [[remots]]
-    - Creació i gestió de repositoris remots.
-    - Autenticació.
-    - Sincronització entre repositoris locals i remots.
-- [[remots-exercici]]: Exercici pràctic d'aquest bloc.
+/// html | div.timeline.dashed
+[[remots]]
+
+- Creació i gestió de repositoris remots.
+- Autenticació.
+- Sincronització entre repositoris locals i remots.
+///
+
+/// html | div.timeline.success.check
+[[remots-exercici]]: Exercici pràctic d'aquest bloc.
 ///
