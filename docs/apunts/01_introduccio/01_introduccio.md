@@ -757,12 +757,13 @@ que complisquen algun dels patrons especificats.
     1. El fitxer `temp/file.txt` no apareix en l'estat del repositori després de crear el fitxer `.gitignore`.
 
 ## Recursos addicionals
-- [Curs de Git des de zero per MoureDev](https://www.youtube.com/watch?v=3GymExBkKjE&ab_channel=MoureDevbyBraisMoure)
-- https://github.com/UnseenWizzard/git_training
+- [:simple-youtube: Curs de Git des de zero per MoureDev](https://www.youtube.com/watch?v=3GymExBkKjE&ab_channel=MoureDevbyBraisMoure)
+- [:octicons-link-external-16: Learn `git` concepts, not commands](https://github.com/UnseenWizzard/git_training) by [@UnseenWizzard](https://github.com/UnseenWizzard)
+
 
 ## Bibliografia
-- https://git-scm.com/book/en/v2
-- https://github.com/UnseenWizzard/git_training
+- [:octicons-link-external-16: :simple-git: Git Book](https://git-scm.com/book/en/v2)
+- [:octicons-link-external-16: Learn `git` concepts, not commands](https://github.com/UnseenWizzard/git_training) by [@UnseenWizzard](https://github.com/UnseenWizzard)
 - https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main
 - https://stackoverflow.com/questions/35430584/how-is-the-git-hash-calculated
 - https://en.wikipedia.org/wiki/Diff
