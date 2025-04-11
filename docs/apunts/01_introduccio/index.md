@@ -15,8 +15,11 @@ de [__:simple-git: Git__][git] i com configurar-lo localment.
 /// html | div.timeline
 [[preparacio]]: Configuració inicial del nostre entorn de treball.
 ///
-/// html | div.timeline.dashed
+/// html | div.timeline
 [[introduccio]]: Introducció i conceptes bàsics.
+///
+/// html | div.timeline.dashed
+[[introduccio-resum]]: Resum de les comandes d'aquest bloc.
 ///
 /// html | div.timeline.success.check
 [[introduccio-exercici]]: Exercici pràctic d'aquest bloc.
