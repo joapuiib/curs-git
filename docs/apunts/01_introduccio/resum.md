@@ -1,12 +1,12 @@
 ---
 template: document.html
-title: "Resum comandes"
+title: "Introducció a Git: Resum comandes"
 icon: material/file-eye
 alias: introduccio-resum
 comments: true
 ---
 
-## Resum de comandes
+## Introducció a Git: Resum de comandes
 En aquests apunts inclouen un resum de les comandes i fitxers
 vists en el [[introduccio-index]].
 
