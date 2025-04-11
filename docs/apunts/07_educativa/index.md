@@ -10,6 +10,6 @@ per gestionar treball d'aula i projectes educatius col·laboratius.
 
 [github]: https://github.com/
 
-/// html | div.walkthrough
-- [[educativa]]: GitHub com a plataforma educativa.
+/// html | div.timeline
+[[educativa]]: GitHub com a plataforma educativa.
 ///

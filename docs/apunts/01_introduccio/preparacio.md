@@ -26,18 +26,21 @@ No obstant això, és important conéixer com funcionen les comandes de Git en l
 
 
 ## Instal·lació de :material-git: Git
-Git està disponible a https://git-scm.com/ per a Windows, macOS i Linux.
+Git està disponible a [la pàgina oficial][git] per a
+:material-microsoft-windows: Windows, :simple-linux: Linux i :simple-apple: macOS.
 
-=== "Ubuntu"
+[git]: https://git-scm.com/
+
+=== ":simple-ubuntu: Ubuntu"
 
     ```bash
     sudo apt update
     sudo apt install git
     ```
 
-=== "Windows"
+=== ":material-microsoft-windows: Windows"
 
-    Descarrega i executa l'instal·lador de Git des de https://git-scm.com/
+    [Descarrega][git] i executa l'instal·lador de Git.
 
     Una vegada instal·lat, pots utilitzar la consola __Git Bash__.
     És una terminal basada l'intèrpret __Bash__, que et permetrà
@@ -47,7 +50,7 @@ Git està disponible a https://git-scm.com/ per a Windows, macOS i Linux.
 Git utilitza un editor de text per a realitzar certes operacions,
 com ara escriure missatges de commit.
 
-Per defecte, Git utilitza l'editor [`ViM`](https://www.vim.org/),
+Per defecte, Git utilitza l'editor [:simple-vim: `ViM`](https://www.vim.org/),
 un editor de text per terminal molt potent, però difícil i poc intuïtiu
 per treballar.
 
@@ -60,6 +63,15 @@ git config --global core.editor <editor>
 ```
 
 !!! tip "Editors de text"
+
+    === ":material-asterisk: Multiplataforma"
+
+        - [:material-microsoft-visual-studio-code: Visual Studio Code](https://code.visualstudio.com/)
+            - [StackOverflow: How to use Visual Studio Code as default editor for git?](https://stackoverflow.com/questions/30024353/how-to-use-visual-studio-code-as-default-editor-for-git){:target=_blank}
+
+        ```
+        git config --global core.editor "code --wait"
+        ```
 
     === ":material-microsoft-windows: Windows"
 
@@ -82,14 +94,6 @@ git config --global core.editor <editor>
         git config --global core.editor nano
         ```
 
-    === ":material-asterisk: Multiplataforma"
-
-        - [:material-microsoft-visual-studio-code: Visual Studio Code](https://code.visualstudio.com/)
-            - [StackOverflow: How to use Visual Studio Code as default editor for git?](https://stackoverflow.com/questions/30024353/how-to-use-visual-studio-code-as-default-editor-for-git){:target=_blank}
-
-        ```
-        git config --global core.editor "code --wait"
-        ```
 
 !!! recommend
     Com que utilitzarem :material-microsoft-visual-studio-code: Visual Studio Code com a editor de text,

@@ -34,6 +34,11 @@ repositoris que es troben __allotjats en un servidor__, que permeten
 l'accés a altres usuaris i la col·laboració en el desenvolupament de
 projectes.
 
+![Estructura d'un repositori local i remot](../01_introduccio/img/components.png)
+/// figure-caption
+Estructura d'un repositori local i remot
+///
+
 ??? prep "Preparació repositori local"
     En aquests apunts treballarem sobre un nou repositori local.
 
@@ -104,8 +109,9 @@ Alguns dels serveis d'allotjament repositoris remots en línia més coneguts só
 - __[:simple-bitbucket: Bitbucket](https://bitbucket.org/)__: Servei d'allotjament de repositoris propietat de l'empresa Atlassian,
     s'integra estretament amb altres eines d'aquesta empresa, com Jira.
 
-!!! info
-    Més informació: https://prismic.io/blog/gitlab-vs-github#similarities-between-github-and-gitlab
+!!! info "Més informació"
+    [:octicons-link-external-16: GitLab vs. GitHub: Which is Better in 2025? | :simple-prismic: prismic Blog](https://prismic.io/blog/gitlab-vs-github#similarities-between-github-and-gitlab)
+    { .spell-ignore }
 
 
 ## Creació d'un repositori remot a GitHub
@@ -113,13 +119,13 @@ En aquesta secció, crearem un repositori remot a GitHub.
 
 1. Crea un compte a [:simple-github: GitHub](https://github.com/) si no en tens un.
 2. Inicia la sessió amb el teu compte.
-3. Fes clic a l'opció __["New"](https://github.com/new)__ per crear un nou repositori.
+3. Fes clic al botó __[:octicons-repo-24: New](https://github.com/new)__ per crear un nou repositori.
 4. Omple el formulari amb la informació del teu repositori:
     - __Nom__ del repositori. Ha de ser un nom únic en el teu compte de GitHub.
     - __Descripció__ del repositori. Opcional.
     - __Visibilitat__ del repositori. Pots triar entre públic o privat.
-        - __Públic__: Qualsevol persona pot veure el teu repositori. Sols les persones autoritzades poden fer canvis.
-        - __Privat__: Només tu i les persones que tu autoritzes poden veure el teu repositori. Sols les persones autoritzades poden fer canvis.
+        - __:octicons-repo-24: Públic__: Qualsevol persona pot veure el teu repositori. Sols les persones autoritzades poden fer canvis.
+        - __:octicons-lock-24: Privat__: Només tu i les persones que tu autoritzes poden veure el teu repositori. Sols les persones autoritzades poden fer canvis.
     - __README__: Indica si vols afegir un README al teu repositori.
     - __.gitignore__: Indica si vols afegir un fitxer `.gitignore` per ignorar fitxers en el teu repositori.
     - __Llicència__: Indica si vols afegir una llicència al teu repositori.
@@ -152,175 +158,6 @@ En aquesta secció, crearem un repositori remot a GitHub.
     La [Figura 3](#figure-create-github-repo) mostra els passos per enllaçar el teu repositori local amb el repositori remot creat a GitHub.
     En els següents apartats, explicarem aquestes ordres amb més detall.
 
-## Mètodes d'autenticació a GitHub
-Per poder enllaçar el teu repositori local amb el repositori remot
-i fer canvis en aquest, necessites autenticar-te amb el servidor de GitHub.
-
-!!! recommend
-    Per seguretat i fàcil reutilització, es recomana utilitzar el __mètode SSH__ per autenticar-se
-    amb el servidor de GitHub.
-
-    Pots consultar l'apartat [Configuració de la clau SSH](#configuracio-de-la-clau-ssh)
-    per configurar aquest mètode d'autenticació directament.
-
-GitHub ofereix diferents mètodes d'autenticació, utilitzant dos protocols diferents:
-
-- __Protocol HTTPS__: Utilitza el protocol HTTPS per autenticar-se amb el servidor de GitHub.
-
-    Per utilitzar aquest mètode, has de configurar les teues credencials d'accés a GitHub
-    en el teu sistema local.
-
-    Aquesta autenticació es pot realitzar mitjançant:
-
-    - __~~Nom d'usuari i contrasenya~~__: Des del 2021-08-13, aquest mètode està
-        deshabilitat a GitHub.
-    - __Token d'accés personal (*Personal Access Token* o PAT)__:
-        GitHub permet crear un token d'accés personal
-        per autenticar-se amb el servidor de GitHub.
-    - __Extensions de l'IDE__: Algunes extensions de l'IDE que utilitzes poden
-        gestionar l'autenticació amb GitHub directament.
-
-- __Protocol SSH__: Utilitza el protocol SSH per autenticar-se amb el servidor de GitHub.
-
-    Per utilitzar aquest mètode, has de configurar una clau SSH en el teu sistema local
-    i afegir-la al teu compte de GitHub.
-
-### Token d'accés personal (PAT)
-Un __Token d'Accés Personal (*Personal Access Token* o PAT)__ és una clau d'accés
-que permet autenticar-se amb el servidor de GitHub mitjançant el protocol HTTPS.
-
-!!! docs
-    - [GitHub: Managing your personal access tokens](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
-    - [StackOverflow: Message "Support for password authentication was removed."](https://stackoverflow.com/questions/68775869/message-support-for-password-authentication-was-removed)
-
-Per crear un token d'accés personal, segueix els següents passos:
-
-- Inicia la sessió a [:material-github: GitHub](https://github.com/)
-- Fes clic a la teua foto de perfil i selecciona __Settings__.
-- A la barra lateral esquerra, fes clic a __Developer settings__.
-- A la barra lateral esquerra, fes clic a [__Personal access tokens__.](https://github.com/settings/tokens)
-- Fes clic a __Generate new token__.
-
-Existeixen dos tipus de tokens d'accés personal:
-
-- __Access token (classic)__: Permet especificar els permisos que vols donar al token,
-    que són globals per a tot el teu compte.
-- __Fine-grained token__: Permet especificar els permisos que vols donar al token,
-    que són específics per a un repositori o organització.
-
-Una vegada creat el token, podràs utilitzar-lo per autenticar-te amb el servidor de GitHub.
-
-!!! important
-    __Guarda el teu token d'accés personal en un lloc segur.__
-
-    No podràs veure'l de nou després de tancar la pàgina.
-
-Pots utilitzar el teu token d'accés personal per autenticar-te amb el servidor de GitHub
-de dues maneres:
-
-- __Mitjançant la URL__: Pots afegir el teu token d'accés personal a la URL del repositori
-    per autenticar-te amb el servidor de GitHub.
-    ```shellconsole
-    git clone https://<token>@github.com/<usuari>/<repositori>
-    ```
-- __Mitjançant la contrasenya__: Pots utilitzar el teu token d'accés personal com a contrasenya
-    per autenticar-te amb el servidor de GitHub.
-
-    ```shellconsole
-    jpuigcerver@fp:~ $ git clone https://github.com/<usuari>/<repositori>
-    Cloning into '<repositori>'...
-    Username for 'https://github.com': <usuari>
-    Password for 'https://<username>@github.com': <token>
-    ```
-
-    !!! note
-        Per seguretat, no es mostrarà res en el camp de la contrasenya.
-
-
-!!! tip
-    Per tal de no haver de recordar el PAT cada vegada, és possible configurar
-    Git perquè ho recorde automàticament.
-
-    ```bash
-    git config --global credential.helper store
-    ```
-    Aquesta comanda guardarà les credencials en un fitxer de text en el teu sistema local.
-
-    !!! danger
-        Aquesta opció guarda les credencials en text pla en el fitxer `~/.git-credentials`.
-
-
-### Configuració de la clau SSH
-Per autenticar-te amb el servidor de GitHub mitjançant el protocol SSH,
-has de configurar una clau SSH en el teu sistema local i afegir-la al teu compte de GitHub.
-
-!!! docs
-    - [Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh){:target="_blank"}
-
-Per generar una clau SSH, segueix els següents passos.
-
-=== "Terminal"
-    - Crea una clau SSH al teu sistema local mitjançant la comanda `ssh-keygen`.
-
-        ```shellconsole
-        jpuigcerver@fp:~ $ ssh-keygen -t rsa -b 4096
-        Generating public/private rsa key pair.
-        Enter file in which to save the key (/home/jpuigcerver/.ssh/id_rsa):
-        Enter passphrase (empty for no passphrase):
-        Enter same passphrase again:
-        Your identification has been saved in /home/jpuigcerver/.ssh/id_rsa
-        ```
-
-        - `-t rsa`: Indica el tipus de clau RSA.
-        - `-b 4096`: Indica la longitud de la clau en bits.
-        - Pots indicar la ruta on guardar la clau. Per defecte, es guarda en `/home/<usuari>/.ssh/id_rsa`.
-        - Pots indicar una contrasenya per protegir la clau. Si no vols protegir-la, deixa el camp buit.
-
-    - Còpia el contingut de la clau pública (`id_rsa.pub`) al porta-retalls.
-
-        ```shellconsole
-        jpuigcerver@fp:~ $ cat ~/.ssh/id_rsa.pub
-        ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC7GqFnEFQZK4+l3zvXF07hN/cMk5ZtJmMkHWAJyTYQ+pDwMXp9eQs
-        +VASLlz9z+0Q3vnnXN4vBO/+2u29fKJ4YlrecDYtCDpEhMXCkaCv9/ggkru09j2rELFuAqER55lgEtRKTfLKAVFa3Ws
-        2VV7zlTSAH2y8nVddzlJRE9Y1BAfH0+1hjpCe+vgGObBLyIGGsXwlmm3mwI7NKHuKCIVskIEX3F0jw668dBex+6VUtG
-        ...
-        ```
-
-
-=== "Interfície gràfica"
-
-    - Obri el programa __Git GUI__.
-    - Obri el diàleg a __Help > Show SSH Key__.
-
-        ![Git GUI: menú diàleg SSH](img/git_gui_help.png)
-        /// caption
-        Menú diàleg SSH de Git GUI
-        ///
-
-    - Fes clic a __Generate Key__.
-        - Indica una contrasenya (_passphrase_) per protegir la clau (opcional)
-            o deixa el camp buit per no protegir-la.
-    - Fes clic a __Copy to Clipboard__ per copiar la clau pública al porta-retalls.
-
-        ![Git GUI: clau SSH generada](img/git_gui_key_generated.png)
-        /// caption
-        Clau SSH generada amb Git GUI
-        ///
-
-Després, configura la clau SSH al teu compte de GitHub seguint els següents passos:
-
-- Inicia la sessió a [:material-github: GitHub](https:/github.com/)
-- Fes clic a la teua foto de perfil i selecciona __Settings__.
-- A la barra lateral esquerra, fes clic a [__SSH and GPG keys__](https://github.com/settings/keys).
-- Fes clic a __New SSH key__.
-- Indica un títol per a la clau SSH.
-- Enganxa el contingut de la clau pública al camp __Key__.
-
-
-!!! important
-    Aquesta configuració s'ha de repetir per cada dispositiu on
-    vulgues autenticar-te amb el servidor de GitHub mitjançant el protocol SSH.
-
 
 ## Configurar un repositori remot (`git remote`)
 El primer pas és enllaçar el teu __Repositori Local__
@@ -337,26 +174,26 @@ git remote [add|rename|remove|show] [<options>]
 
 Aquesta comanda permet realitzar les següents accions:
 
-- Sense opcions: Mostra els repositoris remots associats al teu repositori local.
-- `add`: Afegeix un nou repositori remot.
-- `rename`: Canvia el nom d'un repositori remot.
-- `remove`: Elimina un repositori remot.
-- `show`: Mostra informació detallada d'un repositori remot.
+- __Sense opcions__: Mostra els repositoris remots associats al teu repositori local.
+- __`add`__: Afegeix un nou repositori remot.
+- __`rename`__: Canvia el nom d'un repositori remot.
+- __`remove`__: Elimina un repositori remot.
+- __`show`__: Mostra informació detallada d'un repositori remot.
 
 Cadascuna d'aquestes opcions té les seues pròpies opcions i arguments.
 
 !!! docs
-    Documentació oficial de `git remote`: https://git-scm.com/docs/git-remote
+    [:octicons-link-external-16: `git remote` – Documentació oficial de :simple-git: Git](https://git-scm.com/docs/git-remote)
 
 ### Afegir un repositori remot
 Per afegir un repositori remot, utilitzarem la comanda `git remote add`.
 
 La sintaxi és la següent:
 ```bash
-git remote add <nom> <url>
+git remote add <alies> <url>
 ```
 
-- `<nom>`: Nom o àlies del repositori remot en el teu repositori local.
+- `<alies>`: Nom o àlies del repositori remot en el teu repositori local.
     Normalment, s'utilitza el nom `origin` per referir-se al repositori remot principal.
 - `<url>`: URL del repositori remot.
 
@@ -379,13 +216,14 @@ Repositori Local vinculat amb un Repositori Remot
     Enllaçarem el nostre repositori local amb el repositori
     remot creat anteriorment a GitHub.
 
-    La URL del repositori remot és `git@github.com:jpuigcerver/git_remots.git`(1).
+    La URL del repositori remot és `git@github.com:jpuigcerver/git_remots.git`.
     
+    > Utilitzem la URL __SSH__ ja que he decidit utilitzar aquest mètode d'autenticació.
+
     ```shellconsole
     --8<-- "docs/files/remots/stdout/remots/add_remote.txt"
     ```
 
-1. Utilitzem la URL __SSH__ ja que he decidit utilitzar aquest mètode d'autenticació.
 
 ### Reanomenar un repositori remot
 L'ordre `git remote rename` permet canviar el nom
@@ -396,8 +234,8 @@ La sintaxi és la següent:
 git remote rename <antic> <nou>
 ```
 
-- `<antic>`: Nom actual del repositori remot.
-- `<nou>`: Nou nom del repositori remot.
+- `<antic>`: Àlies actual del repositori remot.
+- `<nou>`: Nou àlies del repositori remot.
 
 ### Eliminar un repositori remot
 L'ordre `git remote remove` permet eliminar un repositori remot
@@ -405,10 +243,10 @@ associat al teu repositori local.
 
 La sintaxi és la següent:
 ```bash
-git remote remove <nom>
+git remote remove <alies>
 ```
 
-- `<nom>`: Nom del repositori remot a eliminar.
+- `<alies>`: Àlies del repositori remot a eliminar.
 
 
 ## Associació entre branques locals i remotes (`git push --set-upstream`)
@@ -429,7 +267,7 @@ git push [-u|--set-upstream] <remot> <branca>
 - `<branca>`: Nom de la branca remota.
 
 !!! docs
-    Documentació oficial de `git push`: https://git-scm.com/docs/git-push
+    [:octicons-link-external-16: `git push` – Documentació oficial de :simple-git: Git](https://git-scm.com/docs/git-push)
 
 !!! important
     Aquesta comanda funciona sobre la branca on estem situats (`HEAD`).
@@ -533,7 +371,7 @@ Aquesta ordre és útil per obtindre la informació dels canvis realitzats en el
 i decidir si volem incorporar-los al nostre repositori local.
 
 !!! docs
-    Documentació oficial de `git fetch`: https://git-scm.com/docs/git-fetch
+    [:octicons-link-external-16: `git fetch` – Documentació oficial de :simple-git: Git](https://git-scm.com/docs/git-fetch)
 
 !!! info
     L'opció `--prune` permet eliminar les referències de les branques remotes que ja no existeixen
@@ -628,7 +466,7 @@ git pull [<options>] [<remot> [<branca>]
 - `<branca>`: Nom de la branca remota. Per defecte, s'utilitza la configuració de la branca actual.
 
 !!! docs
-    Documentació oficial de `git pull`: https://git-scm.com/docs/git-pull
+    [:octicons-link-external-16: `git pull` – Documentació oficial de :simple-git: Git](https://git-scm.com/docs/git-pull)
 
 !!! warning
     La fusió (`merge`) implícita de `git pull` pot ser una [[branques#fusio-directa]]{: target="_blank"}
@@ -646,9 +484,11 @@ git pull [<options>] [<remot> [<branca>]
     es pot fer el següent:
 
     - `git pull --ff-only`: Incorpora els canvis de la branca remota
-        només si es pot fer una fusió directa (_fast-forward_).
+        __només si es pot fer una fusió directa (_fast-forward_)__.
 
-        Git pot ser configurat perquè només permeta aquest tipus de fusió
+        En cas contrari, es produirà un error i no s'incorporaran els canvis.
+
+        A més, Git pot ser configurat perquè incloga aquesta opció
         en la comanda `git pull`.
 
         ```
@@ -656,7 +496,7 @@ git pull [<options>] [<remot> [<branca>]
         ```
 
     - `git pull --rebase`: Incorpora els canvis de la branca remota
-        mitjançant un rebase, és a dir, aplica els canvis de la branca local
+        mitjançant un `rebase`, és a dir, aplica els canvis de la branca local
         després dels canvis de la branca remota.
 
         Aquest comportament també es pot configurar per defecte en la comanda `git pull`.
@@ -707,10 +547,12 @@ git pull [<options>] [<remot> [<branca>]
     --8<-- "docs/files/remots/stdout/remots/prepare_local_pull_no_ff.txt"
     ```
 
-    1. En aquest moment, el nou canvi __Més menjar__ no està reflectit en la branca remota `origin/main`.
+    1. El canvi __Més menjar__ no està reflectit en la branca remota `origin/main`
+    perquè no hem sincronitzat el nostre repositori local amb el repositori remot.
+
 
     En aquest moment, podríem intentar publicar aquest canvi al repositori remot,
-    però com  que el repositori remot té canvis que no estan reflectits en el nostre repositori local,
+    però com que el repositori remot té canvis que no estan reflectits en el nostre repositori local,
     Git ens mostrarà un missatge d'error.
 
     ```shellconsole
@@ -732,7 +574,11 @@ git pull [<options>] [<remot> [<branca>]
     En aquest cas, haurem d'incorporar els canvis de dues maneres diferents.
 
     !!! warning "Un _commit_ de fusió: `git pull --no-ff`."
-        Aquesta opció crearà un commit de fusió, que no és desitjable si es vol mantenir una història lineal.
+        Aquest és el procés que seguirà `git pull` si no
+        indiquem cap opció addicional.
+
+        En aquest cas crearà un commit de fusió,
+        que no és desitjable si es vol mantenir una història lineal.
 
         ```shellconsole
         --8<-- "docs/files/remots/stdout/remots/pull_no_ff.txt"
@@ -749,63 +595,13 @@ git pull [<options>] [<remot> [<branca>]
         ```
 
 
-## Treball amb branques
-En aquests apunts, hem treballat les diferents operacions de sincronització entre repositoris
-sobre la branca principal `main`. Les mateixes operacions poden ser realitzades sobre altres branques
-de la mateixa manera.
-
-### Crear una branca
-```bash
-git branch <branca>
-```
-
-### Canviar de branca
-```bash
-git checkout <branca>
-```
-
-### Enllaçar una branca local amb una branca remota
-!!! info
-    Aquesta operació es realitzarà sobre la branca actual (`HEAD`).
-
-```bash
-git push [-u | --set-upstream] origin <branca>
-```
-
-### Publicar canvis d'una branca
-!!! info
-    Aquesta operació es realitzarà sobre la branca actual (`HEAD`).
-
-    Prèviament cal haver [enllaçat la branca local amb la branca remota](#enllacar-una-branca-local-amb-una-branca-remota).
-
-```bash
-git push
-```
-
-### Incorporar canvis d'una branca remota
-!!! info
-    Aquesta operació es realitzarà sobre la branca actual (`HEAD`).
-
-```bash
-git pull [--rebase]
-```
-
-
-### Eliminar una branca remota
-Per eliminar una branca remota, cal utilitzar `git push` amb l'opció `-d`:
-
-```bash
-git push -d origin <ref>
-```
-
-- `ref`: Referència a esborrar, que inclou branques i etiquetes.
-
-
-
+/// html | div.spell-ignore
 ## Recursos addicionals
-- [Curs de Git des de zero per MoureDev](https://www.youtube.com/watch?v=3GymExBkKjE&ab_channel=MoureDevbyBraisMoure)
-- https://github.com/UnseenWizzard/git_training
+- [:simple-youtube: Curs de Git des de zero per MoureDev](https://www.youtube.com/watch?v=3GymExBkKjE&ab_channel=MoureDevbyBraisMoure)
+- [:octicons-link-external-16: Learn `git` concepts, not commands](https://github.com/UnseenWizzard/git_training) by [@UnseenWizzard](https://github.com/UnseenWizzard)
+
 
 ## Bibliografia
-- https://git-scm.com/book/en/v2
-- https://github.com/UnseenWizzard/git_training
+- [:octicons-link-external-16: :simple-git: Git Book](https://git-scm.com/book/en/v2)
+- [:octicons-link-external-16: Learn `git` concepts, not commands](https://github.com/UnseenWizzard/git_training) by [@UnseenWizzard](https://github.com/UnseenWizzard)
+///
