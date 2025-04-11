@@ -11,11 +11,14 @@ i com crear-los i allotjar-los a __[:simple-github: GitHub][github]__.
 
 [github]: https://github.com/
 
+/// html | div.timeline
+[[auth]]: Configuració de l'autenticació amb GitHub.
+///
+
 /// html | div.timeline.dashed
 [[remots]]
 
 - Creació i gestió de repositoris remots.
-- Autenticació.
 - Sincronització entre repositoris locals i remots.
 ///
 
