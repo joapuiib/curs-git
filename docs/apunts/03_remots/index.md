@@ -6,8 +6,8 @@ hide:
 ---
 
 ## Bloc 3: Remots
-En aquest bloc estudiarem com treballar amb __:material-cloud-sync: repositoris remots__
-i com crear-los i allotjar-los a __[:simple-github: GitHub][github]__.
+En aquest bloc estudiarem com treballar amb __:material-cloud-sync: repositoris remots__,
+com crear-los i allotjar-los a __[:simple-github: GitHub][github]__.
 
 [github]: https://github.com/
 
@@ -20,6 +20,10 @@ i com crear-los i allotjar-los a __[:simple-github: GitHub][github]__.
 
 - Creació i gestió de repositoris remots.
 - Sincronització entre repositoris locals i remots.
+///
+
+/// html | div.timeline.dashed
+[[remots-resum]]: Resum de les comandes d'aquest bloc.
 ///
 
 /// html | div.timeline.success.check
