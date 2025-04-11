@@ -10,13 +10,13 @@
         <meta name="author" content="Joan Puigcerver Ibáñez">
       
       
-        <link rel="canonical" href="https://joapuiib.github.io/curs-git/apunts/04_avancat/stash/">
+        <link rel="canonical" href="https://joapuiib.github.io/curs-git/apunts/01_introduccio/exercici/">
       
       
-        <link rel="prev" href="../etiquetes/">
+        <link rel="prev" href="../resum/">
       
       
-        <link rel="next" href="../reset/">
+        <link rel="next" href="../../02_branques/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Reserva de canvis (stash) - Introducció a Git i la seua aplicació a l’aula</title>
+        <title>Exercici: Introducció a Git - Introducció a Git i la seua aplicació a l’aula</title>
       
     
     
@@ -86,11 +86,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Reserva de canvis (stash) - Introducció a Git i la seua aplicació a l’aula" >
+        <meta  property="og:title"  content="Exercici: Introducció a Git - Introducció a Git i la seua aplicació a l’aula" >
       
         <meta  property="og:description"  content="None" >
       
-        <meta  property="og:image"  content="https://joapuiib.github.io/curs-git/assets/images/social/apunts/04_avancat/stash.png" >
+        <meta  property="og:image"  content="https://joapuiib.github.io/curs-git/assets/images/social/apunts/01_introduccio/exercici.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -98,15 +98,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://joapuiib.github.io/curs-git/apunts/04_avancat/stash/" >
+        <meta  property="og:url"  content="https://joapuiib.github.io/curs-git/apunts/01_introduccio/exercici/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Reserva de canvis (stash) - Introducció a Git i la seua aplicació a l’aula" >
+        <meta  name="twitter:title"  content="Exercici: Introducció a Git - Introducció a Git i la seua aplicació a l’aula" >
       
         <meta  name="twitter:description"  content="None" >
       
-        <meta  name="twitter:image"  content="https://joapuiib.github.io/curs-git/assets/images/social/apunts/04_avancat/stash.png" >
+        <meta  name="twitter:image"  content="https://joapuiib.github.io/curs-git/assets/images/social/apunts/01_introduccio/exercici.png" >
       
     
     
@@ -129,7 +129,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reserva-de-canvis-stash" class="md-skip">
+        <a href="#objectius" class="md-skip">
           Salta el contingut
         </a>
       
@@ -163,7 +163,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reserva de canvis (stash)
+              Exercici: Introducció a Git
             
           </span>
         </div>
@@ -482,6 +482,8 @@
                 
   
   
+    
+  
   
   
     
@@ -507,16 +509,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../01_introduccio/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -535,7 +537,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -557,7 +559,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../../01_introduccio/preparacio/" class="md-nav__link">
+      <a href="../preparacio/" class="md-nav__link">
         
   
   
@@ -583,7 +585,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../../01_introduccio/introduccio/" class="md-nav__link">
+      <a href="../introduccio/" class="md-nav__link">
         
   
   
@@ -609,7 +611,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../../01_introduccio/transparencies/" class="md-nav__link">
+      <a href="../transparencies/" class="md-nav__link">
         
   
   
@@ -635,7 +637,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../../01_introduccio/resum/" class="md-nav__link">
+      <a href="../resum/" class="md-nav__link">
         
   
   
@@ -657,11 +659,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
+  
+    <li class="md-nav__item md-nav__item--active">
       
-      <a href="../../01_introduccio/exercici/" class="md-nav__link">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.06 9 .94.94L5.92 19H5v-.92zm3.6-6c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29m-3.6 3.19L3 17.25V21h3.75L17.81 9.94z"/></svg>
+  
+  
+  <span class="md-ellipsis">
+    Exercici: Introducció a Git
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -674,6 +697,64 @@
   
 
       </a>
+      
+        
+
+
+
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectius" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objectius
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lliurament" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lliurament
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercici" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bibliografia
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1109,8 +1190,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1142,16 +1221,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../04_avancat/" class="md-nav__link ">
               
   
   
@@ -1170,7 +1249,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1192,7 +1271,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../etiquetes/" class="md-nav__link">
+      <a href="../../04_avancat/etiquetes/" class="md-nav__link">
         
   
   
@@ -1214,32 +1293,11 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
+    <li class="md-nav__item">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg>
-  
-  
-  <span class="md-ellipsis">
-    Reserva de canvis (stash)
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="../../04_avancat/stash/" class="md-nav__link">
         
   
   
@@ -1252,88 +1310,6 @@
   
 
       </a>
-      
-        
-
-
-
-
-
-<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Taula de continguts
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#reserva-de-canvis-stash" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reserva de canvis (stash)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Reserva de canvis (stash)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#crear-una-reserva-de-canvis" class="md-nav__link">
-    <span class="md-ellipsis">
-      Crear una reserva de canvis
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mostrar-les-reserves-de-canvis" class="md-nav__link">
-    <span class="md-ellipsis">
-      Mostrar les reserves de canvis
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mostrar-els-canvis-duna-reserva" class="md-nav__link">
-    <span class="md-ellipsis">
-      Mostrar els canvis d'una reserva
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#recuperar-els-canvis" class="md-nav__link">
-    <span class="md-ellipsis">
-      Recuperar els canvis
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#descartar-els-canvis" class="md-nav__link">
-    <span class="md-ellipsis">
-      Descartar els canvis
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1347,7 +1323,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../reset/" class="md-nav__link">
+      <a href="../../04_avancat/reset/" class="md-nav__link">
         
   
   
@@ -1373,7 +1349,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../amend/" class="md-nav__link">
+      <a href="../../04_avancat/amend/" class="md-nav__link">
         
   
   
@@ -1399,7 +1375,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../revert/" class="md-nav__link">
+      <a href="../../04_avancat/revert/" class="md-nav__link">
         
   
   
@@ -1425,7 +1401,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../cherrypick/" class="md-nav__link">
+      <a href="../../04_avancat/cherrypick/" class="md-nav__link">
         
   
   
@@ -1451,7 +1427,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../squash/" class="md-nav__link">
+      <a href="../../04_avancat/squash/" class="md-nav__link">
         
   
   
@@ -1477,7 +1453,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../exercici/" class="md-nav__link">
+      <a href="../../04_avancat/exercici/" class="md-nav__link">
         
   
   
@@ -2021,62 +1997,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#reserva-de-canvis-stash" class="md-nav__link">
+  <a href="#objectius" class="md-nav__link">
     <span class="md-ellipsis">
-      Reserva de canvis (stash)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Reserva de canvis (stash)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#crear-una-reserva-de-canvis" class="md-nav__link">
-    <span class="md-ellipsis">
-      Crear una reserva de canvis
+      Objectius
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#mostrar-les-reserves-de-canvis" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#lliurament" class="md-nav__link">
     <span class="md-ellipsis">
-      Mostrar les reserves de canvis
+      Lliurament
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#mostrar-els-canvis-duna-reserva" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#exercici" class="md-nav__link">
     <span class="md-ellipsis">
-      Mostrar els canvis d'una reserva
+      Exercici
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#recuperar-els-canvis" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
     <span class="md-ellipsis">
-      Recuperar els canvis
+      Bibliografia
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#descartar-els-canvis" class="md-nav__link">
-    <span class="md-ellipsis">
-      Descartar els canvis
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2103,19 +2055,6 @@
 
     <tbody><tr><td>
 
-
-    
-      
-
-  <nav class="md-tags" >
-    
-      
-      
-      
-        <span class="md-tag">stash</span>
-      
-    
-  </nav>
 
     
     
@@ -2163,7 +2102,7 @@
 
 
 <div class="cover__title">
-  <h1 class=""><span class="cover__title-text">Reserva de canvis (stash)</span></h1>
+  <h1 class=""><span class="cover__title-text">Exercici: Introducció a Git</span></h1>
 
 
 
@@ -2251,374 +2190,95 @@
   
   
 
-    <h2 id="reserva-de-canvis-stash">Reserva de canvis (stash)<a class="headerlink" href="#reserva-de-canvis-stash" title="Permanent link">&para;</a></h2>
-<p>La <strong>reserva de canvis o <code>stash</code></strong> en Git es un magatzem que permet
-guardar temporalment els canvis que encara no es volen confirmar (<em>commit</em>).</p>
-<p>Aquesta funció és útil si heu de realitzar alguna acció de Git que, d'altra manera,
-vos faria perdre els canvis que heu realitzat al directori de treball.</p>
+    <h2 id="objectius">Objectius<a class="headerlink" href="#objectius" title="Permanent link">&para;</a></h2>
+<p>Els objectius d'aquests exercici són:</p>
 <ul>
-<li>Canviar de branca.</li>
-<li>Incorporar canvis d'una altra branca (<code>merge</code>, <code>rebase</code> o <code>pull</code>).</li>
+<li>Conéixer com crear i inicialitzar un repositori de Git localment.</li>
+<li>Conéixer com afegir fitxers al repositori local.</li>
+<li>Conéixer com realitzar canvis en el repositori local.</li>
+<li>Conéixer com consultar l'estat del repositori local.</li>
+<li>Conéixer com consultar la història de canvis del repositori local.</li>
+<li>Conéixer les configuracions bàsiques de Git.</li>
 </ul>
-<p>La reserva de canvis permet guardar aquests canvis temporalment i recuperar-los
-posteriorment quan siga necessari.</p>
-<details class="prep">
-<summary>Preparació repositori</summary>
-<p>Inicialitzem un repositori amb canvis en el fitxer <code>README.md</code>
-i una branca addicional <code>altres_canvis</code> on s'han fet canvis al mateix fitxer.</p>
+<h2 id="lliurament">Lliurament<a class="headerlink" href="#lliurament" title="Permanent link">&para;</a></h2>
+<p>Per a lliurar aquest exercici podeu triar entre una de les següents opcions:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Document PDF</label><label for="__tabbed_1_2">Vídeo de la pantalla</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Documenteu els passos realitzats en un document de text.</p>
+<ul>
+<li>
+<p>Cal incloure captures de pantalla amb els passos realitzats
+    i els resultats obtinguts.</p>
+<blockquote>
+<p>És recomanable mostrar l'estat del repositori amb <code>git status</code> o <code>git lga</code></p>
+<p>Retalla les captures de pantalla per mostrar sols la informació rellevant.</p>
+</blockquote>
+</li>
+<li>
+<p>S'ha de lliurar en format <strong>PDF</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Una vegada acabat l'exercici, graveu un vídeo de la pantalla
+mostrant i explicant els passos realitzats i el resultat final.</p>
+<blockquote>
+<p>No cal que es graveu a vosaltres mateixos, només la pantalla.</p>
+</blockquote>
+<ul>
+<li>La durada <strong>màxima</strong> del vídeo ha de ser 10 minuts.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>En qualsevol cas, també cal lliurar la carpeta amb el repositori de Git
+que has creat durant l'exercici de forma comprimida en format <code>.zip</code> o <code>.tgz</code>.</p>
+<h2 id="exercici">Exercici<a class="headerlink" href="#exercici" title="Permanent link">&para;</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Comprova l'estat del repositori amb <code>git status</code> i <code>git diff</code> després de cada pas
+per entendre els estats en el qual es pot trobar
+el repositori i els fitxers.</p>
+</div>
 <div class="admonition danger">
-<p class="admonition-title">Danger</p>
+<p class="admonition-title">Perill</p>
 <p>Crea el nou repositori <strong>en una carpeta independent</strong> per evitar
 problemes amb els exemples i exercicis anteriors.</p>
 </div>
-<div class="collapse-code"><input checked="checked" id="__collapse0" name="__collapse0" type="checkbox" /><div class="language-sh highlight" data-download="1"><span class="filename">setup_stash.sh</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="ch">#!/bin/bash</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Elimina els repositori si existeix</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-d<span class="w"> </span>~/git_stash<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span>rm<span class="w"> </span>-rf<span class="w"> </span>~/git_stash
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">fi</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/git_stash
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nb">cd</span><span class="w"> </span>~/git_stash
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>git<span class="w"> </span>init
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>git<span class="w"> </span>branch<span class="w"> </span>-m<span class="w"> </span>main
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;# Reserva de canvis&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>README.md
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>git<span class="w"> </span>add<span class="w"> </span>README.md
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Commit inicial&quot;</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>altres_canvis
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Altres canvis&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Altres canvis&quot;</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>git<span class="w"> </span>checkout<span class="w"> </span>main
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>git<span class="w"> </span>lga
-</span></code></pre></div>
-<div class="code-footer"><label class="expand" for="__collapse0" tabindex="0"></label><label class="collapse" for="__collapse0" tabindex="0"></label></div>
-</div>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/git_stash
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">cd</span><span class="w"> </span>~/git_stash
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>init
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="go">Initialized empty Git repository in ~/git_stash/.git/</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>branch<span class="w"> </span>-m<span class="w"> </span>main
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;# Reserva de canvis&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>README.md
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>add<span class="w"> </span>README.md
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Commit inicial&quot;</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="go">[main (root-commit) 5cc4104] Commit inicial</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="go"> 1 file changed, 1 insertion(+)</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="go"> create mode 100644 README.md</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>altres_canvis
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="go">Switched to a new branch &#39;altres_canvis&#39;</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(altres_canvis)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Altres canvis&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(altres_canvis)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Altres canvis&quot;</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="go">[altres_canvis 602f4b0] Altres canvis</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="go"> 1 file changed, 1 insertion(+)</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(altres_canvis)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>main
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="go">Switched to branch &#39;main&#39;</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">602f4b0</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Altres canvis</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(altres_canvis)</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">5cc4104</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Commit inicial</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
-</span></code></pre></div>
-</details>
-<details class="question">
-<summary>Per què és útil <code>git stash</code>?</summary>
-<p>Imaginem que estem treballant en la branca principal <code>main</code> i hem
-realitzat canvis al fitxer <code>README.md</code>.</p>
-<p>Aquests canvis resideixen en el <strong>Directori de Treball</strong> i encara
-no han estat confirmats (<em>commit</em>).</p>
-<p>En aquest moment, podem decidir canviar a una altra branca.
-En el cas que aquesta operació modifique la mateixa part
-dels fitxers on hem realitzat canvis, Git ens impedirà
-per no perdre aquests canvis.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Canvi A&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="go">On branch main</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="go">Changes not staged for commit:</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="go">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="git-mod">modified:   README.md</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="go">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>altres_canvis
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="git-error">error: Your local changes to the following files would be overwritten by checkout:</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="go">    README.md</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="go">Please commit your changes or stash them before you switch branches.</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="go">Aborting</span>
-</span></code></pre></div>
-<p>Si llegim el missatge d'error, Git ens recomana alguna de les següents
-opcions.</p>
-<p>La primera opció és <strong>confirmar (<em>commit</em>) els canvis</strong> realitzats.
-Això ens permetria canviar de branca sense problemes, no obstant això,
-pot ser que no vulguem confirmar els canvis en aquest moment.</p>
-<p>La segona opció és <strong>guardar els canvis</strong> de manera temporal
-mitjançant la comanda <code>git stash</code>.</p>
-</details>
-<h3 id="crear-una-reserva-de-canvis">Crear una reserva de canvis<a class="headerlink" href="#crear-una-reserva-de-canvis" title="Permanent link">&para;</a></h3>
-<p>La comanda <code>git stash</code> permet guardar els canvis que s'han realitzat al directori de treball.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>stash<span class="w"> </span><span class="o">[</span>-m<span class="w"> </span>&lt;missatge&gt;<span class="o">]</span>
-</span></code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Consell</p>
-<p>Amb l'opció <code>-m</code> podem afegir un missatge al <code>stash</code> per
-identificar millor els canvis guardats.</p>
-</div>
-<p>Els canvis s'emmagatzemen de manera temporal a una <strong>pila</strong>:</p>
-<ul>
-<li>
-<p>Els nous canvis es guardaran a la primera posició de la pila amb l'índex 0: <code>stash@{0}</code>.</p>
-<p>D'aquesta manera, els canvis més actuals es troben a la part superior
-de la pila i són més fàcils d'accedir (la majoria de comandes <code>stash</code>
-treballen per defecte amb el <code>stash@{0}</code>).</p>
-<figure id="__figure-caption_1">
-<p><img alt="Reserva de canvis una única entrada" src="../img/stash/single_stash.png" /></p>
-<figcaption>
-<p><span class="caption-prefix">Figura 1. </span> Reserva canvis amb una única entrada</p>
-</figcaption>
-</figure>
-</li>
-<li>
-<p>L'índex dels canvis presents anteriorment a la pila incrementarà en 1.</p>
-<figure id="__figure-caption_2">
-<p><img alt="Reservar de canvis amb entrades existents anteriorment" src="../img/stash/stash.png" /></p>
-<figcaption>
-<p><span class="caption-prefix">Figura 2. </span> Reservar canvis amb entrades existents anteriorment</p>
-</figcaption>
-</figure>
-</li>
-</ul>
-<details class="example">
-<summary>Exemple: Crear una reserva de canvis</summary>
-<p>Després de guardar els canvis amb <code>git stash</code>, podem observar que:</p>
-<ul>
-<li>Els canvis ja no es troben al <strong>Directori de Treball</strong>.</li>
-<li>Podem canviar de branca sense problemes.</li>
-</ul>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="go">On branch main</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="go">Changes not staged for commit:</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="go">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="git-mod">modified:   README.md</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="go">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>diff
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="gh">diff --git a/README.md b/README.md</span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="gh">index d6704e3..e23e265 100644</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="gd">--- a/README.md</span>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="gi">+++ b/README.md</span>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="gu">@@ -1 +1,2 @@</span>
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w"> </span># Reserva de canvis
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="gi">+Canvi A</span>
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>stash<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Canvi A&quot;</span>
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="go">Saved working directory and index state On main: Canvi A</span>
-</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="go">On branch main</span>
-</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="go">nothing to commit, working tree clean</span>
-</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>altres_canvis
-</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="go">Switched to branch &#39;altres_canvis&#39;</span>
-</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(altres_canvis)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>main
-</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="go">Switched to branch &#39;main&#39;</span>
-</span></code></pre></div>
-</details>
-<details class="example">
-<summary>Exemple: Crear vàries reserves de canvis</summary>
-<p>Vegem com l'índex dels canvis incrementa en cada nova reserva.</p>
-<ul>
-<li>
-<p><strong>Canvi B</strong>:
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Canvi B&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>stash<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Canvi B&quot;</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="go">Saved working directory and index state On main: Canvi B</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="go">On branch main</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="go">nothing to commit, working tree clean</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>stash<span class="w"> </span>list
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="go">stash@{0}: On main: Canvi B</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="go">stash@{1}: On main: Canvi A</span>
-</span></code></pre></div></p>
-</li>
-<li>
-<p><strong>Canvi C</strong>:
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Canvi C&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>stash<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Canvi C&quot;</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="go">Saved working directory and index state On main: Canvi C</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="go">On branch main</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="go">nothing to commit, working tree clean</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>stash<span class="w"> </span>list
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="go">stash@{0}: On main: Canvi C</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="go">stash@{1}: On main: Canvi B</span>
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="go">stash@{2}: On main: Canvi A</span>
-</span></code></pre></div></p>
-</li>
-</ul>
-</details>
-<h3 id="mostrar-les-reserves-de-canvis">Mostrar les reserves de canvis<a class="headerlink" href="#mostrar-les-reserves-de-canvis" title="Permanent link">&para;</a></h3>
-<p>Per mostrar els <code>stash</code> existents, cal executar la comanda:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>stash<span class="w"> </span>list
-</span></code></pre></div>
-<p>Aquesta comanda mostrarà una llista amb els <code>stash</code> existents,
-identificats per l'índex i el missatge que s'ha afegit al <code>stash</code>.</p>
-<details class="example">
-<summary>Exemple: Mostrar les reserves de canvis</summary>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>stash<span class="w"> </span>list
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="go">stash@{0}: On main: Canvi C</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="go">stash@{1}: On main: Canvi B</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="go">stash@{2}: On main: Canvi A</span>
-</span></code></pre></div>
-</details>
-<h3 id="mostrar-els-canvis-duna-reserva">Mostrar els canvis d'una reserva<a class="headerlink" href="#mostrar-els-canvis-duna-reserva" title="Permanent link">&para;</a></h3>
-<p>Els canvis guardats en una reserva de canvis poden ser consultats mitjançant
-l'acció <code>show</code>. Aquesta acció mostrarà els fitxers que s'han canviat.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>stash<span class="w"> </span>show<span class="w"> </span><span class="o">[</span>-p<span class="o">]</span><span class="w"> </span><span class="o">[</span>index<span class="o">]</span>
-</span></code></pre></div>
-<p>Addicionalment, podem mostrar els canvis (<code>diff</code>) mitjançant l'opció <code>-p</code>.</p>
-<p>També es pot indicar l'índex del <code>stash</code> que es vol consultar. Si no s'indica,
-mostrarà per defecte el <code>stash@{0}</code>.</p>
-<details class="example">
-<summary>Exemple: Mostrar els canvis d'una reserva</summary>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>stash<span class="w"> </span>list
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="go">stash@{0}: On main: Canvi C</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="go">stash@{1}: On main: Canvi B</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="go">stash@{2}: On main: Canvi A</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>stash<span class="w"> </span>show<span class="w"> </span>-p
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="gh">diff --git a/README.md b/README.md</span>
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="gh">index d6704e3..208685c 100644</span>
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="gd">--- a/README.md</span>
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="gi">+++ b/README.md</span>
-</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="gu">@@ -1 +1,2 @@</span>
-</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w"> </span># Reserva de canvis
-</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="gi">+Canvi C</span>
-</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>stash<span class="w"> </span>show<span class="w"> </span>-p<span class="w"> </span><span class="m">1</span>
-</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="gh">diff --git a/README.md b/README.md</span>
-</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="gh">index d6704e3..5a36536 100644</span>
-</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="gd">--- a/README.md</span>
-</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="gi">+++ b/README.md</span>
-</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="gu">@@ -1 +1,2 @@</span>
-</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w"> </span># Reserva de canvis
-</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="gi">+Canvi B</span>
-</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>stash<span class="w"> </span>show<span class="w"> </span>-p<span class="w"> </span><span class="m">2</span>
-</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="gh">diff --git a/README.md b/README.md</span>
-</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="gh">index d6704e3..e23e265 100644</span>
-</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="gd">--- a/README.md</span>
-</span><span id="__span-10-25"><a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="gi">+++ b/README.md</span>
-</span><span id="__span-10-26"><a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="gu">@@ -1 +1,2 @@</span>
-</span><span id="__span-10-27"><a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="w"> </span># Reserva de canvis
-</span><span id="__span-10-28"><a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="gi">+Canvi A</span>
-</span></code></pre></div>
-</details>
-<h3 id="recuperar-els-canvis">Recuperar els canvis<a class="headerlink" href="#recuperar-els-canvis" title="Permanent link">&para;</a></h3>
-<p>Els canvis reservats poden recuperar-se mitjançant l'acció <code>apply</code>.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>git<span class="w"> </span>stash<span class="w"> </span>apply<span class="w"> </span><span class="o">[</span>index<span class="o">]</span>
-</span></code></pre></div>
-<p>Aquesta acció aplicarà els canvis guardats al <strong>directori de treball</strong>.</p>
-<p>També es pot indicar l'índex del <code>stash</code> que es vol aplicar. Si no s'indica,
-s'aplicarà per defecte el <code>stash@{0}</code>.</p>
-<figure id="__figure-caption_3">
-<p><img alt="Recuperar canvis amb stash apply" src="../img/stash/apply.png" /></p>
-<figcaption>
-<p><span class="caption-prefix">Figura 3. </span> Recuperar canvis amb <code>stash apply</code></p>
-</figcaption>
-</figure>
-<details class="example">
-<summary>Exemple: Recuperar els canvis amb <code>apply</code></summary>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="go">On branch main</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="go">nothing to commit, working tree clean</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>stash<span class="w"> </span>apply
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="go">On branch main</span>
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="go">Changes not staged for commit:</span>
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span>
-</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="go">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)</span>
-</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">    </span><span class="git-mod">modified:   README.md</span>
-</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
-</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="go">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span>
-</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="go">On branch main</span>
-</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="go">Changes not staged for commit:</span>
-</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span>
-</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="go">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)</span>
-</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="w">    </span><span class="git-mod">modified:   README.md</span>
-</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>
-</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="go">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span>
-</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>diff
-</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="gh">diff --git a/README.md b/README.md</span>
-</span><span id="__span-12-22"><a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="gh">index d6704e3..208685c 100644</span>
-</span><span id="__span-12-23"><a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="gd">--- a/README.md</span>
-</span><span id="__span-12-24"><a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a><span class="gi">+++ b/README.md</span>
-</span><span id="__span-12-25"><a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a><span class="gu">@@ -1 +1,2 @@</span>
-</span><span id="__span-12-26"><a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a><span class="w"> </span># Reserva de canvis
-</span><span id="__span-12-27"><a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a><span class="gi">+Canvi C</span>
-</span><span id="__span-12-28"><a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>stash<span class="w"> </span>list
-</span><span id="__span-12-29"><a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a><span class="go">stash@{0}: On main: Canvi C</span>
-</span><span id="__span-12-30"><a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a><span class="go">stash@{1}: On main: Canvi B</span>
-</span><span id="__span-12-31"><a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a><span class="go">stash@{2}: On main: Canvi A</span>
-</span></code></pre></div>
-</details>
-<p>Si a més, volem esborrar la reserva de canvis, podem utilitzar l'opció <code>pop</code>.
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>git<span class="w"> </span>stash<span class="w"> </span>pop<span class="w"> </span><span class="o">[</span>index<span class="o">]</span>
-</span></code></pre></div></p>
-<figure id="__figure-caption_4">
-<p><img alt="Recuperar canvis i esborrar la reserva amb stash pop" src="../img/stash/pop.png" /></p>
-<figcaption>
-<p><span class="caption-prefix">Figura 4. </span> Recuperar canvis i esborrar la reserva amb <code>stash pop</code></p>
-</figcaption>
-</figure>
-<details class="example">
-<summary>Exemple: Recuperar els canvis amb <code>pop</code></summary>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>restore<span class="w"> </span>README.md<span class="w"> </span><span class="c1"># (1)!</span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="go">On branch main</span>
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="go">nothing to commit, working tree clean</span>
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>stash<span class="w"> </span>pop
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="go">On branch main</span>
-</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="go">Changes not staged for commit:</span>
-</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span>
-</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="go">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)</span>
-</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="go">    modified:   README.md</span>
-</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>
-</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="go">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span>
-</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="go">Dropped refs/stash@{0} (5421da4ebcbd229b003f105eeefea1b6cfa13f3e)</span>
-</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="go">On branch main</span>
-</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="go">Changes not staged for commit:</span>
-</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span>
-</span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="go">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)</span>
-</span><span id="__span-14-19"><a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="w">    </span><span class="git-mod">modified:   README.md</span>
-</span><span id="__span-14-20"><a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>
-</span><span id="__span-14-21"><a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a><span class="go">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span>
-</span><span id="__span-14-22"><a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>diff
-</span><span id="__span-14-23"><a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a><span class="gh">diff --git a/README.md b/README.md</span>
-</span><span id="__span-14-24"><a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a><span class="gh">index d6704e3..208685c 100644</span>
-</span><span id="__span-14-25"><a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a><span class="gd">--- a/README.md</span>
-</span><span id="__span-14-26"><a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a><span class="gi">+++ b/README.md</span>
-</span><span id="__span-14-27"><a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a><span class="gu">@@ -1 +1,2 @@</span>
-</span><span id="__span-14-28"><a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a><span class="w"> </span># Reserva de canvis
-</span><span id="__span-14-29"><a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a><span class="gi">+Canvi C</span>
-</span><span id="__span-14-30"><a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>stash<span class="w"> </span>list
-</span><span id="__span-14-31"><a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a><span class="go">stash@{0}: On main: Canvi B</span>
-</span><span id="__span-14-32"><a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a><span class="go">stash@{1}: On main: Canvi A</span>
-</span></code></pre></div>
 <ol class="fancylists-decimal" type="1">
-<li>Descartem els canvis del <strong>Directori de Treball</strong> que
-    teníem de l'exemple anterior.</li>
+<li>Crea un directori anomenat <code>bloc1_exercici</code> en la teua carpeta de treball.</li>
+<li>Inicialitza un repositori de Git en aquest directori.</li>
+<li>Crea un fitxer anomenat <code>llibres.txt</code> i afegeix tres llibres que t'agraden.</li>
+<li>Fes un primer <em>commit</em>. Tria un missatge significatiu.</li>
+<li>Afegeix un altre llibre a <code>llibres.txt</code>.</li>
+<li>Fes un segon <em>commit</em>.</li>
+<li>Crea un fitxer anomenat <code>musica.txt</code> i afegeix tres cançons que t'agraden.</li>
+<li>Crea un fitxer anomenat <code>pelicules.txt</code> i afegeix tres pel·lícules que t'agraden.</li>
+<li>Fes un tercer <em>commit</em> que sols incloga el fitxer <code>musica.txt</code>.</li>
+<li>Crea un fitxer anomenat <code>series.txt</code> i afegeix tres sèries que t'agraden.</li>
+<li>Fes un quart <em>commit</em> que incloga els fitxers <code>pelicules.txt</code> i <code>series.txt</code>.</li>
+<li>Modifica el fitxer <code>llibres.txt</code> per a eliminar un dels llibres.</li>
+<li>Fes un cinqué <em>commit</em>.</li>
+<li>Modifica el fitxer <code>pelicules.txt</code> per a afegir una pel·lícula.</li>
+<li>Sense modificar el fitxer manualment, descarta el canvi de <code>pelicules.txt</code> mitjançant una ordre de Git.</li>
+<li>Afegeix el fitxer <code>{data}.log</code> amb qualsevol contingut.<ul>
+<li><code>{data}</code> és la data actual en format <code>YYYYMMDD</code>.</li>
+</ul>
+</li>
+<li>Configura el repositori perquè ignore els fitxers amb extensió <code>.log</code>.</li>
+<li>Fes un <em>commit</em> amb aquesta configuració.</li>
+<li>Crea la carpeta <code>tmp</code> i còpia tots els fitxers de text a aquesta carpeta.</li>
+<li>Configura el repositori perquè ignore la carpeta <code>tmp</code>.</li>
+<li>Fes un <em>commit</em> amb aquesta configuració.</li>
+<li>Comprova la història de canvis del repositori.</li>
 </ol>
-</details>
-<h3 id="descartar-els-canvis">Descartar els canvis<a class="headerlink" href="#descartar-els-canvis" title="Permanent link">&para;</a></h3>
-<p>Una reserva de canvis pot ser eliminada de la pila de canvis mitjançant
-l'acció <code>drop</code>.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>git<span class="w"> </span>stash<span class="w"> </span>drop<span class="w"> </span><span class="o">[</span>index<span class="o">]</span>
-</span></code></pre></div>
-<p>També es pot indicar l'índex del <code>stash</code> que es vol descartar. Si no s'indica,
-es descartarà per defecte el <code>stash@{0}</code>.</p>
-<details class="example">
-<summary>Exemple: Descartar els canvis</summary>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>stash<span class="w"> </span>list
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="go">stash@{0}: On main: Canvi B</span>
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="go">stash@{1}: On main: Canvi A</span>
-</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>stash<span class="w"> </span>drop
-</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="go">Dropped refs/stash@{0} (a1be7febfb9e812173942ae63be37375e8d27d13)</span>
-</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_stash</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>stash<span class="w"> </span>list
-</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="go">stash@{0}: On main: Canvi A</span>
-</span></code></pre></div>
-</details>
+<h2 id="bibliografia">Bibliografia<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Basat en l'exercici de la sessió 1 del curs
+    <a href="https://github.com/pedroprieto/curso-github" target="_blank">Gestió de la tasca docent amb GitHub</a>
+    de Pedro Prieto.</li>
+</ul>
 
 
     </td></tr></tbody>
@@ -2652,7 +2312,7 @@ es descartarà per defecte el <code>stash@{0}</code>.</p>
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="4 d’abril del 2025 14:29:05">4 d’abril del 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="11 d’abril del 2025 20:25:38">11 d’abril del 2025</span>
   </span>
 
     
@@ -2712,7 +2372,7 @@ es descartarà per defecte el <code>stash@{0}</code>.</p>
       <nav class="md-footer__inner md-grid" aria-label="Peu de pàgina" >
         
           
-          <a href="../etiquetes/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Etiquetes">
+          <a href="../resum/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Introducció a Git: Resum comandes">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2722,20 +2382,20 @@ es descartarà per defecte el <code>stash@{0}</code>.</p>
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Etiquetes
+                Introducció a Git: Resum comandes
               </div>
             </div>
           </a>
         
         
           
-          <a href="../reset/" class="md-footer__link md-footer__link--next" aria-label="Següent: Reset">
+          <a href="../../02_branques/" class="md-footer__link md-footer__link--next" aria-label="Següent: Bloc 2: Branques">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Següent
               </span>
               <div class="md-ellipsis">
-                Reset
+                Bloc 2: Branques
               </div>
             </div>
             <div class="md-footer__button md-icon">

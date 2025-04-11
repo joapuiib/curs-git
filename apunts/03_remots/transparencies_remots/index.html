@@ -13,7 +13,7 @@
 
     <!-- Canonical -->
     
-        <link rel="canonical" href="https://joapuiib.github.io/curs-git/apunts/03_remots/021_transparencies_auth/" />
+        <link rel="canonical" href="https://joapuiib.github.io/curs-git/apunts/03_remots/transparencies_remots/" />
     
 
     <!-- Favicon -->
@@ -22,7 +22,7 @@
     <!-- Site title -->
     
       
-        <title>Transparències: Mètodes d'autenticació a GitHub - Introducció a Git i la seua aplicació a l’aula</title>
+        <title>Transparències: Remots - Introducció a Git i la seua aplicació a l’aula</title>
       
     
 
@@ -50,7 +50,7 @@
           
             property="og:title"
           
-            content="Transparències: Mètodes d'autenticació a GitHub - Introducció a Git i la seua aplicació a l’aula"
+            content="Transparències: Remots - Introducció a Git i la seua aplicació a l’aula"
           
         />
       
@@ -66,7 +66,7 @@
           
             property="og:image"
           
-            content="https://joapuiib.github.io/curs-git/assets/images/social/apunts/03_remots/021_transparencies_auth.png"
+            content="https://joapuiib.github.io/curs-git/assets/images/social/apunts/03_remots/transparencies_remots.png"
           
         />
       
@@ -98,7 +98,7 @@
           
             property="og:url"
           
-            content="https://joapuiib.github.io/curs-git/apunts/03_remots/021_transparencies_auth/"
+            content="https://joapuiib.github.io/curs-git/apunts/03_remots/transparencies_remots/"
           
         />
       
@@ -114,7 +114,7 @@
           
             name="twitter:title"
           
-            content="Transparències: Mètodes d'autenticació a GitHub - Introducció a Git i la seua aplicació a l’aula"
+            content="Transparències: Remots - Introducció a Git i la seua aplicació a l’aula"
           
         />
       
@@ -130,7 +130,7 @@
           
             name="twitter:image"
           
-            content="https://joapuiib.github.io/curs-git/assets/images/social/apunts/03_remots/021_transparencies_auth.png"
+            content="https://joapuiib.github.io/curs-git/assets/images/social/apunts/03_remots/transparencies_remots.png"
           
         />
       
@@ -148,7 +148,7 @@
                  data-separator-vertical="^\n--\n$"
                  data-notes="^Note:">
           <script type="text/template">
-            ## Mètodes d'autenticació a GitHub
+            ## Remots
 
 #### Introducció a Git i la seua aplicació a l’aula
 
@@ -166,35 +166,55 @@
 
 ---
 
-## Mètodes d'autenticació a GitHub
+## Afegir un repositori remot
 
-- ~~Nom d'usuari i contrasenya (2021)~~
+```bash
+git remote add origin <url>
+```
+
 - (_HTTPS_) Personal Access Token (PAT)
 - (_SSH_) Clau SSH
 
----
-
-## Token d'accés personal (PAT)
-
-Generat desde Settings > Developer settings > Personal access tokens
-
-- Classic
-- Fine-grained
-
-```bash
-git config --global credential.helper store
-```
+<img src="../img/add_remote.png" alt="Repsitori Local vinculat amb un Repositori Remot">
 
 ---
 
-## Clau SSH
-
-- Generar clau SSH localment
-- Afegir clau a GitHub
+## Associació branques locals i remotes
 
 ```bash
-ssh-keygen -t rsa -b 4096
+git push [-u | --set-upstream] origin <branca>
 ```
+
+<img src="../img/push_setupstream.png" alt="Associació d'una branca local a una branca remota">
+
+---
+
+## Clonar un repositori
+
+```bash
+git clone <url> [<directori>]
+```
+
+<img src="../img/clone.png">
+
+---
+
+## Sincronització
+
+```bash
+git fetch
+```
+<img src="../img/fetch.png">
+
+---
+
+## Integració de canvis
+
+```bash
+git pull [--rebase]
+```
+
+<img src="../img/pull.png">
           </script>
         </section>
       </div>

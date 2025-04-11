@@ -13,7 +13,7 @@
 
     <!-- Canonical -->
     
-        <link rel="canonical" href="https://joapuiib.github.io/curs-git/apunts/02_branques/02_transparencies/" />
+        <link rel="canonical" href="https://joapuiib.github.io/curs-git/apunts/03_remots/transparencies_auth/" />
     
 
     <!-- Favicon -->
@@ -22,7 +22,7 @@
     <!-- Site title -->
     
       
-        <title>Transparències: Branques - Introducció a Git i la seua aplicació a l’aula</title>
+        <title>Transparències: Mètodes d'autenticació a GitHub - Introducció a Git i la seua aplicació a l’aula</title>
       
     
 
@@ -50,7 +50,7 @@
           
             property="og:title"
           
-            content="Transparències: Branques - Introducció a Git i la seua aplicació a l’aula"
+            content="Transparències: Mètodes d'autenticació a GitHub - Introducció a Git i la seua aplicació a l’aula"
           
         />
       
@@ -66,7 +66,7 @@
           
             property="og:image"
           
-            content="https://joapuiib.github.io/curs-git/assets/images/social/apunts/02_branques/02_transparencies.png"
+            content="https://joapuiib.github.io/curs-git/assets/images/social/apunts/03_remots/transparencies_auth.png"
           
         />
       
@@ -98,7 +98,7 @@
           
             property="og:url"
           
-            content="https://joapuiib.github.io/curs-git/apunts/02_branques/02_transparencies/"
+            content="https://joapuiib.github.io/curs-git/apunts/03_remots/transparencies_auth/"
           
         />
       
@@ -114,7 +114,7 @@
           
             name="twitter:title"
           
-            content="Transparències: Branques - Introducció a Git i la seua aplicació a l’aula"
+            content="Transparències: Mètodes d'autenticació a GitHub - Introducció a Git i la seua aplicació a l’aula"
           
         />
       
@@ -130,7 +130,7 @@
           
             name="twitter:image"
           
-            content="https://joapuiib.github.io/curs-git/assets/images/social/apunts/02_branques/02_transparencies.png"
+            content="https://joapuiib.github.io/curs-git/assets/images/social/apunts/03_remots/transparencies_auth.png"
           
         />
       
@@ -148,82 +148,53 @@
                  data-separator-vertical="^\n--\n$"
                  data-notes="^Note:">
           <script type="text/template">
-            ## Branques
+            ## Mètodes d'autenticació a GitHub
 
-### Introducció a Git i la seua aplicació a l’aula
-
----
-
-## Branques
-
-<img src="../img/create_docs.png">
+#### Introducció a Git i la seua aplicació a l’aula
 
 ---
 
-## Canviar de branca
+## Repositori remot
 
-<img src="../img/checkout_docs.png">
-
----
-
-## Nous canvis en una branca
-
-<img src="../img/commit_docs.png">
+<img src="../../01_introduccio/img/components.png">
 
 ---
 
-## Fusió directa de branques
+## Desenvolupament distribuït
 
-<img src="../img/before_ff.png">
-
-Abans
-
---
-
-<img src="../img/after_ff.png">
-
-Després
+<img src="../img/multiple_local_repo.png">
 
 ---
 
-## Fusió de branques divergents
+## Mètodes d'autenticació a GitHub
 
-
-<img src="../img/before_divergent.png">
-
-Abans
-
---
-
-<img src="../img/after_divergent.png">
-
-Després
+- ~~Nom d'usuari i contrasenya (2021)~~
+- (_HTTPS_) Personal Access Token (PAT)
+- (_SSH_) Clau SSH
 
 ---
 
-## Resolució de conflictes
+## Token d'accés personal (PAT)
 
-```text
-<<<<<<< HEAD
-Contingut de la branca actual
-=======
-Contingut de la branca a fusionar
->>>>>>> branca_a_fusionar
+Generat desde Settings > Developer settings > Personal access tokens
+
+- Classic
+- Fine-grained
+
+```bash
+git config --global credential.helper store
 ```
 
 ---
 
-## Canvi de base
+## Clau SSH
 
-<img src="../img/before_rebase.png">
+- Generar clau SSH localment
+- Afegir clau a GitHub
 
-Abans
-
---
-
-<img src="../img/after_rebase.png">
-
-Després
+```bash
+ssh-keygen -t rsa -b 4096
+```
           </script>
         </section>
       </div>
