@@ -98,7 +98,7 @@ que permet autenticar-se amb el servidor de GitHub mitjançant el protocol HTTPS
 
 !!! docs
     - [:octicons-link-external-16: Managing your personal access tokens – :simple-github: GitHub](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
-    - [:octicons-link-external-16: Message "Support for password authentication was removed." – :simple-stackoverflow: StakOverflow](https://stackoverflow.com/questions/68775869/message-support-for-password-authentication-was-removed)
+    - [:octicons-link-external-16: Message "Support for password authentication was removed." – :simple-stackoverflow: StackOverflow](https://stackoverflow.com/questions/68775869/message-support-for-password-authentication-was-removed)
 
 Per crear un token d'accés personal, segueix els següents passos:
 
@@ -238,6 +238,6 @@ Després, configura la clau SSH al teu compte de
 
 ## Bibliografia
 - [:octicons-link-external-16: :simple-git: Git Book](https://git-scm.com/book/en/v2)
-- [:octicons-link-external-16: Message "Support for password authentication was removed." – :simple-stackoverflow: StakOverflow](https://stackoverflow.com/questions/68775869/message-support-for-password-authentication-was-removed)
+- [:octicons-link-external-16: Message "Support for password authentication was removed." – :simple-stackoverflow: StackOverflow](https://stackoverflow.com/questions/68775869/message-support-for-password-authentication-was-removed)
 - [:octicons-link-external-16: Managing your personal access tokens – :simple-github: GitHub](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 - [:octicons-link-external-16: Connecting to GitHub with SSH – :simple-github: GitHub](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)

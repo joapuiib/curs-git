@@ -48,7 +48,7 @@ vistes en el [[branques-index]].
     - Opció `--no-ff`: Realitza una fusió mitjançant un __commit de fusió__.
 
 - `git merge --abort`: Si es troba en l'estat de fusió `MERGING`,
-    aborta la fusió i torna a l'estat anterior.
+    deté el procés de fusió i torna a l'estat anterior.
 
 
 ### Canvi de base
@@ -60,6 +60,6 @@ vistes en el [[branques-index]].
 - `git rebase --continue`: A l'estat `REBASING`, continua el
     procés de canvi de base després de resoldre els conflictes.
 
-- `git rebase --abort`: A l'estat `REBASING`, aborta el procés i
+- `git rebase --abort`: A l'estat `REBASING`, deté el procés de canvi de base i
     torna a l'estat anterior.
 
