@@ -34,6 +34,11 @@ repositoris que es troben __allotjats en un servidor__, que permeten
 l'accés a altres usuaris i la col·laboració en el desenvolupament de
 projectes.
 
+![Estructura d'un repositori local i remot](../01_introduccio/img/components.png)
+/// figure-caption
+Estructura d'un repositori local i remot
+///
+
 ??? prep "Preparació repositori local"
     En aquests apunts treballarem sobre un nou repositori local.
 
@@ -105,7 +110,7 @@ Alguns dels serveis d'allotjament repositoris remots en línia més coneguts só
     s'integra estretament amb altres eines d'aquesta empresa, com Jira.
 
 !!! info "Més informació"
-    [GitLab vs. GitHub: Which is Better in 2025? | :simple-prismic: prismic Blog](https://prismic.io/blog/gitlab-vs-github#similarities-between-github-and-gitlab)
+    [:octicons-link-external-16: GitLab vs. GitHub: Which is Better in 2025? | :simple-prismic: prismic Blog](https://prismic.io/blog/gitlab-vs-github#similarities-between-github-and-gitlab)
 
 
 ## Creació d'un repositori remot a GitHub
@@ -113,13 +118,13 @@ En aquesta secció, crearem un repositori remot a GitHub.
 
 1. Crea un compte a [:simple-github: GitHub](https://github.com/) si no en tens un.
 2. Inicia la sessió amb el teu compte.
-3. Fes clic a l'opció __["New"](https://github.com/new)__ per crear un nou repositori.
+3. Fes clic al botó __[:octicons-repo-24: New](https://github.com/new)__ per crear un nou repositori.
 4. Omple el formulari amb la informació del teu repositori:
     - __Nom__ del repositori. Ha de ser un nom únic en el teu compte de GitHub.
     - __Descripció__ del repositori. Opcional.
     - __Visibilitat__ del repositori. Pots triar entre públic o privat.
-        - __Públic__: Qualsevol persona pot veure el teu repositori. Sols les persones autoritzades poden fer canvis.
-        - __Privat__: Només tu i les persones que tu autoritzes poden veure el teu repositori. Sols les persones autoritzades poden fer canvis.
+        - __:octicons-repo-24: Públic__: Qualsevol persona pot veure el teu repositori. Sols les persones autoritzades poden fer canvis.
+        - __:octicons-lock-24: Privat__: Només tu i les persones que tu autoritzes poden veure el teu repositori. Sols les persones autoritzades poden fer canvis.
     - __README__: Indica si vols afegir un README al teu repositori.
     - __.gitignore__: Indica si vols afegir un fitxer `.gitignore` per ignorar fitxers en el teu repositori.
     - __Llicència__: Indica si vols afegir una llicència al teu repositori.
@@ -168,26 +173,26 @@ git remote [add|rename|remove|show] [<options>]
 
 Aquesta comanda permet realitzar les següents accions:
 
-- Sense opcions: Mostra els repositoris remots associats al teu repositori local.
-- `add`: Afegeix un nou repositori remot.
-- `rename`: Canvia el nom d'un repositori remot.
-- `remove`: Elimina un repositori remot.
-- `show`: Mostra informació detallada d'un repositori remot.
+- __Sense opcions__: Mostra els repositoris remots associats al teu repositori local.
+- __`add`__: Afegeix un nou repositori remot.
+- __`rename`__: Canvia el nom d'un repositori remot.
+- __`remove`__: Elimina un repositori remot.
+- __`show`__: Mostra informació detallada d'un repositori remot.
 
 Cadascuna d'aquestes opcions té les seues pròpies opcions i arguments.
 
 !!! docs
-    Documentació oficial de `git remote`: https://git-scm.com/docs/git-remote
+    [:octicons-link-external-16: `git remote` – Documentació oficial de :simple-git: Git](https://git-scm.com/docs/git-remote)
 
 ### Afegir un repositori remot
 Per afegir un repositori remot, utilitzarem la comanda `git remote add`.
 
 La sintaxi és la següent:
 ```bash
-git remote add <nom> <url>
+git remote add <alies> <url>
 ```
 
-- `<nom>`: Nom o àlies del repositori remot en el teu repositori local.
+- `<alies>`: Nom o àlies del repositori remot en el teu repositori local.
     Normalment, s'utilitza el nom `origin` per referir-se al repositori remot principal.
 - `<url>`: URL del repositori remot.
 
@@ -210,13 +215,14 @@ Repositori Local vinculat amb un Repositori Remot
     Enllaçarem el nostre repositori local amb el repositori
     remot creat anteriorment a GitHub.
 
-    La URL del repositori remot és `git@github.com:jpuigcerver/git_remots.git`(1).
+    La URL del repositori remot és `git@github.com:jpuigcerver/git_remots.git`.
     
+    > Utilitzem la URL __SSH__ ja que he decidit utilitzar aquest mètode d'autenticació.
+
     ```shellconsole
     --8<-- "docs/files/remots/stdout/remots/add_remote.txt"
     ```
 
-1. Utilitzem la URL __SSH__ ja que he decidit utilitzar aquest mètode d'autenticació.
 
 ### Reanomenar un repositori remot
 L'ordre `git remote rename` permet canviar el nom
@@ -227,8 +233,8 @@ La sintaxi és la següent:
 git remote rename <antic> <nou>
 ```
 
-- `<antic>`: Nom actual del repositori remot.
-- `<nou>`: Nou nom del repositori remot.
+- `<antic>`: Àlies actual del repositori remot.
+- `<nou>`: Nou àlies del repositori remot.
 
 ### Eliminar un repositori remot
 L'ordre `git remote remove` permet eliminar un repositori remot
@@ -236,10 +242,10 @@ associat al teu repositori local.
 
 La sintaxi és la següent:
 ```bash
-git remote remove <nom>
+git remote remove <alies>
 ```
 
-- `<nom>`: Nom del repositori remot a eliminar.
+- `<alies>`: Àlies del repositori remot a eliminar.
 
 
 ## Associació entre branques locals i remotes (`git push --set-upstream`)
@@ -260,7 +266,7 @@ git push [-u|--set-upstream] <remot> <branca>
 - `<branca>`: Nom de la branca remota.
 
 !!! docs
-    Documentació oficial de `git push`: https://git-scm.com/docs/git-push
+    [:octicons-link-external-16: `git push` – Documentació oficial de :simple-git: Git](https://git-scm.com/docs/git-push)
 
 !!! important
     Aquesta comanda funciona sobre la branca on estem situats (`HEAD`).
@@ -364,7 +370,7 @@ Aquesta ordre és útil per obtindre la informació dels canvis realitzats en el
 i decidir si volem incorporar-los al nostre repositori local.
 
 !!! docs
-    Documentació oficial de `git fetch`: https://git-scm.com/docs/git-fetch
+    [:octicons-link-external-16: `git fetch` – Documentació oficial de :simple-git: Git](https://git-scm.com/docs/git-fetch)
 
 !!! info
     L'opció `--prune` permet eliminar les referències de les branques remotes que ja no existeixen
@@ -459,7 +465,7 @@ git pull [<options>] [<remot> [<branca>]
 - `<branca>`: Nom de la branca remota. Per defecte, s'utilitza la configuració de la branca actual.
 
 !!! docs
-    Documentació oficial de `git pull`: https://git-scm.com/docs/git-pull
+    [:octicons-link-external-16: `git pull` – Documentació oficial de :simple-git: Git](https://git-scm.com/docs/git-pull)
 
 !!! warning
     La fusió (`merge`) implícita de `git pull` pot ser una [[branques#fusio-directa]]{: target="_blank"}
@@ -477,9 +483,11 @@ git pull [<options>] [<remot> [<branca>]
     es pot fer el següent:
 
     - `git pull --ff-only`: Incorpora els canvis de la branca remota
-        només si es pot fer una fusió directa (_fast-forward_).
+        __només si es pot fer una fusió directa (_fast-forward_)__.
 
-        Git pot ser configurat perquè només permeta aquest tipus de fusió
+        En cas contrari, es produirà un error i no s'incorporaran els canvis.
+
+        A més, Git pot ser configurat perquè incloga aquesta opció
         en la comanda `git pull`.
 
         ```
@@ -487,7 +495,7 @@ git pull [<options>] [<remot> [<branca>]
         ```
 
     - `git pull --rebase`: Incorpora els canvis de la branca remota
-        mitjançant un rebase, és a dir, aplica els canvis de la branca local
+        mitjançant un `rebase`, és a dir, aplica els canvis de la branca local
         després dels canvis de la branca remota.
 
         Aquest comportament també es pot configurar per defecte en la comanda `git pull`.
@@ -584,57 +592,6 @@ git pull [<options>] [<remot> [<branca>]
         ```shellconsole
         --8<-- "docs/files/remots/stdout/remots/pull_rebase.txt"
         ```
-
-
-## Treball amb branques
-En aquests apunts, hem treballat les diferents operacions de sincronització entre repositoris
-sobre la branca principal `main`. Les mateixes operacions poden ser realitzades sobre altres branques
-de la mateixa manera.
-
-### Crear una branca
-```bash
-git branch <branca>
-```
-
-### Canviar de branca
-```bash
-git checkout <branca>
-```
-
-### Enllaçar una branca local amb una branca remota
-!!! info
-    Aquesta operació es realitzarà sobre la branca actual (`HEAD`).
-
-```bash
-git push [-u | --set-upstream] origin <branca>
-```
-
-### Publicar canvis d'una branca
-!!! info
-    Aquesta operació es realitzarà sobre la branca actual (`HEAD`).
-
-    Prèviament cal haver [enllaçat la branca local amb la branca remota](#enllacar-una-branca-local-amb-una-branca-remota).
-
-```bash
-git push
-```
-
-### Incorporar canvis d'una branca remota
-!!! info
-    Aquesta operació es realitzarà sobre la branca actual (`HEAD`).
-
-```bash
-git pull [--rebase]
-```
-
-### Eliminar una branca remota
-Per eliminar una branca remota, cal utilitzar `git push` amb l'opció `-d`:
-
-```bash
-git push -d origin <ref>
-```
-
-- `ref`: Referència a esborrar, que inclou branques i etiquetes.
 
 
 ## Recursos addicionals
