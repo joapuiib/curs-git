@@ -80,5 +80,5 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 
 ## Bibliografia
 - Basat en l'exercici de la sessió 1 del curs
-    [Gestió de la tasca docent amb GitHub](https://github.com/pedroprieto/curso-github){:target="_blank"}
+    [:octicons-link-external:16 Gestió de la tasca docent amb GitHub](https://github.com/pedroprieto/curso-github)
     de Pedro Prieto.

@@ -50,7 +50,7 @@ Git està disponible a [la pàgina oficial][git] per a
 Git utilitza un editor de text per a realitzar certes operacions,
 com ara escriure missatges de commit.
 
-Per defecte, Git utilitza l'editor [:simple-vim: `ViM`](https://www.vim.org/),
+Per defecte, Git utilitza l'editor [:simple-vim: ViM](https://www.vim.org/),
 un editor de text per terminal molt potent, però difícil i poc intuïtiu
 per treballar.
 
@@ -67,7 +67,7 @@ git config --global core.editor <editor>
     === ":material-asterisk: Multiplataforma"
 
         - [:material-microsoft-visual-studio-code: Visual Studio Code](https://code.visualstudio.com/)
-            - [StackOverflow: How to use Visual Studio Code as default editor for git?](https://stackoverflow.com/questions/30024353/how-to-use-visual-studio-code-as-default-editor-for-git){:target=_blank}
+            - [StackOverflow: How to use Visual Studio Code as default editor for git?](https://stackoverflow.com/questions/30024353/how-to-use-visual-studio-code-as-default-editor-for-git)
 
         ```
         git config --global core.editor "code --wait"
@@ -76,7 +76,7 @@ git config --global core.editor <editor>
     === ":material-microsoft-windows: Windows"
 
         - `notepad`. Ve instal·lat per defecte.
-        - [Notepad++.](https://notepad-plus-plus.org/)
+        - [:simple-notepadplusplus: Notepad++.](https://notepad-plus-plus.org/)
 
         ```
         git config --global core.editor notepad
@@ -105,7 +105,7 @@ git config --global core.editor <editor>
 
 
 ## Instal·lació de :material-microsoft-visual-studio-code: Visual Studio Code
-[:material-microsoft-visual-studio-code: Visual Studio Code](https://code.visualstudio.com/){:target=_blank}
+[:material-microsoft-visual-studio-code: Visual Studio Code](https://code.visualstudio.com/)
 és un editor de text gratuït i de codi obert desenvolupat per :material-microsoft: Microsoft.
 
 És un editor molt popular entre els desenvolupadors per la seua lleugeresa, rendiment i gran quantitat d'extensions disponibles,
@@ -128,12 +128,12 @@ Es pot obrir la terminal mitjançant el menú __Terminal__ > __New Terminal__.
     En sistemes :material-microsoft-windows: Windows,
     la terminal integrada utilitza :material-powershell: PowerShell per defecte.
 
-    Podeu seleccionar Git Bash des del [menú desplegable de la terminal](https://code.visualstudio.com/docs/terminal/basics#_terminal-shells){:target=_blank},
+    Podeu seleccionar Git Bash des del [:octicons-link-external-16: menú desplegable de la terminal](https://code.visualstudio.com/docs/terminal/basics#_terminal-shells),
     on també podeu configurar que aquesta opció siga la predeterminada.
 
     ![Menú desplegable de la terminal](img/vscode_terminal.png)
     /// attribution
-    [Documentació oficial de :material-microsoft-visual-studio-code: Visual Studio Code](https://code.visualstudio.com/docs/terminal/basics#_terminal-shells){:target=_blank}
+    [Documentació oficial de :material-microsoft-visual-studio-code: Visual Studio Code](https://code.visualstudio.com/docs/terminal/basics#_terminal-shells)
     ///
     /// figure-caption
     Menú desplegable de la terminal en :material-microsoft-visual-studio-code: Visual Studio Code.
@@ -141,12 +141,12 @@ Es pot obrir la terminal mitjançant el menú __Terminal__ > __New Terminal__.
 
 #### Extensió Git Graph
 Per a visualitzar la història dels commits de manera gràfica,
-podeu instal·lar l'extensió [__Git Graph__](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph){:target=_blank}
+podeu instal·lar l'extensió [__Git Graph__](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
 des de l'apartat d'extensions de Visual Studio Code.
 
 ![Demostració de l'extensió Git Graph](img/git_graph_demo.gif)
 /// attribution
-[Extensió Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph){:target=_blank}
+[Extensió Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
 ///
 /// figure-caption
 Demostració de l'extensió Git Graph
@@ -161,5 +161,5 @@ Botó Git Graph en :material-microsoft-visual-studio-code: Visual Studio Code.
 ///
 
 ## Recursos addicionals
-- [Extensió Git Graph per a Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph){:target=_blank}
-- [StackOverflow: What is the shortcut for displaying the GitGraph tab on VS Code?](https://stackoverflow.com/questions/57803207/what-is-the-shortcut-for-displaying-the-gitgraph-tab-on-vs-code){:target=_blank}
+- [:octicons-link-external-16: Extensió Git Graph – :material-microsoft-visual-studio: Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
+- [:octicons-link-external-16: What is the shortcut for displaying the GitGraph tab on VS Code? – :simple-stackoverflow: Stackoverflow](https://stackoverflow.com/questions/57803207/what-is-the-shortcut-for-displaying-the-gitgraph-tab-on-vs-code)
