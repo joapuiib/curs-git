@@ -762,8 +762,9 @@ que complisquen algun dels __patrons especificats__.
 
 
 ## Bibliografia
-- [:octicons-link-external-16: :simple-git: Git Book](https://git-scm.com/book/en/v2)
+- [:octicons-link-external-16: :simple-git: Pro Git Book](https://git-scm.com/book/en/v2)
 - [:octicons-link-external-16: Learn `git` concepts, not commands](https://github.com/UnseenWizzard/git_training) per [@UnseenWizzard](https://github.com/UnseenWizzard)
+- [:octicons-link-external-16: Regarding Git and Branch Naming](https://sfconservancy.org/news/2020/jun/23/gitbranchname/) – Software Freedom Conservancy
 - [:octicons-link-external-16: Why GitHub renamed its master branch to main](https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main) – TheServerSide
 - [:octicons-link-external-16: How is the Git hash calculated?](https://stackoverflow.com/questions/35430584/how-is-the-git-hash-calculated) – :simple-stackoverflow: StackOverflow
 - [:octicons-link-external-16: diff](https://en.wikipedia.org/wiki/Diff) – :simple-wikipedia: Wikipedia
