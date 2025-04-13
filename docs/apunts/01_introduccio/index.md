@@ -6,7 +6,7 @@ hide:
 ---
 
 ## Bloc 1: Introducció a Git
-En aquest primer bloc del curs, veurem els __conceptes bàsics__
+En aquest primer bloc del curs, es veuran els __conceptes bàsics__
 de [__:simple-git: Git__][git] i com configurar-lo localment.
 
 [git]: https://git-scm.com/
@@ -17,6 +17,7 @@ de [__:simple-git: Git__][git] i com configurar-lo localment.
 ///
 /// html | div.timeline
 [[introduccio]]: Introducció i conceptes bàsics.
+> [[introduccio-slides]]
 ///
 /// html | div.timeline.dashed
 [[introduccio-resum]]: Resum de les comandes d'aquest bloc.
