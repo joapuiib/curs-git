@@ -6,9 +6,9 @@ hide:
 ---
 
 ## Bloc 5: Estratègies de ramificació
-En aquest bloc estudiarem diferents variacions
-d'estratègies de ramificació per treballar
-amb branques de [__:simple-git: Git__][git].
+En aquest bloc s'exposaran diferents variants
+d'una estratègia de ramificació per treballar
+amb branques de [__:simple-git: Git__][git]
 d'una manera eficaç i organitzada en
 projectes col·laboratius.
 

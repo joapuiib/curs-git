@@ -6,7 +6,7 @@ hide:
 ---
 
 ## Bloc 4: Git avançat
-En aquest bloc estudiarem operacions més avançades de [__:simple-git: Git__][git].
+En aquest bloc es treballaran operacions més avançades de [__:simple-git: Git__][git].
 
 [git]: https://git-scm.com/
 
