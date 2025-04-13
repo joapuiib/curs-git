@@ -4,7 +4,7 @@ alias: projectes-index
 ---
 
 ## Bloc 6: Gestió de projectes
-En aquest bloc es donarà a conéixel les diferents eines
+En aquest bloc es donarà a conéixer les diferents eines
 i funcionalitats que incorpora [__:simple-github: GitHub__][github]
 per gestionar projectes col·laboratius.
 
