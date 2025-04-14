@@ -11,13 +11,13 @@ per gestionar treball d'aula i projectes educatius col·laboratius.
 [github]: https://github.com/
 
 /// html | div.timeline
-[[education]]: Beneficis de GitHub per a estudiants i professors.
+[[education]]: Beneficis de :simple-github: GitHub per a estudiants i professors.
 ///
 /// html | div.timeline
 [[organitzacions]]: Treball amb :octicons-organization-16: organitzacions.
 ///
 /// html | div.timeline.dashed
-[[classroom]]: Plataforma educativa GitHub Classroom.
+[[classroom]]: Plataforma educativa :octicons-mortar-board-16: GitHub Classroom.
 ///
 /// html | div.timeline.success.check
 Exercici

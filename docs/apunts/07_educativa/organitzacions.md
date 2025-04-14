@@ -30,16 +30,19 @@ GitHub es pot convertir en una plataforma educativa molt potent, per les següen
     adaptades per a l'entorn educatiu mitjançant l'ús de metodologies actives.
 
 
-## Organitzacions
-Les [__:octicons-organization-24: organitzacions__](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations){target=_blank}
-són comptes compartits que poden ser utilitzats per a allotjar projectes de manera centralitzada. Normalment, aquestes organitzacions
-s'utilitzen per a allotjar projectes d'una empresa o d'un projecte de codi obert, però també es poden utilitzar per a allotjar
-projectes educatius.
+## :octicons-organization-24: Organitzacions
+Les [__organitzacions__](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations)
+són comptes compartits que permeten agrupar diversos repositoris i col·laboradors, gestionant els permisos d'accés
+d'una manera més centralitzada.
+
+Normalment, representen a alguna institució, empresa o projecte de codi obert.
 
 ![Organització Softcatalà a GitHub](img/softcatala.png)
 /// shadow-figure-caption
 Organització [:simple-softcatala: Softcatalà a GitHub](https://github.com/Softcatala).
 ///
+
+
 
 ### Crear una organització
 Pots crear una nova organització a l'apartat [__:octicons-organization-24: Organitzacions__](https://github.com/settings/organizations)
@@ -63,6 +66,7 @@ Després, es demanarà especificar la següent informació:
 Crear una organització a GitHub.
 ///
 
+
 ### Millorar una organització a GitHub Team
 Pot sol·licitar la millora d'una organització a GitHub Team a través de
 [GitHub Global Campus](https://education.github.com/globalcampus/teacher).
@@ -72,14 +76,16 @@ Pot sol·licitar la millora d'una organització a GitHub Team a través de
 Millorar una organització a GitHub Team.
 ///
 
+
 ### Convidar membres a una organització
 Per a convidar membres a una organització, cal anar a l'apartat __:material-account: People__
-de la organització i afegir els membres manualment.
+de la organització i afegir els membres manualment amb el botó __Invite member__.
 
-![Convidar membres a una organització](img/invite_members.png)
+![Membres d'una organització](img/invite_members.png)
 /// shadow-figure-caption
-Convidar membres a una organització.
+Membres d'una organització.
 ///
+
 
 ### Configuració de l'organització
 A l'apartat __:octicons-gear-16: Settings__ de l'organització,

@@ -8,7 +8,7 @@ comments: true
 *[IDE]: Integrated Development Environments
 *[IA]: Intel·ligència Artificial
 
-## Beneficis de GitHub Education
+## GitHub Education
 [__:fontawesome-solid-graduation-cap: GitHub Education__](https://github.com/education)
 és una iniciativa de GitHub adreçada a la comunitat educativa,
 que proporciona accés gratuït a eines i recursos premium
