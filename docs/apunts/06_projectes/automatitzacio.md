@@ -29,7 +29,7 @@ Les tasques més comunes que es poden automatitzar són:
 
 ## :octicons-play-24: GitHub Actions
 
-[__:octicons-play-24: GitHub Actions__](https://github.com/features/actions){:target="_blank"}
+[__:octicons-play-24: GitHub Actions__](https://github.com/features/actions)
 és una funcionalitat de :simple-github: GitHub que permet automatitzar
 aquestes tasques dins del flux de treball de desenvolupament de software.
 
@@ -47,7 +47,7 @@ Les tasques d'automatització es defineixen en fitxers de configuració `YAML`,
 que s'han de situar dins del directori `.github/workflows/`.
 
 !!! docs
-    Documentació de [GitHub Actions](https://docs.github.com/en/actions/writing-workflows/quickstart){:target="_blank"}
+    [:octicons-link-external-16: Quickstart for GitHub Actions](https://docs.github.com/en/actions/writing-workflows/quickstart) – :simple-github: GitHub Docs
 
 
 La configuració bàsica d'una tasca d'automatització es fa amb els següents camps:
@@ -119,7 +119,7 @@ amb l'eina [__`act`__](https://nektosact.com/).
 act -W '.github/workflows/checks.yml'
 ```
 
-Aquesta eina utilitza [__:simple-docker: Docker__](https://www.docker.com/){:target="_blank"}
+Aquesta eina utilitza [__:simple-docker: Docker__](https://www.docker.com/)
 per simular l'entorn d'execució semblant a l'entorn de GitHub Actions,
 que permet provar les tasques sense haver de publicar els canvis al repositori remot.
 
@@ -133,7 +133,7 @@ estàtics[^1] directament des d'un repositori de GitHub.
 !!! note
     En comptes de :simple-github: GitHub gratuïts, es permet configurar
     GitHub Pages en repositoris públics. En canvi,
-    en els repositoris privats, [es requereix d'un compte de pagament](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages){:target="_blank"}.
+    en els repositoris privats, [es requereix d'un compte de pagament](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)
 
     No obstant això, GitHub proporciona llicències gratuïtes per a estudiants i professors
     des de [:fontawesome-solid-graduation-cap: GitHub Education](https://education.github.com/).
@@ -142,7 +142,7 @@ Aquest servei és útil per a publicar:
 
 - La documentació d'un projecte.
 - Portafolis personals o de projectes.
-- Llocs web estàtics generats per eines com [:simple-jekyll: Jekyll](https://jekyllrb.com/){:target="_blank"} o [MkDocs](https://www.mkdocs.org/){:target="_blank"}.
+- Llocs web estàtics generats per eines com [:simple-jekyll: Jekyll](https://jekyllrb.com/) o [MkDocs](https://www.mkdocs.org/).
     
 !!! success "Exemple"
     Aquest lloc web està publicat amb __:octicons-browser-24: GitHub Pages__.
