@@ -14,8 +14,8 @@ sense alterar la història del repositori.
 
 El seu funcionament consisteix en crear un nou commit que inverteix els canvis del commit que desitgem desfer.
 
-!!! docs
-    Documentació oficial de [`git revert`](https://git-scm.com/docs/git-revert){target=_blank}
+!!! docs "Documentació oficial de :simple-git: Git"
+    [:octicons-link-external-16: `git revert`](https://git-scm.com/docs/git-revert)
 
 La sintaxi és la següent:
 ```bash
@@ -64,7 +64,7 @@ git revert --no-commit <ref>
 ```
 
 !!! docs
-    Discussió [StackOverflow: How can I revert multiple Git commits?](https://stackoverflow.com/questions/1463340/how-can-i-revert-multiple-git-commits){target=_blank}
+    [:octicons-link-external-16: How can I revert multiple Git commits?](https://stackoverflow.com/questions/1463340/how-can-i-revert-multiple-git-commits) – :simple-stackoverflow: StackOverflow
 
 ??? example "Exemple: git revert múltiples commits"
     ```shellconsole
@@ -93,5 +93,3 @@ manualment, de la mateixa manera que es fa en una [[branques#resolucio-de-confli
 
     1. S'ha editat manualment el fitxer per eliminar els marcadors de
         conflicte i la línia `- Canvi A`.
-
-## Bibliografia

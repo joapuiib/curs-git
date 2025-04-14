@@ -469,8 +469,8 @@ git pull [<options>] [<remot> [<branca>]
     [:octicons-link-external-16: `git pull`](https://git-scm.com/docs/git-pull)
 
 !!! warning
-    La fusió (`merge`) implícita de `git pull` pot ser una [[branques#fusio-directa]]{: target="_blank"}
-    o es pot produir una [[branques#fusio-de-branques-divergents]]{: target="_blank"} si
+    La fusió (`merge`) implícita de `git pull` pot ser una [[branques#fusio-directa]]
+    o es pot produir una [[branques#fusio-de-branques-divergents]] si
     la branca local i la branca remota divergeixen.
 
     En aquest últim cas:

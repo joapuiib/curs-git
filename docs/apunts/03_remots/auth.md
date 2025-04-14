@@ -165,7 +165,7 @@ has de configurar una clau SSH en el teu sistema local i afegir-la al teu compte
     vulgues utilitzar aquest mètode d'autenticació.
 
 !!! docs
-    - [:octicons-link-external-16: Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) – :simple-github: GitHub Docs
+    [:octicons-link-external-16: Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) – :simple-github: GitHub Docs
 
 #### Generació de la clau SSH
 Per generar una clau SSH, segueix els següents passos:
