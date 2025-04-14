@@ -1,11 +1,10 @@
 ---
 template: document.html
-title: "GitHub com a plataforma educativa"
+title: "GitHub Education"
 icon: material/book-open-variant
-alias: educativa
+alias: education
 comments: true
 tags:
-    - GitHub Classroom
     - organitzacions
 ---
 
@@ -24,77 +23,73 @@ GitHub es pot convertir en una plataforma educativa molt potent, per les següen
 - **Allotjament centralitzat**: GitHub permet allotjar tots els projectes en un únic lloc, el que facilita la
     gestió i la revisió dels projectes per part dels docents.
 - **Retroacció individualitzada**: Gràcies al control de versions, els docents poden revisar els canvis que han fet
-    cadastral un dels estudiants i oferir retroacció individualitzada.
+    cadascun dels estudiants i oferir una retroacció individualitzada.
 - **Treball col·laboratiu**: GitHub facilita la col·laboració entre els estudiants, ja que permet treballar en
     branques independents i fusionar els canvis de manera senzilla.
 - **Gestió de projectes**: GitHub ofereix eines que faciliten la gestió de projectes, que poden ser
     adaptades per a l'entorn educatiu mitjançant l'ús de metodologies actives.
 
-## Beneficis de GitHub en l'educació
-[__GitHub Education__](https://github.com/education){:target="_blank"}
+## Beneficis de GitHub Education
+[__:fontawesome-solid-graduation-cap: GitHub Education__](https://github.com/education)
 és una iniciativa de GitHub que ofereix beneficis especials per als estudiants i els docents.
 
-Per a obtindre aquests beneficis, els estudiants i docents han de sol·licitar l'accés a
-[GitHub Education application](https://education.github.com/discount_requests/application){:target="_blank"}.
+> Per a obtindre aquests beneficis, els estudiants i docents han de sol·licitar l'accés a
+> [GitHub Education application](https://education.github.com/discount_requests/application).
 
 ##### Beneficis per als estudiants
 Les eines i els recursos que ofereix GitHub Education es troben a
-[**GitHub Student Developer Pack**](https://education.github.com/pack){:target="_blank"},
+[**GitHub Student Developer Pack**](https://education.github.com/pack),
 entre les quals podem destacar:
 
-- GitHub Pro
-- GitHub Copilot
-- Llicències de JetBrains (PyCharm, IntelliJ IDEA, etc.)
+- [GitHub Pro](https://docs.github.com/es/get-started/learning-about-github/githubs-plans#github-pro): Pla de pagament de GitHub.
+- [:octicons-copilot-16: GitHub Copilot](https://github.com/features/copilot): Intel·ligència artificial per a la programació.
+- Llicències de JetBrains: :simple-pycharm: PyCharm, :simple-intellijidea: IntelliJ IDEA, ...
 - Molts més...
 
 Tota aquesta informació es pot trobar a la pàgina de
-[**GitHub Education Students**](https://github.com/education/students){:target="_blank"}.
+[**GitHub Education Students**](https://github.com/education/students).
 
 ##### Beneficis per als docents
 A més dels beneficis que poden obtindre els estudiants,
 els docents poden obtenir els següents beneficis:
 
-- [GitHub Team](https://github.com/team){:target="_blank"} per a l'educació, que inclou la gestió d'organitzacions.
+- [GitHub Team](https://github.com/team) per a l'educació, que inclou la gestió d'organitzacions.
     
-    Es pot sol·licitar la millora d'una organització a GitHub Team a la pàgina [GitHub Global Campus](https://education.github.com/globalcampus/teacher){:target="_blank"}.
+    Es pot sol·licitar la millora d'una organització a GitHub Team a la pàgina [GitHub Global Campus](https://education.github.com/globalcampus/teacher).
 
-- [GitHub Classroom](https://classroom.github.com/){:target="_blank"}: Plataforma educativa
+- [GitHub Classroom](https://classroom.github.com/): Plataforma educativa
   que permet als docents crear assignatures, allotjar els projectes i gestionar les tasques dels estudiants.
 
 Tota aquesta informació es pot trobar a la pàgina de
-[**GitHub Education Teachers**](https://github.com/education/teachers){:target="_blank"}.
+[**GitHub Education Teachers**](https://github.com/education/teachers).
 
 
 ## Organitzacions
-Les [__organitzacions__](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations){target=_blank}
+Les [__:octicons-organization-24: organitzacions__](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations){target=_blank}
 són comptes compartits que poden ser utilitzats per a allotjar projectes de manera centralitzada. Normalment, aquestes organitzacions
 s'utilitzen per a allotjar projectes d'una empresa o d'un projecte de codi obert, però també es poden utilitzar per a allotjar
 projectes educatius.
 
 ![Organització Softcatalà a GitHub](img/softcatala.png)
 /// shadow-figure-caption
-Organització [:simple-softcatala: Softcatalà a GitHub](https://github.com/Softcatala){:target="_blank"}.
+Organització [:simple-softcatala: Softcatalà a GitHub](https://github.com/Softcatala).
 ///
 
 ### Crear una organització
-Pots crear una nova organització a l'apartat [__:material-office-building: Organitzacions__](https://github.com/settings/organizations){:target="_blank"}
+Pots crear una nova organització a l'apartat [__:octicons-organization-24: Organitzacions__](https://github.com/settings/organizations)
 del teu compte de GitHub.
 
 Quan crees una organització, et demanarà quin pla vols utilitzar.
 
 !!! important
     En l'àmbit educatiu, podem utilitzar el pla gratuït i després sol·licitar la millora a GitHub Team a través de
-    [GitHub Global Campus](https://education.github.com/globalcampus/teacher){:target="_blank"}.
+    [GitHub Global Campus](https://education.github.com/globalcampus/teacher).
 
 Després, es demanarà especificar la següent informació:
 
 - Nom per a la organització, que ha de ser únic a GitHub.
 - Correu electrònic de contacte.
 - A qui pertany la organització (personal, empresa o institució).
-
-    !!! recommend
-        Es recomana configurar la organització com a propietat __personal__
-        per tindre control absolut sobre la organització.
 
 
 ![Crear una organització a GitHub](img/create_org.png)
@@ -104,7 +99,7 @@ Crear una organització a GitHub.
 
 ### Millorar una organització a GitHub Team
 Pot sol·licitar la millora d'una organització a GitHub Team a través de
-[GitHub Global Campus](https://education.github.com/globalcampus/teacher){:target="_blank"}.
+[GitHub Global Campus](https://education.github.com/globalcampus/teacher).
 
 ![Millorar una organització a GitHub Team](img/upgrade_org.png)
 /// shadow-figure-caption
