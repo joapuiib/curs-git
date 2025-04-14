@@ -30,7 +30,7 @@ GitHub es pot convertir en una plataforma educativa molt potent, per les següen
     adaptades per a l'entorn educatiu mitjançant l'ús de metodologies actives.
 
 
-## :octicons-organization-24: Organitzacions
+## :octicons-organization-16: Organitzacions
 Les [__organitzacions__](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations)
 són comptes compartits que permeten agrupar diversos repositoris i col·laboradors, gestionant els permisos d'accés
 d'una manera més centralitzada.
@@ -43,9 +43,8 @@ Organització [:simple-softcatala: Softcatalà a GitHub](https://github.com/Soft
 ///
 
 
-
 ### Crear una organització
-Pots crear una nova organització a l'apartat [__:octicons-organization-24: Organitzacions__](https://github.com/settings/organizations)
+Pots crear una nova organització a l'apartat [__:octicons-organization-16: Organitzacions__](https://github.com/settings/organizations)
 del teu compte de GitHub.
 
 Quan crees una organització, et demanarà quin pla vols utilitzar.
@@ -105,3 +104,47 @@ dels permisos dels membres de l'organització a l'apartat __:material-account-mu
 /// shadow-figure-caption
 Configuració dels permisos de l'organització.
 ///
+
+
+## Proposta d'ús de les organitzacions en l'àmbit educatiu
+En aquest apartat es proposa una metodologia de treball per tal d'aprofitar les eines
+de :simple-github: GitHub: i facilitar la gestió del treball de l'alumnat
+i la revisió dels projectes per part del professorat.
+
+Aquesta metodologia es basa en la __creació d'una organització__,
+on s'allotjaran els projectes dels estudiants de manera centralitzada
+i on el docent tindrà accés a tots els projectes.
+
+No obstant això, aquesta metodologia es complementària i __no substitueix
+la plataforma educativa__ amb la qual es treballa habitualment (Aules, Moodle, etc.).
+
+Es proposen dues opcions, depenent si el treball de l'alumnat és __individual__ o __col·laboratiu__.
+
+### Treball individual
+Aquest cas pot ser el més habitual, on cada estudiant treballa en el seu projecte i
+va realitzant les seues tasques de manera individual.
+
+1. __Crear una :octicons-organization-16: organització__ a :simple-github: GitHub.
+
+    > Personalment, m'agrada crear una organització per cada grup i mòdul professional
+    > amb la nomenclatura `{centre}-{grup}-{modul}`.
+    >
+    > - `fpmislata-daw1-ed`
+    > - `fpmislata-dams2-psp`
+
+1. Configurar els permisos de l'organització com a _No permission_.
+
+    > D'aquesta manera, els estudiants no podran veure els repositoris privats
+    > d'altres companys de classe.
+
+1. Convidar els estudiants a la :octicons-organization-16: organització.
+
+    > Els estudiants han d'acceptar la invitació, que rebran per correu electrònic,
+    > per tal de poder accedir a la organització.
+
+1. Indicar a __cada estudiant que s'ha de crear un :octicons-repo-locked-16: repositori privat__.
+
+    > Personalement, els demane que utilitzen la nomenclatura `{Cognom}{Nom}-{modul}`.
+    >
+    > - `PuigcerverJoan-ED`
+    > - `PuigcerverJoan-PSP`
