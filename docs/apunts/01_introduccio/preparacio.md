@@ -67,7 +67,7 @@ git config --global core.editor <editor>
     === ":material-asterisk: Multiplataforma"
 
         - [:material-microsoft-visual-studio-code: Visual Studio Code](https://code.visualstudio.com/)
-            - [StackOverflow: How to use Visual Studio Code as default editor for git?](https://stackoverflow.com/questions/30024353/how-to-use-visual-studio-code-as-default-editor-for-git)
+            - [:octicons-link-external-16: How to use Visual Studio Code as default editor for git?](https://stackoverflow.com/questions/30024353/how-to-use-visual-studio-code-as-default-editor-for-git) – :simple-stackoverflow: StackOverflow
 
         ```
         git config --global core.editor "code --wait"
@@ -161,5 +161,5 @@ Botó Git Graph en :material-microsoft-visual-studio-code: Visual Studio Code.
 ///
 
 ## Recursos addicionals
-- [:octicons-link-external-16: Extensió Git Graph – :material-microsoft-visual-studio: Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
-- [:octicons-link-external-16: What is the shortcut for displaying the GitGraph tab on VS Code? – :simple-stackoverflow: Stackoverflow](https://stackoverflow.com/questions/57803207/what-is-the-shortcut-for-displaying-the-gitgraph-tab-on-vs-code)
+- [:octicons-link-external-16: Extensió Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) – :material-microsoft-visual-studio: Visual Studio Marketplace
+- [:octicons-link-external-16: What is the shortcut for displaying the GitGraph tab on VS Code?](https://stackoverflow.com/questions/57803207/what-is-the-shortcut-for-displaying-the-gitgraph-tab-on-vs-code) – :simple-stackoverflow: StackOverflow

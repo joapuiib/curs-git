@@ -48,7 +48,7 @@ que s'han de situar dins del directori `.github/workflows/`.
 
 !!! docs
     [:octicons-link-external-16: Quickstart for GitHub Actions](https://docs.github.com/en/actions/writing-workflows/quickstart) – :simple-github: GitHub Docs
-
+    { .spell-ignore }
 
 La configuració bàsica d'una tasca d'automatització es fa amb els següents camps:
 
