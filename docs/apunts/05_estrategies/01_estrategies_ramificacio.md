@@ -378,9 +378,9 @@ Branques de correcció
 
 ## Bibliografia
 /// html | div.spell-ignore
-- [:octicons-link-external-16: 6. Control de Versiones Avanzado | Lorenzo González Gascón](https://logongas.es/doku.php?id=clase:daw:daw:2eval:tema06)
-- [:octicons-link-external-16: War of the Git Flows](https://dev.to/scottshipp/war-of-the-git-flows-3ec2)
-- [:octicons-link-external-16: Gitflow: A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
-- [:octicons-link-external-16: OneFlow](https://www.endoflineblog.com/oneflow-a-git-branching-model-and-workflow)
+- [:octicons-link-external-16: 6. Control de Versiones Avanzado](https://logongas.es/doku.php?id=clase:daw:daw:2eval:tema06) per Lorenzo González Gascón
+- [:octicons-link-external-16: War of the Git Flows](https://dev.to/scottshipp/war-of-the-git-flows-3ec2) – Dev.to
+- [:octicons-link-external-16: Gitflow: A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/) per Vincent Driessen
+- [:octicons-link-external-16: OneFlow](https://www.endoflineblog.com/oneflow-a-git-branching-model-and-workflow) per Adam Ruka
 - [:octicons-link-external-16: Trunk Based Development](https://trunkbaseddevelopment.com/)
 ///
