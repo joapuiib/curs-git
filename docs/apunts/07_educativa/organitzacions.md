@@ -29,40 +29,6 @@ GitHub es pot convertir en una plataforma educativa molt potent, per les següen
 - **Gestió de projectes**: GitHub ofereix eines que faciliten la gestió de projectes, que poden ser
     adaptades per a l'entorn educatiu mitjançant l'ús de metodologies actives.
 
-## Beneficis de GitHub Education
-[__:fontawesome-solid-graduation-cap: GitHub Education__](https://github.com/education)
-és una iniciativa de GitHub que ofereix beneficis especials per als estudiants i els docents.
-
-> Per a obtindre aquests beneficis, els estudiants i docents han de sol·licitar l'accés a
-> [GitHub Education application](https://education.github.com/discount_requests/application).
-
-##### Beneficis per als estudiants
-Les eines i els recursos que ofereix GitHub Education es troben a
-[**GitHub Student Developer Pack**](https://education.github.com/pack),
-entre les quals podem destacar:
-
-- [GitHub Pro](https://docs.github.com/es/get-started/learning-about-github/githubs-plans#github-pro): Pla de pagament de GitHub.
-- [:octicons-copilot-16: GitHub Copilot](https://github.com/features/copilot): Intel·ligència artificial per a la programació.
-- Llicències de JetBrains: :simple-pycharm: PyCharm, :simple-intellijidea: IntelliJ IDEA, ...
-- Molts més...
-
-Tota aquesta informació es pot trobar a la pàgina de
-[**GitHub Education Students**](https://github.com/education/students).
-
-##### Beneficis per als docents
-A més dels beneficis que poden obtindre els estudiants,
-els docents poden obtenir els següents beneficis:
-
-- [GitHub Team](https://github.com/team) per a l'educació, que inclou la gestió d'organitzacions.
-    
-    Es pot sol·licitar la millora d'una organització a GitHub Team a la pàgina [GitHub Global Campus](https://education.github.com/globalcampus/teacher).
-
-- [GitHub Classroom](https://classroom.github.com/): Plataforma educativa
-  que permet als docents crear assignatures, allotjar els projectes i gestionar les tasques dels estudiants.
-
-Tota aquesta informació es pot trobar a la pàgina de
-[**GitHub Education Teachers**](https://github.com/education/teachers).
-
 
 ## Organitzacions
 Les [__:octicons-organization-24: organitzacions__](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations){target=_blank}
