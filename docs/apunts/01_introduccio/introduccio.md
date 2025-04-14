@@ -71,8 +71,8 @@ git init [<directory>]
 Aquesta comanda crea un directori ocult anomenat `.git`
 que conté tota la informació relativa al __Repositori Local__.
 
-!!! docs
-    Documentació oficial de `git init`: https://git-scm.com/docs/git-init
+!!! docs "Documentació oficial de :simple-git: Git"
+    [:octicons-link-external-16: `git init`](https://git-scm.com/docs/git-init)
 
 !!! warning
     Tingues en compte els següents aspectes importants a l'hora d'inicialitzar un repositori
@@ -208,12 +208,10 @@ Flux de treball en un repositori de Git.
 !!! info
     La comanda `git restore` es presenta a l'apartat [Descartar canvis](#descartar-canvis-git-restore).
 
-!!! docs
-    Documentació oficial de:
-
-    - `git status`: https://git-scm.com/docs/git-status
-    - `git add`: https://git-scm.com/docs/git-add
-    - `git commit`: https://git-scm.com/docs/git-commit
+!!! docs "Documentació oficial de :simple-git: Git"
+    - [:octicons-link-external-16: `git status`](https://git-scm.com/docs/git-status)
+    - [:octicons-link-external-16: `git add`](https://git-scm.com/docs/git-add)
+    - [:octicons-link-external-16: `git commit`](https://git-scm.com/docs/git-commit)
 
 
 ## Afegir fitxers a l'Àrea de Preparació (`git add`)
@@ -239,7 +237,8 @@ Estem aprenent a utilitzar Git!
     ```
 
 === ":material-microsoft-visual-studio-code: VS Code"
-    Crea el fitxer __README.md__ amb el contingut anterior.
+    Crea el fitxer __README.md__ amb el contingut anterior
+    en el directori `git_introduccio`.
 
 
 Una vegada creat el fitxer, comprovem l'estat del nostre repositori amb `git status`.
@@ -311,10 +310,10 @@ git commit [-a] [-m "<message>"]
 ```
 
 - `-a`: Opcional. Afegeix tots els fitxers modificats i eliminats a l'_Àrea de Preparació_ (sense necessitat de `git add`).
-- `-m "<message>"`: Opcional. Missatge que descriu el canvi realitzat en el `commit`.
+- `-m "<message>"`: Opcional. Missatge que descriu el canvi realitzat en el _commit_.
 
 !!! warning annotate
-    Si no s'especifica el missatge amb `-m`, s'obrirà l'editor per defecte(1) per a introduir el missatge del `commit`.
+    Si no s'especifica el missatge amb `-m`, s'obrirà l'editor per defecte(1) per a introduir el missatge del _commit_.
 
 1. `ViM` per defecte. Pot ser configurat: 
     ```bash
@@ -323,22 +322,22 @@ git commit [-a] [-m "<message>"]
 
 ![Estat del repositori de Git abans de fer un commit](img/before_commit_readme.png)
 /// figure-caption
-Estat del repositori de Git abans de fer un `commit`.
+Estat del repositori de Git abans de fer un _commit`.
 ///
 
-Aquesta ordre crea un nou `commit`, que és una instantània de l'estat actual dels fitxers
+Aquesta ordre crea un nou _commit_, que és una instantània de l'estat actual dels fitxers
 del repositori i que conté tota la informació relativa als canvis realitzats.
 
-Cadascun dels `commit` conté la següent informació:
+Cadascun dels _commit_ conté la següent informació:
 
-- __Autor__: Persona que ha realitzat el `commit`.
+- __Autor__: Persona que ha realitzat el _commit_.
 - __Correu electrònic__: Correu electrònic de l'autor.
-- __Data__: Data i hora en què s'ha realitzat el `commit`.
-- __Missatge__: Descripció dels canvis realitzats en el `commit`.
-- __Identificador o `hash`__: Codi únic generat automàticament que identifica el `commit`.
-- __Canvis__: Llista de fitxers modificats, afegits o eliminats en el `commit` i els canvis realitzats en ells __respecte de la versió anterior__.
+- __Data__: Data i hora en què s'ha realitzat el _commit_.
+- __Missatge__: Descripció dels canvis realitzats en el _commit_.
+- __Identificador o `hash`__: Codi únic generat automàticament que identifica el _commit_.
+- __Canvis__: Llista de fitxers modificats, afegits o eliminats en el _commit_ i els canvis realitzats en ells __respecte de la versió anterior__.
 
-Per tant, abans de realitzar un `commit`, és necessari configurar el nom i el correu electrònic de l'autor.
+Per tant, abans de realitzar un _commit_, és necessari configurar el nom i el correu electrònic de l'autor.
 
 ```bash
 git config --global user.name <name>
@@ -350,7 +349,7 @@ jpuigcerver@FP:~/git_introduccio (main) $ git config --global user.name "{{ conf
 jpuigcerver@FP:~/git_introduccio (main) $ git config --global user.email "{{ config.site_email }}"
 ```
 
-Amb aquesta informació configurada, ja podem realitzar el nostre primer `commit`.
+Amb aquesta informació configurada, ja podem realitzar el nostre primer _commit_.
 
 ```shellconsole
 jpuigcerver@FP:~/git_introduccio (main) $ git status
@@ -372,14 +371,14 @@ nothing to commit, working tree clean
 ```
 
 Vegem que l'estat del nostre repositori ha canviat i ja no hi ha canvis pendents de confirmar.
-A més, s'ha creat el primer `commit` amb el missatge `Added README.md` i identificador `8e70293`.
+A més, s'ha creat el primer _commit_ amb el missatge `Added README.md` i identificador `8e70293`.
 
 ![Estat del repositori de Git després de fer un commit](img/after_commit_readme.png)
 /// figure-caption
-Estat del repositori de Git després de fer un `commit`.
+Estat del repositori de Git després de fer un _commit_.
 ///
 
-Podem consultar la informació del nou `commit` amb l'ordre `git show`.
+Podem consultar la informació del nou _commit_ amb l'ordre `git show`.
 
 ```shellconsole
 jpuigcerver@FP:~/git_introduccio (main) $ git show 8e70293
@@ -413,8 +412,8 @@ git diff [--staged] [<path>]
 - `<path>`: Opcional. Fitxer o directori sobre el qual es vol comparar les diferències.
     Si no s'indica, es compararan totes les diferències.
 
-!!! docs
-    Documentació oficial de `git diff`: https://git-scm.com/docs/git-diff
+!!! docs "Documentació oficial de :simple-git: Git"
+    [:octicons-link-external-16: `git diff`](https://git-scm.com/docs/git-diff)
 
 ![Resum de `git diff`](img/resum_diff.png)
 /// figure-caption
@@ -518,8 +517,8 @@ git restore [--staged] <path>
 
 Podeu consultar la [Figura 2](#figure-flux-treball) per a veure un resum del comportament de `git restore`.
 
-!!! docs
-    Documentació oficial de `git restore`: https://git-scm.com/docs/git-restore
+!!! docs "Documentació oficial de :simple-git: Git"
+    [:octicons-link-external-16: `git restore`](https://git-scm.com/docs/git-restore)
 
 !!! danger
     La comanda `git restore` descarta els canvis realitzats en els fitxers sense possibilitat de recuperar-los.
@@ -588,18 +587,18 @@ Podeu consultar la [Figura 2](#figure-flux-treball) per a veure un resum del com
 
 
 ## Històric de canvis (`git log`)
-Git registra tots els canvis confirmats (`commit`) en el __Repositori local__.
+Git registra tots els canvis confirmats (_commit_) en el __Repositori local__.
 L'històric de canvis es pot consultar amb l'ordre `git log`.
 
 ```bash
 git log [options]
 ```
 
-!!! docs
-    Consulta totes les opcions a la documentació oficial de `git log`: https://git-scm.com/docs/git-log
+!!! docs "Documentació oficial de :simple-git: Git"
+    Consulta totes les opcions a [:octicons-link-external-16: `git log`](https://git-scm.com/docs/git-log)
 
 ??? example "Exemple: Històric de canvis"
-    Modifiquem novament el fitxer `README.md` i realitzem un nou `commit`.
+    Modifiquem novament el fitxer `README.md` i realitzem un nou _commit_.
 
     ```shellconsole
     jpuigcerver@FP:~/git_introduccio (main) $ echo "Aquesta és una altra línia" >> README.md
@@ -627,9 +626,9 @@ git log [options]
         Added Readme.md
     ```
 
-    S'observa tota la informació dels `commit` realitzats, com l'autor, la data, el missatge i l'identificador.
+    S'observa tota la informació dels _commit_ realitzats, com l'autor, la data, el missatge i l'identificador.
 
-L'ordre `git log` admet moltes opcions per a personalitzar com es mostren els `commit` i la seua informació.
+L'ordre `git log` admet moltes opcions per a personalitzar com es mostren els _commit_ i la seua informació.
 
 Una possible combinació d'opcions per visualitzar l'històric de canvis de manera més compacta i intuïtiva és:
 
@@ -675,7 +674,7 @@ git config [--global] <key> <value>
 !!! notice
     Fixeu-vos que ja hem utilitzat aquesta comanda per configurar els següents aspectes:
 
-    - El nom (`user.name`) i el correu electrònic (`user.email`) de l'autor dels `commit`
+    - El nom (`user.name`) i el correu electrònic (`user.email`) de l'autor dels _commit_
     - L'editor per defecte (`core.editor`).
 
 ### Fitxer de configuració (`.gitconfig`)
@@ -709,19 +708,19 @@ La configuració `--global` s'emmagatzema en el fitxer `.gitconfig`, situat del 
 
 ## Ignorar fitxers (`.gitignore`)
 En un projecte, hi ha fitxers que no volem incloure en el repositori, com arxius temporals, binaris o fitxers de configuració.
-Git permet ignorar aquests fitxers mitjançant el fitxer `.gitignore`, que conté una llista de patrons de fitxers els
+__Git permet ignorar aquests fitxers mitjançant el fitxer `.gitignore`__, que conté una llista de patrons de fitxers els
 quals Git no tindrà en compte.
 
 Aquest fitxer pot estar situat en qualsevol directori del repositori i Git ignorarà per a tots els fitxers i subdirectoris d'aquest
-que complisquen algun dels patrons especificats.
+que complisquen algun dels __patrons especificats__.
 
 !!! docs
-    Documentació oficial de `.gitignore`: https://git-scm.com/docs/gitignore
+    [:octicons-link-external-16: `.gitignore`](https://git-scm.com/docs/gitignore) – Documentació oficial de :simple-git: Git
 
     Llista de patrons:
 
-    - https://git-scm.com/docs/gitignore#_pattern_format
-    - https://www.w3schools.com/git/git_ignore.asp?remote=github
+    - [:octicons-link-external-16: `gitignore` - Pattern format](https://git-scm.com/docs/gitignore#_pattern_format) – Documentació oficial de :simple-git: Git
+    - [:octicons-link-external-16: Git Ignore and `.gitignore`](https://www.w3schools.com/git/git_ignore.asp) – :simple-w3schools: W3Schools
 
 ??? example "Exemple: Ignorar fitxers"
     ```gitignore title=".gitignore"
@@ -758,14 +757,15 @@ que complisquen algun dels patrons especificats.
 
 /// html | div.spell-ignore
 ## Recursos addicionals
-- [:simple-youtube: Curs de Git des de zero per MoureDev](https://www.youtube.com/watch?v=3GymExBkKjE&ab_channel=MoureDevbyBraisMoure)
-- [:octicons-link-external-16: Learn `git` concepts, not commands](https://github.com/UnseenWizzard/git_training) by [@UnseenWizzard](https://github.com/UnseenWizzard)
+- [:simple-youtube: Curs de Git des de zero](https://www.youtube.com/watch?v=3GymExBkKjE&ab_channel=MoureDevbyBraisMoure) per [Moure Dev](https://www.youtube.com/@mouredev)
+- [:octicons-link-external-16: Learn `git` concepts, not commands](https://github.com/UnseenWizzard/git_training) per [@UnseenWizzard](https://github.com/UnseenWizzard)
 
 
 ## Bibliografia
-- [:octicons-link-external-16: :simple-git: Git Book](https://git-scm.com/book/en/v2)
-- [:octicons-link-external-16: Learn `git` concepts, not commands](https://github.com/UnseenWizzard/git_training) by [@UnseenWizzard](https://github.com/UnseenWizzard)
-- https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main
-- https://stackoverflow.com/questions/35430584/how-is-the-git-hash-calculated
-- https://en.wikipedia.org/wiki/Diff
+- [:octicons-link-external-16: :simple-git: Pro Git Book](https://git-scm.com/book/en/v2)
+- [:octicons-link-external-16: Learn `git` concepts, not commands](https://github.com/UnseenWizzard/git_training) per [@UnseenWizzard](https://github.com/UnseenWizzard)
+- [:octicons-link-external-16: Regarding Git and Branch Naming](https://sfconservancy.org/news/2020/jun/23/gitbranchname/) – Software Freedom Conservancy
+- [:octicons-link-external-16: Why GitHub renamed its master branch to main](https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main) – TheServerSide
+- [:octicons-link-external-16: How is the Git hash calculated?](https://stackoverflow.com/questions/35430584/how-is-the-git-hash-calculated) – :simple-stackoverflow: StackOverflow
+- [:octicons-link-external-16: diff](https://en.wikipedia.org/wiki/Diff) – :simple-wikipedia: Wikipedia
 ///

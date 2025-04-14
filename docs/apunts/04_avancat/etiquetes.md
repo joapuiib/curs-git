@@ -27,9 +27,9 @@ Hi ha dos tipus d'etiquetes, les __etiquetes lleugeres__ i les __etiquetes anota
 - Una __etiqueta lleugera__ és una referència alfanumèrica que s'especifica a un commit.
 - Una __etiqueta anotada__ és un objecte de Git que, a més, conté qui ha creat l'etiqueta, la data de creació i un missatge.
 
-!!! docs
-    - Documentació oficial sobre [etiquetes](https://git-scm.com/docs/git-tag){target=_blank}.
-    - Apartat [2.6 Git Basics - Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging){target=_blank} del llibre Pro Git.
+!!! docs "Documentació oficial de :simple-git: Git"
+    - [:octicons-link-external-16: `git tag`](https://git-scm.com/docs/git-tag)
+    - [:octicons-link-external-16: Capítol 2.6 Git Basics - Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging) – [:simple-git: Pro Git Book](https://git-scm.com/book/en/v2)
 
 ??? prep "Preparació repositori"
 
@@ -51,7 +51,7 @@ per identificar les diferents versions del software.
 Una bona pràctica és utilitzar el sistema de numeració semàntica,
 que permet identificar de forma clara i senzilla els canvis que s'han realitzat en cada versió.
 
-El sistema de numeració semàntica __[SemVer](https://semver.org/lang/ca/){target=_blank}__ especifica el següent format per a les versions:
+El sistema de numeració semàntica __[:octicons-link-external-16: SemVer](https://semver.org/lang/ca/)__ especifica el següent format per a les versions:
 
 ```
 MAJOR.MINOR.PATCH
@@ -87,8 +87,8 @@ git tag [-a] <nom_etiqueta> [-m "missatge"] [<ref>]
 - `-m "missatge"`: Missatge de l'etiqueta anotada. Si no s'especifica, s'obrirà un editor per escriure el missatge.
 - `<ref>`: Referència al commit al qual volem associar l'etiqueta. Si no s'especifica, es crea en el commit actual (`HEAD`).
 
-!!! docs
-    Documentació oficial sobre [etiquetes](https://git-scm.com/docs/git-tag){target=_blank}.
+!!! docs "Documentació oficial de :simple-git: Git"
+    [:octicons-link-external-16: `git tag`](https://git-scm.com/docs/git-tag)
 
 ??? example "Exemple: Creació d'etiqueta anotada"
     S'han creat la etiquetes anotades:
@@ -118,10 +118,10 @@ git tag [-l | --list] [<patró>]
 ```
 
 - `-l` o `--list`: Llista les etiquetes.
-- `<patró>`: Patró per filtrar les etiquetes que permeten [caràcters comodí (wildcards)](https://en.wikipedia.org/wiki/Wildcard_character){target=_blank}.
+- `<patró>`: Patró per filtrar les etiquetes que permeten [caràcters comodí (wildcards)](https://en.wikipedia.org/wiki/Wildcard_character).
 
-!!! docs
-    Apartat de la documentació oficial sobre [tag --list](https://git-scm.com/docs/git-tag#Documentation/git-tag.txt---list){target=_blank}.
+!!! docs "Documentació oficial de :simple-git: Git"
+    [:octicons-link-external-16: `git tag --list`](https://git-scm.com/docs/git-tag)
 
 ??? example "Exemple: Llistar etiquetes"
     Mostrem les etiquetes del nostre repositori.
@@ -224,6 +224,6 @@ git push [-d | --delete] origin <nom_etiqueta>
     ```
 
     Vegem que les etiquetes creades en el nostre repositori local s'han publicat en el
-    [repositori remot](https://github.com/joapuiib/cursgit_etiquetes/tags){:target="_blank"}.
+    [repositori remot](https://github.com/joapuiib/cursgit_etiquetes/tags).
 
     ![Repositori remot amb etiquetes](img/etiquetes/github_etiquetes.png)

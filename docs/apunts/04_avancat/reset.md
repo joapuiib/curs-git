@@ -84,8 +84,8 @@ git reset [--soft | --mixed | --hard | --keep] <ref>
 
 - `ref`: La referència pot ser l'identificador de un commit, una branca o una etiqueta.
 
-!!! docs
-    Documentació oficial de [`git reset`](https://git-scm.com/docs/git-reset){target=_blank}.
+!!! docs "Documentació oficial de :simple-git: Git"
+    [:octicons-link-external-16: `git reset`](https://git-scm.com/docs/git-reset)
 
 
 ### Soft
@@ -182,5 +182,5 @@ git reset --keep <ref>
 
 
 ## Bibliografia
-- https://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard
-- https://git-scm.com/docs/git-reset
+- [:octicons-link-external-16: What's the difference between git reset --mixed, --soft, and --hard?](https://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard) – :simple-stackoverflow: StackOverflow
+- [:octicons-link-external-16: `git reset`](https://git-scm.com/docs/git-reset)

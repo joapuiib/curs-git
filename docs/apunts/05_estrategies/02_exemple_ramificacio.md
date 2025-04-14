@@ -17,7 +17,7 @@ Anem a simular un projecte de desenvolupament de programari
 on tres desenvolupadors treballen en diferents funcionalitats
 de manera independent.
 
-Per evitar haver de crear un repositori a [:material-github: GitHub](https://github.com){target=_blank},
+Per evitar haver de crear un repositori a [:material-github: GitHub](https://github.com)
 crearem un repositori remot en la màquina local.
 
 !!! warning

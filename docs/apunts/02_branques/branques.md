@@ -30,7 +30,7 @@ que té connotacions racistes.
 !!! info
     S'ha canviat el nom de la branca principal de `master` a `main` per a seguir les recomanacions de la comunitat de desenvolupament.
 
-    Vegeu: [Regarding Git and Branch Naming](https://sfconservancy.org/news/2020/jun/23/gitbranchname/)
+    Vegeu: [:octicons-link-external-16: Regarding Git and Branch Naming](https://sfconservancy.org/news/2020/jun/23/gitbranchname/) – Software Freedom Conservancy
 
 
 ??? prep "Preparació repositori d'exemple"
@@ -84,8 +84,8 @@ Estructura de branques inicial.
 La ordre `git branch` ens permet veure i manipular les branques
 d'un repositori.
 
-!!! docs
-    Documentació oficial de l'ordre [`git branch`](https://git-scm.com/docs/git-branch){:target="_blank"}
+!!! docs "Documentació oficial de :simple-git: Git"
+    [:octicons-link-external-16: `git branch`](https://git-scm.com/docs/git-branch)
 
 ### Mostrar les branques
 Per mostrar les branques d'un repositori, utilitzem l'ordre:
@@ -149,15 +149,15 @@ Estructura de branques després de crear les branques `menjar`, `beguda` i `nete
 
 
 ### Canviar de branca
-Existeixen dues ordres per canviar de branca, cadascuna amb la seva pròpia sintaxi i opcions:
+Existeixen dues ordres per canviar de branca, cadascuna amb la seua pròpia sintaxi i opcions:
 ```bash
 git checkout <nom>
 git switch <nom>
 ```
 
-!!! docs
-    - Documentació de la ordre [`git checkout`](https://git-scm.com/docs/git-checkout){:target="_blank"}
-    - Documentació de la ordre [`git switch`](https://git-scm.com/docs/git-switch){:target="_blank"}
+!!! docs "Documentació oficial de :simple-git: Git"
+    - [:octicons-link-external-16: `git checkout`](https://git-scm.com/docs/git-checkout)
+    - [:octicons-link-external-16: `git switch`](https://git-scm.com/docs/git-switch)
 
 !!! info
     Originalment, s'utilitzava l'ordre `git checkout` per canviar de branca,
@@ -326,9 +326,9 @@ git merge <branca>
     La __fusió de branques__ sempre incorpora els canvis de la branca
     indicada sobre la __branca actual__ (on es troba el `HEAD`).
 
-!!! docs
-    - Documentació de la ordre [`git merge`](https://git-scm.com/docs/git-merge){:target="_blank"}
-    - [Pro Git - Capítol 3.2 Git Branching - Basic Branching and Merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging){:target="_blank"}
+!!! docs "Documentació oficial de :simple-git: Git"
+    - [:octicons-link-external-16: `git merge`](https://git-scm.com/docs/git-merge)
+    - [:octicons-link-external-16: Git Branching - Basic Branching and Merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) – [:simple-git: Pro Git Book](https://git-scm.com/book/en/v2)
 
 Segons l'estructura de les branques, la fusió pot ser [__directa__](#fusio-directa) (_fast-forward_)
 o mitjançant [__commit de fusió__](#fusio-de-branques-divergents) (_merge commit_).
@@ -560,9 +560,9 @@ Aquest procés es realitza amb l'ordre:
 git rebase <branca>
 ```
 
-!!! docs
-    - Documentació de la ordre [`git rebase`](https://git-scm.com/docs/git-rebase){:target="_blank"}
-    - [Pro Git - Capítol 3.6 Git Branching - Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing){:target="_blank"}
+!!! docs "Documentació oficial de :simple-git: Git"
+    - [:octicons-link-external-16: `git rebase`](https://git-scm.com/docs/git-rebase)
+    - [:octicons-link-external-16: Capítol 3.5 Git Branching - Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing) – [:simple-git: Pro Git Book](https://git-scm.com/book/en/v2)
 
 ![Història abans del canvi de base](img/before_rebase.png)
 /// figure-caption
@@ -709,10 +709,10 @@ fins que s'haja aplicat el canvi de base a tots els _commit_ de la branca.
 
 /// html | div.spell-ignore
 ## Recursos addicionals
-- [Curs de Git des de zero per MoureDev](https://www.youtube.com/watch?v=3GymExBkKjE&ab_channel=MoureDevbyBraisMoure)
-- [:octicons-link-external-16: Learn `git` concepts, not commands](https://github.com/UnseenWizzard/git_training) by [@UnseenWizzard](https://github.com/UnseenWizzard)
+- [:simple-youtube: Curs de Git des de zero](https://www.youtube.com/watch?v=3GymExBkKjE&ab_channel=MoureDevbyBraisMoure) per [Moure Dev](https://www.youtube.com/@mouredev)
+- [:octicons-link-external-16: Learn `git` concepts, not commands](https://github.com/UnseenWizzard/git_training) per [@UnseenWizzard](https://github.com/UnseenWizzard)
 
 ## Bibliografia
-- [:octicons-link-external-16: :simple-git: Git Book](https://git-scm.com/book/en/v2)
-- [:octicons-link-external-16: Learn `git` concepts, not commands](https://github.com/UnseenWizzard/git_training) by [@UnseenWizzard](https://github.com/UnseenWizzard)
+- [:octicons-link-external-16: :simple-git: Pro Git Book](https://git-scm.com/book/en/v2)
+- [:octicons-link-external-16: Learn `git` concepts, not commands](https://github.com/UnseenWizzard/git_training) per [@UnseenWizzard](https://github.com/UnseenWizzard)
 ///

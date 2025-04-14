@@ -16,7 +16,7 @@ com es creen i com allotjar-los a __[:simple-github: GitHub][github]__.
 > [[auth-slides]]
 ///
 
-/// html | div.timeline.dashed
+/// html | div.timeline
 [[remots]]
 
 - Creació i gestió de repositoris remots.

@@ -68,6 +68,10 @@ La comanda `git stash` permet guardar els canvis que s'han realitzat al director
 git stash [-m <missatge>]
 ```
 
+!!! docs "Documentació oficial de :simple-git: Git"
+    - [:octicons-link-external-16: `git stash`](https://git-scm.com/docs/git-stash)
+    - [:octicons-link-external-16: Capítol 7.3 Git Tools – Stashing and Cleaning](https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning) – [:simple-git: Pro Git Book](https://git-scm.com/book/en/v2)
+
 !!! tip
     Amb l'opció `-m` podem afegir un missatge al `stash` per
     identificar millor els canvis guardats.

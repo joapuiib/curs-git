@@ -90,7 +90,7 @@ són una eina de creació i seguiment d'incidències relacionades amb un project
 
 En aquest espai, també es permet la comunicació i la col·laboració
 entre els membres del projecte per a aportar informació sobre la incidència,
-debatre sobre la seva resolució.
+debatre sobre la seua resolució.
 
 ??? example "Incidències a :simple-materialformkdocs: Material for MkDocs"
     [:simple-materialformkdocs: Material for MkDocs][mkdocs-material]

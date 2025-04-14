@@ -110,7 +110,7 @@ Alguns dels serveis d'allotjament repositoris remots en línia més coneguts só
     s'integra estretament amb altres eines d'aquesta empresa, com Jira.
 
 !!! info "Més informació"
-    [:octicons-link-external-16: GitLab vs. GitHub: Which is Better in 2025? | :simple-prismic: prismic Blog](https://prismic.io/blog/gitlab-vs-github#similarities-between-github-and-gitlab)
+    [:octicons-link-external-16: GitLab vs. GitHub: Which is Better in 2025?](https://prismic.io/blog/gitlab-vs-github#similarities-between-github-and-gitlab) – :simple-prismic: prismic Blog
     { .spell-ignore }
 
 
@@ -182,8 +182,8 @@ Aquesta comanda permet realitzar les següents accions:
 
 Cadascuna d'aquestes opcions té les seues pròpies opcions i arguments.
 
-!!! docs
-    [:octicons-link-external-16: `git remote` – Documentació oficial de :simple-git: Git](https://git-scm.com/docs/git-remote)
+!!! docs "Documentació oficial de :simple-git: Git"
+    [:octicons-link-external-16: `git remote`](https://git-scm.com/docs/git-remote)
 
 ### Afegir un repositori remot
 Per afegir un repositori remot, utilitzarem la comanda `git remote add`.
@@ -266,8 +266,8 @@ git push [-u|--set-upstream] <remot> <branca>
 - `<remot>`: Àlies del repositori remot (configurat amb `git remote add`).
 - `<branca>`: Nom de la branca remota.
 
-!!! docs
-    [:octicons-link-external-16: `git push` – Documentació oficial de :simple-git: Git](https://git-scm.com/docs/git-push)
+!!! docs "Documentació oficial de :simple-git: Git"
+    [:octicons-link-external-16: `git push`](https://git-scm.com/docs/git-push)
 
 !!! important
     Aquesta comanda funciona sobre la branca on estem situats (`HEAD`).
@@ -370,8 +370,8 @@ Sincronització entre repositoris amb `git fetch`
 Aquesta ordre és útil per obtindre la informació dels canvis realitzats en el repositori remot
 i decidir si volem incorporar-los al nostre repositori local.
 
-!!! docs
-    [:octicons-link-external-16: `git fetch` – Documentació oficial de :simple-git: Git](https://git-scm.com/docs/git-fetch)
+!!! docs "Documentació oficial de :simple-git: Git"
+    [:octicons-link-external-16: `git fetch`](https://git-scm.com/docs/git-fetch)
 
 !!! info
     L'opció `--prune` permet eliminar les referències de les branques remotes que ja no existeixen
@@ -465,12 +465,12 @@ git pull [<options>] [<remot> [<branca>]
 - `<remot>`: Àlies del repositori remot. Per defecte, s'utilitza la configuració de la branca actual.
 - `<branca>`: Nom de la branca remota. Per defecte, s'utilitza la configuració de la branca actual.
 
-!!! docs
-    [:octicons-link-external-16: `git pull` – Documentació oficial de :simple-git: Git](https://git-scm.com/docs/git-pull)
+!!! docs "Documentació oficial de :simple-git: Git"
+    [:octicons-link-external-16: `git pull`](https://git-scm.com/docs/git-pull)
 
 !!! warning
-    La fusió (`merge`) implícita de `git pull` pot ser una [[branques#fusio-directa]]{: target="_blank"}
-    o es pot produir una [[branques#fusio-de-branques-divergents]]{: target="_blank"} si
+    La fusió (`merge`) implícita de `git pull` pot ser una [[branques#fusio-directa]]
+    o es pot produir una [[branques#fusio-de-branques-divergents]] si
     la branca local i la branca remota divergeixen.
 
     En aquest últim cas:
@@ -597,11 +597,11 @@ git pull [<options>] [<remot> [<branca>]
 
 /// html | div.spell-ignore
 ## Recursos addicionals
-- [:simple-youtube: Curs de Git des de zero per MoureDev](https://www.youtube.com/watch?v=3GymExBkKjE&ab_channel=MoureDevbyBraisMoure)
-- [:octicons-link-external-16: Learn `git` concepts, not commands](https://github.com/UnseenWizzard/git_training) by [@UnseenWizzard](https://github.com/UnseenWizzard)
+- [:simple-youtube: Curs de Git des de zero](https://www.youtube.com/watch?v=3GymExBkKjE&ab_channel=MoureDevbyBraisMoure) per [Moure Dev](https://www.youtube.com/@mouredev)
+- [:octicons-link-external-16: Learn `git` concepts, not commands](https://github.com/UnseenWizzard/git_training) per [@UnseenWizzard](https://github.com/UnseenWizzard)
 
 
 ## Bibliografia
-- [:octicons-link-external-16: :simple-git: Git Book](https://git-scm.com/book/en/v2)
-- [:octicons-link-external-16: Learn `git` concepts, not commands](https://github.com/UnseenWizzard/git_training) by [@UnseenWizzard](https://github.com/UnseenWizzard)
+- [:octicons-link-external-16: :simple-git: Pro Git Book](https://git-scm.com/book/en/v2)
+- [:octicons-link-external-16: Learn `git` concepts, not commands](https://github.com/UnseenWizzard/git_training) per [@UnseenWizzard](https://github.com/UnseenWizzard)
 ///

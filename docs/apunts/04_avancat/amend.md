@@ -49,7 +49,7 @@ git commit --amend [-m <missatge>]
     --8<-- "docs/files/avancat/stdout/amend/setup_amend.txt"
     ```
 
-??? example "Exemple: Canviar el nom de l'últim commit"
+??? example "Exemple: Canviar el missatge de l'últim commit"
     Vegem que el missatge de l'últim _commit_ __Canvi C__ no és correcte
     i volem canviar-lo a __Canvi B__.
 
@@ -69,5 +69,5 @@ git commit --amend [-m <missatge>]
     2. L'opció `--no-edit` permet deixar el missatge del commit original.
 
 ## Bibliografia
-- https://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard
-- https://git-scm.com/docs/git-reset
+- [:octicons-link-external-16: Capítol 7.6 – Rewriting History](https://git-scm.com/book/id/v2/Git-Tools-Rewriting-History) – [:simple-git: Pro Git Book](https://git-scm.com/book/en/v2)
+- [:octicons-link-external-16: `git commit --amend`](https://git-scm.com/docs/git-commit#Documentation/git-commit.txt-code--amendcode)

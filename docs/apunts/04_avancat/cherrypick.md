@@ -16,8 +16,8 @@ Aquesta ordre pot ser útil si has realitzat un canvi en una branca
 incorrecta i vols copiar-lo a la branca correcta sense haver de
 fusionar les branques.
 
-!!! docs
-    Documentació oficial de [`git cherry-pick`](https://git-scm.com/docs/git-cherry-pick){target=_blank}
+!!! docs "Documentació oficial de :simple-git: Git"
+    [:octicons-link-external-16: `git cherry-pick`](https://git-scm.com/docs/git-cherry-pick)
 
 La sintaxi és la següent:
 ```bash

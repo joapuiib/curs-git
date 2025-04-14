@@ -34,7 +34,7 @@ de desenvolupament de programari de manera distribuïda i col·laborativa, sobre
 en projectes de __:material-open-source-initiative: codi obert__.
 
 ## :material-source-fork: Forks
-Una [__bifurcació o *fork*__](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo){:target="_blank"}
+Una [__bifurcació o *fork*__](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
 és una còpia d'un repositori que pertany a un usuari o organització
 com a propi.
 

@@ -105,7 +105,7 @@ A més, __millora la traçabilitat__ del desenvolupament i __facilita el seguime
 realitzats per a la resolució de les incidències.
 
 !!! docs
-    - [:octicons-link-external-16: Linking a pull request to an issue | :simple-github: GitHub Docs](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue)
+    - [:octicons-link-external-16: Linking a pull request to an issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue) – :simple-github: GitHub Docs
 
 Les incidències poden ser enllaçades a una PR de dues maneres:
 
