@@ -12,7 +12,7 @@ Els objectius d'aquest exercici són:
 
 - Conéixer què són les organitzacions de GitHub i
     quin ús se'ls pot donar en l'àmbit educatiu.
-- Disenyar un marc de treball amb GitHub
+- Dissenyar un marc de treball amb GitHub
     per a la gestió del treball d'aula.
 
 
@@ -40,8 +40,8 @@ Per a lliurar aquest exercici podeu triar entre una de les següents opcions:
 
 ## Enunciat
 Fent ús de les ferramentes que ens proporciona :simple-github: GitHub,
-__disenya un marc de treball__ per a la gestió del treball
-d'aula d'un dels teus mòduls professonals.
+__dissenya un marc de treball__ per a la gestió del treball
+d'aula d'un dels teus mòduls professionals.
 
 > Pots basar-te en alguna de les propostes vistes a [[proposta-treball]].
 
