@@ -14,7 +14,9 @@ per gestionar treball d'aula i projectes educatius col·laboratius.
 [[education]]: Beneficis de :simple-github: GitHub per a estudiants i professors.
 ///
 /// html | div.timeline
-[[organitzacions]]: Treball amb :octicons-organization-16: organitzacions.
+[[organitzacions]]
+
+[[proposta-treball]]
 ///
 /// html | div.timeline.dashed
 [[classroom]]: Plataforma educativa :octicons-mortar-board-16: GitHub Classroom.
