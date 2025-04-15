@@ -11,5 +11,16 @@ per gestionar treball d'aula i projectes educatius col·laboratius.
 [github]: https://github.com/
 
 /// html | div.timeline
-[[educativa]]: GitHub com a plataforma educativa.
+[[education]]: Beneficis de :simple-github: GitHub per a estudiants i professors.
+///
+/// html | div.timeline
+[[organitzacions]]
+
+[[proposta-treball]]
+///
+/// html | div.timeline.dashed
+[[classroom]]: Plataforma educativa de :simple-github: GitHub
+///
+/// html | div.timeline.success.check
+[[educativa-exercici]]: Exercici pràctic d'aquest bloc.
 ///

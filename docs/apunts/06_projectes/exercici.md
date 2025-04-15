@@ -8,7 +8,7 @@ alias: projectes-exercici
 *[PR]: Pull Request
 
 ## Objectius
-Els objectius d'aquests exercici són:
+Els objectius d'aquest exercici són:
 
 - Conéixer com crear una bifurcació o _fork_ d'un projecte.
 - Conéixer com crear una _Pull Request_.
