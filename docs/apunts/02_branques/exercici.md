@@ -6,7 +6,7 @@ alias: branques-exercici
 ---
 
 ## Objectius
-Els objectius d'aquests exercici són:
+Els objectius d'aquest exercici són:
 
 - Conéixer com crear i eliminar branques.
 - Conéixer com realitzar canvis en una branca.

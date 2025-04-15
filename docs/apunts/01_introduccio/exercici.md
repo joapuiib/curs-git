@@ -6,7 +6,7 @@ alias: introduccio-exercici
 ---
 
 ## Objectius
-Els objectius d'aquests exercici són:
+Els objectius d'aquest exercici són:
 
 - Conéixer com crear i inicialitzar un repositori de Git localment.
 - Conéixer com afegir fitxers al repositori local.

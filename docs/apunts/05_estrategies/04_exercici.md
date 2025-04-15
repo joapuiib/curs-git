@@ -6,7 +6,7 @@ alias: estrategies-exercici
 ---
 
 ## Objectius
-Els objectius d'aquests exercici són:
+Els objectius d'aquest exercici són:
 
 - Conéixer les diferents estratègies de ramificació.
 - Conéixer com aplicar les diferents estratègies de ramificació.

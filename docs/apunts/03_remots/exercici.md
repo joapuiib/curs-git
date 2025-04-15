@@ -6,7 +6,7 @@ alias: remots-exercici
 ---
 
 ## Objectius
-Els objectius d'aquests exercici són:
+Els objectius d'aquest exercici són:
 
 - Conéixer com crear un repositori remot a [:material-github: GitHub](https://github.com).
 - Conéixer com configurar un repositori remot.

@@ -22,5 +22,5 @@ per gestionar treball d'aula i projectes educatius col·laboratius.
 [[classroom]]: Plataforma educativa de :simple-github: GitHub
 ///
 /// html | div.timeline.success.check
-Exercici
+[[educativa-exercici]]: Exercici pràctic d'aquest bloc.
 ///
