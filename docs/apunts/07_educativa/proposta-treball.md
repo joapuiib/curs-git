@@ -1,7 +1,7 @@
 ---
 template: document.html
 title: "Proposta d'ús de les organitzacions en l'àmbit educatiu"
-icon: material/book-open-variant
+icon: material/lightbulb-on
 alias: proposta-treball
 comments: true
 ---
@@ -56,7 +56,7 @@ va realitzant les seues tasques de manera individual.
     > Hem de decidir quants repositoris privats han de crear els estudiants al llarg
     > del curs acadèmic.
     >
-    > Personalement, jo els demane que creen __un únic repositori__ que utilitzaran durant tot
+    > Personalment, jo els demane que creen __un únic repositori__ que utilitzaran durant tot
     > el curs, amb la nomenclatura `{Cognom}{Nom}-{modul}`.
     >
     > - `PuigcerverJoan-ED`
@@ -142,7 +142,7 @@ metodologies àgils com __Scrum__ o __Kanban__.
            abans de tancar la :octicons-git-pull-request-16: _Pull Request_.
         -  `merge --squash` per fusionar les :octicons-git-pull-request-16: _Pull Requests_.
 
-    > _Podeu trobar més infomació a [:fontawesome-solid-people-group: Projecte Intermodular DAW1](https://fpmislata-daw1-projecte.github.io/projecte-daw1/) – CIPFP Mislata._
+    > _Podeu trobar més informació a [:fontawesome-solid-people-group: Projecte Intermodular DAW1](https://fpmislata-daw1-projecte.github.io/projecte-daw1/) – CIPFP Mislata._
 
 
 ### Lliurament de tasques
@@ -162,7 +162,7 @@ del treball que es vol lliurar.
 El professorat, podrà accedir al repositori privat de l'estudiant
 i situar-se en aquesta versió per tal de revisar el treball lliurat.
 
-> Es recomana utilitzar __una :octicons-tag-16: etiqueta annotada__
+> Es recomana utilitzar __una :octicons-tag-16: etiqueta anotada__
 > per poder comprovar la data en la qual s'ha creat.
 
 Un altre aspecte a tindre en compte és que,

@@ -3,8 +3,11 @@ Atlassian
 Bitbucket
 by-nc-sa
 cherrypick
+CIPFP
+Codespaces
 config
 d'
+DAW
 d'elles
 Gantt
 Gascón
@@ -20,6 +23,7 @@ hotfix
 IDE
 init
 IntelliJ
+intermodular
 JetBrains
 Jira
 Kanban
@@ -32,11 +36,14 @@ md
 MkDocs
 MoureDev
 OneFlow
+PhpStorm
 PowerShell
 PyCharm
 Pygments
 PyMdown
 pymdownx
+PyPI
+PySpelling
 README
 rebase
 rebasing
@@ -48,6 +55,5 @@ SemVer
 StackOverflow
 TODO
 untracked
-PySpelling
-PyPI
 ViM
+WebStorm

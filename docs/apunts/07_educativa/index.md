@@ -19,7 +19,7 @@ per gestionar treball d'aula i projectes educatius col·laboratius.
 [[proposta-treball]]
 ///
 /// html | div.timeline.dashed
-[[classroom]]: Plataforma educativa :octicons-mortar-board-16: GitHub Classroom.
+[[classroom]]: Plataforma educativa de :simple-github: GitHub
 ///
 /// html | div.timeline.success.check
 Exercici
