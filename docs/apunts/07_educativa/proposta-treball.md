@@ -100,6 +100,8 @@ va realitzant les seues tasques de manera individual.
 
 
 ### Treball en grup
+En aquest cas, cada grup d'estudiants treballa en un mateix projecte i realitza
+les tasques sobre el mateix repositori.
 
 1. __Crear una :octicons-organization-16: organització__ a :simple-github: GitHub.
 
@@ -124,7 +126,7 @@ va realitzant les seues tasques de manera individual.
 1. __Crear un :octicons-repo-locked-16: repositori privat__ per a cada grup d'estudiants
     i __afegir :octicons-people-16: l'equip creat anteriorment__ com a col·laborador.
 
-1. __Crear un :octicons-table-16: Projecte__ per cada grup, on poden __organitzar les tasques
+1. __Crear un :octicons-table-16: projecte__ per cada grup, on poden __organitzar les tasques
     com a :octicons-issue-opened-16: incidències__.
 
     > La creació de :octicons-people-16: l'equip, el :octicons-repo-locked-16: repositori privat
@@ -150,12 +152,12 @@ metodologies àgils com __Scrum__ o __Kanban__.
     Amb els estudiants de 1r curs de __Desenvolupament d'Aplicacions Web (DAW)__,
     hem estat treballant en un __projecte intermodular__ on es desenvolupa una
     __aplicació web__ de temàtica lliure. El projecte es porta a terme en grups
-    de 4-5 estudiants i es treballa amb la metodologia __Scrum__.
+    de 4-5 estudiants i es treballa amb la metodologia àgil __Scrum__.
 
-    Les tasques es gestionen a través d'un __:octicons-table-16: projecte__,
-    enllaçat a un __:octicons-repo-locked-16: repositori privat__ per cada __:octicons-people-16: equip__.
+    Cada __:octicons-people-16: equip__ gestiona les tasques amb un __:octicons-table-16: projecte__,
+    enllaçat a un __:octicons-repo-locked-16: repositori privat__.
 
-    Utilitzem la següent __estratègia de ramificació__:
+    Es segueix la següent __estratègia de ramificació__:
 
     - Utilització de les __:octicons-git-branch-16:__ branques `develop` i `main`.
     - Utilització de les __:octicons-git-branch-16:__ branques `feature` per a cada tasca.
@@ -200,8 +202,8 @@ Per aquest motiu, personalment m'agrada demanar-los que lliuren
 el codi de la tasca de manera comprimida a la __plataforma educativa oficial (Aules)__,
 indicant l'enllaç al seu repositori.
 
-> En la pràctica, no revise el codi de la tasca lliurada i vaig directament
-> al seu :octicons-repo-locked-16: repositori privat.
+> En la pràctica, no revise el codi lliurat a la tasca d'Aules i
+> el consulte directament en el :octicons-repo-locked-16: repositori privat.
 >
 > No obstant això, és cert que de vegades els estudiants
 > han tingut algun problema amb :simple-git: Git i gràcies a aquest _backup_
