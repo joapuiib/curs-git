@@ -147,7 +147,7 @@ metodologies àgils com __Scrum__ o __Kanban__.
 
 *[DAW]: Desenvolupament d'Aplicacions Web
 
-!!! example "Exemple real aplicat a 1r de DAW amb Scrum"
+!!! example "Exemple real aplicat en un projecte intermodular a 1r de DAW amb Scrum"
 
     Amb els estudiants de 1r curs de __Desenvolupament d'Aplicacions Web (DAW)__,
     hem estat treballant en un __projecte intermodular__ on es desenvolupa una
