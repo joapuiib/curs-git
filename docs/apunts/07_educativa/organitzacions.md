@@ -37,10 +37,11 @@ d'una manera més centralitzada.
 
 Normalment, representen a alguna institució, empresa o projecte de codi obert.
 
-![Organització Softcatalà a GitHub](img/softcatala.png)
-/// shadow-figure-caption
-Organització [:simple-softcatala: Softcatalà a GitHub](https://github.com/Softcatala).
-///
+??? picture "Organització Softcatalà"
+    ![Organització Softcatalà a GitHub](img/org/softcatala.png)
+    /// shadow-figure-caption
+    Organització [:simple-softcatala: Softcatalà a GitHub](https://github.com/Softcatala).
+    ///
 
 
 ### Crear una organització
@@ -60,30 +61,33 @@ Després, es demanarà especificar la següent informació:
 - A qui pertany la organització (personal, empresa o institució).
 
 
-![Crear una organització a GitHub](img/create_org.png)
-/// shadow-figure-caption
-Crear una organització a GitHub.
-///
+??? picture "Formulari per a crear una organització"
+    ![Formulari per a crear una organització](img/org/create_org.png)
+    /// shadow-figure-caption
+    Formulari per a crear una organització.
+    ///
 
 
 ### Millorar una organització a GitHub Team
 Pot sol·licitar la millora d'una organització a GitHub Team a través de
 [GitHub Global Campus](https://education.github.com/globalcampus/teacher).
 
-![Millorar una organització a GitHub Team](img/upgrade_org.png)
-/// shadow-figure-caption
-Millorar una organització a GitHub Team.
-///
+??? picture "Millorar una organització a GitHub Team"
+    ![Millorar una organització a GitHub Team](img/org/upgrade_org.png)
+    /// shadow-figure-caption
+    Millorar una organització a GitHub Team.
+    ///
 
 
 ### Convidar membres a una organització
 Per a convidar membres a una organització, cal anar a l'apartat __:material-account: People__
 de la organització i afegir els membres manualment amb el botó __Invite member__.
 
-![Membres d'una organització](img/invite_members.png)
-/// shadow-figure-caption
-Membres d'una organització.
-///
+??? picture "Convidar membres a una organització"
+    ![Convidar membres a una organització](img/org/invite_members.png)
+    /// shadow-figure-caption
+    Convidar membres a una organització.
+    ///
 
 
 ### Configuració de l'organització
@@ -100,7 +104,55 @@ dels permisos dels membres de l'organització a l'apartat __:material-account-mu
     D'aquesta manera, els estudiants no podran veure els repositoris privats
     d'altres companys de classe.
 
-![Configuració dels permisos de l'organització](img/base_permissions.png)
-/// shadow-figure-caption
-Configuració dels permisos de l'organització.
-///
+??? picture "Configuració dels permisos de l'organització"
+    ![Configuració dels permisos de l'organització](img/org/base_permissions.png)
+    /// shadow-figure-caption
+    Configuració dels permisos de l'organització.
+    ///
+
+
+## :octicons-people-16: Equips
+Els [__equips__][equips] és una funcionalitat de les organitzacions que permet agrupar
+membres per centralitzar la gestió dels permisos d'accés als repositoris.
+
+També permet crear canals de comunicació entre els membres d'un equip
+o mencionar a un equip sencer en un comentari.
+
+[equips]: https://docs.github.com/es/organizations/organizing-members-into-teams/about-teams
+
+??? picture "Equip d'una organització"
+    ![Equip d'una organització](img/team/team.png)
+    /// shadow-figure-caption
+    Equip [`@mantainers`][mantainers] de l'organització [`cursgit`][cursgit].
+    ///
+
+[cursgit]: https://github.com/cursgit
+[mantainers]: https://github.com/orgs/cursgit/teams/mantainers
+
+### Crear un equip
+Per a crear un nou equip, cal anar a l'apartat __:octicons-people-16: Teams__ de l'organització
+i fer clic al botó __New team__.
+
+Es poden definir els següents paràmetres:
+
+- __Nom__ de l'equip.
+- __Descripció__ de l'equip.
+- __Equip superior__: Definir un equip superior per a crear una jerarquia d'equips.
+- __Visibilitat__: Visible o privat.
+- __Notificacions__: Permet habilitar o deshabilitar les notificacions per a l'equip.
+
+??? picture "Formulari per a crear un nou equip"
+    ![Formulari per a crear un nou equip](img/team/new.png)
+    /// shadow-figure-caption
+    Formulari per a crear un nou equip.
+    ///
+
+### Permisos d'un equip
+A l'apartat __:octicons-organization-16: Organization roles__ de la __:octicons-gear-16: Configuració__
+de l'organització es poden definir els permisos dels seus membres i equips.
+
+??? picture "Permisos d'un equip"
+    ![Permisos d'un equip](img/team/permisos.png)
+    /// shadow-figure-caption
+    Permisos d'un equip.
+    ///
