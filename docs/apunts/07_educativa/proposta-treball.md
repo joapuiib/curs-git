@@ -35,7 +35,7 @@ L'objectiu __principal__ d'aquesta proposta és que __l'alumnat
 tinga normalitzat l'ús d'un sistema de control de versions__ com és :simple-git: Git,
 __d'ús generalitzat en el món professional__.
 
-Tinguent en compte aquest objectiu, aquesta proposta també pretén:
+Tenint en compte aquest objectiu, aquesta proposta també pretén:
 
 - Facilitar la revisió del treball de l'alumnat amb el sistema
   de control de versions :simple-git: Git.
@@ -43,7 +43,7 @@ Tinguent en compte aquest objectiu, aquesta proposta també pretén:
 - Familiaritzar i normalitzar l'ús de :simple-git: Git a l'aula,
     per part de l'alumnat i el professorat.
 
-    > Si el professorat l'utiliza de manera habitual,
+    > Si el professorat l'utilitza de manera habitual,
     > serà més fàcil que l'alumnat comence a utilitzar-lo.
 
 - Aprofitar les eines de :simple-github: GitHub per facilitar la gestió
