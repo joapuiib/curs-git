@@ -207,10 +207,14 @@ especificar:
 - La __data de finalització__.
 - La __iteració__ a la que pertany.
 
-![Exemple de tasca](./img/projectes/exemple_tasca.png)
-/// shadow-figure-caption
-Exemple de tasca en un projecte de GitHub
-///
+??? example "Exemple de tasca"
+    La següent imatge mostra un exemple d'una tasca
+    creada com a __:material-dots-circle: Esborrany (_Draft_)__ en un projecte de GitHub.
+
+    ![Exemple de tasca](./img/projectes/exemple_tasca.png)
+    /// shadow-figure-caption
+    Exemple de tasca en un projecte de GitHub
+    ///
 
 
 ### :octicons-milestone-24: Fites
@@ -284,7 +288,10 @@ on cal incloure la següent informació:
     que inclouran informació sobre les __[:material-source-pull: Pull requests][pr]__ i les persones que han contribuït
     de manera automàtica.
 
-![Creació d'un llançament](./img/projectes/release_create.png)
-/// shadow-figure-caption
-Creació d'un llançament en un repositori de GitHub
-///
+??? example "Creació d'un llançament"
+    La següent imatge mostra la creació d'un nou llançament en un repositori de GitHub.
+
+    ![Creació d'un llançament](./img/projectes/release_create.png)
+    /// shadow-figure-caption
+    Creació d'un llançament en un repositori de GitHub
+    ///

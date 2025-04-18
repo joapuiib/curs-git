@@ -17,16 +17,42 @@ i on el docent tindrà accés a tots els projectes.
 
 [organitzacio]: organitzacions.md
 
-> Els __estudiants treballaran en els seus propis :octicons-repo-locked-16: repositoris privats__
-> i el __docent pot crear :octicons-repo-16: repositoris públics__ amb solucions o exemples.
->
-> D'aquesta manera, el professorat tindrà accés a tots els repositoris dels estudiants
-> i els estudiants tindran accés a tots els repositoris públics creats pel professorat
-> i als seus propis repositoris privats.
+Els __estudiants treballaran en els seus propis :octicons-repo-locked-16: repositoris privats__
+i el __docent pot crear :octicons-repo-16: repositoris públics__ amb solucions o exemples.
+
+D'aquesta manera:
+
+- El professorat tindrà accés a tots els repositoris dels estudiants.
+- L'alumnat tindrà accés a tots els repositoris públics creats pel professorat,
+    però sols tindrà accés als seus propis repositoris privats.
 
 No obstant això, aquesta metodologia es complementària i __no substitueix
 la plataforma educativa__ amb la qual es treballa habitualment (Aules, :simple-moodle: Moodle, etc.).
 
+
+## Objectius d'aquesta proposta
+L'objectiu __principal__ d'aquesta proposta és que __l'alumnat
+tinga normalitzat l'ús d'un sistema de control de versions__ com és :simple-git: Git,
+__d'ús generalitzat en el món professional__.
+
+Tenint en compte aquest objectiu, aquesta proposta també pretén:
+
+- Facilitar la revisió del treball de l'alumnat amb el sistema
+  de control de versions :simple-git: Git.
+
+- Familiaritzar i normalitzar l'ús de :simple-git: Git a l'aula,
+    per part de l'alumnat i el professorat.
+
+    > Si el professorat l'utilitza de manera habitual,
+    > serà més fàcil que l'alumnat comence a utilitzar-lo.
+
+- Aprofitar les eines de :simple-github: GitHub per facilitar la gestió
+    de projectes grupals, el seguiment de tasques i la revisió del treball.
+
+- Facilitar i incentivar la col·laboració entre els estudiants.
+
+
+## Propostes
 Es proposen dues opcions, depenent si el treball de l'alumnat és __individual__ o en __grup__.
 
 ### Treball individual
@@ -41,15 +67,39 @@ va realitzant les seues tasques de manera individual.
     > - `fpmislata-daw1-ed`
     > - `fpmislata-dams2-psp`
 
-1. __Configurar els permisos de l'organització com a *No permission*__.
+    ??? tip "Perfil de l'organització"
+        Pots afegir el repositori públic `.github` i configurar el fitxer `profile/README.md`
+        per definir el perfil de l'organització.
+
+        [:octicons-link-external-16: Adding a public organization profile README](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/customizing-your-organizations-profile#adding-a-public-organization-profile-readme) – :simple-github: GitHub Docs
+
+    ??? picture "Organització `fpmislata-dams2-psp` a GitHub"
+        ![Organització de PSP a GitHub](./img/psp/org.png)
+        /// shadow-figure-caption
+        Organització [`fpmislata-dams2-psp`](https://github.com/fpmislata-dams2-psp) a GitHub
+        ///
+
+1. __Configurar els permisos dels :octicons-people-16: membres de l'organització com a *No permission*__.
 
     > D'aquesta manera, els estudiants no podran veure els repositoris privats
     > d'altres companys de classe.
+
+    ??? picture "Permisos de l'organització"
+        ![Permisos de la organització](./img/psp/permisos.png)
+        /// shadow-figure-caption
+        Permisos de la organització
+        ///
 
 1. __Convidar els estudiants a la :octicons-organization-16: organització__.
 
     > Els estudiants han d'acceptar la invitació, que rebran per correu electrònic,
     > per tal de poder accedir a la organització.
+
+    ??? picture "Estudiants com a membres de l'organització"
+        ![Estudiants com a membres de l'organització](./img/psp/membres.png)
+        /// shadow-figure-caption
+        Estudiants com a membres de l'organització
+        ///
 
 1. Indicar a __cada estudiant que s'ha de crear un :octicons-repo-locked-16: repositori privat__.
 
@@ -65,6 +115,12 @@ va realitzant les seues tasques de manera individual.
     > No obstant això, també pot ser interessant crear diferents repositoris (un per cada tasca o projecte).
     > En aquest cas, cal tindre en compte que el volum de repositoris en l'organització augmentarà considerablement.
 
+    ??? picture "Repositoris dels estudiants de l'organització"
+        ![Repositoris dels estudiants de l'organització](./img/psp/private-repos.png)
+        /// shadow-figure-caption
+        Repositoris dels estudiants de l'organització
+        ///
+
 1. Com a docent, __crear els :octicons-repo-16: repositoris públics__ amb solucions o exemples
     que es consideren necessaris.
 
@@ -72,8 +128,19 @@ va realitzant les seues tasques de manera individual.
     > el qual vaig resolent els exercicis que fem a classe i on vaig publicant les solucions
     > al llarg del curs.
 
+    > El repositori `.github` és un repositori especial, que s'utilitza per definir el `profile/README.md`
+    > que apareix a la pàgina principal de l'organització.
+
+    ??? picture "Repositoris públics del professorat de l'organització"
+        ![Repositoris públics del professorat de l'organització](./img/psp/public-repos.png)
+        /// shadow-figure-caption
+        Repositoris públics del professorat de l'organització
+        ///
+
 
 ### Treball en grup
+En aquest cas, cada grup d'estudiants treballa en un mateix projecte i realitza
+les tasques sobre el mateix repositori.
 
 1. __Crear una :octicons-organization-16: organització__ a :simple-github: GitHub.
 
@@ -82,31 +149,110 @@ va realitzant les seues tasques de manera individual.
     >
     > - `fpmislata-daw1-projecte`
 
-1. __Configurar els permisos de l'organització com a *No permission*__.
+    ??? tip "Perfil de l'organització"
+        Pots afegir el repositori públic `.github` i configurar el fitxer `profile/README.md`
+        per definir el perfil de l'organització.
+
+        [:octicons-link-external-16: Adding a public organization profile README](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/customizing-your-organizations-profile#adding-a-public-organization-profile-readme) – :simple-github: GitHub Docs
+
+    ??? picture "Organització `fpmislata-daw1-projecte` a GitHub"
+        ![Organització del projecte a GitHub](./img/projecte/org.png)
+        /// shadow-figure-caption
+        Organització [`fpmislata-daw1-projecte`](https://github.com/fpmislata-daw1-projecte) a GitHub
+        ///
+
+1. __Configurar els permisos dels :octicons-people-16: membres de l'organització com a *No permission*__.
 
     > D'aquesta manera, els estudiants no podran veure els repositoris privats
     > d'altres companys de classe.
+
+    ??? picture "Permisos de l'organització"
+        ![Permisos de la organització](./img/projecte/permisos.png)
+        /// shadow-figure-caption
+        Permisos de la organització
+        ///
 
 1. __Convidar els estudiants a la :octicons-organization-16: organització__.
 
     > Els estudiants han d'acceptar la invitació, que rebran per correu electrònic,
     > per tal de poder accedir a la organització.
 
+    ??? picture "Estudiants com a membres de l'organització"
+        ![Estudiants com a membres de l'organització](./img/projecte/membres.png)
+        /// shadow-figure-caption
+        Estudiants com a membres de l'organització
+        ///
+
+1. __Convidar a la resta de docents a la :octicons-organization-16: organització__ com a __*Owner*__.
+
+    > Els docents han d'acceptar la invitació, que rebran per correu electrònic.
+    >
+    > En aquest cas, també tindran accés a tots els repositoris privats
+    > dels estudiants.
+
+    ??? picture "Docents com a propietaris de l'organització"
+        ![Docents com a propietaris de l'organització](./img/projecte/owners.png)
+        /// shadow-figure-caption
+        Docents com a propietaris de l'organització
+        ///
+
+
 1. __Crear un :octicons-people-16: equip__ per a cada grup d'estudiants
     i afegir els estudiants a l'equip.
+
+    !!! info
+        La creació de :octicons-people-16: l'equip, el :octicons-repo-locked-16: repositori privat
+        i el :octicons-table-16: projecte pot ser realitzada per part del professorat
+        o per part d'un dels estudiants del grup.
+
+    ??? picture "Equips dels estudiants dins de l'organització"
+        ![Equips dels estudiants dins de l'organització](./img/projecte/teams.png)
+        /// shadow-figure-caption
+        Equips dels estudiants dins de l'organització
+        ///
 
 1. __Crear un :octicons-repo-locked-16: repositori privat__ per a cada grup d'estudiants
     i __afegir :octicons-people-16: l'equip creat anteriorment__ com a col·laborador.
 
-1. __Crear un :octicons-table-16: Projecte__ per cada grup, on poden __organitzar les tasques
+    ??? picture "Repositoris dels projectes a l'organització"
+        ![Repositoris dels projectes a l'organització](./img/projecte/private-repos.png)
+        /// shadow-figure-caption
+        Repositoris dels projectes a l'organització
+        ///
+    
+        ![Assignació a l'equip com col·laboradors del repositori](./img/projecte/repo-team.png)
+        /// shadow-figure-caption
+        Assignació a l'equip com col·laboradors del repositori
+        ///
+
+1. __Crear un :octicons-table-16: projecte__ per cada grup, on poden __organitzar les tasques
     com a :octicons-issue-opened-16: incidències__.
 
-    > La creació de :octicons-people-16: l'equip, el :octicons-repo-locked-16: repositori privat
-    > i el :octicons-table-16: projecte pot ser realitzada per part del professorat
-    > o per part d'un dels estudiants del grup.
+    ??? picture "Projectes per gestionar les tasques"
+        ![Projectes per gestionar les tasques](./img/projecte/projectes.png)
+        /// shadow-figure-caption
+        Projectes per gestionar les tasques
+        ///
+    
+        ![Projecte amb la planificació de tasques](../06_projectes/img/projectes/exemple_projecte_daw1.png)
+        /// shadow-figure-caption
+        Projecte amb la planificació de tasques
+        ///
 
 1. Com a docent, __crear els :octicons-repo-16: repositoris públics__ amb solucions, exemples
     o plantilles que es consideren necessaris.
+
+    > En aquest cas, hem creat els següents repositoris públics:
+    >
+    > - `.github` – Repositori especial per a la configuració del perfil de l'organització.
+    > - `projecte-daw1` – Documentació del projecte.
+    > - `projecte-template` – Plantilla del projecte.
+
+    ??? picture "Repositoris públics de l'organització"
+        ![Repositoris públics de l'organització](./img/projecte/public-repos.png)
+        /// shadow-figure-caption
+        Repositoris públics de l'organització
+        ///
 
 A partir d'aquest punt, els equips de treball poden treballar de manera autònoma
 i gestionar les seues tasques dins d'un únic projecte.
@@ -119,17 +265,17 @@ metodologies àgils com __Scrum__ o __Kanban__.
 
 *[DAW]: Desenvolupament d'Aplicacions Web
 
-!!! example "Exemple real aplicat a 1r de DAW amb Scrum"
+!!! example "Exemple real aplicat en un projecte intermodular a 1r de DAW amb Scrum"
 
     Amb els estudiants de 1r curs de __Desenvolupament d'Aplicacions Web (DAW)__,
     hem estat treballant en un __projecte intermodular__ on es desenvolupa una
     __aplicació web__ de temàtica lliure. El projecte es porta a terme en grups
-    de 4-5 estudiants i es treballa amb la metodologia __Scrum__.
+    de 4-5 estudiants i es treballa amb la metodologia àgil __Scrum__.
 
-    Les tasques es gestionen a través d'un __:octicons-table-16: projecte__,
-    enllaçat a un __:octicons-repo-locked-16: repositori privat__ per cada __:octicons-people-16: equip__.
+    Cada __:octicons-people-16: equip__ gestiona les tasques amb un __:octicons-table-16: projecte__,
+    enllaçat a un __:octicons-repo-locked-16: repositori privat__.
 
-    Utilitzem la següent __estratègia de ramificació__:
+    Es segueix la següent __estratègia de ramificació__:
 
     - Utilització de les __:octicons-git-branch-16:__ branques `develop` i `main`.
     - Utilització de les __:octicons-git-branch-16:__ branques `feature` per a cada tasca.
@@ -159,6 +305,12 @@ o un __:material-tray-arrow-up: llançament (_release_)__ per identificar
 el __:octicons-git-commit-16: commit__ en el qual es troba la versió
 del treball que es vol lliurar.
 
+??? picture "Etiquetes amb els lliuraments"
+    ![Etiquetes amb els lliuraments](./img/psp/tags.png)
+    /// shadow-figure-caption
+    Etiquetes amb els lliuraments
+    ///
+
 El professorat, podrà accedir al repositori privat de l'estudiant
 i situar-se en aquesta versió per tal de revisar el treball lliurat.
 
@@ -174,8 +326,19 @@ Per aquest motiu, personalment m'agrada demanar-los que lliuren
 el codi de la tasca de manera comprimida a la __plataforma educativa oficial (Aules)__,
 indicant l'enllaç al seu repositori.
 
-> En la pràctica, no revise el codi de la tasca lliurada i vaig directament
-> al seu :octicons-repo-locked-16: repositori privat.
+??? picture "Lliurament d'una tasca a Aules"
+    ![Definició de la tasca a Aules](./img/psp/aules-tasca.png)
+    /// shadow-figure-caption
+    Definició de la tasca a Aules
+    ///
+
+    ![Lliurament d'un estudiant a Aules](./img/psp/aules-lliurament.png)
+    /// shadow-figure-caption
+    Lliurament d'un estudiant a Aules
+    ///
+
+> En la pràctica, no revise el codi lliurat a la tasca d'Aules i
+> el consulte directament en el :octicons-repo-locked-16: repositori privat.
 >
 > No obstant això, és cert que de vegades els estudiants
 > han tingut algun problema amb :simple-git: Git i gràcies a aquest _backup_

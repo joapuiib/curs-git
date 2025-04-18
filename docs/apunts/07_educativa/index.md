@@ -13,13 +13,10 @@ per gestionar treball d'aula i projectes educatius col·laboratius.
 /// html | div.timeline
 [[education]]: Beneficis de :simple-github: GitHub per a estudiants i professors.
 ///
-/// html | div.timeline
+/// html | div.timeline.dashed
 [[organitzacions]]
 
 [[proposta-treball]]
-///
-/// html | div.timeline.dashed
-[[classroom]]: Plataforma educativa de :simple-github: GitHub
 ///
 /// html | div.timeline.success.check
 [[educativa-exercici]]: Exercici pràctic d'aquest bloc.

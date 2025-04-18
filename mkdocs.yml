@@ -109,6 +109,7 @@ plugins:
             notice: Fixa't
             prep: Preparació
             recommend: Recomanació
+            picture: Imatge
   - git-revision-date-localized # Després de i18n o falla
   - git-committers:
       enabled: !ENV [CI, false]
