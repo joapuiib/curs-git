@@ -67,6 +67,12 @@ va realitzant les seues tasques de manera individual.
     > - `fpmislata-daw1-ed`
     > - `fpmislata-dams2-psp`
 
+    ??? tip "Perfil de l'organització"
+        Pots afegir el repositori públic `.github` i configurar el fitxer `profile/README.md`
+        per definir el perfil de l'organització.
+
+        [:octicons-link-external-16: Adding a public organization profile README](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/customizing-your-organizations-profile#adding-a-public-organization-profile-readme) – :simple-github: GitHub Docs
+
     ??? picture "Organització `fpmislata-dams2-psp` a GitHub"
         ![Organització de PSP a GitHub](./img/psp/org.png)
         /// shadow-figure-caption
@@ -142,6 +148,12 @@ les tasques sobre el mateix repositori.
     > amb la nomenclatura `{centre}-{grup}-{modul}`.
     >
     > - `fpmislata-daw1-projecte`
+
+    ??? tip "Perfil de l'organització"
+        Pots afegir el repositori públic `.github` i configurar el fitxer `profile/README.md`
+        per definir el perfil de l'organització.
+
+        [:octicons-link-external-16: Adding a public organization profile README](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/customizing-your-organizations-profile#adding-a-public-organization-profile-readme) – :simple-github: GitHub Docs
 
     ??? picture "Organització `fpmislata-daw1-projecte` a GitHub"
         ![Organització del projecte a GitHub](./img/projecte/org.png)
