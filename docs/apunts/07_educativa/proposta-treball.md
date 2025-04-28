@@ -343,3 +343,31 @@ indicant l'enllaç al seu repositori.
 > No obstant això, és cert que de vegades els estudiants
 > han tingut algun problema amb :simple-git: Git i gràcies a aquest _backup_
 > els he pogut avaluar.
+
+## Gestió de l'organització
+Un dels principals reptes d'aquesta proposta és la gestió dels membres i repositoris
+de l'organització:
+
+- __Gestió dels membres__: :simple-github: GitHub no proporciona una manera senzilla
+    de convidar i gestionar els membres de l'organització
+    en massa.
+
+- __Gestió dels repositoris de l'alumnat__: El nombre de repositoris
+    de l'alumnat pot ser molt elevat i gestionar-los individualment
+    pot ser complicat.
+
+Per aquesta raó, s'ha desenvolupat [__`ghot`__][ghot] (GitHub Organization Tools),
+una eina de línia de comandes que permet gestionar els membres i repositoris
+d'una organització de manera senzilla i ràpida.
+
+Podreu trobar més informació sobre l'eina `ghot` a la seua [:octicons-link-external-16: documentació][ghot-docs].
+    
+[ghot]: https://github.com/joapuiib/github-organization-tools
+[ghot-docs]: https://joapuiib.github.io/github-organization-tools/
+
+### Instal·lació
+L'eina `ghot` es pot instal·lar de manera senzilla amb `pip`:
+
+```bash
+pip install ghot
+```
