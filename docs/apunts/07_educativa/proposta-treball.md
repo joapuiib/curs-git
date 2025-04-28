@@ -356,18 +356,75 @@ de l'organització:
     de l'alumnat pot ser molt elevat i gestionar-los individualment
     pot ser complicat.
 
-Per aquesta raó, s'ha desenvolupat [__`ghot`__][ghot] (GitHub Organization Tools),
+Per aquesta raó, s'ha desenvolupat __[`ghot`][ghot] (GitHub Organization Tools)__,
 una eina de línia de comandes que permet gestionar els membres i repositoris
 d'una organització de manera senzilla i ràpida.
 
-Podreu trobar més informació sobre l'eina `ghot` a la seua [:octicons-link-external-16: documentació][ghot-docs].
+Aquesta eina permet realitzar les següents accions de manera massiva:
+
+- Convidar i eliminar membres de l'organització.
+- Crear, eliminar, clonar i actualitzar (`pull`) repositoris.
+- Crear incidències als repositoris.
+
+!!! important
+    No és necessari fer ús de `ghot` per aplicar aquesta proposta, però vos pot ser d'ajuda.
+
+!!! docs
+    Podeu trobar la informació sobre la instal·lació i ús de `ghot` a la documentació:
+    [:octicons-link-external-16: GitHub Organization Tools][ghot-docs]
+
     
 [ghot]: https://github.com/joapuiib/github-organization-tools
 [ghot-docs]: https://joapuiib.github.io/github-organization-tools/
 
-### Instal·lació
-L'eina `ghot` es pot instal·lar de manera senzilla amb `pip`:
+!!! example "Convidar a l'alumnat a l'organització mitjançant `ghot`"
+    El primer pas és crear un fitxer `estudiants.csv`,
+    el qual ha segut exportat de la plataforma educativa Aules.
 
-```bash
-pip install ghot
-```
+    ```csv
+    Nom,Cognoms,username
+    ADA,LOVELACE,adalovelace,
+    "ALAN MATHISON",TURING,alanturing,
+    ```
+
+    > - He eliminat les columnes amb el correu electrònic i el grup.
+    > - He afegit la columna `username`, on es recull el nom d'usuari de cada estudiant.
+
+    A continuació, he configurat l'eina `ghot` per tal de poder
+    de definir les dades de cada estudiant:
+
+    - Un identificador `id` amb el format `{cognom}.{nom}`, en minúscules.
+    - Un `username` amb el nom d'usuari de cada estudiant.
+    - Un `repo` amb el format `{Cognom}{Nom}-ED`, on `ED` és el mòdul professional.
+
+    ```bash
+    ghot config csv.pattern.id "{f0.replace(' ', '.').lower()}.{f1.replace(' ', ',').lower()}"
+    ghot config csv.pattern.username "{f2}"
+    ghot config csv.pattern.repo "{f0.title().replace(' ', '')}{f1.title().replace(' ', '')}-ED"
+    ```
+
+    Per últim, ja podem:
+
+    - Convidar els estudiants a l'organització amb `ghot user invite`.
+    - Crear els repositoris privats amb `ghot repo create`.
+    - Convidar els estudiants als repositoris corresponents amb `ghot repo invite`.
+
+    !!! recommend
+        És recomanable executar les ordres amb l'opció `--dry` per tal de
+        comprovar prèviament que tot funciona correctament.
+
+    ```shellconsole
+    joapuiib@fp:~ $ ghot user invite --dry fpmislata-daw1-ed estudiants.csv
+    Total members: 1
+    Pending invitations: 0
+    ada.lovelace: Invitation sent to 'adalovelace' (dry).
+    alan.mathison.turing: Invitation sent to 'alanturing' (dry).
+
+    joapuiib@fp:~ $ ghot repo create --dry --private fpmislata-daw1-ed estudiants.csv
+    ada.lovelace: Repository 'fpmislata-daw1-ed/AdaLovelace-ED' created (private) (dry).
+    alan.mathison.turing: Repository 'fpmislata-daw1-ed/AlanMathisonTuring-ED' created (private) (dry).
+
+    joapuiib@fp:~ $ ghot repo invite --dry fpmislata-daw1-ed estudiants.csv
+    ada.lovelace: User 'adalovelace' is not a member of the organization.
+    alan.mathison.turing: User 'alanturing' is not a member of the organization.
+    ```
