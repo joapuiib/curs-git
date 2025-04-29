@@ -73,7 +73,7 @@ per a la gestió de projectes i com en podem fer ús en l'àmbit educatiu.
 - __[[projectes-index]]__
     - Debats (_discussions_).
     - Incidències (_issues_).
-    - Fitex (_milestones_).
+    - Fites (_milestones_).
     - GitHub Projects.
     - Forks
     - Pull Requests.
