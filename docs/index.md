@@ -10,14 +10,25 @@ hide:
 
 *[CI/CD]: Continuous Integration/Continuous Deployment
 
-## Característiques
+## Descripció del curs
+Aquest curs tracta sobre la incorporació de l'eina de control de versions __:simple-git: Git__
+i la plataforma d'allotjament de repositoris __:simple-github: GitHub__ a l'aula.
 
-- __:octicons-calendar-16: Temporització__: Del 5 de maig al 15 de juny.
+En els primers blocs es presenten els conceptes bàsics de :simple-git: Git i el seu funcionament.
+A continuació, es presenten les funcionalitats més avançades i estratègies de treball
+en projectes de programari col·laboratius.
+
+Per últim, es presenten les funcionalitats que proporciona __:simple-github: GitHub__
+per a la gestió de projectes i com en podem fer ús en l'àmbit educatiu.
+
+
+## Característiques
+- __:octicons-calendar-16: Temporització__: Del 5 de maig al 15 de juny de 2025.
 - __:material-laptop: Modalitat__: En línia.
 - __:octicons-clock-16: Durada__: 30 hores.
 
-## Objectius
 
+## Objectius específics
 - Conéixer els conceptes de control de versions mitjançant Git i el seu ús en el context del desenvolupament de programari.
 - Aprendre a utilitzar Git per a gestionar projectes de desenvolupament de programari.
 - Conéixer i aplicar estratègies de ramificació en projectes de desenvolupament de programari col·laboratiu.
@@ -27,7 +38,7 @@ hide:
 - Proporcionar estratègies als docents per incorporar la utilització de Git i GitHub a l'aula.
 
 
-## Continguts
+## Continguts específics
 - __[[introduccio-index]]__
     - Instal·lació.
     - Configuració.
@@ -46,30 +57,38 @@ hide:
     - Creació d'un repositori remot a GitHub.
     - Configurar un repositori remot.
     - Mètodes d'autenticació.
+    - Clonació d'un repositori remot.
     - Associació entre branques locals i remotes.
     - Publicació i incorporació de canvis.
-    - Clonació d'un repositori remot.
 - __[[avancat-index]]__
-    - Eliminació de canvis: `reset` i `revert`.
     - Etiquetes: `tags`.
     - Reserva de canvis: `stash`.
+    - Eliminació de canvis: `reset` i `revert`.
     - Còpia de canvis: `cherry-pick`.
     - Fusió de canvis en un sol commit: `squash`.
 - __[[estrategies-index]]__
+    - Flux de de treball col·laboratiu.
     - Branques de propòsit únic.
-    - Mètodes d'integració de branques de funcionalitat.
+    - Tècniques d'integració de branques de funcionalitat.
 - __[[projectes-index]]__
     - Debats (_discussions_).
     - Incidències (_issues_).
+    - Fites (_milestones_).
     - GitHub Projects.
     - Forks
     - Pull Requests.
     - Automatització de tasques amb GitHub Actions.
     - GitHub Pages.
 - __[[educativa-index]]__
-    - Organitzacions a GitHub.
-    - GitHub Classroom.
+    - Beneficis de GitHub Education.
+    - Organitzacions i equips a GitHub.
     - Estratègies per a l'ús de Git i GitHub a l'aula.
+
 
 ## Dirigit a
 - Professorat de la família professional d'Informàtica i Comunicacions.
+
+
+## Condicions per superar el curs
+Per superar el curs, els participants hauran de realitzar i superar totes les tasques proposades.
+__En cas de no superar totes les tasques abans de la finalització del curs, no es podrà obtenir el certificat de superació del curs__.
