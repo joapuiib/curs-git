@@ -366,18 +366,19 @@ Aquesta eina permet realitzar les següents accions de manera massiva:
 - Crear, eliminar, clonar i actualitzar (`pull`) repositoris.
 - Crear incidències als repositoris.
 
-!!! important
-    No és necessari fer ús de `ghot` per aplicar aquesta proposta, però vos pot ser d'ajuda.
-
 !!! docs
     Podeu trobar la informació sobre la instal·lació i ús de `ghot` a la documentació:
     [:octicons-link-external-16: GitHub Organization Tools][ghot-docs]
+
+!!! important
+    No és necessari fer ús de `ghot` per aplicar aquesta proposta.
+    Totes les accions poden ser realitzades manualment.
 
     
 [ghot]: https://github.com/joapuiib/github-organization-tools
 [ghot-docs]: https://joapuiib.github.io/github-organization-tools/
 
-!!! example "Convidar a l'alumnat a l'organització mitjançant `ghot`"
+??? example "Convidar a l'alumnat a l'organització mitjançant `ghot`"
     El primer pas és crear un fitxer `estudiants.csv`,
     el qual ha segut exportat de la plataforma educativa Aules.
 
@@ -409,7 +410,7 @@ Aquesta eina permet realitzar les següents accions de manera massiva:
     - Crear els repositoris privats amb `ghot repo create`.
     - Convidar els estudiants als repositoris corresponents amb `ghot repo invite`.
 
-    !!! recommend
+    !!! recommend "Recomanació"
         És recomanable executar les ordres amb l'opció `--dry` per tal de
         comprovar prèviament que tot funciona correctament.
 
@@ -428,3 +429,6 @@ Aquesta eina permet realitzar les següents accions de manera massiva:
     ada.lovelace: User 'adalovelace' is not a member of the organization.
     alan.mathison.turing: User 'alanturing' is not a member of the organization.
     ```
+    > `ghot repo invite` no funciona correctament en aquest cas perquè
+    > les comandes prèvies no s'han executat realment i els estudiants no són membres
+    > de l'organització.
