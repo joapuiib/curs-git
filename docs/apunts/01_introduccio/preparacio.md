@@ -161,7 +161,7 @@ Botó Git Graph en :material-microsoft-visual-studio-code: Visual Studio Code.
 ///
 
 
-### Configuració del prompt de la terminal
+## Configuració del prompt de la terminal per treballar amb Git
 La terminal __Git Bash__ defineix un prompt que incorpora informació
 molt útil sobre l'estat del repositori de Git, com ara la branca activa
 o l'estat del repositori en alguns processos (`MERGING`, `REBASING`, etc.).
