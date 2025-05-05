@@ -155,10 +155,15 @@ Demostració de l'extensió Git Graph
 Una vegada instal·lada, podeu accedir a la vista gràfica de
 la història de commits des del botó __Git Graph__ en la barra inferior esquerra de l'editor.
 
+!!! warning
+    El botó __Git Graph__ sols està visible si has obert un directori
+    amb un __repositori de :simple-git: Git__.
+
 ![Botó Git Graph](img/git_graph.png)
 /// figure-caption
 Botó Git Graph en :material-microsoft-visual-studio-code: Visual Studio Code.
 ///
+
 
 
 ## Configuració del prompt de la terminal per treballar amb Git
