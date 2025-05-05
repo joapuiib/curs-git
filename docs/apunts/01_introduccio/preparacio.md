@@ -160,6 +160,52 @@ la història de commits des del botó __Git Graph__ en la barra inferior esquerr
 Botó Git Graph en :material-microsoft-visual-studio-code: Visual Studio Code.
 ///
 
+
+### Configuració del prompt de la terminal
+La terminal __Git Bash__ defineix un prompt que incorpora informació
+molt útil sobre l'estat del repositori de Git, com ara la branca activa
+o l'estat del repositori en alguns processos (`MERGING`, `REBASING`, etc.).
+
+No obstant això, si utilitzem la terminal del sistema, aquesta informació no estarà
+disponible i dificulta el treball amb Git.
+
+A continuació, veurem com configurar el prompt de la terminal
+a :simple-linux: Linux o terminals basades en Bash.
+
+!!! docs
+    [:octicons-link-external-16: `git-prompt.sh`][git-prompt]
+
+[git-prompt]: https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
+
+1. Còpia el fitxer [`git-prompt.sh`][git-prompt] en algun lloc del teu sistema.
+2. Afegeix la següent línia al fitxer `.bashrc`, `.zshrc` o `.profile` del teu usuari:
+
+    ```bash
+    source ~/.git-prompt.sh # source ruta/fixer/git-prompt.sh
+    ```
+
+3. Modifica la variable `PS1` per incloure la informació del prompt de Git `$(__git_ps1)`:
+
+    ```bash
+    # Exemple amb colors
+    export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[33m\]$(__git_ps1) \[\033[00m\]$ '
+    # Exemple sense colors
+    export PS1='\u@\h:\w$(__git_ps1) $ '
+    ```
+
+    > Adapteu el prompt al vostre gust.
+
+4. Reinicia la terminal.
+
+```shellconsole
+jpuigcerver@fp:~ $ cd ~/git_introduccio
+jpuigcerver@fp:~/git_introduccio $ git init
+Initialized empty Git repository in /home/jpuigcerver/git_introduccio/.git/
+jpuigcerver@fp:~/git_introduccio (main) $
+```
+
+
 ## Recursos addicionals
 - [:octicons-link-external-16: Extensió Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) – :material-microsoft-visual-studio: Visual Studio Marketplace
 - [:octicons-link-external-16: What is the shortcut for displaying the GitGraph tab on VS Code?](https://stackoverflow.com/questions/57803207/what-is-the-shortcut-for-displaying-the-gitgraph-tab-on-vs-code) – :simple-stackoverflow: StackOverflow
+- [:octicons-link-external-16: `git-prompt.sh`][git-prompt]
