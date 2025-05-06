@@ -133,7 +133,7 @@ git diff [--staged]
 git restore <files>
 ```
 
-<img src="../img/flux_treball.png">
+<img src="../img/flux_treball.png" height="450px">
 
 ---
 
