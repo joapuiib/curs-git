@@ -53,15 +53,18 @@
 }
 
 .timeline.success::before {
-  background-color: #00c853;
+  background-color: #4cae4f;
+  color: #fff;
 }
 
 .timeline.error::before {
-  background-color: #ff5252;
+  background-color: #ef5552;
+  color: #fff;
 }
 
 .timeline.info::before {
-  background-color: #00b0ff;
+  background-color: #02a6f2;
+  color: #fff;
 }
 
 /* Full vertical line going through the bullet */

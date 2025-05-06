@@ -23,13 +23,18 @@
     display: flex;
     justify-content: space-between;
 }
-.md-document__header {
+.md-document__header, .md-document__header-space {
     height: var(--md-document__header-height, 0);
 }
-.md-document__footer {
+.md-document__footer, .md-document__footer-space {
     height: var(--md-document__footer-height, 0);
 }
 
+@media screen and (max-width: 44.9844em) {
+    .md-document__main>.highlight {
+        margin: 1em -.8rem;
+    }
+}
 
 @media print {
     .md-document__print-layout > :is(thead, tbody, tfoot) > :is(th, tr) > td,
@@ -41,12 +46,6 @@
 
     .md-document__header-space, .md-document__footer-space {
         display: block;
-    }
-    .md-document__header-space {
-        height: var(--md-document__header-height, 0) !important;
-    }
-    .md-document__footer-space {
-        height: var(--md-document__footer-height, 0) !important;
     }
 
     .md-document__header, .md-document__footer {
