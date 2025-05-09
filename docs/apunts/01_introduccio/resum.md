@@ -48,6 +48,9 @@ vists en el [[introduccio-index]].
     l'_Àrea de Preparació_.
 
     - Opció `-m`: Permet afegir un missatge al _commit_.
+    - Opció `-a`: Afegeix automàticament tots els fitxers
+        modificats o eliminats a l'_Àrea de
+        Preparació_. No afegeix els fitxers nous.
 
 - `git restore <path>`: Descarta els canvis realitzats en un fitxer
     del _Directori de Treball_.
@@ -56,6 +59,15 @@ vists en el [[introduccio-index]].
     Preparació_.
 
 - `git log`: Mostra l'historial de _commits_ del _Repositori Local_.
+
+    - Opció `--oneline`: Cada _commit_ es mostra en una sola línia.
+    - Opció `--graph`: Mostra l'historial de _commits_ en forma
+        d'arbre.
+
+- `git show <revision>`: Mostra la informació d'un _commit_ concret.
+
+    - Opció `--stat`: Mostra un resum dels fitxers modificats
+        en el _commit_ en compte de un `diff` complet.
 
 - `git diff`: Mostra els canvis realitzats en el _Directori de Treball_
     respecte de l'estat actual del _Repositori Local_.
