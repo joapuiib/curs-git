@@ -13,13 +13,13 @@ alias: auth-slides
 
 ## Repositori remot
 
-<img src="../../01_introduccio/img/components.png">
+<img class="r-stretch" src="../../01_introduccio/img/components.png">
 
 ---
 
 ## Desenvolupament distribuït
 
-<img src="../img/multiple_local_repo.png">
+<img class="r-stretch" src="../img/multiple_local_repo.png">
 
 ---
 
@@ -46,9 +46,16 @@ git config --global credential.helper store
 
 ## Clau SSH
 
-- Generar clau SSH localment
-- Afegir clau a GitHub
+1. Generar clau SSH localment
 
-```bash
-ssh-keygen -t rsa -b 4096
-```
+    ```bash
+    ssh-keygen -t rsa -b 4096
+    ```
+
+2. Afegir clau a GitHub
+
+3. Comprovar l'autenticació
+
+    ```bash
+    ssh -T git@github.com
+    ```
