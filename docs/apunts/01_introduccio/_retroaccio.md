@@ -2,7 +2,7 @@
 Bon treball!
 
 Has utilitzat una estructura clara i concisa per presentar el teu treball, que mostra que domines els continguts treballats.
-A més, has triat uns missatges significatius que aporten molta informació sobre els canvis de cada commit.
+A més, has triat uns missatges significatius que aporten molta informació sobre els canvis de cada commit i has comprovat l'estat del repositori amb 'git status' i 'git log'.
 
 Seguim!
 
