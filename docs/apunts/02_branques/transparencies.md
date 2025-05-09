@@ -13,31 +13,49 @@ alias: branques-slides
 
 ## Branques
 
-<img src="../img/create_docs.png">
+<img class="r-stretch" src="../img/create_branches.png">
 
 ---
 
 ## Canviar de branca
 
-<img src="../img/checkout_docs.png">
+<img class="r-stretch" src="../img/checkout_branch.png">
 
 ---
 
 ## Nous canvis en una branca
 
-<img src="../img/commit_docs.png">
+<img class="r-stretch" src="../img/commit_menjar.png">
+
+--
+
+## Nous canvis en una branca
+
+<img class="r-stretch" src="../img/commit_beguda.png">
+
+--
+
+## Nous canvis en una branca
+
+<img class="r-stretch" src="../img/commit_neteja.png">
+
+---
+
+## Eliminar una branca
+
+<img class="r-stretch" src="../img/delete_neteja.png">
 
 ---
 
 ## Fusió directa de branques
 
-<img src="../img/before_ff.png">
+<img class="r-stretch" src="../img/before_ff.png">
 
 Abans
 
 --
 
-<img src="../img/after_ff.png">
+<img class="r-stretch" src="../img/after_ff.png">
 
 Després
 
@@ -46,13 +64,13 @@ Després
 ## Fusió de branques divergents
 
 
-<img src="../img/before_divergent.png">
+<img class="r-stretch" src="../img/before_divergent.png">
 
 Abans
 
 --
 
-<img src="../img/after_divergent.png">
+<img class="r-stretch" src="../img/after_divergent.png">
 
 Després
 
@@ -72,12 +90,12 @@ Contingut de la branca a fusionar
 
 ## Canvi de base
 
-<img src="../img/before_rebase.png">
+<img class="r-stretch" src="../img/before_rebase.png">
 
 Abans
 
 --
 
-<img src="../img/after_rebase.png">
+<img class="r-stretch" src="../img/after_rebase.png">
 
 Després
