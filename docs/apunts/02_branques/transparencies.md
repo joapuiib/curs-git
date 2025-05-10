@@ -13,64 +13,74 @@ alias: branques-slides
 
 ## Branques
 
-<img class="r-stretch" src="../img/create_branches.png">
+<img class="r-stretch" src="../img/create_branches.light.png">
 
 ---
 
 ## Canviar de branca
 
-<img class="r-stretch" src="../img/checkout_branch.png">
+<img class="r-stretch" src="../img/checkout_branch.light.png">
 
 ---
 
+<!-- .slide: data-transition="fade-out" -->
 ## Nous canvis en una branca
 
-<img class="r-stretch" src="../img/commit_menjar.png">
+<img class="r-stretch" src="../img/commit_menjar.light.png">
 
 --
 
+<!-- .slide: data-transition="fade" -->
 ## Nous canvis en una branca
 
-<img class="r-stretch" src="../img/commit_beguda.png">
+<img class="r-stretch" src="../img/commit_beguda.light.png">
 
 --
 
+<!-- .slide: data-transition="fade" -->
 ## Nous canvis en una branca
 
-<img class="r-stretch" src="../img/commit_neteja.png">
+<img class="r-stretch" src="../img/commit_neteja.light.png">
 
 ---
 
 ## Eliminar una branca
 
-<img class="r-stretch" src="../img/delete_neteja.png">
+<img class="r-stretch" src="../img/delete_neteja.light.png">
 
 ---
 
+<!-- .slide: data-transition="fade-out" -->
 ## Fusió directa de branques
 
-<img class="r-stretch" src="../img/before_ff.png">
+<img class="r-stretch" src="../img/before_ff.light.png">
 
 Abans
 
 --
 
-<img class="r-stretch" src="../img/after_ff.png">
+<!-- .slide: data-transition="fade" -->
+## Fusió directa de branques
+
+<img class="r-stretch" src="../img/after_ff.light.png">
 
 Després
 
 ---
 
+<!-- .slide: data-transition="fade-out" -->
 ## Fusió de branques divergents
 
-
-<img class="r-stretch" src="../img/before_divergent.png">
+<img class="r-stretch" src="../img/before_divergent.light.png">
 
 Abans
 
 --
 
-<img class="r-stretch" src="../img/after_divergent.png">
+<!-- .slide: data-transition="fade" -->
+## Fusió de branques divergents
+
+<img class="r-stretch" src="../img/after_divergent.light.png">
 
 Després
 
@@ -88,14 +98,18 @@ Contingut de la branca a fusionar
 
 ---
 
+<!-- .slide: data-transition="fade-out" -->
 ## Canvi de base
 
-<img class="r-stretch" src="../img/before_rebase.png">
+<img class="r-stretch" src="../img/before_rebase.light.png">
 
 Abans
 
 --
 
-<img class="r-stretch" src="../img/after_rebase.png">
+<!-- .slide: data-transition="fade" -->
+## Canvi de base
+
+<img class="r-stretch" src="../img/after_rebase.light.png">
 
 Després
