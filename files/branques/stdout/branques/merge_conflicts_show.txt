@@ -7,7 +7,7 @@ jpuigcerver@fp:~/git_branques (main) $ git lg
 * | a7ef672 - (1 second ago) Menjar - Joan Puigcerver (menjar)
 |/  
 * ec4c927 - (1 second ago) Commit inicial - Joan Puigcerver
-jpuigcerver@fp:~/git_branques (main) $ git show fruta
+jpuigcerver@fp:~/git_branques (main) $ git show fruita
 commit d32e3bac4fc8792f3c13805d983a926c72841fb5
 Author: Joan Puigcerver <j.puigcerveribanez@edu.gva.es>
 Date:   Tue Oct 29 16:23:59 2024 +0100

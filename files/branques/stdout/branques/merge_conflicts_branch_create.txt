@@ -1,9 +1,9 @@
 jpuigcerver@fp:~/git_branques (main) $ git checkout main
 Already on 'main'
-jpuigcerver@fp:~/git_branques (main) $ git branch fruta
+jpuigcerver@fp:~/git_branques (main) $ git branch fruita
 jpuigcerver@fp:~/git_branques (main) $ git branch verdura
 jpuigcerver@fp:~/git_branques (main) $ git lga
-*   d71a079 - (0 seconds ago) Merge branch 'beguda' into 'main' - Joan Puigcerver (HEAD -> main, verdura, fruta)
+*   d71a079 - (0 seconds ago) Merge branch 'beguda' into 'main' - Joan Puigcerver (HEAD -> main, verdura, fruita)
 |\  
 | * 7540d67 - (0 seconds ago) Beguda - Joan Puigcerver (beguda)
 * | a7ef672 - (0 seconds ago) Menjar - Joan Puigcerver (menjar)
