@@ -50,7 +50,7 @@ vistes en el [[remots-index]].
     > Equivalent a `git fetch --prune`.
 
 
-- `pull.ff [false/only]`: Configura el comportament de la fusió implicita
+- `pull.ff [false/only]`: Configura el comportament de la fusió implícita
     en el `git pull` respecte a la fusió _Fast-Forward_:
 
     - Si s'estableix a `false`, les fusiones de branques

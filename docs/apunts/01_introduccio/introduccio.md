@@ -677,7 +677,7 @@ superior poden ser sobreescrits per un nivell inferior:
         ```
 
     === ":material-microsoft-windows: Windows"
-        Carpeta de l'instal·lació de Git:
+        Carpeta de la instal·lació de Git:
 
         ```cmd
         C:\Program Files\Git\gitconfig
