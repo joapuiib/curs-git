@@ -84,3 +84,6 @@ vists en el [[introduccio-index]].
     _commits_.
 - `init.defaultBranch`: Nom de la branca principal per defecte
     quan s'inicialitza un nou _Repositori Local_ amb `git init`.
+
+!!! docs
+    [:octicons-link-external-16: 8.1 Customizing Git - Git Configuration](https://git-scm.com/book/be/v2/Customizing-Git-Git-Configuration) - :simple-git: Pro Git Book

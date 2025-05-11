@@ -73,6 +73,12 @@ vistes en el [[branques-index]].
 - `merge.ff [false/only]`: Configura el comportament de la fusió `merge` en
     relació al _fast-forward_.
 
+    - Si s'estableix a `false`, les fusiones de branques
+        es realitzaran mitjançant un _commit de fusió_.
+    - Si s'estableix a `only`, les fusiones de branques
+        es realitzaran mitjançant un _fast-forward_. En cas de no ser possible,
+        el procés es cancel·la.
+
     > Equivalent a utilitzar l'opció `--no-ff` o `--ff-only` en
     > `git merge`.
 
