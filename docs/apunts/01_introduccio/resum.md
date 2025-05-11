@@ -74,3 +74,13 @@ vists en el [[introduccio-index]].
 
 - `git diff --staged`: Mostra els canvis de l'_Àrea de Preparació_
     respecte de l'estat actual del _Repositori Local_.
+
+
+### Configuració
+- `core.editor`: Editor de text que utilitzarà Git per algunes ordres,
+    com editar missatges de _commit_.
+- `user.name`: Nom de l'usuari que realitza els _commits_.
+- `user.email`: Correu electrònic de l'usuari que realitza els
+    _commits_.
+- `init.defaultBranch`: Nom de la branca principal per defecte
+    quan s'inicialitza un nou _Repositori Local_ amb `git init`.
