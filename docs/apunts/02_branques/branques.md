@@ -495,17 +495,17 @@ Una vegada resolt el conflicte, caldrà confirmar els canvis amb `git add` i `gi
 !!! info
     En cas que es desitge cancel·lar el procés de fusió, es pot utilitzar l'ordre `git merge --abort`.
 
-??? prep annotate "Preparació branques divergents `fruta` i `verdura`"
-    1. Creem les branques `fruta` i `verdura` des de la branca `main`.
+??? prep annotate "Preparació branques divergents `fruita` i `verdura`"
+    1. Creem les branques `fruita` i `verdura` des de la branca `main`.
 
     ```shellconsole
     --8<-- "docs/files/branques/stdout/branques/merge_conflicts_branch_create.txt"
     ```
 
-    2. Afegim dues fruites al fitxer `menjar.txt` en la branca `fruta`.
+    2. Afegim dues fruites al fitxer `menjar.txt` en la branca `fruita`.
 
     ```shellconsole
-    --8<-- "docs/files/branques/stdout/branques/merge_conflicts_fruta.txt"
+    --8<-- "docs/files/branques/stdout/branques/merge_conflicts_fruita.txt"
     ```
 
     3. Afegim dues verdures al fitxer `menjar.txt` en la branca `verdura`.
@@ -514,19 +514,19 @@ Una vegada resolt el conflicte, caldrà confirmar els canvis amb `git add` i `gi
     --8<-- "docs/files/branques/stdout/branques/merge_conflicts_verdura.txt"
     ```
 
-??? example annotate "Exemple: Fusió de branques `fruta` i `verdura` amb conflictes"
-    Les branques `fruta` i `verdura` han modificat la mateixa secció del fitxer `menjar.txt`,
+??? example annotate "Exemple: Fusió de branques `fruita` i `verdura` amb conflictes"
+    Les branques `fruita` i `verdura` han modificat la mateixa secció del fitxer `menjar.txt`,
     per tant, quan les fusionem, es produirà un conflicte.
 
     ```shellconsole
     --8<-- "docs/files/branques/stdout/branques/merge_conflicts_show.txt"
     ```
 
-    1. Primer, realitzem una [[branques#fusio-directa]] entre de la branca `fruta` a la branca `main`,
+    1. Primer, realitzem una [[branques#fusio-directa]] entre de la branca `fruita` a la branca `main`,
         on no hi haurà conflictes.
 
     ```shellconsole
-    --8<-- "docs/files/branques/stdout/branques/merge_conflicts_merge_fruta.txt"
+    --8<-- "docs/files/branques/stdout/branques/merge_conflicts_merge_fruita.txt"
     ```
 
     2. Després, realitzarem la fusió de la branca `verdura` a la branca `main`,
