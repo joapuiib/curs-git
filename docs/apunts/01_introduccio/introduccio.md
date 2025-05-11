@@ -131,7 +131,7 @@ que conté tota la informació relativa al __Repositori Local__.
     !!! note
         S'ha canviat el nom de la branca principal de `master` a `main` per a seguir les recomanacions de la comunitat de desenvolupament.
 
-        Vegeu: [Regarding Git and Branch Naming](https://sfconservancy.org/news/2020/jun/23/gitbranchname/)
+        Vegeu: [:octicons-link-external-16: Regarding Git and Branch Naming](https://sfconservancy.org/news/2020/jun/23/gitbranchname/)
 
 ### Eliminar un repositori
 Per a eliminar un repositori de Git, simplement cal eliminar el directori ocult `.git`.
@@ -662,14 +662,60 @@ git config --global alias.lga "lg --all"
 
 
 ## Configuració (`git config`)
-Git permet configurar diferents paràmetres per a personalitzar el seu comportament mitjançant l'ordre `git config`.
+Git permet configurar diferents paràmetres per a personalitzar
+el seu comportament mitjançant l'ordre `git config`.
+
+La configuració de Git es pot realitzar a tres nivells, on els paràmetres d'un nivell
+superior poden ser sobreescrits per un nivell inferior:
+
+- __Sistema `--system`__: Configuració de Git per a tots els usuaris del sistema.
+    La configuració es realitza en un fitxer `gitconfig` situat a:
+
+    === ":simple-linux: Linux"
+        ```bash
+        /etc/gitconfig
+        ```
+
+    === ":material-microsoft-windows: Windows"
+        Carpeta de l'instal·lació de Git:
+
+        ```cmd
+        C:\Program Files\Git\gitconfig
+        ```
+
+- __Usuari `--global`__: Configuració de Git per a un usuari concret.
+    La configuració es realitza en un fitxer `gitconfig` situat a
+    la carpeta personal de l'usuari:
+
+    === ":simple-linux: Linux"
+        ```bash
+        /home/<username>/.gitconfig
+        ```
+
+    === ":material-microsoft-windows: Windows"
+        ```cmd
+        C:\Users\<username>\.gitconfig
+        ```
+
+- __Repositori `--local`__: Configuració de Git per a un repositori concret.
+    La configuració es realitza en un fitxer `config` situat a la carpeta `.git` del repositori.
+
+    ```bash
+    <path_to_repository>/.git/config
+    ```
+
+La sintaxi d'aquesta comanda és la següent:
 
 ```bash
-git config [--global] <key> <value>
+git config [--local | --global | --system] <key> [<value>]
 ```
 
-- `--global`: Opcional. Configura el paràmetre de manera global per a tots els repositoris.
-    Si no s'indica, la configuració es realitzarà únicament per al repositori actual.
+- `--local`, `--global`, `--system`: Opcional. Indica el nivell de configuració.
+    Si no s'indica, per defecte és `--local`.
+- `<key>`: Clau de configuració que es vol establir o consultar.
+- `<value>`: Opcional. Valor de la configuració.
+    Si no s'indica, es mostrarà el valor actual de la clau de configuració.
+
 
 !!! notice
     Fixeu-vos que ja hem utilitzat aquesta comanda per configurar els següents aspectes:
@@ -677,20 +723,31 @@ git config [--global] <key> <value>
     - El nom (`user.name`) i el correu electrònic (`user.email`) de l'autor dels _commit_
     - L'editor per defecte (`core.editor`).
 
-### Fitxer de configuració (`.gitconfig`)
-La configuració `--global` s'emmagatzema en el fitxer `.gitconfig`, situat del directori de l'usuari.
 
-=== "Linux"
-    ```bash
-    /home/<username>/.gitconfig
-    ```
-=== "Windows"
-    ```cmd
-    C:\Users\<username>\.gitconfig
+??? example "Exemple: Consultar el nom i correu electrònic configurats"
+    ```shellconsole
+    jpuigcerver@FP:~/git_introduccio (main) $ git config --global user.name
+    {{ config.site_author }}
+    jpuigcerver@FP:~/git_introduccio (main) $ git config --global user.email
+    {{ config.site_email }}
     ```
 
-??? example "Exemple: Configuració"
-    ```cfg title=".gitconfig"
+### Modificació del fitxer de configuració
+Per a modificar el fitxer de configuració de l'usuari, podem utilitzar l'ordre `git config --edit`,
+que obrirà l'editor de text per defecte per a editar el fitxer de configuració del nivell triat.
+
+```bash
+git config [--local | --global | --system] --edit
+```
+
+- `--local`, `--global`, `--system`: Opcional. Indica el nivell de configuració.
+    Si no s'indica, per defecte és `--local`.
+
+??? example "Exemple: Fitxer de configuració de l'usuari (`--global`)"
+    ```shellconsole
+    jpuigcerver@FP:~/git_introduccio (main) $ git config --global --edit
+    ```
+    ```cfg title="~/.gitconfig"
     [core]
         editor = code --wait # Editor per defecte
 
@@ -705,6 +762,8 @@ La configuració `--global` s'emmagatzema en el fitxer `.gitconfig`, situat del 
         lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
         lga = lg --all
     ```
+
+
 
 ## Ignorar fitxers (`.gitignore`)
 En un projecte, hi ha fitxers que no volem incloure en el repositori, com arxius temporals, binaris o fitxers de configuració.
