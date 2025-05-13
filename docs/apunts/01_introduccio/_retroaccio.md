@@ -18,6 +18,11 @@ Pots triar entre lliurar un document PDF amb les captures de pantalla o bé un v
 Una única cosa: fixa't que has definit el patró '/tmp' en el .gitignore.
 Això ignorarà el fitxer o directori 'tmp' sols a l'arrel del repositori.
 
+
+## Missatges significatius.
+Un aspecte a millorar és triar missatges significatius per a cada commit, que reflectisquen d'una manera clara i concisa el que has fet en cada commit.
+
+
 ## Error en commit
 No obstant això, has tingut un xicotet error en el pas 13: Elimina un llibre i fés un cinqué commit.
 En aquest pas, sí que has eliminat el llibre, però a l'hora de fer un commit,
@@ -25,6 +30,7 @@ t'has oblidat de afegir el fitxer a l'Àrea de Preparació amb `git add`.
 
 Et recomane que faces especial atenció als missatges que apareixen després de fer cada ordre,
 sobretot ara al principi. A més, et recomane que comproves l'estat amb `git status` després de cada pas per veure com va canviant l'estat del repositori.
+
 
 ## One Drive
 Una única cosa. Has creat el repositori dins d'una carpeta sincronitzada amb OneDrive.
