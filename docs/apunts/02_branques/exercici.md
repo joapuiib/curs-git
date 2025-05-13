@@ -147,7 +147,7 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
     Trieu un missatge significatiu i descriptiu per a cada _commit_.
 
 ```shellconsole
-jpuigcerver@FP:~/git_introduccio (main) $ git lg
+jpuigcerver@FP:~/bloc2_exercici (main) $ git lga
 * bdbd567 - (7 hours ago) Sèries drama - Joan Puigcerver (HEAD -> main, series-drama) # Canvi de base amb conflictes
 * f8eda6f - (7 hours ago) Sèries acció - Joan Puigcerver (series-accio)
 * 1f3b706 - (7 hours ago) Sèries - Joan Puigcerver (series) # Canvi de base
