@@ -23,7 +23,7 @@ ARGS=''
 SPELL_ARGS=''
 while [ $# -gt 0 ] ; do
     case $1 in
-        -b)
+        -b | --build)
             BUILD=1
             ;;
         --ci)
@@ -133,13 +133,16 @@ if [ $SPELL -eq 1 ]; then
 
     if [ $ALL -eq 0 ]; then
         if [ -z "$SPELL_SOURCES" ]; then
-            SPELL_SOURCES=$(git diff --name-only main HEAD)
+            CHANGED_FILES_FROM_MAIN=$(git diff --name-only main HEAD)
+            CHANGED_UNCOMMITED_FILES=$(git status --porcelain | grep '\.md$' | awk '{print $2}')
+            SPELL_SOURCES=$(echo -e "${CHANGED_FILES_FROM_MAIN}\n${CHANGED_UNCOMMITED_FILES}")
             if [ -z "$SPELL_SOURCES" ]; then
                 print "No changes found."
                 exit
             fi
         fi
         SPELL_SOURCES=$(echo "$SPELL_SOURCES" | grep 'docs/.*\.md$' | sed 's/\/index//' | sed 's/docs/site/' | sed 's/.md$/\/index.html/')
+        echo $SPELL_SOURCES
 
         for FILE in $SPELL_SOURCES; do
             if [ -f $FILE ]; then
