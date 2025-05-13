@@ -118,7 +118,7 @@ jpuigcerver@FP:~/git_introduccio (main) $ git lg
     - "Canvis", "Modificacions", "Actualització", ...
     - "Commit del pas X"
 
-3. __Repositoris de One Drive__
+3. __Repositoris dins de One Drive o equivalents__
 
     Si utilitzes One Drive, Google Drive o qualsevol altre servei de sincronització
     de fitxers, és recomanable crear el repositori fora d'aquestes carpetes.
