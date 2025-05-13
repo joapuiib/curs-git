@@ -92,3 +92,6 @@
 .language-shellconsole.highlight .git-h {
   color: #88C0D0;
 }
+.language-shellconsole.highlight .c {
+  color: #576279;
+}

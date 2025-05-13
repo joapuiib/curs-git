@@ -185,6 +185,11 @@ p:has(img.center) {
     margin: 10mm;
 }
 
+.md-typeset code, .md-typeset pre {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
 @media print {
     .md-main__inner, .md-content__inner {
       margin: unset;

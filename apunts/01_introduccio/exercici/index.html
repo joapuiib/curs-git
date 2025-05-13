@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -49,6 +49,8 @@
     <link rel="stylesheet" href="../../../stylesheets/download-button.css">
     <link rel="stylesheet" href="../../../stylesheets/rubric.css">
     <link rel="stylesheet" href="../../../stylesheets/time-line.css">
+    <link rel="stylesheet" href="../../../stylesheets/steps.css">
+    <link rel="stylesheet" href="../../../stylesheets/carousel.css">
     <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
     
@@ -58,6 +60,15 @@
     <link rel="stylesheet" href="../../../stylesheets/cover.css">
 
     
+    
+    
+    <style>
+        @media print {
+            :root {
+                --md-document__footer-print-height: 1rem;
+            }
+        }
+    </style>
     
 
     <link rel="stylesheet" href="../../../stylesheets/cover_footer.css">
@@ -737,6 +748,24 @@
   <a href="#exercici" class="md-nav__link">
     <span class="md-ellipsis">
       Exercici
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estat-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estat final
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errors-mes-comuns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Errors més comuns
     </span>
   </a>
   
@@ -2108,6 +2137,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#estat-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estat final
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errors-mes-comuns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Errors més comuns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bibliografia" class="md-nav__link">
     <span class="md-ellipsis">
       Bibliografia
@@ -2129,6 +2176,8 @@
 <article class="md-content__inner md-typeset">
 
 <div class="md-document__header">
+
+<div class="md-document__header-content"></div>
 
 </div>
 
@@ -2358,12 +2407,66 @@ problemes amb els exemples i exercicis anteriors.</p>
 <li>Fes un <em>commit</em> amb aquesta configuració.</li>
 <li>Comprova la història de canvis del repositori.</li>
 </ol>
+<h2 id="estat-final">Estat final<a class="headerlink" href="#estat-final" title="Permanent link">&para;</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Trieu un missatge significatiu i descriptiu per a cada <em>commit</em>.</p>
+</div>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lg
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">21c0f2b</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">Commit del pas 21</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">4b0f1a2</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">Commit del pas 18</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">bd1f2a4</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">Commit del pas 13</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">1fb0c3d</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">Commit del pas 11</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">2c4f3a1</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">Commit del pas 9</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">c9fc6c8</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">Commit del pas 6</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8e70293</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(10 minutes ago)</span><span class="w"> </span><span class="git-cm">Commit del pas 4</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+</span></code></pre></div>
+<h2 id="errors-mes-comuns">Errors més comuns<a class="headerlink" href="#errors-mes-comuns" title="Permanent link">&para;</a></h2>
+<ol class="fancylists-decimal" type="1">
+<li>
+<p><strong>Ignorar el directori <code>tmp</code> com <code>/tmp</code></strong></p>
+<p>En aquest cas, no és precisament un error, però anem a veure els diferents patrons
+que podem utilitzar per ignorar el directori <code>tmp</code>.</p>
+<ul>
+<li><code>tmp</code>: Ignora qualsevol fitxer o directori anomenat <code>tmp</code> en qualsevol lloc del repositori.</li>
+<li><code>/tmp</code>: Ignora el directori o fitxer <code>tmp</code> que es troba a la carpeta arrel del repositori.</li>
+<li><code>tmp/</code>: Ignora el directori <code>tmp</code> que es troba a qualsevol lloc del repositori.</li>
+<li><code>/tmp/</code>: Ignora el directori <code>tmp</code> que es troba a la carpeta arrel del repositori.</li>
+</ul>
+</li>
+<li>
+<p><strong>Triar missatges poc significatius</strong>.</p>
+<p>Els missatges de <em>commit</em> han de ser significatius i descriptius de cada canvi.</p>
+<p><strong>Exemples de missatges poc significatius</strong>:</p>
+<ul>
+<li>"Primer commit", "Segon commit", ...</li>
+<li>"Canvis", "Modificacions", "Actualització", ...</li>
+<li>"Commit del pas X"</li>
+</ul>
+</li>
+<li>
+<p><strong>Repositoris de One Drive</strong></p>
+<p>Si utilitzes One Drive, Google Drive o qualsevol altre servei de sincronització
+de fitxers, és recomanable crear el repositori fora d'aquestes carpetes.</p>
+<p>Aquests sistemes tractaran de sincronitzar qualsevol canvi que es faça en el Directori de Treball,
+també quan naveguem per les diferents versions del repositori (<code>git switch</code> o <code>git checkout</code>),
+que veurem a partir del <a href="../../02_branques/">Bloc 2: Branques</a>.</p>
+</li>
+</ol>
 <h2 id="bibliografia">Bibliografia<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Basat en l'exercici de la sessió 1 del curs
     <a href="https://github.com/pedroprieto/curso-github"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span> Gestió de la tasca docent amb GitHub</a>
     de Pedro Prieto.</li>
 </ul>
+
+    <div class="md-document__print">
+    
+    <div><small>📌 Aquest document pot quedar desactualitzat després d’imprimir-lo. Pots consultar la versió més recent
+    a la <a href="https://joapuiib.github.io/curs-git/" target="_blank" rel="noopener noreferrer">pàgina web</a>.</small></div>
+    <div><small> 🌿 Abans d’imprimir aquest document, considera si és realment necessari. Redueix el consum de paper i ajuda a protegir el nostre entorn. </small></div>
+    
+    </div>
 
 </main>
 
@@ -2375,6 +2478,31 @@ problemes amb els exemples i exercicis anteriors.</p>
 </table>
 
 <div class="md-document__footer">
+
+<div class="md-document__footer-content"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="md-document__footer-print">
+  <a class="md-document__footer-print-copyright" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" target="_blank" rel="" style="display: block">
+    CC BY-NC-SA 4.0
+    (Reconeixement - NoComercial - CompartirIgual) &#x1f16d;
+    Joan Puigcerver Ibáñez
+  </a>
+</div>
+
 
 </div>
 
@@ -2398,7 +2526,7 @@ problemes amb els exemples i exercicis anteriors.</p>
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="15 d’abril del 2025 18:18:43">15 d’abril del 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="13 de maig del 2025 16:04:11">13 de maig del 2025</span>
   </span>
 
     
@@ -2570,6 +2698,7 @@ problemes amb els exemples i exercicis anteriors.</p>
     <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
     <script src="../../../javascript/tablesort.js"></script>
     <script src="../../../javascript/download-button.js"></script>
+    <script src="../../../javascript/carousel.js"></script>
     <script src="../../../javascript/encrypt-content.js"></script>
     
     
