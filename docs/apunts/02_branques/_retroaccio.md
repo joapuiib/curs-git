@@ -1,5 +1,5 @@
 ## Retroacció APTE general
-Bon treball Pau!
+Bon treball [nom]!
 
 Has treballat correctament amb les branques i has sabut integrar els canvis mitjançant el procés de fusió (merge) i fusió.
 
