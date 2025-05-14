@@ -6,6 +6,12 @@ Has treballat correctament amb les branques i has sabut integrar els canvis mitj
 Seguim!
 
 
+## Falta alguna cosa
+Cal que lliures també el repositori de git de manera comprimida en .zip o .tgz.
+
+També cal lliurar els passos realitzats en l'exercici. Pots triar entre lliurar un document PDF amb les captures de pantalla o bé un vídeo.
+
+
 ## Errors
 La fusió de branques divergents no ha anat correctament. Pareix que tenies canvis en el fitxer música abans de fer el merge.
 Com que no mostres el contingut dels fitxers en cap moment, no puc saber on t'has enganyat i si has pogut continuar correctament.
