@@ -84,7 +84,7 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
     Trieu un missatge significatiu i descriptiu per a cada _commit_.
 
 ```shellconsole
-jpuigcerver@FP:~/git_introduccio (main) $ git lg
+jpuigcerver@FP:~/bloc1_exercici (main) $ git lg
 * 21c0f2b - (10 minutes ago) Commit del pas 21 - Joan Puigcerver (HEAD -> main)
 * 4b0f1a2 - (10 minutes ago) Commit del pas 18 - Joan Puigcerver
 * bd1f2a4 - (10 minutes ago) Commit del pas 13 - Joan Puigcerver

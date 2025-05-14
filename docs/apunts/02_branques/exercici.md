@@ -98,6 +98,9 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 1. Fusiona la branca `llibres-ciencia-ficcio` amb la branca `main`.
 1. Fusiona la branca `llibres-fantasia` amb la branca `main`.
 
+    !!! important
+        Documenta correctament els conflictes que s'han generat i com els has resolt.
+
 
 ### Eliminació d'una branca
 1. Des de la branca `main`, crea una branca anomenada `series`.
@@ -140,6 +143,10 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
     1. Fes un _commit_.
 1. Fusiona la branca `series-accio` amb la branca `main`.
 1. Canvia la base de la branca `series-drama` a la branca `main`.
+
+    !!! important
+        Documenta correctament els conflictes que s'han generat i com els has resolt.
+
 1. Fusiona la branca `series-drama` amb la branca `main`.
 
 ## Estat final
@@ -159,7 +166,7 @@ jpuigcerver@FP:~/bloc2_exercici (main) $ git lga
 |/  
 *   c9ffd43 - (9 hours ago) Fusió de branques divergents - Joan Puigcerver # Fusió de branques divergents
 |\  
-| * 7193d82 - (9 hours ago) Més música - 4 - Joan Puigcerver (mes-musica)
+| * 7193d82 - (9 hours ago) Més música - Joan Puigcerver (mes-musica)
 * | 01e1b0b - (9 hours ago) Més llibres - Joan Puigcerver (mes-llibres)
 |/  
 * 7d7907b - (9 hours ago) Música - Joan Puigcerver (musica) # Fusió directa
