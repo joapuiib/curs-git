@@ -54,7 +54,6 @@ Per defecte, Git utilitza l'editor [:simple-vim: ViM](https://www.vim.org/),
 un editor de text per terminal molt potent, però difícil i poc intuïtiu
 per treballar.
 
-
 Si desitgeu canviar l'editor per defecte, podeu utilitzar
 la següent comanda des de la consola:
 
@@ -93,7 +92,6 @@ git config --global core.editor <editor>
         ```
         git config --global core.editor nano
         ```
-
 
 !!! recommend
     Com que utilitzarem :material-microsoft-visual-studio-code: Visual Studio Code com a editor de text,

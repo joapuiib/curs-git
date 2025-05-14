@@ -38,6 +38,40 @@ vistes en el [[remots-index]].
 - `git push -d <alies> <branca>`: Elimina la branca remota especificada del repositori remot `alies`.
 
 
+### Configuració
+- `push.autoSetupRemote [yes/no]`: Si s'estableix a `true`, les branques locals
+    es publiquen automàticament al repositori remot associat a una branca remota
+    amb el mateix nom.
+
+- `fetch.prune [true/false]`: Si s'estableix a `true`, les referències de branques remotes
+    que ja no existeixen al repositori remot s'eliminen automàticament
+    quan es fa un `git fetch`.
+
+    > Equivalent a `git fetch --prune`.
+
+
+- `pull.ff [false/only]`: Configura el comportament de la fusió implícita
+    en el `git pull` respecte a la fusió _Fast-Forward_:
+
+    - Si s'estableix a `false`, les fusiones de branques
+        es realitzaran mitjançant un _commit de fusió_.
+    - Si s'estableix a `only`, les fusiones de branques
+        es realitzaran mitjançant un _fast-forward_. En cas de no ser possible,
+        el procés es cancel·la.
+
+    > Equivalent a `git pull --ff-only` o `git pull --no-ff`.
+    
+
+- `pull.rebase [false/true]`: Si s'estableix a `true`, l'ordre `git pull`
+    realitzarà un `rebase` en compte d'un `merge` per incorporar els canvis remots.
+
+    > Equivalent a `git pull --rebase`.
+
+
+!!! docs
+    [:octicons-link-external-16: git-config](https://git-scm.com/docs/git-config) - :simple-git: Git Docs
+
+
 ## Resum flux de treball amb branques remotes
 
 1. Crear una branca nova localment.

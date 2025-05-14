@@ -78,6 +78,56 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 1. Fes un _commit_ amb aquesta configuració.
 1. Comprova la història de canvis del repositori.
 
+
+## Estat final
+!!! important
+    Trieu un missatge significatiu i descriptiu per a cada _commit_.
+
+```shellconsole
+jpuigcerver@FP:~/bloc1_exercici (main) $ git lg
+* 21c0f2b - (10 minutes ago) Commit del pas 21 - Joan Puigcerver (HEAD -> main)
+* 4b0f1a2 - (10 minutes ago) Commit del pas 18 - Joan Puigcerver
+* bd1f2a4 - (10 minutes ago) Commit del pas 13 - Joan Puigcerver
+* 1fb0c3d - (10 minutes ago) Commit del pas 11 - Joan Puigcerver
+* 2c4f3a1 - (10 minutes ago) Commit del pas 9 - Joan Puigcerver
+* c9fc6c8 - (10 minutes ago) Commit del pas 6 - Joan Puigcerver
+* 8e70293 - (10 minutes ago) Commit del pas 4 - Joan Puigcerver
+```
+
+
+## Errors més comuns
+
+1. __Ignorar el directori `tmp` com `/tmp`__
+
+    En aquest cas, no és precisament un error, però anem a veure els diferents patrons
+    que podem utilitzar per ignorar el directori `tmp`.
+
+    - `tmp`: Ignora qualsevol fitxer o directori anomenat `tmp` en qualsevol lloc del repositori.
+    - `/tmp`: Ignora el directori o fitxer `tmp` que es troba a la carpeta arrel del repositori.
+    - `tmp/`: Ignora el directori `tmp` que es troba a qualsevol lloc del repositori.
+    - `/tmp/`: Ignora el directori `tmp` que es troba a la carpeta arrel del repositori.
+
+
+2. __Triar missatges poc significatius__.
+
+    Els missatges de _commit_ han de ser significatius i descriptius de cada canvi.
+
+    __Exemples de missatges poc significatius__:
+
+    - "Primer commit", "Segon commit", ...
+    - "Canvis", "Modificacions", "Actualització", ...
+    - "Commit del pas X"
+
+3. __Repositoris dins de One Drive o equivalents__
+
+    Si utilitzes One Drive, Google Drive o qualsevol altre servei de sincronització
+    de fitxers, és recomanable crear el repositori fora d'aquestes carpetes.
+
+    Aquests sistemes tractaran de sincronitzar qualsevol canvi que es faça en el Directori de Treball,
+    també quan naveguem per les diferents versions del repositori (`git switch` o `git checkout`),
+    que veurem a partir del [[branques-index]].
+
+
 ## Bibliografia
 - Basat en l'exercici de la sessió 1 del curs
     [:octicons-link-external-16: Gestió de la tasca docent amb GitHub](https://github.com/pedroprieto/curso-github)

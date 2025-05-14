@@ -63,3 +63,24 @@ vistes en el [[branques-index]].
 - `git rebase --abort`: A l'estat `REBASING`, deté el procés de canvi de base i
     torna a l'estat anterior.
 
+
+### Configuració
+- `merge.edit [yes/no]`: Configura si l'operació de fusió `merge` demana
+    editar el missatge del _commit_ de fusió o es fa automàticament.
+
+    > Equivalent a utilitzar l'opció `--edit` o `--no-edit` en `git merge`.
+
+- `merge.ff [false/only]`: Configura el comportament de la fusió `merge` en
+    relació al _fast-forward_.
+
+    - Si s'estableix a `false`, les fusiones de branques
+        es realitzaran mitjançant un _commit de fusió_.
+    - Si s'estableix a `only`, les fusiones de branques
+        es realitzaran mitjançant un _fast-forward_. En cas de no ser possible,
+        el procés es cancel·la.
+
+    > Equivalent a utilitzar l'opció `--no-ff` o `--ff-only` en
+    > `git merge`.
+
+!!! docs
+    [:octicons-link-external-16: merge config](https://git-scm.com/docs/merge-config) - :simple-git: Git Docs
