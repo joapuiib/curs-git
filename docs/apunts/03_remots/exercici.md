@@ -176,8 +176,8 @@ Des del repositori `bloc3_exercici`:
 ## Estat final
 ```shellconsole
 joapuiib@FP:~/bloc3_exercici (main) $ git lga
-* 3a2009a - (53 seconds ago) Afegida música - Joan Puigcerver (HEAD -> main, origin/main)
-* 5959e77 - (2 minutes ago) Pel·lícula: El sentit de la vida - Brian
+* 3a2009a - (53 seconds ago) Afegida música - Joan Puigcerver (HEAD -> main, origin/main) # Branca musica fusionada i eliminada
+* 5959e77 - (2 minutes ago) Pel·lícula: El sentit de la vida - Brian # Incorporació de canvis amb canvi de base
 * 93cc993 - (2 minutes ago) Afegida altra pel·lícula - Joan Puigcerver
 *   aabc7af - (3 minutes ago) Merge branch 'origin/main' into main - Brian # Incorporació de canvis amb branques divergents
 |\  
