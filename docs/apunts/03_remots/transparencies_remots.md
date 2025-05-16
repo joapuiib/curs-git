@@ -42,7 +42,7 @@ git remote add origin <url>
 git push [-u | --set-upstream] origin <branca>
 ```
 
-<img class="r-stretch" src="../img/push_setupstream.png" alt="Associació d'una branca local a una branca remota">
+<img class="r-stretch" src="../img/push.light.png" alt="Publicació d'una branca local a una branca remota">
 
 ---
 
