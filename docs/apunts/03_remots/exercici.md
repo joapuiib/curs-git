@@ -93,12 +93,15 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 1. Configura el repositori clonat per realitzar _commits_ amb el següent usuari:
     ```bash
     git config user.name "Brian"
-    git config user.email "brian.cohen@fpmislata.com"
+    git config user.email "brian.cohen@edu.gva.es"
     ```
 
 ### Publicació de canvis
 !!! important
     A partir d'aquest punt treballarem amb els dos repositoris locals: `bloc3_exercici` i `bloc3_exercici_clone`.
+
+    Et recomane obrir cada directori a finestra de :material-microsoft-visual-studio-code: Visual Studio Code
+    diferent o utilitzar dues terminals per a treballar amb els dos repositoris alhora.
 
 Des del repositori `bloc3_exercici_clone`:
 
@@ -169,3 +172,18 @@ Des del repositori `bloc3_exercici`:
 1. Elimina la branca local `musica`.
 1. Elimina la branca remota `musica`.
     
+
+## Estat final
+```shellconsole
+joapuiib@FP:~/bloc3_exercici (main) $ git lga
+* 3a2009a - (53 seconds ago) Afegida música - Joan Puigcerver (HEAD -> main, origin/main) # Branca musica fusionada i eliminada
+* 5959e77 - (2 minutes ago) Pel·lícula: El sentit de la vida - Brian # Incorporació de canvis amb canvi de base
+* 93cc993 - (2 minutes ago) Afegida altra pel·lícula - Joan Puigcerver
+*   aabc7af - (3 minutes ago) Merge branch 'origin/main' into main - Brian # Incorporació de canvis amb branques divergents
+|\  
+| * 378c837 - (4 minutes ago) Afegida pel·lícula - Joan Puigcerver
+* | 6c947d7 - (3 minutes ago) Pel·lícula: Holy Grail - Brian
+|/  
+* a014035 - (6 minutes ago) Pel·lícula: La vida de Brian - Brian # Incorporació de canvis
+* f4fdd0f - (8 minutes ago) Afegits llibres - Joan Puigcerver
+```

@@ -1,6 +1,6 @@
 anna@fp:~/git_estrategies $ cd ~/git_estrategies/anna
 anna@fp:~/git_estrategies/anna (main) $ git config user.name "Anna"
-anna@fp:~/git_estrategies/anna (main) $ git config user.email "anna@fpmislata.com"
+anna@fp:~/git_estrategies/anna (main) $ git config user.email "anna@alu.edu.gva.es"
 anna@fp:~/git_estrategies/anna (main) $ git checkout develop
 branch 'develop' set up to track 'origin/develop'.
 Switched to a new branch 'develop'

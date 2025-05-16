@@ -1,6 +1,6 @@
 mar@fp:~/git_estrategies $ cd ~/git_estrategies/mar
 mar@fp:~/git_estrategies/mar (main) $ git config user.name "Mar"
-mar@fp:~/git_estrategies/mar (main) $ git config user.email "mar@fpmislata.com"
+mar@fp:~/git_estrategies/mar (main) $ git config user.email "mar@alu.edu.gva.es"
 mar@fp:~/git_estrategies/mar (main) $ git checkout develop
 branch 'develop' set up to track 'origin/develop'.
 Switched to a new branch 'develop'
@@ -11,15 +11,15 @@ mar@fp:~/git_estrategies/mar (feature/author) $ echo "## Autors" >> README.md
 mar@fp:~/git_estrategies/mar (feature/author) $ git commit -a -m "README.md: Secció d'autors"
 [feature/author 24be503] README.md: Secció d'autors
  1 file changed, 2 insertions(+)
-mar@fp:~/git_estrategies/mar (feature/author) $ echo "- Anna (anna@fpmislata.com)" >> README.md
+mar@fp:~/git_estrategies/mar (feature/author) $ echo "- Anna (anna@alu.edu.gva.es)" >> README.md
 mar@fp:~/git_estrategies/mar (feature/author) $ git commit -a -m "Autors: Anna"
 [feature/author 8683319] Autors: Anna
  1 file changed, 1 insertion(+)
-mar@fp:~/git_estrategies/mar (feature/author) $ echo "- Pau (pau@fpmislata.com)" >> README.md
+mar@fp:~/git_estrategies/mar (feature/author) $ echo "- Pau (pau@alu.edu.gva.es)" >> README.md
 mar@fp:~/git_estrategies/mar (feature/author) $ git commit -a -m "Autors: Pau"
 [feature/author 1d5ba44] Autors: Pau
  1 file changed, 1 insertion(+)
-mar@fp:~/git_estrategies/mar (feature/author) $ echo "- Mar (mar@fpmislata.com)" >> README.md
+mar@fp:~/git_estrategies/mar (feature/author) $ echo "- Mar (mar@alu.edu.gva.es)" >> README.md
 mar@fp:~/git_estrategies/mar (feature/author) $ git commit -a -m "Autors: Mar"
 [feature/author a216550] Autors: Mar
  1 file changed, 1 insertion(+)

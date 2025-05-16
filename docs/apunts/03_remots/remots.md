@@ -249,17 +249,15 @@ git remote remove <alies>
 - `<alies>`: Àlies del repositori remot a eliminar.
 
 
-## Associació entre branques locals i remotes (`git push --set-upstream`)
+## Publicació de canvis (`git push`)
 De moment, les branques que hem creat resideixen en el repositori local,
 és a dir, en el nostre dispositiu.
 
-Podem associar les branques locals a branques remotes, del repositori remot,
-perquè els canvis que fem localment es puguen veure reflectits en el repositori remot.
-
-Per fer-ho, utilitzarem la comanda `git push` amb l'opció `-u` o `--set-upstream`.
+Podem publicar la branca i els seus canvis al repositori remot
+mitjançant l'ordre `git push`.
 
 ```bash
-git push [-u|--set-upstream] <remot> <branca>
+git push [-u|--set-upstream] [<remot> [<branca>]]
 ```
 
 - `-u|--set-upstream`: Configura la branca local perquè s'associe amb la branca remota.
@@ -272,21 +270,13 @@ git push [-u|--set-upstream] <remot> <branca>
 !!! important
     Aquesta comanda funciona sobre la branca on estem situats (`HEAD`).
 
-![Associació d'una branca local a una branca remota](img/push_setupstream.png)
+![Publicació d'una branca local a una branca remota](img/push.light.png#only-light)
+![Publicació d'una branca local a una branca remota](img/push.dark.png#only-dark)
 /// figure-caption
-Associació d'una branca local a una branca remota
+Publicació d'una branca local a una branca remota
 ///
 
-!!! tip
-    Pots configurar git perquè configure automàticament la branca local
-    perquè s'associe amb la branca remota amb el mateix nom
-    amb l'opció `push.autoSetupRemote`.
-
-    ```bash
-    git config --global push.autoSetupRemote true
-    ```
-
-??? example "Exemple: Associació branca local i remota"
+??? example "Exemple: Publicació i associació branca local i remota"
     Vegem que inicialment la branca `main` no està associada a cap branca remota.
 
     Si intentem fer un `git push`, ens mostrarà un missatge d'error com que
@@ -309,8 +299,38 @@ Associació d'una branca local a una branca remota
 
     ![Canvis publicats a GitHub](img/github_push.png)
     /// figure-caption | ^1
+        attrs: {class: "shadow"}
     Canvis publicats a :material-github: GitHub
     ///
+
+
+### Associació de branques locals i remotes
+Les branques locals poden ser associades a branques remotes
+mitjançant l'opció `-u` o `--set-upstream` de la comanda `git push`.
+
+```
+git push [-u | --set-upstream] <remot> <branca>
+
+Aquesta associació li permet a Git saber sobre quina branca remota
+ha de realitzar les operacions quan no s'especifica explicitament,
+com ara `git pull` o `git push`.
+
+!!! tip
+    Pots configurar git perquè configure automàticament la branca local
+    perquè s'associe amb la branca remota amb el mateix nom
+    amb l'opció `push.autoSetupRemote`.
+
+    ```bash
+    git config --global push.autoSetupRemote true
+    ```
+
+L'associació d'una branca local pot ser eliminada
+mitjançant l'ordre `git branch --unset-upstream`.
+
+```bash
+git branch --unset-upstream [<branca>]
+```
+
 
 ## Clonació d'un repositori remot (`git clone`)
 L'ordre `git clone` permet copiar un repositori remot a un repositori local en el teu sistema,
@@ -457,13 +477,17 @@ Aquesta ordre realitza dos accions:
 Incorporació de canvis amb `git pull`
 ///
 
+La sintaxi és:
+
 ```bash
-git pull [<options>] [<remot> [<branca>]
+git pull [<options>] [<remot> [<branca>]]
 ```
 
 - `<options>`: Opcions de la comanda.
-- `<remot>`: Àlies del repositori remot. Per defecte, s'utilitza la configuració de la branca actual.
-- `<branca>`: Nom de la branca remota. Per defecte, s'utilitza la configuració de la branca actual.
+- `<remot>`: Àlies del repositori remot. Per defecte, s'utilitza la [branca remota associada][associada] a la branca actual.
+- `<branca>`: Nom de la branca remota. Per defecte, s'utilitza la [branca remota associada][associada] a la branca actual.
+
+[associada]: #associacio-de-branques-locals-i-remotes
 
 !!! docs "Documentació oficial de :simple-git: Git"
     [:octicons-link-external-16: `git pull`](https://git-scm.com/docs/git-pull)

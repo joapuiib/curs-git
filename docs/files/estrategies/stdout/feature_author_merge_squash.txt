@@ -24,9 +24,9 @@ index 9e7f142..416ca41 100644
  # Estratègies de ramificació
 +
 +## Autors
-+- Anna (anna@fpmislata.com)
-+- Pau (pau@fpmislata.com)
-+- Mar (mar@fpmislata.com)
++- Anna (anna@alu.edu.gva.es)
++- Pau (pau@alu.edu.gva.es)
++- Mar (mar@alu.edu.gva.es)
  Les estratègies de ramificació proporcionen un
  marc de treball organitzat que facilita la col·laboració
  entre diferents desenvolupadors en un mateix projecte

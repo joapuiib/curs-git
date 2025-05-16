@@ -235,6 +235,23 @@ Després, configura la clau SSH al teu compte de
     - Indica un títol per a la clau SSH.
     - Enganxa el contingut de la clau pública al camp __Key__.
 
+#### Comprovació de l'autenticació
+Per comprovar que la clau SSH s'ha configurat correctament,
+executa la següent comanda en el terminal:
+
+```bash
+ssh -T git@github.com
+```
+
+En cas que la clau SSH estiga configurada correctament,
+el terminal mostrarà un missatge amb el nom el
+teu nom d'usuari de GitHub.
+
+```shellconsole
+jpuigcerver@fp:~ $ ssh -T git@github.com
+Hi joapuiib! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
 
 ## Bibliografia
 - [:octicons-link-external-16: :simple-git: Pro Git Book](https://git-scm.com/book/en/v2)

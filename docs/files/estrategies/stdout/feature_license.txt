@@ -1,6 +1,6 @@
 pau@fp:~/git_estrategies $ cd ~/git_estrategies/pau
 pau@fp:~/git_estrategies/pau (main) $ git config user.name "Pau"
-pau@fp:~/git_estrategies/pau (main) $ git config user.email "pau@fpmislata.com"
+pau@fp:~/git_estrategies/pau (main) $ git config user.email "pau@alu.edu.gva.es"
 pau@fp:~/git_estrategies/pau (main) $ git checkout develop
 branch 'develop' set up to track 'origin/develop'.
 Switched to a new branch 'develop'
