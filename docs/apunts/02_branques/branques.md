@@ -57,7 +57,8 @@ Una __branca__ és una línia de desenvolupament independent.
 En Git, una branca és un simple __punter__ a un commit,
 que avança a mesura que es fan nous commits sobre aquesta.
 
-![Estructura de branques](img/branques_inicial.png)
+![Estructura de branques](img/branques_inicial.light.png#only-light)
+![Estructura de branques](img/branques_inicial.dark.png#only-dark)
 /// figure-caption
     attrs: { id: figure-estat-inicial }
 Estructura de branques inicial.
@@ -141,7 +142,8 @@ git branch [-f | --force] <nom>
 
     No obstant això, la branca activa (`HEAD`) continua sent `main`.
 
-![Estructura de branques després de crear les branques](img/create_branches.png)
+![Estructura de branques després de crear les branques](img/create_branches.light.png#only-light)
+![Estructura de branques després de crear les branques](img/create_branches.dark.png#only-dark)
 /// figure-caption
     attrs: { id: figure-create-menjar }
 Estructura de branques després de crear les branques `menjar`, `beguda` i `neteja`.
@@ -189,7 +191,8 @@ del _commit_ al qual apunta la branca.
     --8<-- "docs/files/branques/stdout/branques/checkout_menjar.txt"
     ```
 
-![Estructura de branques després de canviar a la branca menjar](img/checkout_branch.png)
+![Estructura de branques després de canviar a la branca menjar](img/checkout_branch.light.png#only-light)
+![Estructura de branques després de canviar a la branca menjar](img/checkout_branch.dark.png#only-dark)
 /// figure-caption
     attrs: { id: figure-checkout-menjar }
 Estructura de branques després de canviar a la branca `menjar`.
@@ -215,7 +218,8 @@ s'avança al nou _commit_.
     Vegem que la branca `menjar` i el `HEAD` han avançat al nou _commit_,
     mentre que les altres branques no han canviat i continuen apuntant al _commit_ anterior.
 
-![Estructura de branques després de fer un commit a la branca menjar](img/commit_menjar.png)
+![Estructura de branques després de fer un commit a la branca menjar](img/commit_menjar.light.png#only-light)
+![Estructura de branques després de fer un commit a la branca menjar](img/commit_menjar.dark.png#only-dark)
 /// figure-caption
     attrs: { id: figure-commit-menjar }
 Estructura de branques després de fer un _commit_ a la branca `menjar`.
@@ -230,7 +234,8 @@ Estructura de branques després de fer un _commit_ a la branca `menjar`.
 
     Vegem que la branca `beguda` i el `HEAD` han avançat al nou _commit_.
 
-![Estructura de branques després de fer un commit a la branca beguda](img/commit_beguda.png)
+![Estructura de branques després de fer un commit a la branca beguda](img/commit_beguda.light.png#only-light)
+![Estructura de branques després de fer un commit a la branca beguda](img/commit_beguda.dark.png#only-dark)
 /// figure-caption
     attrs: { id: figure-commit-beguda }
 Estructura de branques després de fer un _commit_ a la branca `beguda`.
@@ -245,7 +250,8 @@ Estructura de branques després de fer un _commit_ a la branca `beguda`.
 
     Vegem que la branca `neteja` i el `HEAD` han avançat al nou _commit_.
 
-![Estructura de branques després de fer un commit a la branca neteja](img/commit_neteja.png)
+![Estructura de branques després de fer un commit a la branca neteja](img/commit_neteja.light.png#only-light)
+![Estructura de branques després de fer un commit a la branca neteja](img/commit_neteja.dark.png#only-dark)
 /// figure-caption
     attrs: { id: figure-commit-neteja }
 Estructura de branques després de fer un _commit_ a la branca `neteja`.
@@ -304,7 +310,8 @@ git branch [-d | --delete] [-D] [-f | --force] <nom>
     La branca `neteja` ha estat eliminada i, per tant, el _commit_ __Productes de neteja__
     s'ha convertit en un _commit_ orfe i serà eliminat pel recol·lector de brossa de Git.
 
-![Estructura de branques després d'eliminar la branca neteja](img/delete_neteja.png)
+![Estructura de branques després d'eliminar la branca neteja](img/delete_neteja.light.png#only-light)
+![Estructura de branques després d'eliminar la branca neteja](img/delete_neteja.dark.png#only-dark)
 /// figure-caption
     attrs: { id: figure-delete-neteja }
 Estructura de branques després d'eliminar la branca `neteja`.
@@ -340,7 +347,8 @@ quan la branca actual (`HEAD`) no té cap nou _commit_ des de que es va crear la
 que es vol fusionar. És a dir, la branca que es vol fusionar està __darrere__ de la branca actual,
 mantenint una __història lineal__.
 
-![Estructura de branques abans de la fusió directa](img/before_ff.png)
+![Estructura de branques abans de la fusió directa](img/before_ff.light.png#only-light)
+![Estructura de branques abans de la fusió directa](img/before_ff.dark.png#only-dark)
 /// figure-caption
     attrs: { id: figure-before-ff }
 Estructura de branques abans de la fusió directa.
@@ -349,7 +357,8 @@ Estructura de branques abans de la fusió directa.
 Aquesta fusió consisteix a avançar el punter de la branca actual (`HEAD`)
 fins on es troba la branca que es vol fusionar.
 
-![Estructura de branques després de la fusió directa](img/after_ff.png)
+![Estructura de branques després de la fusió directa](img/after_ff.light.png#only-light)
+![Estructura de branques després de la fusió directa](img/after_ff.dark.png#only-dark)
 /// figure-caption
     attrs: { id: figure-after-ff }
 Estructura de branques després de la fusió directa de la branca `menjar` a la branca `main`.
@@ -395,7 +404,8 @@ Pot donar-se el cas que les dues branques hagen __divergit__, és a dir, que cad
 realitzat canvis que no estan presents en l'altra branca.
 
 
-![Història abans de la fusió en branques divergents](img/before_divergent.png)
+![Història abans de la fusió en branques divergents](img/before_divergent.light.png#only-light)
+![Història abans de la fusió en branques divergents](img/before_divergent.dark.png#only-dark)
 /// figure-caption
     attrs: { id: figure-before-no-ff }
 Història abans de la fusió en branques divergents.
@@ -405,7 +415,8 @@ En aquest cas, la fusió es realitza mitjançant un __commit de fusió__ (_merge
 Aquest _commit_ de fusió té dos pares, un per cada branca que es fusiona
 i incorpora els canvis de les dues branques.
 
-![Història després de la fusió en branques divergents](img/after_divergent.png)
+![Història després de la fusió en branques divergents](img/after_divergent.light.png#only-light)
+![Història després de la fusió en branques divergents](img/after_divergent.dark.png#only-dark)
 /// figure-caption
     attrs: { id: figure-after-no-ff }
 Història després de la fusió en branques divergents de la branca `beguda` a la branca `main`.
@@ -484,17 +495,17 @@ Una vegada resolt el conflicte, caldrà confirmar els canvis amb `git add` i `gi
 !!! info
     En cas que es desitge cancel·lar el procés de fusió, es pot utilitzar l'ordre `git merge --abort`.
 
-??? prep annotate "Preparació branques divergents `fruta` i `verdura`"
-    1. Creem les branques `fruta` i `verdura` des de la branca `main`.
+??? prep annotate "Preparació branques divergents `fruita` i `verdura`"
+    1. Creem les branques `fruita` i `verdura` des de la branca `main`.
 
     ```shellconsole
     --8<-- "docs/files/branques/stdout/branques/merge_conflicts_branch_create.txt"
     ```
 
-    2. Afegim dues fruites al fitxer `menjar.txt` en la branca `fruta`.
+    2. Afegim dues fruites al fitxer `menjar.txt` en la branca `fruita`.
 
     ```shellconsole
-    --8<-- "docs/files/branques/stdout/branques/merge_conflicts_fruta.txt"
+    --8<-- "docs/files/branques/stdout/branques/merge_conflicts_fruita.txt"
     ```
 
     3. Afegim dues verdures al fitxer `menjar.txt` en la branca `verdura`.
@@ -503,19 +514,19 @@ Una vegada resolt el conflicte, caldrà confirmar els canvis amb `git add` i `gi
     --8<-- "docs/files/branques/stdout/branques/merge_conflicts_verdura.txt"
     ```
 
-??? example annotate "Exemple: Fusió de branques `fruta` i `verdura` amb conflictes"
-    Les branques `fruta` i `verdura` han modificat la mateixa secció del fitxer `menjar.txt`,
+??? example annotate "Exemple: Fusió de branques `fruita` i `verdura` amb conflictes"
+    Les branques `fruita` i `verdura` han modificat la mateixa secció del fitxer `menjar.txt`,
     per tant, quan les fusionem, es produirà un conflicte.
 
     ```shellconsole
     --8<-- "docs/files/branques/stdout/branques/merge_conflicts_show.txt"
     ```
 
-    1. Primer, realitzem una [[branques#fusio-directa]] entre de la branca `fruta` a la branca `main`,
+    1. Primer, realitzem una [[branques#fusio-directa]] entre de la branca `fruita` a la branca `main`,
         on no hi haurà conflictes.
 
     ```shellconsole
-    --8<-- "docs/files/branques/stdout/branques/merge_conflicts_merge_fruta.txt"
+    --8<-- "docs/files/branques/stdout/branques/merge_conflicts_merge_fruita.txt"
     ```
 
     2. Després, realitzarem la fusió de la branca `verdura` a la branca `main`,
@@ -549,32 +560,54 @@ Una vegada resolt el conflicte, caldrà confirmar els canvis amb `git add` i `gi
 
 
 ## Canvi de base (`rebase`)
-El __canvi de base__ (`rebase`) és una altra manera de fusionar canvis de branques __divergents__,
-que consisteix en aplicar els canvis dels _commit_ d'una branca sobre una altra branca, en ordre cronològic.
+El __canvi de base__ una altra manera d'actualitzar canvis entre dues branques __divergents__,
+que consisteix en aplicar els canvis dels _commits_ d'una branca sobre una altra branca, en ordre cronològic.
 
 !!! important
     Aquesta tècnica permet eliminar les branques divergents i mantindre una __història lineal__.
 
-Aquest procés es realitza amb l'ordre:
+Aquest procés es realitza amb l'ordre `git rebase`, amb la següent sintaxi:
 ```bash
-git rebase <branca>
+git rebase <nova_base> [<branca>]
 ```
+
+- `<nova_base>`: Nom de la branca que es vol utilitzar com a nova base.
+- `<branca>`: Opcional. Nom de la branca que es vol canviar de base.
+    Si no s'especifica, es canviarà la base de la branca actual (`HEAD`).
+
+    Si s'especifica la `branca`, l'operació `rebase` realitzarà un `git checkout <branca>` automàticament.
 
 !!! docs "Documentació oficial de :simple-git: Git"
     - [:octicons-link-external-16: `git rebase`](https://git-scm.com/docs/git-rebase)
     - [:octicons-link-external-16: Capítol 3.5 Git Branching - Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing) – [:simple-git: Pro Git Book](https://git-scm.com/book/en/v2)
 
-![Història abans del canvi de base](img/before_rebase.png)
+
+Anem a veure el procés de canvi de base de la branca `paella` a la branca `main`.
+Des de la branca `paella`, executarem qualsevol de les ordres següents:
+
+```bash
+git rebase main
+git rebase main paella
+```
+
+![Història abans del canvi de base](img/before_rebase.light.png#only-light)
+![Història abans del canvi de base](img/before_rebase.dark.png#only-dark)
 /// figure-caption
 Història abans del canvi de base.
 ///
 
-![Història després del canvi de base](img/after_rebase.png)
+En primer lloc, el canvi de base identificarà tots els _commits_ de la `branca`
+que no estan presents en la `nova_base`, és a dir, tots els posteriors al __ancestre comú__.
+
+Després, el `HEAD` es mourà a la `nova_base` (`main` en aquest cas) i aplicarà
+els _commits_ de la `branca` en ordre seqüencial.
+
+
+![Història després del canvi de base](img/after_rebase.light.png#only-light)
+![Història després del canvi de base](img/after_rebase.dark.png#only-dark)
 /// figure-caption
 Història després del canvi de base.
 ///
-!!! important
-    L'ordre `git rebase` canviarà la base de la branca actual (`HEAD`).
 
 ??? prep annotate "Preparació branques divergents `desdejuni` i `paella`"
     1. Creem les branques `desdejuni` i `paella` des de la branca `main`.
@@ -621,7 +654,6 @@ Història després del canvi de base.
     ```shellconsole
     --8<-- "docs/files/branques/stdout/branques/rebase_merge_paella.txt"
     ```
-    
 
 
 ### Resolució de conflictes

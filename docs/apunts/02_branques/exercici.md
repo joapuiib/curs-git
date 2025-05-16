@@ -66,15 +66,15 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 1. Fes un primer _commit_. Tria un missatge significatiu.
 1. Reanomena la branca principal a `main`.
 
-### Fusió directa
 
+### Fusió directa
 1. Crea una branca anomenada `musica` i situa't en aquesta branca.
 1. Crea un fitxer anomenat `musica.txt` i afegeix tres cançons que t'agraden.
 1. Fes un _commit_ en aquesta branca.
 1. Fusiona la branca `musica` amb la branca `main`.
 
-### Fusió de branques divergents
 
+### Fusió de branques divergents
 1. Des de la branca `main`, crea les branques `mes-llibres` i `mes-musica`.
 1. Des de la branca `mes-llibres`:
     1. Afegeix un llibre a `llibres.txt`.
@@ -86,8 +86,8 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 1. Fusiona la branca `mes-llibres` amb la branca `main`.
 1. Fusiona la branca `mes-musica` amb la branca `main`.
 
-### Resolució de conflictes en la fusió
 
+### Resolució de conflictes en la fusió
 1. Des de la branca `main`, crea les branques `llibres-ciencia-ficcio` i `llibres-fantasia`.
 1. Des de la branca `llibres-ciencia-ficcio`:
     1. Afegeix un llibre de ciència-ficció a `llibres.txt`.
@@ -97,6 +97,10 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
     1. Fes un _commit_.
 1. Fusiona la branca `llibres-ciencia-ficcio` amb la branca `main`.
 1. Fusiona la branca `llibres-fantasia` amb la branca `main`.
+
+    !!! important
+        Documenta correctament els conflictes que s'han generat i com els has resolt.
+
 
 ### Eliminació d'una branca
 1. Des de la branca `main`, crea una branca anomenada `series`.
@@ -139,4 +143,33 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
     1. Fes un _commit_.
 1. Fusiona la branca `series-accio` amb la branca `main`.
 1. Canvia la base de la branca `series-drama` a la branca `main`.
+
+    !!! important
+        Documenta correctament els conflictes que s'han generat i com els has resolt.
+
 1. Fusiona la branca `series-drama` amb la branca `main`.
+
+## Estat final
+!!! important
+    Trieu un missatge significatiu i descriptiu per a cada _commit_.
+
+```shellconsole
+jpuigcerver@FP:~/bloc2_exercici (main) $ git lga
+* bdbd567 - (7 hours ago) Sèries drama - Joan Puigcerver (HEAD -> main, series-drama) # Canvi de base amb conflictes
+* f8eda6f - (7 hours ago) Sèries acció - Joan Puigcerver (series-accio)
+* 1f3b706 - (7 hours ago) Sèries - Joan Puigcerver (series) # Canvi de base
+* 560f17e - (7 hours ago) Pel·lícules - Joan Puigcerver (pelicules)
+*   64746f4 - (8 hours ago) Fusió de branques divergents amb conflictes - Joan Puigcerver # Resolució de conflictes
+|\  
+| * 94da3f8 - (8 hours ago) Llibres fantasia - Joan Puigcerver (llibres-fantasia)
+* | 766f3af - (8 hours ago) Llibres ciència ficció - Joan Puigcerver (llibres-ciencia-ficcio)
+|/  
+*   c9ffd43 - (9 hours ago) Fusió de branques divergents - Joan Puigcerver # Fusió de branques divergents
+|\  
+| * 7193d82 - (9 hours ago) Més música - Joan Puigcerver (mes-musica)
+* | 01e1b0b - (9 hours ago) Més llibres - Joan Puigcerver (mes-llibres)
+|/  
+* 7d7907b - (9 hours ago) Música - Joan Puigcerver (musica) # Fusió directa
+* 54d8e87 - (9 hours ago) Llibres - Joan Puigcerver
+
+```
