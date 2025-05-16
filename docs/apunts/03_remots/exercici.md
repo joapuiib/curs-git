@@ -93,7 +93,7 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 1. Configura el repositori clonat per realitzar _commits_ amb el següent usuari:
     ```bash
     git config user.name "Brian"
-    git config user.email "brian.cohen@fpmislata.com"
+    git config user.email "brian.cohen@edu.gva.es"
     ```
 
 ### Publicació de canvis
