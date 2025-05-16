@@ -172,3 +172,18 @@ Des del repositori `bloc3_exercici`:
 1. Elimina la branca local `musica`.
 1. Elimina la branca remota `musica`.
     
+
+## Estat final
+```shellconsole
+joapuiib@FP:~/bloc3_exercici (main) $ git lga
+* 3a2009a - (53 seconds ago) Afegida música - Joan Puigcerver (HEAD -> main, origin/main)
+* 5959e77 - (2 minutes ago) Pel·lícula: El sentit de la vida - Brian
+* 93cc993 - (2 minutes ago) Afegida altra pel·lícula - Joan Puigcerver
+*   aabc7af - (3 minutes ago) Merge branch 'origin/main' into main - Brian # Incorporació de canvis amb branques divergents
+|\  
+| * 378c837 - (4 minutes ago) Afegida pel·lícula - Joan Puigcerver
+* | 6c947d7 - (3 minutes ago) Pel·lícula: Holy Grail - Brian
+|/  
+* a014035 - (6 minutes ago) Pel·lícula: La vida de Brian - Brian # Incorporació de canvis
+* f4fdd0f - (8 minutes ago) Afegits llibres - Joan Puigcerver
+```
