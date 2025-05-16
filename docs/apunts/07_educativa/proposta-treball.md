@@ -376,7 +376,7 @@ Aquesta eina permet realitzar les següents accions de manera massiva:
     per verificar que tot funciona correctament.
 
     A més, si trobeu algun error o teniu alguna proposta de millora,
-    podeu indicar-ho a la secció d'[:octicons-issue-opened-16: Issues del reposiotori de `ghot`][ghot-issues].
+    podeu indicar-ho a la secció d'[:octicons-issue-opened-16: Issues del repositori de `ghot`][ghot-issues].
 
 [ghot-issues]: https://github.com/joapuiib/github-organization-tools/issues
 
