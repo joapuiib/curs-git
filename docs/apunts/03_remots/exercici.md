@@ -100,6 +100,9 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 !!! important
     A partir d'aquest punt treballarem amb els dos repositoris locals: `bloc3_exercici` i `bloc3_exercici_clone`.
 
+    Et recomane obrir cada directori a finestra de :material-microsoft-visual-studio-code: Visual Studio Code
+    diferent o utilitzar dues terminals per a treballar amb els dos repositoris alhora.
+
 Des del repositori `bloc3_exercici_clone`:
 
 1. Afegeix la pel·lícula __La vida de Brian__ al fitxer `pelicules.txt`.
