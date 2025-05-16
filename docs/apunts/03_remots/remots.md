@@ -484,7 +484,7 @@ git pull [<options>] [<remot> [<branca>]]
 ```
 
 - `<options>`: Opcions de la comanda.
-- `<remot>`: Àlies del repositori remot. Per defecte, s'utilitza la [branca remota associada][associada] a la branca acutal.
+- `<remot>`: Àlies del repositori remot. Per defecte, s'utilitza la [branca remota associada][associada] a la branca actual.
 - `<branca>`: Nom de la branca remota. Per defecte, s'utilitza la [branca remota associada][associada] a la branca actual.
 
 [associada]: #associacio-de-branques-locals-i-remotes
