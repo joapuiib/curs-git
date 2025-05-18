@@ -1145,11 +1145,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#associacio-entre-branques-locals-i-remotes-git-push-set-upstream" class="md-nav__link">
+  <a href="#publicacio-de-canvis-git-push" class="md-nav__link">
     <span class="md-ellipsis">
-      Associació entre branques locals i remotes (git push --set-upstream)
+      Publicació de canvis (git push)
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Publicació de canvis (git push)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#associacio-de-branques-locals-i-remotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Associació de branques locals i remotes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2266,11 +2281,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#associacio-entre-branques-locals-i-remotes-git-push-set-upstream" class="md-nav__link">
+  <a href="#publicacio-de-canvis-git-push" class="md-nav__link">
     <span class="md-ellipsis">
-      Associació entre branques locals i remotes (git push --set-upstream)
+      Publicació de canvis (git push)
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Publicació de canvis (git push)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#associacio-de-branques-locals-i-remotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Associació de branques locals i remotes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2807,13 +2837,12 @@ associat al teu repositori local.</p>
 <ul>
 <li><code>&lt;alies&gt;</code>: Àlies del repositori remot a eliminar.</li>
 </ul>
-<h2 id="associacio-entre-branques-locals-i-remotes-git-push-set-upstream">Associació entre branques locals i remotes (<code>git push --set-upstream</code>)<a class="headerlink" href="#associacio-entre-branques-locals-i-remotes-git-push-set-upstream" title="Permanent link">&para;</a></h2>
+<h2 id="publicacio-de-canvis-git-push">Publicació de canvis (<code>git push</code>)<a class="headerlink" href="#publicacio-de-canvis-git-push" title="Permanent link">&para;</a></h2>
 <p>De moment, les branques que hem creat resideixen en el repositori local,
 és a dir, en el nostre dispositiu.</p>
-<p>Podem associar les branques locals a branques remotes, del repositori remot,
-perquè els canvis que fem localment es puguen veure reflectits en el repositori remot.</p>
-<p>Per fer-ho, utilitzarem la comanda <code>git push</code> amb l'opció <code>-u</code> o <code>--set-upstream</code>.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>push<span class="w"> </span><span class="o">[</span>-u<span class="p">|</span>--set-upstream<span class="o">]</span><span class="w"> </span>&lt;remot&gt;<span class="w"> </span>&lt;branca&gt;
+<p>Podem publicar la branca i els seus canvis al repositori remot
+mitjançant l'ordre <code>git push</code>.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>push<span class="w"> </span><span class="o">[</span>-u<span class="p">|</span>--set-upstream<span class="o">]</span><span class="w"> </span><span class="o">[</span>&lt;remot&gt;<span class="w"> </span><span class="o">[</span>&lt;branca&gt;<span class="o">]]</span>
 </span></code></pre></div>
 <ul>
 <li><code>-u|--set-upstream</code>: Configura la branca local perquè s'associe amb la branca remota.</li>
@@ -2829,52 +2858,69 @@ perquè els canvis que fem localment es puguen veure reflectits en el repositori
 <p>Aquesta comanda funciona sobre la branca on estem situats (<code>HEAD</code>).</p>
 </div>
 <figure id="__figure-caption_6">
-<p><img alt="Associació d'una branca local a una branca remota" src="../img/push_setupstream.png" /></p>
+<p><img alt="Publicació d'una branca local a una branca remota" src="../img/push.light.png#only-light" />
+<img alt="Publicació d'una branca local a una branca remota" src="../img/push.dark.png#only-dark" /></p>
 <figcaption>
-<p><span class="caption-prefix">Figura 6. </span> Associació d'una branca local a una branca remota</p>
+<p><span class="caption-prefix">Figura 6. </span> Publicació d'una branca local a una branca remota</p>
 </figcaption>
 </figure>
-<div class="admonition tip">
-<p class="admonition-title">Consell</p>
-<p>Pots configurar git perquè configure automàticament la branca local
-perquè s'associe amb la branca remota amb el mateix nom
-amb l'opció <code>push.autoSetupRemote</code>.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>push.autoSetupRemote<span class="w"> </span><span class="nb">true</span>
-</span></code></pre></div>
-</div>
 <details class="example">
-<summary>Exemple: Associació branca local i remota</summary>
+<summary>Exemple: Publicació i associació branca local i remota</summary>
 <p>Vegem que inicialment la branca <code>main</code> no està associada a cap branca remota.</p>
 <p>Si intentem fer un <code>git push</code>, ens mostrarà un missatge d'error com que
 hem d'anar associar una branca remota.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">113f1d4</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(4 seconds ago)</span><span class="w"> </span><span class="git-cm">Commit inicial</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>push
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="git-fatal">fatal: The current branch main has no upstream branch.</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="go">To push the current branch and set the remote as upstream, use</span>
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="go">    git push --set-upstream origin main</span>
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>
-</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="go">To have this happen automatically for branches without a tracking</span>
-</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="go">upstream, see &#39;push.autoSetupRemote&#39; in &#39;git help config&#39;.</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">113f1d4</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(4 seconds ago)</span><span class="w"> </span><span class="git-cm">Commit inicial</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>push
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="git-fatal">fatal: The current branch main has no upstream branch.</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="go">To push the current branch and set the remote as upstream, use</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="go">    git push --set-upstream origin main</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="go">To have this happen automatically for branches without a tracking</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="go">upstream, see &#39;push.autoSetupRemote&#39; in &#39;git help config&#39;.</span>
 </span></code></pre></div>
 <p>Associem les branques <code>main</code> local i remota amb l'ordre <code>git push --set-upstream</code>.</p>
 <p>Localment, s'ha creat la referència <code>origin/main</code> que apunta a la branca remota <code>main</code>.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>push<span class="w"> </span>--set-upstream<span class="w"> </span>origin<span class="w"> </span>main
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="go">branch &#39;main&#39; set up to track &#39;origin/main&#39;.</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="go">To github.com:joapuiib/git_remots.git</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="go"> * [new branch]      main -&gt; main</span>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">113f1d4</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">Commit inicial</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main, origin/main)</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>push<span class="w"> </span>--set-upstream<span class="w"> </span>origin<span class="w"> </span>main
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="go">branch &#39;main&#39; set up to track &#39;origin/main&#39;.</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="go">To github.com:joapuiib/git_remots.git</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="go"> * [new branch]      main -&gt; main</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_remots</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">113f1d4</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">Commit inicial</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main, origin/main)</span>
 </span></code></pre></div>
 <p>Vegem que els canvis s'han publicat correctament al repositori remot:</p>
-<figure id="__figure-caption_6_1">
+<figure class="shadow" id="__figure-caption_6_1">
 <p><img alt="Canvis publicats a GitHub" src="../img/github_push.png" /></p>
 <figcaption>
 <p><span class="caption-prefix">Figura 6.1. </span> Canvis publicats a <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg></span> GitHub</p>
 </figcaption>
 </figure>
 </details>
+<h3 id="associacio-de-branques-locals-i-remotes">Associació de branques locals i remotes<a class="headerlink" href="#associacio-de-branques-locals-i-remotes" title="Permanent link">&para;</a></h3>
+<p>Les branques locals poden ser associades a branques remotes
+mitjançant l'opció <code>-u</code> o <code>--set-upstream</code> de la comanda <code>git push</code>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>git push [-u | --set-upstream] &lt;remot&gt; &lt;branca&gt;
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>Aquesta associació li permet a Git saber sobre quina branca remota
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>ha de realitzar les operacions quan no s&#39;especifica explicitament,
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>com ara `git pull` o `git push`.
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>!!! tip &quot;Consell&quot;
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>    Pots configurar git perquè configure automàticament la branca local
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>    perquè s&#39;associe amb la branca remota amb el mateix nom
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>    amb l&#39;opció `push.autoSetupRemote`.
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>    ```bash
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>    git config --global push.autoSetupRemote true
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>    ```
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>L&#39;associació d&#39;una branca local pot ser eliminada
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>mitjançant l&#39;ordre `git branch --unset-upstream`.
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>```bash
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>git branch --unset-upstream [&lt;branca&gt;]
+</span></code></pre></div>
 <h2 id="clonacio-dun-repositori-remot-git-clone">Clonació d'un repositori remot (<code>git clone</code>)<a class="headerlink" href="#clonacio-dun-repositori-remot-git-clone" title="Permanent link">&para;</a></h2>
 <p>L'ordre <code>git clone</code> permet copiar un repositori remot a un repositori local en el teu sistema,
 des del qual podràs realitzar canvis.</p>
@@ -3019,12 +3065,13 @@ utilitzarem l'ordre <code>git pull</code>.</p>
 <p><span class="caption-prefix">Figura 9. </span> Incorporació de canvis amb <code>git pull</code></p>
 </figcaption>
 </figure>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>git<span class="w"> </span>pull<span class="w"> </span><span class="o">[</span>&lt;options&gt;<span class="o">]</span><span class="w"> </span><span class="o">[</span>&lt;remot&gt;<span class="w"> </span><span class="o">[</span>&lt;branca&gt;<span class="o">]</span>
+<p>La sintaxi és:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>git<span class="w"> </span>pull<span class="w"> </span><span class="o">[</span>&lt;options&gt;<span class="o">]</span><span class="w"> </span><span class="o">[</span>&lt;remot&gt;<span class="w"> </span><span class="o">[</span>&lt;branca&gt;<span class="o">]]</span>
 </span></code></pre></div>
 <ul>
 <li><code>&lt;options&gt;</code>: Opcions de la comanda.</li>
-<li><code>&lt;remot&gt;</code>: Àlies del repositori remot. Per defecte, s'utilitza la configuració de la branca actual.</li>
-<li><code>&lt;branca&gt;</code>: Nom de la branca remota. Per defecte, s'utilitza la configuració de la branca actual.</li>
+<li><code>&lt;remot&gt;</code>: Àlies del repositori remot. Per defecte, s'utilitza la <a href="#associacio-de-branques-locals-i-remotes">branca remota associada</a> a la branca actual.</li>
+<li><code>&lt;branca&gt;</code>: Nom de la branca remota. Per defecte, s'utilitza la <a href="#associacio-de-branques-locals-i-remotes">branca remota associada</a> a la branca actual.</li>
 </ul>
 <div class="admonition docs">
 <p class="admonition-title">Documentació oficial de <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.546 10.93 13.067.452a1.55 1.55 0 0 0-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 0 1 2.327 2.341l2.658 2.66a1.838 1.838 0 0 1 1.9 3.039 1.837 1.837 0 0 1-2.6 0 1.85 1.85 0 0 1-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348a1.85 1.85 0 0 1 0 2.6 1.844 1.844 0 0 1-2.609 0 1.834 1.834 0 0 1 0-2.598c.182-.18.387-.316.605-.406V8.835a1.834 1.834 0 0 1-.996-2.41L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477a1.545 1.545 0 0 0 2.186 0l10.43-10.43a1.544 1.544 0 0 0 0-2.187"/></svg></span> Git</p>
@@ -3282,7 +3329,7 @@ mantenint una història lineal.</p>
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="14 d’abril del 2025 10:37:03">14 d’abril del 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="18 de maig del 2025 17:23:10">18 de maig del 2025</span>
   </span>
 
     
