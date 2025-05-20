@@ -12,13 +12,13 @@
 	 counter-reset: item;
 }
 
-.md-typeset div.steps > ol li {
+.md-typeset div.steps > ol > li {
 	 position: relative;
 	 padding-left: 1em;
 	 list-style: none;
 }
 
-.md-typeset div.steps > ol li::before {
+.md-typeset div.steps > ol > li::before {
 	 position: absolute;
 	 top: 0;
 	 left: 0;
@@ -38,7 +38,7 @@
 	 counter-increment: item;
 }
 
-.md-typeset div.steps > ol li::after {
+.md-typeset div.steps > ol > li::after {
 	 position: absolute;
 	 top: 0;
 	 bottom: 0;
@@ -50,6 +50,6 @@
 	 content: '';
 }
 /* Remove the line for the last item */
-:nth-last-child(1 of div.steps > ol li)::after {
+:nth-last-child(1 of div.steps > ol > li)::after {
   border-left: none;
 }
