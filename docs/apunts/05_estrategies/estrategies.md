@@ -31,15 +31,15 @@ A més, les estratègies poden ser utilitzades en combinació amb
 altres ferramentes com les [[pull-requests]],
 que veurem en el [[projectes-index]].
 
-No obstant això, pot suposar una sobrecàrrega en projectes xicotets o amb pocs membres.
+No obstant això, fer ús d'una estratègia de ramificació pot suposar una sobrecàrrega
+en projectes xicotets o amb pocs membres.
 És important adaptar la metodologia a les necessitats del projecte
 i no seguir-la de forma estricta si no aporta valor afegit.
 
 !!! note
-    No és necessari utilitzar tots els tipus de branques. És recomanable adaptar
-    el flux de treball a les necessitats i envergadura del projecte.
+    No és necessari utilitzar tots els tipus de branques.
 
-    En projectes xicotets pot ser no és necessària una branca de desenvolupament `develop`
+    Per exemple, en projectes xicotets, potser no és necessària una branca de desenvolupament `develop`
     o branques de llançament `release/*`.
 
 
@@ -52,8 +52,17 @@ cadascuna amb un __propòsit concret__ i una sèrie de regles per crear-les, inc
 - __[Branca de desenvolupament](#branca-principal-i-de-desenvolupament) (`develop`):__ Branca on es troba l'estat actual del projecte,
     on s'incorporen les funcionalitats provades i acabades.
 
+    - En un primer moment, es crea a partir de la branca `main`.
+    - S'utilitza per integrar les branques de funcionalitat `feature/*`,
+        que anirà avançant respecte a la branca `main`.
+    - Es fusiona amb la branca `main` quan es prepara una nova versió del projecte.
+
 - __[Branques de funcionalitat](#branques-de-funcionalitat) (`feature/*`):__ Per cada nova funcionalitat es crea una branca independent,
     on es codifica i es prova la nova funcionalitat.
+    
+    - Es creen a partir de la branca `develop`.
+    - Es fusionen amb la branca `develop` una vegada acabades.
+    - Poden ser eliminades després de ser integrades.
 
 - __[Branques de llançament](#branques-de-llancament) (`release/*`):__ Branca on es preparen els canvis
     per poder publicar una nova versió del projecte.
@@ -121,6 +130,7 @@ El flux de treball amb aquestes branques és el següent:
         > És preferible mantindre les branques de funcionalitat actualitzades amb els canvis del projecte,
         > i d'aquesta manera, evitar resolucions de conflictes immenses en el moment d'integrar-les.
 
+
 ### Integració
 El procés per integrar les funcionalitats a la branca de desenvolupament `develop`
 és el següent:
@@ -147,24 +157,76 @@ El procés per integrar les funcionalitats a la branca de desenvolupament `devel
 
 3. Actualitzar la branca `feature/*` amb els nous canvis de `develop`.
 
-    > Vegeu cada tècnica d'integració
+    > Varia d'acord amb la tècnica triada per a la integració.
+    >
+    > Vegeu les seccions dedicades a cada tècnica per a més informació.
+
+    === "`merge --no-ff`"
+        No és necessari.
+
+    === "`rebase` + `merge --ff-only`"
+        ```bash
+        git checkout feature/nom-funcionalitat
+        git rebase develop
+        ```
+
+    === "`rebase` + `merge --no-ff`"
+        ```bash
+        git checkout feature/nom-funcionalitat
+        git rebase develop
+        ```
+
+    === ":octicons-thumbsup-16:{ .text-success title="Opció recomanada" } `merge --squash`"
+        ```bash
+        git checkout feature/nom-funcionalitat
+        git merge --no-ff develop
+        ```
+        
 
 4. Incorporar els canvis de la branca `feature/*` amb la branca `develop` amb la tècnica triada.
 
-    > Vegeu cada tècnica d'integració
+    === "`merge --no-ff`"
+        ```
+        git checkout develop
+        git merge --no-ff feature/nom-funcionalitat
+        ```
+
+    === "`rebase` + `merge --ff-only`"
+        ```bash
+        git checkout develop
+        git merge --ff-only feature/nom-funcionalitat
+        ```
+
+    === "`rebase` + `merge --no-ff`"
+        ```bash
+        git checkout develop
+        git merge --no-ff feature/nom-funcionalitat
+        ```
+
+    === ":octicons-thumbsup-16:{ .text-success title="Opció recomanada" } `merge --squash`"
+        ```bash
+        git checkout develop
+        git merge --squash feature/nom-funcionalitat
+        git commit
+        ```
+
 
 5. Publicar els canvis de la branca `develop` al repositori remot amb `git push`.
 
     !!! danger
-        En aquest punt podria passar que mentre has realitzat aquest procés,
-        altres desenvolupadors hagen publicat nous canvis a la branca
-        `develop`.
+        En aquest punt podria donar-se el cas que, mentres has realitzat aquest procés,
+        altres desenvolupadors han publicat nous canvis a la branca
+        `develop` i per tant, la teua branca `develop` no està actualitzada i no pot
+        ser publicada.
 
-        En aquest cas, caldria integrar els canvis de `develop`:
+        En aquest cas, caldrà tornar la branca `develop` a l'estat del repositori remot
+        i tornar a fer el procés d'integració.
 
-        ```bash
-        git pull --rebase
         ```
+        git checkout develop
+        git reset --hard origin/develop
+        ```
+
 
 1. Eliminar la branca `feature/*` del repositori local i del remot.
 
@@ -172,7 +234,6 @@ El procés per integrar les funcionalitats a la branca de desenvolupament `devel
     git branch -D feature/nom-funcionalitat
     git push -d origin feature/nom-funcionalitat
     ```
-    
 
 
 ### `merge --no-ff`
@@ -228,7 +289,6 @@ Les característiques d'aquesta opció són:
 
 - Manté tot l'històric de canvis[^1].
 - Manté la història lineal.
-- Permet resoldre els conflictes fàcilment en el procés de `rebase`.
 - Realitzar el canvi de base de funcionalitats amb molts _commits_ pot ser complicat
     quan hi ha conflictes.
 - Revertir una funcionalitat no és trivial, ja que cal revertir múltiples _commits_.
@@ -262,6 +322,9 @@ Les característiques d'aquesta opció són:
 
 
 ### `merge --squash`
+
+!!! recommend "Opció recomanada"
+
 Aquesta opció consisteix a fusionar les branques de funcionalitat amb la branca de desenvolupament `develop`
 mitjançant `merge --squash`, de manera que tots els _commits_ de la branca de funcionalitat es fusionen
 en un __únic *commit*__.
@@ -326,6 +389,11 @@ i s'utilitzen per a realitzar tasques com:
 - Actualitzar la versió del projecte.
 - Preparar paràmetres de configuració específics per a el llançament.
 
+!!! tip
+    Si el teu projecte no requereix de tasques específiques per a preparar el llançament,
+    pots prescindir d'aquestes branques i fusionar directament la branca de desenvolupament `develop`
+    amb la branca principal `main`.
+
 El flux de treball amb aquestes branques és el següent:
 
 - Es creen a partir de la branca de desenvolupament `develop`.
@@ -333,15 +401,15 @@ El flux de treball amb aquestes branques és el següent:
 - S'integren els canvis a la branca de desenvolupament `develop`.
 - S'integren els canvis a la branca de desenvolupament `main`.
 
-
 ![Branques de llançament](img/release.png)
 /// figure-caption
 Branques de llançament
 ///
 
 !!! tip
-    Si el teu projecte no requereix de tasques específiques per a preparar el llançament,
-    pots prescindir d'aquestes branques i publicar directament des de la branca de desenvolupament `develop`.
+    Si el procés de publicació es realitza amb múltiples commits,
+    pots fer ús de `merge --squash` per a integrar els canvis
+    en un únic _commit_ a la branca de desenvolupament `develop`.
 
 
 ## Branques de correcció

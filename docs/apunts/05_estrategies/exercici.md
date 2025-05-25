@@ -80,11 +80,11 @@ pots triar entre les següents opcions:
     - `feature/series-genere3`
     - `feature/series-genere4`
 
-6. En cada branca de funcionalitat:
-    - `feature/pelicules-genere1`: Afegeix 2 pel·lícules del gènere 1 a `pelicules.txt`.
-    - `feature/pelicules-genere2`: Afegeix 2 pel·lícules del gènere 2 a `pelicules.txt`.
-    - `feature/series-genere3`: Afegeix 2 sèries del gènere 3 a `series.txt`.
-    - `feature/series-genere4`: Afegeix 2 sèries del gènere 4 a `series.txt`.
+6. En cada branca de funcionalitat afegeix tants elements del tipus
+    i amb el gènere de la branca com vulgues.
+
+    - Com a mínim 2 elements per branca.
+    - Cada element ha d'estar en un :octicons-git-commit-16: commit diferent.
 
 7. Integra les branques de funcionalitat a la branca `develop`
     utilitzant una de les estratègies de fusió.

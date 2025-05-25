@@ -17,12 +17,13 @@ projectes col·laboratius.
 /// html | div.timeline.dashed
 [[estrategies]]
 
+[[estrategies-slides]]
+
 - Branques amb diferents propòsits.
 - Tècniques d'incorporació de canvis.
 - Flux de treball.
 
-[[estrategies-example]]: Exemple d'estratègia de ramificació
-    en un projecte simulat entre diversos col·laboradors.
+[[estrategies-example]] simulat entre diversos col·laboradors.
 ///
 
 /// html | div.timeline.success.check
