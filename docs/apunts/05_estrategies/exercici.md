@@ -60,6 +60,8 @@ has d'utilitzar la tècnica [__merge --squash__][merge-squash].
 
 [merge-squash]: estrategies.md#merge-squash
 
+!!! notice "Recordeu actualitzar les branques de funcionalitat amb la branca de desenvolupament amb `git merge --no-ff` abans d'integrar-les!"
+
 ### Tasca
 
 1. Crea un repositori de Git anomenat `git_estrategies_exerici`.
@@ -69,13 +71,12 @@ has d'utilitzar la tècnica [__merge --squash__][merge-squash].
 4. Crea una branca `develop` a partir de la branca `main`.
 5. Crea les següents branques de funcionalitat:
 
-    !!! note
-        Modifica `genereX` per un gènere de pel·lícules o sèries que t'agrade.
+    !!! note "Modifica `genere-N` per un gènere de pel·lícules o sèries que t'agrade."
 
-    - `feature/pelicules-genere1`
-    - `feature/pelicules-genere2`
-    - `feature/series-genere3`
-    - `feature/series-genere4`
+    - `feature/pelicules-genere-1`
+    - `feature/pelicules-genere-2`
+    - `feature/series-genere-3`
+    - `feature/series-genere-4`
 
 6. En cada branca de funcionalitat afegeix tants elements del tipus
     i amb el gènere de la branca com vulgues.
