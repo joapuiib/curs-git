@@ -153,7 +153,7 @@ Des del repositori `bloc3_exercici_clone`:
 1. Afegeix la pel·lícula __El sentit de la vida__ al fitxer `pelicules.txt`.
 1. Realitza un _commit_.
 1. Incorpora els canvis de la branca `origin/main` a la branca `main` local
-    amb un canvi de base.
+    amb un __canvi de base__.
 1. Resol els conflictes que puguen aparéixer.
 1. Publica la branca `main` al repositori remot.
 
@@ -187,3 +187,37 @@ joapuiib@FP:~/bloc3_exercici (main) $ git lga
 * a014035 - (6 minutes ago) Pel·lícula: La vida de Brian - Brian # Incorporació de canvis
 * f4fdd0f - (8 minutes ago) Afegits llibres - Joan Puigcerver
 ```
+
+
+## Errors més comuns
+
+1. __No realitzar la incorporació dels canvis remots amb un canvi de base__.
+
+    Realitzar un `git pull` directament crearà un __commit de fusió__,
+    i la història del repositori no serà lineal.
+
+    Vegeu: [:material-book-open-variant: Remots - Incorporació de canvis][pull-rebase]
+
+    [pull-rebase]: remots.md#git-pull-rebase
+
+2. __Concloure el `rebase` amb un commit__.
+
+    Després de resoldre els conflictes en un `rebase`, cal concloure el procés
+    amb `git add` i `git rebase --continue`.
+
+    Vegeu: [:material-book-open-variant: Branques - Resolució de conflictes en canvi de base][rebase]
+
+    [rebase]: ../02_branques/branques.md#resolucio-de-conflictes_1
+
+    !!! failure "Error"
+        Alguns de vosaltres heu fet un `git add` i un `git commit`,
+        cosa que ha creat un nou commit sense cap branca associada.
+
+        ```shellconsole
+        jpuigcerver@FP:~/bloc3_exercici (main) $ git lga
+        * 1abc468 - (2 minutes ago) Pel·lícula: El sentit de la vida - Brian (HEAD) # Commit sense branca associada
+        * 93cc993 - (2 minutes ago) Afegida altra pel·lícula - Joan Puigcerver (origin/main) # Canvis en el remot 'origin/main'
+        | * 5959e77 - (2 minutes ago) Pel·lícula: El sentit de la vida - Brian (main) # Canvis locals 'main'
+        |/  
+        * aabc7af - (3 minutes ago) Merge branch 'origin/main' into main - Brian
+        ```

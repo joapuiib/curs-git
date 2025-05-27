@@ -659,14 +659,16 @@ Història després del canvi de base.
 ### Resolució de conflictes
 El __canvi de base__ (`rebase`) també pot provocar conflictes si les dues branques
 han modificat la mateixa part d'un fitxer.
-
 Git ens indicarà que hi ha conflictes i caldrà resoldre'ls manualment,
 d'una manera similar a [__la resolució de conflictes en la fusió de branques__](#resolucio-de-conflictes).
 
 En aquest cas, caldrà resoldre els conflictes per a cada _commit_ en el que s'està canviant la base.
 
-Després de resoldre els conflictes d'un _commit_, caldrà continuar amb el procés de `rebase` amb l'ordre `git rebase --continue`
-fins que s'haja aplicat el canvi de base a tots els _commit_ de la branca.
+- Editem el fitxer per resoldre manualment el conflicte i esborrar les marques de conflicte.
+- Marquem els fitxers com a resolts amb `git add`.
+- Continuem el procés de `rebase` amb l'ordre `git rebase --continue`.
+
+Caldrà repetir aquest procés per a cada _commit_ que tinga conflictes.
 
 ??? prep annotate "Preparació branques divergents `postre` i `aperitiu`"
     1. Creem les branques `postre` i `aperitiu` des de la branca `main`.
