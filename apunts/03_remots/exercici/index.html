@@ -1267,6 +1267,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#errors-mes-comuns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Errors més comuns
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2329,6 +2338,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#errors-mes-comuns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Errors més comuns
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2653,7 +2671,7 @@ diferent o utilitzar dues terminals per a treballar amb els dos repositoris alho
 <li>Afegeix la pel·lícula <strong>El sentit de la vida</strong> al fitxer <code>pelicules.txt</code>.</li>
 <li>Realitza un <em>commit</em>.</li>
 <li>Incorpora els canvis de la branca <code>origin/main</code> a la branca <code>main</code> local
-    amb un canvi de base.</li>
+    amb un <strong>canvi de base</strong>.</li>
 <li>Resol els conflictes que puguen aparéixer.</li>
 <li>Publica la branca <code>main</code> al repositori remot.</li>
 </ol>
@@ -2684,6 +2702,33 @@ diferent o utilitzar dues terminals per a treballar amb els dos repositoris alho
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">a014035</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 minutes ago)</span><span class="w"> </span><span class="git-cm">Pel·lícula: La vida de Brian</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Brian</span><span class="w"> </span><span class="c"># Incorporació de canvis</span>
 </span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">f4fdd0f</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(8 minutes ago)</span><span class="w"> </span><span class="git-cm">Afegits llibres</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
 </span></code></pre></div>
+<h2 id="errors-mes-comuns">Errors més comuns<a class="headerlink" href="#errors-mes-comuns" title="Permanent link">&para;</a></h2>
+<ol class="fancylists-decimal" type="1">
+<li>
+<p><strong>No realitzar la incorporació dels canvis remots amb un canvi de base</strong>.</p>
+<p>Realitzar un <code>git pull</code> directament crearà un <strong>commit de fusió</strong>,
+i la història del repositori no serà lineal.</p>
+<p>Vegeu: <a href="../remots/#git-pull-rebase"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg></span> Remots - Incorporació de canvis</a></p>
+</li>
+<li>
+<p><strong>Concloure el <code>rebase</code> amb un commit</strong>.</p>
+<p>Després de resoldre els conflictes en un <code>rebase</code>, cal concloure el procés
+amb <code>git add</code> i <code>git rebase --continue</code>.</p>
+<p>Vegeu: <a href="../../02_branques/branques/#resolucio-de-conflictes_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg></span> Branques - Resolució de conflictes en canvi de base</a></p>
+<div class="admonition failure">
+<p class="admonition-title">Error</p>
+<p>Alguns de vosaltres heu fet un <code>git add</code> i un <code>git commit</code>,
+cosa que ha creat un nou commit sense cap branca associada.</p>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/bloc3_exercici</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">1abc468</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 minutes ago)</span><span class="w"> </span><span class="git-cm">Pel·lícula: El sentit de la vida</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Brian</span><span class="w"> </span><span class="git-r">(HEAD)</span><span class="w"> </span><span class="c"># Commit sense branca associada</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">93cc993</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 minutes ago)</span><span class="w"> </span><span class="git-cm">Afegida altra pel·lícula</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(origin/main)</span><span class="w"> </span><span class="c"># Canvis en el remot &#39;origin/main&#39;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="git-bl">| </span><span class="go">*</span><span class="w"> </span><span class="git-ch">5959e77</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 minutes ago)</span><span class="w"> </span><span class="git-cm">Pel·lícula: El sentit de la vida</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Brian</span><span class="w"> </span><span class="git-r">(main)</span><span class="w"> </span><span class="c"># Canvis locals &#39;main&#39;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="git-bl">|/  </span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">aabc7af</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 minutes ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;origin/main&#39; into main</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Brian</span>
+</span></code></pre></div>
+</div>
+</li>
+</ol>
 
     <div class="md-document__print">
     
@@ -2751,7 +2796,7 @@ diferent o utilitzar dues terminals per a treballar amb els dos repositoris alho
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="18 de maig del 2025 17:23:10">18 de maig del 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="27 de maig del 2025 17:51:26 UTC">27 de maig del 2025</span>
   </span>
 
     
