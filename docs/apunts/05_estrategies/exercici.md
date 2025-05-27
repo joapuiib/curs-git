@@ -56,12 +56,9 @@ utilitzant les següents branques:
 - Branques de funcionalitat: `feature/*`.
 
 Per integrar les branques de funcionalitat a la branca de desenvolupament,
-pots triar entre les següents opcions:
+has d'utilitzar la tècnica [__merge --squash__][merge-squash].
 
-- :octicons-thumbsup-16:{ .text-success title="Opció recomanada" } [[estrategies#merge-squash]]
-- [[estrategies#merge-no-ff]]
-- [[estrategies#rebase-merge-ff-only]]
-- [[estrategies#rebase-merge-no-ff]]
+[merge-squash]: estrategies.md#merge-squash
 
 ### Tasca
 
@@ -85,13 +82,31 @@ pots triar entre les següents opcions:
 
     - Com a mínim 2 elements per branca.
     - Cada element ha d'estar en un :octicons-git-commit-16: commit diferent.
+    - En el cas de pel·lícules, has d'incloure-les al fitxer `pelicules.txt`.
+    - En el cas de sèries, has d'incloure-les al fitxer `series.txt`.
+
+    !!! docs "Mostra l'estat del repositori amb `git lga` amb totes les branques de funcionalitat"
 
 7. Integra les branques de funcionalitat a la branca `develop`
     utilitzant una de les estratègies de fusió.
 
+    !!! docs "Mostra l'estat del repositori amb `git lga` després de cada integració"
+        _Abans i després d'esborrar la branca de funcionalitat_.
+
 8. Publica els canvis a la branca principal `main`.
 
+    !!! docs "Mostra l'estat del repositori amb `git lga`"
+
 ## Ampliació
-Repeteix l'exercici utilitzant cada vegada una
-de les estratègies d'integració de les
-branques de funcionalitat.
+Repeteix l'exercici utilitzant diferents tècniques
+per integrar les branques de funcionalitat a la branca de desenvolupament.
+
+- [merge --no-ff][merge-no-ff]
+- [rebase + --merge --ff-only][rebase-merge-ff-only]
+- [rebase + --merge --no-ff][rebase-merge-no-ff]
+
+[merge-no-ff]: estrategies.md#merge-no-ff
+[rebase-merge-ff-only]: estrategies.md#rebase-merge-ff-only
+[rebase-merge-no-ff]: estrategies.md#rebase-merge-no-ff
+
+Quina és la tècnica que més t'agrada i per què?
