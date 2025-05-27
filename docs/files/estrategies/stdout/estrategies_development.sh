@@ -28,7 +28,7 @@ git clone remot carles
 # Desenvolupament de la branca feature/readme
 cd ~/git_estrategies/anna
 git config user.name "Anna"
-git config user.email "anna@fpmislata.com"
+git config user.email "anna@alu.edu.gva.es"
 git checkout develop
 git checkout -b feature/readme
 echo "Les estratègies de ramificació proporcionen un" >> README.md
@@ -44,7 +44,7 @@ git push -u origin feature/readme
 # Desenvolupament de la branca feature/license
 cd ~/git_estrategies/pau
 git config user.name "Pau"
-git config user.email "pau@fpmislata.com"
+git config user.email "pau@alu.edu.gva.es"
 git checkout develop
 git checkout -b feature/license
 echo "" > LICENSE
@@ -60,17 +60,17 @@ git push -u origin feature/license
 # Desenvolupament de la branca feature/author
 cd ~/git_estrategies/mar
 git config user.name "Mar"
-git config user.email "mar@fpmislata.com"
+git config user.email "mar@alu.edu.gva.es"
 git checkout develop
 git checkout -b feature/author
 echo "" >> README.md
 echo "## Autors" >> README.md
 git commit -a -m "README.md: Secció d'autors"
-echo "- Anna (anna@fpmislata.com)" >> README.md
+echo "- Anna (anna@alu.edu.gva.es)" >> README.md
 git commit -a -m "Autors: Anna"
-echo "- Pau (pau@fpmislata.com)" >> README.md
+echo "- Pau (pau@alu.edu.gva.es)" >> README.md
 git commit -a -m "Autors: Pau"
-echo "- Mar (mar@fpmislata.com)" >> README.md
+echo "- Mar (mar@alu.edu.gva.es)" >> README.md
 git commit -a -m "Autors: Mar"
 git push -u origin feature/author
 

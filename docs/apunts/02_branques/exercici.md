@@ -149,6 +149,7 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 
 1. Fusiona la branca `series-drama` amb la branca `main`.
 
+
 ## Estat final
 !!! important
     Trieu un missatge significatiu i descriptiu per a cada _commit_.
@@ -173,3 +174,44 @@ jpuigcerver@FP:~/bloc2_exercici (main) $ git lga
 * 54d8e87 - (9 hours ago) Llibres - Joan Puigcerver
 
 ```
+
+
+## Errors més comuns
+
+1. __Realitzar la fusió (`merge`) en sentit contrari__.
+
+    Si volem incorporar els canvis de la branca `A` a la branca `main`,
+    hem de situar-nos en la branca `main` i fer la fusió amb `git merge A`.
+
+    ```shellconsole
+    jpuigcerver@FP:~/bloc2_exercici (A) $ git commit -m "Canvis a la branca A"
+    jpuigcerver@FP:~/bloc2_exercici (A) $ git checkout main
+    jpuigcerver@FP:~/bloc2_exercici (A) $ git lga
+    * 7d7907b - (9 hours ago) Canvis a la branca A - Joan Puigcerver (A)
+    * 54d8e87 - (9 hours ago) Commit anterior - Joan Puigcerver (HEAD -> main)
+    jpuigcerver@FP:~/bloc2_exercici (main) $ git merge A
+    jpuigcerver@FP:~/bloc2_exercici (A) $ git lga
+    * 7d7907b - (9 hours ago) Canvis a la branca A - Joan Puigcerver (HEAD -> main, A)
+    * 54d8e87 - (9 hours ago) Commit anterior - Joan Puigcerver
+    ```
+
+2. __Realitzar el canvi de base (`rebase`) en sentit contrari__.
+
+    Si volem canviar la base de la branca `B` a la branca `main` i
+    incorporar els seus canvis, hem de situar-nos en la branca `B` i fer el canvi de base
+    sobre la branca `main`.
+
+    ```shellconsole
+    jpuigcerver@FP:~/bloc2_exercici (B) $ git commit -m "Canvis a la branca B"
+    jpuigcerver@FP:~/bloc2_exercici (B) $ git lga
+    * 7d7907b - (9 hours ago) Canvis a la branca A - Joan Puigcerver (main, A)
+    | * 54d8e87 - (9 hours ago) Canvis a la branca B - Joan Puigcerver (HEAD -> B)
+    |/
+    * 54d8e87 - (9 hours ago) Commit anterior - Joan Puigcerver
+    jpuigcerver@FP:~/bloc2_exercici (B) $ git rebase main
+    Successfully rebased and updated refs/heads/B.
+    jpuigcerver@FP:~/bloc2_exercici (main) $ git lga
+    * 734fc2a - (9 hours ago) Canvis a la branca B - Joan Puigcerver (HEAD -> B)
+    * 7d7907b - (9 hours ago) Canvis a la branca A - Joan Puigcerver (main, A)
+    * 54d8e87 - (9 hours ago) Commit anterior - Joan Puigcerver
+    ```
