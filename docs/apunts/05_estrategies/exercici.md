@@ -82,6 +82,8 @@ has d'utilitzar la tècnica [__merge --squash__][merge-squash].
 
     - Com a mínim 2 elements per branca.
     - Cada element ha d'estar en un :octicons-git-commit-16: commit diferent.
+    - En el cas de pel·lícules, has d'incloure-les al fitxer `pelicules.txt`.
+    - En el cas de sèries, has d'incloure-les al fitxer `series.txt`.
 
     !!! docs "Mostra l'estat del repositori amb `git lga` amb totes les branques de funcionalitat"
 
