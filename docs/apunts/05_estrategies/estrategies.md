@@ -162,7 +162,12 @@ El procés per integrar les funcionalitats a la branca de desenvolupament `devel
     > Vegeu les seccions dedicades a cada tècnica per a més informació.
 
     === "`merge --no-ff`"
-        No és necessari.
+        No és necessari, però es recomana per mantindre la branca de funcionalitat actualitzada.
+
+        ```bash
+        git checkout feature/nom-funcionalitat
+        git merge --no-ff develop
+        ```
 
     === "`rebase` + `merge --ff-only`"
         ```bash
@@ -340,8 +345,10 @@ git commit -m <missatge>
 Fusió de branques mitjançant `merge --squash`
 ///
 
-En el cas que hi hagen conflictes, una bona pràctica és integrar els canvis de `develop` a la branca de funcionalitat
-i resoldre'ls abans de realitzar la fusió.
+En el cas que la branca de funcionalitat no estiga actualitzada respecte de la branca de desenvolupament.
+es considera una bona pràctica és integrar els canvis de `develop` a la branca de funcionalitat
+per actualitzar-la. A més, en aquest procés, es poden resoldre els conflictes
+en cas que n'hi haja.
 
 Per realitzar aquesta integració de canvis, es recomana utilitzar `git merge --no-ff`.
 
