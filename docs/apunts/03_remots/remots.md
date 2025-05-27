@@ -522,6 +522,7 @@ git pull [<options>] [<remot> [<branca>]]
     - `git pull --rebase`: Incorpora els canvis de la branca remota
         mitjançant un `rebase`, és a dir, aplica els canvis de la branca local
         després dels canvis de la branca remota.
+        { #git-pull-rebase }
 
         Aquest comportament també es pot configurar per defecte en la comanda `git pull`.
 
