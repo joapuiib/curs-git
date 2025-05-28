@@ -60,8 +60,6 @@ has d'utilitzar la tècnica [__merge --squash__][merge-squash].
 
 [merge-squash]: estrategies.md#merge-squash
 
-!!! notice "Recordeu actualitzar les branques de funcionalitat amb la branca de desenvolupament amb `git merge --no-ff` abans d'integrar-les!"
-
 ### Tasca
 
 1. Crea un repositori de Git anomenat `git_estrategies_exerici`.
@@ -89,7 +87,9 @@ has d'utilitzar la tècnica [__merge --squash__][merge-squash].
     !!! docs "Mostra l'estat del repositori amb `git lga` amb totes les branques de funcionalitat"
 
 7. Integra les branques de funcionalitat a la branca `develop`
-    utilitzant una de les estratègies de fusió.
+    utilitzant la tècnica [__merge --squash__][merge-squash].
+
+    !!! notice "Recordeu actualitzar les branques de funcionalitat amb la branca de desenvolupament amb `git merge --no-ff` abans d'integrar-les!"
 
     !!! docs "Mostra l'estat del repositori amb `git lga` després de cada integració"
         _Abans i després d'esborrar la branca de funcionalitat_.
