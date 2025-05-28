@@ -38,6 +38,5 @@ Integra els canvis amb un pull amb canvi de base.
 Pots documentar-ho al final del document amb un nou apartat.
 
 
-## Errors comuns
-- `git pull --rebase`.
-- Concluir el rebase amb un commit.
+## Concloure rebase amb commit
+Una observació. Per concloure el procés de rebase has fet el commit de manera manual i després el git rebase --continue. Funciona, com hauràs observat, però no és necessari. Realitzar 'git add' i 'git rebase --continue' és suficient, ja que Git s'encarrega de fer el commit automàticament.
