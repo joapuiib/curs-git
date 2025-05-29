@@ -24,7 +24,7 @@ Et demanaré que tractes de fer-ho, almenys una vegada correctament. En aquest c
 
 Crear dues noves branques 'feature'.
 Realitzar canvis en cada branca.
-Una vegada acabades les dues, integra-les a 'develop', tenint en compte aquesta consideració.
+Una vegada acabades les dues, integra-les a 'develop' amb 'merge --squash --ff-only' Si no et deixa, hauràs d'actualitzar la branca 'feature' amb 'merge --no-ff develop'.
 Per últim, cal que esborres també les branques de funcionalitat. Veuràs com l'històric queda molt net.
 
 Ànim!
