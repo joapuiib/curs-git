@@ -1614,9 +1614,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#merge-squash" class="md-nav__link">
+  <a href="#merge-squash-ff-only" class="md-nav__link">
     <span class="md-ellipsis">
-      merge --squash
+      merge --squash --ff-only
     </span>
   </a>
   
@@ -2271,9 +2271,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#merge-squash" class="md-nav__link">
+  <a href="#merge-squash-ff-only" class="md-nav__link">
     <span class="md-ellipsis">
-      merge --squash
+      merge --squash --ff-only
     </span>
   </a>
   
@@ -2667,17 +2667,17 @@ i d'aquesta manera, evitar resolucions de conflictes immenses en el moment d'int
 <p>Varia d'acord amb la tècnica triada per a la integració.</p>
 <p>Vegeu les seccions dedicades a cada tècnica per a més informació.</p>
 </blockquote>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><code>merge --no-ff</code></label><label for="__tabbed_1_2"><code>rebase</code> + <code>merge --ff-only</code></label><label for="__tabbed_1_3"><code>rebase</code> + <code>merge --no-ff</code></label><label for="__tabbed_1_4"><span class="twemoji text-success" title="Opció recomanada"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8.347.631A.75.75 0 0 1 9.123.26l.238.04a3.25 3.25 0 0 1 2.591 4.098L11.494 6h.665a3.25 3.25 0 0 1 3.118 4.167l-1.135 3.859A2.75 2.75 0 0 1 11.503 16H6.586a3.75 3.75 0 0 1-2.184-.702A1.75 1.75 0 0 1 3 16H1.75A1.75 1.75 0 0 1 0 14.25v-6.5C0 6.784.784 6 1.75 6h3.417a.25.25 0 0 0 .217-.127ZM4.75 13.649l.396.33c.404.337.914.521 1.44.521h4.917a1.25 1.25 0 0 0 1.2-.897l1.135-3.859A1.75 1.75 0 0 0 12.159 7.5H10.5a.75.75 0 0 1-.721-.956l.731-2.558a1.75 1.75 0 0 0-1.127-2.14L6.69 6.611a1.75 1.75 0 0 1-1.523.889H4.75ZM3.25 7.5h-1.5a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25H3a.25.25 0 0 0 .25-.25Z"/></svg></span> <code>merge --squash</code></label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji text-success" title="Opció recomanada"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8.347.631A.75.75 0 0 1 9.123.26l.238.04a3.25 3.25 0 0 1 2.591 4.098L11.494 6h.665a3.25 3.25 0 0 1 3.118 4.167l-1.135 3.859A2.75 2.75 0 0 1 11.503 16H6.586a3.75 3.75 0 0 1-2.184-.702A1.75 1.75 0 0 1 3 16H1.75A1.75 1.75 0 0 1 0 14.25v-6.5C0 6.784.784 6 1.75 6h3.417a.25.25 0 0 0 .217-.127ZM4.75 13.649l.396.33c.404.337.914.521 1.44.521h4.917a1.25 1.25 0 0 0 1.2-.897l1.135-3.859A1.75 1.75 0 0 0 12.159 7.5H10.5a.75.75 0 0 1-.721-.956l.731-2.558a1.75 1.75 0 0 0-1.127-2.14L6.69 6.611a1.75 1.75 0 0 1-1.523.889H4.75ZM3.25 7.5h-1.5a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25H3a.25.25 0 0 0 .25-.25Z"/></svg></span> <code>merge --squash --ff-only</code></label><label for="__tabbed_1_2"><code>merge --no-ff</code></label><label for="__tabbed_1_3"><code>rebase</code> + <code>merge --ff-only</code></label><label for="__tabbed_1_4"><code>rebase</code> + <code>merge --no-ff</code></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>No és necessari, però es recomana per mantindre la branca de funcionalitat actualitzada.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>feature/nom-funcionalitat
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git<span class="w"> </span>merge<span class="w"> </span>--no-ff<span class="w"> </span>develop
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
+<p>No és necessari, però es recomana per mantindre la branca de funcionalitat actualitzada.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>feature/nom-funcionalitat
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>git<span class="w"> </span>rebase<span class="w"> </span>develop
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>git<span class="w"> </span>merge<span class="w"> </span>--no-ff<span class="w"> </span>develop
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -2687,7 +2687,7 @@ i d'aquesta manera, evitar resolucions de conflictes immenses en el moment d'int
 </div>
 <div class="tabbed-block">
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>feature/nom-funcionalitat
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>git<span class="w"> </span>merge<span class="w"> </span>--no-ff<span class="w"> </span>develop
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>git<span class="w"> </span>rebase<span class="w"> </span>develop
 </span></code></pre></div>
 </div>
 </div>
@@ -2695,27 +2695,27 @@ i d'aquesta manera, evitar resolucions de conflictes immenses en el moment d'int
 </li>
 <li>
 <p>Incorporar els canvis de la branca <code>feature/*</code> amb la branca <code>develop</code> amb la tècnica triada.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><code>merge --no-ff</code></label><label for="__tabbed_2_2"><code>rebase</code> + <code>merge --ff-only</code></label><label for="__tabbed_2_3"><code>rebase</code> + <code>merge --no-ff</code></label><label for="__tabbed_2_4"><span class="twemoji text-success" title="Opció recomanada"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8.347.631A.75.75 0 0 1 9.123.26l.238.04a3.25 3.25 0 0 1 2.591 4.098L11.494 6h.665a3.25 3.25 0 0 1 3.118 4.167l-1.135 3.859A2.75 2.75 0 0 1 11.503 16H6.586a3.75 3.75 0 0 1-2.184-.702A1.75 1.75 0 0 1 3 16H1.75A1.75 1.75 0 0 1 0 14.25v-6.5C0 6.784.784 6 1.75 6h3.417a.25.25 0 0 0 .217-.127ZM4.75 13.649l.396.33c.404.337.914.521 1.44.521h4.917a1.25 1.25 0 0 0 1.2-.897l1.135-3.859A1.75 1.75 0 0 0 12.159 7.5H10.5a.75.75 0 0 1-.721-.956l.731-2.558a1.75 1.75 0 0 0-1.127-2.14L6.69 6.611a1.75 1.75 0 0 1-1.523.889H4.75ZM3.25 7.5h-1.5a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25H3a.25.25 0 0 0 .25-.25Z"/></svg></span> <code>merge --squash</code></label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><span class="twemoji text-success" title="Opció recomanada"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8.347.631A.75.75 0 0 1 9.123.26l.238.04a3.25 3.25 0 0 1 2.591 4.098L11.494 6h.665a3.25 3.25 0 0 1 3.118 4.167l-1.135 3.859A2.75 2.75 0 0 1 11.503 16H6.586a3.75 3.75 0 0 1-2.184-.702A1.75 1.75 0 0 1 3 16H1.75A1.75 1.75 0 0 1 0 14.25v-6.5C0 6.784.784 6 1.75 6h3.417a.25.25 0 0 0 .217-.127ZM4.75 13.649l.396.33c.404.337.914.521 1.44.521h4.917a1.25 1.25 0 0 0 1.2-.897l1.135-3.859A1.75 1.75 0 0 0 12.159 7.5H10.5a.75.75 0 0 1-.721-.956l.731-2.558a1.75 1.75 0 0 0-1.127-2.14L6.69 6.611a1.75 1.75 0 0 1-1.523.889H4.75ZM3.25 7.5h-1.5a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25H3a.25.25 0 0 0 .25-.25Z"/></svg></span> <code>merge --squash --ff-only</code></label><label for="__tabbed_2_2"><code>merge --no-ff</code></label><label for="__tabbed_2_3"><code>rebase</code> + <code>merge --ff-only</code></label><label for="__tabbed_2_4"><code>rebase</code> + <code>merge --no-ff</code></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git checkout develop
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>git merge --no-ff feature/nom-funcionalitat
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>develop
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>git<span class="w"> </span>merge<span class="w"> </span>--squash<span class="w"> </span>--ff-only<span class="w"> </span>feature/nom-funcionalitat
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>git<span class="w"> </span>commit
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>develop
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>git<span class="w"> </span>merge<span class="w"> </span>--ff-only<span class="w"> </span>feature/nom-funcionalitat
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git checkout develop
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>git merge --no-ff feature/nom-funcionalitat
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>develop
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>git<span class="w"> </span>merge<span class="w"> </span>--no-ff<span class="w"> </span>feature/nom-funcionalitat
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>git<span class="w"> </span>merge<span class="w"> </span>--ff-only<span class="w"> </span>feature/nom-funcionalitat
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>develop
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>git<span class="w"> </span>merge<span class="w"> </span>--squash<span class="w"> </span>feature/nom-funcionalitat
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>git<span class="w"> </span>commit
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>git<span class="w"> </span>merge<span class="w"> </span>--no-ff<span class="w"> </span>feature/nom-funcionalitat
 </span></code></pre></div>
 </div>
 </div>
@@ -2817,21 +2817,21 @@ mitjançant un <strong>commit de fusió</strong> amb <code>merge --no-ff</code>.
 <li>Permet revertir una funcionalitat fàcilment, ja que sols cal revertir un únic <em>commit</em>.</li>
 <li>Realitzar el canvi de base de funcionalitats amb molts <em>commits</em> pot ser complicat.</li>
 </ul>
-<h3 id="merge-squash"><code>merge --squash</code><a class="headerlink" href="#merge-squash" title="Permanent link">&para;</a></h3>
+<h3 id="merge-squash-ff-only"><code>merge --squash --ff-only</code><a class="headerlink" href="#merge-squash-ff-only" title="Permanent link">&para;</a></h3>
 <div class="admonition recommend">
 <p class="admonition-title">Opció recomanada</p>
 </div>
 <p>Aquesta opció consisteix a fusionar les branques de funcionalitat amb la branca de desenvolupament <code>develop</code>
-mitjançant <code>merge --squash</code>, de manera que tots els <em>commits</em> de la branca de funcionalitat es fusionen
+mitjançant <code>merge --squash --ff-only</code>, de manera que tots els <em>commits</em> de la branca de funcionalitat es fusionen
 en un <strong>únic <em>commit</em></strong>.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>develop
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>git<span class="w"> </span>merge<span class="w"> </span>--squash<span class="w"> </span>feature/A
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>git<span class="w"> </span>merge<span class="w"> </span>--squash<span class="w"> </span>--ff-only<span class="w"> </span>feature/A
 </span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span>&lt;missatge&gt;
 </span></code></pre></div>
 <figure id="__figure-caption_7">
-<p><img alt="Fusió de branques mitjançant merge --squash" src="../img/merge_squash.png" /></p>
+<p><img alt="Fusió de branques mitjançant merge --squash --ff-only" src="../img/merge_squash.png" /></p>
 <figcaption>
-<p><span class="caption-prefix">Figura 7. </span> Fusió de branques mitjançant <code>merge --squash</code></p>
+<p><span class="caption-prefix">Figura 7. </span> Fusió de branques mitjançant <code>merge --squash --ff-only</code></p>
 </figcaption>
 </figure>
 <p>En el cas que la branca de funcionalitat no estiga actualitzada respecte de la branca de desenvolupament.
@@ -2842,13 +2842,13 @@ en cas que n'hi haja.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>feature/A
 </span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>git<span class="w"> </span>merge<span class="w"> </span>--no-ff<span class="w"> </span>develop
 </span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>git<span class="w"> </span>checkout<span class="w"> </span>develop
-</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>git<span class="w"> </span>merge<span class="w"> </span>--squash<span class="w"> </span>feature/A
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>git<span class="w"> </span>merge<span class="w"> </span>--squash<span class="w"> </span>--ff-only<span class="w"> </span>feature/A
 </span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span>&lt;missatge&gt;
 </span></code></pre></div>
 <figure id="__figure-caption_8">
-<p><img alt="Fusió de branques mitjançant merge --no-ff + merge --squash" src="../img/merge_no_ff_squash.png" /></p>
+<p><img alt="Fusió de branques mitjançant merge --no-ff + merge --squash --ff-only" src="../img/merge_no_ff_squash.png" /></p>
 <figcaption>
-<p><span class="caption-prefix">Figura 8. </span> Fusió de branques mitjançant <code>merge --no-ff</code> + <code>merge --squash</code></p>
+<p><span class="caption-prefix">Figura 8. </span> Fusió de branques mitjançant <code>merge --no-ff</code> + <code>merge --squash --ff-only</code></p>
 </figcaption>
 </figure>
 <p>Com que la branca de funcionalitat serà eliminada després de la fusió,
@@ -3018,7 +3018,7 @@ pot ser un avantatge o un inconvenient.&#160;<a class="footnote-backref" href="#
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="27 de maig del 2025 18:22:03 UTC">27 de maig del 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="29 de maig del 2025 10:53:36 UTC">29 de maig del 2025</span>
   </span>
 
     

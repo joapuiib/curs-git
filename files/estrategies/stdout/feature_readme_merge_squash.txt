@@ -1,7 +1,7 @@
 anna@fp:~/git_estrategies/anna (feature/readme) $ git checkout develop
 Your branch is up to date with 'origin/develop'.
 Switched to branch 'develop'
-anna@fp:~/git_estrategies/anna (develop) $ git merge --squash feature/readme
+anna@fp:~/git_estrategies/anna (develop) $ git merge --squash --ff-only feature/readme
 Updating ec0e2bd..ea2559a
 Fast-forward
 Squash commit -- not updating HEAD
