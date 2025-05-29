@@ -161,6 +161,12 @@ El procés per integrar les funcionalitats a la branca de desenvolupament `devel
     >
     > Vegeu les seccions dedicades a cada tècnica per a més informació.
 
+    === ":octicons-thumbsup-16:{ .text-success title="Opció recomanada" } `merge --squash --ff-only`"
+        ```bash
+        git checkout feature/nom-funcionalitat
+        git merge --no-ff develop
+        ```
+        
     === "`merge --no-ff`"
         No és necessari, però es recomana per mantindre la branca de funcionalitat actualitzada.
 
@@ -181,14 +187,15 @@ El procés per integrar les funcionalitats a la branca de desenvolupament `devel
         git rebase develop
         ```
 
-    === ":octicons-thumbsup-16:{ .text-success title="Opció recomanada" } `merge --squash`"
-        ```bash
-        git checkout feature/nom-funcionalitat
-        git merge --no-ff develop
-        ```
-        
 
 4. Incorporar els canvis de la branca `feature/*` amb la branca `develop` amb la tècnica triada.
+
+    === ":octicons-thumbsup-16:{ .text-success title="Opció recomanada" } `merge --squash --ff-only`"
+        ```bash
+        git checkout develop
+        git merge --squash --ff-only feature/nom-funcionalitat
+        git commit
+        ```
 
     === "`merge --no-ff`"
         ```
@@ -208,12 +215,6 @@ El procés per integrar les funcionalitats a la branca de desenvolupament `devel
         git merge --no-ff feature/nom-funcionalitat
         ```
 
-    === ":octicons-thumbsup-16:{ .text-success title="Opció recomanada" } `merge --squash`"
-        ```bash
-        git checkout develop
-        git merge --squash feature/nom-funcionalitat
-        git commit
-        ```
 
 
 5. Publicar els canvis de la branca `develop` al repositori remot amb `git push`.
@@ -326,23 +327,23 @@ Les característiques d'aquesta opció són:
 - Realitzar el canvi de base de funcionalitats amb molts _commits_ pot ser complicat.
 
 
-### `merge --squash`
+### `merge --squash --ff-only`
 
 !!! recommend "Opció recomanada"
 
 Aquesta opció consisteix a fusionar les branques de funcionalitat amb la branca de desenvolupament `develop`
-mitjançant `merge --squash`, de manera que tots els _commits_ de la branca de funcionalitat es fusionen
+mitjançant `merge --squash --ff-only`, de manera que tots els _commits_ de la branca de funcionalitat es fusionen
 en un __únic *commit*__.
 
 ```bash
 git checkout develop
-git merge --squash feature/A
+git merge --squash --ff-only feature/A
 git commit -m <missatge>
 ```
 
-![Fusió de branques mitjançant merge --squash](img/merge_squash.png)
+![Fusió de branques mitjançant merge --squash --ff-only](img/merge_squash.png)
 /// figure-caption
-Fusió de branques mitjançant `merge --squash`
+Fusió de branques mitjançant `merge --squash --ff-only`
 ///
 
 En el cas que la branca de funcionalitat no estiga actualitzada respecte de la branca de desenvolupament.
@@ -356,13 +357,13 @@ Per realitzar aquesta integració de canvis, es recomana utilitzar `git merge --
 git checkout feature/A
 git merge --no-ff develop
 git checkout develop
-git merge --squash feature/A
+git merge --squash --ff-only feature/A
 git commit -m <missatge>
 ```
 
-![Fusió de branques mitjançant merge --no-ff + merge --squash](img/merge_no_ff_squash.png)
+![Fusió de branques mitjançant merge --no-ff + merge --squash --ff-only](img/merge_no_ff_squash.png)
 /// figure-caption
-Fusió de branques mitjançant `merge --no-ff` + `merge --squash`
+Fusió de branques mitjançant `merge --no-ff` + `merge --squash --ff-only`
 ///
 
 Com que la branca de funcionalitat serà eliminada després de la fusió,

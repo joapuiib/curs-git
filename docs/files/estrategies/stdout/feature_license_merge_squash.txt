@@ -1,7 +1,7 @@
 pau@fp:~/git_estrategies/pau (feature/license) $ git checkout develop
 Your branch is up to date with 'origin/develop'.
 Switched to branch 'develop'
-pau@fp:~/git_estrategies/pau (develop) $ git merge --squash feature/license
+pau@fp:~/git_estrategies/pau (develop) $ git merge --squash --ff-only feature/license
 Updating 2bc4029..5b6d510
 Fast-forward
 Squash commit -- not updating HEAD

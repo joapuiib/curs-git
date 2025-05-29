@@ -56,9 +56,9 @@ utilitzant les següents branques:
 - Branques de funcionalitat: `feature/*`.
 
 Per integrar les branques de funcionalitat a la branca de desenvolupament,
-has d'utilitzar la tècnica [__merge --squash__][merge-squash].
+has d'utilitzar la tècnica [__merge --squash --ff-only__][merge-squash].
 
-[merge-squash]: estrategies.md#merge-squash
+[merge-squash]: estrategies.md#merge-squash-ff-only
 
 ### Tasca
 
@@ -87,7 +87,7 @@ has d'utilitzar la tècnica [__merge --squash__][merge-squash].
     !!! docs "Mostra l'estat del repositori amb `git lga` amb totes les branques de funcionalitat"
 
 7. Integra les branques de funcionalitat a la branca `develop`
-    utilitzant la tècnica [__merge --squash__][merge-squash].
+    utilitzant la tècnica [__merge --squash --ff-only__][merge-squash].
 
     !!! notice "Recordeu actualitzar les branques de funcionalitat amb la branca de desenvolupament amb `git merge --no-ff` abans d'integrar-les!"
 

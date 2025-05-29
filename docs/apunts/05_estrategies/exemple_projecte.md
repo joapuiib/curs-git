@@ -10,7 +10,7 @@ comments: true
 En aquests apunts veurem com es pot utilitzar una estratègia de ramificació
 en un projecte de desenvolupament de programari.
 
-En aquest projecte utilitzarem la tècnica d'integració [[estrategies#merge-squash]].
+En aquest projecte utilitzarem la tècnica d'integració [[estrategies#merge-squash-ff-only]].
 
 ### Repositori remot
 Anem a simular un projecte de desenvolupament de programari
@@ -127,7 +127,7 @@ i encara no han segut integrades a la branca de desenvolupament `develop`.
     ///
 
 
-Anem a veure com integrar les funcionalitats amb la tècnica __`merge --no-ff` + `merge --squash`__
+Anem a veure com integrar les funcionalitats amb la tècnica __`merge --no-ff` + `merge --squash --ff-only`__
 seguint el procés indicat a [[estrategies#integracio]].
 
 
@@ -324,7 +324,7 @@ Els passos que ha de seguir són:
 L'estat final del repositori segons l'estratègia d'integració utilitzada
 és el següent.
 
-#### `merge` + `merge --squash`
+#### `merge` + `merge --squash --ff-only`
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/squash_final.txt"
 ```

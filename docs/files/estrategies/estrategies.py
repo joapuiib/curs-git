@@ -175,7 +175,7 @@ def squash():
     x.log_file('stdout/feature_readme_merge_squash.txt')
 
     x.x('git checkout develop')
-    x.x('git merge --squash feature/readme')
+    x.x('git merge --squash --ff-only feature/readme')
     x.x('git status')
     x.x('git diff --staged')
     x.x('git commit -m "Merge branch \'feature/readme\'"')
@@ -224,7 +224,7 @@ def squash():
     x.log_file('stdout/feature_license_merge_squash.txt')
 
     x.x('git checkout develop')
-    x.x('git merge --squash feature/license')
+    x.x('git merge --squash --ff-only feature/license')
     x.x('git status')
     x.x('git diff --staged')
     x.x('git commit -m "Merge branch \'feature/license\'"')
@@ -277,7 +277,7 @@ def squash():
     x.log_file('stdout/feature_author_merge_squash.txt')
 
     x.x('git checkout develop')
-    x.x('git merge --squash feature/author')
+    x.x('git merge --squash --ff-only feature/author')
     x.x('git status')
     x.x('git diff --staged')
     x.x('git commit -m "Merge branch \'feature/author\'"')

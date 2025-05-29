@@ -1,7 +1,7 @@
 mar@fp:~/git_estrategies/mar (feature/author) $ git checkout develop
 Your branch is up to date with 'origin/develop'.
 Switched to branch 'develop'
-mar@fp:~/git_estrategies/mar (develop) $ git merge --squash feature/author
+mar@fp:~/git_estrategies/mar (develop) $ git merge --squash --ff-only feature/author
 Updating b7bf0a5..72afb5a
 Fast-forward
 Squash commit -- not updating HEAD
