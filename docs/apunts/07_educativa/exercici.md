@@ -17,6 +17,8 @@ Els objectius d'aquest exercici són:
 
 
 ## Lliurament
+!!! warning "No es requereix el lliurament d'aquest exercici per a la certificació del curs."
+
 Per a lliurar aquest exercici podeu triar entre una de les següents opcions:
 
 === "Document PDF"
@@ -43,7 +45,10 @@ Fent ús de les ferramentes que ens proporciona :simple-github: GitHub,
 __dissenya un marc de treball__ per a la gestió del treball
 d'aula d'un dels teus mòduls professionals.
 
-> Pots basar-te en alguna de les propostes vistes a [[proposta-treball]].
+> Pots basar-te en alguna de les propostes vistes a [[proposta-treball]] o
+> provar [GitHub Classroom][classroom]
+
+[classroom]: https://classroom.github.com/
 
 Després, realitza i documenta la __implementació inicial__ d'aquest marc de treball.
 
