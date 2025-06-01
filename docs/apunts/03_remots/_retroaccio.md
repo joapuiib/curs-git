@@ -29,11 +29,11 @@ No obstant això, has tingut problemes per incorporar els canvis de branques div
 
 Per tal de tornar-ho a provar, et recomane que:
 
-Actualitzes els dos repositoris locals amb git pull.
-Des del clone, faces un commit i un push.
-Des del original, faces un commit.
-A partir d'aquest punt, pots fer un fetch i veuràs com main i origin/main han divergit.
-Integra els canvis amb un pull amb canvi de base.
+- Actualitzes els dos repositoris locals amb git pull.
+- Des del clone, faces un commit i un push.
+- Des del original, faces un commit.
+- A partir d'aquest punt, pots fer un fetch i veuràs com main i origin/main han divergit.
+- Integra els canvis amb un pull amb canvi de base.
 
 Pots documentar-ho al final del document amb un nou apartat.
 
