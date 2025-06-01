@@ -64,17 +64,6 @@
     margin-top: calc(26px + 1rem) !important;
 }
 
-.md-banner .twemoji {
-    border-radius: 100%;
-    box-shadow: inset 0 0 0 .05rem currentcolor;
-    display: inline-block;
-    height: 1.2rem;
-    padding: .25rem;
-    transition: all .25s;
-    vertical-align: bottom;
-    width: 1.2rem;
-}
-
 .md-banner:has(.md-banner__inner .under-construction) {
     background-color: #ffd914;
     color: #111111;
