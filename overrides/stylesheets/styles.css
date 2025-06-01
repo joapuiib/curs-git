@@ -1,0 +1,6 @@
+.md-banner {
+    color: var(--md-footer-fg-color--lighter);
+}
+.md-banner a, .md-banner a:focus, .md-banner a:hover, .md-banner strong {
+    color: var(--md-footer-fg-color);
+}
