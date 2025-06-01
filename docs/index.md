@@ -1,5 +1,5 @@
 ---
-template: landing.html
+template: document.html
 title: Inici
 cover:
     title: Introducció a Git i la seua aplicació a l’aula
