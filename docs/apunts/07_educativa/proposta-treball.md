@@ -30,6 +30,45 @@ No obstant això, aquesta metodologia es complementària i __no substitueix
 la plataforma educativa__ amb la qual es treballa habitualment (Aules, :simple-moodle: Moodle, etc.).
 
 
+!!! info "Aquesta proposta :vs: GitHub Classroom"
+    __[GitHub Classroom][classroom]__ és una __plataforma educativa__ que permet realitzar
+    el seguiment del treball de l'alumnat i la revisió dels projectes dins d'una organització de :simple-github: GitHub.
+
+    Incorpora funcionalitats molt útils per a [la gestió de l'alumnat][roster] dins de l'organització,
+    com ara [plantilles][template] per als repositoris les tasques
+    o [automatització de les correccions][autograding] mitjançant [:octicons-play-24: GitHub Actions][actions].
+
+    [classroom]: https://classroom.github.com/
+    [roster]: https://docs.github.com/en/education/manage-coursework-with-github-classroom/teach-with-github-classroom/manage-classrooms#adding-students-to-the-roster-for-your-classroom
+    [template]: https://docs.github.com/en/education/manage-coursework-with-github-classroom/teach-with-github-classroom/create-an-individual-assignment#choosing-a-template-repository
+    [autograding]: https://docs.github.com/en/education/manage-coursework-with-github-classroom/teach-with-github-classroom/use-autograding
+    [actions]: https://docs.github.com/en/actions
+
+    No obstant això, personalment, preferisc utilitzar les organitzacions
+    per gestionar el treball de l'alumnat d'una manera més _"manual"_ per diferents motius:
+
+    - Aquesta proposta __no substitueix a la plataforma educativa oficial: [Aules][aules]__,
+      sinó que la complementa i facilita la revisió per part del professorat i
+      normalitza l'ús de :simple-git: Git entre l'alumnat.
+
+    - GitHub Classroom es basa en la creació d'un __repositori per cada tasca o projecte__.
+      Personalment preferisc treballar amb únic repositori per estudiant o equip,
+      que anirà actualitzant-se al llarg del curs acadèmic.
+
+    [aules]: https://portal.edu.gva.es/aules/
+
+    - L'automatització de les correccions mitjançant [:octicons-play-24: GitHub Actions][actions]
+      és una funcionalitat molt interessant, però sols serveix per a tasques molt concretes
+      que permeten ser automatitzades.
+
+        Tasques més complexes o creatives són pràcticament impossibles d'automatitzar.
+
+
+    Vos anime a explorar i provar __[GitHub Classroom][classroom]__ i així també
+    podreu comparar les dues opcions i valorar la metodologia de treball que més s'adapte
+    a les vostres necessitats.
+
+
 ## Objectius d'aquesta proposta
 L'objectiu __principal__ d'aquesta proposta és que __l'alumnat
 tinga normalitzat l'ús d'un sistema de control de versions__ com és :simple-git: Git,
