@@ -79,10 +79,13 @@ has d'utilitzar la tècnica [__merge --squash --ff-only__][merge-squash].
 6. En cada branca de funcionalitat afegeix tants elements del tipus
     i amb el gènere de la branca com vulgues.
 
-    - Com a mínim 2 elements per branca.
-    - Cada element ha d'estar en un :octicons-git-commit-16: commit diferent.
-    - En el cas de pel·lícules, has d'incloure-les al fitxer `pelicules.txt`.
-    - En el cas de sèries, has d'incloure-les al fitxer `series.txt`.
+    === "`feature/pelicules-genere-N`"
+        - Afegeix, com a mínim, dues pel·lícules del gènere triat al fitxer `pelicules.txt`.
+        - Cada pel·lícula ha d'estar en un :octicons-git-commit-16: _commit_ diferent.
+
+    === "`feature/series-genere-N`"
+        - Afegeix, com a mínim, dues sèries del gènere triat al fitxer `series.txt`.
+        - Cada sèrie d'estar en un :octicons-git-commit-16: _commit_ diferent.
 
     !!! docs "Mostra l'estat del repositori amb `git lga` amb totes les branques de funcionalitat"
 
@@ -99,6 +102,9 @@ has d'utilitzar la tècnica [__merge --squash --ff-only__][merge-squash].
     !!! docs "Mostra l'estat del repositori amb `git lga`"
 
 ## Ampliació
+
+!!! recommend "Aquesta ampliació no és necessària per superar l'activitat."
+
 Repeteix l'exercici utilitzant diferents tècniques
 per integrar les branques de funcionalitat a la branca de desenvolupament.
 
