@@ -1,6 +1,8 @@
 ---
 title: "Bloc 6: Gestió de projectes"
 alias: projectes-index
+hide:
+  - toc
 ---
 
 ## Bloc 6: Gestió de projectes
