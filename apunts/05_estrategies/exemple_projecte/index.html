@@ -1745,27 +1745,27 @@ al
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#merge-merge-squash-ff-only" class="md-nav__link">
+  <a href="#merge-no-ff-merge-squash-ff-only" class="md-nav__link">
     <span class="md-ellipsis">
-      merge + merge --squash --ff-only
+      merge --no-ff + merge --squash --ff-only
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#merge-no-ff" class="md-nav__link">
+  <a href="#merge-no-ff-gitflow" class="md-nav__link">
     <span class="md-ellipsis">
-      merge --no-ff
+      merge --no-ff (Gitflow)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rebase" class="md-nav__link">
+  <a href="#rebase-merge-ff-only" class="md-nav__link">
     <span class="md-ellipsis">
-      rebase
+      rebase + merge --ff-only
     </span>
   </a>
   
@@ -2413,27 +2413,27 @@ al
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#merge-merge-squash-ff-only" class="md-nav__link">
+  <a href="#merge-no-ff-merge-squash-ff-only" class="md-nav__link">
     <span class="md-ellipsis">
-      merge + merge --squash --ff-only
+      merge --no-ff + merge --squash --ff-only
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#merge-no-ff" class="md-nav__link">
+  <a href="#merge-no-ff-gitflow" class="md-nav__link">
     <span class="md-ellipsis">
-      merge --no-ff
+      merge --no-ff (Gitflow)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rebase" class="md-nav__link">
+  <a href="#rebase-merge-ff-only" class="md-nav__link">
     <span class="md-ellipsis">
-      rebase
+      rebase + merge --ff-only
     </span>
   </a>
   
@@ -2653,7 +2653,7 @@ correctament.</p>
 <li>Aquesta comanda és necessària perquè el repositori siga configurat com a  <strong>bare</strong> i puga ser utilitzat com a repositori remot.</li>
 </ol>
 <h3 id="branca-de-desenvolupament">Branca de desenvolupament<a class="headerlink" href="#branca-de-desenvolupament" title="Permanent link">&para;</a></h3>
-<p>El primer pas per establir un flux de treball amb <strong>Gitflow</strong>
+<p>El primer pas per establir un flux de treball
 és crear la branca de desenvolupament <code>develop</code>.</p>
 <div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_estrategies/remot</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>branch<span class="w"> </span>develop
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_estrategies/remot</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
@@ -3552,7 +3552,7 @@ i pot continuar treballant en altres funcionalitats.</p>
 <h3 id="estat-final">Estat final<a class="headerlink" href="#estat-final" title="Permanent link">&para;</a></h3>
 <p>L'estat final del repositori segons l'estratègia d'integració utilitzada
 és el següent.</p>
-<h4 id="merge-merge-squash-ff-only"><code>merge</code> + <code>merge --squash --ff-only</code><a class="headerlink" href="#merge-merge-squash-ff-only" title="Permanent link">&para;</a></h4>
+<h4 id="merge-no-ff-merge-squash-ff-only"><a href="../estrategies/#merge-squash-ff-only"><code>merge --no-ff</code> + <code>merge --squash --ff-only</code></a><a class="headerlink" href="#merge-no-ff-merge-squash-ff-only" title="Permanent link">&para;</a></h4>
 <div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_estrategies</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">cd</span><span class="w"> </span>~/git_estrategies/remot
 </span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_estrategies/remot</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
 </span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">2c075dd</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(1 second ago)</span><span class="w"> </span><span class="git-cm">Publicada versió: v1.0.0</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main, tag: v1.0.0, develop)</span>
@@ -3561,31 +3561,67 @@ i pot continuar treballant en altres funcionalitats.</p>
 </span><span id="__span-33-6"><a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">2bc4029</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 seconds ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;feature/readme&#39;</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span>
 </span><span id="__span-33-7"><a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">ec0e2bd</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(5 seconds ago)</span><span class="w"> </span><span class="git-cm">Commit inicial</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
 </span></code></pre></div>
-<h4 id="merge-no-ff"><code>merge --no-ff</code><a class="headerlink" href="#merge-no-ff" title="Permanent link">&para;</a></h4>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_estrategies</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">cd</span><span class="w"> </span>~/git_estrategies/remot
+<h4 id="merge-no-ff-gitflow"><a href="../estrategies/#merge-no-ff"><code>merge --no-ff</code></a> (<em>Gitflow</em>)<a class="headerlink" href="#merge-no-ff-gitflow" title="Permanent link">&para;</a></h4>
+<p><div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_estrategies</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">cd</span><span class="w"> </span>~/git_estrategies/remot
 </span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_estrategies/remot</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
-</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">62a0575</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(1 second ago)</span><span class="w"> </span><span class="git-cm">Publicada versió: v1.0.0</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main, tag: v1.0.0, develop)</span>
-</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="go">*</span><span class="git-bl">  </span><span class="w"> </span><span class="git-ch">457a8ec</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(1 second ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;feature/author&#39; into develop</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Mar</span>
-</span><span id="__span-34-5"><a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a><span class="git-bl">|\  </span>
-</span><span id="__span-34-6"><a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a><span class="git-bl">| </span><span class="go">*</span><span class="w"> </span><span class="git-ch">fee598f</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 seconds ago)</span><span class="w"> </span><span class="git-cm">Autors: Mar</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Mar</span>
-</span><span id="__span-34-7"><a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a><span class="git-bl">| </span><span class="go">*</span><span class="w"> </span><span class="git-ch">91051a8</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 seconds ago)</span><span class="w"> </span><span class="git-cm">Autors: Pau</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Mar</span>
-</span><span id="__span-34-8"><a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a><span class="git-bl">| </span><span class="go">*</span><span class="w"> </span><span class="git-ch">9d2e45e</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 seconds ago)</span><span class="w"> </span><span class="git-cm">Autors: Anna</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Mar</span>
-</span><span id="__span-34-9"><a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a><span class="git-bl">| </span><span class="go">*</span><span class="w"> </span><span class="git-ch">2386be4</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 seconds ago)</span><span class="w"> </span><span class="git-cm">README.md: Secció d&#39;autors</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Mar</span>
-</span><span id="__span-34-10"><a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a><span class="go">*</span><span class="git-bl"> |  </span><span class="w"> </span><span class="git-ch">ab97fda</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(1 second ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;feature/license&#39; into develop</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Pau</span>
-</span><span id="__span-34-11"><a id="__codelineno-34-11" name="__codelineno-34-11" href="#__codelineno-34-11"></a><span class="git-bl">|\ \  </span>
-</span><span id="__span-34-12"><a id="__codelineno-34-12" name="__codelineno-34-12" href="#__codelineno-34-12"></a><span class="git-bl">| </span><span class="go">*</span><span class="git-bl"> |</span><span class="w"> </span><span class="git-ch">d0ac96b</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 seconds ago)</span><span class="w"> </span><span class="git-cm">LICENSE: Enllaç a la llicència</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Pau</span>
-</span><span id="__span-34-13"><a id="__codelineno-34-13" name="__codelineno-34-13" href="#__codelineno-34-13"></a><span class="git-bl">| </span><span class="go">*</span><span class="git-bl"> |</span><span class="w"> </span><span class="git-ch">d92ab12</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 seconds ago)</span><span class="w"> </span><span class="git-cm">LICENSE: Afegida llicència</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Pau</span>
-</span><span id="__span-34-14"><a id="__codelineno-34-14" name="__codelineno-34-14" href="#__codelineno-34-14"></a><span class="git-bl">| |/  </span>
-</span><span id="__span-34-15"><a id="__codelineno-34-15" name="__codelineno-34-15" href="#__codelineno-34-15"></a><span class="go">*</span><span class="git-bl"> |  </span><span class="w"> </span><span class="git-ch">b1643d0</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 seconds ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;feature/readme&#39; into develop</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span>
-</span><span id="__span-34-16"><a id="__codelineno-34-16" name="__codelineno-34-16" href="#__codelineno-34-16"></a><span class="git-bl">|\ \  </span>
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="go">*</span><span class="git-bl">  </span><span class="w"> </span><span class="git-ch">bc63807</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;release/v1.0.0&#39; into develop</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span><span class="w"> </span><span class="git-r">(develop)</span>
+</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="git-bl">|\  </span>
+</span><span id="__span-34-5"><a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a><span class="git-bl">| | </span><span class="go">*</span><span class="git-bl">  </span><span class="w"> </span><span class="git-ch">4dbab8e</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;release/v1.0.0&#39;</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main, tag: v1.0.0)</span>
+</span><span id="__span-34-6"><a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a><span class="git-bl">| | |\  </span>
+</span><span id="__span-34-7"><a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a><span class="git-bl">| | |/  </span>
+</span><span id="__span-34-8"><a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a><span class="git-bl">| |/|   </span>
+</span><span id="__span-34-9"><a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a><span class="git-bl">| </span><span class="go">*</span><span class="git-bl"> |</span><span class="w"> </span><span class="git-ch">23832cd</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Publicada versió: v1.0.0</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span>
+</span><span id="__span-34-10"><a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a><span class="git-bl">|/ /  </span>
+</span><span id="__span-34-11"><a id="__codelineno-34-11" name="__codelineno-34-11" href="#__codelineno-34-11"></a><span class="go">*</span><span class="git-bl"> |  </span><span class="w"> </span><span class="git-ch">cef4c2b</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(1 second ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;feature/author&#39; into develop</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Mar</span>
+</span><span id="__span-34-12"><a id="__codelineno-34-12" name="__codelineno-34-12" href="#__codelineno-34-12"></a><span class="git-bl">|\ \  </span>
+</span><span id="__span-34-13"><a id="__codelineno-34-13" name="__codelineno-34-13" href="#__codelineno-34-13"></a><span class="git-bl">| </span><span class="go">*</span><span class="git-bl"> |</span><span class="w"> </span><span class="git-ch">393e204</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(4 seconds ago)</span><span class="w"> </span><span class="git-cm">Autors: Mar</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Mar</span>
+</span><span id="__span-34-14"><a id="__codelineno-34-14" name="__codelineno-34-14" href="#__codelineno-34-14"></a><span class="git-bl">| </span><span class="go">*</span><span class="git-bl"> |</span><span class="w"> </span><span class="git-ch">5feff69</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(5 seconds ago)</span><span class="w"> </span><span class="git-cm">Autors: Pau</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Mar</span>
+</span><span id="__span-34-15"><a id="__codelineno-34-15" name="__codelineno-34-15" href="#__codelineno-34-15"></a><span class="git-bl">| </span><span class="go">*</span><span class="git-bl"> |</span><span class="w"> </span><span class="git-ch">67cf1ea</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(5 seconds ago)</span><span class="w"> </span><span class="git-cm">Autors: Anna</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Mar</span>
+</span><span id="__span-34-16"><a id="__codelineno-34-16" name="__codelineno-34-16" href="#__codelineno-34-16"></a><span class="git-bl">| </span><span class="go">*</span><span class="git-bl"> |</span><span class="w"> </span><span class="git-ch">811d4d7</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(5 seconds ago)</span><span class="w"> </span><span class="git-cm">README.md: Secció d&#39;autors</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Mar</span>
 </span><span id="__span-34-17"><a id="__codelineno-34-17" name="__codelineno-34-17" href="#__codelineno-34-17"></a><span class="git-bl">| |/  </span>
-</span><span id="__span-34-18"><a id="__codelineno-34-18" name="__codelineno-34-18" href="#__codelineno-34-18"></a><span class="git-bl">|/|   </span>
-</span><span id="__span-34-19"><a id="__codelineno-34-19" name="__codelineno-34-19" href="#__codelineno-34-19"></a><span class="git-bl">| </span><span class="go">*</span><span class="w"> </span><span class="git-ch">4497a8a</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 seconds ago)</span><span class="w"> </span><span class="git-cm">README.md: Branques propòsit únic</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span>
-</span><span id="__span-34-20"><a id="__codelineno-34-20" name="__codelineno-34-20" href="#__codelineno-34-20"></a><span class="git-bl">| </span><span class="go">*</span><span class="w"> </span><span class="git-ch">550b032</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 seconds ago)</span><span class="w"> </span><span class="git-cm">README.md: Descripció</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span>
-</span><span id="__span-34-21"><a id="__codelineno-34-21" name="__codelineno-34-21" href="#__codelineno-34-21"></a><span class="git-bl">|/  </span>
-</span><span id="__span-34-22"><a id="__codelineno-34-22" name="__codelineno-34-22" href="#__codelineno-34-22"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8073f1b</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 seconds ago)</span><span class="w"> </span><span class="git-cm">Commit inicial</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+</span><span id="__span-34-18"><a id="__codelineno-34-18" name="__codelineno-34-18" href="#__codelineno-34-18"></a><span class="go">*</span><span class="git-bl"> |  </span><span class="w"> </span><span class="git-ch">f57aa81</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 seconds ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;feature/license&#39; into develop</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Pau</span>
+</span><span id="__span-34-19"><a id="__codelineno-34-19" name="__codelineno-34-19" href="#__codelineno-34-19"></a><span class="git-bl">|\ \  </span>
+</span><span id="__span-34-20"><a id="__codelineno-34-20" name="__codelineno-34-20" href="#__codelineno-34-20"></a><span class="git-bl">| </span><span class="go">*</span><span class="git-bl"> |</span><span class="w"> </span><span class="git-ch">96a9b49</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(5 seconds ago)</span><span class="w"> </span><span class="git-cm">LICENSE: Enllaç a la llicència</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Pau</span>
+</span><span id="__span-34-21"><a id="__codelineno-34-21" name="__codelineno-34-21" href="#__codelineno-34-21"></a><span class="git-bl">| </span><span class="go">*</span><span class="git-bl"> |</span><span class="w"> </span><span class="git-ch">9c9d3ba</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(5 seconds ago)</span><span class="w"> </span><span class="git-cm">LICENSE: Afegida llicència</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Pau</span>
+</span><span id="__span-34-22"><a id="__codelineno-34-22" name="__codelineno-34-22" href="#__codelineno-34-22"></a><span class="git-bl">| |/  </span>
+</span><span id="__span-34-23"><a id="__codelineno-34-23" name="__codelineno-34-23" href="#__codelineno-34-23"></a><span class="go">*</span><span class="git-bl"> |  </span><span class="w"> </span><span class="git-ch">ab5db56</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(4 seconds ago)</span><span class="w"> </span><span class="git-cm">Merge branch &#39;feature/readme&#39; into develop</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span>
+</span><span id="__span-34-24"><a id="__codelineno-34-24" name="__codelineno-34-24" href="#__codelineno-34-24"></a><span class="git-bl">|\ \  </span>
+</span><span id="__span-34-25"><a id="__codelineno-34-25" name="__codelineno-34-25" href="#__codelineno-34-25"></a><span class="git-bl">| |/  </span>
+</span><span id="__span-34-26"><a id="__codelineno-34-26" name="__codelineno-34-26" href="#__codelineno-34-26"></a><span class="git-bl">|/|   </span>
+</span><span id="__span-34-27"><a id="__codelineno-34-27" name="__codelineno-34-27" href="#__codelineno-34-27"></a><span class="git-bl">| </span><span class="go">*</span><span class="w"> </span><span class="git-ch">4d09428</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">README.md: Branques propòsit únic</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span>
+</span><span id="__span-34-28"><a id="__codelineno-34-28" name="__codelineno-34-28" href="#__codelineno-34-28"></a><span class="git-bl">| </span><span class="go">*</span><span class="w"> </span><span class="git-ch">bbae0af</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(6 seconds ago)</span><span class="w"> </span><span class="git-cm">README.md: Descripció</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span>
+</span><span id="__span-34-29"><a id="__codelineno-34-29" name="__codelineno-34-29" href="#__codelineno-34-29"></a><span class="git-bl">|/  </span>
+</span><span id="__span-34-30"><a id="__codelineno-34-30" name="__codelineno-34-30" href="#__codelineno-34-30"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">1b27d4c</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(7 seconds ago)</span><span class="w"> </span><span class="git-cm">Commit inicial</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
 </span></code></pre></div>
-<h4 id="rebase"><code>rebase</code><a class="headerlink" href="#rebase" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>%%{init: { 'theme': 'forest' } }%%
+gitGraph
+   commit id:"Commit inicial"
+   branch develop order: 2
+   branch feature/readme order: 2
+   branch feature/license order: 2
+   branch feature/author order: 2
+   checkout feature/readme
+   commit id:"README.md: Descripció"
+   commit id:"README.md: Branques propòsit únic"
+   checkout feature/license
+   commit id:"LICENSE: Afegida llicència"
+   commit id:"LICENSE: Enllaç a la llicència"
+   checkout feature/author
+   commit id:"README.md: Secció d'autors"
+   commit id:"Autors: Anna"
+   commit id:"Autors: Pau"
+   commit id:"Autors: Mar"
+   checkout develop
+   merge feature/readme
+   merge feature/license
+   merge feature/author
+   branch "release/v1.0.0" order: 1
+   commit id:"Publicada versió: v1.0.0"
+   checkout develop
+   merge release/v1.0.0
+   checkout main
+   merge release/v1.0.0 tag: "v1.0.0"</code></pre></p>
+<h4 id="rebase-merge-ff-only"><a href="../estrategies/#rebase-merge-ff-only"><code>rebase</code> + <code>merge --ff-only</code></a><a class="headerlink" href="#rebase-merge-ff-only" title="Permanent link">&para;</a></h4>
 <div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_estrategies</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">cd</span><span class="w"> </span>~/git_estrategies/remot
 </span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_estrategies/remot</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
 </span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">b65dd58</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(0 seconds ago)</span><span class="w"> </span><span class="git-cm">Publicada versió: v1.0.0</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main, tag: v1.0.0, develop)</span>
@@ -3599,7 +3635,7 @@ i pot continuar treballant en altres funcionalitats.</p>
 </span><span id="__span-35-11"><a id="__codelineno-35-11" name="__codelineno-35-11" href="#__codelineno-35-11"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">08d5044</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 seconds ago)</span><span class="w"> </span><span class="git-cm">README.md: Descripció</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span>
 </span><span id="__span-35-12"><a id="__codelineno-35-12" name="__codelineno-35-12" href="#__codelineno-35-12"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">76e3984</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 seconds ago)</span><span class="w"> </span><span class="git-cm">Commit inicial</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
 </span></code></pre></div>
-<h4 id="rebase-merge-no-ff"><code>rebase</code> + <code>merge --no-ff</code><a class="headerlink" href="#rebase-merge-no-ff" title="Permanent link">&para;</a></h4>
+<h4 id="rebase-merge-no-ff"><a href="../estrategies/#rebase-merge-no-ff"><code>rebase</code> + <code>merge --no-ff</code></a><a class="headerlink" href="#rebase-merge-no-ff" title="Permanent link">&para;</a></h4>
 <div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_estrategies</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">cd</span><span class="w"> </span>~/git_estrategies/remot
 </span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_estrategies/remot</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lga
 </span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">2e5055d</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(1 second ago)</span><span class="w"> </span><span class="git-cm">Publicada versió: v1.0.0</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Anna</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main, tag: v1.0.0, develop)</span>
@@ -3689,7 +3725,7 @@ i pot continuar treballant en altres funcionalitats.</p>
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="29 de maig del 2025 10:53:36 UTC">29 de maig del 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="3 de juny del 2025 15:01:03 UTC">3 de juny del 2025</span>
   </span>
 
     

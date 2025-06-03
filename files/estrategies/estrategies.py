@@ -463,12 +463,12 @@ def merge_no_ff():
     x.x('git lga')
 
     x.x('git checkout develop')
-    x.x('git merge --ff-only release/v1.0.0')
+    x.x('git merge --no-ff --no-edit release/v1.0.0')
     x.x('git push')
     x.x('git lga')
 
     x.x('git checkout main')
-    x.x('git merge --ff-only release/v1.0.0')
+    x.x('git merge --no-ff --no-edit release/v1.0.0')
     x.x('git push')
     x.x('git lga')
 
