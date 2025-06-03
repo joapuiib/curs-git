@@ -34,3 +34,7 @@ Per últim, cal que esborres també les branques de funcionalitat. Veuràs com l
 
 ## Esborrar les branques de funcionalitat
 Una vegada integrades les branques de funcionalitat, pots esborrar-les del repositori. Veuràs que la història queda molt més neta.
+
+
+## Ampliació
+Respecte a l'ampliació: bon treball! Has provat les diferents opcions per integrar les branques i has pogut fer-te una opinió pròpia sobre quina opció et pareix més adient.
