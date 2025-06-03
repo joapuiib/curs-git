@@ -31,7 +31,7 @@ crearem un repositori remot en la màquina local.
 1. Aquesta comanda és necessària perquè el repositori siga configurat com a  __bare__ i puga ser utilitzat com a repositori remot.
 
 ### Branca de desenvolupament
-El primer pas per establir un flux de treball amb __Gitflow__
+El primer pas per establir un flux de treball
 és crear la branca de desenvolupament `develop`.
 
 ```shellconsole
@@ -324,22 +324,57 @@ Els passos que ha de seguir són:
 L'estat final del repositori segons l'estratègia d'integració utilitzada
 és el següent.
 
-#### `merge` + `merge --squash --ff-only`
+#### [`merge --no-ff` + `merge --squash --ff-only`][merge-squash]
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/squash_final.txt"
 ```
 
-#### `merge --no-ff`
+#### [`merge --no-ff`][merge-no-ff] (_Gitflow_)
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/merge_no_ff_final.txt"
 ```
+```mermaid
+%%{init: { 'theme': 'forest' } }%%
+gitGraph
+   commit id:"Commit inicial"
+   branch develop order: 2
+   branch feature/readme order: 2
+   branch feature/license order: 2
+   branch feature/author order: 2
+   checkout feature/readme
+   commit id:"README.md: Descripció"
+   commit id:"README.md: Branques propòsit únic"
+   checkout feature/license
+   commit id:"LICENSE: Afegida llicència"
+   commit id:"LICENSE: Enllaç a la llicència"
+   checkout feature/author
+   commit id:"README.md: Secció d'autors"
+   commit id:"Autors: Anna"
+   commit id:"Autors: Pau"
+   commit id:"Autors: Mar"
+   checkout develop
+   merge feature/readme
+   merge feature/license
+   merge feature/author
+   branch "release/v1.0.0" order: 1
+   commit id:"Publicada versió: v1.0.0"
+   checkout develop
+   merge release/v1.0.0
+   checkout main
+   merge release/v1.0.0 tag: "v1.0.0"
+```
 
-#### `rebase`
+#### [`rebase` + `merge --ff-only`][rebase-merge-ff-only]
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/rebase_final.txt"
 ```
 
-#### `rebase` + `merge --no-ff`
+#### [`rebase` + `merge --no-ff`][rebase-merge-no-ff]
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/rebase_merge_no_ff_final.txt"
 ```
+
+[merge-squash]: estrategies.md#merge-squash-ff-only
+[merge-no-ff]: estrategies.md#merge-no-ff
+[rebase-merge-ff-only]: estrategies.md#rebase-merge-ff-only
+[rebase-merge-no-ff]: estrategies.md#rebase-merge-no-ff

@@ -101,6 +101,18 @@ has d'utilitzar la tècnica [__merge --squash --ff-only__][merge-squash].
 
     !!! docs "Mostra l'estat del repositori amb `git lga`"
 
+## Estat final
+!!! info "S'han eliminat les branques de funcionalitat"
+
+```shellconsole
+jpuigcerver@fp:~/bloc5_exercici $ git lga
+* 2c075dd - (1 second ago) Sèries del gènere 4 - Joan Puigcerver (HEAD -> main, develop)
+* f9152dc - (1 second ago) Sèries del gènere 3 - Joan Puigcerver
+* b7bf0a5 - (2 seconds ago) Pel·lícules del gènere 2 - Joan Puigcerver
+* 2bc4029 - (3 seconds ago) Pel·lícules del gènere 1 - Joan Puigcerver
+* ec0e2bd - (5 seconds ago) Commit inicial - Joan Puigcerver
+```
+
 ## Ampliació
 
 !!! recommend "Aquesta ampliació no és necessària per superar l'activitat."

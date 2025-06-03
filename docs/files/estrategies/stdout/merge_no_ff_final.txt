@@ -1,22 +1,30 @@
 jpuigcerver@fp:~/git_estrategies $ cd ~/git_estrategies/remot
 jpuigcerver@fp:~/git_estrategies/remot (main) $ git lga
-* 62a0575 - (1 second ago) Publicada versió: v1.0.0 - Anna (HEAD -> main, tag: v1.0.0, develop)
-*   457a8ec - (1 second ago) Merge branch 'feature/author' into develop - Mar
+*   bc63807 - (0 seconds ago) Merge branch 'release/v1.0.0' into develop - Anna (develop)
 |\  
-| * fee598f - (2 seconds ago) Autors: Mar - Mar
-| * 91051a8 - (2 seconds ago) Autors: Pau - Mar
-| * 9d2e45e - (2 seconds ago) Autors: Anna - Mar
-| * 2386be4 - (2 seconds ago) README.md: Secció d'autors - Mar
-* |   ab97fda - (1 second ago) Merge branch 'feature/license' into develop - Pau
+| | *   4dbab8e - (0 seconds ago) Merge branch 'release/v1.0.0' - Anna (HEAD -> main, tag: v1.0.0)
+| | |\  
+| | |/  
+| |/|   
+| * | 23832cd - (0 seconds ago) Publicada versió: v1.0.0 - Anna
+|/ /  
+* |   cef4c2b - (1 second ago) Merge branch 'feature/author' into develop - Mar
 |\ \  
-| * | d0ac96b - (2 seconds ago) LICENSE: Enllaç a la llicència - Pau
-| * | d92ab12 - (2 seconds ago) LICENSE: Afegida llicència - Pau
+| * | 393e204 - (4 seconds ago) Autors: Mar - Mar
+| * | 5feff69 - (5 seconds ago) Autors: Pau - Mar
+| * | 67cf1ea - (5 seconds ago) Autors: Anna - Mar
+| * | 811d4d7 - (5 seconds ago) README.md: Secció d'autors - Mar
 | |/  
-* |   b1643d0 - (2 seconds ago) Merge branch 'feature/readme' into develop - Anna
+* |   f57aa81 - (3 seconds ago) Merge branch 'feature/license' into develop - Pau
+|\ \  
+| * | 96a9b49 - (5 seconds ago) LICENSE: Enllaç a la llicència - Pau
+| * | 9c9d3ba - (5 seconds ago) LICENSE: Afegida llicència - Pau
+| |/  
+* |   ab5db56 - (4 seconds ago) Merge branch 'feature/readme' into develop - Anna
 |\ \  
 | |/  
 |/|   
-| * 4497a8a - (2 seconds ago) README.md: Branques propòsit únic - Anna
-| * 550b032 - (2 seconds ago) README.md: Descripció - Anna
+| * 4d09428 - (6 seconds ago) README.md: Branques propòsit únic - Anna
+| * bbae0af - (6 seconds ago) README.md: Descripció - Anna
 |/  
-* 8073f1b - (3 seconds ago) Commit inicial - Joan Puigcerver
+* 1b27d4c - (7 seconds ago) Commit inicial - Joan Puigcerver
