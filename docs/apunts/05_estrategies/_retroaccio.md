@@ -36,5 +36,15 @@ Per últim, cal que esborres també les branques de funcionalitat. Veuràs com l
 Una vegada integrades les branques de funcionalitat, pots esborrar-les del repositori. Veuràs que la història queda molt més neta.
 
 
+## Merge --squash main
+No obstant, quan has integrat develop a main, també ho has fet amb squash i no queda la història lineal i simple! L'ultim merge és --ff-only.
+
+Per tornar-ho a fer pots:
+- Situar-te a la branca main.
+- Fer un 'git reset --hard [hash]' que apunte al primer commit inicial.
+
+Pots documentar aquesta última part en una captura simple, no cal que et tornes a gravar.
+
+
 ## Ampliació
 Respecte a l'ampliació: bon treball! Has provat les diferents opcions per integrar les branques i has pogut fer-te una opinió pròpia sobre quina opció et pareix més adient.
