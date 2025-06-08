@@ -40,9 +40,7 @@ que pot ser una de les següents opcions:
 Depenent de la teua elecció, has de realitzar canvis
 en el teu repositori local amb la informació corresponent.
 
-!!! info
-    Pots realitzar tants _commits_ com necessites per realitzar la teua contribució.
-
+!!! info "Pots realitzar tants _commits_ com necessites per realitzar la teua contribució."
     La PR serà integrada mitjançant un `merge --squash` en un únic _commit_.
 
 === "Llibre"
@@ -58,7 +56,7 @@ en el teu repositori local amb la informació corresponent.
         ## Sinopsi
         [Sinopsi del llibre.]
 
-        ## Gènere
+        ## Gèneres
         - [Gènere 1]
         - [Gènere 2]
         - ...
@@ -76,7 +74,7 @@ en el teu repositori local amb la informació corresponent.
         ## Sinopsi
         [Sinopsi de la pel·lícula.]
 
-        ## Gènere
+        ## Gèneres
         - [Gènere 1]
         - [Gènere 2]
         - ...
@@ -97,7 +95,7 @@ en el teu repositori local amb la informació corresponent.
         ## Sinopsi
         [Sinopsi de la sèrie.]
 
-        ## Gènere
+        ## Gèneres
         - [Gènere 1]
         - [Gènere 2]
         - ...
@@ -111,10 +109,11 @@ en el teu repositori local amb la informació corresponent.
 1. Crea una :material-source-pull: _Pull Request_ amb els canvis realitzats a la branca `main` del repositori original.
     - Afegeix un títol i una descripció.
 
-!!! important
-    A partir d'aquest punt __estigues atent!__
-
+!!! important "A partir d'aquest punt __estigues atent!__"
     Aniré revisant les sol·licituds d'incorporació i pot ser indique que heu de fer alguna modificació.
+
+    La tasca es considerarà superada quan la teua _Pull Request_ siga acceptada i fusionada en el repositori principal.
+
 
 ## Ampliació
 Com a ampliació, pots revisar el repositori en busca d'incidències,
