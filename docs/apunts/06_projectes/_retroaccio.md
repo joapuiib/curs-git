@@ -13,6 +13,7 @@ Hola [nom],
 Has creat correctament una bifurcació del repositori i has obert una Pull Request sobre el repositori principal. No obstant, encara no ha sigut incorporada perquè s'han demanat uns canvis en la revisió.
 
 Torna a la PR i revisa els canvis demanats. Una vegada realitzats els nous canvis, demana una nova revisió. La tasca es considerarà superada quan la Pull Request siga acceptada.
+Torna a tramitar la tasca una vegada s'accepte la PR.
 
 Ànim!
 
