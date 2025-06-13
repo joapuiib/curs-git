@@ -1,7 +1,7 @@
 ## Retroacció APTE general
 Bon treball [nom]!
 
-Has creat correctament una bifurcació del repositori i has realitzat una contribució al repositori original mitjançant una Pull Request.
+Has creat correctament una bifurcació del repositori i has realitzat una contribució al repositori original mitjançant una Pull Request. Gràcies per la teua contribució!
 
 Seguim!
 
