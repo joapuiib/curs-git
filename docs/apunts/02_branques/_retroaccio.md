@@ -4,9 +4,11 @@ Bon treball [nom]!
 Has treballat correctament amb les branques i has sabut integrar els canvis mitjançant el procés de fusió (merge) i canvi de base (rebase).
 També has sabut resoldre els conflictes que han aparegut i has pogut continuar amb el treball.
 
-A més, has documentat tots els passos d'una manera excel·lent, fent èmfasi en els aspectes més importants del procés.
-
 Seguim!
+
+
+## Documentació excel·lent
+A més, has documentat tots els passos d'una manera excel·lent, fent èmfasi en els aspectes més importants del procés.
 
 
 ## Falta alguna cosa

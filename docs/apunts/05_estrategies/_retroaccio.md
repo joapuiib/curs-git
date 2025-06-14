@@ -3,9 +3,11 @@ Bon treball [nom]!
 
 Has utilitzat els diferents tipus de branques correctament i has integrat totes les funcionalitats de manera adequada seguint una estratègia de ramificació ben definida.
 
-A més, has documentat tots els passos d'una manera excel·lent, fent èmfasi en els aspectes més importants del procés.
-
 Seguim!
+
+
+## Documentació excel·lent
+A més, has documentat tots els passos d'una manera excel·lent, fent èmfasi en els aspectes més importants del procés.
 
 
 ## Falta alguna cosa
