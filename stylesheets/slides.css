@@ -53,3 +53,10 @@ html.reveal-print .reveal .header {
    display: none;
 }
 
+.center {
+  text-align: center !important;
+}
+
+h1 {
+  background-color: var(--md-primary-fg-color);
+}

@@ -5,8 +5,10 @@ table.distribucio-temporal {
 }
 
 table.distribucio-temporal td,
+table.distribucio-temporal th,
 table.distribucio-temporal tr,
 table.quadre-resum td,
+table.quadre-resum th,
 table.quadre-resum tr {
     border: 0;
     font-weight: unset;
