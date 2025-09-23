@@ -181,6 +181,13 @@ a :simple-linux: Linux o terminals basades en Bash.
 [git-prompt]: https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
 
 1. Còpia el fitxer [`git-prompt.sh`][git-prompt] en algun lloc del teu sistema.
+
+    !!! warning "Revisa que el fitxer descarregat és l'adequat."
+
+    ```bash
+    curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/refs/heads/master/contrib/completion/git-prompt.sh
+    ```
+
 2. Afegeix la següent línia al fitxer `.bashrc`, `.zshrc` o `.profile` del teu usuari:
 
     ```bash
@@ -189,16 +196,27 @@ a :simple-linux: Linux o terminals basades en Bash.
 
 3. Modifica la variable `PS1` per incloure la informació del prompt de Git `$(__git_ps1)`:
 
-    ```bash
-    # Exemple amb colors
-    export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[33m\]$(__git_ps1) \[\033[00m\]$ '
-    # Exemple sense colors
-    export PS1='\u@\h:\w$(__git_ps1) $ '
-    ```
+    !!! info "Adapteu el prompt al vostre gust."
 
-    > Adapteu el prompt al vostre gust.
+    === ":simple-gnubash: Bash"
+        ```bash
+        # Exemple amb colors
+        export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[33m\]$(__git_ps1) \[\033[00m\]$ '
+        # Exemple sense colors
+        export PS1='\u@\h:\w$(__git_ps1) $ '
+        ```
 
-4. Reinicia la terminal.
+    === ":simple-zsh: Zsh"
+        ```bash
+        setopt PROMPT_SUBST
+
+        # Exemple amb colors
+        PROMPT='%F{green}%n@%m%f:%F{blue}%~%f%F{yellow}$(__git_ps1 " (%s)")%f %# '
+        # Exemple sense colors
+        PROMPT='%n@%m:%~$(__git_ps1 " (%s)") %# '
+        ```
+
+4. Reinicia la terminal o executa `source ~/.bashrc` (o el fitxer que hàgeu modificat).
 
 ```shellconsole
 jpuigcerver@fp:~ $ cd ~/git_introduccio
