@@ -4,6 +4,7 @@ Bitbucket
 by-nc-sa
 cherrypick
 CIPFP
+CLI
 Codespaces
 config
 d'
@@ -57,3 +58,4 @@ TODO
 untracked
 ViM
 WebStorm
+Zsh
