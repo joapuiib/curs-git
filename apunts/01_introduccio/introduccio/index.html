@@ -2740,49 +2740,57 @@ amb <code>git init</code>:</p>
 </li>
 </ul>
 </div>
+<div class="admonition info">
+<p class="admonition-title">Informació</p>
+<p>Per defecte, Git inicialitza la branca principal amb el nom <code>master</code>
+si no s'ha configurat d'una altra manera.
+La comunitat de desenvolupament ha recomanat canviar aquest nom a <code>main</code>
+per a evitar connotacions històriques negatives associades amb el terme <code>master</code>.</p>
+<p>Vegeu: <a href="https://sfconservancy.org/news/2020/jun/23/gitbranchname/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span> Regarding Git and Branch Naming</a> – Software Freedom Conservancy</p>
+<p>Si vols canviar el nom per defecte de la branca principal a <code>main</code> quan
+inicialitzes un nou repositori, pots utilitzar la següent comanda:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>init.defaultBranch<span class="w"> </span>main
+</span></code></pre></div>
+</div>
 <details class="example">
 <summary>Exemple: Inicialització d'un repositori</summary>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>mkdir<span class="w"> </span>git_introduccio
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">cd</span><span class="w"> </span>git_introduccio
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>ls<span class="w"> </span>-a<span class="w"> </span><span class="c1"># (1)!</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="go">.  ..</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>init
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="git-hint">hint: Using &#39;master&#39; as the name for the initial branch. This default branch name</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="git-hint">hint: is subject to change. To configure the initial branch name to use in all</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="git-hint">hint: of your new repositoris, which will suppress this warning, call:</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="git-hint">hint:</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="git-hint">hint: git config --global init.dafaultBranch &lt;name&gt;</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="git-hint">hint:</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="git-hint">hint: Names commonly chosen instead of &#39;master&#39; are &#39;main&#39;, &#39;trunk&#39; and</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="git-hint">hint: &#39;development&#39;. The just-created branch can be renamed via this command:</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="git-hint">hint:</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="git-hint">hint: git branch -m &lt;name&gt;</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="go">Initialized empty Git repository in /home/jpuigcerver/git_introduccio/.git/</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(master)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>branch<span class="w"> </span>-m<span class="w"> </span>main
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>ls<span class="w"> </span>-a<span class="w"> </span><span class="c1"># (2)!</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="go">.  ..  .git/</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="go">On branch main</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="go">No commits yet</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="go">Nothing to commit (create/copy files and use &quot;git add&quot; to track)</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>mkdir<span class="w"> </span>git_introduccio
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">cd</span><span class="w"> </span>git_introduccio
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>ls<span class="w"> </span>-a<span class="w"> </span><span class="c1"># (1)!</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="go">.  ..</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>init
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="git-hint">hint: Using &#39;master&#39; as the name for the initial branch. This default branch name</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="git-hint">hint: is subject to change. To configure the initial branch name to use in all</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="git-hint">hint: of your new repositoris, which will suppress this warning, call:</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="git-hint">hint:</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="git-hint">hint: git config --global init.defaultBranch &lt;name&gt;</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="git-hint">hint:</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="git-hint">hint: Names commonly chosen instead of &#39;master&#39; are &#39;main&#39;, &#39;trunk&#39; and</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="git-hint">hint: &#39;development&#39;. The just-created branch can be renamed via this command:</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="git-hint">hint:</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="git-hint">hint: git branch -m &lt;name&gt;</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="go">Initialized empty Git repository in /home/jpuigcerver/git_introduccio/.git/</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(master)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>branch<span class="w"> </span>-m<span class="w"> </span>main<span class="w"> </span><span class="c1"># (2)!</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>ls<span class="w"> </span>-a<span class="w"> </span><span class="c1"># (3)!</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="go">.  ..  .git/</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="go">On branch main</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="go">No commits yet</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="go">Nothing to commit (create/copy files and use &quot;git add&quot; to track)</span>
 </span></code></pre></div>
 <ol class="fancylists-decimal" type="1">
 <li>L'opció <code>-a</code> mostra tots els fitxers, inclosos els ocults que comencen amb un punt.</li>
+<li>Canviem el nom de la branca principal de <code>master</code> a <code>main</code>.</li>
 <li>S'ha creat el directori ocult <code>.git</code> que conté tota la informació del repositori.</li>
 </ol>
 <p>L'ordre <code>git status</code> ens mostra l'estat actual del nostre repositori.
 Podem observar que estem en la branca <code>main</code> i que de moment no s'ha realitzat cap canvi.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>S'ha canviat el nom de la branca principal de <code>master</code> a <code>main</code> per a seguir les recomanacions de la comunitat de desenvolupament.</p>
-<p>Vegeu: <a href="https://sfconservancy.org/news/2020/jun/23/gitbranchname/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span> Regarding Git and Branch Naming</a></p>
-</div>
 </details>
 <h3 id="eliminar-un-repositori">Eliminar un repositori<a class="headerlink" href="#eliminar-un-repositori" title="Permanent link">&para;</a></h3>
 <p>Per a eliminar un repositori de Git, simplement cal eliminar el directori ocult <code>.git</code>.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>rm<span class="w"> </span>-rf<span class="w"> </span>.git
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>rm<span class="w"> </span>-rf<span class="w"> </span>.git
 </span></code></pre></div>
 <ul>
 <li><code>-r</code>: Opció per a eliminar de manera recursiva.</li>
@@ -2795,11 +2803,17 @@ ja que elimina tots els fitxers, inclosos aquells protegits contra escriptura.</
 </div>
 <details class="example">
 <summary>Exemple: Eliminar un repositori</summary>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>ls<span class="w"> </span>-a
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="go">.  ..  .git</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>.git
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="git-fatal">fatal: not a git repository (or any of the parent directories): .git</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>ls<span class="w"> </span>-a
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="go">.  ..  .git</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="go">On branch main</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="go">No commits yet</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="go">Nothing to commit (create/copy files and use &quot;git add&quot; to track)</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>.git
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="git-fatal">fatal: not a git repository (or any of the parent directories): .git</span>
 </span></code></pre></div>
 </details>
 <h2 id="estructura-dun-repositori-de-git">Estructura d'un repositori de Git<a class="headerlink" href="#estructura-dun-repositori-de-git" title="Permanent link">&para;</a></h2>
@@ -2807,7 +2821,8 @@ ja que elimina tots els fitxers, inclosos aquells protegits contra escriptura.</
 on encara no haurem connectat cap repositori <strong>remot</strong>.</p>
 <p>Abans que res, hem de conéixer l'estructura d'un repositori de Git.</p>
 <figure id="__figure-caption_1">
-<p><img alt="Components d'un repositori de Git" src="../img/components.png" /></p>
+<p><img alt="Components d'un repositori de Git" src="../img/components.light.png#only-light" />
+<img alt="Components d'un repositori de Git" src="../img/components.dark.png#only-dark" /></p>
 <figcaption>
 <p><span class="caption-prefix">Figura 1. </span> Components d'un repositori de Git.</p>
 </figcaption>
@@ -2837,7 +2852,8 @@ Aquests canvis poden ser:</p>
 que canviarà l'estat dels fitxers <strong>Staged</strong> (mostrat en color verd amb <code>git status</code>).</p>
 <p>Per últim, tots els canvis de l'<strong>Àrea de preparació</strong> es poden confirmar i fer efectius en el <strong>Repositori local</strong> amb la comanda <code>git commit</code>.</p>
 <figure id="figure-flux-treball">
-<p><img alt="Flux de treball en un repositori de Git" src="../img/flux_treball.png" /></p>
+<p><img alt="Flux de treball en un repositori de Git" src="../img/flux_treball.light.png#only-light" />
+<img alt="Flux de treball en un repositori de Git" src="../img/flux_treball.dark.png#only-dark" /></p>
 <figcaption>
 <p><span class="caption-prefix">Figura 2. </span> Flux de treball en un repositori de Git.</p>
 </figcaption>
@@ -2862,17 +2878,17 @@ com s'utilitza i qualsevol altra informació rellevant.</p>
 </div>
 <p>Afegim el primer fitxer <code>README.md</code> al nostre repositori amb
 el contingut:</p>
-<div class="language-md highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gh"># 01 - Introducció a Git</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Estem aprenent a utilitzar Git!
+<div class="language-md highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="gh"># 01 - Introducció a Git</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Estem aprenent a utilitzar Git!
 </span></code></pre></div>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.25 12a.75.75 0 0 1-.22.53l-2.75 2.75a.75.75 0 0 1-1.06-1.06L7.44 12 5.22 9.78a.75.75 0 1 1 1.06-1.06l2.75 2.75c.141.14.22.331.22.53m2 2a.75.75 0 0 0 0 1.5h5a.75.75 0 0 0 0-1.5z"/><path d="M0 4.75C0 3.784.784 3 1.75 3h20.5c.966 0 1.75.784 1.75 1.75v14.5A1.75 1.75 0 0 1 22.25 21H1.75A1.75 1.75 0 0 1 0 19.25Zm1.75-.25a.25.25 0 0 0-.25.25v14.5c0 .138.112.25.25.25h20.5a.25.25 0 0 0 .25-.25V4.75a.25.25 0 0 0-.25-.25Z"/></svg></span> Terminal</label><label for="__tabbed_1_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 16.47V7.39l-6 4.54M2.22 9.19a.86.86 0 0 1-.02-1.15l1.2-1.11c.2-.18.69-.26 1.05 0l3.42 2.61 7.93-7.25c.32-.32.87-.45 1.5-.12l4 1.91c.36.21.7.54.7 1.15v13.5c0 .4-.29.83-.6 1l-4.4 2.1c-.32.13-.92.01-1.13-.2l-8.02-7.3-3.4 2.6c-.38.26-.85.19-1.05 0l-1.2-1.1c-.32-.33-.28-.87.05-1.2l3-2.7"/></svg></span> VS Code</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;# 01 - Introducció a Git&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>README.md
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Estem aprenent a utilitzar Git!&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>cat<span class="w"> </span>README.md
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="go"># 01 - Introducció a Git</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="go">Estem aprenent a utilitzar Git!</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;# 01 - Introducció a Git&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>README.md
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Estem aprenent a utilitzar Git!&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>cat<span class="w"> </span>README.md
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="go"># 01 - Introducció a Git</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="go">Estem aprenent a utilitzar Git!</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -2885,19 +2901,20 @@ en el directori <code>git_introduccio</code>.</p>
 <p>Vegem que Git reconeix aquest nou fitxer,que ara mateix resideix en el <strong>Directori de treball</strong>.</p>
 <p>La comanda <code>git status</code> ens mostra que no s'està realitzant cap seguiment del fitxer <code>README.md</code>,
 que es troba en l'estat <strong>Untracked</strong>.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="go">On branch main</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="go">No commits yet</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="go">Untracked files:</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">        </span><span class="git-untr">README.md</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="go">Nothing added to commit but untracked files present (use &quot;git add&quot; to track)</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="go">On branch main</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="go">No commits yet</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="go">Untracked files:</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">        </span><span class="git-untr">README.md</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="go">Nothing added to commit but untracked files present (use &quot;git add&quot; to track)</span>
 </span></code></pre></div>
 <figure id="__figure-caption_3">
-<p><img alt="Fitxer sense seguiment" src="../img/untracked_readme.png" /></p>
+<p><img alt="Fitxer sense seguiment" src="../img/untracked_readme.light.png#only-light" />
+<img alt="Fitxer sense seguiment" src="../img/untracked_readme.dark.png#only-dark" /></p>
 <figcaption>
 <p><span class="caption-prefix">Figura 3. </span> Fitxer sense seguiment (untracked).</p>
 </figcaption>
@@ -2906,25 +2923,26 @@ que es troba en l'estat <strong>Untracked</strong>.</p>
 els canvis a l'<em>Àrea de Preparació</em> amb l'ordre <code>git add</code>.
 Aquesta comanda permet especificar quins canvis es desitja afegir.</p>
 <p>La sintaxi és la següent:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>add<span class="w"> </span><span class="o">[</span>--all<span class="o">]</span><span class="w"> </span>&lt;path&gt;
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>add<span class="w"> </span><span class="o">[</span>--all<span class="o">]</span><span class="w"> </span>&lt;path&gt;
 </span></code></pre></div>
 <ul>
 <li><code>path</code>: Ruta del fitxer o directori que es vol afegir a l'<em>Àrea de Preparació</em>.</li>
 <li><code>--all</code>: Opcional. Afegix tots els fitxers modificats i eliminats a l'<em>Àrea de Preparació</em>.</li>
 </ul>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>add<span class="w"> </span>README.md
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="go">On branch main</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="go">No commits yet</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="go">Changes to be committed:</span>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="go">  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)</span>
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">        </span><span class="git-stg">new file:   README.md</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>add<span class="w"> </span>README.md
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="go">On branch main</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="go">No commits yet</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="go">Changes to be committed:</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="go">  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">        </span><span class="git-stg">new file:   README.md</span>
 </span></code></pre></div>
 <p>Vegem com el fitxer <code>README.md</code> ha passat a l'estat <strong>Staged</strong> i està preparat per a ser confirmat.</p>
 <figure id="__figure-caption_4">
-<p><img alt="Fitxer a l'Àrea de Preparació" src="../img/staged_readme.png" /></p>
+<p><img alt="Fitxer a l'Àrea de Preparació" src="../img/staged_readme.light.png#only-light" />
+<img alt="Fitxer a l'Àrea de Preparació" src="../img/staged_readme.dark.png#only-dark" /></p>
 <figcaption>
 <p><span class="caption-prefix">Figura 4. </span> Fitxer a l'Àrea de Preparació (staged).</p>
 </figcaption>
@@ -2932,7 +2950,7 @@ Aquesta comanda permet especificar quins canvis es desitja afegir.</p>
 <h2 id="confirmar-canvis-git-commit">Confirmar canvis (<code>git commit</code>)<a class="headerlink" href="#confirmar-canvis-git-commit" title="Permanent link">&para;</a></h2>
 <p>Una vegada afegits tots els canvis a l'<em>Àrea de Preparació</em>, ja podem <strong>confirmar-los</strong>
 mitjançant l'ordre <code>git commit</code>.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>commit<span class="w"> </span><span class="o">[</span>-a<span class="o">]</span><span class="w"> </span><span class="o">[</span>-m<span class="w"> </span><span class="s2">&quot;&lt;message&gt;&quot;</span><span class="o">]</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>git<span class="w"> </span>commit<span class="w"> </span><span class="o">[</span>-a<span class="o">]</span><span class="w"> </span><span class="o">[</span>-m<span class="w"> </span><span class="s2">&quot;&lt;message&gt;&quot;</span><span class="o">]</span>
 </span></code></pre></div>
 <ul>
 <li><code>-a</code>: Opcional. Afegeix tots els fitxers modificats i eliminats a l'<em>Àrea de Preparació</em> (sense necessitat de <code>git add</code>).</li>
@@ -2944,13 +2962,14 @@ mitjançant l'ordre <code>git commit</code>.</p>
 </div>
 <ol class="fancylists-decimal" type="1">
 <li><code>ViM</code> per defecte. Pot ser configurat: 
-    <div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>core.editor<span class="w"> </span>&lt;editor&gt;
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>core.editor<span class="w"> </span>&lt;editor&gt;
 </span></code></pre></div></li>
 </ol>
 <figure id="__figure-caption_5">
-<p><img alt="Estat del repositori de Git abans de fer un commit" src="../img/before_commit_readme.png" /></p>
+<p><img alt="Estat del repositori de Git abans de fer un commit" src="../img/before_commit_readme.light.png#only-light" />
+<img alt="Estat del repositori de Git abans de fer un commit" src="../img/before_commit_readme.dark.png#only-dark" /></p>
 <figcaption>
-<p><span class="caption-prefix">Figura 5. </span> Estat del repositori de Git abans de fer un _commit`.</p>
+<p><span class="caption-prefix">Figura 5. </span> Estat del repositori de Git abans de fer un <em>commit</em>.</p>
 </figcaption>
 </figure>
 <p>Aquesta ordre crea un nou <em>commit</em>, que és una instantània de l'estat actual dels fitxers
@@ -2965,60 +2984,61 @@ del repositori i que conté tota la informació relativa als canvis realitzats.<
 <li><strong>Canvis</strong>: Llista de fitxers modificats, afegits o eliminats en el <em>commit</em> i els canvis realitzats en ells <strong>respecte de la versió anterior</strong>.</li>
 </ul>
 <p>Per tant, abans de realitzar un <em>commit</em>, és necessari configurar el nom i el correu electrònic de l'autor.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span>&lt;name&gt;
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span>&lt;email&gt;
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span>&lt;name&gt;
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span>&lt;email&gt;
 </span></code></pre></div>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Joan Puigcerver Ibáñez&quot;</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;j.puigcerveribanez@edu.gva.es&quot;</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Joan Puigcerver Ibáñez&quot;</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;j.puigcerveribanez@edu.gva.es&quot;</span>
 </span></code></pre></div>
 <p>Amb aquesta informació configurada, ja podem realitzar el nostre primer <em>commit</em>.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="go">On branch main</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="go">No commits yet</span>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
-</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="go">Changes to be committed:</span>
-</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="go">  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)</span>
-</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">        </span><span class="git-stg">new file:   README.md</span>
-</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Added README.md&quot;</span>
-</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="go">[main (root-commit) 8e70293] Added README.md</span>
-</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="go"> 1 file changed, 2 insertions(+)</span>
-</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="go"> create mode 100644 README.md</span>
-</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="go">On branch main</span>
-</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>
-</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="go">nothing to commit, working tree clean</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="go">On branch main</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="go">No commits yet</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="go">Changes to be committed:</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="go">  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">        </span><span class="git-stg">new file:   README.md</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Added README.md&quot;</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="go">[main (root-commit) 8e70293] Added README.md</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="go"> 1 file changed, 2 insertions(+)</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="go"> create mode 100644 README.md</span>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="go">On branch main</span>
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="go">nothing to commit, working tree clean</span>
 </span></code></pre></div>
 <p>Vegem que l'estat del nostre repositori ha canviat i ja no hi ha canvis pendents de confirmar.
 A més, s'ha creat el primer <em>commit</em> amb el missatge <code>Added README.md</code> i identificador <code>8e70293</code>.</p>
 <figure id="__figure-caption_6">
-<p><img alt="Estat del repositori de Git després de fer un commit" src="../img/after_commit_readme.png" /></p>
+<p><img alt="Estat del repositori de Git després de fer un commit" src="../img/after_commit_readme.light.png#only-light" />
+<img alt="Estat del repositori de Git després de fer un commit" src="../img/after_commit_readme.dark.png#only-dark" /></p>
 <figcaption>
 <p><span class="caption-prefix">Figura 6. </span> Estat del repositori de Git després de fer un <em>commit</em>.</p>
 </figcaption>
 </figure>
 <p>Podem consultar la informació del nou <em>commit</em> amb l'ordre <code>git show</code>.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>show<span class="w"> </span>8e70293
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="git-show-h">commit 8e702933d5dbec9ee71100a1599ae4491085e1aa</span><span class="w"> </span><span class="git-show-h">(</span><span class="git-h">HEAD</span><span class="w"> </span><span class="git-show-h">-&gt;</span><span class="w"> </span><span class="git-b">main</span><span class="git-show-h">)</span>
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="go">Author: Joan Puigcerver Ibáñez &lt;j.puigcerveribanez@edu.gva.es&gt;</span>
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="go">Date:   Fri Oct 13 16:06:59 2023 +0200</span>
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="go">    Added README.md</span>
-</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>
-</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="gh">diff --git a/README.md b/README.md</span>
-</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>new file mode 100644
-</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="gh">index 0000000..6d747b3</span>
-</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="gd">--- /dev/null</span>
-</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="gi">+++ b/README.md</span>
-</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="gu">@@ -0,0 +1,2 @@</span>
-</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="gi">+# 01 - Introducció a Git</span>
-</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="gi">+Estem aprenent a utilitzar Git!</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>show<span class="w"> </span>8e70293
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="git-show-h">commit 8e702933d5dbec9ee71100a1599ae4491085e1aa</span><span class="w"> </span><span class="git-show-h">(</span><span class="git-h">HEAD</span><span class="w"> </span><span class="git-show-h">-&gt;</span><span class="w"> </span><span class="git-b">main</span><span class="git-show-h">)</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="go">Author: Joan Puigcerver Ibáñez &lt;j.puigcerveribanez@edu.gva.es&gt;</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="go">Date:   Fri Oct 13 16:06:59 2023 +0200</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="go">    Added README.md</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="gh">diff --git a/README.md b/README.md</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>new file mode 100644
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="gh">index 0000000..6d747b3</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="gd">--- /dev/null</span>
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="gi">+++ b/README.md</span>
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="gu">@@ -0,0 +1,2 @@</span>
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="gi">+# 01 - Introducció a Git</span>
+</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="gi">+Estem aprenent a utilitzar Git!</span>
 </span></code></pre></div>
 <h2 id="diferencies-entre-versions-git-diff">Diferències entre versions (<code>git diff</code>)<a class="headerlink" href="#diferencies-entre-versions-git-diff" title="Permanent link">&para;</a></h2>
 <p>Una ferramenta molt útil de Git és <code>git diff</code>, que permet comparar les diferències entre els canvis realitzats
 en el <strong>Directori de treball</strong> o <strong>l'Àrea de Preparació</strong> respecte del <strong>Repositori local</strong>.</p>
 <p>La sintaxi amb les opcions bàsiques es:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>git<span class="w"> </span>diff<span class="w"> </span><span class="o">[</span>--staged<span class="o">]</span><span class="w"> </span><span class="o">[</span>&lt;path&gt;<span class="o">]</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>git<span class="w"> </span>diff<span class="w"> </span><span class="o">[</span>--staged<span class="o">]</span><span class="w"> </span><span class="o">[</span>&lt;path&gt;<span class="o">]</span>
 </span></code></pre></div></p>
 <ul>
 <li><code>--staged</code>: Opcional. Mostra les diferències entre <strong>l'Àrea de Preparació</strong> i el <strong>Repositori local</strong>.
@@ -3031,22 +3051,23 @@ en el <strong>Directori de treball</strong> o <strong>l'Àrea de Preparació</st
 <p><a href="https://git-scm.com/docs/git-diff"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span> <code>git diff</code></a></p>
 </div>
 <figure id="__figure-caption_7">
-<p><img alt="Resum de git diff" src="../img/resum_diff.png" /></p>
+<p><img alt="Resum de git diff" src="../img/resum_diff.light.png#only-light" />
+<img alt="Resum de git diff" src="../img/resum_diff.dark.png#only-dark" /></p>
 <figcaption>
 <p><span class="caption-prefix">Figura 7. </span> Resum de <code>git diff</code>.</p>
 </figcaption>
 </figure>
 <div class="admonition info">
 <p class="admonition-title">Interpretació de <code>diff</code></p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>diff
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="gh">diff --git a/README.md b/README.md</span>
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="gh">index 6d747b3..f3b3b3e 100644</span>
-</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="gd">--- a/README.md</span>
-</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="gi">+++ b/README.md</span>
-</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="gu">@@ -1,2 +1,3 @@</span>
-</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w"> </span># 01 - Introducció a Git
-</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w"> </span>Estem aprenent a utilitzar Git!
-</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="gi">+Aquesta és una línia nova</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>diff
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="gh">diff --git a/README.md b/README.md</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="gh">index 6d747b3..f3b3b3e 100644</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="gd">--- a/README.md</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="gi">+++ b/README.md</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="gu">@@ -1,2 +1,3 @@</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w"> </span># 01 - Introducció a Git
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="w"> </span>Estem aprenent a utilitzar Git!
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="gi">+Aquesta és una línia nova</span>
 </span></code></pre></div>
 <p>El format d'un <code>diff</code> és el següent:</p>
 <ul>
@@ -3074,54 +3095,54 @@ en el <strong>Directori de treball</strong> o <strong>l'Àrea de Preparació</st
 <details class="example">
 <summary>Exemple: Diferències entre el Directori de treball i el Repositori local</summary>
 <p>Observem les diferències entre el fitxer <code>README.md</code> del <strong>Directori de treball</strong> i el <strong>Repositori local</strong>.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Aquesta és una línia nova&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="go">On branch main</span>
-</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
-</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="go">Changes not staged for commit:</span>
-</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span>
-</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="go">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)</span>
-</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="w">        </span><span class="git-mod">modified:   README.md</span>
-</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>
-</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="go">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span>
-</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>diff
-</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="gh">diff --git a/README.md b/README.md</span>
-</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="gh">index 6d747b3..f3b3b3e 100644</span>
-</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="gd">--- a/README.md</span>
-</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a><span class="gi">+++ b/README.md</span>
-</span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a><span class="gu">@@ -1,2 +1,3 @@</span>
-</span><span id="__span-17-17"><a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a><span class="w"> </span># 01 - Introducció a Git
-</span><span id="__span-17-18"><a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a><span class="w"> </span>Estem aprenent a utilitzar Git!
-</span><span id="__span-17-19"><a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a><span class="gi">+Aquesta és una línia nova</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Aquesta és una línia nova&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="go">On branch main</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="go">Changes not staged for commit:</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="go">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)</span>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="w">        </span><span class="git-mod">modified:   README.md</span>
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="go">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span>
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>diff
+</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="gh">diff --git a/README.md b/README.md</span>
+</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="gh">index 6d747b3..f3b3b3e 100644</span>
+</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="gd">--- a/README.md</span>
+</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="gi">+++ b/README.md</span>
+</span><span id="__span-18-16"><a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="gu">@@ -1,2 +1,3 @@</span>
+</span><span id="__span-18-17"><a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a><span class="w"> </span># 01 - Introducció a Git
+</span><span id="__span-18-18"><a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a><span class="w"> </span>Estem aprenent a utilitzar Git!
+</span><span id="__span-18-19"><a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a><span class="gi">+Aquesta és una línia nova</span>
 </span></code></pre></div>
 </details>
 <details class="example">
 <summary>Exemple: Diferències entre l'Àrea de Preparació i el Repositori local</summary>
 <p>Observem les diferències entre el fitxer <code>README.md</code> de l'<em>Àrea de Preparació</em> i el <strong>Repositori local</strong>.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>add<span class="w"> </span>README.md
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="go">On branch main</span>
-</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>
-</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="go">Changes to be committed:</span>
-</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="go">  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)</span>
-</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">        </span><span class="git-stg">modified:   README.md</span>
-</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>
-</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>diff<span class="w"> </span>--staged
-</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="gh">diff --git a/README.md b/README.md</span>
-</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="gh">index 6d747b3..f3b3b3e 100644</span>
-</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="gd">--- a/README.md</span>
-</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="gi">+++ b/README.md</span>
-</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="gu">@@ -1,2 +1,3 @@</span>
-</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="w"> </span># 01 - Introducció a Git
-</span><span id="__span-18-16"><a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="w"> </span>Estem aprenent a utilitzar Git!
-</span><span id="__span-18-17"><a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a><span class="gi">+Aquesta és una línia nova</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>add<span class="w"> </span>README.md
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="go">On branch main</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="go">Changes to be committed:</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="go">  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">        </span><span class="git-stg">modified:   README.md</span>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>diff<span class="w"> </span>--staged
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="gh">diff --git a/README.md b/README.md</span>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="gh">index 6d747b3..f3b3b3e 100644</span>
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="gd">--- a/README.md</span>
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="gi">+++ b/README.md</span>
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="gu">@@ -1,2 +1,3 @@</span>
+</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="w"> </span># 01 - Introducció a Git
+</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a><span class="w"> </span>Estem aprenent a utilitzar Git!
+</span><span id="__span-19-17"><a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a><span class="gi">+Aquesta és una línia nova</span>
 </span></code></pre></div>
 </details>
 <h2 id="descartar-canvis-git-restore">Descartar canvis (<code>git restore</code>)<a class="headerlink" href="#descartar-canvis-git-restore" title="Permanent link">&para;</a></h2>
 <p>Una altra ferramenta útil de Git és <code>git restore</code>, que permet descartar els canvis realitzats en els fitxers
 del <strong>Directori de treball</strong> o <strong>l'Àrea de Preparació</strong>.</p>
 <p>La sintaxi amb les opcions bàsiques és:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>git<span class="w"> </span>restore<span class="w"> </span><span class="o">[</span>--staged<span class="o">]</span><span class="w"> </span>&lt;path&gt;
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>git<span class="w"> </span>restore<span class="w"> </span><span class="o">[</span>--staged<span class="o">]</span><span class="w"> </span>&lt;path&gt;
 </span></code></pre></div></p>
 <ul>
 <li><code>--staged</code>: Opcional. Descarta els canvis realitzats en l'<strong>Àrea de Preparació</strong>.
@@ -3140,30 +3161,30 @@ del <strong>Directori de treball</strong> o <strong>l'Àrea de Preparació</stro
 <details class="example">
 <summary>Exemple: Descartar canvis en l'Àrea de Preparació</summary>
 <p>Continuant amb l'exemple anterior, descartem els canvis realitzats en el fitxer <code>README.md</code> de l'<em>Àrea de Preparació</em>.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="go">On branch main</span>
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
-</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="go">Changes to be committed:</span>
-</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="go">  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)</span>
-</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">        </span><span class="git-stg">modified:   README.md</span>
-</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>
-</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>diff<span class="w"> </span>--staged
-</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="gh">diff --git a/README.md b/README.md</span>
-</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="gh">index 6d747b3..f3b3b3e 100644</span>
-</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="gd">--- a/README.md</span>
-</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="gi">+++ b/README.md</span>
-</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="gu">@@ -1,2 +1,3 @@</span>
-</span><span id="__span-20-14"><a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="w"> </span># 01 - Introducció a Git
-</span><span id="__span-20-15"><a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a><span class="w"> </span>Estem aprenent a utilitzar Git!
-</span><span id="__span-20-16"><a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a><span class="gi">+Aquesta és una línia nova</span>
-</span><span id="__span-20-17"><a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>restore<span class="w"> </span>--staged<span class="w"> </span>README.md
-</span><span id="__span-20-18"><a id="__codelineno-20-18" name="__codelineno-20-18" href="#__codelineno-20-18"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-20-19"><a id="__codelineno-20-19" name="__codelineno-20-19" href="#__codelineno-20-19"></a><span class="go">On branch main</span>
-</span><span id="__span-20-20"><a id="__codelineno-20-20" name="__codelineno-20-20" href="#__codelineno-20-20"></a>
-</span><span id="__span-20-21"><a id="__codelineno-20-21" name="__codelineno-20-21" href="#__codelineno-20-21"></a><span class="go">Changes not staged for commit:</span>
-</span><span id="__span-20-22"><a id="__codelineno-20-22" name="__codelineno-20-22" href="#__codelineno-20-22"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span>
-</span><span id="__span-20-23"><a id="__codelineno-20-23" name="__codelineno-20-23" href="#__codelineno-20-23"></a><span class="go">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)</span>
-</span><span id="__span-20-24"><a id="__codelineno-20-24" name="__codelineno-20-24" href="#__codelineno-20-24"></a><span class="w">        </span><span class="git-mod">modified:   README.md</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="go">On branch main</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="go">Changes to be committed:</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="go">  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)</span>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w">        </span><span class="git-stg">modified:   README.md</span>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>diff<span class="w"> </span>--staged
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="gh">diff --git a/README.md b/README.md</span>
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="gh">index 6d747b3..f3b3b3e 100644</span>
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="gd">--- a/README.md</span>
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="gi">+++ b/README.md</span>
+</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="gu">@@ -1,2 +1,3 @@</span>
+</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a><span class="w"> </span># 01 - Introducció a Git
+</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a><span class="w"> </span>Estem aprenent a utilitzar Git!
+</span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="gi">+Aquesta és una línia nova</span>
+</span><span id="__span-21-17"><a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>restore<span class="w"> </span>--staged<span class="w"> </span>README.md
+</span><span id="__span-21-18"><a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
+</span><span id="__span-21-19"><a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a><span class="go">On branch main</span>
+</span><span id="__span-21-20"><a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a>
+</span><span id="__span-21-21"><a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a><span class="go">Changes not staged for commit:</span>
+</span><span id="__span-21-22"><a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span>
+</span><span id="__span-21-23"><a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a><span class="go">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)</span>
+</span><span id="__span-21-24"><a id="__codelineno-21-24" name="__codelineno-21-24" href="#__codelineno-21-24"></a><span class="w">        </span><span class="git-mod">modified:   README.md</span>
 </span></code></pre></div>
 </details>
 <details class="example">
@@ -3173,35 +3194,35 @@ del <strong>Directori de treball</strong> o <strong>l'Àrea de Preparació</stro
 <p class="admonition-title">Danger</p>
 <p>Aquesta comanda descartarà els canvis realitzats en el fitxer <code>README.md</code> sense possibilitat de recuperar-los.</p>
 </div>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="go">On branch main</span>
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>
-</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="go">Changes not staged for commit:</span>
-</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span>
-</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="go">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)</span>
-</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="w">        </span><span class="git-mod">modified:   README.md</span>
-</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>
-</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="go">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span>
-</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>diff
-</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="gh">diff --git a/README.md b/README.md</span>
-</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="gh">index 6d747b3..f3b3b3e 100644</span>
-</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="gd">--- a/README.md</span>
-</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a><span class="gi">+++ b/README.md</span>
-</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a><span class="gu">@@ -1,2 +1,3 @@</span>
-</span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="w"> </span># 01 - Introducció a Git
-</span><span id="__span-21-17"><a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a><span class="w"> </span>Estem aprenent a utilitzar Git!
-</span><span id="__span-21-18"><a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a><span class="gi">+Aquesta és una línia nova</span>
-</span><span id="__span-21-19"><a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>restore<span class="w"> </span>README.md
-</span><span id="__span-21-20"><a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-21-21"><a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a><span class="go">On branch main</span>
-</span><span id="__span-21-22"><a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a>
-</span><span id="__span-21-23"><a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a><span class="go">nothing to commit, working tree clean</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="go">On branch main</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="go">Changes not staged for commit:</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span>
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="go">  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)</span>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="w">        </span><span class="git-mod">modified:   README.md</span>
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="go">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span>
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>diff
+</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="gh">diff --git a/README.md b/README.md</span>
+</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="gh">index 6d747b3..f3b3b3e 100644</span>
+</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a><span class="gd">--- a/README.md</span>
+</span><span id="__span-22-14"><a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a><span class="gi">+++ b/README.md</span>
+</span><span id="__span-22-15"><a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a><span class="gu">@@ -1,2 +1,3 @@</span>
+</span><span id="__span-22-16"><a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a><span class="w"> </span># 01 - Introducció a Git
+</span><span id="__span-22-17"><a id="__codelineno-22-17" name="__codelineno-22-17" href="#__codelineno-22-17"></a><span class="w"> </span>Estem aprenent a utilitzar Git!
+</span><span id="__span-22-18"><a id="__codelineno-22-18" name="__codelineno-22-18" href="#__codelineno-22-18"></a><span class="gi">+Aquesta és una línia nova</span>
+</span><span id="__span-22-19"><a id="__codelineno-22-19" name="__codelineno-22-19" href="#__codelineno-22-19"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>restore<span class="w"> </span>README.md
+</span><span id="__span-22-20"><a id="__codelineno-22-20" name="__codelineno-22-20" href="#__codelineno-22-20"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
+</span><span id="__span-22-21"><a id="__codelineno-22-21" name="__codelineno-22-21" href="#__codelineno-22-21"></a><span class="go">On branch main</span>
+</span><span id="__span-22-22"><a id="__codelineno-22-22" name="__codelineno-22-22" href="#__codelineno-22-22"></a>
+</span><span id="__span-22-23"><a id="__codelineno-22-23" name="__codelineno-22-23" href="#__codelineno-22-23"></a><span class="go">nothing to commit, working tree clean</span>
 </span></code></pre></div>
 </details>
 <h2 id="historic-de-canvis-git-log">Històric de canvis (<code>git log</code>)<a class="headerlink" href="#historic-de-canvis-git-log" title="Permanent link">&para;</a></h2>
 <p>Git registra tots els canvis confirmats (<em>commit</em>) en el <strong>Repositori local</strong>.
 L'històric de canvis es pot consultar amb l'ordre <code>git log</code>.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>git<span class="w"> </span>log<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>git<span class="w"> </span>log<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
 </span></code></pre></div>
 <div class="admonition docs">
 <p class="admonition-title">Documentació oficial de <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.546 10.93 13.067.452a1.55 1.55 0 0 0-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 0 1 2.327 2.341l2.658 2.66a1.838 1.838 0 0 1 1.9 3.039 1.837 1.837 0 0 1-2.6 0 1.85 1.85 0 0 1-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348a1.85 1.85 0 0 1 0 2.6 1.844 1.844 0 0 1-2.609 0 1.834 1.834 0 0 1 0-2.598c.182-.18.387-.316.605-.406V8.835a1.834 1.834 0 0 1-.996-2.41L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477a1.545 1.545 0 0 0 2.186 0l10.43-10.43a1.544 1.544 0 0 0 0-2.187"/></svg></span> Git</p>
@@ -3210,52 +3231,52 @@ L'històric de canvis es pot consultar amb l'ordre <code>git log</code>.</p>
 <details class="example">
 <summary>Exemple: Històric de canvis</summary>
 <p>Modifiquem novament el fitxer <code>README.md</code> i realitzem un nou <em>commit</em>.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Aquesta és una altra línia&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
-</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Added another line to README.md&quot;</span><span class="c1"># (1)!</span>
-</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="go">[main c9fc6c8] Added another line to README.md</span>
-</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="go"> 1 file changed, 1 insertions(+)</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Aquesta és una altra línia&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Added another line to README.md&quot;</span><span class="c1"># (1)!</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="go">[main c9fc6c8] Added another line to README.md</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="go"> 1 file changed, 1 insertions(+)</span>
 </span></code></pre></div>
 <ol class="fancylists-decimal" type="1">
 <li>Amb <code>-a</code> afegim tots els canvis realitzats al fitxer <code>README.md</code> a l'<em>Àrea de Preparació</em> sense necessitat de <code>git add</code>.</li>
 </ol>
 <p>Consultem l'històric de canvis amb <code>git log</code>.</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>log
-</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="git-show-h">commit c9fc6c856c2d52744b85a6f8d92feac496e60bd6</span><span class="w"> </span><span class="git-show-h">(</span><span class="git-h">HEAD</span><span class="w"> </span><span class="git-show-h">-&gt;</span><span class="w"> </span><span class="git-b">main</span><span class="git-show-h">)</span>
-</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="go">Author: Joan Puigcerver &lt;j.puigcerveribanez@edu.gva.es&gt;</span>
-</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="go">Date:   Mon Oct 16 11:43:20 2023 +0200</span>
-</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>
-</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="go">    Added another line to README.md</span>
-</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>
-</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="git-show-h">commit 8e702933d5dbec9ee71100a1599ae4491085e1aa</span>
-</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="go">Author: Joan Puigcerver &lt;j.puigcerveribanez@edu.gva.es&gt;</span>
-</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="go">Date:   Fri Oct 13 16:06:59 2023 +0200</span>
-</span><span id="__span-24-11"><a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a>
-</span><span id="__span-24-12"><a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a><span class="go">    Added Readme.md</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>log
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="git-show-h">commit c9fc6c856c2d52744b85a6f8d92feac496e60bd6</span><span class="w"> </span><span class="git-show-h">(</span><span class="git-h">HEAD</span><span class="w"> </span><span class="git-show-h">-&gt;</span><span class="w"> </span><span class="git-b">main</span><span class="git-show-h">)</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="go">Author: Joan Puigcerver &lt;j.puigcerveribanez@edu.gva.es&gt;</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="go">Date:   Mon Oct 16 11:43:20 2023 +0200</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="go">    Added another line to README.md</span>
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a><span class="git-show-h">commit 8e702933d5dbec9ee71100a1599ae4491085e1aa</span>
+</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a><span class="go">Author: Joan Puigcerver &lt;j.puigcerveribanez@edu.gva.es&gt;</span>
+</span><span id="__span-25-10"><a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a><span class="go">Date:   Fri Oct 13 16:06:59 2023 +0200</span>
+</span><span id="__span-25-11"><a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>
+</span><span id="__span-25-12"><a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a><span class="go">    Added Readme.md</span>
 </span></code></pre></div>
 <p>S'observa tota la informació dels <em>commit</em> realitzats, com l'autor, la data, el missatge i l'identificador.</p>
 </details>
 <p>L'ordre <code>git log</code> admet moltes opcions per a personalitzar com es mostren els <em>commit</em> i la seua informació.</p>
 <p>Una possible combinació d'opcions per visualitzar l'històric de canvis de manera més compacta i intuïtiva és:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>git<span class="w"> </span>log<span class="w"> </span>--graph<span class="w"> </span>--abbrev-commit<span class="w"> </span>--decorate<span class="w"> </span>--format<span class="o">=</span>format:<span class="s1">&#39;%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)&#39;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>git<span class="w"> </span>log<span class="w"> </span>--graph<span class="w"> </span>--abbrev-commit<span class="w"> </span>--decorate<span class="w"> </span>--format<span class="o">=</span>format:<span class="s1">&#39;%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)&#39;</span>
 </span></code></pre></div>
 <details class="example">
 <summary>Exemple: Històric de canvis compacte</summary>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>log<span class="w"> </span>--graph<span class="w"> </span>--abbrev-commit<span class="w"> </span>--decorate<span class="w"> </span>--format<span class="o">=</span>format:<span class="s1">&#39;%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)&#39;</span>
-</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">c9fc6c8</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 minutes ago)</span><span class="w"> </span><span class="git-cm">Added another line to README.md</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
-</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8e70293</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 days ago)</span><span class="w"> </span><span class="git-cm">Added Readme.md</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>log<span class="w"> </span>--graph<span class="w"> </span>--abbrev-commit<span class="w"> </span>--decorate<span class="w"> </span>--format<span class="o">=</span>format:<span class="s1">&#39;%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)&#39;</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">c9fc6c8</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 minutes ago)</span><span class="w"> </span><span class="git-cm">Added another line to README.md</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8e70293</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 days ago)</span><span class="w"> </span><span class="git-cm">Added Readme.md</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
 </span></code></pre></div>
 </details>
 <p>No obstant això, no és pràctic recordar aquesta comanda. Per això, podem configurar un <strong>alias</strong>
 per a simplificar la seua crida.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.lg<span class="w"> </span><span class="s2">&quot;log --graph --abbrev-commit --decorate --format=format:&#39;%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)&#39;&quot;</span>
-</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.lga<span class="w"> </span><span class="s2">&quot;lg --all&quot;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.lg<span class="w"> </span><span class="s2">&quot;log --graph --abbrev-commit --decorate --format=format:&#39;%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)&#39;&quot;</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.lga<span class="w"> </span><span class="s2">&quot;lg --all&quot;</span>
 </span></code></pre></div>
 <details class="example">
 <summary>Exemple: Històric de canvis compacte amb àlies</summary>
 <p>Després de configurar l'àlies <code>git lg</code> per a l'ordre anterior, podem cridar-lo de la següent manera:</p>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lg
-</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">c9fc6c8</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 minutes ago)</span><span class="w"> </span><span class="git-cm">Added another line to README.md</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
-</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8e70293</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 days ago)</span><span class="w"> </span><span class="git-cm">Added README.md</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>lg
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">c9fc6c8</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(2 minutes ago)</span><span class="w"> </span><span class="git-cm">Added another line to README.md</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span><span class="w"> </span><span class="git-r">(HEAD -&gt; main)</span>
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="go">*</span><span class="w"> </span><span class="git-ch">8e70293</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-cd">(3 days ago)</span><span class="w"> </span><span class="git-cm">Added README.md</span><span class="w"> </span><span class="go">-</span><span class="w"> </span><span class="git-ca">Joan Puigcerver</span>
 </span></code></pre></div>
 </details>
 <h2 id="configuracio-git-config">Configuració (<code>git config</code>)<a class="headerlink" href="#configuracio-git-config" title="Permanent link">&para;</a></h2>
@@ -3270,12 +3291,12 @@ superior poden ser sobreescrits per un nivell inferior:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.504 0q-.232 0-.48.021c-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.4.4 0 0 0-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.536.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.174.334.535.47.94.601.81.2 1.91.135 2.774.6.926.466 1.866.67 2.616.47.526-.116.97-.464 1.208-.946.587-.003 1.23-.269 2.26-.334.699-.058 1.574.267 2.577.2.025.134.063.198.114.333l.003.003c.391.778 1.113 1.132 1.884 1.071s1.592-.536 2.257-1.306c.631-.765 1.683-1.084 2.378-1.503.348-.199.629-.469.649-.853.023-.4-.2-.811-.714-1.376v-.097l-.003-.003c-.17-.2-.25-.535-.338-.926-.085-.401-.182-.786-.492-1.046h-.003c-.059-.054-.123-.067-.188-.135a.36.36 0 0 0-.19-.064c.431-1.278.264-2.55-.173-3.694-.533-1.41-1.465-2.638-2.175-3.483-.796-1.005-1.576-1.957-1.56-3.368.026-2.152.236-6.133-3.544-6.139m.529 3.405h.013c.213 0 .396.062.584.198.19.135.33.332.438.533.105.259.158.459.166.724 0-.02.006-.04.006-.06v.105l-.004-.021-.004-.024a1.8 1.8 0 0 1-.15.706.95.95 0 0 1-.213.335 1 1 0 0 0-.088-.042c-.104-.045-.198-.064-.284-.133a1.3 1.3 0 0 0-.22-.066c.05-.06.146-.133.183-.198q.08-.193.088-.402v-.02a1.2 1.2 0 0 0-.061-.4c-.045-.134-.101-.2-.183-.333-.084-.066-.167-.132-.267-.132h-.016c-.093 0-.176.03-.262.132a.8.8 0 0 0-.205.334 1.2 1.2 0 0 0-.09.4v.019q.002.134.02.267c-.193-.067-.438-.135-.607-.202a2 2 0 0 1-.018-.2v-.02a1.8 1.8 0 0 1 .15-.768 1.08 1.08 0 0 1 .43-.533 1 1 0 0 1 .594-.2zm-2.962.059h.036c.142 0 .27.048.399.135.146.129.264.288.344.465.09.199.14.4.153.667v.004c.007.134.006.2-.002.266v.08c-.03.007-.056.018-.083.024-.152.055-.274.135-.393.2q.018-.136.003-.267v-.015c-.012-.133-.04-.2-.082-.333a.6.6 0 0 0-.166-.267.25.25 0 0 0-.183-.064h-.021c-.071.006-.13.04-.186.132a.55.55 0 0 0-.12.27 1 1 0 0 0-.023.33v.015c.012.135.037.2.08.334.046.134.098.2.166.268q.014.014.034.024c-.07.057-.117.07-.176.136a.3.3 0 0 1-.131.068 2.6 2.6 0 0 1-.275-.402 1.8 1.8 0 0 1-.155-.667 1.8 1.8 0 0 1 .08-.668 1.4 1.4 0 0 1 .283-.535c.128-.133.26-.2.418-.2m1.37 1.706c.332 0 .733.065 1.216.399.293.2.523.269 1.052.468h.003c.255.136.405.266.478.399v-.131a.57.57 0 0 1 .016.47c-.123.31-.516.643-1.063.842v.002c-.268.135-.501.333-.775.465-.276.135-.588.292-1.012.267a1.1 1.1 0 0 1-.448-.067 4 4 0 0 1-.322-.198c-.195-.135-.363-.332-.612-.465v-.005h-.005c-.4-.246-.616-.512-.686-.71q-.104-.403.193-.6c.224-.135.38-.271.483-.336.104-.074.143-.102.176-.131h.002v-.003c.169-.202.436-.47.839-.601.139-.036.294-.065.466-.065zm2.8 2.142c.358 1.417 1.196 3.475 1.735 4.473.286.534.855 1.659 1.102 3.024.156-.005.33.018.513.064.646-1.671-.546-3.467-1.089-3.966-.22-.2-.232-.335-.123-.335.59.534 1.365 1.572 1.646 2.757.13.535.16 1.104.021 1.67.067.028.135.06.205.067 1.032.534 1.413.938 1.23 1.537v-.043c-.06-.003-.12 0-.18 0h-.016c.151-.467-.182-.825-1.065-1.224-.915-.4-1.646-.336-1.77.465-.008.043-.013.066-.018.135-.068.023-.139.053-.209.064-.43.268-.662.669-.793 1.187-.13.533-.17 1.156-.205 1.869v.003c-.02.334-.17.838-.319 1.35-1.5 1.072-3.58 1.538-5.348.334a2.7 2.7 0 0 0-.402-.533 1.5 1.5 0 0 0-.275-.333c.182 0 .338-.03.465-.067a.62.62 0 0 0 .314-.334c.108-.267 0-.697-.345-1.163s-.931-.995-1.788-1.521c-.63-.4-.986-.87-1.15-1.396-.165-.534-.143-1.085-.015-1.645.245-1.07.873-2.11 1.274-2.763.107-.065.037.135-.408.974-.396.751-1.14 2.497-.122 3.854a8.1 8.1 0 0 1 .647-2.876c.564-1.278 1.743-3.504 1.836-5.268.048.036.217.135.289.202.218.133.38.333.59.465.21.201.477.335.876.335q.058.005.11.006c.412 0 .73-.134.997-.268.29-.134.52-.334.74-.4h.005c.467-.135.835-.402 1.044-.7zm2.185 8.958c.037.6.343 1.245.882 1.377.588.134 1.434-.333 1.791-.765l.211-.01c.315-.007.577.01.847.268l.003.003c.208.199.305.53.391.876.085.4.154.78.409 1.066.486.527.645.906.636 1.14l.003-.007v.018l-.003-.012c-.015.262-.185.396-.498.595-.63.401-1.746.712-2.457 1.57-.618.737-1.37 1.14-2.036 1.191-.664.053-1.237-.2-1.574-.898l-.005-.003c-.21-.4-.12-1.025.056-1.69.176-.668.428-1.344.463-1.897.037-.714.076-1.335.195-1.814.12-.465.308-.797.641-.984l.045-.022zm-10.814.049h.01q.08 0 .157.014c.376.055.706.333 1.023.752l.91 1.664.003.003c.243.533.754 1.064 1.189 1.637.434.598.77 1.131.729 1.57v.006c-.057.744-.48 1.148-1.125 1.294-.645.135-1.52.002-2.395-.464-.968-.536-2.118-.469-2.857-.602q-.553-.1-.723-.4c-.11-.2-.113-.602.123-1.23v-.004l.002-.003c.117-.334.03-.752-.027-1.118-.055-.401-.083-.71.043-.94.16-.334.396-.4.69-.533.294-.135.64-.202.915-.47h.002v-.002c.256-.268.445-.601.668-.838.19-.201.38-.336.663-.336m7.159-9.074c-.435.201-.945.535-1.488.535-.542 0-.97-.267-1.28-.466-.154-.134-.28-.268-.373-.335-.164-.134-.144-.333-.074-.333.109.016.129.134.199.2.096.066.215.2.36.333.292.2.68.467 1.167.467.485 0 1.053-.267 1.398-.466.195-.135.445-.334.648-.467.156-.136.149-.267.279-.267.128.016.034.134-.147.332a8 8 0 0 1-.69.468zm-1.082-1.583V5.64c-.006-.02.013-.042.029-.05.074-.043.18-.027.26.004.063 0 .16.067.15.135-.006.049-.085.066-.135.066-.055 0-.092-.043-.141-.068-.052-.018-.146-.008-.163-.065m-.551 0c-.02.058-.113.049-.166.066-.047.025-.086.068-.14.068-.05 0-.13-.02-.136-.068-.01-.066.088-.133.15-.133.08-.031.184-.047.259-.005.019.009.036.03.03.05v.02h.003z"/></svg></span> Linux</label><label for="__tabbed_2_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 12V6.75l6-1.32v6.48zm17-9v8.75l-10 .15V5.21zM3 13l6 .09v6.81l-6-1.15zm17 .25V22l-10-1.91V13.1z"/></svg></span> Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>/etc/gitconfig
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>/etc/gitconfig
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
 <p>Carpeta de la instal·lació de Git:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>C:\Program Files\Git\gitconfig
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>C:\Program Files\Git\gitconfig
 </span></code></pre></div>
 </div>
 </div>
@@ -3288,11 +3309,11 @@ superior poden ser sobreescrits per un nivell inferior:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.504 0q-.232 0-.48.021c-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.4.4 0 0 0-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.536.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.174.334.535.47.94.601.81.2 1.91.135 2.774.6.926.466 1.866.67 2.616.47.526-.116.97-.464 1.208-.946.587-.003 1.23-.269 2.26-.334.699-.058 1.574.267 2.577.2.025.134.063.198.114.333l.003.003c.391.778 1.113 1.132 1.884 1.071s1.592-.536 2.257-1.306c.631-.765 1.683-1.084 2.378-1.503.348-.199.629-.469.649-.853.023-.4-.2-.811-.714-1.376v-.097l-.003-.003c-.17-.2-.25-.535-.338-.926-.085-.401-.182-.786-.492-1.046h-.003c-.059-.054-.123-.067-.188-.135a.36.36 0 0 0-.19-.064c.431-1.278.264-2.55-.173-3.694-.533-1.41-1.465-2.638-2.175-3.483-.796-1.005-1.576-1.957-1.56-3.368.026-2.152.236-6.133-3.544-6.139m.529 3.405h.013c.213 0 .396.062.584.198.19.135.33.332.438.533.105.259.158.459.166.724 0-.02.006-.04.006-.06v.105l-.004-.021-.004-.024a1.8 1.8 0 0 1-.15.706.95.95 0 0 1-.213.335 1 1 0 0 0-.088-.042c-.104-.045-.198-.064-.284-.133a1.3 1.3 0 0 0-.22-.066c.05-.06.146-.133.183-.198q.08-.193.088-.402v-.02a1.2 1.2 0 0 0-.061-.4c-.045-.134-.101-.2-.183-.333-.084-.066-.167-.132-.267-.132h-.016c-.093 0-.176.03-.262.132a.8.8 0 0 0-.205.334 1.2 1.2 0 0 0-.09.4v.019q.002.134.02.267c-.193-.067-.438-.135-.607-.202a2 2 0 0 1-.018-.2v-.02a1.8 1.8 0 0 1 .15-.768 1.08 1.08 0 0 1 .43-.533 1 1 0 0 1 .594-.2zm-2.962.059h.036c.142 0 .27.048.399.135.146.129.264.288.344.465.09.199.14.4.153.667v.004c.007.134.006.2-.002.266v.08c-.03.007-.056.018-.083.024-.152.055-.274.135-.393.2q.018-.136.003-.267v-.015c-.012-.133-.04-.2-.082-.333a.6.6 0 0 0-.166-.267.25.25 0 0 0-.183-.064h-.021c-.071.006-.13.04-.186.132a.55.55 0 0 0-.12.27 1 1 0 0 0-.023.33v.015c.012.135.037.2.08.334.046.134.098.2.166.268q.014.014.034.024c-.07.057-.117.07-.176.136a.3.3 0 0 1-.131.068 2.6 2.6 0 0 1-.275-.402 1.8 1.8 0 0 1-.155-.667 1.8 1.8 0 0 1 .08-.668 1.4 1.4 0 0 1 .283-.535c.128-.133.26-.2.418-.2m1.37 1.706c.332 0 .733.065 1.216.399.293.2.523.269 1.052.468h.003c.255.136.405.266.478.399v-.131a.57.57 0 0 1 .016.47c-.123.31-.516.643-1.063.842v.002c-.268.135-.501.333-.775.465-.276.135-.588.292-1.012.267a1.1 1.1 0 0 1-.448-.067 4 4 0 0 1-.322-.198c-.195-.135-.363-.332-.612-.465v-.005h-.005c-.4-.246-.616-.512-.686-.71q-.104-.403.193-.6c.224-.135.38-.271.483-.336.104-.074.143-.102.176-.131h.002v-.003c.169-.202.436-.47.839-.601.139-.036.294-.065.466-.065zm2.8 2.142c.358 1.417 1.196 3.475 1.735 4.473.286.534.855 1.659 1.102 3.024.156-.005.33.018.513.064.646-1.671-.546-3.467-1.089-3.966-.22-.2-.232-.335-.123-.335.59.534 1.365 1.572 1.646 2.757.13.535.16 1.104.021 1.67.067.028.135.06.205.067 1.032.534 1.413.938 1.23 1.537v-.043c-.06-.003-.12 0-.18 0h-.016c.151-.467-.182-.825-1.065-1.224-.915-.4-1.646-.336-1.77.465-.008.043-.013.066-.018.135-.068.023-.139.053-.209.064-.43.268-.662.669-.793 1.187-.13.533-.17 1.156-.205 1.869v.003c-.02.334-.17.838-.319 1.35-1.5 1.072-3.58 1.538-5.348.334a2.7 2.7 0 0 0-.402-.533 1.5 1.5 0 0 0-.275-.333c.182 0 .338-.03.465-.067a.62.62 0 0 0 .314-.334c.108-.267 0-.697-.345-1.163s-.931-.995-1.788-1.521c-.63-.4-.986-.87-1.15-1.396-.165-.534-.143-1.085-.015-1.645.245-1.07.873-2.11 1.274-2.763.107-.065.037.135-.408.974-.396.751-1.14 2.497-.122 3.854a8.1 8.1 0 0 1 .647-2.876c.564-1.278 1.743-3.504 1.836-5.268.048.036.217.135.289.202.218.133.38.333.59.465.21.201.477.335.876.335q.058.005.11.006c.412 0 .73-.134.997-.268.29-.134.52-.334.74-.4h.005c.467-.135.835-.402 1.044-.7zm2.185 8.958c.037.6.343 1.245.882 1.377.588.134 1.434-.333 1.791-.765l.211-.01c.315-.007.577.01.847.268l.003.003c.208.199.305.53.391.876.085.4.154.78.409 1.066.486.527.645.906.636 1.14l.003-.007v.018l-.003-.012c-.015.262-.185.396-.498.595-.63.401-1.746.712-2.457 1.57-.618.737-1.37 1.14-2.036 1.191-.664.053-1.237-.2-1.574-.898l-.005-.003c-.21-.4-.12-1.025.056-1.69.176-.668.428-1.344.463-1.897.037-.714.076-1.335.195-1.814.12-.465.308-.797.641-.984l.045-.022zm-10.814.049h.01q.08 0 .157.014c.376.055.706.333 1.023.752l.91 1.664.003.003c.243.533.754 1.064 1.189 1.637.434.598.77 1.131.729 1.57v.006c-.057.744-.48 1.148-1.125 1.294-.645.135-1.52.002-2.395-.464-.968-.536-2.118-.469-2.857-.602q-.553-.1-.723-.4c-.11-.2-.113-.602.123-1.23v-.004l.002-.003c.117-.334.03-.752-.027-1.118-.055-.401-.083-.71.043-.94.16-.334.396-.4.69-.533.294-.135.64-.202.915-.47h.002v-.002c.256-.268.445-.601.668-.838.19-.201.38-.336.663-.336m7.159-9.074c-.435.201-.945.535-1.488.535-.542 0-.97-.267-1.28-.466-.154-.134-.28-.268-.373-.335-.164-.134-.144-.333-.074-.333.109.016.129.134.199.2.096.066.215.2.36.333.292.2.68.467 1.167.467.485 0 1.053-.267 1.398-.466.195-.135.445-.334.648-.467.156-.136.149-.267.279-.267.128.016.034.134-.147.332a8 8 0 0 1-.69.468zm-1.082-1.583V5.64c-.006-.02.013-.042.029-.05.074-.043.18-.027.26.004.063 0 .16.067.15.135-.006.049-.085.066-.135.066-.055 0-.092-.043-.141-.068-.052-.018-.146-.008-.163-.065m-.551 0c-.02.058-.113.049-.166.066-.047.025-.086.068-.14.068-.05 0-.13-.02-.136-.068-.01-.066.088-.133.15-.133.08-.031.184-.047.259-.005.019.009.036.03.03.05v.02h.003z"/></svg></span> Linux</label><label for="__tabbed_3_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 12V6.75l6-1.32v6.48zm17-9v8.75l-10 .15V5.21zM3 13l6 .09v6.81l-6-1.15zm17 .25V22l-10-1.91V13.1z"/></svg></span> Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>/home/&lt;username&gt;/.gitconfig
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>/home/&lt;username&gt;/.gitconfig
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>C:\Users\&lt;username&gt;\.gitconfig
+<div class="language-text highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>C:\Users\&lt;username&gt;\.gitconfig
 </span></code></pre></div>
 </div>
 </div>
@@ -3301,12 +3322,12 @@ superior poden ser sobreescrits per un nivell inferior:</p>
 <li>
 <p><strong>Repositori <code>--local</code></strong>: Configuració de Git per a un repositori concret.
     La configuració es realitza en un fitxer <code>config</code> situat a la carpeta <code>.git</code> del repositori.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>&lt;path_to_repository&gt;/.git/config
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>&lt;path_to_repository&gt;/.git/config
 </span></code></pre></div>
 </li>
 </ul>
 <p>La sintaxi d'aquesta comanda és la següent:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>git<span class="w"> </span>config<span class="w"> </span><span class="o">[</span>--local<span class="w"> </span><span class="p">|</span><span class="w"> </span>--global<span class="w"> </span><span class="p">|</span><span class="w"> </span>--system<span class="o">]</span><span class="w"> </span>&lt;key&gt;<span class="w"> </span><span class="o">[</span>&lt;value&gt;<span class="o">]</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>git<span class="w"> </span>config<span class="w"> </span><span class="o">[</span>--local<span class="w"> </span><span class="p">|</span><span class="w"> </span>--global<span class="w"> </span><span class="p">|</span><span class="w"> </span>--system<span class="o">]</span><span class="w"> </span>&lt;key&gt;<span class="w"> </span><span class="o">[</span>&lt;value&gt;<span class="o">]</span>
 </span></code></pre></div>
 <ul>
 <li><code>--local</code>, <code>--global</code>, <code>--system</code>: Opcional. Indica el nivell de configuració.
@@ -3325,16 +3346,16 @@ superior poden ser sobreescrits per un nivell inferior:</p>
 </div>
 <details class="example">
 <summary>Exemple: Consultar el nom i correu electrònic configurats</summary>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name
-</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="go">Joan Puigcerver Ibáñez</span>
-</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email
-</span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a><span class="go">j.puigcerveribanez@edu.gva.es</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="go">Joan Puigcerver Ibáñez</span>
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email
+</span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a><span class="go">j.puigcerveribanez@edu.gva.es</span>
 </span></code></pre></div>
 </details>
 <h3 id="modificacio-del-fitxer-de-configuracio">Modificació del fitxer de configuració<a class="headerlink" href="#modificacio-del-fitxer-de-configuracio" title="Permanent link">&para;</a></h3>
 <p>Per a modificar el fitxer de configuració de l'usuari, podem utilitzar l'ordre <code>git config --edit</code>,
 que obrirà l'editor de text per defecte per a editar el fitxer de configuració del nivell triat.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>git<span class="w"> </span>config<span class="w"> </span><span class="o">[</span>--local<span class="w"> </span><span class="p">|</span><span class="w"> </span>--global<span class="w"> </span><span class="p">|</span><span class="w"> </span>--system<span class="o">]</span><span class="w"> </span>--edit
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>git<span class="w"> </span>config<span class="w"> </span><span class="o">[</span>--local<span class="w"> </span><span class="p">|</span><span class="w"> </span>--global<span class="w"> </span><span class="p">|</span><span class="w"> </span>--system<span class="o">]</span><span class="w"> </span>--edit
 </span></code></pre></div>
 <ul>
 <li><code>--local</code>, <code>--global</code>, <code>--system</code>: Opcional. Indica el nivell de configuració.
@@ -3342,21 +3363,21 @@ que obrirà l'editor de text per defecte per a editar el fitxer de configuració
 </ul>
 <details class="example">
 <summary>Exemple: Fitxer de configuració de l'usuari (<code>--global</code>)</summary>
-<p><div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>--edit
+<p><div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>--edit
 </span></code></pre></div>
-<div class="language-cfg highlight"><span class="filename">~/.gitconfig</span><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="k">[core]</span>
-</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="w">    </span><span class="na">editor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">code --wait</span><span class="w"> </span><span class="c1"># Editor per defecte</span>
-</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>
-</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a><span class="k">[init]</span>
-</span><span id="__span-38-5"><a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a><span class="w">    </span><span class="na">defaultBranch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">main</span><span class="w"> </span><span class="c1"># Nom de la branca principal per defecte</span>
-</span><span id="__span-38-6"><a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>
-</span><span id="__span-38-7"><a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a><span class="k">[user]</span>
-</span><span id="__span-38-8"><a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a><span class="w">    </span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Joan Puigcerver Ibáñez</span>
-</span><span id="__span-38-9"><a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a><span class="w">    </span><span class="na">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">j.puigcerveribanez@edu.gva.es</span>
-</span><span id="__span-38-10"><a id="__codelineno-38-10" name="__codelineno-38-10" href="#__codelineno-38-10"></a>
-</span><span id="__span-38-11"><a id="__codelineno-38-11" name="__codelineno-38-11" href="#__codelineno-38-11"></a><span class="k">[alias]</span>
-</span><span id="__span-38-12"><a id="__codelineno-38-12" name="__codelineno-38-12" href="#__codelineno-38-12"></a><span class="w">    </span><span class="na">lg = log --graph --abbrev-commit --decorate --format=format</span><span class="o">:</span><span class="s">&#39;%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)&#39;</span>
-</span><span id="__span-38-13"><a id="__codelineno-38-13" name="__codelineno-38-13" href="#__codelineno-38-13"></a><span class="w">    </span><span class="na">lga</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">lg --all</span>
+<div class="language-cfg highlight"><span class="filename">~/.gitconfig</span><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="k">[core]</span>
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="w">    </span><span class="na">editor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">code --wait</span><span class="w"> </span><span class="c1"># Editor per defecte</span>
+</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>
+</span><span id="__span-39-4"><a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a><span class="k">[init]</span>
+</span><span id="__span-39-5"><a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a><span class="w">    </span><span class="na">defaultBranch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">main</span><span class="w"> </span><span class="c1"># Nom de la branca principal per defecte</span>
+</span><span id="__span-39-6"><a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a>
+</span><span id="__span-39-7"><a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a><span class="k">[user]</span>
+</span><span id="__span-39-8"><a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a><span class="w">    </span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Joan Puigcerver Ibáñez</span>
+</span><span id="__span-39-9"><a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a><span class="w">    </span><span class="na">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">j.puigcerveribanez@edu.gva.es</span>
+</span><span id="__span-39-10"><a id="__codelineno-39-10" name="__codelineno-39-10" href="#__codelineno-39-10"></a>
+</span><span id="__span-39-11"><a id="__codelineno-39-11" name="__codelineno-39-11" href="#__codelineno-39-11"></a><span class="k">[alias]</span>
+</span><span id="__span-39-12"><a id="__codelineno-39-12" name="__codelineno-39-12" href="#__codelineno-39-12"></a><span class="w">    </span><span class="na">lg = log --graph --abbrev-commit --decorate --format=format</span><span class="o">:</span><span class="s">&#39;%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)&#39;</span>
+</span><span id="__span-39-13"><a id="__codelineno-39-13" name="__codelineno-39-13" href="#__codelineno-39-13"></a><span class="w">    </span><span class="na">lga</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">lg --all</span>
 </span></code></pre></div></p>
 </details>
 <h2 id="ignorar-fitxers-gitignore">Ignorar fitxers (<code>.gitignore</code>)<a class="headerlink" href="#ignorar-fitxers-gitignore" title="Permanent link">&para;</a></h2>
@@ -3376,31 +3397,31 @@ que complisquen algun dels <strong>patrons especificats</strong>.</p>
 </div>
 <details class="example">
 <summary>Exemple: Ignorar fitxers</summary>
-<div class="language-text highlight"><span class="filename">.gitignore</span><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a># ignore ALL .log files
-</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>*.log
-</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>
-</span><span id="__span-39-4"><a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a># ignore ALL files in ANY directory named temp
-</span><span id="__span-39-5"><a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>temp/
+<div class="language-text highlight"><span class="filename">.gitignore</span><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a># ignore ALL .log files
+</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>*.log
+</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>
+</span><span id="__span-40-4"><a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a># ignore ALL files in ANY directory named temp
+</span><span id="__span-40-5"><a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a>temp/
 </span></code></pre></div>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>mkdir<span class="w"> </span>temp
-</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>touch<span class="w"> </span>temp/file.txt
-</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
-</span><span id="__span-40-4"><a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a><span class="go">On branch main</span>
-</span><span id="__span-40-5"><a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a>
-</span><span id="__span-40-6"><a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a><span class="go">Untracked files:</span>
-</span><span id="__span-40-7"><a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span>
-</span><span id="__span-40-8"><a id="__codelineno-40-8" name="__codelineno-40-8" href="#__codelineno-40-8"></a><span class="w">        </span><span class="git-untr">temp/file.txt</span>
-</span><span id="__span-40-9"><a id="__codelineno-40-9" name="__codelineno-40-9" href="#__codelineno-40-9"></a>
-</span><span id="__span-40-10"><a id="__codelineno-40-10" name="__codelineno-40-10" href="#__codelineno-40-10"></a><span class="go">nothing added to commit but untracked files present (use &quot;git add&quot; to track)</span>
-</span><span id="__span-40-11"><a id="__codelineno-40-11" name="__codelineno-40-11" href="#__codelineno-40-11"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;temp/&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>.gitignore
-</span><span id="__span-40-12"><a id="__codelineno-40-12" name="__codelineno-40-12" href="#__codelineno-40-12"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status<span class="w"> </span><span class="c1"># (1)!</span>
-</span><span id="__span-40-13"><a id="__codelineno-40-13" name="__codelineno-40-13" href="#__codelineno-40-13"></a><span class="go">On branch main</span>
-</span><span id="__span-40-14"><a id="__codelineno-40-14" name="__codelineno-40-14" href="#__codelineno-40-14"></a>
-</span><span id="__span-40-15"><a id="__codelineno-40-15" name="__codelineno-40-15" href="#__codelineno-40-15"></a><span class="go">Untracked files:</span>
-</span><span id="__span-40-16"><a id="__codelineno-40-16" name="__codelineno-40-16" href="#__codelineno-40-16"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span>
-</span><span id="__span-40-17"><a id="__codelineno-40-17" name="__codelineno-40-17" href="#__codelineno-40-17"></a><span class="w">        </span><span class="git-untr">.gitignore</span>
-</span><span id="__span-40-18"><a id="__codelineno-40-18" name="__codelineno-40-18" href="#__codelineno-40-18"></a>
-</span><span id="__span-40-19"><a id="__codelineno-40-19" name="__codelineno-40-19" href="#__codelineno-40-19"></a><span class="go">nothing added to commit but untracked files present (use &quot;git add&quot; to track)</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>mkdir<span class="w"> </span>temp
+</span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>touch<span class="w"> </span>temp/file.txt
+</span><span id="__span-41-3"><a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status
+</span><span id="__span-41-4"><a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a><span class="go">On branch main</span>
+</span><span id="__span-41-5"><a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a>
+</span><span id="__span-41-6"><a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a><span class="go">Untracked files:</span>
+</span><span id="__span-41-7"><a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span>
+</span><span id="__span-41-8"><a id="__codelineno-41-8" name="__codelineno-41-8" href="#__codelineno-41-8"></a><span class="w">        </span><span class="git-untr">temp/file.txt</span>
+</span><span id="__span-41-9"><a id="__codelineno-41-9" name="__codelineno-41-9" href="#__codelineno-41-9"></a>
+</span><span id="__span-41-10"><a id="__codelineno-41-10" name="__codelineno-41-10" href="#__codelineno-41-10"></a><span class="go">nothing added to commit but untracked files present (use &quot;git add&quot; to track)</span>
+</span><span id="__span-41-11"><a id="__codelineno-41-11" name="__codelineno-41-11" href="#__codelineno-41-11"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;temp/&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>.gitignore
+</span><span id="__span-41-12"><a id="__codelineno-41-12" name="__codelineno-41-12" href="#__codelineno-41-12"></a><span class="gp-uh">jpuigcerver@FP</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>status<span class="w"> </span><span class="c1"># (1)!</span>
+</span><span id="__span-41-13"><a id="__codelineno-41-13" name="__codelineno-41-13" href="#__codelineno-41-13"></a><span class="go">On branch main</span>
+</span><span id="__span-41-14"><a id="__codelineno-41-14" name="__codelineno-41-14" href="#__codelineno-41-14"></a>
+</span><span id="__span-41-15"><a id="__codelineno-41-15" name="__codelineno-41-15" href="#__codelineno-41-15"></a><span class="go">Untracked files:</span>
+</span><span id="__span-41-16"><a id="__codelineno-41-16" name="__codelineno-41-16" href="#__codelineno-41-16"></a><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span>
+</span><span id="__span-41-17"><a id="__codelineno-41-17" name="__codelineno-41-17" href="#__codelineno-41-17"></a><span class="w">        </span><span class="git-untr">.gitignore</span>
+</span><span id="__span-41-18"><a id="__codelineno-41-18" name="__codelineno-41-18" href="#__codelineno-41-18"></a>
+</span><span id="__span-41-19"><a id="__codelineno-41-19" name="__codelineno-41-19" href="#__codelineno-41-19"></a><span class="go">nothing added to commit but untracked files present (use &quot;git add&quot; to track)</span>
 </span></code></pre></div>
 <ol class="fancylists-decimal" type="1">
 <li>El fitxer <code>temp/file.txt</code> no apareix en l'estat del repositori després de crear el fitxer <code>.gitignore</code>.</li>
@@ -3498,7 +3519,7 @@ que està fora de l'abast d'aquest curs.&#160;<a class="footnote-backref" href="
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="11 de maig del 2025 19:25:34 UTC">11 de maig del 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="29 de setembre del 2025 14:21:31 UTC">29 de setembre del 2025</span>
   </span>
 
     

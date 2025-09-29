@@ -2684,31 +2684,53 @@ a <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 
 <p><a href="https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span> <code>git-prompt.sh</code></a></p>
 </div>
 <ol class="fancylists-decimal" type="1">
-<li>Còpia el fitxer <a href="https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh"><code>git-prompt.sh</code></a> en algun lloc del teu sistema.</li>
+<li>
+<p>Còpia el fitxer <a href="https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh"><code>git-prompt.sh</code></a> en algun lloc del teu sistema.</p>
+<div class="admonition warning">
+<p class="admonition-title">Revisa que el fitxer descarregat és l'adequat.</p>
+</div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>curl<span class="w"> </span>-o<span class="w"> </span>~/.git-prompt.sh<span class="w"> </span>https://raw.githubusercontent.com/git/git/refs/heads/master/contrib/completion/git-prompt.sh
+</span></code></pre></div>
+</li>
 <li>
 <p>Afegeix la següent línia al fitxer <code>.bashrc</code>, <code>.zshrc</code> o <code>.profile</code> del teu usuari:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">source</span><span class="w"> </span>~/.git-prompt.sh<span class="w"> </span><span class="c1"># source ruta/fixer/git-prompt.sh</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">source</span><span class="w"> </span>~/.git-prompt.sh<span class="w"> </span><span class="c1"># source ruta/fixer/git-prompt.sh</span>
 </span></code></pre></div>
 </li>
 <li>
 <p>Modifica la variable <code>PS1</code> per incloure la informació del prompt de Git <code>$(__git_ps1)</code>:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Exemple amb colors</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[33m\]$(__git_ps1) \[\033[00m\]$ &#39;</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="c1"># Exemple sense colors</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;\u@\h:\w$(__git_ps1) $ &#39;</span>
+<div class="admonition info">
+<p class="admonition-title">Adapteu el prompt al vostre gust.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.038 4.9 13.461.402a2.86 2.86 0 0 0-2.923.001L2.961 4.9A3.02 3.02 0 0 0 1.5 7.503v8.995c0 1.073.557 2.066 1.462 2.603l7.577 4.497a2.86 2.86 0 0 0 2.922 0l7.577-4.497a3.02 3.02 0 0 0 1.462-2.603V7.503A3.02 3.02 0 0 0 21.038 4.9M15.17 18.946l.013.646c.001.078-.05.167-.111.198l-.383.22c-.061.031-.111-.007-.112-.085l-.007-.635c-.328.136-.66.169-.872.084-.04-.016-.057-.075-.041-.142l.139-.584a.24.24 0 0 1 .069-.121.2.2 0 0 1 .036-.026q.033-.017.062-.006c.229.077.521.041.802-.101.357-.181.596-.545.592-.907-.003-.328-.181-.465-.613-.468-.55.001-1.064-.107-1.072-.917-.007-.667.34-1.361.889-1.8l-.007-.652c-.001-.08.048-.168.111-.2l.37-.236c.061-.031.111.007.112.087l.006.653c.273-.109.511-.138.726-.088.047.012.067.076.048.151l-.144.578a.26.26 0 0 1-.065.116.2.2 0 0 1-.038.028.1.1 0 0 1-.057.009c-.098-.022-.332-.073-.699.113-.385.195-.52.53-.517.778.003.297.155.387.681.396.7.012 1.003.318 1.01 1.023.007.689-.362 1.433-.928 1.888m3.973-1.087c0 .06-.008.116-.058.145l-1.916 1.164c-.05.029-.09.004-.09-.056v-.494c0-.06.037-.093.087-.122l1.887-1.129c.05-.029.09-.004.09.056zm1.316-11.062-7.168 4.427c-.894.523-1.553 1.109-1.553 2.187v8.833c0 .645.26 1.063.66 1.184a2.3 2.3 0 0 1-.398.039c-.42 0-.833-.114-1.197-.33L3.226 18.64a2.5 2.5 0 0 1-1.201-2.142V7.503c0-.881.46-1.702 1.201-2.142L10.803.863a2.34 2.34 0 0 1 2.394 0l7.577 4.498a2.48 2.48 0 0 1 1.164 1.732c-.252-.536-.818-.682-1.479-.296"/></svg></span> Bash</label><label for="__tabbed_3_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.415 5.038a.58.58 0 0 0-.543.197L.135 18.021a.58.58 0 0 0 .071.814.58.58 0 0 0 .815-.07L11.757 5.979a.58.58 0 0 0-.07-.815.6.6 0 0 0-.272-.126m-8.113.317a3.133 3.133 0 0 0-3.12 3.12 3.13 3.13 0 0 0 3.12 3.119A3.133 3.133 0 0 0 6.42 8.475a3.13 3.13 0 0 0-3.119-3.119m0 1.806a1.3 1.3 0 0 1 1.314 1.313 1.3 1.3 0 0 1-1.314 1.312A1.3 1.3 0 0 1 1.99 8.475a1.3 1.3 0 0 1 1.312-1.314m5.253 5.253a3.13 3.13 0 0 0-3.119 3.119 3.13 3.13 0 0 0 3.12 3.118 3.133 3.133 0 0 0 3.118-3.12 3.133 3.133 0 0 0-3.119-3.118m0 1.805a1.3 1.3 0 0 1 1.313 1.314c0 .735-.577 1.312-1.312 1.312a1.3 1.3 0 0 1-1.314-1.312 1.3 1.3 0 0 1 1.313-1.314m7.201 3.276a.58.58 0 0 0-.578.578.58.58 0 0 0 .578.578h7.666a.58.58 0 0 0 .579-.578.58.58 0 0 0-.579-.578Z"/></svg></span> Zsh</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Exemple amb colors</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[33m\]$(__git_ps1) \[\033[00m\]$ &#39;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1"># Exemple sense colors</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;\u@\h:\w$(__git_ps1) $ &#39;</span>
 </span></code></pre></div>
-<blockquote>
-<p>Adapteu el prompt al vostre gust.</p>
-</blockquote>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>setopt<span class="w"> </span>PROMPT_SUBST
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="c1"># Exemple amb colors</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="nv">PROMPT</span><span class="o">=</span><span class="s1">&#39;%F{green}%n@%m%f:%F{blue}%~%f%F{yellow}$(__git_ps1 &quot; (%s)&quot;)%f %# &#39;</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="c1"># Exemple sense colors</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="nv">PROMPT</span><span class="o">=</span><span class="s1">&#39;%n@%m:%~$(__git_ps1 &quot; (%s)&quot;) %# &#39;</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
 </li>
 <li>
-<p>Reinicia la terminal.</p>
+<p>Reinicia la terminal o executa <code>source ~/.bashrc</code> (o el fitxer que hàgeu modificat).</p>
 </li>
 </ol>
-<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">cd</span><span class="w"> </span>~/git_introduccio
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>init
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="go">Initialized empty Git repository in /home/jpuigcerver/git_introduccio/.git/</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span><span class="nb">cd</span><span class="w"> </span>~/git_introduccio
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp">$</span><span class="gp-w"> </span>git<span class="w"> </span>init
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="go">Initialized empty Git repository in /home/jpuigcerver/git_introduccio/.git/</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="gp-uh">jpuigcerver@fp</span><span class="gp">:</span><span class="gp-d">~/git_introduccio</span><span class="gp-w"> </span><span class="gp-gb">(main)</span><span class="gp-w"> </span><span class="gp">$</span>
 </span></code></pre></div>
 <h2 id="recursos-addicionals">Recursos addicionals<a class="headerlink" href="#recursos-addicionals" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2783,7 +2805,7 @@ a <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="11 de maig del 2025 19:25:34 UTC">11 de maig del 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="29 de setembre del 2025 14:21:31 UTC">29 de setembre del 2025</span>
   </span>
 
     
