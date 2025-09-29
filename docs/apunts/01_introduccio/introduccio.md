@@ -92,6 +92,21 @@ que conté tota la informació relativa al __Repositori Local__.
 [^1]: Aquests repositoris es coneixen com a [:octicons-link-external-16: Submòduls](https://git-scm.com/book/en/v2/Git-Tools-Submodules),
     que està fora de l'abast d'aquest curs.
 
+!!! info
+    Per defecte, Git inicialitza la branca principal amb el nom `master`
+    si no s'ha configurat d'una altra manera.
+    La comunitat de desenvolupament ha recomanat canviar aquest nom a `main`
+    per a evitar connotacions històriques negatives associades amb el terme `master`.
+
+    Vegeu: [:octicons-link-external-16: Regarding Git and Branch Naming](https://sfconservancy.org/news/2020/jun/23/gitbranchname/) – Software Freedom Conservancy
+
+    Si vols canviar el nom per defecte de la branca principal a `main` quan
+    inicialitzes un nou repositori, pots utilitzar la següent comanda:
+
+    ```bash
+    git config --global init.defaultBranch main
+    ```
+
 
 ??? example "Exemple: Inicialització d'un repositori"
     ```shellconsole
@@ -104,15 +119,15 @@ que conté tota la informació relativa al __Repositori Local__.
     hint: is subject to change. To configure the initial branch name to use in all
     hint: of your new repositoris, which will suppress this warning, call:
     hint:
-    hint: git config --global init.dafaultBranch <name>
+    hint: git config --global init.defaultBranch <name>
     hint:
     hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
     hint: 'development'. The just-created branch can be renamed via this command:
     hint:
     hint: git branch -m <name>
     Initialized empty Git repository in /home/jpuigcerver/git_introduccio/.git/
-    jpuigcerver@fp:~/git_introduccio (master) $ git branch -m main
-    jpuigcerver@fp:~/git_introduccio (main) $ ls -a # (2)!
+    jpuigcerver@fp:~/git_introduccio (master) $ git branch -m main # (2)!
+    jpuigcerver@fp:~/git_introduccio (main) $ ls -a # (3)!
     .  ..  .git/
     jpuigcerver@fp:~/git_introduccio (main) $ git status
     On branch main
@@ -123,15 +138,12 @@ que conté tota la informació relativa al __Repositori Local__.
     ```
 
     1. L'opció `-a` mostra tots els fitxers, inclosos els ocults que comencen amb un punt.
-    2. S'ha creat el directori ocult `.git` que conté tota la informació del repositori.
+    2. Canviem el nom de la branca principal de `master` a `main`.
+    3. S'ha creat el directori ocult `.git` que conté tota la informació del repositori.
 
     L'ordre `git status` ens mostra l'estat actual del nostre repositori.
     Podem observar que estem en la branca `main` i que de moment no s'ha realitzat cap canvi.
 
-    !!! note
-        S'ha canviat el nom de la branca principal de `master` a `main` per a seguir les recomanacions de la comunitat de desenvolupament.
-
-        Vegeu: [:octicons-link-external-16: Regarding Git and Branch Naming](https://sfconservancy.org/news/2020/jun/23/gitbranchname/)
 
 ### Eliminar un repositori
 Per a eliminar un repositori de Git, simplement cal eliminar el directori ocult `.git`.
@@ -151,6 +163,12 @@ rm -rf .git
     ```shellconsole
     jpuigcerver@fp:~/git_introduccio (main) $ ls -a
     .  ..  .git
+    jpuigcerver@fp:~/git_introduccio $ git status
+    On branch main
+
+    No commits yet
+
+    Nothing to commit (create/copy files and use "git add" to track)
     jpuigcerver@fp:~/git_introduccio (main) $ rm -rf .git
     jpuigcerver@fp:~/git_introduccio $ git status
     fatal: not a git repository (or any of the parent directories): .git
@@ -162,7 +180,8 @@ on encara no haurem connectat cap repositori __remot__.
 
 Abans que res, hem de conéixer l'estructura d'un repositori de Git.
 
-![Components d'un repositori de Git](img/components.png)
+![Components d'un repositori de Git](img/components.light.png#only-light)
+![Components d'un repositori de Git](img/components.dark.png#only-dark)
 /// figure-caption
 Components d'un repositori de Git.
 ///
@@ -199,7 +218,8 @@ que canviarà l'estat dels fitxers __Staged__ (mostrat en color verd amb `git st
 
 Per últim, tots els canvis de l'__Àrea de preparació__ es poden confirmar i fer efectius en el __Repositori local__ amb la comanda `git commit`.
 
-![Flux de treball en un repositori de Git](img/flux_treball.png)
+![Flux de treball en un repositori de Git](img/flux_treball.light.png#only-light)
+![Flux de treball en un repositori de Git](img/flux_treball.dark.png#only-dark)
 /// figure-caption
     attrs: { id: "figure-flux-treball" }
 Flux de treball en un repositori de Git.
@@ -261,7 +281,8 @@ Untracked files:
 Nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-![Fitxer sense seguiment](img/untracked_readme.png)
+![Fitxer sense seguiment](img/untracked_readme.light.png#only-light)
+![Fitxer sense seguiment](img/untracked_readme.dark.png#only-dark)
 /// figure-caption
 Fitxer sense seguiment (untracked).
 ///
@@ -294,7 +315,8 @@ Changes to be committed:
 
 Vegem com el fitxer `README.md` ha passat a l'estat __Staged__ i està preparat per a ser confirmat.
 
-![Fitxer a l'Àrea de Preparació](img/staged_readme.png)
+![Fitxer a l'Àrea de Preparació](img/staged_readme.light.png#only-light)
+![Fitxer a l'Àrea de Preparació](img/staged_readme.dark.png#only-dark)
 /// figure-caption
 Fitxer a l'Àrea de Preparació (staged).
 ///
@@ -320,9 +342,10 @@ git commit [-a] [-m "<message>"]
     git config --global core.editor <editor>
     ```
 
-![Estat del repositori de Git abans de fer un commit](img/before_commit_readme.png)
+![Estat del repositori de Git abans de fer un commit](img/before_commit_readme.light.png#only-light)
+![Estat del repositori de Git abans de fer un commit](img/before_commit_readme.dark.png#only-dark)
 /// figure-caption
-Estat del repositori de Git abans de fer un _commit`.
+Estat del repositori de Git abans de fer un _commit_.
 ///
 
 Aquesta ordre crea un nou _commit_, que és una instantània de l'estat actual dels fitxers
@@ -373,7 +396,8 @@ nothing to commit, working tree clean
 Vegem que l'estat del nostre repositori ha canviat i ja no hi ha canvis pendents de confirmar.
 A més, s'ha creat el primer _commit_ amb el missatge `Added README.md` i identificador `8e70293`.
 
-![Estat del repositori de Git després de fer un commit](img/after_commit_readme.png)
+![Estat del repositori de Git després de fer un commit](img/after_commit_readme.light.png#only-light)
+![Estat del repositori de Git després de fer un commit](img/after_commit_readme.dark.png#only-dark)
 /// figure-caption
 Estat del repositori de Git després de fer un _commit_.
 ///
@@ -415,7 +439,8 @@ git diff [--staged] [<path>]
 !!! docs "Documentació oficial de :simple-git: Git"
     [:octicons-link-external-16: `git diff`](https://git-scm.com/docs/git-diff)
 
-![Resum de `git diff`](img/resum_diff.png)
+![Resum de `git diff`](img/resum_diff.light.png#only-light)
+![Resum de `git diff`](img/resum_diff.dark.png#only-dark)
 /// figure-caption
 Resum de `git diff`.
 ///

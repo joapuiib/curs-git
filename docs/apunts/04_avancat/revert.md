@@ -24,7 +24,8 @@ git revert <ref>
 
 - `<ref>`: Referència del commit que es vol desfer.
 
-![Funcionament de git revert](img/revert/revert.png)
+![Funcionament de git revert](img/revert/revert.light.png#only-light)
+![Funcionament de git revert](img/revert/revert.dark.png#only-dark)
 /// figure-caption
 Funcionament de `git revert`.
 ///

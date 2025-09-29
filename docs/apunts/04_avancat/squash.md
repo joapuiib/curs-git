@@ -30,7 +30,8 @@ git merge --squash <branca>
 !!! docs "Documentació oficial de :simple-git: Git"
     [:octicons-link-external-16: `git merge --squash`](https://git-scm.com/docs/git-merge#Documentation/git-merge.txt---squash)
 
-![Funcionament de git merge --squash](img/squash/squash.png)
+![Funcionament de git merge --squash](img/squash/squash.light.png#only-light)
+![Funcionament de git merge --squash](img/squash/squash.dark.png#only-dark)
 /// figure-caption
 Funcionament de `git merge --squash`.
 ///

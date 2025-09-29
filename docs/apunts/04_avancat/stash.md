@@ -85,14 +85,16 @@ Els canvis s'emmagatzemen de manera temporal a una __pila__:
     de la pila i són més fàcils d'accedir (la majoria de comandes `stash`
     treballen per defecte amb el `stash@{0}`).
 
-    ![Reserva de canvis una única entrada](img/stash/single_stash.png)
+    ![Reserva de canvis una única entrada](img/stash/single_stash.light.png#only-light)
+    ![Reserva de canvis una única entrada](img/stash/single_stash.dark.png#only-dark)
     /// figure-caption
     Reserva canvis amb una única entrada
     ///
 
 - L'índex dels canvis presents anteriorment a la pila incrementarà en 1.
 
-    ![Reservar de canvis amb entrades existents anteriorment](img/stash/stash.png)
+    ![Reservar de canvis amb entrades existents anteriorment](img/stash/stash.light.png#only-light)
+    ![Reservar de canvis amb entrades existents anteriorment](img/stash/stash.dark.png#only-dark)
     /// figure-caption
     Reservar canvis amb entrades existents anteriorment
     ///
@@ -168,7 +170,8 @@ Aquesta acció aplicarà els canvis guardats al __directori de treball__.
 També es pot indicar l'índex del `stash` que es vol aplicar. Si no s'indica,
 s'aplicarà per defecte el `stash@{0}`.
 
-![Recuperar canvis amb stash apply](img/stash/apply.png)
+![Recuperar canvis amb stash apply](img/stash/apply.light.png#only-light)
+![Recuperar canvis amb stash apply](img/stash/apply.dark.png#only-dark)
 /// figure-caption
 Recuperar canvis amb `stash apply`
 ///
@@ -183,7 +186,8 @@ Si a més, volem esborrar la reserva de canvis, podem utilitzar l'opció `pop`.
 git stash pop [index]
 ```
 
-![Recuperar canvis i esborrar la reserva amb stash pop](img/stash/pop.png)
+![Recuperar canvis i esborrar la reserva amb stash pop](img/stash/pop.light.png#only-light)
+![Recuperar canvis i esborrar la reserva amb stash pop](img/stash/pop.dark.png#only-dark)
 /// figure-caption
 Recuperar canvis i esborrar la reserva amb `stash pop`
 ///

@@ -88,7 +88,8 @@ on s'incorporen les noves funcionalitats que ja estan implementades i provades,
 però encara no s'han publicat.
 Aquesta branca és normalment rep el nom de `dev`, `develop` o `development`.
 
-![Branca principal i de desenvolupament](img/main-develop.png)
+![Branca principal i de desenvolupament](img/main-develop.light.png#only-light)
+![Branca principal i de desenvolupament](img/main-develop.dark.png#only-dark)
 /// figure-caption
 Branca principal i de desenvolupament
 ///
@@ -104,7 +105,8 @@ El prefix més comú és `feature/`, seguit del nom de la funcionalitat.
 No obstant això, el prefix utilitzat pot variar, fins i tot per indicar el tipus de funcionalitat
 o la naturalesa dels canvis: `feat/`, `feature/`, `fix/`, `bugfix/`, `enhancement/`, ...
 
-![Branques de funcionalitat](img/feature.png)
+![Branques de funcionalitat](img/feature.light.png#only-light)
+![Branques de funcionalitat](img/feature.dark.png#only-dark)
 /// figure-caption
 Branques de funcionalitat
 ///
@@ -262,7 +264,8 @@ git checkout develop
 git merge --no-ff feature/A
 ```
 
-![Fusió de branques mitjançant merge --no-ff](img/merge_no_ff.png)
+![Fusió de branques mitjançant merge --no-ff](img/merge_no_ff.light.png#only-light)
+![Fusió de branques mitjançant merge --no-ff](img/merge_no_ff.dark.png#only-dark)
 /// figure-caption
 Fusió de branques mitjançant `merge --no-ff`
 ///
@@ -286,7 +289,8 @@ git checkout develop
 git merge --ff-only feature/A
 ```
 
-![Fusió de branques mitjançant rebase](img/rebase_merge_ff.png)
+![Fusió de branques mitjançant rebase](img/rebase_merge_ff.light.png#only-light)
+![Fusió de branques mitjançant rebase](img/rebase_merge_ff.dark.png#only-dark)
 /// figure-caption
 Fusió de branques mitjançant `rebase` + `merge --ff-only`
 ///
@@ -314,7 +318,8 @@ git checkout develop
 git merge --no-ff feature/A
 ```
 
-![Fusió de branques mitjançant rebase + merge --no-ff](img/rebase_merge_no_ff.png)
+![Fusió de branques mitjançant rebase + merge --no-ff](img/rebase_merge_no_ff.light.png#only-light)
+![Fusió de branques mitjançant rebase + merge --no-ff](img/rebase_merge_no_ff.dark.png#only-dark)
 /// figure-caption
 Fusió de branques mitjançant `rebase` + `merge --no-ff`
 ///
@@ -341,7 +346,8 @@ git merge --squash --ff-only feature/A
 git commit -m <missatge>
 ```
 
-![Fusió de branques mitjançant merge --squash --ff-only](img/merge_squash.png)
+![Fusió de branques mitjançant merge --squash --ff-only](img/merge_squash.light.png#only-light)
+![Fusió de branques mitjançant merge --squash --ff-only](img/merge_squash.dark.png#only-dark)
 /// figure-caption
 Fusió de branques mitjançant `merge --squash --ff-only`
 ///
@@ -361,7 +367,8 @@ git merge --squash --ff-only feature/A
 git commit -m <missatge>
 ```
 
-![Fusió de branques mitjançant merge --no-ff + merge --squash --ff-only](img/merge_no_ff_squash.png)
+![Fusió de branques mitjançant merge --no-ff + merge --squash --ff-only](img/merge_no_ff_squash.light.png#only-light)
+![Fusió de branques mitjançant merge --no-ff + merge --squash --ff-only](img/merge_no_ff_squash.dark.png#only-dark)
 /// figure-caption
 Fusió de branques mitjançant `merge --no-ff` + `merge --squash --ff-only`
 ///
@@ -409,7 +416,8 @@ El flux de treball amb aquestes branques és el següent:
 - S'integren els canvis a la branca de desenvolupament `develop`.
 - S'integren els canvis a la branca de desenvolupament `main`.
 
-![Branques de llançament](img/release.png)
+![Branques de llançament](img/release.light.png#only-light)
+![Branques de llançament](img/release.dark.png#only-dark)
 /// figure-caption
 Branques de llançament
 ///
@@ -443,7 +451,8 @@ El flux de treball amb aquestes branques és el següent:
 - S'integren els canvis a la branca de desenvolupament `develop`.
 - S'integren els canvis a la branca de desenvolupament `main`.
 
-![Branques de correcció](img/hotfix.png)
+![Branques de correcció](img/hotfix.light.png#only-light)
+![Branques de correcció](img/hotfix.dark.png#only-dark)
 /// figure-caption
 Branques de correcció
 ///

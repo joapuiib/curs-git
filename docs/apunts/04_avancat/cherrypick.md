@@ -26,7 +26,8 @@ git cherry-pick <ref>
 
 - `<ref>`: Referència del commit que es vol aplicar.
 
-![Funcionament de git cherry-pick](img/cherrypick/cherrypick.png)
+![Funcionament de git cherry-pick](img/cherrypick/cherrypick.light.png#only-light)
+![Funcionament de git cherry-pick](img/cherrypick/cherrypick.dark.png#only-dark)
 /// figure-caption
 Funcionament de `git cherry-pick`.
 ///

@@ -31,7 +31,8 @@ Algunes de les accions que podem fer mitjançant aquestes eines són:
     problemes entre els col·laboradors del repositori.
 
 
-![Funcionament de git reset](img/reset/reset.png)
+![Funcionament de git reset](img/reset/reset.light.png#only-light)
+![Funcionament de git reset](img/reset/reset.dark.png#only-dark)
 /// figure-caption
     attrs: {id: figure-reset}
 Funcionament de `git reset`
@@ -44,7 +45,8 @@ El com es gestionen aquests canvis dependrà del mode amb el qual executem l'ord
 - __`--mixed`__: Comportament per defecte. Els canvis es conservaran al Directori de Treball.
 - __`--hard`__: Els canvis es descartaran.
 
-![Resum de l'eina git reset](img/reset/resum_reset.png)
+![Resum de l'eina git reset](img/reset/resum_reset.light.png#only-light)
+![Resum de l'eina git reset](img/reset/resum_reset.dark.png#only-dark)
 /// figure-caption
 Resum de l'eina `git reset`.
 ///

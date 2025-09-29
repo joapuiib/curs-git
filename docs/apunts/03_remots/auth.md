@@ -36,7 +36,8 @@ En aquests apunts ens centrarem en la configuració dels __mètodes d'autenticac
 que ens permeten connectar-nos al servidor de GitHub i gestionar els nostres
 repositoris remots.
 
-![Estructura d'un repositori local i remot](../01_introduccio/img/components.png)
+![Estructura d'un repositori local i remot](../01_introduccio/img/components.light.png#only-light)
+![Estructura d'un repositori local i remot](../01_introduccio/img/components.dark.png#only-dark)
 /// figure-caption
 Estructura d'un repositori local i remot
 ///
@@ -250,6 +251,37 @@ teu nom d'usuari de GitHub.
 ```shellconsole
 jpuigcerver@fp:~ $ ssh -T git@github.com
 Hi joapuiib! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+
+### Autenticació mitjançant :simple-github: GitHub CLI
+[:simple-github: GitHub CLI][github-cli] és una eina de línia de comandes
+per interactuar amb GitHub des del terminal. Permet gestionar repositoris,
+issues, pull requests, i altres funcionalitats de GitHub.
+
+[github-cli]: https://cli.github.com/
+
+Una de les funcionalitats que ofereix és la possibilitat d'autenticar-se
+amb el servidor de GitHub d'una manera senzilla i flexible.
+
+!!! docs "Documentació oficial"
+    - [:octicons-link-external-16: Instal·lació](https://github.com/cli/cli#installation) – :simple-github: GitHub CLI
+    - [:octicons-link-external-16: `gh auth login`](https://cli.github.com/manual/gh_auth_login) – :simple-github: GitHub CLI Docs
+
+La manera més senzilla d'autenticar-se amb GitHub és mitjançant la comanda `gh auth login`,
+que guia l'usuari d'una manera interactiva com configurar l'autenticació.
+
+```shellconsole
+jpuigcerver@fp:~ $ gh auth login
+? What account do you want to log into? GitHub.com
+? What is your preferred protocol for Git operations on this host? HTTPS
+? Authenticate Git with your GitHub credentials? Yes
+? How would you like to authenticate GitHub CLI? Login with a web browser
+
+! First copy your one-time code: ABCD-EFGH
+Press Enter to open github.com in your browser... 
+
+✓ Authentication complete. You are now logged in as joapuiib
 ```
 
 
