@@ -36,7 +36,8 @@ En aquests apunts ens centrarem en la configuració dels __mètodes d'autenticac
 que ens permeten connectar-nos al servidor de GitHub i gestionar els nostres
 repositoris remots.
 
-![Estructura d'un repositori local i remot](../01_introduccio/img/components.png)
+![Estructura d'un repositori local i remot](../01_introduccio/img/components.light.png#only-light)
+![Estructura d'un repositori local i remot](../01_introduccio/img/components.dark.png#only-dark)
 /// figure-caption
 Estructura d'un repositori local i remot
 ///

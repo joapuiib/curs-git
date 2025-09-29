@@ -17,7 +17,8 @@ Per aquesta raó, Git ens permet crear __etiquetes__ (_tags_) per a marcar punts
 Normalment, en projectes de desenvolupament, les etiquetes s'utilitzen per identificar noves publicacions (_releases_): `v1.0`, `v2.0`, ...,
 però poden ser utilitzades per qualsevol propòsit.
 
-![Etiqueta a un commit](img/etiquetes/etiquetes.png)
+![Etiqueta a un commit](img/etiquetes/etiquetes.light.png#only-light)
+![Etiqueta a un commit](img/etiquetes/etiquetes.dark.png#only-dark)
 /// figure-caption
 Etiqueta a un commit
 ///

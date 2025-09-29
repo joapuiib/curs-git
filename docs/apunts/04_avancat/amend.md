@@ -23,7 +23,8 @@ i els canvis del commit anterior. A més, el nou _commit_ substitueix l'anterior
     aquestes referències no seran modificades i es podrien produir problemes
     en el repositori.
 
-![Funcionament de git commit --amend](img/amend/amend.png)
+![Funcionament de git commit --amend](img/amend/amend.light.png#only-light)
+![Funcionament de git commit --amend](img/amend/amend.dark.png#only-dark)
 /// figure-caption
 Funcionament de `git commit --amend`.
 ///

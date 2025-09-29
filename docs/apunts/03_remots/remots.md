@@ -34,7 +34,8 @@ repositoris que es troben __allotjats en un servidor__, que permeten
 l'accés a altres usuaris i la col·laboració en el desenvolupament de
 projectes.
 
-![Estructura d'un repositori local i remot](../01_introduccio/img/components.png)
+![Estructura d'un repositori local i remot](../01_introduccio/img/components.light.png#only-light)
+![Estructura d'un repositori local i remot](../01_introduccio/img/components.dark.png#only-dark)
 /// figure-caption
 Estructura d'un repositori local i remot
 ///
@@ -70,7 +71,8 @@ incloses totes les revisions i les branques.
 Els repositoris remots permeten la col·laboració i el seguiment del desenvolupament del codi
 entre múltiples persones, o tu mateix en diferents dispositius.
 
-![Repositori remot vinculat a múltiples repositoris locals](img/multiple_local_repo.png)
+![Repositori remot vinculat a múltiples repositoris locals](img/multiple_local_repo.light.png#only-light)
+![Repositori remot vinculat a múltiples repositoris locals](img/multiple_local_repo.dark.png#only-dark)
 /// figure-caption
 Repositori remot vinculat a múltiples repositoris locals
 ///
@@ -197,7 +199,8 @@ git remote add <alies> <url>
     Normalment, s'utilitza el nom `origin` per referir-se al repositori remot principal.
 - `<url>`: URL del repositori remot.
 
-![Repositori Local vinculat amb un Repositori Remot](img/add_remote.png)
+![Repositori Local vinculat amb un Repositori Remot](img/add_remote.light.png#only-light)
+![Repositori Local vinculat amb un Repositori Remot](img/add_remote.dark.png#only-dark)
 /// figure-caption
 Repositori Local vinculat amb un Repositori Remot
 ///
@@ -348,7 +351,8 @@ git clone <url> [<directori>]
 - `<directori>`: Opcional. Nom del directori on es copiarà el repositori. Per defecte, es crea un directori amb
     el nom del repositori remot.
 
-![Clonació d'un repositori remot](img/clone.png)
+![Clonació d'un repositori remot](img/clone.light.png#only-light)
+![Clonació d'un repositori remot](img/clone.dark.png#only-dark)
 /// figure-caption
 Clonació d'un repositori remot
 ///
@@ -381,7 +385,8 @@ git fetch [<options>] [<remot>]
 - `<options>`: Opcions de la comanda.
 - `<remot>`: Àlies del repositori remot. Per defecte, s'utilitza `origin`.
 
-![Sincronització entre repositoris amb git fetch](img/fetch.png)
+![Sincronització entre repositoris amb git fetch](img/fetch.light.png#only-light)
+![Sincronització entre repositoris amb git fetch](img/fetch.dark.png#only-dark)
 /// figure-caption
 Sincronització entre repositoris amb `git fetch`
 ///
@@ -472,7 +477,8 @@ Aquesta ordre realitza dos accions:
 - `git fetch`: Actualitza la informació de les branques remotes al nostre repositori local.
 - `git merge origin/<branca>`: Incorpora els canvis de la branca remota a la branca local.
 
-![Incorporació de canvis amb git pull](img/pull.png)
+![Incorporació de canvis amb git pull](img/pull.light.png#only-light)
+![Incorporació de canvis amb git pull](img/pull.dark.png#only-dark)
 /// figure-caption
 Incorporació de canvis amb `git pull`
 ///
