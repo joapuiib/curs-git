@@ -23,9 +23,9 @@ per a la gestió de projectes i com en podem fer ús en l'àmbit educatiu.
 
 
 ## Característiques
-- __:octicons-calendar-16: Temporització__: Del 5 de maig al 15 de juny de 2025.
+- __:octicons-calendar-16: Temporització__: Del 6 d'octubre al 5 de novembre de 2025.
 - __:material-laptop: Modalitat__: En línia.
-- __:octicons-clock-16: Durada__: 30 hores.
+- __:octicons-clock-16: Durada__: 32 hores.
 
 
 ## Objectius específics
