@@ -46,24 +46,17 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 
 
 ## Exercici
-!!! important
-    Comprova l'estat del repositori amb `git status` i `git lga` (1) després de cada ordre
-    per entendre els diferents estats dels fitxers.
-    {: .annotate}
-
-    1. Revisa [[introduccio#historic-de-canvis-git-log]] per veure
-        la configuració de l'àlies `git lga`.
+!!! important annotate "Comprova l'estat del repositori amb `git status` i `git lga` (1) després de cada ordre per entendre els diferents estats dels fitxers."
+1. Revisa [[introduccio#historic-de-canvis-git-log]] per veure la configuració de l'àlies `git lga`.
 
 ### Creació repositori remot
-0. Crea un compte a [:material-github: GitHub](https://github.com) si no en tens un.
-1. Crea un repositori remot anomenat `bloc3_exercici` completament __buit__:
-    1. No afegisques cap fitxer (README.md, LICENSE, .gitignore, etc.).
+1. Crea un compte a [:material-github: GitHub](https://github.com) si encara no en tens un.
+2. Crea un repositori remot anomenat `bloc3_exercici` completament __buit__:
+    - No afegisques cap fitxer (`README.md`, `LICENSE`, `.gitignore`, etc.).
 
 ### Creació repositori local
 
-!!! danger
-    Crea el nou repositori __en una carpeta independent__ per evitar
-    problemes amb els exemples i exercicis anteriors.
+!!! danger " Crea el nou repositori __en una carpeta independent__ per evitar problemes amb els exemples i exercicis anteriors."
 
 1. Crea un directori anomenat `bloc3_exercici` en la teua carpeta de treball.
 1. Inicialitza un repositori de Git en aquest directori.
@@ -77,14 +70,10 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 1. Publica la branca `main` al repositori remot, associant-la a la branca `origin/main`
     del repositori remot.
 
-!!! tip
-    Comprova a [:material-github: GitHub](https://github.com) que el repositori remot
-    conté el fitxer `llibres.txt`.
+!!! tip "Comprova a [:material-github: GitHub](https://github.com) que el repositori remot conté el fitxer `llibres.txt`."
 
 ### Clonació del repositori remot
-!!! danger
-    Clona el repositori __en una carpeta independent__ per evitar
-    problemes amb els exemples i exercicis anteriors.
+!!! danger "Clona el repositori __en una carpeta independent__ per evitar problemes amb els exemples i exercicis anteriors."
 
 1. Clona el repositori remot a un directori anomenat
     `bloc3_exercici_clone` en la teua carpeta de treball.
@@ -100,7 +89,7 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 !!! important
     A partir d'aquest punt treballarem amb els dos repositoris locals: `bloc3_exercici` i `bloc3_exercici_clone`.
 
-    Et recomane obrir cada directori a finestra de :material-microsoft-visual-studio-code: Visual Studio Code
+    Et recomane obrir cada directori a una finestra de :material-microsoft-visual-studio-code: Visual Studio Code
     diferent o utilitzar dues terminals per a treballar amb els dos repositoris alhora.
 
 Des del repositori `bloc3_exercici_clone`:
@@ -131,8 +120,7 @@ Des del repositori `bloc3_exercici_clone`:
 1. Realitza un _commit_.
 1. Tracta de publicar la branca `main` al repositori remot.
 
-    !!! question
-        Per què no pots publicar la branca `main` al repositori remot?
+    !!! question "Per què no pots publicar la branca `main` al repositori remot?"
 
 1. Incorpora els canvis de la branca `origin/main` a la branca `main` local.
 1. Resol els conflictes que puguen aparéixer.
@@ -221,3 +209,10 @@ joapuiib@FP:~/bloc3_exercici (main) $ git lga
         |/  
         * aabc7af - (3 minutes ago) Merge branch 'origin/main' into main - Brian
         ```
+
+
+## Ampliació
+1. Configura el comportament de `git pull` perquè solament permeta fusionar els canvis mitjançant una [:material-book-open-variant: Fusió directa][fusio-directa].
+    - Comprova el seu funcionament intentant realitzar un `git pull` amb una situació que requerisca una fusió de branques divergents.
+
+[fusio-directa]: ../02_branques/branques.md#fusio-directa
