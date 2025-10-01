@@ -22,14 +22,9 @@ No es requereix el lliurament d'aquest exercici per a la certificació del curs.
 
 ## Exercici
 
-!!! important
-    Comprova l'estat del repositori amb `git status` i `git diff` després de cada pas
-    per entendre els estats en el qual es pot trobar
-    el repositori i els fitxers.
+!!! important "Comprova l'estat del repositori amb `git status` i `git diff` després de cada pas per entendre els estats en el qual es pot trobar el repositori i els fitxers."
 
-!!! danger
-    Crea el nou repositori __en una carpeta independent__ per evitar
-    problemes amb els exemples i exercicis anteriors.
+!!! danger "Crea el nou repositori __en una carpeta independent__ per evitar problemes amb els exemples i exercicis anteriors."
 
 1. Crea un directori anomenat `bloc1_exercici` en la teua carpeta de treball.
 1. Inicialitza un repositori de Git en aquest directori.
@@ -57,8 +52,7 @@ No es requereix el lliurament d'aquest exercici per a la certificació del curs.
 
 
 ## Estat final
-!!! important
-    Trieu un missatge significatiu i descriptiu per a cada _commit_.
+!!! important "Trieu un missatge significatiu i descriptiu per a cada _commit_."
 
 ```shellconsole
 jpuigcerver@FP:~/bloc1_exercici (main) $ git lg
