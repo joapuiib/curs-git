@@ -47,17 +47,10 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 ## Exercici
 
 ### Inicialització
-!!! important
-    Comprova l'estat del repositori amb `git status` i `git lga` (1) després de cada ordre
-    per entendre els diferents estats dels fitxers.
-    {: .annotate}
+!!! important annotate "Comprova l'estat del repositori amb `git status` i `git lga` (1) després de cada ordre per entendre els diferents estats dels fitxers."
+1. Revisa [[introduccio#historic-de-canvis-git-log]] per veure la configuració de l'àlies `git lga`.
 
-    1. Revisa [[introduccio#historic-de-canvis-git-log]] per veure
-        la configuració de l'àlies `git lga`.
-
-!!! danger
-    Crea el nou repositori __en una carpeta independent__ per evitar
-    problemes amb els exemples i exercicis anteriors.
+!!! danger " Crea el nou repositori __en una carpeta independent__ per evitar problemes amb els exemples i exercicis anteriors."
 
 
 1. Crea un directori anomenat `bloc2_exercici` en la teua carpeta de treball.
@@ -98,8 +91,7 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 1. Fusiona la branca `llibres-ciencia-ficcio` amb la branca `main`.
 1. Fusiona la branca `llibres-fantasia` amb la branca `main`.
 
-    !!! important
-        Documenta correctament els conflictes que s'han generat i com els has resolt.
+    !!! important "Documenta correctament els conflictes que s'han generat i com els has resolt."
 
 
 ### Eliminació d'una branca
@@ -111,8 +103,7 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 1. Elimina la branca `pelicules`.
 1. Elimina la branca `series`.
 
-!!! question
-    Què ha passat amb el commit de la branca `series`?
+!!! question "Què ha passat amb el commit de la branca `series`?"
 
 
 ### Canvi de base d'una branca
@@ -128,9 +119,7 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 1. Canvia la base de la branca `series` a la branca `main`.
 1. Fusiona la branca `series` amb la branca `main`.
 
-!!! info
-    Aquest procés és el que cal seguir per fusionar branques divergents
-    d'una manera que la història siga lineal.
+!!! info "Aquest procés és el que cal seguir per fusionar branques divergents d'una manera que la història siga lineal."
 
 
 ### Resolució de conflictes en el canvi de base
@@ -144,15 +133,13 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 1. Fusiona la branca `series-accio` amb la branca `main`.
 1. Canvia la base de la branca `series-drama` a la branca `main`.
 
-    !!! important
-        Documenta correctament els conflictes que s'han generat i com els has resolt.
+    !!! important "Documenta correctament els conflictes que s'han generat i com els has resolt."
 
 1. Fusiona la branca `series-drama` amb la branca `main`.
 
 
 ## Estat final
-!!! important
-    Trieu un missatge significatiu i descriptiu per a cada _commit_.
+!!! important "Trieu un missatge significatiu i descriptiu per a cada _commit_."
 
 ```shellconsole
 jpuigcerver@FP:~/bloc2_exercici (main) $ git lga

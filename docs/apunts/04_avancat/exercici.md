@@ -15,7 +15,7 @@ Els objectius d'aquest exercici són:
 
 
 ## Lliurament
-No es requereix el lliurament d'aquest exercici.
+No es requereix el lliurament d'aquest exercici per a la certificació del curs.
 
 
 ## Exercici
@@ -25,11 +25,9 @@ A partir del següent repositori inicial:
 --8<-- "docs/files/avancat/stdout/exercici/estructura_inicial.txt"
 ```
 
-!!! prep "Preparació repositori inicial"
+??? prep "Preparació repositori inicial"
 
-    !!! danger
-        Crea el nou repositori __en una carpeta independent__ per evitar
-        problemes amb els exemples i exercicis anteriors.
+    !!! danger "Crea el nou repositori __en una carpeta independent__ per evitar problemes amb els exemples i exercicis anteriors."
 
     Pots executar el següent script per obtenir el repositori inicial:
 

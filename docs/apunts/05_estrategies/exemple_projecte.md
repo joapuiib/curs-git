@@ -245,8 +245,7 @@ Els passos que ha de seguir són:
 
 1. Actualitzar la branca `feature/author` amb els canvis `develop`.
 
-    !!! info
-        En aquest cas, han sorgit conflictes que hem hagut de solucionar manualment.
+    !!! info "En aquest cas, han sorgit conflictes que hem hagut de solucionar manualment."
 
     ```shellconsole
     --8<-- "docs/files/estrategies/stdout/feature_author_merge.txt"
@@ -254,6 +253,7 @@ Els passos que ha de seguir són:
 
     1. L'opció `--no-edit` evita obrir l'editor de text i deixa el missatge de commit per defecte.
     2. S'han esborrat les marques de conflicte manualment.
+    3. L'opció `--no-edit` evita obrir l'editor de text i deixa el missatge de commit per defecte.
 
 1. Fusionar la branca `feature/author` amb `develop`.
 

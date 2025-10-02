@@ -270,7 +270,7 @@ def squash():
     x.run('sed -i \'/^<<<<<<<.*$/d; /^=======/d; /^>>>>>>>.*$/d\' README.md')
     x.log_prompt('code README.md # (2)!')
     x.x('git add README.md')
-    x.x('git commit --no-edit # (1)!', env={'GIT_EDITOR': 'true'})
+    x.x('git commit --no-edit # (3)!', env={'GIT_EDITOR': 'true'})
     x.x('git lga')
 
     ## 4. Integrar feature/author a develop
