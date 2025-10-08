@@ -64,7 +64,7 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 1. Crea una branca anomenada `musica` i situa't en aquesta branca.
 1. Crea un fitxer anomenat `musica.txt` i afegeix tres cançons que t'agraden.
 1. Fes un _commit_ en aquesta branca.
-1. Fusiona la branca `musica` amb la branca `main`.
+1. Incorpora els canvis de `musica` a la branca `main` mitjançant una fusió.
 
 
 ### Fusió de branques divergents
@@ -76,8 +76,8 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
     1. Afegeix una cançó a `musica.txt`.
     1. Fes un _commit_.
 
-1. Fusiona la branca `mes-llibres` amb la branca `main`.
-1. Fusiona la branca `mes-musica` amb la branca `main`.
+1. Incorpora els canvis de `mes-llibres` a la branca `main` mitjançant una fusió.
+1. Incorpora els canvis de `mes-musica` a la branca `main` mitjançant una fusió.
 
 
 ### Resolució de conflictes en la fusió
@@ -88,10 +88,10 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 1. Des de la branca `llibres-fantasia`:
     1. Afegeix un llibre de fantasia a `llibres.txt`.
     1. Fes un _commit_.
-1. Fusiona la branca `llibres-ciencia-ficcio` amb la branca `main`.
-1. Fusiona la branca `llibres-fantasia` amb la branca `main`.
+1. Incorpora els canvis de `llibres-ciencia-ficcio` a la branca `main` mitjançant una fusió.
+1. Canvia la branca `llibres-fantasia` a la branca `main` mitjançant una fusió.
 
-    !!! important "Documenta correctament els conflictes que s'han generat i com els has resolt."
+    !!! docs "Documenta els conflictes que s'han generat i com els has resolt."
 
 
 ### Eliminació d'una branca
@@ -115,9 +115,9 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 1. Des de la branca `pelicules`:
     1. Afegeix una pel·lícula a `pelicules.txt`.
     1. Fes un _commit_.
-1. Fusiona la branca `pelicules` amb la branca `main`.
+1. Incorpora els canvis de la branca `pelicules` a la branca `main` mitjançant una fusió.
 1. Canvia la base de la branca `series` a la branca `main`.
-1. Fusiona la branca `series` amb la branca `main`.
+1. Incorpora els canvis de la branca `series` a la branca `main` mitjançant una fusió.
 
 !!! info "Aquest procés és el que cal seguir per fusionar branques divergents d'una manera que la història siga lineal."
 
@@ -130,12 +130,12 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 1. Des de la branca `series-drama`:
     1. Afegeix una sèrie de drama a `series.txt`.
     1. Fes un _commit_.
-1. Fusiona la branca `series-accio` amb la branca `main`.
+1. Incorpora els canvis de la branca `series-accio` a la branca `main` mitjançant una fusió.
 1. Canvia la base de la branca `series-drama` a la branca `main`.
 
-    !!! important "Documenta correctament els conflictes que s'han generat i com els has resolt."
+    !!! docs "Documenta els conflictes que s'han generat i com els has resolt."
 
-1. Fusiona la branca `series-drama` amb la branca `main`.
+1. Incorpora els canvis de la branca `series-drama` a la branca `main` mitjançant una fusió.
 
 
 ## Estat final
