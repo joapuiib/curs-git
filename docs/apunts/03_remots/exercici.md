@@ -64,6 +64,7 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 1. Fes un primer _commit_.
 1. Reanomena la branca principal a `main`.
 
+
 ### Enllaç amb repositori remot
 1. Configura el repositori local per afegir el repositori remot
     creat anteriorment com a `origin`.
@@ -71,6 +72,7 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
     del repositori remot.
 
 !!! tip "Comprova a [:material-github: GitHub](https://github.com) que el repositori remot conté el fitxer `llibres.txt`."
+
 
 ### Clonació del repositori remot
 !!! danger "Clona el repositori __en una carpeta independent__ per evitar problemes amb els exemples i exercicis anteriors."
@@ -85,6 +87,7 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
     git config user.email "brian.cohen@edu.gva.es"
     ```
 
+
 ### Publicació de canvis
 !!! important
     A partir d'aquest punt treballarem amb els dos repositoris locals: `bloc3_exercici` i `bloc3_exercici_clone`.
@@ -98,6 +101,9 @@ Des del repositori `bloc3_exercici_clone`:
 1. Realitza un _commit_.
 1. Publica la branca `main` al repositori remot.
 
+!!! docs "Documenta l'estat del repositori amb `git lga` al final d'aquest apartat."
+
+
 ### Incorporació de canvis amb fusió directa
 
 Des del repositori `bloc3_exercici`:
@@ -105,6 +111,7 @@ Des del repositori `bloc3_exercici`:
 1. Sincronitza el repositori local amb el repositori remot amb `git fetch`.
 1. Observa el `log` de canvis.
 1. Incorpora els canvis de la branca `origin/main` a la branca `main` local.
+
 
 ### Incorporació de canvis amb fusió de branques divergents
 
@@ -126,6 +133,9 @@ Des del repositori `bloc3_exercici_clone`:
 1. Resol els conflictes que puguen aparéixer.
 1. Publica la branca `main` al repositori remot.
 
+!!! docs "Documenta l'estat del repositori amb `git lga` al final d'aquest apartat."
+
+
 ### Incorporació de canvis amb canvi de base
 
 Des del repositori `bloc3_exercici`:
@@ -145,6 +155,9 @@ Des del repositori `bloc3_exercici_clone`:
 1. Resol els conflictes que puguen aparéixer.
 1. Publica la branca `main` al repositori remot.
 
+!!! docs "Documenta l'estat del repositori amb `git lga` al final d'aquest apartat."
+
+
 ### Branques i remots
 
 Des del repositori `bloc3_exercici`:
@@ -160,6 +173,8 @@ Des del repositori `bloc3_exercici`:
 1. Elimina la branca local `musica`.
 1. Elimina la branca remota `musica`.
     
+!!! docs "Documenta l'estat del repositori amb `git lga` al final d'aquest apartat."
+
 
 ## Estat final
 ```shellconsole
