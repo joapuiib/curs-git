@@ -66,6 +66,8 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 1. Fes un _commit_ en aquesta branca.
 1. Incorpora els canvis de `musica` a la branca `main` mitjançant una fusió.
 
+!!! docs "Documenta l'estat del repositori amb `git lga` al final d'aquest apartat."
+
 
 ### Fusió de branques divergents
 1. Des de la branca `main`, crea les branques `mes-llibres` i `mes-musica`.
@@ -79,6 +81,7 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 1. Incorpora els canvis de `mes-llibres` a la branca `main` mitjançant una fusió.
 1. Incorpora els canvis de `mes-musica` a la branca `main` mitjançant una fusió.
 
+!!! docs "Documenta l'estat del repositori amb `git lga` al final d'aquest apartat."
 
 ### Resolució de conflictes en la fusió
 1. Des de la branca `main`, crea les branques `llibres-ciencia-ficcio` i `llibres-fantasia`.
@@ -93,6 +96,8 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 
     !!! docs "Documenta els conflictes que s'han generat i com els has resolt."
 
+!!! docs "Documenta l'estat del repositori amb `git lga` al final d'aquest apartat."
+
 
 ### Eliminació d'una branca
 1. Des de la branca `main`, crea una branca anomenada `series`.
@@ -105,6 +110,7 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 
 !!! question "Què ha passat amb el commit de la branca `series`?"
 
+!!! docs "Documenta l'estat del repositori amb `git lga` al final d'aquest apartat."
 
 ### Canvi de base d'una branca
 1. Des de la branca `main`, crea una branca anomenada `series`.
@@ -121,6 +127,7 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 
 !!! info "Aquest procés és el que cal seguir per fusionar branques divergents d'una manera que la història siga lineal."
 
+!!! docs "Documenta l'estat del repositori amb `git lga` al final d'aquest apartat."
 
 ### Resolució de conflictes en el canvi de base
 1. Des de la branca `main`, crea una branca anomenada `series-accio` i `series-drama`.
@@ -137,6 +144,7 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 
 1. Incorpora els canvis de la branca `series-drama` a la branca `main` mitjançant una fusió.
 
+!!! docs "Documenta l'estat del repositori amb `git lga` al final d'aquest apartat."
 
 ## Estat final
 !!! important "Trieu un missatge significatiu i descriptiu per a cada _commit_."
