@@ -81,7 +81,13 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 1. Incorpora els canvis de `mes-llibres` a la branca `main` mitjançant una fusió.
 1. Incorpora els canvis de `mes-musica` a la branca `main` mitjançant una fusió.
 
+!!! info "La primera fusió hauria de ser [directa][directa] i la segona [mitjançant un _commit_ de fusió][merge-commit]."
+
+[directa]: ./branques.md#fusio-directa
+[merge-commit]: ./branques.md#fusio-de-branques-divergents
+
 !!! docs "Documenta l'estat del repositori amb `git lga` al final d'aquest apartat."
+
 
 ### Resolució de conflictes en la fusió
 1. Des de la branca `main`, crea les branques `llibres-ciencia-ficcio` i `llibres-fantasia`.
@@ -92,9 +98,9 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
     1. Afegeix un llibre de fantasia a `llibres.txt`.
     1. Fes un _commit_.
 1. Incorpora els canvis de `llibres-ciencia-ficcio` a la branca `main` mitjançant una fusió.
-1. Canvia la branca `llibres-fantasia` a la branca `main` mitjançant una fusió.
+1. Incorpora els canvis de `llibres-fantasia` a la branca `main` mitjançant una fusió.
 
-    !!! docs "Documenta els conflictes que s'han generat i com els has resolt."
+!!! docs "Documenta els conflictes que s'han generat i com els has resolt."
 
 !!! docs "Documenta l'estat del repositori amb `git lga` al final d'aquest apartat."
 
@@ -110,7 +116,7 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 
 !!! question "Què ha passat amb el commit de la branca `series`?"
 
-!!! docs "Documenta l'estat del repositori amb `git lga` al final d'aquest apartat."
+!!! docs "Documenta l'estat del repositori amb `git lga` abans i després de l'eliminació de les branques."
 
 ### Canvi de base d'una branca
 1. Des de la branca `main`, crea una branca anomenada `series`.
