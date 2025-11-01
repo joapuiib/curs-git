@@ -313,16 +313,13 @@ mitjançant l'opció `-u` o `--set-upstream` de la comanda `git push`.
 
 ```
 git push [-u | --set-upstream] <remot> <branca>
+```
 
 Aquesta associació li permet a Git saber sobre quina branca remota
 ha de realitzar les operacions quan no s'especifica explicitament,
 com ara `git pull` o `git push`.
 
-!!! tip
-    Pots configurar git perquè configure automàticament la branca local
-    perquè s'associe amb la branca remota amb el mateix nom
-    amb l'opció `push.autoSetupRemote`.
-
+!!! tip "Pots configurar git perquè configure automàticament la branca local perquè s'associe amb la branca remota amb el mateix nom amb l'opció `push.autoSetupRemote`."
     ```bash
     git config --global push.autoSetupRemote true
     ```
