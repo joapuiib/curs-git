@@ -59,10 +59,7 @@ Si no en teniu encara, caldrà un compte a [:simple-github: GitHub][github].
 Per poder enllaçar el teu repositori local amb el repositori remot
 i fer canvis en aquest, necessites autenticar-te amb el servidor de GitHub.
 
-!!! recommend
-    Per seguretat i fàcil reutilització, es recomana utilitzar el __mètode SSH__ per autenticar-se
-    amb el servidor de GitHub.
-
+!!! recommend "Per seguretat i fàcil reutilització, es recomana utilitzar el __mètode SSH__ per autenticar-se amb el servidor de GitHub."
     Pots consultar l'apartat [Configuració de la clau SSH](#configuracio-de-la-clau-ssh)
     per configurar aquest mètode d'autenticació directament.
 
@@ -118,9 +115,7 @@ Existeixen dos tipus de tokens d'accés personal:
 
 Una vegada creat el _token_, podràs utilitzar-lo per autenticar-te amb el servidor de GitHub.
 
-!!! important
-    __Guarda el teu token d'accés personal en un lloc segur.__
-
+!!! important "Guarda el teu token d'accés personal en un lloc segur."
     No podràs veure'l de nou després de tancar la pàgina.
 
 Pots utilitzar el teu token d'accés personal per autenticar-te amb el servidor de GitHub
@@ -134,9 +129,7 @@ de dues maneres:
 - __Mitjançant la contrasenya__: Pots utilitzar el teu token d'accés personal com a contrasenya
     per autenticar-te amb el servidor de GitHub.
 
-    !!! note
-        Per seguretat, no es mostrarà res en el camp de la contrasenya
-        quan l'introduïsques.
+    !!! note "Per seguretat, no es mostrarà res en el camp de la contrasenya quan l'introduïsques."
 
     ```shellconsole
     jpuigcerver@fp:~ $ git clone https://github.com/<usuari>/<repositori>
@@ -146,9 +139,7 @@ de dues maneres:
     ```
 
 
-!!! tip
-    Per tal de no haver de recordar el PAT cada vegada, és possible configurar
-    Git perquè ho recorde automàticament.
+!!! tip "Per tal de no haver de recordar el PAT cada vegada, és possible configurar Git perquè ho recorde automàticament."
 
     ```bash
     git config --global credential.helper store
@@ -161,9 +152,7 @@ de dues maneres:
 Per autenticar-te amb el servidor de GitHub mitjançant el protocol SSH,
 has de configurar una clau SSH en el teu sistema local i afegir-la al teu compte de GitHub.
 
-!!! important
-    Aquesta configuració s'ha de repetir per cada dispositiu on
-    vulgues utilitzar aquest mètode d'autenticació.
+!!! important "Aquesta configuració s'ha de repetir per cada dispositiu on vulgues utilitzar aquest mètode d'autenticació."
 
 !!! docs
     [:octicons-link-external-16: Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) – :simple-github: GitHub Docs

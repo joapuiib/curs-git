@@ -36,9 +36,7 @@ en projectes xicotets o amb pocs membres.
 És important adaptar la metodologia a les necessitats del projecte
 i no seguir-la de forma estricta si no aporta valor afegit.
 
-!!! note
-    No és necessari utilitzar tots els tipus de branques.
-
+!!! note "No és necessari utilitzar tots els tipus de branques."
     Per exemple, en projectes xicotets, potser no és necessària una branca de desenvolupament `develop`
     o branques de llançament `release/*`.
 
@@ -123,7 +121,7 @@ El flux de treball amb aquestes branques és el següent:
 - Poden ser eliminades després de ser integrades.
 
 
-!!! recommend
+!!! recommend "Recomanacions i bones pràctiques"
     - Utilitzeu noms descriptius i coherents, que indiquen clarament el propòsit i contingut de les branques,
         evitant noms genèrics o massa concrets.
 
@@ -376,11 +374,6 @@ Fusió de branques mitjançant `merge --no-ff` + `merge --squash --ff-only`
 Com que la branca de funcionalitat serà eliminada després de la fusió,
 no importa si la història de la branca de funcionalitat es manté neta o no.
 
-!!! warning
-    També es podria realitzar la fusió amb `rebase`,
-    però en cas de conflicte, s'hauria de resoldre en cada _commit_
-    de la branca de funcionalitat.
-
 Les característiques d'aquesta opció són:
 
 - No manté tot l'històric de canvis[^1].
@@ -404,10 +397,7 @@ i s'utilitzen per a realitzar tasques com:
 - Actualitzar la versió del projecte.
 - Preparar paràmetres de configuració específics per a el llançament.
 
-!!! tip
-    Si el teu projecte no requereix de tasques específiques per a preparar el llançament,
-    pots prescindir d'aquestes branques i fusionar directament la branca de desenvolupament `develop`
-    amb la branca principal `main`.
+!!! tip "Si el teu projecte no requereix de tasques específiques per a preparar el llançament, pots prescindir d'aquestes branques i fusionar directament la branca de desenvolupament `develop` amb la branca principal `main`."
 
 El flux de treball amb aquestes branques és el següent:
 
@@ -422,10 +412,7 @@ El flux de treball amb aquestes branques és el següent:
 Branques de llançament
 ///
 
-!!! tip
-    Si el procés de publicació es realitza amb múltiples commits,
-    pots fer ús de `merge --squash` per a integrar els canvis
-    en un únic _commit_ a la branca de desenvolupament `develop`.
+!!! tip "Si el procés de publicació es realitza amb múltiples commits, pots fer ús de `merge --squash` per a integrar els canvis en un únic _commit_ a la branca de desenvolupament `develop`."
 
 
 ## Branques de correcció
@@ -433,13 +420,8 @@ Les branques de correcció són branques temporals
 que s'utilitzen per a corregir errors crítics en el codi estable del projecte,
 quan la seua correcció no pot esperar a la següent versió.
 
-!!! danger
-    Aquestes branques sols han de ser utilitzades per corregir errors crítics
-    que afecten la versió publicada del projecte i han de corregir-se
-    immediatament.
-
-    Aquestes branques poden dificultar el flux de treball,
-    sobretot si es tracta de mantindre
+!!! danger "Aquestes branques sols han de ser utilitzades per corregir errors crítics que afecten la versió publicada del projecte i han de corregir-se immediatament."
+    Aquestes branques poden dificultar el flux de treball, sobretot si es tracta de mantindre
     una __història lineal__ del projecte.
 
 Normalment, el prefix de les branques de correcció és `hotfix/`.

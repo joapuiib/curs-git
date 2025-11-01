@@ -17,9 +17,8 @@ nous canvis els fitxers del repositori, inclòs els que han segut modificats en 
 El funcionament d'aquesta ordre consisteix en crear un nou _commit_ amb els canvis de l'__Àrea de Preparació__
 i els canvis del commit anterior. A més, el nou _commit_ substitueix l'anterior.
 
-!!! warning
-    Cal tindre en compte que el _commit_ original serà substituït pel nou _commit_,
-    però si aquest ja ha estat publicat al repositori remot o té altres referències,
+!!! warning "Cal tindre en compte que el _commit_ original serà substituït pel nou _commit_"
+    Si aquest ja ha estat publicat al repositori remot o té altres referències,
     aquestes referències no seran modificades i es podrien produir problemes
     en el repositori.
 

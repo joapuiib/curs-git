@@ -89,8 +89,7 @@ que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
 
 
 ### Publicació de canvis
-!!! important
-    A partir d'aquest punt treballarem amb els dos repositoris locals: `bloc3_exercici` i `bloc3_exercici_clone`.
+!!! important "A partir d'aquest punt treballarem amb els dos repositoris locals: `bloc3_exercici` i `bloc3_exercici_clone`."
 
     Et recomane obrir cada directori a una finestra de :material-microsoft-visual-studio-code: Visual Studio Code
     diferent o utilitzar dues terminals per a treballar amb els dos repositoris alhora.
@@ -212,9 +211,7 @@ joapuiib@FP:~/bloc3_exercici (main) $ git lga
 
     [rebase]: ../02_branques/branques.md#resolucio-de-conflictes_1
 
-    !!! failure "Error"
-        Alguns de vosaltres heu fet un `git add` i un `git commit`,
-        cosa que ha creat un nou commit sense cap branca associada.
+    !!! failure "Error: Alguns de vosaltres heu fet un `git add` i un `git commit`, cosa que ha creat un nou commit sense cap branca associada."
 
         ```shellconsole
         jpuigcerver@FP:~/bloc3_exercici (main) $ git lga

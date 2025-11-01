@@ -239,10 +239,7 @@ les tasques sobre el mateix repositori.
 1. __Crear un :octicons-people-16: equip__ per a cada grup d'estudiants
     i afegir els estudiants a l'equip.
 
-    !!! info
-        La creació de :octicons-people-16: l'equip, el :octicons-repo-locked-16: repositori privat
-        i el :octicons-table-16: projecte pot ser realitzada per part del professorat
-        o per part d'un dels estudiants del grup.
+    !!! info "La creació de :octicons-people-16: l'equip, el :octicons-repo-locked-16: repositori privat i el :octicons-table-16: projecte pot ser realitzada per part del professorat o per part d'un dels estudiants del grup."
 
     ??? picture "Equips dels estudiants dins de l'organització"
         ![Equips dels estudiants dins de l'organització](./img/projecte/teams.png)
@@ -409,20 +406,13 @@ Aquesta eina permet realitzar les següents accions de manera massiva:
     Podeu trobar la informació sobre la instal·lació i ús de `ghot` a la documentació:
     [:octicons-link-external-16: GitHub Organization Tools][ghot-docs]
 
-!!! warning
-    `ghot` és una eina en __estat experimental__.
-    Vos recomane que executeu les ordres amb l'opció `--dry` primer
-    per verificar que tot funciona correctament.
-
+!!! warning "`ghot` és una eina en __estat experimental__. Vos recomane que executeu les ordres amb l'opció `--dry` primer per verificar que tot funciona correctament."
     A més, si trobeu algun error o teniu alguna proposta de millora,
     podeu indicar-ho a la secció d'[:octicons-issue-opened-16: Issues del repositori de `ghot`][ghot-issues].
 
 [ghot-issues]: https://github.com/joapuiib/github-organization-tools/issues
 
-
-!!! important
-    No és necessari fer ús de `ghot` per aplicar aquesta proposta.
-    Totes les accions poden ser realitzades manualment.
+!!! important "No és necessari fer ús de `ghot` per aplicar aquesta proposta. Totes les accions poden ser realitzades manualment."
 
     
 [ghot]: https://github.com/joapuiib/github-organization-tools

@@ -23,11 +23,8 @@ Algunes de les accions que podem fer mitjançant aquestes eines són:
 - Reorganitzar els commits abans de publicar-los.
 - Moure punters de les branques.
 
-!!! danger
-    Aquestes eines són molt potents, però cal tindre en compte que modificar la història del repositori
-    pot ser perillós.
-
-    Especialment, en les branques que ja han segut publicades (`push`),  ja que pot ocasionar
+!!! danger "`git reset` permet modificar la història del repositori i això pot ser perillós."
+    Especialment, en les branques que ja han segut publicades (`push`), ja que pot ocasionar
     problemes entre els col·laboradors del repositori.
 
 
@@ -54,9 +51,7 @@ Resum de l'eina `git reset`.
 A més, aquesta ordre pot provocar que alguns __commits__ perden totes les referències i,
 per tant, seran esborrats pel __recol·lector de brossa de Git__.
 
-!!! example
-    A la [Figura 1](#figure-reset) els _commits_ __Canvi B__ i __Canvi C__
-    seran esborrats perquè han perdut tots les referències.
+!!! example "A la [Figura 1](#figure-reset) els _commits_ __Canvi B__ i __Canvi C__ seran esborrats perquè han perdut tots les referències."
 
 ??? prep "Preparació del repositori"
 
@@ -76,8 +71,7 @@ per tant, seran esborrats pel __recol·lector de brossa de Git__.
 
 ### Sintaxi general
 
-!!! info
-    Aquesta ordre mou la referència de la branca actual, on està situat el `HEAD`.
+!!! info "Aquesta ordre mou la referència de la branca actual, on està situat el `HEAD`."
 
 La sintaxi de l'ordre `git reset` és:
 ```bash
@@ -145,8 +139,7 @@ git reset --mixed <ref>
 El mode `reset --hard` mou la referència de la branca actual al _commit_ especificat.
 modificant l'estat del repositori i revertint-lo a la referència especificada.
 
-!!! danger
-    Tots els canvis es descarten permanentment.
+!!! danger "Tots els canvis es descarten permanentment."
 
 ```
 git reset --hard <ref>
