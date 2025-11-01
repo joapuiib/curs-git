@@ -27,8 +27,7 @@ però últimament és preferible utilitzar el nom `main`
 per evitar la nomenclatura __master/slave__ (amo/esclau),
 que té connotacions racistes.
 
-!!! info
-    S'ha canviat el nom de la branca principal de `master` a `main` per a seguir les recomanacions de la comunitat de desenvolupament.
+!!! info "S'ha canviat el nom de la branca principal de `master` a `main` per a seguir les recomanacions de la comunitat de desenvolupament."
 
     Vegeu: [:octicons-link-external-16: Regarding Git and Branch Naming](https://sfconservancy.org/news/2020/jun/23/gitbranchname/) – Software Freedom Conservancy
 
@@ -118,16 +117,14 @@ Més opcions:
 ### Crear una branca
 Per crear una nova branca, utilitzem l'ordre:
 ```bash
-git branch [-f | --force] <nom>
+git branch [-f | --force] <nom> [<ref>]
 ```
 
 - `[-f | --force]`: Opcional. Força la creació de la branca.
 - `<nom>`: Nom de la nova branca.
+- `[<ref>]`: Opcional. Referència on es crearà la nova branca. Si no s'especifica, es crearà en el _commit_ actual (on es troba el `HEAD`).
 
-!!! warning
-    Si ja existeix una branca amb el mateix nom i
-    no s'utilitza l'opció `-f` o `--force`,
-    l'ordre mostrarà un error i no es crearà la branca.
+!!! warning "Si ja existeix una branca amb el mateix nom i no s'utilitza l'opció `-f` o `--force`, l'ordre mostrarà un error i no es crearà la branca."
 
 ??? example "Exemple: Creació de les branques `menjar`, `beguda` i `neteja`"
     Creem les branca `menjar`, `beguda` i `neteja` on es realitzaran
@@ -286,12 +283,11 @@ git branch [-d | --delete] [-D] [-f | --force] <nom>
 - `[-f | --force]`: Opcional. Força l'eliminació de la branca.
 - `[-D]`: Opcional. Abreviatura de `--delete --force`.
 
-!!! warning
+!!! warning "L'eliminació d'una branca pot provocar la pèrdua de commits."
     Quan un _commit_ perd totes les referències per a ser accedit,
     es diu que és un _commit_ __orfe__ i serà eliminat pel
     __recol·lector de brossa__ (_garbage collector_) de Git.
 
-    L'eliminació d'una branca pot provocar la pèrdua de commits.
     En aquest cas, Git mostrarà un error i no es podrà eliminar la branca
     a no ser que s'utilitze l'opció `-D` o `--delete --force`.
 
@@ -329,9 +325,7 @@ git merge <branca>
 
 - `<branca>`: Nom de la branca que es vol fusionar amb la __branca actual__.
 
-!!! important
-    La __fusió de branques__ sempre incorpora els canvis de la branca
-    indicada sobre la __branca actual__ (on es troba el `HEAD`).
+!!! important "La __fusió de branques__ sempre incorpora els canvis de la branca indicada sobre la __branca actual__ (on es troba el `HEAD`)."
 
 !!! docs "Documentació oficial de :simple-git: Git"
     - [:octicons-link-external-16: `git merge`](https://git-scm.com/docs/git-merge)
@@ -364,15 +358,10 @@ fins on es troba la branca que es vol fusionar.
 Estructura de branques després de la fusió directa de la branca `menjar` a la branca `main`.
 ///
 
-!!! important
-    La __fusió directa__ és la forma més senzilla i neta de fusionar branques,
-    ja que no es crea cap _commit_ addicional per fusionar les branques i
-    manté una __història lineal__ i fàcil de seguir.
+!!! important "La __fusió directa__ és la forma més senzilla i neta de fusionar branques, ja que no es crea cap _commit_ addicional per fusionar les branques i manté una __història lineal__ i fàcil de seguir."
 
-!!! info
-    Per assegurar-se que la fusió siga directa, es pot utilitzar l'opció `--ff-only`
-
-    - En cas que la fusió no siga directa, Git mostrarà un error i no es realitzarà la fusió.
+!!! info "Per assegurar-se que la fusió siga directa, es pot utilitzar l'opció `--ff-only`"
+    En cas que la fusió no siga directa, Git mostrarà un error i no es realitzarà la fusió.
 
     Git pot ser configurat per sempre tractar de realitzar una fusió directa:
 
@@ -429,14 +418,9 @@ Aquest _commit_ necessita d'un missatge, per tant, es pot utilitzar l'opció `-m
 Si no se n'especifica cap, s'obrirà l'editor de text configurat per defecte per a afegir el missatge.
 (Vegeu [[introduccio#confirmar-canvis-git-commit]])
 
-!!! warning
-    Aquest tipus de fusió no és tan neta com la __fusió directa__ (_fast-forward_),
-    ja que la història del projecte es torna més complexa i __no lineal__.
+!!! warning "Aquest tipus de fusió no és tan neta com la __fusió directa__ (_fast-forward_), ja que la història del projecte es torna més complexa i __no lineal__."
 
-!!! info
-    Per forçar que la fusió es realitze amb un __commit de fusió__ (_merge commit_),
-    es pot utilitzar l'opció `--no-ff`.
-
+!!! info "Per forçar que la fusió es realitze amb un __commit de fusió__ (_merge commit_), es pot utilitzar l'opció `--no-ff`."
     Git pot ser configurat per sempre realitze una fusió amb un __commit de fusió__ (_merge commit_):
 
     ```bash
@@ -563,8 +547,7 @@ Una vegada resolt el conflicte, caldrà confirmar els canvis amb `git add` i `gi
 El __canvi de base__ una altra manera d'actualitzar canvis entre dues branques __divergents__,
 que consisteix en aplicar els canvis dels _commits_ d'una branca sobre una altra branca, en ordre cronològic.
 
-!!! important
-    Aquesta tècnica permet eliminar les branques divergents i mantindre una __història lineal__.
+!!! important "Aquesta tècnica permet incorporar canvis entre branques divergents mantenint una __història lineal__."
 
 Aquest procés es realitza amb l'ordre `git rebase`, amb la següent sintaxi:
 ```bash
