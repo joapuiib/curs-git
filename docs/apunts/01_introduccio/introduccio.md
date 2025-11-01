@@ -74,10 +74,7 @@ que conté tota la informació relativa al __Repositori Local__.
 !!! docs "Documentació oficial de :simple-git: Git"
     [:octicons-link-external-16: `git init`](https://git-scm.com/docs/git-init)
 
-!!! warning
-    Tingues en compte els següents aspectes importants a l'hora d'inicialitzar un repositori
-    amb `git init`:
-
+!!! warning "Tingues en compte els següents aspectes importants a l'hora d'inicialitzar un repositori amb `git init`"
     - No has d'inicialitzar el repositori cada vegada que vulgues treballar en ell.
         L'estat del repositori s'emmagatzema d'una manera persistent en
         el directori ocult `.git`.
@@ -155,9 +152,7 @@ rm -rf .git
 - `-r`: Opció per a eliminar de manera recursiva.
 - `-f`: Opció per a forçar l'eliminació sense confirmació dels elements protegits contra escriptura.
 
-!!! danger
-    Sigues extremadament cautelós amb l'ús de la comanda `rm -rf`,
-    ja que elimina tots els fitxers, inclosos aquells protegits contra escriptura.
+!!! danger "Sigues extremadament cautelós amb l'ús de la comanda `rm -rf`, ja que elimina tots els fitxers, inclosos aquells protegits contra escriptura."
 
 ??? example "Exemple: Eliminar un repositori"
     ```shellconsole
@@ -225,8 +220,7 @@ Per últim, tots els canvis de l'__Àrea de preparació__ es poden confirmar i f
 Flux de treball en un repositori de Git.
 ///
 
-!!! info
-    La comanda `git restore` es presenta a l'apartat [Descartar canvis](#descartar-canvis-git-restore).
+!!! info "La comanda `git restore` es presenta a l'apartat [Descartar canvis](#descartar-canvis-git-restore)."
 
 !!! docs "Documentació oficial de :simple-git: Git"
     - [:octicons-link-external-16: `git status`](https://git-scm.com/docs/git-status)
@@ -235,12 +229,7 @@ Flux de treball en un repositori de Git.
 
 
 ## Afegir fitxers a l'Àrea de Preparació (`git add`)
-!!! tip
-    És recomanable crear un fitxer `README.md` en tots els projectes per a descriure el seu propòsit,
-    com s'utilitza i qualsevol altra informació rellevant.
-
-Afegim el primer fitxer `README.md` al nostre repositori amb
-el contingut:
+Afegim el primer fitxer `README.md` al nostre repositori amb el contingut:
 
 ```md
 # 01 - Introducció a Git
@@ -334,8 +323,7 @@ git commit [-a] [-m "<message>"]
 - `-a`: Opcional. Afegeix tots els fitxers modificats i eliminats a l'_Àrea de Preparació_ (sense necessitat de `git add`).
 - `-m "<message>"`: Opcional. Missatge que descriu el canvi realitzat en el _commit_.
 
-!!! warning annotate
-    Si no s'especifica el missatge amb `-m`, s'obrirà l'editor per defecte(1) per a introduir el missatge del _commit_.
+!!! warning annotate "Si no s'especifica el missatge amb `-m`, s'obrirà l'editor per defecte(1) per a introduir el missatge del _commit_."
 
 1. `ViM` per defecte. Pot ser configurat: 
     ```bash
@@ -742,9 +730,7 @@ git config [--local | --global | --system] <key> [<value>]
     Si no s'indica, es mostrarà el valor actual de la clau de configuració.
 
 
-!!! notice
-    Fixeu-vos que ja hem utilitzat aquesta comanda per configurar els següents aspectes:
-
+!!! notice "Fixa't que ja s'ha utilitzat aquesta comanda per configurar els següents aspectes"
     - El nom (`user.name`) i el correu electrònic (`user.email`) de l'autor dels _commit_
     - L'editor per defecte (`core.editor`).
 
@@ -756,6 +742,7 @@ git config [--local | --global | --system] <key> [<value>]
     jpuigcerver@FP:~/git_introduccio (main) $ git config --global user.email
     {{ config.site_email }}
     ```
+
 
 ### Modificació del fitxer de configuració
 Per a modificar el fitxer de configuració de l'usuari, podem utilitzar l'ordre `git config --edit`,
