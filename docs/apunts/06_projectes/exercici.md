@@ -41,7 +41,9 @@ Depenent de la teua elecció, has de realitzar canvis
 en el teu repositori local amb la informació corresponent.
 
 !!! info "Pots realitzar tants _commits_ com necessites per realitzar la teua contribució."
-    La PR serà integrada mitjançant un `merge --squash` en un únic _commit_.
+    La PR serà integrada mitjançant l'estratègia [`merge --no-ff` + `merge squash --ff-only`][merge-squash].
+
+[merge-squash]: ../05_estrategies/estrategies.md##merge-squash-ff-only
 
 === "Llibre"
     - Crea una branca `llibre/titol-del-llibre`, indicant el títol del llibre.
@@ -51,7 +53,7 @@ en el teu repositori local amb la informació corresponent.
         ```md
         # [Títol del llibre]
         - __Autor__: [Autor del llibre]
-        - __Any__: [Any de publicació]
+        - __Any de publicació__: [Any de publicació]
 
         ## Sinopsi
         [Sinopsi del llibre.]
@@ -61,7 +63,6 @@ en el teu repositori local amb la informació corresponent.
         - [Gènere 2]
         - ...
         ```
-        > Edita els camps marcats entre els caràcters`[` i `]`.
 
 === "Pel·lícula"
     - Crea una branca `pelicula/titol-de-la-pelicula`, indicant el títol de la pel·lícula.
@@ -82,7 +83,6 @@ en el teu repositori local amb la informació corresponent.
         ## Repartiment
         [Directors, actrius i actors principals.]
         ```
-        > Edita els camps marcats entre els caràcters`[` i `]`.
 
 === "Sèrie"
     - Crea una branca `serie/titol-de-la-serie`, indicant el títol de la sèrie.
@@ -103,7 +103,11 @@ en el teu repositori local amb la informació corresponent.
         ## Temporades
         [Nombre de temporades de la sèrie i títol de cada temporada.]
         ```
-        > Edita els camps marcats entre els caràcters`[` i `]`.
+
+!!! info "Edita els camps entre `[...]` amb la informació corresponent."
+
+!!! important "Els documents han de ser consistents i han de mesclar text en diferents llengües."
+    Adapta els títols de les seccions si és necessari.
 
 3. Publica la branca amb els canvis realitzats al teu repositori.
 1. Crea una :material-source-pull: _Pull Request_ amb els canvis realitzats a la branca `main` del repositori original.

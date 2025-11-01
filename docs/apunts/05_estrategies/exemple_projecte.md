@@ -20,9 +20,7 @@ de manera independent.
 Per evitar haver de crear un repositori a [:material-github: GitHub](https://github.com)
 crearem un repositori remot en la màquina local.
 
-!!! warning
-    Tracteu de seguir la mateixa estructura de directoris per seguir l'exemple
-    correctament.
+!!! warning "Tracteu de seguir la mateixa estructura de directoris per seguir l'exemple correctament."
 
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/remot.txt"
@@ -58,18 +56,13 @@ Cada desenvolupador començarà a treballar en una nova funcionalitat.
 A partir d'aquest moment, cada desenvolupador treballarà en el seu propi repositori,
 en la seua pròpia branca de funcionalitat de manera independent i paral·lela.
 
-!!! important
-    És important que cada desenvolupador treballe en una única branca per funcionalitat, i que una mateixa branca no es compartisca entre desenvolupadors.
-
-    Si existeix la necessitat de compartir una branca, segurament siga perquè la funcionalitat no està ben definida i podrà ser dividida en diverses funcionalitats més xicotetes.
+!!! important "És important que cada desenvolupador treballe en una única branca per funcionalitat per evitar conflictes i facilitar la integració posterior."
+    Si existeix la necessitat de compartir una branca, segurament siga perquè la tasca no està ben definida i podrà ser dividida en diverses tasques més xicotetes.
 
 #### Branca `feature/readme`
 Anna començarà a treballar en la seua funcionalitat `feature/readme` en el seu repositori local.
 
-!!! note
-    Configurem l'usuari i el correu electrònic per a cada repositori local
-    per simular que cada desenvolupador treballa en el seu propi dispositiu.
-
+!!! note "Configurem l'usuari i el correu electrònic per a cada repositori local per simular que cada desenvolupador treballa en el seu propi dispositiu."
     També es mostra el nom en el prompt.
 
 ```shellconsole

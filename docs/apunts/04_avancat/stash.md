@@ -72,9 +72,7 @@ git stash [-m <missatge>]
     - [:octicons-link-external-16: `git stash`](https://git-scm.com/docs/git-stash)
     - [:octicons-link-external-16: Capítol 7.3 Git Tools – Stashing and Cleaning](https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning) – [:simple-git: Pro Git Book](https://git-scm.com/book/en/v2)
 
-!!! tip
-    Amb l'opció `-m` podem afegir un missatge al `stash` per
-    identificar millor els canvis guardats.
+!!! tip "Amb l'opció `-m` podem afegir un missatge al `stash` per identificar millor els canvis guardats."
 
 
 Els canvis s'emmagatzemen de manera temporal a una __pila__:

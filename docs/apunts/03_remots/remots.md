@@ -205,12 +205,7 @@ git remote add <alies> <url>
 Repositori Local vinculat amb un Repositori Remot
 ///
 
-!!! warning annotate
-    Si intentes publicar amb `git push`
-    els canvis en un repositori remot
-    sense haver enllaçat el teu repositori local,
-    Git et mostrarà un missatge d'error:
-
+!!! warning annotate "Si intentes publicar els canvis amb `git push` abans d'enllaçar cap remot, Git et mostrarà un missatge d'error"
     ```shellconsole
     --8<-- "docs/files/remots/stdout/remots/no_remote.txt"
     ```
@@ -263,15 +258,13 @@ mitjançant l'ordre `git push`.
 git push [-u|--set-upstream] [<remot> [<branca>]]
 ```
 
-- `-u|--set-upstream`: Configura la branca local perquè s'associe amb la branca remota.
-- `<remot>`: Àlies del repositori remot (configurat amb `git remote add`).
-- `<branca>`: Nom de la branca remota.
+- `-u|--set-upstream`: Configura la branca local perquè utilitze el remot indicat per defecte
+    en futures operacions de `git pull` i `git push`.
+- `<remot>`: Opcional. Àlies del repositori remot. Si no s'especifica, s'utilitza el remot enllaçat prèviament amb `--set-upstream`.
+- `<branca>`: Opcional. Nom de la branca local que es desitja publicar. Si no s'especifica, s'utilitza la branca actual (`HEAD`).
 
 !!! docs "Documentació oficial de :simple-git: Git"
     [:octicons-link-external-16: `git push`](https://git-scm.com/docs/git-push)
-
-!!! important
-    Aquesta comanda funciona sobre la branca on estem situats (`HEAD`).
 
 ![Publicació d'una branca local a una branca remota](img/push.light.png#only-light)
 ![Publicació d'una branca local a una branca remota](img/push.dark.png#only-dark)
@@ -395,10 +388,7 @@ i decidir si volem incorporar-los al nostre repositori local.
 !!! docs "Documentació oficial de :simple-git: Git"
     [:octicons-link-external-16: `git fetch`](https://git-scm.com/docs/git-fetch)
 
-!!! info
-    L'opció `--prune` permet eliminar les referències de les branques remotes que ja no existeixen
-    en el repositori remot.
-
+!!! info "L'opció `--prune` permet eliminar les referències de les branques remotes que ja no existeixen en el repositori remot."
     Aquesta opció pot ser configurada per defecte amb la comanda `git config`.
 
     ```bash
@@ -495,28 +485,20 @@ git pull [<options>] [<remot> [<branca>]]
 !!! docs "Documentació oficial de :simple-git: Git"
     [:octicons-link-external-16: `git pull`](https://git-scm.com/docs/git-pull)
 
-!!! warning
-    La fusió (`merge`) implícita de `git pull` pot ser una [[branques#fusio-directa]]
-    o es pot produir una [[branques#fusio-de-branques-divergents]] si
-    la branca local i la branca remota divergeixen.
-
-    En aquest últim cas:
+!!! warning " La fusió (`merge`) implícita de `git pull` pot ser una [[branques#fusio-directa]] o es pot produir una [[branques#fusio-de-branques-divergents]] si la branca local i la branca remota divergeixen."
+    En el cas d'una fusió de branques divergents:
 
     - __Poden produir conflictes__. Si es produeixen, caldrà resoldre'ls manualment.
     - Executar directament `git pull` __generarà un commit de fusió__,
         que pot ser no és desitjable si es vol mantenir __una història lineal__.
     
-!!! tip
-    Per evitar __la fusió de branques divergents__ en `git pull`,
-    es pot fer el següent:
-
+!!! tip "Per evitar __la fusió de branques divergents__ en `git pull`, es pot fer el següent:"
     - `git pull --ff-only`: Incorpora els canvis de la branca remota
         __només si es pot fer una fusió directa (_fast-forward_)__.
 
-        En cas contrari, es produirà un error i no s'incorporaran els canvis.
+        Si no és possible, es produirà un error i no s'incorporaran els canvis a la branca local.
 
-        A més, Git pot ser configurat perquè incloga aquesta opció
-        en la comanda `git pull`.
+        A més, Git pot ser configurat perquè incloga aquesta opció en la comanda `git pull`.
 
         ```
         git config --global pull.ff only

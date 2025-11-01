@@ -420,8 +420,8 @@ Si no se n'especifica cap, s'obrirà l'editor de text configurat per defecte per
 
 !!! warning "Aquest tipus de fusió no és tan neta com la __fusió directa__ (_fast-forward_), ja que la història del projecte es torna més complexa i __no lineal__."
 
-!!! info "Per forçar que la fusió es realitze amb un __commit de fusió__ (_merge commit_), es pot utilitzar l'opció `--no-ff`."
-    Git pot ser configurat per sempre realitze una fusió amb un __commit de fusió__ (_merge commit_):
+!!! info "Per forçar que la fusió es realitze amb un __commit de fusió__, es pot utilitzar l'opció `--no-ff`."
+    També es pot configurar Git per a que sempre utilitze aquesta opció:
 
     ```bash
     git config --global merge.ff no
@@ -476,8 +476,7 @@ Per resoldre el conflicte, caldrà:
 
 Una vegada resolt el conflicte, caldrà confirmar els canvis amb `git add` i `git commit`.
 
-!!! info
-    En cas que es desitge cancel·lar el procés de fusió, es pot utilitzar l'ordre `git merge --abort`.
+!!! info "En cas que es desitge cancel·lar el procés de fusió (`MERGING`), es pot utilitzar l'ordre `git merge --abort`."
 
 ??? prep annotate "Preparació branques divergents `fruita` i `verdura`"
     1. Creem les branques `fruita` i `verdura` des de la branca `main`.
@@ -652,6 +651,8 @@ En aquest cas, caldrà resoldre els conflictes per a cada _commit_ en el que s'e
 - Continuem el procés de `rebase` amb l'ordre `git rebase --continue`.
 
 Caldrà repetir aquest procés per a cada _commit_ que tinga conflictes.
+
+!!! info "En cas que es desitge cancel·lar el procés de canvi de base (`REBASING`), es pot utilitzar l'ordre `git rebase --abort`."
 
 ??? prep annotate "Preparació branques divergents `postre` i `aperitiu`"
     1. Creem les branques `postre` i `aperitiu` des de la branca `main`.

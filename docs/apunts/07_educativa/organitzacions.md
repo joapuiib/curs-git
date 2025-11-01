@@ -50,9 +50,7 @@ del teu compte de GitHub.
 
 Quan crees una organització, et demanarà quin pla vols utilitzar.
 
-!!! important
-    En l'àmbit educatiu, podem utilitzar el pla gratuït i després sol·licitar la millora a GitHub Team a través de
-    [GitHub Global Campus](https://education.github.com/globalcampus/teacher).
+!!! important "En l'àmbit educatiu, podem utilitzar el pla gratuït i després sol·licitar la millora a GitHub Team a través de [GitHub Global Campus](https://education.github.com/globalcampus/teacher)."
 
 Després, es demanarà especificar la següent informació:
 
@@ -97,10 +95,7 @@ es poden configurar tots els paràmetres de l'organització.
 Una de les opcions més importants és la configuració
 dels permisos dels membres de l'organització a l'apartat __:material-account-multiple: Member privileges__.
 
-!!! recommend
-    En aquest apartat, es recomana configurar els permisos per defecte (_Base permissions_)
-    com a _No permission_.
-
+!!! recommend "En aquest apartat, es recomana configurar els permisos per defecte (_Base permissions_) com a _No permission_."
     D'aquesta manera, els estudiants no podran veure els repositoris privats
     d'altres companys de classe.
 
