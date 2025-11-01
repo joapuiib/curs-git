@@ -2681,8 +2681,7 @@ però últimament és preferible utilitzar el nom <code>main</code>
 per evitar la nomenclatura <strong>master/slave</strong> (amo/esclau),
 que té connotacions racistes.</p>
 <div class="admonition info">
-<p class="admonition-title">Informació</p>
-<p>S'ha canviat el nom de la branca principal de <code>master</code> a <code>main</code> per a seguir les recomanacions de la comunitat de desenvolupament.</p>
+<p class="admonition-title">S'ha canviat el nom de la branca principal de <code>master</code> a <code>main</code> per a seguir les recomanacions de la comunitat de desenvolupament.</p>
 <p>Vegeu: <a href="https://sfconservancy.org/news/2020/jun/23/gitbranchname/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span> Regarding Git and Branch Naming</a> – Software Freedom Conservancy</p>
 </div>
 <details class="prep">
@@ -2786,17 +2785,15 @@ L'ordre <code>git branch</code> mostra les branques si:</p>
 </details>
 <h3 id="crear-una-branca">Crear una branca<a class="headerlink" href="#crear-una-branca" title="Permanent link">&para;</a></h3>
 <p>Per crear una nova branca, utilitzem l'ordre:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>branch<span class="w"> </span><span class="o">[</span>-f<span class="w"> </span><span class="p">|</span><span class="w"> </span>--force<span class="o">]</span><span class="w"> </span>&lt;nom&gt;
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>branch<span class="w"> </span><span class="o">[</span>-f<span class="w"> </span><span class="p">|</span><span class="w"> </span>--force<span class="o">]</span><span class="w"> </span>&lt;nom&gt;<span class="w"> </span><span class="o">[</span>&lt;ref&gt;<span class="o">]</span>
 </span></code></pre></div></p>
 <ul>
 <li><code>[-f | --force]</code>: Opcional. Força la creació de la branca.</li>
 <li><code>&lt;nom&gt;</code>: Nom de la nova branca.</li>
+<li><code>[&lt;ref&gt;]</code>: Opcional. Referència on es crearà la nova branca. Si no s'especifica, es crearà en el <em>commit</em> actual (on es troba el <code>HEAD</code>).</li>
 </ul>
 <div class="admonition warning">
-<p class="admonition-title">Advertència</p>
-<p>Si ja existeix una branca amb el mateix nom i
-no s'utilitza l'opció <code>-f</code> o <code>--force</code>,
-l'ordre mostrarà un error i no es crearà la branca.</p>
+<p class="admonition-title">Si ja existeix una branca amb el mateix nom i no s'utilitza l'opció <code>-f</code> o <code>--force</code>, l'ordre mostrarà un error i no es crearà la branca.</p>
 </div>
 <details class="example">
 <summary>Exemple: Creació de les branques <code>menjar</code>, <code>beguda</code> i <code>neteja</code></summary>
@@ -3023,12 +3020,11 @@ per canviar el nom de la branca principal de <code>master</code> a <code>main</c
 <li><code>[-D]</code>: Opcional. Abreviatura de <code>--delete --force</code>.</li>
 </ul>
 <div class="admonition warning">
-<p class="admonition-title">Advertència</p>
+<p class="admonition-title">L'eliminació d'una branca pot provocar la pèrdua de commits.</p>
 <p>Quan un <em>commit</em> perd totes les referències per a ser accedit,
 es diu que és un <em>commit</em> <strong>orfe</strong> i serà eliminat pel
 <strong>recol·lector de brossa</strong> (<em>garbage collector</em>) de Git.</p>
-<p>L'eliminació d'una branca pot provocar la pèrdua de commits.
-En aquest cas, Git mostrarà un error i no es podrà eliminar la branca
+<p>En aquest cas, Git mostrarà un error i no es podrà eliminar la branca
 a no ser que s'utilitze l'opció <code>-D</code> o <code>--delete --force</code>.</p>
 </div>
 <details class="example annotate">
@@ -3078,9 +3074,7 @@ a una altra.</p>
 <li><code>&lt;branca&gt;</code>: Nom de la branca que es vol fusionar amb la <strong>branca actual</strong>.</li>
 </ul>
 <div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>La <strong>fusió de branques</strong> sempre incorpora els canvis de la branca
-indicada sobre la <strong>branca actual</strong> (on es troba el <code>HEAD</code>).</p>
+<p class="admonition-title">La <strong>fusió de branques</strong> sempre incorpora els canvis de la branca indicada sobre la <strong>branca actual</strong> (on es troba el <code>HEAD</code>).</p>
 </div>
 <div class="admonition docs">
 <p class="admonition-title">Documentació oficial de <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.546 10.93 13.067.452a1.55 1.55 0 0 0-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 0 1 2.327 2.341l2.658 2.66a1.838 1.838 0 0 1 1.9 3.039 1.837 1.837 0 0 1-2.6 0 1.85 1.85 0 0 1-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348a1.85 1.85 0 0 1 0 2.6 1.844 1.844 0 0 1-2.609 0 1.834 1.834 0 0 1 0-2.598c.182-.18.387-.316.605-.406V8.835a1.834 1.834 0 0 1-.996-2.41L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477a1.545 1.545 0 0 0 2.186 0l10.43-10.43a1.544 1.544 0 0 0 0-2.187"/></svg></span> Git</p>
@@ -3113,17 +3107,11 @@ fins on es troba la branca que es vol fusionar.</p>
 </figcaption>
 </figure>
 <div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>La <strong>fusió directa</strong> és la forma més senzilla i neta de fusionar branques,
-ja que no es crea cap <em>commit</em> addicional per fusionar les branques i
-manté una <strong>història lineal</strong> i fàcil de seguir.</p>
+<p class="admonition-title">La <strong>fusió directa</strong> és la forma més senzilla i neta de fusionar branques, ja que no es crea cap <em>commit</em> addicional per fusionar les branques i manté una <strong>història lineal</strong> i fàcil de seguir.</p>
 </div>
 <div class="admonition info">
-<p class="admonition-title">Informació</p>
-<p>Per assegurar-se que la fusió siga directa, es pot utilitzar l'opció <code>--ff-only</code></p>
-<ul>
-<li>En cas que la fusió no siga directa, Git mostrarà un error i no es realitzarà la fusió.</li>
-</ul>
+<p class="admonition-title">Per assegurar-se que la fusió siga directa, es pot utilitzar l'opció <code>--ff-only</code></p>
+<p>En cas que la fusió no siga directa, Git mostrarà un error i no es realitzarà la fusió.</p>
 <p>Git pot ser configurat per sempre tractar de realitzar una fusió directa:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>merge.ff<span class="w"> </span>only
 </span></code></pre></div>
@@ -3195,15 +3183,11 @@ Git crearà un nou <em>commit</em> de fusió que incorporarà els canvis de les 
 Si no se n'especifica cap, s'obrirà l'editor de text configurat per defecte per a afegir el missatge.
 (Vegeu <a href="../../01_introduccio/introduccio/#confirmar-canvis-git-commit">Confirmar canvis (git commit)</a>)</p>
 <div class="admonition warning">
-<p class="admonition-title">Advertència</p>
-<p>Aquest tipus de fusió no és tan neta com la <strong>fusió directa</strong> (<em>fast-forward</em>),
-ja que la història del projecte es torna més complexa i <strong>no lineal</strong>.</p>
+<p class="admonition-title">Aquest tipus de fusió no és tan neta com la <strong>fusió directa</strong> (<em>fast-forward</em>), ja que la història del projecte es torna més complexa i <strong>no lineal</strong>.</p>
 </div>
 <div class="admonition info">
-<p class="admonition-title">Informació</p>
-<p>Per forçar que la fusió es realitze amb un <strong>commit de fusió</strong> (<em>merge commit</em>),
-es pot utilitzar l'opció <code>--no-ff</code>.</p>
-<p>Git pot ser configurat per sempre realitze una fusió amb un <strong>commit de fusió</strong> (<em>merge commit</em>):</p>
+<p class="admonition-title">Per forçar que la fusió es realitze amb un <strong>commit de fusió</strong>, es pot utilitzar l'opció <code>--no-ff</code>.</p>
+<p>També es pot configurar Git per a que sempre utilitze aquesta opció:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>merge.ff<span class="w"> </span>no
 </span></code></pre></div>
 </div>
@@ -3277,8 +3261,7 @@ fusió en curs.</p>
 </ol>
 <p>Una vegada resolt el conflicte, caldrà confirmar els canvis amb <code>git add</code> i <code>git commit</code>.</p>
 <div class="admonition info">
-<p class="admonition-title">Informació</p>
-<p>En cas que es desitge cancel·lar el procés de fusió, es pot utilitzar l'ordre <code>git merge --abort</code>.</p>
+<p class="admonition-title">En cas que es desitge cancel·lar el procés de fusió (<code>MERGING</code>), es pot utilitzar l'ordre <code>git merge --abort</code>.</p>
 </div>
 <details class="prep annotate">
 <summary>Preparació branques divergents <code>fruita</code> i <code>verdura</code></summary>
@@ -3517,8 +3500,7 @@ per tant, quan les fusionem, es produirà un conflicte.</p>
 <p>El <strong>canvi de base</strong> una altra manera d'actualitzar canvis entre dues branques <strong>divergents</strong>,
 que consisteix en aplicar els canvis dels <em>commits</em> d'una branca sobre una altra branca, en ordre cronològic.</p>
 <div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Aquesta tècnica permet eliminar les branques divergents i mantindre una <strong>història lineal</strong>.</p>
+<p class="admonition-title">Aquesta tècnica permet incorporar canvis entre branques divergents mantenint una <strong>història lineal</strong>.</p>
 </div>
 <p>Aquest procés es realitza amb l'ordre <code>git rebase</code>, amb la següent sintaxi:
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>git<span class="w"> </span>rebase<span class="w"> </span>&lt;nova_base&gt;<span class="w"> </span><span class="o">[</span>&lt;branca&gt;<span class="o">]</span>
@@ -3681,6 +3663,9 @@ d'una manera similar a <a href="#resolucio-de-conflictes"><strong>la resolució 
 <li>Continuem el procés de <code>rebase</code> amb l'ordre <code>git rebase --continue</code>.</li>
 </ul>
 <p>Caldrà repetir aquest procés per a cada <em>commit</em> que tinga conflictes.</p>
+<div class="admonition info">
+<p class="admonition-title">En cas que es desitge cancel·lar el procés de canvi de base (<code>REBASING</code>), es pot utilitzar l'ordre <code>git rebase --abort</code>.</p>
+</div>
 <details class="prep annotate">
 <summary>Preparació branques divergents <code>postre</code> i <code>aperitiu</code></summary>
 <ol class="fancylists-decimal" type="1">
@@ -3991,7 +3976,7 @@ es produiran conflictes.</p>
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="27 de maig del 2025 17:51:26 UTC">27 de maig del 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="1 de novembre del 2025 19:14:03 UTC">1 de novembre del 2025</span>
   </span>
 
     
