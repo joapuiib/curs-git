@@ -106,7 +106,7 @@ en el teu repositori local amb la informació corresponent.
 
 !!! info "Edita els camps entre `[...]` amb la informació corresponent."
 
-!!! important "Els documents han de ser consistents i han de mesclar text en diferents llengües."
+!!! important "Els documents han de ser consistents i no han de mesclar text en diferents llengües."
     Adapta els títols de les seccions si és necessari.
 
 3. Publica la branca amb els canvis realitzats al teu repositori.
