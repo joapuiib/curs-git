@@ -1,5 +1,5 @@
 ---
-title: "Bloc 7: GitHub com a plataforma educativa"
+title: "Bloc 8: GitHub com a plataforma educativa"
 alias: educativa-index
 hide:
   - toc

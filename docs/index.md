@@ -77,6 +77,7 @@ per a la gestió de projectes i com en podem fer ús en l'àmbit educatiu.
     - GitHub Projects.
     - Forks
     - Pull Requests.
+- __[[cicd-index]]__
     - Automatització de tasques amb GitHub Actions.
     - GitHub Pages.
 - __[[educativa-index]]__
