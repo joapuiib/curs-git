@@ -19,6 +19,11 @@ __Desplegament Continu__ (_Continuous Deployment_ o CD) és una pràctica
 que permet als equips de desenvolupament integrar els canvis en el codi
 de manera regular i distribuir-los de manera automàtica.
 
+Aquesta pràctica és esencial en el desenvolupament modern de software,
+ja que accelera el procés de lliurament de noves funcionalitats,
+redueix el temps de parada i millora la qualitat del projecte mitjançant
+__l'automatització__ de tasques repetitives, sense necessitat d'intervenció manual.
+
 Les tasques més comunes que es poden automatitzar són:
 
 - __Compilació i empaquetatge de l'aplicació__
@@ -26,6 +31,50 @@ Les tasques més comunes que es poden automatitzar són:
 - __Anàlisi de la qualitat del codi__: _linters_, anàlisi estàtica, etc.
 - __Desplegament de l'aplicació__ i gestió de llançaments
 - __Generació i publicació de documentació__
+
+
+### Què és la integració contínua (CI)?
+La __Integració Contínua__ (_Continuous Integration_ o CI) consisteix en integrar
+de manera contínua i freqüent els canvis a la branca principal del projecte,
+provant de manera automàtica cada canvi quan s'integra al repositori.
+
+Això permet detectar i solucionar errors o vulnerabilitats de manera més senzilla
+i ràpida, ja que els canvis són més xicotets i fàcils de revisar.
+
+A més, la integració contínua facilita la col·laboració entre els membres de l'equip,
+ja que minimitza la possibilitat de conflictes entre diferents branques encara que
+es treballa de manera paral·lela.
+
+Un flux de treball típic de CI inclou els següents passos:
+
+- __Ànalisi estàtica del codi__, que verifique la qualitat del codi font
+    i assegure que compleix amb els estàndards establerts.
+
+- __Compilació del projecte i execució de proves automatitzades__,
+    que assegure que el projecte es pot compilar correctament
+    i que les funcionalitats implementades funcionen com s'espera.
+
+
+### Què és el desplegament continu (CD)?
+El __Desplegament Continu__ (_Continuous Deployment_ o CD) és el procés
+d'automatitzar les tasques necessàries per desplegar una aplicació.
+El CD pot incloure des de preparar la infraestructura fins a desplegar
+l'aplicació a un entorn de proves o producció.
+
+Un flux de treball típic de CD inclou els següents passos:
+
+- __Desplegament automàtic a un entorn de proves__,
+    on es poden realitzar proves addicionals i validacions.
+
+- __Desplegament automàtic a l'entorn de producció__,
+    que permet lliurar noves funcionalitats als usuaris de manera ràpida
+    i segura.
+
+
+### Fluxos de treball
+Els **fluxos de treball a CI/CD** o, també coneguts com a **CI/CD _pipelines_**,
+
+
 
 ## :octicons-play-24: GitHub Actions
 
@@ -36,9 +85,7 @@ aquestes tasques dins del flux de treball de desenvolupament de software.
 Aquestes tasques poden ser automatitzades a l'apartat __:material-arrow-right-drop-circle-outline: Actions__
 en un repositori de GitHub
 
-!!! important
-    Cada projecte té unes necessitats pròpies i, per tant,
-    caldrà adaptar els processos de la naturalesa del projecte.
+!!! important "Cada projecte té unes necessitats pròpies i, per tant, caldrà adaptar els processos de la naturalesa del projecte."
 
 
 ### Configuració d'una automatització
@@ -171,3 +218,6 @@ GitHub Pages pot ser configurat per publicar-se de dues maneres diferents:
 [^1]: Un lloc web estàtic és un lloc web que no requereix d'un servidor web
     per generar les pàgines HTML, sinó que les pàgines ja estan generades
     i són servides directament.
+
+## Bibliografia
+- [:octicons-link-external-16: What is CI/CD](https://about.gitlab.com/topics/ci-cd/) – :simple-gitlab: GitLab
