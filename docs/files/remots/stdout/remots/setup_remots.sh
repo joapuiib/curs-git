@@ -10,7 +10,7 @@ cd ~/git_remots
 git init
 git branch -m main # (1)!
 echo "# Remots a Git" > README.md
-echo "Repositori del __Bloc: Remots__ del curs __\"Introducció a Git i la seua aplicació a l’aula\"__" >> README.md
+echo "Repositori del __Bloc: Remots__ del curs __\"Introducció a Git i GitHub Actions\"__" >> README.md
 git add README.md
 git commit -m "Commit inicial"
 git lga

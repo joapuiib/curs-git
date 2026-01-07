@@ -136,7 +136,7 @@ En aquesta secció, crearem un repositori remot a GitHub.
     Creem un repositori amb les següents característiques:
 
     - __Nom__: `git_remots`
-    - __Descripció__: Repositori del Bloc: Remots del curs "Introducció a Git i la seua aplicació a l’aula"
+    - __Descripció__: Repositori del Bloc: Remots del curs "Introducció a Git i GitHub Actions"
     - __Visibilitat__: Públic
     - __README__: No
     - __.gitignore__: No
