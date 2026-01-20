@@ -72,30 +72,47 @@ Un flux de treball típic de CD inclou els següents passos:
 
 
 ### Fluxos de treball
-Els **fluxos de treball a CI/CD** o, també coneguts com a **CI/CD _pipelines_**,
+Els **fluxos de treball a CI/CD** o, també coneguts com a **CI/CD _pipelines_**, són
+processos automatitzats que s'encarreguen de la compilació, la prova i el desplegament
+de les aplicacions.
+Es componen de diferents tasques que s'executaran automàticament sense necessitat d'intervenció
+humana.
 
+![Exemple d'un flux de treball](img/cicd/pipeline.png)
+/// attribution: https://katalon.com/
+/// figure-caption: Exemple d'un flux de treball
+
+
+Pot ser que cadascuna d'aquestes tasques necessiten portar a terme múltiples accions, que podran ser configurades
+en l'entorn que s'utilitze.
+
+
+### Entorns i eines de CI/CD
+!!! warning "TODO"
 
 
 ## :octicons-play-24: GitHub Actions
 
 [__:octicons-play-24: GitHub Actions__](https://github.com/features/actions)
-és una funcionalitat de :simple-github: GitHub que permet automatitzar
-aquestes tasques dins del flux de treball de desenvolupament de software.
+és una funcionalitat de :simple-github: GitHub que permet crear
+fluxos de treball sobre un repositori.
 
-Aquestes tasques poden ser automatitzades a l'apartat __:material-arrow-right-drop-circle-outline: Actions__
-en un repositori de GitHub
+Es gestionen des de l'apartat __:material-arrow-right-drop-circle-outline: Actions__ del repositori.
 
 !!! important "Cada projecte té unes necessitats pròpies i, per tant, caldrà adaptar els processos de la naturalesa del projecte."
 
+!!! example "Exemples d'automatitzacions a aquest repositori"
+    Aquest repositori està configurat amb [dues tasques d'automatització](https://github.com/joapuiib/curs-git/tree/main/.github/workflows).
 
-### Configuració d'una automatització
+    Podeu consultar les execucions d'aquestes tasques en l'apartat
+    [__:material-arrow-right-drop-circle-outline: Actions__ del repositori](https://github.com/joapuiib/curs-git/actions).
 
+
+### Configuració d'un flux de treball
 Les tasques d'automatització es defineixen en fitxers de configuració `YAML`,
 que s'han de situar dins del directori `.github/workflows/`.
 
-!!! docs
-    [:octicons-link-external-16: Quickstart for GitHub Actions](https://docs.github.com/en/actions/writing-workflows/quickstart) – :simple-github: GitHub Docs
-    { .spell-ignore }
+!!! docs "[:octicons-link-external-16: Quickstart for GitHub Actions](https://docs.github.com/en/actions/writing-workflows/quickstart) – :simple-github: GitHub Docs"
 
 La configuració bàsica d'una tasca d'automatització es fa amb els següents camps:
 
@@ -107,7 +124,7 @@ La configuració bàsica d'una tasca d'automatització es fa amb els següents c
 Cada tasca té les següents seccions:
 
 - `runs-on`: Tipus de màquina on s'executarà la tasca.
-- `if`: [Condició][if] que ha de complir-se per a executar la tasca.
+- `if`: (_Opcional_) [Condició][if] que ha de complir-se per a executar la tasca.
 - `steps`: Llista de passos a executar.
     
     Cada pas ha de ser una comanda de shell (`run`) o una acció de GitHub predefinida (`uses`).
@@ -116,51 +133,37 @@ Cada tasca té les següents seccions:
     - `run`: Comanda de shell que s'executarà.
     - `uses`: [Acció de GitHub predefinida][uses] que s'executarà.
 
-        Cada acció pot tenir els seus propis paràmetres de configuració.
+        Cada acció pot tenir els seus propis paràmetres de configuració, que s'estableixen dins de la
+        secció `with`.
 
 [events]: https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/using-conditions-to-control-job-execution
 [if]: https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/using-conditions-to-control-job-execution
 [uses]: https://github.com/marketplace?type=actions
 
-??? example "Exemples d'automatitzacions a aquest repositori"
-    Aquest repositori està configurat amb [dues tasques d'automatització](https://github.com/joapuiib/curs-git/tree/main/.github/workflows).
-
-    Podeu consultar les execucions d'aquestes tasques en l'apartat
-    [__:material-arrow-right-drop-circle-outline: Actions__ del repositori](https://github.com/joapuiib/curs-git/actions).
-
-    === "Publicació del lloc web"
-        ```yaml title=".github/workflows/deploy.yml"
-        --8<-- ".github/workflows/deploy.yml"
-        ```
-
-    === "Correcció ortogràfica"
-        ```yaml title=".github/workflows/spellcheck.yml"
-        --8<-- ".github/workflows/spellcheck.yml"
-        ```
-
-??? example "Altres exemples"
-    - [:octicons-link-external-16: Execució de tests unitaris i integració en un projecte Java amb Maven](https://joapuiib.github.io/daw-ed/apunts/09_cicd/apunts/maven-proves/#automatitzacio-de-lexecucio-de-les-proves)
-    - [:octicons-link-external-16: Publicació d'un paquet de Python a PyPI](https://github.com/joapuiib/mkdocs-data-plugin/blob/main/.github/workflows/publish-to-pypi.yml)
 
 ### Execució d'una automatització
 Les tasques d'automatització s'executen automàticament
 quan es compleixen les condicions definides en la secció `on`
 de la configuració.
 
-No obstant, podem configurar una tasca perquè es puga executar manualment.
-Hem de definir un esdeveniment `workflow_dispatch` en la secció `on` de la configuració
-que permet llançar la tasca des de l'apartat __:material-arrow-right-drop-circle-outline: Actions__
-del repositori.
+A més, és possible configurar una tasca perquè es puga executar manualment si s'especifica
+`workflow_dispatch` en la secció `on` de la configuració.
 
 ```yaml
 on:
   workflow_dispatch:
 ```
 
-A més, si necessitem provar una tasca d'automatització localment
-sense haver de publicar canvis en el codi,
-podem executar-la el nostre entorn de desenvolupament
-amb l'eina [__`act`__](https://nektosact.com/).
+Això permet llançar l'automatització des de l'apartat __:material-arrow-right-drop-circle-outline: Actions__
+del repositori.
+
+![Execució manual d'una automatització](workflow-dispatch.png)
+/// figure-caption: Execució manual d'una automatització des de :material-arrow-right-drop-circle-outline: Actions.
+
+
+En cas de necessitar provar una tasca d'automatització localment
+sense haver de publicar canvis al repositori,
+es pot fer ús d'eines com [__`act`__](https://nektosact.com/).
 
 ```bash
 act -W '.github/workflows/checks.yml'
@@ -171,16 +174,53 @@ per simular l'entorn d'execució semblant a l'entorn de GitHub Actions,
 que permet provar les tasques sense haver de publicar els canvis al repositori remot.
 
 
+## Exemples de fluxos de treball
+Per veure com combinar totes aquestes opcions, anem a veure diferents exemples
+d'automatitzacions en projectes de naturalesa distinta.
+
+### Publicació d'un lloc web estàtic generat amb MkDocs a GitHub Pages
+La següent automatització permet __generar aquest lloc web__ amb el [generador de webs estàtiques MkDocs][mkdocs]
+i __publicar-lo__ a [:octicons-browser-24: GitHub Pages][pages].
+
+Aquesta acció s'executa sempre que es publiquen nous canvis sobre la branca `main`.
+
+Els passos que la componen són els següents:
+
+- Còpia el repositori a l'entorn d'execucio amb l'acció predefinida [`actions/checkout@v4`][actions-checkout].
+- Canvia les credencials de git perquè els commits estiguen associats a un bot de GitHub.
+- Configura l'entorn per poder utilitzar Python 3.
+- Instal·la les dependències de Python.
+- Genera i publica el lloc web amb l'ordre [`mkdocs gh-deploy`][gh-deploy]
+
+[mkdocs]: https://www.mkdocs.org/
+[gh-deploy]: https://www.mkdocs.org/user-guide/cli/#mkdocs-gh-deploy
+[actions-checkout]: https://github.com/marketplace/actions/checkout
+
+```yaml title=".github/workflows/deploy.yml"
+--8<-- ".github/workflows/deploy.yml"
+```
+
+### Prova de correcció ortogràfica
+```yaml title=".github/workflows/spellcheck.yml"
+--8<-- ".github/workflows/spellcheck.yml"
+```
+
+### Execució de proves unitàries i d'integració en un projecte Java amb Maven
+- [:octicons-link-external-16: Execució de tests unitaris i integració en un projecte Java amb Maven](https://joapuiib.github.io/daw-ed/apunts/09_cicd/apunts/maven-proves/#automatitzacio-de-lexecucio-de-les-proves)
+
+### Desplegament d'un projecte Java a AWS
+
+### Publicació d'un paquet de Python a PypI
+- [:octicons-link-external-16: Publicació d'un paquet de Python a PyPI](https://github.com/joapuiib/mkdocs-data-plugin/blob/main/.github/workflows/publish-to-pypi.yml)
+
 ## :octicons-browser-24: GitHub Pages
 __[:octicons-browser-24: GitHub Pages][pages]__ és un servei de GitHub que permet publicar llocs web
 estàtics[^1] directament des d'un repositori de GitHub.
 
 [pages]: https://pages.github.com/
 
-!!! note
-    En comptes de :simple-github: GitHub gratuïts, es permet configurar
-    GitHub Pages en repositoris públics. En canvi,
-    en els repositoris privats, [es requereix d'un compte de pagament](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)
+!!! note "En comptes de :simple-github: GitHub gratuïts, es permet configurar GitHub Pages en repositoris públics."
+    En canvi, en els repositoris privats, [es requereix d'un compte de pagament](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages).
 
     No obstant això, GitHub proporciona llicències gratuïtes per a estudiants i professors
     des de [:fontawesome-solid-graduation-cap: GitHub Education](https://education.github.com/).
@@ -191,8 +231,7 @@ Aquest servei és útil per a publicar:
 - Portafolis personals o de projectes.
 - Llocs web estàtics generats per eines com [:simple-jekyll: Jekyll](https://jekyllrb.com/) o [MkDocs](https://www.mkdocs.org/).
     
-!!! success "Exemple"
-    Aquest lloc web està publicat amb __:octicons-browser-24: GitHub Pages__.
+!!! success "Per exemple, aquest lloc web està publicat amb __:octicons-browser-24: GitHub Pages__."
     
 
 

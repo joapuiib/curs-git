@@ -124,6 +124,7 @@ markdown_extensions:
   - attr_list
   - def_list
   - footnotes
+  - inline_blocks
   - markdown_grid_tables
   - md_in_html
   - sane_lists
