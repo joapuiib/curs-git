@@ -95,17 +95,10 @@ en l'entorn que s'utilitze.
 
 [__:octicons-play-24: GitHub Actions__](https://github.com/features/actions)
 és una funcionalitat de :simple-github: GitHub que permet crear
-fluxos de treball sobre un repositori.
+fluxos de treball sobre un repositori. Es gestionen des de l'apartat __:material-arrow-right-drop-circle-outline: Actions__,
+on es poden consultar les tasques d'automatització configurades i les execucions d'aquestes.
 
-Es gestionen des de l'apartat __:material-arrow-right-drop-circle-outline: Actions__ del repositori.
-
-!!! important "Cada projecte té unes necessitats pròpies i, per tant, caldrà adaptar els processos de la naturalesa del projecte."
-
-!!! example "Exemples d'automatitzacions a aquest repositori"
-    Aquest repositori està configurat amb [dues tasques d'automatització](https://github.com/joapuiib/curs-git/tree/main/.github/workflows).
-
-    Podeu consultar les execucions d'aquestes tasques en l'apartat
-    [__:material-arrow-right-drop-circle-outline: Actions__ del repositori](https://github.com/joapuiib/curs-git/actions).
+!!! important "Cada projecte té unes característiques i necessitats pròpies i, per tant, caldrà adaptar els processos de la naturalesa del projecte."
 
 
 ### Configuració d'un flux de treball
@@ -113,6 +106,34 @@ Les tasques d'automatització es defineixen en fitxers de configuració `YAML`,
 que s'han de situar dins del directori `.github/workflows/`.
 
 !!! docs "[:octicons-link-external-16: Quickstart for GitHub Actions](https://docs.github.com/en/actions/writing-workflows/quickstart) – :simple-github: GitHub Docs"
+
+!!! example "Repositori d'exemple: [:octicons-link-external-16: `exemple-actions`](https://github.com/cursgit/exemple-actions)"
+
+{% raw %}
+```yaml title=".github/workflows/demo.yml"
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v5
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+```
+{% endraw %}
+/// attribution: :simple-github: GitHub Docs
 
 La configuració bàsica d'una tasca d'automatització es fa amb els següents camps:
 
@@ -136,7 +157,7 @@ Cada tasca té les següents seccions:
         Cada acció pot tenir els seus propis paràmetres de configuració, que s'estableixen dins de la
         secció `with`.
 
-[events]: https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/using-conditions-to-control-job-execution
+[events]: https://docs.github.com/es/actions/reference/workflows-and-actions/events-that-trigger-workflows
 [if]: https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/using-conditions-to-control-job-execution
 [uses]: https://github.com/marketplace?type=actions
 
@@ -157,61 +178,71 @@ on:
 Això permet llançar l'automatització des de l'apartat __:material-arrow-right-drop-circle-outline: Actions__
 del repositori.
 
-![Execució manual d'una automatització](workflow-dispatch.png)
-/// figure-caption: Execució manual d'una automatització des de :material-arrow-right-drop-circle-outline: Actions.
+![Execució manual d'una automatització](img/cicd/workflow-dispatch.png)
+/// figure-caption
+    attrs: {class: "shadow"}
+Execució manual d'una automatització des de :material-arrow-right-drop-circle-outline: Actions.
+///
 
 
 En cas de necessitar provar una tasca d'automatització localment
 sense haver de publicar canvis al repositori,
 es pot fer ús d'eines com [__`act`__](https://nektosact.com/).
 
-```bash
-act -W '.github/workflows/checks.yml'
-```
-
 Aquesta eina utilitza [__:simple-docker: Docker__](https://www.docker.com/)
 per simular l'entorn d'execució semblant a l'entorn de GitHub Actions,
 que permet provar les tasques sense haver de publicar els canvis al repositori remot.
 
-
-## Exemples de fluxos de treball
-Per veure com combinar totes aquestes opcions, anem a veure diferents exemples
-d'automatitzacions en projectes de naturalesa distinta.
-
-### Publicació d'un lloc web estàtic generat amb MkDocs a GitHub Pages
-La següent automatització permet __generar aquest lloc web__ amb el [generador de webs estàtiques MkDocs][mkdocs]
-i __publicar-lo__ a [:octicons-browser-24: GitHub Pages][pages].
-
-Aquesta acció s'executa sempre que es publiquen nous canvis sobre la branca `main`.
-
-Els passos que la componen són els següents:
-
-- Còpia el repositori a l'entorn d'execucio amb l'acció predefinida [`actions/checkout@v4`][actions-checkout].
-- Canvia les credencials de git perquè els commits estiguen associats a un bot de GitHub.
-- Configura l'entorn per poder utilitzar Python 3.
-- Instal·la les dependències de Python.
-- Genera i publica el lloc web amb l'ordre [`mkdocs gh-deploy`][gh-deploy]
-
-[mkdocs]: https://www.mkdocs.org/
-[gh-deploy]: https://www.mkdocs.org/user-guide/cli/#mkdocs-gh-deploy
-[actions-checkout]: https://github.com/marketplace/actions/checkout
-
-```yaml title=".github/workflows/deploy.yml"
---8<-- ".github/workflows/deploy.yml"
+```shellconsole
+jpuigcerver@fp:~/exemple-actions (main) $ act
+INFO[0000] Using docker host 'unix:///var/run/docker.sock', and daemon socket 'unix:///var/run/docker.sock' 
+[GitHub Actions Demo/Explore-GitHub-Actions] ⭐ Run Set up job
+[GitHub Actions Demo/Explore-GitHub-Actions] 🚀  Start image=catthehacker/ubuntu:act-latest
+[GitHub Actions Demo/Explore-GitHub-Actions]   🐳  docker pull image=catthehacker/ubuntu:act-latest platform= username= forcePull=true
+[GitHub Actions Demo/Explore-GitHub-Actions]   🐳  docker create image=catthehacker/ubuntu:act-latest platform= entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[GitHub Actions Demo/Explore-GitHub-Actions]   🐳  docker run image=catthehacker/ubuntu:act-latest platform= entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[GitHub Actions Demo/Explore-GitHub-Actions]   🐳  docker exec cmd=[node --no-warnings -e console.log(process.execPath)] user= workdir=
+[GitHub Actions Demo/Explore-GitHub-Actions]   ✅  Success - Set up job
+[GitHub Actions Demo/Explore-GitHub-Actions] ⭐ Run Main echo "🎉 The job was automatically triggered by a push event."
+[GitHub Actions Demo/Explore-GitHub-Actions]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/0] user= workdir=
+| 🎉 The job was automatically triggered by a push event.
+[GitHub Actions Demo/Explore-GitHub-Actions]   ✅  Success - Main echo "🎉 The job was automatically triggered by a push event." [68.068069ms]
+[GitHub Actions Demo/Explore-GitHub-Actions] ⭐ Run Main echo "🐧 This job is now running on a Linux server hosted by GitHub!"
+[GitHub Actions Demo/Explore-GitHub-Actions]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/1] user= workdir=
+| 🐧 This job is now running on a Linux server hosted by GitHub!
+[GitHub Actions Demo/Explore-GitHub-Actions]   ✅  Success - Main echo "🐧 This job is now running on a Linux server hosted by GitHub!" [66.309582ms]
+[GitHub Actions Demo/Explore-GitHub-Actions] ⭐ Run Main echo "🔎 The name of your branch is refs/heads/main and your repository is cursgit/exemple-actions."
+[GitHub Actions Demo/Explore-GitHub-Actions]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/2] user= workdir=
+| 🔎 The name of your branch is refs/heads/main and your repository is cursgit/exemple-actions.
+[GitHub Actions Demo/Explore-GitHub-Actions]   ✅  Success - Main echo "🔎 The name of your branch is refs/heads/main and your repository is cursgit/exemple-actions." [65.540094ms]
+[GitHub Actions Demo/Explore-GitHub-Actions] ⭐ Run Main Check out repository code
+[GitHub Actions Demo/Explore-GitHub-Actions]   🐳  docker cp src=/home/jpuigcerver/exemple-actions/. dst=/home/jpuigcerver/exemple-actions
+[GitHub Actions Demo/Explore-GitHub-Actions]   ✅  Success - Main Check out repository code [15.128121ms]
+[GitHub Actions Demo/Explore-GitHub-Actions] ⭐ Run Main echo "💡 The cursgit/exemple-actions repository has been cloned to the runner."
+[GitHub Actions Demo/Explore-GitHub-Actions]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/4] user= workdir=
+| 💡 The cursgit/exemple-actions repository has been cloned to the runner.
+[GitHub Actions Demo/Explore-GitHub-Actions]   ✅  Success - Main echo "💡 The cursgit/exemple-actions repository has been cloned to the runner." [65.674574ms]
+[GitHub Actions Demo/Explore-GitHub-Actions] ⭐ Run Main echo "🖥 The workflow is now ready to test your code on the runner."
+[GitHub Actions Demo/Explore-GitHub-Actions]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/5] user= workdir=
+| 🖥 The workflow is now ready to test your code on the runner.
+[GitHub Actions Demo/Explore-GitHub-Actions]   ✅  Success - Main echo "🖥 The workflow is now ready to test your code on the runner." [75.593933ms]
+[GitHub Actions Demo/Explore-GitHub-Actions] ⭐ Run Main List files in the repository
+[GitHub Actions Demo/Explore-GitHub-Actions]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/6] user= workdir=
+| README.md
+[GitHub Actions Demo/Explore-GitHub-Actions]   ✅  Success - Main List files in the repository [85.435409ms]
+[GitHub Actions Demo/Explore-GitHub-Actions] ⭐ Run Main echo "🍏 This job's status is success."
+[GitHub Actions Demo/Explore-GitHub-Actions]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/7] user= workdir=
+| 🍏 This job's status is success.
+[GitHub Actions Demo/Explore-GitHub-Actions]   ✅  Success - Main echo "🍏 This job's status is success." [67.346446ms]
+[GitHub Actions Demo/Explore-GitHub-Actions] ⭐ Run Complete job
+[GitHub Actions Demo/Explore-GitHub-Actions] Cleaning up container for job Explore-GitHub-Actions
+[GitHub Actions Demo/Explore-GitHub-Actions]   ✅  Success - Complete job
+[GitHub Actions Demo/Explore-GitHub-Actions] 🏁  Job succeeded
 ```
 
-### Prova de correcció ortogràfica
-```yaml title=".github/workflows/spellcheck.yml"
---8<-- ".github/workflows/spellcheck.yml"
-```
 
-### Execució de proves unitàries i d'integració en un projecte Java amb Maven
-- [:octicons-link-external-16: Execució de tests unitaris i integració en un projecte Java amb Maven](https://joapuiib.github.io/daw-ed/apunts/09_cicd/apunts/maven-proves/#automatitzacio-de-lexecucio-de-les-proves)
-
-### Desplegament d'un projecte Java a AWS
-
-### Publicació d'un paquet de Python a PypI
-- [:octicons-link-external-16: Publicació d'un paquet de Python a PyPI](https://github.com/joapuiib/mkdocs-data-plugin/blob/main/.github/workflows/publish-to-pypi.yml)
+### Secrets
+!!! warning "TODO"
 
 ## :octicons-browser-24: GitHub Pages
 __[:octicons-browser-24: GitHub Pages][pages]__ és un servei de GitHub que permet publicar llocs web
@@ -219,7 +250,7 @@ estàtics[^1] directament des d'un repositori de GitHub.
 
 [pages]: https://pages.github.com/
 
-!!! note "En comptes de :simple-github: GitHub gratuïts, es permet configurar GitHub Pages en repositoris públics."
+!!! info "En comptes de :simple-github: GitHub gratuïts, es permet configurar GitHub Pages en repositoris públics."
     En canvi, en els repositoris privats, [es requereix d'un compte de pagament](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages).
 
     No obstant això, GitHub proporciona llicències gratuïtes per a estudiants i professors
@@ -239,8 +270,9 @@ Aquest servei és útil per a publicar:
 GitHub Pages pot ser habilitat i configurat en la secció __:octicons-gear-24: Settings__ del repositori,
 dins de l'apartat __:octicons-browser-24: Pages__.
 
-![Configuració de GitHub Pages](./img/actions/pages.png)
-/// shadow-figure-caption
+![Configuració de GitHub Pages](./img/cicd/github-pages.png)
+/// figure-caption
+    attrs: {class: "shadow"}
 Configuració de GitHub Pages en aquest repositori
 ///
 
