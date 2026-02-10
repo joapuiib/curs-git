@@ -100,6 +100,8 @@ on es poden consultar les tasques d'automatització configurades i les execucion
 
 !!! important "Cada projecte té unes característiques i necessitats pròpies i, per tant, caldrà adaptar els processos de la naturalesa del projecte."
 
+!!! example "Consulteu els [[actions-exemples]]"
+
 
 ### Configuració d'un flux de treball
 Les tasques d'automatització es defineixen en fitxers de configuració `YAML`,
@@ -278,13 +280,17 @@ Configuració de GitHub Pages en aquest repositori
 
 GitHub Pages pot ser configurat per publicar-se de dues maneres diferents:
 
-- Mitjançant una __automatització__: Amb una procés que genera
-    i publica el lloc web estàtic.
+- :octicons-thumbsup-16:{ .text-success title="Opció recomanada" } Mitjançant una __automatització__:
+    Un flux de treball que construeix, carrega i desplega els continguts del lloc web.
 
-- A partir del contingut d'una branca i directori concrets del repositori.
+- A partir del __contingut d'una branca__ i directori concrets del repositori.
 
     Es pot triar qualsevol branca, però sols els directoris `/` (arrel del repositori)
     o `/docs`.
+
+!!! docs "Documentació"
+    - [:octicons-link-external-16: Publishing from a branch - Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch) - :simple-github: GitHub Docs
+    - [:octicons-link-external-16: Publishing with a custom GitHub Actions workflow - Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow) - :simple-github: GitHub Docs
 
 [^1]: Un lloc web estàtic és un lloc web que no requereix d'un servidor web
     per generar les pàgines HTML, sinó que les pàgines ja estan generades

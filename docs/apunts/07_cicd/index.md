@@ -12,6 +12,8 @@ i com es pot implementar utilitzant :octicons-play-24: GitHub Actions.
 
 /// html | div.timeline
 [[actions]]: Automatització de processos amb :octicons-play-24: GitHub Actions.
+
+[[actions-exemples]]: Exemples pràctics d'automatizacions en projectes de diferents característiques"
 ///
 /// html | div.timeline.success.check
 [[cicd-exercici]]: Exercici pràctic d'aquest bloc.
