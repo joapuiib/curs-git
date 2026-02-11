@@ -37,11 +37,7 @@ git commit --amend [-m <missatge>]
 - `-m <missatge>`: Permet especificar un nou missatge per al commit.
 
 ??? prep "Preparació del repositori"
-    Inicialitzem un repositori amb un fitxer `README.md` i realitzem el primer commit.
-
-    !!! danger
-        Crea el nou repositori __en una carpeta independent__ per evitar
-        problemes amb els exemples i exercicis anteriors.
+    !!! danger "Crea el nou repositori en una carpeta independent per evitar problemes amb els exemples i exercicis anteriors."
 
     !load_file "avancat/stdout/amend/setup_amend.sh"
 

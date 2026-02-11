@@ -37,9 +37,7 @@ Funcionament de `git merge --squash`.
 ///
 
 ??? prep "Preparació repositori"
-    !!! danger
-        Crea el nou repositori __en una carpeta independent__ per evitar
-        problemes amb els exemples i exercicis anteriors.
+    !!! danger "Crea el nou repositori en una carpeta independent per evitar problemes amb els exemples i exercicis anteriors."
 
     !load_file "avancat/stdout/squash/setup_squash.sh"
 

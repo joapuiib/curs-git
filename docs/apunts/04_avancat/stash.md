@@ -25,9 +25,7 @@ posteriorment quan siga necessari.
     Inicialitzem un repositori amb canvis en el fitxer `README.md`
     i una branca addicional `altres_canvis` on s'han fet canvis al mateix fitxer.
 
-    !!! danger
-        Crea el nou repositori __en una carpeta independent__ per evitar
-        problemes amb els exemples i exercicis anteriors.
+    !!! danger "Crea el nou repositori en una carpeta independent per evitar problemes amb els exemples i exercicis anteriors."
 
     !load_file "avancat/stdout/stash/setup_stash.sh"
 
