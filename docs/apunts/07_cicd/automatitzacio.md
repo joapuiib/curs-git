@@ -181,11 +181,7 @@ Això permet llançar l'automatització des de l'apartat __:material-arrow-right
 del repositori.
 
 ![Execució manual d'una automatització](img/cicd/workflow-dispatch.png)
-/// figure-caption
-    attrs: {class: "shadow"}
-Execució manual d'una automatització des de :material-arrow-right-drop-circle-outline: Actions.
-///
-
+/// figure-caption | .shadow : Execució manual d'una automatització des de :material-arrow-right-drop-circle-outline: Actions.
 
 En cas de necessitar provar una tasca d'automatització localment
 sense haver de publicar canvis al repositori,
@@ -273,10 +269,7 @@ GitHub Pages pot ser habilitat i configurat en la secció __:octicons-gear-24: S
 dins de l'apartat __:octicons-browser-24: Pages__.
 
 ![Configuració de GitHub Pages](./img/cicd/github-pages.png)
-/// figure-caption
-    attrs: {class: "shadow"}
-Configuració de GitHub Pages en aquest repositori
-///
+/// figure-caption | .shadow : Configuració de GitHub Pages en aquest repositori
 
 GitHub Pages pot ser configurat per publicar-se de dues maneres diferents:
 
