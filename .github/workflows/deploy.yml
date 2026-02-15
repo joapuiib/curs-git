@@ -10,6 +10,9 @@ permissions: # Permisos que es concedeixen a l'automatització
   pages: write
   id-token: write
 
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
 jobs: # Llista de tasques a executar
   build:
     runs-on: ubuntu-latest # Sistema operatiu on s'executarà la tasca
