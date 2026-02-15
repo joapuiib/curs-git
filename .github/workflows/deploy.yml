@@ -6,25 +6,41 @@ on: # Events que disparen l'automatització
   workflow_dispatch:
 
 permissions: # Permisos que es concedeixen a l'automatització
-  contents: write # Permet escriure al repositori
+  contents: read
+  pages: write
+  id-token: write
 
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
 jobs: # Llista de tasques a executar
-  deploy: # Nom de la tasca
+  build:
     runs-on: ubuntu-latest # Sistema operatiu on s'executarà la tasca
-
     steps: # Passos a executar
       - uses: actions/checkout@v4 # Acció per clonar i còpiar el repositori a l'entorn d'execució
         with:
           fetch-depth: 0
-      - name: Configure Git Credentials # Acció per configurar les credencials de Git
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
       - uses: actions/setup-python@v5 # Acció per configurar Python
         with:
           python-version: 3.x
           cache: 'pip'
       - name: Install dependencies # Acció per instal·lar les dependències
         run: pip install -r requirements.txt
-      - name: Build and deploy # Acció per compilar i desplegar la documentació
-        run: mkdocs gh-deploy --force
+      - name: Build # Acció per compilar la documentació
+        run: mkdocs build --clean
+      - name: Upload static files as artifact # Acció per pujar els fitxers estàtics com a artefacte
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site/ # Ruta dels fitxers estàtics generats per MkDocs
+
+  deploy: # Nom de la tasca
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }} # URL de la pàgina desplegada
+
+    runs-on: ubuntu-latest # Sistema operatiu on s'executarà la tasca
+    needs: build # Aquesta tasca depèn de la tasca "build"
+    steps: # Passos a executar
+      - name: Deploy to GitHub Pages # Acció per desplegar a GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
