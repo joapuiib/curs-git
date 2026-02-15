@@ -27,7 +27,6 @@ jobs: # Llista de tasques a executar
       - name: Install dependencies # Acció per instal·lar les dependències
         run: pip install -r requirements.txt
       - name: Build # Acció per compilar la documentació
-        id: build
         run: mkdocs build --clean
       - name: Upload static files as artifact # Acció per pujar els fitxers estàtics com a artefacte
         uses: actions/upload-pages-artifact@v3
