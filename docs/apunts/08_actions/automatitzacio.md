@@ -184,7 +184,7 @@ Les tasques d'automatització s'executen automàticament
 quan es compleixen les condicions definides en la secció `on`
 de la configuració.
 
-A la secció :octicons-play-24: Actions es poden consultar les xecucions de les tasques d'automatització
+A la secció :octicons-play-24: Actions es poden consultar les execucions de les tasques d'automatització
 definides en el repositori.
 
 A més, és possible configurar una tasca perquè es puga executar manualment si s'especifica
