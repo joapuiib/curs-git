@@ -91,7 +91,7 @@ fi
 
 source venv/bin/activate
 
-COMMAND="serve"
+COMMAND="serve --livereload"
 if [ $BUILD -eq 1 ]; then
     COMMAND="build"
 fi

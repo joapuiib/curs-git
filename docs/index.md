@@ -2,7 +2,7 @@
 template: document.html
 title: Inici
 cover:
-    title: Introducció a Git i la seua aplicació a l’aula
+    title: Introducció a Git i GitHub Actions
     icon: simple/git
 hide:
   - navigation
@@ -18,14 +18,17 @@ En els primers blocs es presenten els conceptes bàsics de :simple-git: Git i el
 A continuació, es presenten les funcionalitats més avançades i estratègies de treball
 en projectes de programari col·laboratius.
 
-Per últim, es presenten les funcionalitats que proporciona __:simple-github: GitHub__
+A continuació, es presenten les funcionalitats que proporciona __:simple-github: GitHub__
 per a la gestió de projectes i com en podem fer ús en l'àmbit educatiu.
+
+Per últim, es presenta la ferramenta __:octicons-play-16: GitHub Actions__, que permet automatitzar tasques
+per mitjà de fluxos de treball definits en un repositori de :simple-github: GitHub.
 
 
 ## Característiques
-- __:octicons-calendar-16: Temporització__: Del 6 d'octubre al 5 de novembre de 2025.
+- __:octicons-calendar-16: Temporització__: Del 16 de febrer al 20 d'abril de 2026.
 - __:material-laptop: Modalitat__: En línia.
-- __:octicons-clock-16: Durada__: 32 hores.
+- __:octicons-clock-16: Durada__: 40 hores.
 
 
 ## Objectius específics
@@ -36,6 +39,8 @@ per a la gestió de projectes i com en podem fer ús en l'àmbit educatiu.
 - Conéixer i utilitzar eines de gestió de projectes proporcionades per GitHub.
 - Promoure la utilització de Git i GitHub a l’aula com a eina de treball col·laboratiu.
 - Proporcionar estratègies als docents per incorporar la utilització de Git i GitHub a l'aula.
+- Conéixer els principis bàsics de GitHub Actions i el seu paper en l’automatització del flux de desenvolupament (CI/CD).
+- Automatitzar tasques habituals com proves automàtiques, integració contínua, anàlisi de codi o desplegaments.
 
 
 ## Continguts específics
@@ -77,12 +82,13 @@ per a la gestió de projectes i com en podem fer ús en l'àmbit educatiu.
     - GitHub Projects.
     - Forks
     - Pull Requests.
-    - Automatització de tasques amb GitHub Actions.
-    - GitHub Pages.
 - __[[educativa-index]]__
     - Beneficis de GitHub Education.
     - Organitzacions i equips a GitHub.
     - Estratègies per a l'ús de Git i GitHub a l'aula.
+- __[[actions-index]]__
+    - Automatització de tasques amb GitHub Actions.
+    - GitHub Pages.
 
 
 ## Dirigit a

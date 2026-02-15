@@ -30,7 +30,7 @@ La utilització de les PR aporta molts avantatges, com ara:
     com ara la realització de proves o la comprovació de la qualitat del codi.
 - __[Estratègia de ramificació][estrategies]__: Permet incorporar els canvis de manera ordenada i controlada.
 
-[automatitzacio]: automatitzacio.md
+[automatitzacio]: [[actions]]
 [estrategies]: ../05_estrategies/estrategies.md
 
 Aquesta funcionalitat és essencial per a la col·laboració en projectes,

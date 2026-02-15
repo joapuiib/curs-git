@@ -55,9 +55,7 @@ per tant, seran esborrats pel __recol·lector de brossa de Git__.
 
 ??? prep "Preparació del repositori"
 
-    !!! danger
-        Crea el nou repositori __en una carpeta independent__ per evitar
-        problemes amb els exemples i exercicis anteriors.
+    !!! danger "Crea el nou repositori en una carpeta independent per evitar problemes amb els exemples i exercicis anteriors."
 
     /// collapse-code
     ```bash title="setup_reset.sh"

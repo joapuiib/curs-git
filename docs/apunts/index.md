@@ -8,3 +8,4 @@ Els apunts d'aquest curs estan dividits en els següents blocs:
 - [[estrategies-index]]
 - [[projectes-index]]
 - [[educativa-index]]
+- [[actions-index]]

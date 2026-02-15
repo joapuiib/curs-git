@@ -32,9 +32,7 @@ Funcionament de `git revert`.
 
 ??? prep "Preparació repositori"
 
-    !!! danger
-        Crea el nou repositori __en una carpeta independent__ per evitar
-        problemes amb els exemples i exercicis anteriors.
+    !!! danger "Crea el nou repositori en una carpeta independent per evitar problemes amb els exemples i exercicis anteriors."
 
     !load_file "avancat/stdout/revert/setup_revert.sh"
 

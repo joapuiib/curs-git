@@ -39,7 +39,7 @@ def init_repositori():
     x.run('git config user.email "j.puigcerveribanez@edu.gva.es"')
     x.x('git branch -m main # (1)!')
     x.x('echo "# Remots a Git" > README.md')
-    x.x('echo "Repositori del __Bloc: Remots__ del curs __\\\"Introducció a Git i la seua aplicació a l’aula\\\"__" >> README.md')
+    x.x('echo "Repositori del __Bloc: Remots__ del curs __\\\"Introducció a Git i GitHub Actions\\\"__" >> README.md')
     x.x('git add README.md')
     x.x('git commit -m "Commit inicial"')
     x.x('git lga')

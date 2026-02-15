@@ -7,7 +7,7 @@ alias: estrategies-slides
 
 ## Estratègies de ramificació
 
-#### Introducció a Git i la seua aplicació a l’aula
+#### Introducció a Git i GitHub Actions
 
 ---
 

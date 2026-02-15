@@ -136,7 +136,7 @@ En aquesta secció, crearem un repositori remot a GitHub.
     Creem un repositori amb les següents característiques:
 
     - __Nom__: `git_remots`
-    - __Descripció__: Repositori del Bloc: Remots del curs "Introducció a Git i la seua aplicació a l’aula"
+    - __Descripció__: Repositori del Bloc: Remots del curs "Introducció a Git i GitHub Actions"
     - __Visibilitat__: Públic
     - __README__: No
     - __.gitignore__: No
@@ -300,15 +300,15 @@ Publicació d'una branca local a una branca remota
     ///
 
 
-### Associació de branques locals i remotes
-Les branques locals poden ser associades a branques remotes
+### Associació d'un remot per defecte
+A les branques locals es pot associar un remot per defecte
 mitjançant l'opció `-u` o `--set-upstream` de la comanda `git push`.
 
 ```
 git push [-u | --set-upstream] <remot> <branca>
 ```
 
-Aquesta associació li permet a Git saber sobre quina branca remota
+Aquesta associació li permet a Git saber sobre quin remot
 ha de realitzar les operacions quan no s'especifica explícitament,
 com ara `git pull` o `git push`.
 
@@ -477,10 +477,10 @@ git pull [<options>] [<remot> [<branca>]]
 ```
 
 - `<options>`: Opcions de la comanda.
-- `<remot>`: Àlies del repositori remot. Per defecte, s'utilitza la [branca remota associada][associada] a la branca actual.
-- `<branca>`: Nom de la branca remota. Per defecte, s'utilitza la [branca remota associada][associada] a la branca actual.
+- `<remot>`: Àlies del repositori remot. Per defecte, s'utilitza el [remot associat][associada] a la branca actual.
+- `<branca>`: Nom de la branca remota. Per defecte, s'utilitza el [remot associat][associada] a la branca actual.
 
-[associada]: #associacio-de-branques-locals-i-remotes
+[associada]: #associacio-dun-remot-per-defecte
 
 !!! docs "Documentació oficial de :simple-git: Git"
     [:octicons-link-external-16: `git pull`](https://git-scm.com/docs/git-pull)
