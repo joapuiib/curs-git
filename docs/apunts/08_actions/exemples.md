@@ -22,7 +22,7 @@ Aquesta acció s'executa sempre que es publiquen nous canvis sobre la branca `ma
 
 Els passos que la componen són els següents:
 
-1. Còpia el repositori a l'entorn d'execucio amb l'acció predefinida [`actions/checkout@v4`][actions-checkout].
+1. Còpia el repositori a l'entorn d'execució amb l'acció predefinida [`actions/checkout@v4`][actions-checkout].
 1. Canvia les credencials de git perquè els commits estiguen associats a un bot de GitHub.
 1. Configura l'entorn per poder utilitzar Python 3.
 1. Instal·la les dependències de Python.
@@ -46,7 +46,7 @@ del repositori utilitzant el programa [`pyspelling`][pyspelling].
 
 [pyspelling]: https://facelessuser.github.io/pyspelling/
 
-El flux de treball es composa de dues tasques. S'ha configurat d'aquesta manera
+El flux de treball es compon de dues tasques. S'ha configurat d'aquesta manera
 perquè la tasca de correcció ortogràfica només s'executa quan s'han modificat fitxers de documentació,
 evitant així executar-la innecessàriament quan es modifiquen altres fitxers.
 
@@ -176,7 +176,7 @@ al repositori.
     - [:octicons-link-external-16: Publishing with a Trusted Publisher](https://docs.pypi.org/trusted-publishers/using-a-publisher/) - PyPI Docs
 
 
-Els passos que realiza són:
+Els passos que realitza són:
 
 - Configura l'entorn per poder utilitzar Python 3.8.
 - Instal·la el paquet `build` per compilar les distribucions de Python.

@@ -5,6 +5,7 @@ by-nc-sa
 cherrypick
 CIPFP
 CLI
+CodePipeline
 Codespaces
 config
 d'
@@ -25,6 +26,7 @@ IDE
 init
 IntelliJ
 intermodular
+JDK
 JetBrains
 Jira
 Kanban
@@ -45,6 +47,7 @@ PyMdown
 pymdownx
 PyPI
 PySpelling
+Quickstart
 README
 rebase
 rebasing

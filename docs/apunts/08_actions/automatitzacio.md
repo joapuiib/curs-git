@@ -19,7 +19,7 @@ __Desplegament Continu__ (_Continuous Deployment_ o CD) és una pràctica
 que permet als equips de desenvolupament integrar els canvis en el codi
 de manera regular i distribuir-los de manera automàtica.
 
-Aquesta pràctica és esencial en el desenvolupament modern de software,
+Aquesta pràctica és essencial en el desenvolupament modern de software,
 ja que accelera el procés de lliurament de noves funcionalitats,
 redueix el temps de parada i millora la qualitat del projecte mitjançant
 __l'automatització__ de tasques repetitives, sense necessitat d'intervenció manual.
@@ -47,7 +47,7 @@ es treballa de manera paral·lela.
 
 Un flux de treball típic de CI inclou els següents passos:
 
-- __Ànalisi estàtica del codi__, que verifique la qualitat del codi font
+- __Anàlisi estàtica del codi__, que verifique la qualitat del codi font
     i assegure que compleix amb els estàndards establerts.
 
 - __Compilació del projecte i execució de proves automatitzades__,
@@ -89,7 +89,7 @@ en l'entorn que s'utilitze.
 
 ### Entorns i eines de CI/CD
 Existeixen diferents entorns i eines de CI/CD que permeten configurar i gestionar els fluxos de treball
-automàtitzats. Algunes de les més comunes són:
+automatitzats. Algunes de les més comunes són:
 
 - __[:simple-github: GitHub Actions][actions]__: Permet configurar fluxos de treball automatitzats sobre repositoris de Git allotjats a GitHub.
 - __[:simple-gitlab: GitLab CI/CD][gitlab-cicd]__: Permet configurar fluxos de treball automatitzats sobre repositoris de Git allotjats a GitLab.
@@ -184,7 +184,7 @@ Les tasques d'automatització s'executen automàticament
 quan es compleixen les condicions definides en la secció `on`
 de la configuració.
 
-A la secció :octicons-play-24: Actions es poden consultar les execucions de les tasques d'automatització
+A la secció :octicons-play-24: Actions es poden consultar les xecucions de les tasques d'automatització
 definides en el repositori.
 
 A més, és possible configurar una tasca perquè es puga executar manualment si s'especifica
