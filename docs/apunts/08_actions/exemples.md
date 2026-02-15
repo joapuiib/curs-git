@@ -18,20 +18,29 @@ d'automatitzacions en projectes de naturalesa distinta.
 La següent automatització permet __generar aquest lloc web__ amb el [generador de webs estàtiques MkDocs][mkdocs]
 i __publicar-lo__ a [:octicons-browser-24: GitHub Pages][pages].
 
-Aquesta acció s'executa sempre que es publiquen nous canvis sobre la branca `main`.
+Aquesta acció s'executa sempre que es publiquen nous canvis sobre la branca `main`. També es pot executar manualment.
 
 Els passos que la componen són els següents:
 
-1. Còpia el repositori a l'entorn d'execució amb l'acció predefinida [`actions/checkout@v4`][actions-checkout].
-1. Canvia les credencials de git perquè els commits estiguen associats a un bot de GitHub.
-1. Configura l'entorn per poder utilitzar Python 3.
-1. Instal·la les dependències de Python.
-1. Genera i publica el lloc web amb l'ordre [`mkdocs gh-deploy`][gh-deploy]
+/// html | div.steps
+1. __Compila el lloc web estàtic amb MkDocs.__
+    - Còpia els fitxers del repositori amb l'acció predefinida [`actions/checkout`][actions-checkout].
+    - Configura Python amb l'acció predefinida [`actions/setup-python`][actions-setup-python].
+    - Instal·la les dependències necessàries per executar MkDocs.
+    - Compila el lloc web amb l'ordre `mkdocs build`.
+    - Emmagatzema el directori (`site/`) com a artefacte per a la
+        següent tasca amb l'acció predefinida [`actions/upload-pages-artifact`][actions-upload-pages-artifact].
+2. __Publica el lloc web a :octicons-browser-24: GitHub Pages.__
+    - Sols s'executa si la tasca anterior s'ha executat correctament.
+    - Publica l'artefacte generat en la tasca anterior l'acció predefinida [`actions/deploy-pages`][actions-deploy-pages].
+
 
 [mkdocs]: https://www.mkdocs.org/
-[gh-deploy]: https://www.mkdocs.org/user-guide/cli/#mkdocs-gh-deploy
-[actions-checkout]: https://github.com/marketplace/actions/checkout
 [pages]: https://pages.github.com/
+[actions-checkout]: https://github.com/marketplace/actions/checkout
+[actions-setup-python]: https://github.com/marketplace/actions/setup-python
+[actions-upload-pages-artifact]: https://github.com/actions/upload-pages-artifact
+[actions-deploy-pages]: https://github.com/actions/deploy-pages
 
 ```yaml title=".github/workflows/deploy.yml"
 --8<-- ".github/workflows/deploy.yml"
@@ -46,19 +55,24 @@ del repositori utilitzant el programa [`pyspelling`][pyspelling].
 
 [pyspelling]: https://facelessuser.github.io/pyspelling/
 
+S'executa quan es crea Pull Request o es marca com a que està llesta per a revisió
+sobre la branca `main`.
+
 El flux de treball es compon de dues tasques. S'ha configurat d'aquesta manera
 perquè la tasca de correcció ortogràfica només s'executa quan s'han modificat fitxers de documentació,
 evitant així executar-la innecessàriament quan es modifiquen altres fitxers.
 
-- __`changed-files`__: Comprova si cal realitzar la correcció ortogràfica.
+/// html | div.steps
+1. __`changed-files`: Comprova si cal realitzar la correcció ortogràfica.__
     - Comprova si s'han modificat fitxers de documentació (`*.md`) respecte a la branca `main`.
     - Emmagatzema el resultat en la variable `EXIST_CHANGED_FILES`.
 
-- __`spellcheck`__: En cas afirmatiu, comprova la correcció ortogràfica dels fitxers modificats.
+2. __`spellcheck`: En cas afirmatiu, comprova la correcció ortogràfica dels fitxers modificats.__
     - S'executa només si `needs.changed-files.outputs.EXIST_CHANGED_FILES == 1`.
     - Instal·la les dependències.
     - Es descarrega els diccionaris necessaris.
     - Executa la correcció ortogràfica amb `pyspelling`.
+///
 
 ```yaml title=".github/workflows/spellcheck.yml"
 --8<-- ".github/workflows/spellcheck.yml"
