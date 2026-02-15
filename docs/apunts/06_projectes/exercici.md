@@ -43,7 +43,7 @@ en el teu repositori local amb la informació corresponent.
 !!! info "Pots realitzar tants _commits_ com necessites per realitzar la teua contribució."
     La PR serà integrada mitjançant l'estratègia [`merge --no-ff` + `merge squash --ff-only`][merge-squash].
 
-[merge-squash]: ../05_estrategies/estrategies.md##merge-squash-ff-only
+[merge-squash]: [[estrategies#merge-squash-ff-only]]
 
 === "Llibre"
     - Crea una branca `llibre/titol-del-llibre`, indicant el títol del llibre.

@@ -82,13 +82,13 @@ per mitjà de fluxos de treball definits en un repositori de :simple-github: Git
     - GitHub Projects.
     - Forks
     - Pull Requests.
-- __[[cicd-index]]__
-    - Automatització de tasques amb GitHub Actions.
-    - GitHub Pages.
 - __[[educativa-index]]__
     - Beneficis de GitHub Education.
     - Organitzacions i equips a GitHub.
     - Estratègies per a l'ús de Git i GitHub a l'aula.
+- __[[actions-index]]__
+    - Automatització de tasques amb GitHub Actions.
+    - GitHub Pages.
 
 
 ## Dirigit a

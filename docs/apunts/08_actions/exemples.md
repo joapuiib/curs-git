@@ -3,10 +3,6 @@ template: document.html
 title: "Exemples de fluxos de treball"
 icon: material/file-check-outline
 alias: actions-exemples
-comments: true
-tags:
-    - actions
-    - pages
 ---
 
 ## Exemples de fluxos de treball
@@ -69,9 +65,9 @@ evitant així executar-la innecessàriament quan es modifiquen altres fitxers.
 ```
 
 ### Execució de proves unitàries i d'integració en un projecte Java amb Maven
-!!! example "Repositori d'exemple: [`projecte-java-maven`][projecte-java-maven]"
+!!! example "Repositori d'exemple: [`tasklist-api`][tasklist-api]"
 
-[projecte-java-maven]: https://github.com/cursgit/projecte-java-maven
+[tasklist-api]: https://github.com/cursgit/tasklist-api
 
 Aquest flux de treball s'executa cada vegada que es publiquen canvis a la branca `main`
 o quan es crea o actualitza una pull request cap a les branques `main` o `development`.
@@ -229,6 +225,9 @@ jobs:
 ```
 
 ### Creació d'una imatge de Docker
-- [:octicons-link-external-16: Using GitHub Actions to automatically build Docker images][docker-build] - Medium
+Podeu seguir aquest tutorial per crear una imatge de Docker a partir d'un repositori de GitHub
+i publicar-la a [Docker Hub](https://hub.docker.com/).
+
+__[:octicons-link-external-16: Using GitHub Actions to automatically build Docker images][docker-build] – :simple-medium: Medium__
 
 [docker-build]: https://medium.com/@kicsipixel/using-github-actions-to-automatically-build-docker-images-65a038b8ce56

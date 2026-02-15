@@ -7,5 +7,5 @@ Els apunts d'aquest curs estan dividits en els següents blocs:
 - [[avancat-index]]
 - [[estrategies-index]]
 - [[projectes-index]]
-- [[cicd-index]]
 - [[educativa-index]]
+- [[actions-index]]

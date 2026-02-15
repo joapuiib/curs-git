@@ -300,15 +300,15 @@ Publicació d'una branca local a una branca remota
     ///
 
 
-### Associació de branques locals i remotes
-Les branques locals poden ser associades a branques remotes
+### Associació d'un remot per defecte
+A les branques locals es pot associar un remot per defecte
 mitjançant l'opció `-u` o `--set-upstream` de la comanda `git push`.
 
 ```
 git push [-u | --set-upstream] <remot> <branca>
 ```
 
-Aquesta associació li permet a Git saber sobre quina branca remota
+Aquesta associació li permet a Git saber sobre quin remot
 ha de realitzar les operacions quan no s'especifica explícitament,
 com ara `git pull` o `git push`.
 

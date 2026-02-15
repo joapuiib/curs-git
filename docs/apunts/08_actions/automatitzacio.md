@@ -3,10 +3,10 @@ template: document.html
 title: "Automatització"
 icon: material/book-open-variant
 alias: actions
-comments: true
 tags:
-    - actions
-    - pages
+    - GitHub Actions
+    - GitHub Pages
+    - CI/CD
 ---
 
 *[CI/CD]: Continuous Integration/Continuous Deployment
@@ -115,7 +115,7 @@ on es poden consultar les tasques d'automatització configurades i les execucion
 
 !!! important "Cada projecte té unes característiques i necessitats pròpies i, per tant, caldrà adaptar els processos de la naturalesa del projecte."
 
-!!! example "Consulteu els [[actions-exemples]] per trobar exemples de fluxos de treball per a diferents tipus de projectes i necessitats."
+!!! notice "Consulteu els [[actions-exemples]] per trobar exemples de fluxos de treball més complexos i adaptats a diferents tipus de projectes."
 
 
 ### Configuració d'un flux de treball
@@ -184,6 +184,9 @@ Les tasques d'automatització s'executen automàticament
 quan es compleixen les condicions definides en la secció `on`
 de la configuració.
 
+A la secció :octicons-play-24: Actions es poden consultar les execucions de les tasques d'automatització
+definides en el repositori.
+
 A més, és possible configurar una tasca perquè es puga executar manualment si s'especifica
 `workflow_dispatch` en la secció `on` de la configuració.
 
@@ -192,17 +195,19 @@ on:
   workflow_dispatch:
 ```
 
-Això permet llançar l'automatització des de l'apartat __:material-arrow-right-drop-circle-outline: Actions__
-del repositori.
+Això permet llançar l'automatització manualment des de la secció :material-arrow-right-drop-circle-outline: Actions.
 
 ![Execució manual d'una automatització](img/cicd/workflow-dispatch.png)
-/// figure-caption | .shadow : Execució manual d'una automatització des de :material-arrow-right-drop-circle-outline: Actions.
+/// figure-caption
+    attrs: {'class': 'shadow'}
+Execució manual d'una automatització des de :material-arrow-right-drop-circle-outline: Actions.
+///
 
 En cas de necessitar provar una tasca d'automatització localment
 sense haver de publicar canvis al repositori,
 es pot fer ús d'eines com [__`act`__](https://nektosact.com/).
 
-Aquesta eina utilitza [__:simple-docker: Docker__](https://www.docker.com/)
+Aquesta eina utilitza [:simple-docker: Docker](https://www.docker.com/)
 per simular l'entorn d'execució semblant a l'entorn de GitHub Actions,
 que permet provar les tasques sense haver de publicar els canvis al repositori remot.
 
@@ -295,7 +300,11 @@ GitHub Pages pot ser habilitat i configurat en la secció __:octicons-gear-24: S
 dins de l'apartat __:octicons-browser-24: Pages__.
 
 ![Configuració de GitHub Pages](./img/cicd/github-pages.png)
-/// figure-caption | .shadow : Configuració de GitHub Pages en aquest repositori
+
+/// figure-caption
+    attrs: {'class': 'shadow'}
+Configuració de GitHub Pages en aquest repositori
+///
 
 GitHub Pages pot ser configurat per publicar-se de dues maneres diferents:
 
