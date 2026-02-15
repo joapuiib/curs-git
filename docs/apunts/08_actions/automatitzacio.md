@@ -106,6 +106,7 @@ automatitzats. Algunes de les més comunes són:
 [azure-pipelines]: https://azure.microsoft.com/en-us/services/devops/pipelines/
 [aws-codepipeline]: https://aws.amazon.com/codepipeline/
 
+
 ## :octicons-play-24: GitHub Actions
 
 [__:octicons-play-24: GitHub Actions__](https://github.com/features/actions)
@@ -257,6 +258,30 @@ INFO[0000] Using docker host 'unix:///var/run/docker.sock', and daemon socket 'u
 [GitHub Actions Demo/Explore-GitHub-Actions]   ✅  Success - Complete job
 [GitHub Actions Demo/Explore-GitHub-Actions] 🏁  Job succeeded
 ```
+
+
+### Execució d'una automatització a una Pull Request
+Les tasques d'automatització també es poden combinar amb les [[pull-requests]] per comprovar que els canvis proposats compleixen
+amb els estàndards de qualitat del projecte abans de ser integrats a la branca principal, facilitant la __integració contínua (CI)__.
+
+Algunes de les tasques més comunes que es defineixen en aquest cas són 
+
+- Execució de proves automatitzades
+- Anàlisi de l'estil del codi
+- Anàlisi de la qualitat del codi
+
+
+![Execució d'una automatització a una Pull Request](img/cicd/pr-workflow-pending.png)
+/// figure-caption
+    attrs: {'class': 'shadow'}
+Exemple d'una tasca d'automatització que s'executa a una Pull Request
+///
+
+![Execució correcta d'una automatització a una Pull Request](img/cicd/pr-workflow-success.png)
+/// figure-caption
+    attrs: {'class': 'shadow'}
+Exemple d'una tasca d'automatització que s'ha executat correctament a una Pull Request
+///
 
 
 ### Secrets
