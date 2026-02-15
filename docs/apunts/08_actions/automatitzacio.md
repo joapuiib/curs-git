@@ -80,7 +80,7 @@ humana.
 
 ![Exemple d'un flux de treball](img/cicd/pipeline.png)
 /// attribution: https://katalon.com/
-/// figure-caption: Exemple d'un flux de treball
+/// figure-caption: Exemple d'un flux de treball.
 
 
 Pot ser que cadascuna d'aquestes tasques necessiten portar a terme múltiples accions, que podran ser configurades
@@ -199,10 +199,7 @@ on:
 Això permet llançar l'automatització manualment des de la secció :material-arrow-right-drop-circle-outline: Actions.
 
 ![Execució manual d'una automatització](img/cicd/workflow-dispatch.png)
-/// figure-caption
-    attrs: {'class': 'shadow'}
-Execució manual d'una automatització des de :material-arrow-right-drop-circle-outline: Actions.
-///
+/// figure-caption | .shadow : Execució manual d'una automatització des de :material-arrow-right-drop-circle-outline: Actions.
 
 En cas de necessitar provar una tasca d'automatització localment
 sense haver de publicar canvis al repositori,
@@ -272,16 +269,10 @@ Algunes de les tasques més comunes que es defineixen en aquest cas són
 
 
 ![Execució d'una automatització a una Pull Request](img/cicd/pr-workflow-pending.png)
-/// figure-caption
-    attrs: {'class': 'shadow'}
-Exemple d'una tasca d'automatització que s'executa a una Pull Request
-///
+/// figure-caption | .shadow : Exemple d'una tasca d'automatització que s'executa a una Pull Request
 
 ![Execució correcta d'una automatització a una Pull Request](img/cicd/pr-workflow-success.png)
-/// figure-caption
-    attrs: {'class': 'shadow'}
-Exemple d'una tasca d'automatització que s'ha executat correctament a una Pull Request
-///
+/// figure-caption | .shadow : Exemple d'una tasca d'automatització que s'ha executat correctament a una Pull Request
 
 
 ### Secrets
@@ -325,11 +316,7 @@ GitHub Pages pot ser habilitat i configurat en la secció __:octicons-gear-24: S
 dins de l'apartat __:octicons-browser-24: Pages__.
 
 ![Configuració de GitHub Pages](./img/cicd/github-pages.png)
-
-/// figure-caption
-    attrs: {'class': 'shadow'}
-Configuració de GitHub Pages en aquest repositori
-///
+/// figure-caption | .shadow : Configuració de GitHub Pages en aquest repositori.
 
 GitHub Pages pot ser configurat per publicar-se de dues maneres diferents:
 

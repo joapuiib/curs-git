@@ -50,10 +50,7 @@ de manera que es si es realitzen canvis en el repositori original,
 pots decidir incorporar-los al teu _fork_.
 
 ![Estructura de treball amb Forks i Pull Requests](./img/forks/fork.png)
-/// shadow-figure-caption
-    attrs: { class: "no-shadow" }
-Estructura de treball amb Forks i Pull Requests
-///
+/// shadow-figure-caption | .no-shadow : Estructura de treball amb Forks i Pull Requests
 
 
 ??? example "Exemple de bifurcació de :simple-materialformkdocs: Material for MkDocs"
