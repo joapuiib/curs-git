@@ -1,7 +1,7 @@
 ---
 template: document.html
 title: "Exemples de fluxos de treball"
-icon: material/book-open-variant
+icon: material/file-check-outline
 alias: actions-exemples
 comments: true
 tags:
@@ -229,4 +229,6 @@ jobs:
 ```
 
 ### Creació d'una imatge de Docker
-!!! warning "TODO"
+- [:octicons-link-external-16: Using GitHub Actions to automatically build Docker images][docker-build] - Medium
+
+[docker-build]: https://medium.com/@kicsipixel/using-github-actions-to-automatically-build-docker-images-65a038b8ce56

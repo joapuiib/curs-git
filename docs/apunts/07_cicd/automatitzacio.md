@@ -88,8 +88,23 @@ en l'entorn que s'utilitze.
 
 
 ### Entorns i eines de CI/CD
-!!! warning "TODO"
+Existeixen diferents entorns i eines de CI/CD que permeten configurar i gestionar els fluxos de treball
+automàtitzats. Algunes de les més comunes són:
 
+- __[:simple-github: GitHub Actions][actions]__: Permet configurar fluxos de treball automatitzats sobre repositoris de Git allotjats a GitHub.
+- __[:simple-gitlab: GitLab CI/CD][gitlab-cicd]__: Permet configurar fluxos de treball automatitzats sobre repositoris de Git allotjats a GitLab.
+- __[:simple-jenkins: Jenkins][jenkins]__: Servidor d'automatització de codi obert. Necessita ser instal·lat i configurat.
+- __[:simple-travisci: Travis CI][travis-ci]__: Servei d'automatització de codi allotjat al núvol. Es codi privatiu i requereix d'un compte de pagament.
+- __[:material-microsoft-azure: Azure Pipelines][azure-pipelines]__: Servei d'automatització de Microsoft Azure.
+- __[:material-aws: AWS CodePipeline][aws-codepipeline]__: Servei d'automatització de Amazon Web Services.
+    
+
+[actions]: https://docs.github.com/en/actions
+[gitlab-cicd]: https://docs.gitlab.com/ee/ci/
+[jenkins]: https://www.jenkins.io/
+[travis-ci]: https://travis-ci.com/
+[azure-pipelines]: https://azure.microsoft.com/en-us/services/devops/pipelines/
+[aws-codepipeline]: https://aws.amazon.com/codepipeline/
 
 ## :octicons-play-24: GitHub Actions
 
@@ -100,7 +115,7 @@ on es poden consultar les tasques d'automatització configurades i les execucion
 
 !!! important "Cada projecte té unes característiques i necessitats pròpies i, per tant, caldrà adaptar els processos de la naturalesa del projecte."
 
-!!! example "Consulteu els [[actions-exemples]]"
+!!! example "Consulteu els [[actions-exemples]] per trobar exemples de fluxos de treball per a diferents tipus de projectes i necessitats."
 
 
 ### Configuració d'un flux de treball
@@ -240,7 +255,18 @@ INFO[0000] Using docker host 'unix:///var/run/docker.sock', and daemon socket 'u
 
 
 ### Secrets
-!!! warning "TODO"
+De vegades, les tasques d'automatització necessiten informació sensible per a executar-se,
+com ara credencials d'accés a serveis externs, claus d'API, etc.
+
+En aquests casos, és important no incloure aquesta informació directament en els fitxers de configuració, ja que aquests fitxers són públics
+i poden ser accedits per qualsevol persona que tinga accés al repositori.
+
+GitHub Actions permet gestionar aquesta informació sensible d'una manera segura mitjançant els __:octicons-key-asterisk-16: Secrets__.
+Són variables d'entorn que es poden utilitzar en les tasques d'automatització, però que no són visibles ni accessibles des dels fitxers de configuració.
+
+Per a configurar un secret, cal anar a la secció __:octicons-gear-24: Settings__ del repositori, a l'apartat __:octicons-key-asterisk-16: Secrets and variables > Actions__.
+
+!!! docs "[:octicons-link-external-16: Using secrets in GitHub Actions](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets) – :simple-github: GitHub Docs"
 
 ## :octicons-browser-24: GitHub Pages
 __[:octicons-browser-24: GitHub Pages][pages]__ és un servei de GitHub que permet publicar llocs web
