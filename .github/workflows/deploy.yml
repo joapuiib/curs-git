@@ -13,8 +13,9 @@ permissions: # Permisos que es concedeixen a l'automatització
 concurrency:
   group: github-pages
   cancel-in-progress: true
+
 jobs: # Llista de tasques a executar
-  build:
+  build: # Nom de la tasca
     runs-on: ubuntu-latest # Sistema operatiu on s'executarà la tasca
     steps: # Passos a executar
       - uses: actions/checkout@v4 # Acció per clonar i còpiar el repositori a l'entorn d'execució
@@ -36,8 +37,7 @@ jobs: # Llista de tasques a executar
   deploy: # Nom de la tasca
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }} # URL de la pàgina desplegada
-
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest # Sistema operatiu on s'executarà la tasca
     needs: build # Aquesta tasca depèn de la tasca "build"
     steps: # Passos a executar
