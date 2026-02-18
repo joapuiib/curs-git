@@ -15,7 +15,7 @@ d'automatitzacions en projectes de naturalesa distinta.
 
 [curs-git]: {{ config.repo_url }}
 
-La següent automatització permet __generar aquest lloc web__ amb el [generador de webs estàtiques MkDocs][mkdocs]
+La següent automatització permet __generar aquest lloc web__ amb [MkDocs][mkdocs]
 i __publicar-lo__ a [:octicons-browser-24: GitHub Pages][pages].
 
 Aquesta acció s'executa sempre que es publiquen nous canvis sobre la branca `main`. També es pot executar manualment.
@@ -28,7 +28,7 @@ Els passos que la componen són els següents:
     - Configura Python amb l'acció predefinida [`actions/setup-python`][actions-setup-python].
     - Instal·la les dependències necessàries per executar MkDocs.
     - Compila el lloc web amb l'ordre `mkdocs build`.
-    - Emmagatzema el directori (`site/`) com a artefacte per a la
+    - Emmagatzema el directori amb la documentació generada (`site/`) com a artefacte per a la
         següent tasca amb l'acció predefinida [`actions/upload-pages-artifact`][actions-upload-pages-artifact].
 2. __Publica el lloc web a :octicons-browser-24: GitHub Pages.__
     - Sols s'executa si la tasca anterior s'ha executat correctament.
@@ -143,42 +143,7 @@ Els passos que realitza són:
 [pypi-publish]: https://github.com/pypa/gh-action-pypi-publish
 
 ```yaml title=".github/workflows/publish-to-pypi.yml"
-name: Publish Python 🐍 distributions 📦 to PyPI
-on:
-  push:
-    tags:
-      - "*"
-jobs:
-  build-n-publish:
-    runs-on: ubuntu-latest
-    name: Build and publish Python 🐍 distributions 📦 to PyPI
-    environment:
-      name: pypi
-      url: https://pypi.org/p/mkdocs-data-plugin
-    permissions:
-      id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
-    steps:
-      - name: Set up Python 3.8
-        uses: actions/checkout@master
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v1
-        with:
-          python-version: 3.8
-      - name: Install pypa/build
-        run: >-
-          python -m
-          pip install
-          build
-          --user
-      - name: Build a binary wheel and a source tarball
-        run: >-
-          python -m
-          build
-          --sdist
-          --wheel
-          --outdir dist/
-      - name: Publish package distributions to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
+--8<-- "https://raw.githubusercontent.com/joapuiib/mkdocs-data-plugin/refs/heads/main/.github/workflows/publish-to-pypi.yml"
 ```
 
 ### Creació d'una imatge de Docker

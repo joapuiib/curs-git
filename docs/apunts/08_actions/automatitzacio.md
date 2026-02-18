@@ -1,6 +1,6 @@
 ---
 template: document.html
-title: "Automatització"
+title: "Fluxos de treball automatitzats en CI/CD"
 icon: material/book-open-variant
 alias: actions
 tags:
