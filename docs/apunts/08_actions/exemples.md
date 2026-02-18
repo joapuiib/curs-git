@@ -154,7 +154,7 @@ i publicar-la a [Docker Hub](https://hub.docker.com/).
 
 !!! example "Repositori d'exemple: [`tasklist-api`][tasklist-api]"
     Podeu observar quan s'ha publicat [la etiqueta :octicons-tag-16: `v0.1.0`][tag] en el [commit :octicons-git-commit-16: `d42ed1e` – Primera versió del projecte][tag-commit],
-    s'ha executat el flux de treball correctament i s'ha publicat la imatge de Docker al [repositori __joapuiib/tasklist-api__ de Docker Hub][docker-hub-repo].
+    s'ha executat el flux de treball correctament i s'ha publicat la imatge de Docker al [repositori __`joapuiib/tasklist-api`__ de Docker Hub][docker-hub-repo].
 
 
 [tutorial-docker-build]: https://medium.com/@kicsipixel/using-github-actions-to-automatically-build-docker-images-65a038b8ce56
