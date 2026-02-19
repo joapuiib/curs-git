@@ -152,10 +152,7 @@ En aquesta secció, crearem un repositori remot a GitHub.
     El teu repositori s'hauria de crear __buit__ i hauries de veure una pàgina com la següent:
 
     ![Repositori buit creat a GitHub](img/github_empty_repository.png)
-    /// figure-caption
-        attrs: { id: figure-create-github-repo }
-    Repositori buit creat a GitHub
-    ///
+    /// figure-caption | #figure-create-github-repo : Repositori buit creat a GitHub
 
     La [Figura 3](#figure-create-github-repo) mostra els passos per enllaçar el teu repositori local amb el repositori remot creat a GitHub.
     En els següents apartats, explicarem aquestes ordres amb més detall.
@@ -294,10 +291,7 @@ Publicació d'una branca local a una branca remota
     Vegem que els canvis s'han publicat correctament al repositori remot:
 
     ![Canvis publicats a GitHub](img/github_push.png)
-    /// figure-caption | ^1
-        attrs: {class: "shadow"}
-    Canvis publicats a :material-github: GitHub
-    ///
+    /// figure-caption | ^1 .shadow : Canvis publicats a :material-github: GitHub
 
 
 ### Associació d'un remot per defecte

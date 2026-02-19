@@ -215,10 +215,7 @@ Per últim, tots els canvis de l'__Àrea de preparació__ es poden confirmar i f
 
 ![Flux de treball en un repositori de Git](img/flux_treball.light.png#only-light)
 ![Flux de treball en un repositori de Git](img/flux_treball.dark.png#only-dark)
-/// figure-caption
-    attrs: { id: "figure-flux-treball" }
-Flux de treball en un repositori de Git.
-///
+/// figure-caption | #figure-flux-treball : Flux de treball en un repositori de Git.
 
 !!! info "La comanda `git restore` es presenta a l'apartat [Descartar canvis](#descartar-canvis-git-restore)."
 
