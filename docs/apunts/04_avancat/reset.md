@@ -30,10 +30,7 @@ Algunes de les accions que podem fer mitjançant aquestes eines són:
 
 ![Funcionament de git reset](img/reset/reset.light.png#only-light)
 ![Funcionament de git reset](img/reset/reset.dark.png#only-dark)
-/// figure-caption
-    attrs: {id: figure-reset}
-Funcionament de `git reset`
-///
+/// figure-caption | #figure-reset : Funcionament de `git reset`.
 
 Al moure la referència d'una branca, podem deixar enrere _commits_ amb els seus canvis corresponents.
 El com es gestionen aquests canvis dependrà del mode amb el qual executem l'ordre `git reset`:

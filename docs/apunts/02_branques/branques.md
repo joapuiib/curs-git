@@ -58,10 +58,7 @@ que avança a mesura que es fan nous commits sobre aquesta.
 
 ![Estructura de branques](img/branques_inicial.light.png#only-light)
 ![Estructura de branques](img/branques_inicial.dark.png#only-dark)
-/// figure-caption
-    attrs: { id: figure-estat-inicial }
-Estructura de branques inicial.
-///
+/// figure-caption | #figure-estat-inicial : Estructura de branques inicial.
 
 ??? example  "Exemple: Estructura de branques inicial"
     L'estructura de branques inicial del repositori
@@ -141,10 +138,7 @@ git branch [-f | --force] <nom> [<ref>]
 
 ![Estructura de branques després de crear les branques](img/create_branches.light.png#only-light)
 ![Estructura de branques després de crear les branques](img/create_branches.dark.png#only-dark)
-/// figure-caption
-    attrs: { id: figure-create-menjar }
-Estructura de branques després de crear les branques `menjar`, `beguda` i `neteja`.
-///
+/// figure-caption | #figure-create-menjar : Estructura de branques després de crear les branques `menjar`, `beguda` i `neteja`.
 
 
 ### Canviar de branca
@@ -190,10 +184,7 @@ del _commit_ al qual apunta la branca.
 
 ![Estructura de branques després de canviar a la branca menjar](img/checkout_branch.light.png#only-light)
 ![Estructura de branques després de canviar a la branca menjar](img/checkout_branch.dark.png#only-dark)
-/// figure-caption
-    attrs: { id: figure-checkout-menjar }
-Estructura de branques després de canviar a la branca `menjar`.
-///
+/// figure-caption | #figure-checkout-menjar : Estructura de branques després de canviar a la branca `menjar`.
 
 ### Canvis en una branca
 Per fer canvis en una branca cal:
@@ -217,10 +208,7 @@ s'avança al nou _commit_.
 
 ![Estructura de branques després de fer un commit a la branca menjar](img/commit_menjar.light.png#only-light)
 ![Estructura de branques després de fer un commit a la branca menjar](img/commit_menjar.dark.png#only-dark)
-/// figure-caption
-    attrs: { id: figure-commit-menjar }
-Estructura de branques després de fer un _commit_ a la branca `menjar`.
-///
+/// figure-caption | #figure-commit-menjar : Estructura de branques després de fer un commit a la branca `menjar`.
 
 ??? example "Exemple: Canvis en la branca `beguda`"
     Anem a afegir dos productes al fitxer `beguda.txt` en la branca `beguda`.
@@ -233,10 +221,7 @@ Estructura de branques després de fer un _commit_ a la branca `menjar`.
 
 ![Estructura de branques després de fer un commit a la branca beguda](img/commit_beguda.light.png#only-light)
 ![Estructura de branques després de fer un commit a la branca beguda](img/commit_beguda.dark.png#only-dark)
-/// figure-caption
-    attrs: { id: figure-commit-beguda }
-Estructura de branques després de fer un _commit_ a la branca `beguda`.
-///
+/// figure-caption | #figure-commit-beguda : Estructura de branques després de fer un commit a la branca `beguda`.
 
 ??? example "Exemple: Canvis en la branca `neteja`"
     Anem a afegir dos productes al fitxer `neteja.txt` en la branca `neteja`.
@@ -249,10 +234,7 @@ Estructura de branques després de fer un _commit_ a la branca `beguda`.
 
 ![Estructura de branques després de fer un commit a la branca neteja](img/commit_neteja.light.png#only-light)
 ![Estructura de branques després de fer un commit a la branca neteja](img/commit_neteja.dark.png#only-dark)
-/// figure-caption
-    attrs: { id: figure-commit-neteja }
-Estructura de branques després de fer un _commit_ a la branca `neteja`.
-///
+/// figure-caption | #figure-commit-neteja : Estructura de branques després de fer un commit a la branca `neteja`.
 
 
 ### Reanomenar una branca
@@ -308,10 +290,7 @@ git branch [-d | --delete] [-D] [-f | --force] <nom>
 
 ![Estructura de branques després d'eliminar la branca neteja](img/delete_neteja.light.png#only-light)
 ![Estructura de branques després d'eliminar la branca neteja](img/delete_neteja.dark.png#only-dark)
-/// figure-caption
-    attrs: { id: figure-delete-neteja }
-Estructura de branques després d'eliminar la branca `neteja`.
-///
+/// figure-caption | #figure-delete-neteja : Estructura de branques després d'eliminar la branca `neteja`.
 
 
 ## Fusió de branques (`git merge`)
@@ -343,20 +322,14 @@ mantenint una __història lineal__.
 
 ![Estructura de branques abans de la fusió directa](img/before_ff.light.png#only-light)
 ![Estructura de branques abans de la fusió directa](img/before_ff.dark.png#only-dark)
-/// figure-caption
-    attrs: { id: figure-before-ff }
-Estructura de branques abans de la fusió directa.
-///
+/// figure-caption | #figure-before-ff : Estructura de branques abans de la fusió directa.
 
 Aquesta fusió consisteix a avançar el punter de la branca actual (`HEAD`)
 fins on es troba la branca que es vol fusionar.
 
 ![Estructura de branques després de la fusió directa](img/after_ff.light.png#only-light)
 ![Estructura de branques després de la fusió directa](img/after_ff.dark.png#only-dark)
-/// figure-caption
-    attrs: { id: figure-after-ff }
-Estructura de branques després de la fusió directa de la branca `menjar` a la branca `main`.
-///
+/// figure-caption | #figure-after-ff : Estructura de branques després de la fusió directa de la branca `menjar` a la branca `main`.
 
 !!! important "La __fusió directa__ és la forma més senzilla i neta de fusionar branques, ja que no es crea cap _commit_ addicional per fusionar les branques i manté una __història lineal__ i fàcil de seguir."
 
@@ -395,10 +368,7 @@ realitzat canvis que no estan presents en l'altra branca.
 
 ![Història abans de la fusió en branques divergents](img/before_divergent.light.png#only-light)
 ![Història abans de la fusió en branques divergents](img/before_divergent.dark.png#only-dark)
-/// figure-caption
-    attrs: { id: figure-before-no-ff }
-Història abans de la fusió en branques divergents.
-///
+/// figure-caption | #figure-before-no-ff : Estructura de branques abans de la fusió en branques divergents.
 
 En aquest cas, la fusió es realitza mitjançant un __commit de fusió__ (_merge commit_).
 Aquest _commit_ de fusió té dos pares, un per cada branca que es fusiona
@@ -406,10 +376,7 @@ i incorpora els canvis de les dues branques.
 
 ![Història després de la fusió en branques divergents](img/after_divergent.light.png#only-light)
 ![Història després de la fusió en branques divergents](img/after_divergent.dark.png#only-dark)
-/// figure-caption
-    attrs: { id: figure-after-no-ff }
-Història després de la fusió en branques divergents de la branca `beguda` a la branca `main`.
-///
+/// figure-caption | #figure-after-no-ff : Estructura de branques després de la fusió en branques divergents de la branca `beguda` a la branca `main`.
 
 En el moment de realitzar la fusió (`git merge`),
 Git crearà un nou _commit_ de fusió que incorporarà els canvis de les dues branques.
