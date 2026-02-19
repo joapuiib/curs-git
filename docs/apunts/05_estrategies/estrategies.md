@@ -390,13 +390,15 @@ Les característiques d'aquesta opció són:
 Les branques de llançament són branques temporals que s'utilitzen per a preparar el llançament d'una versió.
 Normalment, el prefix de les branques de llançament és `release/`.
 
-Aquestes branques es creen a partir de la branca de desenvolupament `develop`
-i s'utilitzen per a realitzar tasques com:
+Aquestes branques s'utilitzen per a realitzar tasques específiques de preparació per a el llançament, com ara:
 
 - Actualitzar la versió del projecte.
 - Preparar paràmetres de configuració específics per a el llançament.
 
 !!! tip "Si el teu projecte no requereix de tasques específiques per a preparar el llançament, pots prescindir d'aquestes branques i fusionar directament la branca de desenvolupament `develop` amb la branca principal `main`."
+
+A aquestes branques es treballa de la mateixa manera que amb qualsevol branca de funcionalitat,
+amb la única diferència que també can integrar els canvis a la __branca principal__.
 
 El flux de treball amb aquestes branques és el següent:
 
@@ -405,13 +407,13 @@ El flux de treball amb aquestes branques és el següent:
 - S'integren els canvis a la branca de desenvolupament `develop`.
 - S'integren els canvis a la branca de desenvolupament `main`.
 
+!!! info "La integració de la branca `release/*` a `main` i `develop` dependrà de la tècnica d'integració triada"
+
 ![Branques de llançament](img/release.light.png#only-light)
 ![Branques de llançament](img/release.dark.png#only-dark)
 /// figure-caption
 Branques de llançament
 ///
-
-!!! tip "Si el procés de publicació es realitza amb múltiples commits, pots fer ús de `merge --squash` per a integrar els canvis en un únic _commit_ a la branca de desenvolupament `develop`."
 
 
 ## Branques de correcció
