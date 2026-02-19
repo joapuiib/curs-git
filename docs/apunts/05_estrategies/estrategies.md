@@ -47,7 +47,7 @@ cadascuna amb un __propòsit concret__ i una sèrie de regles per crear-les, inc
 
 - __[Branca principal](#branca-principal-i-de-desenvolupament) (`main`):__ Branca on es troba la __versió estable__ del projecte.
 
-- __[Branca de desenvolupament](#branca-principal-i-de-desenvolupament) (`develop`):__ Branca on es troba l'estat actual del projecte,
+- __[Branca de desenvolupament](#branca-principal-i-de-desenvolupament) (`development`, `develop`, `dev`):__ Branca on es troba l'estat actual del projecte,
     on s'incorporen les funcionalitats provades i acabades.
 
     - En un primer moment, es crea a partir de la branca `main`.
@@ -55,12 +55,13 @@ cadascuna amb un __propòsit concret__ i una sèrie de regles per crear-les, inc
         que anirà avançant respecte a la branca `main`.
     - Es fusiona amb la branca `main` quan es prepara una nova versió del projecte.
 
-- __[Branques de funcionalitat](#branques-de-funcionalitat) (`feature/*`):__ Per cada nova funcionalitat es crea una branca independent,
-    on es codifica i es prova la nova funcionalitat.
+- __[Branques de funcionalitat](#branques-de-funcionalitat) (`feature/*`, `feat/*`, `fix/*`, ...):__ Per cada nova funcionalitat
+    es crea una branca independent, on es codifica i es prova la nova funcionalitat.
     
     - Es creen a partir de la branca `develop`.
     - Es fusionen amb la branca `develop` una vegada acabades.
     - Poden ser eliminades després de ser integrades.
+    - Es pot adaptar el prefix de les branques per indicar el tipus de funcionalitat.
 
 - __[Branques de llançament](#branques-de-llancament) (`release/*`):__ Branca on es preparen els canvis
     per poder publicar una nova versió del projecte.
@@ -68,7 +69,7 @@ cadascuna amb un __propòsit concret__ i una sèrie de regles per crear-les, inc
     - Es creen a partir de la branca `develop`.
     - Es fusionen amb les branques `develop` i `main` una vegada acabades.
     - Es poden eliminar una vegada fusionades.
-    - Normalment, es crea una __etiqueta__ amb la versió publicada.
+    - Normalment, es crea una __:octicons-tag-16: etiqueta__ amb la versió publicada.
 
 - __[Branques de correcció](#branques-de-correccio) (`hotfix/*`):__ Branca per corregir errors
     crítics en la versió publicada del projecte.
@@ -386,18 +387,18 @@ Les característiques d'aquesta opció són:
     quan la branca s'esborre després d'integrar-la[^1].
 
 ## Branques de llançament
-Les branques de llançament són branques temporals
-que s'utilitzen per a preparar el llançament d'una versió.
-
+Les branques de llançament són branques temporals que s'utilitzen per a preparar el llançament d'una versió.
 Normalment, el prefix de les branques de llançament és `release/`.
 
-Aquestes branques es creen a partir de la branca de desenvolupament `develop`
-i s'utilitzen per a realitzar tasques com:
+Aquestes branques s'utilitzen per a realitzar tasques específiques de preparació per a el llançament, com ara:
 
 - Actualitzar la versió del projecte.
 - Preparar paràmetres de configuració específics per a el llançament.
 
 !!! tip "Si el teu projecte no requereix de tasques específiques per a preparar el llançament, pots prescindir d'aquestes branques i fusionar directament la branca de desenvolupament `develop` amb la branca principal `main`."
+
+A aquestes branques es treballa de la mateixa manera que amb qualsevol branca de funcionalitat,
+amb la única diferència que també can integrar els canvis a la __branca principal__.
 
 El flux de treball amb aquestes branques és el següent:
 
@@ -406,13 +407,13 @@ El flux de treball amb aquestes branques és el següent:
 - S'integren els canvis a la branca de desenvolupament `develop`.
 - S'integren els canvis a la branca de desenvolupament `main`.
 
+!!! info "La integració de la branca `release/*` a `main` i `develop` dependrà de la tècnica d'integració triada"
+
 ![Branques de llançament](img/release.light.png#only-light)
 ![Branques de llançament](img/release.dark.png#only-dark)
 /// figure-caption
 Branques de llançament
 ///
-
-!!! tip "Si el procés de publicació es realitza amb múltiples commits, pots fer ús de `merge --squash` per a integrar els canvis en un únic _commit_ a la branca de desenvolupament `develop`."
 
 
 ## Branques de correcció
