@@ -36,6 +36,7 @@ theme:
   icon:
     logo: simple/git
 
+  topbar_style: glass
   cover:
     logo: false
     background: false
@@ -77,9 +78,9 @@ plugins:
   - awesome-nav
   - drawio
   - macros
-  - material/tags
-  - material/search
-  - material/social:
+  - materialx/tags
+  - materialx/search
+  - materialx/social:
       enabled: !ENV [CI, false]
   - material-joapuiib/enviorment
   - material-joapuiib/functions:
@@ -148,7 +149,7 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.caret
   - pymdownx.emoji:
-      emoji_index: !!python/name:material_joapuiib.extensions.emoji.twemoji
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.fancylists:
       inject_class: true
