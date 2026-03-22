@@ -97,9 +97,9 @@ if [ $BUILD -eq 1 ]; then
 fi
 
 if [ $CI -eq 0 ]; then
-    mkdocs $COMMAND $ARGS
+    properdocs $COMMAND $ARGS
 else
-    CI=true mkdocs $COMMAND $ARGS
+    CI=true properdocs $COMMAND $ARGS
 fi
 if [ $? -ne 0 ]; then
     print "Error building site."

@@ -57,7 +57,7 @@ jobs: # Llista de tasques a executar
           sudo apt update
           sudo apt install hunspell -y
       - name: Build documents # Acció per compilar la documentació
-        run: CI=false mkdocs build --clean
+        run: CI=false properdocs build --clean
 
       - name: Download dictionary # Acció per descarregar el diccionari que s'utilitzarà en el corrector ortogràfic
         run: |
