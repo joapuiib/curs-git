@@ -35,12 +35,14 @@ LICENSE
 l'IDE
 linters
 macOS
+MaterialX
 md
 MkDocs
 MoureDev
 OneFlow
 PhpStorm
 PowerShell
+ProperDocs
 PyCharm
 Pygments
 PyMdown
