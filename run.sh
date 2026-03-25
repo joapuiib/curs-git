@@ -150,7 +150,7 @@ if [ $SPELL -eq 1 ]; then
                 SOURCES="$SOURCES -S $FILE"
             fi
         done
-        SPELL_ARGS="$SPELL_ARGS --name mkdocs $SOURCES"
+        SPELL_ARGS="$SPELL_ARGS --name docs $SOURCES"
     fi
 
     print "Running pyspelling..."

@@ -79,5 +79,5 @@ jobs: # Llista de tasques a executar
               echo "No files to check"
               exit 0
           fi
-          SPELL_ARGS="$SPELL_ARGS --name mkdocs $SOURCES"
+          SPELL_ARGS="$SPELL_ARGS --name docs $SOURCES"
           pyspelling $SPELL_ARGS
