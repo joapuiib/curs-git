@@ -129,6 +129,11 @@ A més, és important seguir les següents consideracions:
 
     > Revisa el text abans de publicar la _Pull Request_ per assegurar-te que no hi ha errors.
 
+- El document ha de tindre un format :material-language-markdown-outline: Markdown correcte.
+
+    > Revisa el format del document abans de publicar la _Pull Request_ per assegurar-te que el format és correcte i que es visualitza bé
+    > (ho pots fer des de :simple-github: GitHub o a [Markdown Live Preview](https://markdownlivepreview.com/)).
+
 - Evita crear duplicats de les aportacions ja existents. Pots ampliar aportacions anteriors, però no crear una aportació que ja existeix.
 
     > Revisa el repositori abans de crear la teua aportació per assegurar-te que no hi ha una aportació similar a la que vols fer.
