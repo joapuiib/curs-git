@@ -31,7 +31,7 @@ Si trobeu alguna errada en el material, podeu comunicar-la mitjançant l'apartat
 
 
 ## :material-lightbulb-on-20: Suggeriments
-Si voleu fer alguna suggerència o millora, podeu fer-ho mitjançant l'apartat
+Si voleu fer alguna suggerència o proposta de millora, podeu fer-ho mitjançant l'apartat
 [__:octicons-comment-discussion-16: Debats al repositori de :material-github: GitHub__][Discussions].
 
   [Discussions]: https://github.com/joapuiib/curs-git/discussions
