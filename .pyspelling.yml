@@ -2,7 +2,7 @@ spellchecker: hunspell
 jobs: 8
 
 matrix:
-  - name: mkdocs
+  - name: docs
     pipeline:
       - pyspelling.filters.html:
           comments: false

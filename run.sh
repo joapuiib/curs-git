@@ -10,6 +10,8 @@ function print_error {
     RESET="\033[0m"
     echo -e "${RED}$1${RESET}"
 }
+VENV_DIR=".venv"
+GENERATOR="properdocs"
 
 BUILD=0
 CI=0
@@ -72,24 +74,24 @@ if [ -n "$ACT" ]; then
     exit
 fi
 
-if [ ! -d "venv" ]; then
+if [ ! -d "$VENV_DIR" ]; then
     INSTALL_VENV=1
     print "Virtual environment not found."
 fi
 
 if [ $INSTALL_VENV -eq 1 ]; then
-    if [ -d "venv" ]; then
+    if [ -d "$VENV_DIR" ]; then
         print "Removing existing virtual environment..."
-        rm -rf venv
+        rm -rf $VENV_DIR
     fi
 
     print "Installing virtual environment..."
-    python3 -m venv venv
+    python3 -m venv $VENV_DIR
     print "Installing dependencies"
-    ./venv/bin/pip install -r requirements.txt
+    $VENV_DIR/bin/pip install -r requirements.txt
 fi
 
-source venv/bin/activate
+source $VENV_DIR/bin/activate
 
 COMMAND="serve --livereload"
 if [ $BUILD -eq 1 ]; then
@@ -97,9 +99,9 @@ if [ $BUILD -eq 1 ]; then
 fi
 
 if [ $CI -eq 0 ]; then
-    mkdocs $COMMAND $ARGS
+    $GENERATOR $COMMAND $ARGS
 else
-    CI=true mkdocs $COMMAND $ARGS
+    CI=true $GENERATOR $COMMAND $ARGS
 fi
 if [ $? -ne 0 ]; then
     print "Error building site."
@@ -142,14 +144,13 @@ if [ $SPELL -eq 1 ]; then
             fi
         fi
         SPELL_SOURCES=$(echo "$SPELL_SOURCES" | grep 'docs/.*\.md$' | sed 's/\/index//' | sed 's/docs/site/' | sed 's/.md$/\/index.html/')
-        echo $SPELL_SOURCES
 
         for FILE in $SPELL_SOURCES; do
             if [ -f $FILE ]; then
                 SOURCES="$SOURCES -S $FILE"
             fi
         done
-        SPELL_ARGS="$SPELL_ARGS --name mkdocs $SOURCES"
+        SPELL_ARGS="$SPELL_ARGS --name docs $SOURCES"
     fi
 
     print "Running pyspelling..."
