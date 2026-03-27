@@ -18,10 +18,10 @@ jobs: # Llista de tasques a executar
   build: # Nom de la tasca
     runs-on: ubuntu-latest # Sistema operatiu on s'executarà la tasca
     steps: # Passos a executar
-      - uses: actions/checkout@v4 # Acció per clonar i còpiar el repositori a l'entorn d'execució
+      - uses: actions/checkout@v6 # Acció per clonar i còpiar el repositori a l'entorn d'execució
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v5 # Acció per configurar Python
+      - uses: actions/setup-python@v6 # Acció per configurar Python
         with:
           python-version: 3.x
           cache: 'pip'
@@ -30,7 +30,7 @@ jobs: # Llista de tasques a executar
       - name: Build # Acció per compilar la documentació
         run: mkdocs build --clean
       - name: Upload static files as artifact # Acció per pujar els fitxers estàtics com a artefacte
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./site/ # Ruta dels fitxers estàtics generats per MkDocs
 
@@ -43,4 +43,4 @@ jobs: # Llista de tasques a executar
     steps: # Passos a executar
       - name: Deploy to GitHub Pages # Acció per desplegar a GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
