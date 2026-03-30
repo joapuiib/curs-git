@@ -185,6 +185,15 @@ Les tasques d'automatització s'executen automàticament
 quan es compleixen les condicions definides en la secció `on`
 de la configuració.
 
+```yaml
+on:
+  push:
+    branches:
+      - main
+```
+
+!!! docs "[:octicons-link-external-16: Events that trigger workflows](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows) – :simple-github: GitHub Docs"
+
 A la secció :octicons-play-24: Actions es poden consultar les execucions de les tasques d'automatització
 definides en el repositori.
 
@@ -289,6 +298,21 @@ Per a configurar un secret, cal anar a la secció __:octicons-gear-24: Settings_
 
 ![Configuració de secrets en GitHub Actions](img/cicd/secrets.png)
 /// figure-caption | .shadow : Configuració de secrets en GitHub Actions.
+
+Aquests secrets poden utilitzar-se com a variables en els fitxers de configuració dels fluxos de treball,
+i el seu valor serà substituït de manera segura durant l'execució d'aquests.
+
+{% raw %}
+```yaml
+steps:
+  - name: Login a Docker Hub
+    uses: docker/login-action@v3
+    with:
+      username: ${{ secrets.DOCKERHUB_USERNAME }}
+      password: ${{ secrets.DOCKERHUB_TOKEN }}
+```
+{% endraw %}
+
 
 !!! docs "[:octicons-link-external-16: Using secrets in GitHub Actions](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets) – :simple-github: GitHub Docs"
 
