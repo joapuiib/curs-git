@@ -13,13 +13,13 @@ alias: auth-slides
 
 ## Repositori remot
 
-<img class="r-stretch" src="../../01_introduccio/img/components.png">
+<img class="r-stretch" src="../../01_introduccio/img/components.light.png">
 
 ---
 
 ## Desenvolupament distribuït
 
-<img class="r-stretch" src="../img/multiple_local_repo.png">
+<img class="r-stretch" src="../img/multiple_local_repo.light.png">
 
 ---
 

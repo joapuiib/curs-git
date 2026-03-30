@@ -50,7 +50,7 @@ https://gitlab.com
 
 ## Estructura d'un repositori
 
-<img src="../img/components.png">
+<img src="../img/components.light.png">
 
 ---
 
@@ -80,7 +80,7 @@ git init
 git add <path>
 ```
 
-<img src="../img/staged_readme.png">
+<img src="../img/staged_readme.light.png">
 
 ---
 
@@ -90,7 +90,7 @@ git add <path>
 git commit [-m <message>]
 ```
 
-<img src="../img/after_commit_readme.png">
+<img src="../img/after_commit_readme.light.png">
 
 ---
 
@@ -122,7 +122,7 @@ git show [ref]
 git diff [--staged]
 ```
 
-<img src="../img//resum_diff.png">
+<img src="../img//resum_diff.light.png">
 
 ---
 
@@ -133,7 +133,7 @@ git diff [--staged]
 git restore <files>
 ```
 
-<img src="../img/flux_treball.png" height="450px">
+<img src="../img/flux_treball.light.png" height="450px">
 
 ---
 
