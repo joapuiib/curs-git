@@ -287,7 +287,12 @@ Són variables d'entorn que es poden utilitzar en les tasques d'automatització,
 
 Per a configurar un secret, cal anar a la secció __:octicons-gear-24: Settings__ del repositori, a l'apartat __:octicons-key-asterisk-16: Secrets and variables > Actions__.
 
+![Configuració de secrets en GitHub Actions](img/cicd/secrets.png)
+/// figure-caption | .shadow : Configuració de secrets en GitHub Actions.
+
 !!! docs "[:octicons-link-external-16: Using secrets in GitHub Actions](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets) – :simple-github: GitHub Docs"
+
+!!! example "Exemple: [[actions-exemples#creacio-duna-imatge-de-docker]]"
 
 ## :octicons-browser-24: GitHub Pages
 __[:octicons-browser-24: GitHub Pages][pages]__ és un servei de GitHub que permet publicar llocs web
