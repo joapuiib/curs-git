@@ -10,12 +10,12 @@ Per veure com combinar totes aquestes opcions, anem a veure diferents exemples
 d'automatitzacions en projectes de naturalesa distinta.
 
 
-### Publicació d'un lloc web estàtic generat amb MkDocs a GitHub Pages
+### Publicació d'un lloc web estàtic generat amb ProperDocs a GitHub Pages
 !!! success "Exemple en el repositori d'aquesta documentació: [`curs-git`][curs-git]"
 
 [curs-git]: {{ config.repo_url }}
 
-La següent automatització permet __generar aquest lloc web__ amb [MkDocs][mkdocs]
+La següent automatització permet __generar aquest lloc web__ amb [ProperDocs][properdocs]
 i __publicar-lo__ a [:octicons-browser-24: GitHub Pages][pages].
 
 Aquesta acció s'executa sempre que es publiquen nous canvis sobre la branca `main`. També es pot executar manualment.
@@ -27,7 +27,7 @@ Els passos que la componen són els següents:
     - Còpia els fitxers del repositori amb l'acció predefinida [`actions/checkout`][actions-checkout].
     - Configura Python amb l'acció predefinida [`actions/setup-python`][actions-setup-python].
     - Instal·la les dependències necessàries per executar MkDocs.
-    - Compila el lloc web amb l'ordre `mkdocs build`.
+    - Compila el lloc web amb l'ordre `properdocs build`.
     - Emmagatzema el directori amb la documentació generada (`site/`) com a artefacte per a la
         següent tasca amb l'acció predefinida [`actions/upload-pages-artifact`][actions-upload-pages-artifact].
 2. __Publica el lloc web a :octicons-browser-24: GitHub Pages.__
@@ -35,7 +35,7 @@ Els passos que la componen són els següents:
     - Publica l'artefacte generat en la tasca anterior l'acció predefinida [`actions/deploy-pages`][actions-deploy-pages].
 
 
-[mkdocs]: https://www.mkdocs.org/
+[properdocs]: https://www.properdocs.org/
 [pages]: https://pages.github.com/
 [actions-checkout]: https://github.com/marketplace/actions/checkout
 [actions-setup-python]: https://github.com/marketplace/actions/setup-python
@@ -79,7 +79,7 @@ evitant així executar-la innecessàriament quan es modifiquen altres fitxers.
 ```
 
 ### Execució de proves unitàries i d'integració en un projecte Java amb Maven
-!!! example "Repositori d'exemple: [`tasklist-api`][tasklist-api]"
+!!! success "Repositori d'exemple: [`tasklist-api`][tasklist-api]"
     Podeu observar el seu comportament en la :octicons-git-pull-request-16: Pull Request [feature: tasks can be marked as favorites (#1)][pr].
 
     1. En el :octicons-git-commit-16: commit [`2ca7024` – feature: tasks can be marked as favorites][pr-skip] no s'han executat les proves
