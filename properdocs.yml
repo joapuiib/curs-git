@@ -35,6 +35,7 @@ theme:
   custom_dir: overrides
   icon:
     logo: simple/git
+  favicon: simple/git
 
   topbar_style: glass
   cover:
