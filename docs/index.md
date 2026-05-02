@@ -26,7 +26,7 @@ per mitjà de fluxos de treball definits en un repositori de :simple-github: Git
 
 
 ## Característiques
-- __:octicons-calendar-16: Temporització__: Del 16 de febrer al 20 d'abril de 2026.
+- __:octicons-calendar-16: Temporització__: Del 4 de maig al 28 de juny de 2026.
 - __:material-laptop: Modalitat__: En línia.
 - __:octicons-clock-16: Durada__: 40 hores.
 

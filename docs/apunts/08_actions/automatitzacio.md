@@ -365,7 +365,7 @@ GitHub Pages pot ser configurat per publicar-se de dues maneres diferents:
     per generar les pàgines HTML, sinó que les pàgines ja estan generades
     i són servides directament.
 
-!!! example "Exemple: [[actions-exemples#publicacio-dun-lloc-web-estatic-generat-amb-mkdocs-a-github-pages]]"
+!!! example "Exemple: [[actions-exemples#publicacio-dun-lloc-web-estatic-generat-amb-properdocs-a-github-pages]]"
 
 ## Bibliografia
 - [:octicons-link-external-16: What is CI/CD](https://about.gitlab.com/topics/ci-cd/) – :simple-gitlab: GitLab
