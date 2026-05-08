@@ -33,5 +33,5 @@ En aquest bloc es treballaran operacions més avançades de [__:simple-git: Git_
 ///
 
 /// html | div.timeline.success.check
-[[avancat-exercici]]: Exercici pràctic d'aquest bloc.
+[[avancat-exercici]]
 ///

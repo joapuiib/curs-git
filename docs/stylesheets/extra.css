@@ -28,3 +28,48 @@
 .pr-closed {
   color: #b60205;
 }
+
+/* Tighten hero top spacing on landing */
+.md-typeset .landing-hero {
+  padding-top: 1rem;
+}
+
+/* Primary-colored card icons (extends landing rule globally) */
+.md-typeset .grid.cards .twemoji.lg,
+.md-typeset .grid.cards .twemoji:first-child {
+  color: var(--md-primary-fg-color);
+}
+
+/* Utility: primary color on inline icon */
+.md-typeset .twemoji.primary {
+  color: var(--md-primary-fg-color);
+}
+
+/* Force 2-column card grid */
+.md-typeset .grid.cards.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 600px) {
+  .md-typeset .grid.cards.grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Landing page sponsor/institution logos (top of page, inline SVG) */
+.landing-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin: 0 auto 1.5rem;
+  padding: 0.5rem 1rem;
+  max-width: 60rem;
+}
+
+.landing-logos svg,
+.landing-logos img {
+  max-height: 2.8rem;
+  width: auto;
+}

@@ -16,10 +16,13 @@ GENERATOR="properdocs"
 BUILD=0
 CI=0
 INSTALL_VENV=0
+UPGRADE=0
 SPELL=0
 ACT=''
 ALL=0
 SPELL_SOURCES=''
+COPILOT=0
+SKIP=0
 
 ARGS=''
 SPELL_ARGS=''
@@ -31,8 +34,11 @@ while [ $# -gt 0 ] ; do
         --ci)
             CI=1
             ;;
-        --install-venv)
+        -i | --install-venv)
             INSTALL_VENV=1
+            ;;
+        -u | --upgrade)
+            UPGRADE=1
             ;;
         --spell)
             BUILD=1
@@ -45,6 +51,12 @@ while [ $# -gt 0 ] ; do
             ;;
         --all)
             ALL=1
+            ;;
+        --skip)
+            SKIP=1
+            ;;
+        --copilot)
+            COPILOT=1
             ;;
         --act)
             ACT=$2
@@ -89,6 +101,9 @@ if [ $INSTALL_VENV -eq 1 ]; then
     python3 -m venv $VENV_DIR
     print "Installing dependencies"
     $VENV_DIR/bin/pip install -r requirements.txt
+elif [ $UPGRADE -eq 1 ]; then
+    print "Upgrading dependencies..."
+    $VENV_DIR/bin/pip install --upgrade -r requirements.txt
 fi
 
 source $VENV_DIR/bin/activate
@@ -153,10 +168,34 @@ if [ $SPELL -eq 1 ]; then
         SPELL_ARGS="$SPELL_ARGS --name docs $SOURCES"
     fi
 
-    print "Running pyspelling..."
-    echo "pyspelling $SPELL_ARGS"
-    pyspelling $SPELL_ARGS | tee pyspelling.log
-    if [ ${PIPESTATUS[0]} -ne 0 ]; then
-        less pyspelling.log
+    SPELLING_OK=0
+    if [ $SKIP -eq 1 -a -f pyspelling.log ]; then
+        print "Skipping spelling check. Using previous results from pyspelling.log"
+        SPELLING_OK=1
+    else
+        print "Running pyspelling..."
+        echo "pyspelling $SPELL_ARGS"
+        pyspelling $SPELL_ARGS | tee pyspelling.log
+        SPELLING_OK=${PIPESTATUS[0]}
+    fi
+    if [ $SPELLING_OK -ne 0 ]; then
+        if [ $COPILOT -eq 1 ]; then
+            print "Running copilot for fixing spell..."
+            if ! which copilot &>/dev/null; then
+                print_error "copilot not found"
+                exit 1
+            fi
+            if [ ! -f docs/_prompts/fix-spelling.md ]; then
+                print_error "Prompt file not found: docs/_prompts/fix-spelling.md"
+                exit 1
+            fi
+            if [ ! -f pyspelling.log ]; then
+                print "File pyspelling.log not found, nothing to fix."
+                exit 0
+            fi
+            copilot --allow-all-tools < docs/_prompts/fix-spelling.md
+        else
+            less pyspelling.log
+        fi
     fi
 fi

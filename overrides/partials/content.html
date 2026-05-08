@@ -1,0 +1,21 @@
+{% if "material/tags" in config.plugins and tags %}
+  {% include "partials/tags.html" %}
+{% endif %}
+{% include "partials/actions.html" %}
+{% set is_landing = page.meta and page.meta.landing %}
+{% if is_landing %}
+<div class="landing">
+<div class="landing-logos">
+{% include "img/ministeri.svg" %}
+{% include "img/fse.svg" %}
+{% include "img/conselleria.svg" %}
+{% include "img/fpcv_cefire.svg" %}
+</div>
+{% endif %}
+{{ page.content }}
+{% if is_landing %}
+</div>
+{% endif %}
+{% include "partials/source-file.html" %}
+{% include "partials/feedback.html" %}
+{% include "partials/comments.html" %}

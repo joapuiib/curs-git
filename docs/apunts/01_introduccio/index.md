@@ -17,11 +17,12 @@ de [__:simple-git: Git__][git] i com configurar-lo localment.
 ///
 /// html | div.timeline
 [[introduccio]]: Introducció i conceptes bàsics.
-> [[introduccio-slides]]
+
+[[introduccio-slides]]
 ///
 /// html | div.timeline.dashed
-[[introduccio-resum]]: Resum de les comandes d'aquest bloc.
+[[introduccio-resum]]
 ///
 /// html | div.timeline.success.check
-[[introduccio-exercici]]: Exercici pràctic d'aquest bloc.
+[[introduccio-exercici]]
 ///

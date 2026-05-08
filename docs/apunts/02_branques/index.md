@@ -17,13 +17,13 @@ i com es treballa amb elles.
 - Canvi de base.
 - Resolució de conflictes.
 
-> [[branques-slides]]
+[[branques-slides]]
 ///
 
 /// html | div.timeline.dashed
-[[branques-resum]]: Resum de les comandes d'aquest bloc.
+[[branques-resum]]
 ///
 
 /// html | div.timeline.success.check
-[[branques-exercici]]: Exercici pràctic d'aquest bloc.
+[[branques-exercici]]
 ///

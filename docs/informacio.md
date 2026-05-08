@@ -5,7 +5,7 @@ hide:
 
 # Informació
 
-## :fontawesome-regular-face-smile-beam: Si t'ha agradat aquest curs...
+## :fontawesome-regular-face-smile-beam:{ .primary } Si t'ha agradat aquest curs...
 Si aquest curs t'ha semblat útil i interessant,
 dona-li una :star:{ title="Estrella" .star }
 al [__repositori de :simple-github: GitHub__][curs-git]!
@@ -13,42 +13,44 @@ al [__repositori de :simple-github: GitHub__][curs-git]!
   [curs-git]: https://github.com/joapuiib/curs-git
 
 
-## :simple-creativecommons: Llicència
-Aquest material està llicenciat baix la llicència
-[__Creative Commons :simple-creativecommons: Reconeixement-NoComercial-CompartirIgual 4.0 Internacional__][license].
-
 [license]: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca
+[Issues]: https://github.com/joapuiib/curs-git/issues
+[Discussions]: https://github.com/joapuiib/curs-git/discussions
+[pr]: https://github.com/joapuiib/curs-git/pulls
+
+/// html | div.grid.cards.grid-2
+- :simple-creativecommons:{ .lg .middle } __Llicència__
+
+    ---
+
+    Material llicenciat baix [__Creative Commons :simple-creativecommons: Reconeixement-NoComercial-CompartirIgual 4.0 Internacional__][license].
+
+- :material-file-document-remove-outline:{ .lg .middle } __Correccions__
+
+    ---
+
+    Comunica errades mitjançant [__:octicons-issue-opened-16: Incidències__][Issues] indicant:
+
+    1. L'adreça de la pàgina on s'ha trobat l'errada.
+    2. La correcció a realitzar.
+
+- :material-lightbulb-on-20:{ .lg .middle } __Suggeriments__
+
+    ---
+
+    Proposa millores mitjançant [__:octicons-comment-discussion-16: Debats__][Discussions] al repositori.
+
+- :material-source-pull:{ .lg .middle } __Contribucions__
+
+    ---
+
+    Obri una [__:material-source-pull: Pull Request__][pr] amb els canvis proposats.
+
+    Es recomana obrir abans una [__:octicons-issue-opened-16: Incidència__][Issues] o [__:octicons-comment-discussion-16: Debat__][Discussions] per debatre el canvi.
+///
 
 
-## :material-file-document-remove-outline: Correccions
-Si trobeu alguna errada en el material, podeu comunicar-la mitjançant l'apartat
-[__:octicons-issue-opened-16: Incidències al repositori de :material-github: GitHub__][Issues] indicant:
-
-  [Issues]: https://github.com/joapuiib/curs-git/issues
-
-1. L'adreça de la pàgina on s'ha trobat l'errada.
-2. La correcció a realitzar.
-
-
-## :material-lightbulb-on-20: Suggeriments
-Si voleu fer alguna suggerència o proposta de millora, podeu fer-ho mitjançant l'apartat
-[__:octicons-comment-discussion-16: Debats al repositori de :material-github: GitHub__][Discussions].
-
-  [Discussions]: https://github.com/joapuiib/curs-git/discussions
-
-## :material-source-pull: Contribucions
-Aquest repositori accepta contribucions.
-
-Si voleu contribuir al material,
-podeu obrir una __[:material-source-pull: Pull Request][pr]__ amb els canvis proposats.
-
-  [pr]: https://github.com/joapuiib/curs-git/pulls
-
-No obstant això, es recomana obrir una [__:octicons-issue-opened-16: Incidència__][Issues]
-o [:octicons-comment-discussion-16: __Debat__][Discussions] abans per debatre el canvi.
-
-
-## :fontawesome-solid-laptop-code: Desenvolupament
+## :fontawesome-solid-laptop-code:{ .primary } Desenvolupament
 Aquest lloc web està desenvolupat amb les següents eines i llibreries:
 
 - __[:octicons-book-16: ProperDocs](https://www.properdocs.org/){:target="_blank"}__: Generador de llocs web estàtics amb Markdown basat en Python.

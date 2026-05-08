@@ -1,34 +1,51 @@
 ---
-template: document.html
 title: Inici
-cover:
-    title: Introducció a Git i GitHub Actions
-    icon: simple/git
 hide:
-  - navigation
+    - navigation
+    - toc
+landing: true
 ---
 
 *[CI/CD]: Continuous Integration/Continuous Deployment
 
-## Descripció del curs
-Aquest curs tracta sobre la incorporació de l'eina de control de versions __:simple-git: Git__
-i la plataforma d'allotjament de repositoris __:simple-github: GitHub__ a l'aula.
+/// html | div.landing-hero
+Curs Formació per al Professorat
+{ .eyebrow }
 
-En els primers blocs es presenten els conceptes bàsics de :simple-git: Git i el seu funcionament.
-A continuació, es presenten les funcionalitats més avançades i estratègies de treball
-en projectes de programari col·laboratius.
+# Introducció a Git i GitHub Actions
 
-A continuació, es presenten les funcionalitats que proporciona __:simple-github: GitHub__
-per a la gestió de projectes i com en podem fer ús en l'àmbit educatiu.
+Control de versions amb :simple-git: __Git__, gestió de projectes col·laboratius amb :simple-github: __GitHub__ i automatització de tasques amb :octicons-play-16: __GitHub Actions__ aplicats a l'aula.
+{ .subtitle }
 
-Per últim, es presenta la ferramenta __:octicons-play-16: GitHub Actions__, que permet automatitzar tasques
-per mitjà de fluxos de treball definits en un repositori de :simple-github: GitHub.
+[:octicons-arrow-right-24: Comença el curs](apunts/01_introduccio/index.md){ .md-button .md-button--primary } [:fontawesome-brands-github: GitHub](https://github.com/joapuiib/curs-git){ .md-button }
+{ .actions }
+///
 
+/// html | div.grid.cards
+- :octicons-calendar-16:{ .lg .middle } __Temporització__
 
-## Característiques
-- __:octicons-calendar-16: Temporització__: Del 4 de maig al 28 de juny de 2026.
-- __:material-laptop: Modalitat__: En línia.
-- __:octicons-clock-16: Durada__: 40 hores.
+    ---
+
+    Del 4 de maig al 28 de juny de 2026.
+
+- :material-laptop:{ .lg .middle } __Modalitat__
+
+    ---
+
+    En línia.
+
+- :octicons-clock-16:{ .lg .middle } __Durada__
+
+    ---
+
+    40 hores.
+
+- :material-account-school:{ .lg .middle } __Dirigit a__
+
+    ---
+
+    Professorat de la família professional d'Informàtica i Comunicacions.
+///
 
 
 ## Objectius específics
@@ -44,55 +61,85 @@ per mitjà de fluxos de treball definits en un repositori de :simple-github: Git
 
 
 ## Continguts específics
-- __[[introduccio-index]]__
+
+/// html | div.grid.cards
+- :simple-git:{ .lg .middle } __[[introduccio-index]]__
+
+    ---
+
     - Instal·lació.
     - Configuració.
     - Estructura d'un repositori.
     - Flux de treball.
     - Inicialització d'un repositori.
     - Realització de canvis: `add` i `commit`.
-- __[[branques-index]]__
+
+- :material-source-branch:{ .lg .middle } __[[branques-index]]__
+
+    ---
+
     - Creació de branques.
     - Navegar entre branques.
     - Sincronització de branques.
     - Fusió de branques: `merge`.
     - Canvi de base: `rebase`.
     - Resolució de conflictes.
-- __[[remots-index]]__
+
+- :octicons-repo-16:{ .lg .middle } __[[remots-index]]__
+
+    ---
+
     - Creació d'un repositori remot a GitHub.
     - Configurar un repositori remot.
     - Mètodes d'autenticació.
     - Clonació d'un repositori remot.
     - Associació entre branques locals i remotes.
     - Publicació i incorporació de canvis.
-- __[[avancat-index]]__
+
+- :material-tools:{ .lg .middle } __[[avancat-index]]__
+
+    ---
+
     - Etiquetes: `tags`.
     - Reserva de canvis: `stash`.
     - Eliminació de canvis: `reset` i `revert`.
     - Còpia de canvis: `cherry-pick`.
     - Fusió de canvis en un sol commit: `squash`.
-- __[[estrategies-index]]__
-    - Flux de de treball col·laboratiu.
+
+- :material-sitemap:{ .lg .middle } __[[estrategies-index]]__
+
+    ---
+
+    - Flux de treball col·laboratiu.
     - Branques de propòsit únic.
     - Tècniques d'integració de branques de funcionalitat.
-- __[[projectes-index]]__
+
+- :octicons-project-16:{ .lg .middle } __[[projectes-index]]__
+
+    ---
+
     - Debats (_discussions_).
     - Incidències (_issues_).
     - Fites (_milestones_).
     - GitHub Projects.
-    - Forks
+    - Forks.
     - Pull Requests.
-- __[[educativa-index]]__
+
+- :material-school:{ .lg .middle } __[[educativa-index]]__
+
+    ---
+
     - Beneficis de GitHub Education.
     - Organitzacions i equips a GitHub.
     - Estratègies per a l'ús de Git i GitHub a l'aula.
-- __[[actions-index]]__
+
+- :octicons-play-16:{ .lg .middle } __[[actions-index]]__
+
+    ---
+
     - Automatització de tasques amb GitHub Actions.
     - GitHub Pages.
-
-
-## Dirigit a
-- Professorat de la família professional d'Informàtica i Comunicacions.
+///
 
 
 ## Condicions per superar el curs

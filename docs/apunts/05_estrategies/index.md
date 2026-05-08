@@ -23,9 +23,9 @@ projectes col·laboratius.
 - Tècniques d'incorporació de canvis.
 - Flux de treball.
 
-[[estrategies-example]] simulat entre diversos col·laboradors.
+[[estrategies-example]]: Exemple simulat entre diversos col·laboradors.
 ///
 
 /// html | div.timeline.success.check
-[[estrategies-exercici]]: Exercici pràctic d'aquest bloc.
+[[estrategies-exercici]]
 ///

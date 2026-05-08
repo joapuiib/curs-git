@@ -29,7 +29,7 @@ per gestionar projectes col·laboratius.
 ///
 
 /// html | div.timeline.success.check
-[[projectes-exercici]]: Exercici pràctic d'aquest bloc.
+[[projectes-exercici]]
 ///
 
 [discussions]: eines_gestio.md#debats

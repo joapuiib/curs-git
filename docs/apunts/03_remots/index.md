@@ -13,7 +13,8 @@ com es creen i com allotjar-los a __[:simple-github: GitHub][github]__.
 
 /// html | div.timeline
 [[auth]]: Configuració de l'autenticació a __[:simple-github: GitHub][github]__.
-> [[auth-slides]]
+
+[[auth-slides]]
 ///
 
 /// html | div.timeline
@@ -22,13 +23,13 @@ com es creen i com allotjar-los a __[:simple-github: GitHub][github]__.
 - Creació i gestió de repositoris remots.
 - Sincronització entre repositoris locals i remots.
 
-> [[remots-slides]]
+[[remots-slides]]
 ///
 
 /// html | div.timeline.dashed
-[[remots-resum]]: Resum de les comandes d'aquest bloc.
+[[remots-resum]]
 ///
 
 /// html | div.timeline.success.check
-[[remots-exercici]]: Exercici pràctic d'aquest bloc.
+[[remots-exercici]]
 ///
