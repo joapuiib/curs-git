@@ -73,3 +73,18 @@
   max-height: 2.8rem;
   width: auto;
 }
+
+@media (max-width: 600px) {
+  .landing-logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 1.5rem;
+    justify-items: center;
+  }
+
+  .landing-logos svg,
+  .landing-logos img {
+    max-height: 1.8rem;
+    max-width: 100%;
+  }
+}
