@@ -1,0 +1,184 @@
+# Custom social card layout — modern dark theme with deep-orange accent
+# Represents a Git + GitHub Actions course
+
+# -----------------------------------------------------------------------------
+# Configuration
+# -----------------------------------------------------------------------------
+
+definitions:
+
+  # Palette
+  - &background_color "#13151a"
+  - &accent_color     "#ff6e42"
+  - &accent_soft      "#ff6e4222"
+  - &text_color       "#ffffff"
+  - &muted_color      "#b8bcc4"
+  - &footer_color     "#ff8a63"
+
+  # Typography
+  - &font_family >-
+    {%- if layout.font_family -%}
+      {{ layout.font_family }}
+    {%- elif config.theme.font is mapping -%}
+      {{ config.theme.font.get("text", "Roboto") }}
+    {%- else -%}
+      Roboto
+    {%- endif -%}
+
+  # Site name — hidden on homepage so the title takes the spotlight
+  - &site_name >-
+    {%- if not page.is_homepage -%}
+      {{ config.site_name }}
+    {%- endif -%}
+
+  # Page title — on the homepage, swap in the site name so it can render large
+  - &page_title >-
+    {%- if layout.title -%}
+      {{ layout.title }}
+    {%- elif page.is_homepage -%}
+      {{ config.site_name }}
+    {%- else -%}
+      {{ page.meta.get("title", page.title) }}
+    {%- endif -%}
+
+  # Page title with site name (used for og/twitter meta)
+  - &page_title_with_site_name >-
+    {%- if not page.is_homepage -%}
+      {{ page.meta.get("title", page.title) }} - {{ config.site_name }}
+    {%- else -%}
+      {{ config.site_name }}
+    {%- endif -%}
+
+  # Page description
+  - &page_description >-
+    {%- if layout.description -%}
+      {{ layout.description }}
+    {%- else -%}
+      {{ page.meta.get("description", config.site_description) | x }}
+    {%- endif -%}
+
+  # Footer (author + URL)
+  - &footer_text >-
+    {{ config.site_author }} · {{ config.site_url | replace("https://", "") | replace("http://", "") | trim("/") }}
+
+  # Watermark icon — Git logo as decorative background element
+  - &watermark_icon "simple/git"
+
+  # Logo icon (top-left chip)
+  - &logo_icon >-
+    {%- if config.theme.icon and config.theme.icon.logo -%}
+      {{ config.theme.icon.logo | x }}
+    {%- else -%}
+      simple/git
+    {%- endif -%}
+
+# -----------------------------------------------------------------------------
+# Meta tags
+# -----------------------------------------------------------------------------
+
+tags:
+  og:type: website
+  og:title: *page_title_with_site_name
+  og:description: *page_description
+  og:image: "{{ image.url }}"
+  og:image:type: "{{ image.type }}"
+  og:image:width: "{{ image.width }}"
+  og:image:height: "{{ image.height }}"
+  og:url: "{{ page.canonical_url }}"
+
+  twitter:card: summary_large_image
+  twitter:title: *page_title_with_site_name
+  twitter:description: *page_description
+  twitter:image: "{{ image.url }}"
+
+# -----------------------------------------------------------------------------
+# Specification
+# -----------------------------------------------------------------------------
+
+size: { width: 1200, height: 630 }
+
+layers:
+
+  # 1. Dark base background
+  - background:
+      color: *background_color
+
+  # 2. Watermark Git icon — large, semi-transparent on the right
+  - size: { width: 560, height: 560 }
+    offset: { x: 700, y: 35 }
+    icon:
+      value: *watermark_icon
+      color: *accent_soft
+
+  # 3. Top accent bar
+  - size: { width: 1200, height: 8 }
+    offset: { x: 0, y: 0 }
+    background:
+      color: *accent_color
+
+  # 4. Logo chip (top-left)
+  - size: { width: 56, height: 56 }
+    offset: { x: 64, y: 64 }
+    icon:
+      value: *logo_icon
+      color: *accent_color
+
+  # 5. Site name (next to logo)
+  - size: { width: 900, height: 56 }
+    offset: { x: 140, y: 72 }
+    typography:
+      content: *site_name
+      align: start
+      color: *text_color
+      overflow: shrink
+      font:
+        family: *font_family
+        style: Bold
+
+  # 6. Accent divider under header
+  - size: { width: 80, height: 4 }
+    offset: { x: 64, y: 188 }
+    background:
+      color: *accent_color
+
+  # 7. Page title — large, bold, multi-line
+  - size: { width: 1000, height: 280 }
+    offset: { x: 64, y: 220 }
+    typography:
+      content: *page_title
+      align: start
+      color: *text_color
+      overflow: shrink
+      line:
+        amount: 3
+        height: 1.2
+      font:
+        family: *font_family
+        style: Bold
+
+  # 8. Page description — muted, two lines
+  - size: { width: 1000, height: 64 }
+    offset: { x: 64, y: 510 }
+    typography:
+      content: *page_description
+      align: start
+      color: *muted_color
+      overflow: shrink
+      line:
+        amount: 2
+        height: 1.4
+      font:
+        family: *font_family
+        style: Regular
+
+  # 9. Footer — author + URL in accent color
+  - size: { width: 1072, height: 32 }
+    offset: { x: 64, y: 580 }
+    typography:
+      content: *footer_text
+      align: start
+      color: *footer_color
+      overflow: shrink
+      font:
+        family: *font_family
+        style: Regular

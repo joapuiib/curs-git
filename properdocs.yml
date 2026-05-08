@@ -83,6 +83,8 @@ plugins:
   - materialx/search
   - materialx/social:
       enabled: !ENV [CI, false]
+      cards_layout_dir: layouts
+      cards_layout: social
   - material-joapuiib/enviorment
   - material-joapuiib/functions:
       load_file:
