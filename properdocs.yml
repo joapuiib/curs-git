@@ -81,10 +81,10 @@ plugins:
   - macros
   - materialx/tags
   - materialx/search
+  - material-joapuiib/social:
+      enabled: !ENV [CI, false]
   - materialx/social:
       enabled: !ENV [CI, false]
-      cards_layout_dir: layouts
-      cards_layout: social
   - material-joapuiib/enviorment
   - material-joapuiib/functions:
       load_file:
@@ -180,8 +180,3 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 4
-  - material_joapuiib.extensions.collapse_code:
-      expand_text: ''
-      expand_title: ''
-      collapse_text: ''
-      collapse_title: ''
