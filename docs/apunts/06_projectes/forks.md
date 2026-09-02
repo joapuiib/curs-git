@@ -13,7 +13,7 @@ tags:
 
 ## Forks i Pull Requests
 Dins de les eines de col·laboració que ofereixen els serveis d'allotjament de repositoris en línia
-com :simple-github: GitHub o :simple-gitlab: GitLab, hi ha dues funcionalitats clau:
+com :simple-github: GitHub, :simple-gitlab: GitLab o :simple-codeberg: Codeberg, hi ha dues funcionalitats clau:
 
 - __:material-source-fork: Forks__: permeten copiar un repositori d'un altre usuari o organització com a propi.
 

@@ -93,6 +93,8 @@ automatitzats. Algunes de les més comunes són:
 
 - __[:simple-github: GitHub Actions][actions]__: Permet configurar fluxos de treball automatitzats sobre repositoris de Git allotjats a GitHub.
 - __[:simple-gitlab: GitLab CI/CD][gitlab-cicd]__: Permet configurar fluxos de treball automatitzats sobre repositoris de Git allotjats a GitLab.
+- __[:simple-codeberg: Forgejo Actions][forgejo-actions]__: Permet configurar fluxos de treball automatitzats sobre repositoris de Git allotjats a Codeberg
+    (o qualsevol altra instància de [Forgejo](https://forgejo.org/)). La seua sintaxi és pràcticament compatible amb la de GitHub Actions.
 - __[:simple-jenkins: Jenkins][jenkins]__: Servidor d'automatització de codi obert. Necessita ser instal·lat i configurat.
 - __[:simple-travisci: Travis CI][travis-ci]__: Servei d'automatització de codi allotjat al núvol. Es codi privatiu i requereix d'un compte de pagament.
 - __[:material-microsoft-azure: Azure Pipelines][azure-pipelines]__: Servei d'automatització de Microsoft Azure.
@@ -101,6 +103,7 @@ automatitzats. Algunes de les més comunes són:
 
 [actions]: https://docs.github.com/en/actions
 [gitlab-cicd]: https://docs.gitlab.com/ee/ci/
+[forgejo-actions]: https://forgejo.org/docs/latest/user/actions/
 [jenkins]: https://www.jenkins.io/
 [travis-ci]: https://travis-ci.com/
 [azure-pipelines]: https://azure.microsoft.com/en-us/services/devops/pipelines/

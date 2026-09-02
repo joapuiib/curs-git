@@ -110,10 +110,24 @@ Alguns dels serveis d'allotjament repositoris remots en línia més coneguts só
 - __[:simple-gitlab: GitLab](https://gitlab.com/)__: Servei d'allotjament de repositoris. GitLab és una plataforma de codi obert.
 - __[:simple-bitbucket: Bitbucket](https://bitbucket.org/)__: Servei d'allotjament de repositoris propietat de l'empresa Atlassian,
     s'integra estretament amb altres eines d'aquesta empresa, com Jira.
+- __[:simple-codeberg: Codeberg](https://codeberg.org/)__: Servei d'allotjament de repositoris gestionat per Codeberg e.V.,
+    una associació sense ànim de lucre alemanya.
+
+    Està basat en el projecte de codi obert [Forgejo](https://forgejo.org/),
+    de manera que la seua interfície i les seues funcionalitats d'automatització
+    resulten molt familiars per a qui ja coneix GitHub.
+
+    A diferència de GitHub o Bitbucket, Codeberg no és una empresa amb ànim de lucre:
+    es manté amb donacions, tot el seu programari és lliure i totes les característiques
+    (incloent-hi repositoris privats i CI/CD) són gratuïtes.
+    Per aquest motiu, cada vegada més projectes de codi obert opten per allotjar-se a Codeberg
+    com a alternativa a plataformes propietàries.
 
 !!! info "Més informació"
-    [:octicons-link-external-16: GitLab vs. GitHub: Which is Better in 2025?](https://prismic.io/blog/gitlab-vs-github#similarities-between-github-and-gitlab) – :simple-prismic: prismic Blog
-    { .spell-ignore }
+    - [:octicons-link-external-16: GitLab vs. GitHub: Which is Better in 2025?](https://prismic.io/blog/gitlab-vs-github#similarities-between-github-and-gitlab) – :simple-prismic: prismic Blog
+      { .spell-ignore }
+    - [:octicons-link-external-16: Give Up GitHub](https://sfconservancy.org/GiveUpGitHub/) – Software Freedom Conservancy
+      { .spell-ignore }
 
 
 ## Creació d'un repositori remot a GitHub

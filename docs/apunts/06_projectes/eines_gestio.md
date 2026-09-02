@@ -14,13 +14,14 @@ tags:
 
 ## Eines de gestió de projectes a GitHub
 Els serveis d'allotjament de repositoris en línia,
-com [:simple-github: GitHub][github] o [:simple-gitlab: GitLab][gitlab],
+com [:simple-github: GitHub][github], [:simple-gitlab: GitLab][gitlab] o [:simple-codeberg: Codeberg][codeberg],
 ofereixen una sèrie d'eines i funcionalitats que permeten
 gestionar projectes de desenvolupament de programari col·laboratiu
 de manera fàcil i eficaç.
 
 [github]: https://github.com/
 [gitlab]: https://about.gitlab.com/
+[codeberg]: https://codeberg.org/
 
 En aquests apunts ens centrarem en la part de gestió de projectes,
 com crear debats, comunicar incidències i organitzar tasques.

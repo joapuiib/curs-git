@@ -43,7 +43,7 @@ Els principals objectius i característiques de Git són:
     Els desenvolupadors poden resoldre aquests conflictes manualment.
 - __Col·laboració__: Git facilita la col·laboració en projectes de codi obert o en equips,
     ja que permet a múltiples persones treballar en el mateix projecte de manera eficient.
-    Plataformes com GitHub, GitLab i Bitbucket s'utilitzen comunament per a allotjar repositoris Git en línia i col·laborar en projectes.
+    Plataformes com GitHub, GitLab, Bitbucket i Codeberg s'utilitzen comunament per a allotjar repositoris Git en línia i col·laborar en projectes.
 - __Codi obert i gratuït__: Git és de codi obert i gratuït, la qual cosa significa que qualsevol pot utilitzar-lo sense cost i contribuir al desenvolupament de l'eina.
 
 

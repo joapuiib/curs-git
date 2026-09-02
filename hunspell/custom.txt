@@ -5,12 +5,14 @@ by-nc-sa
 cherrypick
 CIPFP
 CLI
+Codeberg
 CodePipeline
 Codespaces
 config
 d'
 DAW
 d'elles
+Forgejo
 Gantt
 Gascón
 gitconfig
