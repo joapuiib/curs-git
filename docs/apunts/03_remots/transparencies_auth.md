@@ -5,7 +5,29 @@ icon: material/presentation
 alias: auth-slides
 ---
 
-## Mètodes d'autenticació a GitHub
+<div class="slide-header-logos">
+{% include "img/ministeri.svg" %}
+{% include "img/fse.svg" %}
+{% include "img/conselleria.svg" %}
+{% include "img/fpcv_cefire.svg" %}
+</div>
+
+<style>
+.slide-header-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.slide-header-logos svg,
+.slide-header-logos img {
+    max-height: 2.5rem;
+}
+</style>
+
+# Mètodes d'autenticació a GitHub
 
 #### Introducció a Git i GitHub Actions
 
@@ -13,13 +35,13 @@ alias: auth-slides
 
 ## Repositori remot
 
-<img class="r-stretch" src="../../01_introduccio/img/components.light.png">
+![components](../01_introduccio/img/components.light.png){ .r-stretch }
 
 ---
 
 ## Desenvolupament distribuït
 
-<img class="r-stretch" src="../img/multiple_local_repo.light.png">
+![multiple_local_repo](img/multiple_local_repo.light.png){ .r-stretch }
 
 ---
 
@@ -28,6 +50,7 @@ alias: auth-slides
 - ~~Nom d'usuari i contrasenya (2021)~~
 - (_HTTPS_) Personal Access Token (PAT)
 - (_SSH_) Clau SSH
+- :simple-github: GitHub CLI
 
 ---
 
@@ -59,3 +82,24 @@ git config --global credential.helper store
     ```bash
     ssh -T git@github.com
     ```
+
+---
+
+## :simple-github: GitHub CLI
+
+```bash
+gh auth login
+```
+
+```shellconsole
+jpuigcerver@fp:~ $ gh auth login
+? What account do you want to log into? GitHub.com
+? What is your preferred protocol for Git operations on this host? HTTPS
+? Authenticate Git with your GitHub credentials? Yes
+? How would you like to authenticate GitHub CLI? Login with a web browser
+
+! First copy your one-time code: ABCD-EFGH
+Press Enter to open github.com in your browser... 
+
+✓ Authentication complete. You are now logged in as joapuiib
+```

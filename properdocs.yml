@@ -78,7 +78,8 @@ plugins:
       use_page_icon: true
   - awesome-nav
   - drawio
-  - macros
+  - macros:
+      include_dir: overrides
   - materialx/tags
   - materialx/search
   - material-joapuiib/social:
@@ -115,6 +116,7 @@ plugins:
             recommend: Recomanació
             picture: Imatge
   - git-revision-date-localized # Després de i18n o falla
+  - material-joapuiib/slides # Després de i18n i functions, perquè renderitza el markdown ja expandit
   - git-committers:
       enabled: !ENV [CI, false]
       repository: joapuiib/curs-git

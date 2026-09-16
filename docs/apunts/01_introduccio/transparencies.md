@@ -5,7 +5,29 @@ icon: material/presentation
 alias: introduccio-slides
 ---
 
-## Introducció a Git
+<div class="slide-header-logos">
+{% include "img/ministeri.svg" %}
+{% include "img/fse.svg" %}
+{% include "img/conselleria.svg" %}
+{% include "img/fpcv_cefire.svg" %}
+</div>
+
+<style>
+.slide-header-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.slide-header-logos svg,
+.slide-header-logos img {
+    max-height: 2.5rem;
+}
+</style>
+
+# Introducció a Git
 
 ### Introducció a Git i GitHub Actions
 
@@ -26,31 +48,35 @@ https://git-scm.com/
 ## Git vs GitHub
 __Git__ és el sistema de control de versions.
 
-__GitHub__ o __GitLab__ són un servei d'allotjament de repositoris de Git.
+__GitHub__, __GitLab__ o __Codeberg__ són serveis d'allotjament de repositoris de Git.
 
 
 
-<div class="container">
-
-<div class="col">
-<img src="../../img/logo_github.png" height="50%">
+/// html | div.container
+//// html | div.col
+:simple-github:{ style="font-size: 4rem; color: #181717" }
 
 https://github.com
-</div>
+////
 
-<div class="col">
-<img src="../../img/logo_gitlab.png" height="50%">
+//// html | div.col
+:simple-gitlab:{ style="font-size: 4rem; color: #FC6D26" }
 
 https://gitlab.com
-</div>
+////
 
-</div>
+//// html | div.col
+:simple-codeberg:{ style="font-size: 4rem; color: #2185D0" }
+
+https://codeberg.org
+////
+///
 
 ---
 
 ## Estructura d'un repositori
 
-<img src="../img/components.light.png">
+![components](img/components.light.png)
 
 ---
 
@@ -64,13 +90,12 @@ https://gitlab.com
 
 ## Inicialitzar un repositori
 
-> Crea el directori `.git` amb el __Repositori local__
-
 ```bash
 mkdir git_introduccio
 cd git_introduccio
 git init
 ```
+Aquesta operació crea un directori ocult `.git` que conté tota la informació del __repositori local__.
 
 ---
 
@@ -80,7 +105,7 @@ git init
 git add <path>
 ```
 
-<img src="../img/staged_readme.light.png">
+![staged_readme](img/staged_readme.light.png)
 
 ---
 
@@ -90,7 +115,7 @@ git add <path>
 git commit [-m <message>]
 ```
 
-<img src="../img/after_commit_readme.light.png">
+![after_commit_readme](img/after_commit_readme.light.png)
 
 ---
 
@@ -122,7 +147,7 @@ git show [ref]
 git diff [--staged]
 ```
 
-<img src="../img//resum_diff.light.png">
+![resum_diff](img/resum_diff.light.png)
 
 ---
 
@@ -133,7 +158,7 @@ git diff [--staged]
 git restore <files>
 ```
 
-<img src="../img/flux_treball.light.png" height="450px">
+![flux_treball](img/flux_treball.light.png){ height=450px }
 
 ---
 

@@ -5,7 +5,29 @@ icon: material/presentation
 alias: estrategies-slides
 ---
 
-## Estratègies de ramificació
+<div class="slide-header-logos">
+{% include "img/ministeri.svg" %}
+{% include "img/fse.svg" %}
+{% include "img/conselleria.svg" %}
+{% include "img/fpcv_cefire.svg" %}
+</div>
+
+<style>
+.slide-header-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.slide-header-logos svg,
+.slide-header-logos img {
+    max-height: 2.5rem;
+}
+</style>
+
+# Estratègies de ramificació
 
 #### Introducció a Git i GitHub Actions
 
@@ -31,54 +53,54 @@ alias: estrategies-slides
 
 ## Branca principal i desenvolupament
 
-<img class="r-stretch" src="../img/main-develop.light.png" alt="Branques main i develop">
+![Branques main i develop](img/main-develop.light.png){ .r-stretch }
 
 ---
 
 ## Branques de funcionalitat
 
-<img class="r-stretch" src="../img/feature.light.png" alt="Branques de funcionalitat">
+![Branques de funcionalitat](img/feature.light.png){ .r-stretch }
 
 ---
 
 ## `merge --no-ff`
 
-<img class="r-stretch" src="../img/merge_no_ff.light.png" alt="Integració amb merge --no-ff">
+![Integració amb merge --no-ff](img/merge_no_ff.light.png){ .r-stretch }
 
 ---
 
 ## `rebase + merge --ff-only`
 
-<img class="r-stretch" src="../img/rebase_merge_ff.light.png" alt="Integració amb rebase i merge --ff-only">
+![Integració amb rebase i merge --ff-only](img/rebase_merge_ff.light.png){ .r-stretch }
 
 ---
 
 ## `rebase + merge --no-ff`
 
-<img class="r-stretch" src="../img/rebase_merge_no_ff.light.png" alt="Integració amb rebase i merge --no-ff">
+![Integració amb rebase i merge --no-ff](img/rebase_merge_no_ff.light.png){ .r-stretch }
 
 ---
 
 <!-- .slide: data-transition="fade-out" -->
 ## `merge --squash`
 
-<img class="r-stretch" src="../img/merge_squash.light.png" alt="Integració amb merge --squash">
+![Integració amb merge --squash](img/merge_squash.light.png){ .r-stretch }
 
 --
 
 <!-- .slide: data-transition="fade" -->
 ## `merge --no-ff + merge --squash`
 
-<img class="r-stretch" src="../img/merge_no_ff_squash.light.png" alt="Integració amb merge --no-ff i merge --squash">
+![Integració amb merge --no-ff i merge --squash](img/merge_no_ff_squash.light.png){ .r-stretch }
 
 ---
 
 ## Branques de llançament
 
-<img class="r-stretch" src="../img/release.light.png" alt="Branques de llançament">
+![Branques de llançament](img/release.light.png){ .r-stretch }
 
 ---
 
 ## Branques de correcció
 
-<img class="r-stretch" src="../img/hotfix.light.png" alt="Branques de correcció">
+![Branques de correcció](img/hotfix.light.png){ .r-stretch }

@@ -5,7 +5,29 @@ icon: material/presentation
 alias: remots-slides
 ---
 
-## Remots
+<div class="slide-header-logos">
+{% include "img/ministeri.svg" %}
+{% include "img/fse.svg" %}
+{% include "img/conselleria.svg" %}
+{% include "img/fpcv_cefire.svg" %}
+</div>
+
+<style>
+.slide-header-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.slide-header-logos svg,
+.slide-header-logos img {
+    max-height: 2.5rem;
+}
+</style>
+
+# Remots
 
 #### Introducció a Git i GitHub Actions
 
@@ -13,13 +35,13 @@ alias: remots-slides
 
 ## Repositori remot
 
-<img class="r-stretch" src="../../01_introduccio/img/components.light.png">
+![components](../01_introduccio/img/components.light.png){ .r-stretch }
 
 ---
 
 ## Desenvolupament distribuït
 
-<img class="r-stretch" src="../img/multiple_local_repo.light.png">
+![multiple_local_repo](img/multiple_local_repo.light.png){ .r-stretch }
 
 ---
 
@@ -32,7 +54,7 @@ git remote add origin <url>
 - (_HTTPS_) Personal Access Token (PAT)
 - (_SSH_) Clau SSH
 
-<p><img class="r-stretch" src="../img/add_remote.light.png" alt="Repsitori Local vinculat amb un Repositori Remot"></p>
+![Repsitori Local vinculat amb un Repositori Remot](img/add_remote.light.png){ .r-stretch }
 
 ---
 
@@ -42,7 +64,7 @@ git remote add origin <url>
 git push [-u | --set-upstream] origin <branca>
 ```
 
-<img class="r-stretch" src="../img/push.light.png" alt="Publicació d'una branca local a una branca remota">
+![Publicació d'una branca local a una branca remota](img/push.light.png){ .r-stretch }
 
 ---
 
@@ -52,7 +74,7 @@ git push [-u | --set-upstream] origin <branca>
 git clone <url> [<directori>]
 ```
 
-<img class="r-stretch" src="../img/clone.light.png">
+![clone](img/clone.light.png){ .r-stretch }
 
 ---
 
@@ -61,7 +83,7 @@ git clone <url> [<directori>]
 ```bash
 git fetch
 ```
-<img class="r-stretch" src="../img/fetch.light.png">
+![fetch](img/fetch.light.png){ .r-stretch }
 
 ---
 
@@ -71,4 +93,4 @@ git fetch
 git pull [--rebase]
 ```
 
-<img class="r-stretch" src="../img/pull.light.png">
+![pull](img/pull.light.png){ .r-stretch }

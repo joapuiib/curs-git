@@ -5,7 +5,29 @@ icon: material/presentation
 alias: branques-slides
 ---
 
-## Branques
+<div class="slide-header-logos">
+{% include "img/ministeri.svg" %}
+{% include "img/fse.svg" %}
+{% include "img/conselleria.svg" %}
+{% include "img/fpcv_cefire.svg" %}
+</div>
+
+<style>
+.slide-header-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.slide-header-logos svg,
+.slide-header-logos img {
+    max-height: 2.5rem;
+}
+</style>
+
+# Branques
 
 ### Introducció a Git i GitHub Actions
 
@@ -13,47 +35,47 @@ alias: branques-slides
 
 ## Branques
 
-<img class="r-stretch" src="../img/create_branches.light.png">
+![create_branches](img/create_branches.light.png){ .r-stretch }
 
 ---
 
 ## Canviar de branca
 
-<img class="r-stretch" src="../img/checkout_branch.light.png">
+![checkout_branch](img/checkout_branch.light.png){ .r-stretch }
 
 ---
 
 <!-- .slide: data-transition="fade-out" -->
 ## Nous canvis en una branca
 
-<img class="r-stretch" src="../img/commit_menjar.light.png">
+![commit_menjar](img/commit_menjar.light.png){ .r-stretch }
 
 --
 
 <!-- .slide: data-transition="fade" -->
 ## Nous canvis en una branca
 
-<img class="r-stretch" src="../img/commit_beguda.light.png">
+![commit_beguda](img/commit_beguda.light.png){ .r-stretch }
 
 --
 
 <!-- .slide: data-transition="fade" -->
 ## Nous canvis en una branca
 
-<img class="r-stretch" src="../img/commit_neteja.light.png">
+![commit_neteja](img/commit_neteja.light.png){ .r-stretch }
 
 ---
 
 ## Eliminar una branca
 
-<img class="r-stretch" src="../img/delete_neteja.light.png">
+![delete_neteja](img/delete_neteja.light.png){ .r-stretch }
 
 ---
 
 <!-- .slide: data-transition="fade-out" -->
 ## Fusió directa de branques
 
-<img class="r-stretch" src="../img/before_ff.light.png">
+![before_ff](img/before_ff.light.png){ .r-stretch }
 
 Abans
 
@@ -62,7 +84,7 @@ Abans
 <!-- .slide: data-transition="fade" -->
 ## Fusió directa de branques
 
-<img class="r-stretch" src="../img/after_ff.light.png">
+![after_ff](img/after_ff.light.png){ .r-stretch }
 
 Després
 
@@ -71,7 +93,7 @@ Després
 <!-- .slide: data-transition="fade-out" -->
 ## Fusió de branques divergents
 
-<img class="r-stretch" src="../img/before_divergent.light.png">
+![before_divergent](img/before_divergent.light.png){ .r-stretch }
 
 Abans
 
@@ -80,7 +102,7 @@ Abans
 <!-- .slide: data-transition="fade" -->
 ## Fusió de branques divergents
 
-<img class="r-stretch" src="../img/after_divergent.light.png">
+![after_divergent](img/after_divergent.light.png){ .r-stretch }
 
 Després
 
@@ -101,7 +123,7 @@ Contingut de la branca a fusionar
 <!-- .slide: data-transition="fade-out" -->
 ## Canvi de base
 
-<img class="r-stretch" src="../img/before_rebase.light.png">
+![before_rebase](img/before_rebase.light.png){ .r-stretch }
 
 Abans
 
@@ -110,6 +132,6 @@ Abans
 <!-- .slide: data-transition="fade" -->
 ## Canvi de base
 
-<img class="r-stretch" src="../img/after_rebase.light.png">
+![after_rebase](img/after_rebase.light.png){ .r-stretch }
 
 Després
