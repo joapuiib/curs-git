@@ -169,7 +169,7 @@ git config [--global] <key> <value>
 # Exemples
 git config --global init.defaultBranch main
 git config --global user.name "{{ config.site_author }}"
-git config --global user.email "{{ config.site_email }}"
+git config --global user.email "{{ config.theme.email }}"
 git config --global core.editor "code --wait"
 ```
 
@@ -185,7 +185,7 @@ git config --global core.editor "code --wait"
 
 [user]
     name = {{ config.site_author }}
-    email = {{ config.site_email }}
+    email = {{ config.theme.email }}
 
 [alias]
     lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'

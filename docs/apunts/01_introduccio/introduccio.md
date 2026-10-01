@@ -334,7 +334,7 @@ git config --global user.email <email>
 
 ```shellconsole
 jpuigcerver@fp:~/git_introduccio (main) $ git config --global user.name "{{ config.site_author }}"
-jpuigcerver@fp:~/git_introduccio (main) $ git config --global user.email "{{ config.site_email }}"
+jpuigcerver@fp:~/git_introduccio (main) $ git config --global user.email "{{ config.theme.email }}"
 ```
 
 Amb aquesta informació configurada, ja es pot fer el primer _commit_.
@@ -370,7 +370,7 @@ La informació del _commit_ nou es pot consultar amb l'ordre `git show`:
 ```shellconsole
 jpuigcerver@fp:~/git_introduccio (main) $ git show 8e70293
 commit 8e702933d5dbec9ee71100a1599ae4491085e1aa (HEAD -> main)
-Author: {{ config.site_author }} <{{ config.site_email }}>
+Author: {{ config.site_author }} <{{ config.theme.email }}>
 Date:   Fri Oct 13 16:06:59 2023 +0200
 
     Added README.md
@@ -605,13 +605,13 @@ git log [<options>]
     ```shellconsole
     jpuigcerver@fp:~/git_introduccio (main) $ git log
     commit c9fc6c856c2d52744b85a6f8d92feac496e60bd6 (HEAD -> main)
-    Author: {{ config.site_author }} <{{ config.site_email }}>
+    Author: {{ config.site_author }} <{{ config.theme.email }}>
     Date:   Mon Oct 16 11:43:20 2023 +0200
 
         Added another line to README.md
 
     commit 8e702933d5dbec9ee71100a1599ae4491085e1aa
-    Author: {{ config.site_author }} <{{ config.site_email }}>
+    Author: {{ config.site_author }} <{{ config.theme.email }}>
     Date:   Fri Oct 13 16:06:59 2023 +0200
 
         Added README.md
@@ -724,7 +724,7 @@ git config [--local | --global | --system] <key> [<value>]
     jpuigcerver@fp:~/git_introduccio (main) $ git config --global user.name
     {{ config.site_author }}
     jpuigcerver@fp:~/git_introduccio (main) $ git config --global user.email
-    {{ config.site_email }}
+    {{ config.theme.email }}
     ```
 
 
@@ -754,7 +754,7 @@ git config [--local | --global | --system] --edit
 
     [user]
         name = {{ config.site_author }}
-        email = {{ config.site_email }}
+        email = {{ config.theme.email }}
 
     [alias]
         lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
