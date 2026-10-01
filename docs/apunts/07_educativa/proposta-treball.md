@@ -239,7 +239,7 @@ Per tant, és important establir un __mecanisme de lliurament de tasques__ que p
 el __treball que l'alumnat ha lliurat, independentment que l'haja modificat després__.
 
 L'opció més senzilla és crear una __:octicons-tag-16: etiqueta__ o un
-__:material-tray-arrow-up: llançament__ (_release_) que identifique el __:octicons-git-commit-16: _commit___
+__:material-tray-arrow-up: llançament__ (_release_) que identifique el __:octicons-git-commit-16: *commit*__
 on es troba la versió del treball que es vol lliurar.
 
 ??? picture "Etiquetes amb els lliuraments"

@@ -42,7 +42,10 @@ Un _fork_ sempre està enllaçat amb el repositori original. Per tant, si el rep
 pots decidir incorporar-ne els canvis al teu _fork_.
 
 ![Estructura de treball amb forks i pull requests](./img/forks/fork.png)
-/// shadow-figure-caption | #figure-fork .no-shadow : Estructura de treball amb _forks_ i _pull requests_.
+/// shadow-figure-caption | #figure-fork
+    attrs: {class: no-shadow}
+Estructura de treball amb _forks_ i _pull requests_.
+///
 
 
 ??? example "Exemple: Bifurcació de :simple-materialformkdocs: Material for MkDocs"

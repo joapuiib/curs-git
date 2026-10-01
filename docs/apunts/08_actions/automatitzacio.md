@@ -61,7 +61,7 @@ Un flux de treball típic de CD inclou els passos següents:
 
 
 ### Fluxos de treball
-Els __fluxos de treball de CI/CD__, també coneguts com a __CI/CD _pipelines___, són processos automatitzats
+Els __fluxos de treball de CI/CD__, també coneguts com a __CI/CD *pipelines*__, són processos automatitzats
 que s'encarreguen de la compilació, les proves i el desplegament de les aplicacions.
 Es componen de diferents tasques que s'executen automàticament, sense intervenció humana.
 
