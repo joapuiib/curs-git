@@ -18,6 +18,8 @@ class CommandExecutor:
         self.file = self.path_from_script(file) if file else None
         self.verbose = verbose
         self.logging = False
+        # Pairs (old, new) applied to the output of every command
+        self.replacements = []
         self.script_dir = os.path.dirname(os.path.realpath(script_path or __file__))
 
         # File to log the commands in a bash script
@@ -26,6 +28,10 @@ class CommandExecutor:
 
     def __str__(self):
         return f"x{{file={self.file}, logging={self.logging}}}"
+
+
+    def add_replacement(self, old, new):
+        self.replacements.append((old, new))
 
 
     def set_logging(self, logging):
@@ -144,6 +150,8 @@ class CommandExecutor:
         except FileNotFoundError:
             output = f"Command not found: {cmd}\n"
 
+        for old, new in self.replacements:
+            output = output.replace(old, new)
         output = output.replace(self.home_dir, "~")
         if output and not output.endswith("\n"):
             output += "\n"

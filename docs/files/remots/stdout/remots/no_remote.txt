@@ -8,3 +8,11 @@ and then push using the remote name
 
     git push <name>
 
+To push to multiple remotes at once, configure a remote group using
+
+    git config remotes.<groupname> "<remote1> <remote2>"
+
+and then push using the group name
+
+    git push <groupname>
+

@@ -7,5 +7,5 @@ hint: or:
 hint:
 hint: 	git rebase
 hint:
-hint: Disable this message with "git config advice.diverging false"
+hint: Disable this message with "git config set advice.diverging false"
 fatal: Not possible to fast-forward, aborting.
