@@ -1,140 +1,147 @@
 ---
 template: document.html
-title: "Remots: Resum comandes"
+title: "Remots: Resum d'ordres"
 icon: material/file-eye
 alias: remots-resum
 comments: true
 ---
 
-## Remots: Resum de comandes
-En aquests apunts inclouen un resum de les comandes
-vistes en el [[remots-index]].
+## Remots: Resum d'ordres
+Aquest resum recull les ordres presentades en el [[remots-index]].
 
 
 ### Gestió de repositoris remots
-- `git remote`: Mostra els repositoris remots associats al repositori local.
-- `git remote add <alies> <url>`: Afegeix un repositori remot amb un àlies especificat.
-- `git remote rename <alies> <nou-alies>`: Canvia l'àlies d'un repositori remot associat al repositori local.
-- `git remote remove <alies>`: Elimina un repositori remot associat al repositori local.
-- `git clone <url>`: Crea una còpia local d'un repositori remot especificat per `url`.
-    - Els repositoris remots es clonen automàticament amb un àlies `origin`.
+Aquestes ordres permeten associar repositoris remots al repositori local:
+
+- __`git remote`__: mostra els repositoris remots associats al repositori local.
+- __`git remote add <alies> <url>`__: afegeix un repositori remot amb l'àlies especificat.
+- __`git remote rename <alies> <nou-alies>`__: canvia l'àlies d'un repositori remot associat al repositori local.
+- __`git remote remove <alies>`__: elimina un repositori remot associat al repositori local.
+- __`git clone <url>`__: crea una còpia local del repositori remot especificat per `url`.
+    El repositori remot s'associa automàticament amb l'àlies `origin`.
 
 
 ### Gestió de branques remotes
-- `git branch -r`: Mostra les branques remotes associades al repositori local.
-- `git push [-u | --set-upstream] <alies> <branca>`: Publica la branca local actual (`HEAD`) a la branca remota especificada
-    del repositori remot `alies`.
-- `git fetch`: Actualitza les referències remotes del repositori local amb els canvis del repositori remot associat.
+Aquestes ordres permeten sincronitzar les branques locals i les remotes:
 
-    - Opció `--prune`: Elimina les referències de branques remotes
-        que ja no existeixen al repositori remot.
+- __`git branch -r`__: mostra les branques remotes associades al repositori local.
+- __`git push [-u | --set-upstream] <alies> <branca>`__: publica la branca local en la branca remota
+    especificada del repositori remot `alies`.
+- __`git fetch`__: actualitza les referències remotes del repositori local amb els canvis
+    del repositori remot associat.
 
-- `git pull`: Actualitza la branca local actual (`HEAD`) amb els canvis de la branca remota associada
+    - __`--prune`__: elimina les referències de branques remotes que ja no existeixen en el repositori remot.
+
+- __`git pull`__: actualitza la branca local actual (`HEAD`) amb els canvis de la branca remota associada,
     mitjançant `git fetch` i `git merge`.
 
-    - Opció `--ff-only`: Si no es pot fer _fast-forward_, el procés es cancel·la.
-    - Opció `--rebase`: Fa un `rebase`  en compte d'un `merge` dels canvis remots.
+    - __`--ff-only`__: si no es pot fer _fast-forward_, el procés es cancel·la.
+    - __`--rebase`__: fa un `rebase` en lloc d'un `merge` per a incorporar els canvis remots.
 
-- `git push -d <alies> <branca>`: Elimina la branca remota especificada del repositori remot `alies`.
+- __`git push -d <alies> <branca>`__: elimina la branca remota especificada del repositori remot `alies`.
 
 
 ### Configuració
-- `push.autoSetupRemote [yes/no]`: Si s'estableix a `true`, les branques locals
-    es publiquen automàticament al repositori remot associat a una branca remota
-    amb el mateix nom.
+Aquestes claus de configuració modifiquen el comportament per defecte de les ordres anteriors:
 
-- `fetch.prune [true/false]`: Si s'estableix a `true`, les referències de branques remotes
-    que ja no existeixen al repositori remot s'eliminen automàticament
-    quan es fa un `git fetch`.
+- __`push.autoSetupRemote`__: si s'estableix a `true`, `git push` associa automàticament
+    cada branca local amb la branca remota del mateix nom.
+
+- __`fetch.prune`__: si s'estableix a `true`, `git fetch` elimina automàticament les referències
+    de branques remotes que ja no existeixen en el repositori remot.
 
     > Equivalent a `git fetch --prune`.
 
+- __`pull.ff`__: configura el comportament de la fusió implícita de `git pull` respecte de la fusió _fast-forward_.
 
-- `pull.ff [false/only]`: Configura el comportament de la fusió implícita
-    en el `git pull` respecte a la fusió _Fast-Forward_:
+    ??? info "Valors de `pull.ff`"
 
-    - Si s'estableix a `false`, les fusiones de branques
-        es realitzaran mitjançant un _commit de fusió_.
-    - Si s'estableix a `only`, les fusiones de branques
-        es realitzaran mitjançant un _fast-forward_. En cas de no ser possible,
-        el procés es cancel·la.
+        | Valor   | Significat                                                                              |
+        |---------|-----------------------------------------------------------------------------------------|
+        | `false` | Les fusions es fan sempre amb un __commit de fusió__. Equival a `git pull --no-ff`.     |
+        | `only`  | Les fusions es fan __només__ amb _fast-forward_; si no és possible, el procés es cancel·la. Equival a `git pull --ff-only`. |
 
-    > Equivalent a `git pull --ff-only` o `git pull --no-ff`.
-    
-
-- `pull.rebase [false/true]`: Si s'estableix a `true`, l'ordre `git pull`
-    realitzarà un `rebase` en compte d'un `merge` per incorporar els canvis remots.
+- __`pull.rebase`__: si s'estableix a `true`, `git pull` fa un `rebase` en lloc d'un `merge`
+    per a incorporar els canvis remots.
 
     > Equivalent a `git pull --rebase`.
 
+```ini title="~/.gitconfig"
+[push]
+    autoSetupRemote = true
+[fetch]
+    prune = true
+[pull]
+    rebase = true
+```
 
-!!! docs
-    [:octicons-link-external-16: git-config](https://git-scm.com/docs/git-config) - :simple-git: Git Docs
+!!! docs "Documentació oficial: [:octicons-link-external-16: `git config`](https://git-scm.com/docs/git-config) – :simple-git: Git"
 
 
-## Resum flux de treball amb branques remotes
+## Flux de treball amb branques remotes
+Aquest és el procediment habitual per a treballar amb una branca que es publica en un repositori remot:
 
-1. Crear una branca nova localment.
+1. Crea una branca nova localment.
 
-    ```
+    ```bash
     git checkout -b <nova-branca>
     ```
 
-2. Publicar la branca nova al repositori remot.
+2. Publica la branca nova en el repositori remot.
 
-    ```
+    ```bash
     git push -u <alies> <nova-branca>
     ```
 
-3. Treballar a la branca nova localment i realitzar els canvis.
+3. Treballa en la branca nova localment i fes els canvis.
 
-    ```
+    ```bash
     git checkout <nova-branca>
     git add <fitxers>
     git commit -m "<missatge>"
     ```
 
-4. Publicar els canvis a la branca remota.
+4. Publica els canvis en la branca remota.
 
-    ```
+    ```bash
     git push
     ```
 
-5. En cas de canviar de dispositiu, actualitzar la branca local amb els canvis remots.
+5. Si canvies de dispositiu, actualitza la branca local amb els canvis remots.
 
-    ```
+    ```bash
     git fetch
     git checkout <nova-branca>
     git pull
     ```
 
-6. Fusionar la branca a la branca principal.
+6. Fusiona la branca en la branca principal.
 
     === "`merge`"
-        ```
+        ```bash
         git checkout main
         git merge <nova-branca>
         ```
 
     === "`rebase`"
-        ```
+        ```bash
         git checkout <nova-branca>
         git rebase main
         git checkout main
         git merge --ff-only <nova-branca>
         ```
 
-    > Les diferents estratègies d'integració de branques es veuran el el [[estrategies-index]].
+    > Les diferents estratègies d'integració de branques es veuen en el [[estrategies-index]].
 
-7. Eliminar la branca local i remota.
+7. Elimina la branca local i la remota.
 
-    ```
+    ```bash
     git branch -d <nova-branca>
     git push -d <alies> <nova-branca>
     ```
 
-8. En cas de canviar de dispositiu, eliminar les referències remotes inexistents.
+8. Si canvies de dispositiu, elimina les referències remotes que ja no existeixen.
 
-    ```
+    ```bash
     git fetch --prune
     ```

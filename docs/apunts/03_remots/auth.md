@@ -14,122 +14,95 @@ tags:
 *[SSH]: Secure Shell
 *[HTTPS]: Hypertext Transfer Protocol Secure
 *[PAT]: Personal Access Token
+*[CLI]: Command Line Interface
 
-## Mètodes d'autenticació a GitHub
-En el blocs anteriors, ens hem centrat en conéixer la seua estructura i
-realitzar accions bàsiques per realitzar canvis sobre aquest.
+## Introducció
+En els blocs anteriors, s'ha presentat l'estructura d'un repositori de Git i les accions bàsiques
+per a fer-hi canvis.
 
-No obstant això, totes les accions que hem realitzat fins ara han sigut
-sobre un repositori __local__, és a dir, un repositori que es troba en
-el nostre dispositiu i aquests canvis no han segut publicats en cap
-lloc.
+No obstant això, totes aquestes accions s'han fet sobre un repositori __local__, és a dir,
+un repositori que es troba en el teu dispositiu i els canvis del qual no s'han publicat enlloc.
 
-En aquest bloc, ens centrarem en la creació de repositoris __remots__;
-repositoris que es troben __allotjats en un servidor__, que permeten
-l'accés a altres usuaris i la col·laboració en el desenvolupament de
-projectes. En aquest curs, utilitzarem __[:simple-github: GitHub][github]__ com a
+Aquest bloc se centra en els repositoris __remots__: repositoris __allotjats en un servidor__,
+que permeten l'accés d'altres persones i la col·laboració en el desenvolupament de projectes.
+En aquest curs s'utilitza __[:simple-github: GitHub][github]__ com a
 __servidor d'allotjament de repositoris remots__.
 
 [github]: https://github.com/
 
-En aquests apunts ens centrarem en la configuració dels __mètodes d'autenticació__
-que ens permeten connectar-nos al servidor de GitHub i gestionar els nostres
-repositoris remots.
+En concret, aquests apunts expliquen com configurar els __mètodes d'autenticació__
+que permeten connectar-se al servidor de GitHub i gestionar els repositoris remots.
 
 ![Estructura d'un repositori local i remot](../01_introduccio/img/components.light.png#only-light)
 ![Estructura d'un repositori local i remot](../01_introduccio/img/components.dark.png#only-dark)
-/// figure-caption
-Estructura d'un repositori local i remot
-///
+/// figure-caption | #figure-components : Estructura d'un repositori local i remot.
 
 
 ## Creació d'un compte a GitHub
-Si no en teniu encara, caldrà un compte a [:simple-github: GitHub][github].
+Per a treballar amb repositoris remots, cal un compte a [:simple-github: GitHub][github].
+Si encara no en tens, crea'n un.
 
-> Hi ha persones que prefereixen tindre diferents comptes: un personal i un
-> professional. Això depén de les preferències de cadascú.
->
-> No obstant això, gestionar l'autenticació de múltiples comptes afegeix
-> complexitat addicional.
-> A més, cal fixar-se en la [[introduccio#configuracio-git-config|configuració]]
-> local i global dels valors `git config user.name` i `git config user.email`.
+!!! note "Hi ha persones que prefereixen tindre diferents comptes, per exemple, un de personal i un de professional."
+    No obstant això, gestionar l'autenticació de diversos comptes afig complexitat.
+    A més, cal parar atenció a la [[introduccio#configuracio-git-config|configuració]]
+    local i global dels valors `user.name` i `user.email`.
 
 
-## Mètodes d'autenticació a GitHub
-Per poder enllaçar el teu repositori local amb el repositori remot
-i fer canvis en aquest, necessites autenticar-te amb el servidor de GitHub.
+## Mètodes d'autenticació
+Per a enllaçar el teu repositori local amb el repositori remot i publicar-hi canvis,
+cal autenticar-se en el servidor de GitHub.
 
-!!! recommend "Per seguretat i fàcil reutilització, es recomana utilitzar el __mètode SSH__ per autenticar-se amb el servidor de GitHub."
-    Pots consultar l'apartat [Configuració de la clau SSH](#configuracio-de-la-clau-ssh)
-    per configurar aquest mètode d'autenticació directament.
+!!! recommend "Per seguretat i comoditat, es recomana utilitzar el __mètode SSH__ per a autenticar-se en el servidor de GitHub."
+    Pots anar directament a l'apartat [Autenticació mitjançant claus SSH](#autenticacio-mitjancant-claus-ssh)
+    per a configurar aquest mètode d'autenticació.
 
+GitHub ofereix diferents mètodes d'autenticació, basats en dos protocols de comunicació:
 
-GitHub ofereix diferents mètodes d'autenticació,
-utilitzant dos protocols de comunicació diferents:
+- __Protocol HTTPS__: cal configurar les teues credencials d'accés a GitHub en el sistema local.
+    Aquesta autenticació es pot fer mitjançant:
 
-- __Protocol HTTPS__: Utilitza el protocol HTTPS per autenticar-se amb el servidor de GitHub.
+    - __~~Nom d'usuari i contrasenya~~__: aquest mètode està deshabilitat a GitHub des del 13/08/2021.
+    - __Token d'accés personal__ (_Personal Access Token_ o PAT): una clau d'accés que GitHub
+        permet crear per a autenticar-se en el servidor.
+    - __Extensions de l'IDE__: alguns entorns de desenvolupament integrats (IDE) inclouen
+        extensions que gestionen directament l'autenticació amb GitHub.
 
-    Per utilitzar aquest mètode, has de configurar les teues credencials d'accés a GitHub
-    en el teu sistema local.
-
-    Aquesta autenticació es pot realitzar mitjançant:
-
-    - __~~Nom d'usuari i contrasenya~~__: Aquest mètode està
-        deshabilitat a GitHub des del 13/08/2021.
-
-    - __Token d'accés personal (*Personal Access Token* o PAT)__:
-        GitHub permet crear un token d'accés personal
-        per autenticar-se amb el servidor de GitHub.
-
-    - __Extensions de l'IDE__: Alguns Entorns de Desenvolupament Integrats (IDE) inclouen
-        extensions que permeten gestionar l'autenticació amb GitHub directament.
-
-- __Protocol SSH__: Utilitza el protocol SSH per autenticar-se amb el servidor de GitHub.
-
-    Per utilitzar aquest mètode, has de configurar una clau SSH en el teu sistema local
-    i afegir-la al teu compte de GitHub.
+- __Protocol SSH__: cal configurar una clau SSH en el sistema local i afegir-la al teu compte de GitHub.
 
 
 ### Token d'accés personal (PAT)
-Un __Token d'Accés Personal (*Personal Access Token* o PAT)__ és una clau d'accés
-que permet autenticar-se amb el servidor de GitHub mitjançant el protocol HTTPS.
+Un __token d'accés personal__ (_Personal Access Token_ o PAT) és una clau d'accés
+que permet autenticar-se en el servidor de GitHub mitjançant el protocol HTTPS.
+Funciona com una contrasenya, però es pot limitar a uns permisos concrets i revocar en qualsevol moment.
 
-!!! docs
-    - [:octicons-link-external-16: Managing your personal access tokens](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) – :simple-github: GitHub Docs
-    - [:octicons-link-external-16: Message "Support for password authentication was removed."](https://stackoverflow.com/questions/68775869/message-support-for-password-authentication-was-removed) – :simple-stackoverflow: StackOverflow
+Per a crear un token d'accés personal, segueix aquests passos:
 
-Per crear un token d'accés personal, segueix els següents passos:
+1. Inicia la sessió a [:simple-github: GitHub][github].
+2. Fes clic en la teua foto de perfil i selecciona __:octicons-gear-16: Settings__.
+3. En la barra lateral esquerra, fes clic en __:octicons-code-16: Developer settings__.
+4. En la barra lateral esquerra, fes clic en [__:octicons-key-24: Personal access tokens__](https://github.com/settings/tokens).
+5. Fes clic en __Generate new token__.
 
-- Inicia la sessió a [:material-github: GitHub](https://github.com/)
-- Fes clic a la teua foto de perfil i selecciona __:octicons-gear-16: Settings__.
-- A la barra lateral esquerra, fes clic a __:octicons-code-16: Developer settings__.
-- A la barra lateral esquerra, fes clic a [__:octicons-key-24: Personal access tokens__.](https://github.com/settings/tokens)
-- Fes clic a __Generate new token__.
+Hi ha dos tipus de tokens d'accés personal:
 
-Existeixen dos tipus de tokens d'accés personal:
-
-- __Access token (classic)__: Permet especificar els permisos que vols donar al _token_,
-    que __són globals per a tot el teu compte__.
-- __Fine-grained token__: Permet especificar els permisos que vols donar al _token_,
+- __Access token (classic)__: permet especificar els permisos del _token_,
+    que __són globals per a tot el compte__.
+- __Fine-grained token__: permet especificar els permisos del _token_,
     que __són específics per a un repositori o organització__.
 
-Una vegada creat el _token_, podràs utilitzar-lo per autenticar-te amb el servidor de GitHub.
+Una vegada creat el _token_, ja es pot utilitzar per a autenticar-se en el servidor de GitHub.
 
-!!! important "Guarda el teu token d'accés personal en un lloc segur."
-    No podràs veure'l de nou després de tancar la pàgina.
+!!! important "Guarda el teu token d'accés personal en un lloc segur: no el podràs vore de nou després de tancar la pàgina."
 
-Pots utilitzar el teu token d'accés personal per autenticar-te amb el servidor de GitHub
-de dues maneres:
+El token d'accés personal es pot utilitzar de dues maneres:
 
-- __Mitjançant la URL__: Pots afegir el teu token d'accés personal a la URL del repositori
-    per autenticar-te amb el servidor de GitHub.
-    ```shellconsole
+- __Mitjançant la URL__: s'afig el token a la URL del repositori.
+
+    ```bash
     git clone https://<token>@github.com/<usuari>/<repositori>
     ```
-- __Mitjançant la contrasenya__: Pots utilitzar el teu token d'accés personal com a contrasenya
-    per autenticar-te amb el servidor de GitHub.
 
-    !!! note "Per seguretat, no es mostrarà res en el camp de la contrasenya quan l'introduïsques."
+- __Mitjançant la contrasenya__: s'introdueix el token quan Git demana la contrasenya.
 
     ```shellconsole
     jpuigcerver@fp:~ $ git clone https://github.com/<usuari>/<repositori>
@@ -138,56 +111,58 @@ de dues maneres:
     Password for 'https://<username>@github.com': <token>
     ```
 
+    > Per seguretat, el camp de la contrasenya no mostra res mentre l'escrius.
 
-!!! tip "Per tal de no haver de recordar el PAT cada vegada, és possible configurar Git perquè ho recorde automàticament."
-
+!!! tip "Per no haver d'introduir el PAT cada vegada, es pot configurar Git perquè el recorde automàticament."
     ```bash
     git config --global credential.helper store
     ```
-    Aquesta comanda guardarà les credencials en un __fitxer de text pla__ en el teu sistema local,
+
+    Aquesta ordre guarda les credencials en un __fitxer de text pla__ en el sistema local,
     concretament en el fitxer `~/.git-credentials`.
+
+!!! docs "Documentació"
+    - [:octicons-link-external-16: Managing your personal access tokens](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+        – Documentació oficial de :simple-github: GitHub
+    - [:octicons-link-external-16: Message "Support for password authentication was removed."](https://stackoverflow.com/questions/68775869/message-support-for-password-authentication-was-removed)
+        – :simple-stackoverflow: StackOverflow
 
 
 ### Autenticació mitjançant claus SSH
-Per autenticar-te amb el servidor de GitHub mitjançant el protocol SSH,
-has de configurar una clau SSH en el teu sistema local i afegir-la al teu compte de GitHub.
+Per a autenticar-se en el servidor de GitHub mitjançant el protocol SSH, cal generar una clau SSH
+en el sistema local i afegir-la al teu compte de GitHub. Una __clau SSH__ és un parell de claus:
+la __clau privada__ es queda en el teu dispositiu i la __clau pública__ es comparteix amb GitHub.
 
-!!! important "Aquesta configuració s'ha de repetir per cada dispositiu on vulgues utilitzar aquest mètode d'autenticació."
+!!! important "Aquesta configuració s'ha de repetir en cada dispositiu on vulgues utilitzar aquest mètode d'autenticació."
 
-!!! docs
-    [:octicons-link-external-16: Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) – :simple-github: GitHub Docs
+!!! docs "Documentació oficial: [:octicons-link-external-16: Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) – :simple-github: GitHub"
 
 #### Generació de la clau SSH
-Per generar una clau SSH, segueix els següents passos:
+La clau SSH es pot generar des d'una interfície gràfica o des de la terminal:
 
 === "Interfície gràfica"
+    1. Obri el programa [__Git GUI__](https://git-scm.com/downloads/guis).
 
-    - Obri el programa [__Git GUI__](https://git-scm.com/downloads/guis).
+        > En :material-microsoft-windows: Windows, el programa s'inclou en la instal·lació de Git.
 
-        > A :material-microsoft-windows: Windows, el programa ve inclòs
-        > amb la instal·lació de Git.
+    2. Obri el diàleg __Help > Show SSH Key__.
 
-    - Obri el diàleg a __Help > Show SSH Key__.
+        ![Menú de diàleg SSH de Git GUI](img/git_gui_help.png)
+        /// shadow-figure-caption | #figure-git-gui-help : Menú de diàleg SSH de Git GUI.
 
-        ![Git GUI: menú diàleg SSH](img/git_gui_help.png)
-        /// caption
-        Menú diàleg SSH de Git GUI
-        ///
+    3. Fes clic en __Generate Key__.
 
-    - Fes clic a __Generate Key__.
-        - Opcionalment, indica una contrasenya (_passphrase_) per protegir la clau
-            o deixa el camp buit per no protegir-la.
+        > Opcionalment, indica una contrasenya (_passphrase_) per a protegir la clau,
+        > o deixa el camp buit per no protegir-la.
 
-    - Fes clic a __Copy to Clipboard__ per copiar la clau pública al porta-retalls.
+    4. Fes clic en __Copy to Clipboard__ per a copiar la clau pública al porta-retalls.
 
-        ![Git GUI: clau SSH generada](img/git_gui_key_generated.png)
-        /// caption
-        Clau SSH generada amb Git GUI
-        ///
+        ![Clau SSH generada amb Git GUI](img/git_gui_key_generated.png)
+        /// shadow-figure-caption | #figure-git-gui-key : Clau SSH generada amb Git GUI.
 
 
 === "Terminal"
-    - __Crea una clau SSH__ al teu sistema local mitjançant la comanda __`ssh-keygen`__.
+    1. __Crea una clau SSH__ en el sistema local amb l'ordre __`ssh-keygen`__.
 
         ```shellconsole
         jpuigcerver@fp:~ $ ssh-keygen -t rsa -b 4096
@@ -198,12 +173,13 @@ Per generar una clau SSH, segueix els següents passos:
         Your identification has been saved in /home/jpuigcerver/.ssh/id_rsa
         ```
 
-        - `-t rsa`: Indica el tipus de clau RSA.
-        - `-b 4096`: Indica la longitud de la clau en bits.
-        - Pots indicar la ruta on guardar la clau. Per defecte, es guarda en `/home/<usuari>/.ssh/id_rsa`.
-        - Pots indicar una contrasenya per protegir la clau. Si no vols protegir-la, deixa el camp buit.
+        - `-t rsa`: indica que la clau és de tipus RSA.
+        - `-b 4096`: indica la longitud de la clau en bits.
 
-    - Còpia el contingut de la __clau pública__ (`id_rsa.pub`) al porta-retalls.
+        L'ordre demana la ruta on guardar la clau (per defecte, `/home/<usuari>/.ssh/id_rsa`)
+        i una contrasenya per a protegir-la. Si no vols protegir-la, deixa el camp buit.
+
+    2. Copia el contingut de la __clau pública__ (`id_rsa.pub`) al porta-retalls.
 
         ```shellconsole
         jpuigcerver@fp:~ $ cat ~/.ssh/id_rsa.pub
@@ -213,29 +189,26 @@ Per generar una clau SSH, segueix els següents passos:
         ...
         ```
 
+        > Copia sempre la clau __pública__ (`.pub`). La clau privada no s'ha de compartir mai.
+
 
 #### Configuració de la clau SSH
-Després, configura la clau SSH al teu compte de
-:simple-github: GitHub seguint els següents passos:
+Després, cal afegir la clau pública al teu compte de :simple-github: GitHub seguint aquests passos:
 
-- Inicia la sessió a [:material-github: GitHub][github].
-- Fes clic a la teua foto de perfil i selecciona __:octicons-gear-16: Settings__.
-- A la barra lateral esquerra, fes clic a [:octicons-key-24: __SSH and GPG keys__](https://github.com/settings/keys).
-- Fes clic a __New SSH key__.
-    - Indica un títol per a la clau SSH.
-    - Enganxa el contingut de la clau pública al camp __Key__.
+1. Inicia la sessió a [:simple-github: GitHub][github].
+2. Fes clic en la teua foto de perfil i selecciona __:octicons-gear-16: Settings__.
+3. En la barra lateral esquerra, fes clic en [:octicons-key-24: __SSH and GPG keys__](https://github.com/settings/keys).
+4. Fes clic en __New SSH key__.
+5. Indica un títol per a la clau SSH i enganxa el contingut de la clau pública en el camp __Key__.
 
 #### Comprovació de l'autenticació
-Per comprovar que la clau SSH s'ha configurat correctament,
-executa la següent comanda en el terminal:
+Per a comprovar que la clau SSH s'ha configurat correctament, executa l'ordre següent en la terminal:
 
 ```bash
 ssh -T git@github.com
 ```
 
-En cas que la clau SSH estiga configurada correctament,
-el terminal mostrarà un missatge amb el nom el
-teu nom d'usuari de GitHub.
+Si la clau SSH està ben configurada, la terminal mostra un missatge amb el teu nom d'usuari de GitHub.
 
 ```shellconsole
 jpuigcerver@fp:~ $ ssh -T git@github.com
@@ -244,21 +217,15 @@ Hi joapuiib! You've successfully authenticated, but GitHub does not provide shel
 
 
 ### Autenticació mitjançant :simple-github: GitHub CLI
-[:simple-github: GitHub CLI][github-cli] és una eina de línia de comandes
-per interactuar amb GitHub des del terminal. Permet gestionar repositoris,
-issues, pull requests, i altres funcionalitats de GitHub.
+[:simple-github: GitHub CLI][github-cli] és una ferramenta de línia d'ordres per a interactuar amb GitHub
+des de la terminal. Permet gestionar repositoris, incidències (_issues_), sol·licituds d'incorporació
+de canvis (_pull requests_) i altres funcionalitats de GitHub.
 
 [github-cli]: https://cli.github.com/
 
-Una de les funcionalitats que ofereix és la possibilitat d'autenticar-se
-amb el servidor de GitHub d'una manera senzilla i flexible.
-
-!!! docs "Documentació oficial"
-    - [:octicons-link-external-16: Instal·lació](https://github.com/cli/cli#installation) – :simple-github: GitHub CLI
-    - [:octicons-link-external-16: `gh auth login`](https://cli.github.com/manual/gh_auth_login) – :simple-github: GitHub CLI Docs
-
-La manera més senzilla d'autenticar-se amb GitHub és mitjançant la comanda `gh auth login`,
-que guia l'usuari d'una manera interactiva com configurar l'autenticació.
+Una de les funcionalitats que ofereix és autenticar-se en el servidor de GitHub d'una manera senzilla.
+Per fer-ho, s'utilitza l'ordre `gh auth login`, que guia de manera interactiva
+en la configuració de l'autenticació.
 
 ```shellconsole
 jpuigcerver@fp:~ $ gh auth login
@@ -268,10 +235,14 @@ jpuigcerver@fp:~ $ gh auth login
 ? How would you like to authenticate GitHub CLI? Login with a web browser
 
 ! First copy your one-time code: ABCD-EFGH
-Press Enter to open github.com in your browser... 
+Press Enter to open github.com in your browser...
 
 ✓ Authentication complete. You are now logged in as joapuiib
 ```
+
+!!! docs "Documentació oficial de :simple-github: GitHub CLI"
+    - [:octicons-link-external-16: Instal·lació](https://github.com/cli/cli#installation)
+    - [:octicons-link-external-16: `gh auth login`](https://cli.github.com/manual/gh_auth_login)
 
 
 ## Bibliografia
