@@ -6,9 +6,8 @@ hide:
 ---
 
 ## Bloc 6: Gestió de projectes
-En aquest bloc es donarà a conéixer les diferents eines
-i funcionalitats que incorpora [__:simple-github: GitHub__][github]
-per gestionar projectes col·laboratius.
+En aquest bloc es presenten les diferents ferramentes i funcionalitats que incorpora
+[__:simple-github: GitHub__][github] per a gestionar projectes col·laboratius.
 
 [github]: https://github.com/
 
@@ -23,9 +22,9 @@ per gestionar projectes col·laboratius.
 ///
 
 /// html | div.timeline.dashed
-[[pull-requests]]: Creació i gestió de :material-source-pull: sol·licituds d'incorporació de canvis (_pull requests_).
+[[pull-requests]]: creació i gestió de :material-source-pull: sol·licituds d'incorporació de canvis (_pull requests_).
 
-[[forks]]: Creació i gestió de :material-source-fork: bifurcacions (_forks_).
+[[forks]]: creació i gestió de :material-source-fork: bifurcacions (_forks_).
 ///
 
 /// html | div.timeline.success.check
