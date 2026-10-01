@@ -20,7 +20,7 @@ def init_repositori():
     x.log_bash_file('stdout/branques/setup_branques.sh')
 
     # remove directory if exists bash script
-    x.log_bash('# Elimina els repositori si existeix')
+    x.log_bash('# Elimina el repositori si existeix')
     x.log_bash('if [ -d ~/git_branques ]; then')
     x.log_bash('    rm -rf ~/git_branques')
     x.log_bash('fi')

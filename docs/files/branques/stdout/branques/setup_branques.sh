@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Elimina els repositori si existeix
+# Elimina el repositori si existeix
 if [ -d ~/git_branques ]; then
     rm -rf ~/git_branques
 fi

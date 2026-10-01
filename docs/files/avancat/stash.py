@@ -21,7 +21,7 @@ def init_repositori():
     x.run('mkdir -p stdout/stash')
 
     # remove directory if exists bash script
-    x.log_bash('# Elimina els repositori si existeix')
+    x.log_bash('# Elimina el repositori si existeix')
     x.log_bash('if [ -d ~/git_stash ]; then')
     x.log_bash('    rm -rf ~/git_stash')
     x.log_bash('fi')

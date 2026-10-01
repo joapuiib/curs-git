@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Elimina els repositori si existeix
+# Elimina el repositori si existeix
 if [ -d ~/git_cherrypick ]; then
     rm -rf ~/git_cherrypick
 fi

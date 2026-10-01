@@ -21,7 +21,7 @@ def init_repositori():
     x.run('mkdir -p stdout/etiquetes')
 
     # remove directory if exists bash script
-    x.log_bash('# Elimina els repositori si existeix')
+    x.log_bash('# Elimina el repositori si existeix')
     x.log_bash('if [ -d ~/git_etiquetes ]; then')
     x.log_bash('    rm -rf ~/git_etiquetes')
     x.log_bash('fi')

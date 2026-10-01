@@ -22,7 +22,7 @@ def init_repositori():
     x.set_user('jpuigcerver')
 
     # remove directory if exists bash script
-    x.log_bash('# Elimina els repositori si existeix')
+    x.log_bash('# Elimina el repositori si existeix')
     x.log_bash('if [ -d ~/git_avancat_exericici ]; then')
     x.log_bash('    rm -rf ~/git_avancat_exericici')
     x.log_bash('fi')
