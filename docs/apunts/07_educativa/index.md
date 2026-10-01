@@ -6,14 +6,13 @@ hide:
 ---
 
 ## Bloc 7: GitHub com a plataforma educativa
-Per últim, en aquest bloc es veurà com podem aprofitar les eines
-i funcionalitats que ofereix [__:simple-github: GitHub__][github]
-per gestionar treball d'aula i projectes educatius col·laboratius.
+Finalment, en aquest bloc es mostra com es poden aprofitar les ferramentes i funcionalitats
+que ofereix [__:simple-github: GitHub__][github] per a gestionar el treball d'aula i projectes educatius col·laboratius.
 
 [github]: https://github.com/
 
 /// html | div.timeline
-[[education]]: Beneficis de :simple-github: GitHub per a estudiants i professors.
+[[education]]: beneficis de :simple-github: GitHub per a l'alumnat i el professorat.
 ///
 /// html | div.timeline.dashed
 [[organitzacions]]
