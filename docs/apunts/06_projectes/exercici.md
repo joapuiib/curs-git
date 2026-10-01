@@ -147,7 +147,7 @@ en el teu repositori. La :material-source-pull: _Pull Request_ s'actualitza auto
 amb els :octicons-git-commit-24: _commits_ nous de la branca.
 
 
-## [:material-rocket-launch-outline:]{style="color: var(--md-admonition-color--extension)"} Ampliacions
+## :material-rocket-launch-outline:{ style="color: var(--md-admonition-color--extension)" } Ampliacions
 
 Si has acabat l'exercici, pots aprofundir amb aquesta proposta:
 

@@ -90,7 +90,7 @@ perquè l'historial siga útil quan calga revisar-lo. Alguns exemples de missatg
 - _Canvis_, _Modificacions_, _Actualització_...
 - _Commit del pas X_.
 
-### Repositoris dins d'OneDrive o equivalents
+### Repositoris en OneDrive o equivalents
 Si utilitzes OneDrive, Google Drive o qualsevol altre servei de sincronització de fitxers,
 és recomanable crear el repositori fora d'aquestes carpetes.
 

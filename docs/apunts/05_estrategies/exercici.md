@@ -107,7 +107,7 @@ jpuigcerver@fp:~/bloc5_exercici (main) $ git lga
 * ec0e2bd - (5 seconds ago) Commit inicial - Joan Puigcerver
 ```
 
-## [:material-rocket-launch-outline:]{style="color: var(--md-admonition-color--extension)"} Ampliacions
+## :material-rocket-launch-outline:{ style="color: var(--md-admonition-color--extension)" } Ampliacions
 
 Si has acabat l'exercici, pots aprofundir amb aquesta proposta, que no és necessària per a superar l'activitat:
 

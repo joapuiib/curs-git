@@ -221,7 +221,7 @@ i `git rebase --continue` (vegeu
     ```
 
 
-## [:material-rocket-launch-outline:]{style="color: var(--md-admonition-color--extension)"} Ampliacions
+## :material-rocket-launch-outline:{ style="color: var(--md-admonition-color--extension)" } Ampliacions
 
 Si has acabat l'exercici, pots aprofundir amb aquesta proposta:
 
