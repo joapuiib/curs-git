@@ -33,7 +33,7 @@ Per a lliurar aquest exercici, tria una de les opcions següents:
     Una vegada acabat l'exercici, grava un vídeo de la pantalla on mostres i expliques
     els passos realitzats i el resultat final.
 
-    > No cal que apareguis en el vídeo, només la pantalla.
+    > No cal que aparegues en el vídeo, només la pantalla.
 
     - La durada __màxima__ del vídeo és de 10 minuts.
 

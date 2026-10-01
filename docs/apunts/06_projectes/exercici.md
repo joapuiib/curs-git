@@ -117,7 +117,7 @@ La tasca d'aquest bloc consisteix a fer una aportació a aquest repositori. Per 
 
 ## Format de les contribucions
 Per a garantir la coherència i la qualitat de les contribucions, segueix el format establert en l'enunciat
-per a cada tipus d'aportació. A més, tin en compte les consideracions següents:
+per a cada tipus d'aportació. A més, tingues en compte les consideracions següents:
 
 - __Llengua__: els títols de les seccions han de ser coherents i no han de mesclar diferents llengües.
 
