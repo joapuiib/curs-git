@@ -23,6 +23,9 @@ ALL=0
 SPELL_SOURCES=''
 COPILOT=0
 SKIP=0
+SQUARE_LOGO=0
+HERO_SECTION=0
+PORT=''
 
 ARGS=''
 SPELL_ARGS=''
@@ -55,8 +58,22 @@ while [ $# -gt 0 ] ; do
         --skip)
             SKIP=1
             ;;
+        -p | --port)
+            PORT=$2
+            if [ -z "$PORT" ]; then
+                print "Missing port number."
+                exit 1
+            fi
+            shift
+            ;;
         --copilot)
             COPILOT=1
+            ;;
+        --logo)
+            SQUARE_LOGO=1
+            ;;
+        --herosection)
+            HERO_SECTION=1
             ;;
         --act)
             ACT=$2
@@ -98,7 +115,7 @@ if [ $INSTALL_VENV -eq 1 ]; then
     fi
 
     print "Installing virtual environment..."
-    python3 -m venv $VENV_DIR
+    python3 -m virtualenv $VENV_DIR
     print "Installing dependencies"
     $VENV_DIR/bin/pip install -r requirements.txt
 elif [ $UPGRADE -eq 1 ]; then
@@ -108,9 +125,21 @@ fi
 
 source $VENV_DIR/bin/activate
 
+if [ $SQUARE_LOGO -eq 1 ]; then
+    python3 scripts/generate_square_logo.py $ARGS
+    exit $?
+fi
+
+if [ $HERO_SECTION -eq 1 ]; then
+    python3 scripts/generate_hero_section.py $ARGS
+    exit $?
+fi
+
 COMMAND="serve --livereload"
 if [ $BUILD -eq 1 ]; then
     COMMAND="build"
+elif [ -n "$PORT" ]; then
+    COMMAND="$COMMAND -a localhost:$PORT"
 fi
 
 if [ $CI -eq 0 ]; then
