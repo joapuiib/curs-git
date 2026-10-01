@@ -26,7 +26,9 @@ Aquestes ordres permeten sincronitzar les branques locals i les remotes:
 
 - __`git branch -r`__: mostra les branques remotes associades al repositori local.
 - __`git push [-u | --set-upstream] <alies> <branca>`__: publica la branca local en la branca remota
-    especificada del repositori remot `alies`.
+    especificada del repositori remot `alies`. Amb `-u`, a més, associa la branca local amb la remota
+    (_upstream_), de manera que `git push` i `git pull` funcionen després sense arguments.
+- __`git branch -vv`__: mostra, per a cada branca local, la branca remota associada (entre claudàtors).
 - __`git fetch`__: actualitza les referències remotes del repositori local amb els canvis
     del repositori remot associat.
 

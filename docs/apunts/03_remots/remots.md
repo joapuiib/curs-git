@@ -273,7 +273,7 @@ git push [-u | --set-upstream] [<remot> [<branca>]]
     /// figure-caption | ^1 .shadow : Canvis publicats a :simple-github: GitHub.
 
 
-### Associació d'un remot per defecte
+### Associació amb una branca remota (_upstream_)
 Cada branca local es pot associar amb una branca remota mitjançant l'opció `-u` o `--set-upstream`
 de l'ordre `git push`. Aquesta branca remota s'anomena __upstream__ i inclou tant el remot
 com el nom de la branca en aquest:
