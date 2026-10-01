@@ -36,7 +36,7 @@ alias: estrategies-slides
 ## Objectius
 
 - Proporcionar un flux de treball clar i coherent.
-- Facilitar la col·laboració entre membres de l'equip.
+- Facilitar la col·laboració entre les persones de l'equip.
 - Facilitar la revisió i integració de canvis.
 
 ---
@@ -51,7 +51,7 @@ alias: estrategies-slides
 
 ---
 
-## Branca principal i desenvolupament
+## Branca principal i de desenvolupament
 
 ![Branques main i develop](img/main-develop.light.png){ .r-stretch }
 

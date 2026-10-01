@@ -6,11 +6,8 @@ hide:
 ---
 
 ## Bloc 5: Estratègies de ramificació
-En aquest bloc s'exposaran diferents variants
-d'una estratègia de ramificació per treballar
-amb branques de [__:simple-git: Git__][git]
-d'una manera eficaç i organitzada en
-projectes col·laboratius.
+En aquest bloc s'exposen diferents variants d'una estratègia de ramificació per a treballar
+amb branques de [__:simple-git: Git__][git] d'una manera eficaç i organitzada en projectes col·laboratius.
 
 [git]: https://git-scm.com/
 
@@ -23,7 +20,7 @@ projectes col·laboratius.
 - Tècniques d'incorporació de canvis.
 - Flux de treball.
 
-[[estrategies-example]]: Exemple simulat entre diversos col·laboradors.
+[[estrategies-example]]: exemple simulat amb diverses persones col·laboradores.
 ///
 
 /// html | div.timeline.success.check
