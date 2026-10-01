@@ -6,7 +6,7 @@ hide:
 ---
 
 ## Bloc 2: Branques
-En aquest bloc s'introduiran les __:material-source-branch: branques__; què són, per a què serveixen
+En aquest bloc s'introdueixen les __:material-source-branch: branques__: què són, per a què serveixen
 i com es treballa amb elles.
 
 /// html | div.timeline

@@ -1,86 +1,96 @@
 ---
 template: document.html
-title: "Branques: Resum comandes"
+title: "Branques: Resum d'ordres"
 icon: material/file-eye
 alias: branques-resum
 comments: true
 ---
 
-## Branques: Resum de comandes
-En aquests apunts inclouen un resum de les comandes
-vistes en el [[branques-index]].
+## Branques: Resum d'ordres
+Aquest resum recull les ordres presentades en el [[branques-index]].
 
 
 ### Gestió de branques locals
-- `git branch`: Mostra les branques locals del _Repositori Local_.
+Aquestes ordres permeten consultar, crear, reanomenar i eliminar branques:
 
-- `git branch <nom> [<ref>]`: Crea una nova branca local
-    a partir de la referència especificada. Si no es proporciona cap
-    referència, es crea a partir on estem situats actualment (`HEAD`).
+- __`git branch`__: mostra les branques locals del _Repositori local_.
 
-- `git branch -m <nom>`: Canvia el nom de la branca actual.
+- __`git branch <nom> [<ref>]`__: crea una branca local nova a partir de la referència especificada.
+    Si no s'indica cap referència, es crea en la posició actual (`HEAD`).
 
-- `git branch -d <nom>`: Elimina la branca local especificada.
+- __`git branch -m <nom>`__: canvia el nom de la branca actual.
 
-    - Opció `-D`: Elimina la branca local de manera forçada.
+- __`git branch -d <nom>`__: elimina la branca local especificada.
+
+    - __`-D`__: elimina la branca local de manera forçada.
+
+Per a canviar de branca, hi ha dues ordres equivalents:
 
 === "`checkout`"
-    - `git checkout <nom>`: Canvia a la branca especificada (mou el `HEAD`).
-    - `git checkout -b <nom>`: Crea una nova branca i es situa en ella.
-        
+    - __`git checkout <nom>`__: canvia a la branca especificada (mou el `HEAD`).
+    - __`git checkout -b <nom>`__: crea una branca nova i s'hi situa.
+
         > Equivalent a `git branch <nom>` i `git checkout <nom>`.
 
 === "`switch`"
-    - `git switch <nom>`: Canvia a la branca especificada (mou el `HEAD`).
-    - `git switch -c <nom>`: Crea una nova branca i es situa en ella.
-        
+    - __`git switch <nom>`__: canvia a la branca especificada (mou el `HEAD`).
+    - __`git switch -c <nom>`__: crea una branca nova i s'hi situa.
+
         > Equivalent a `git branch <nom>` i `git switch <nom>`.
 
 
 ### Fusió de branques locals
-- `git merge <nom>`: Fusiona la branca especificada a la branca actual (`HEAD`).
+La fusió incorpora els canvis d'una branca en la branca actual:
 
-    Per defecte, tracta de fer una fusió _fast-forward_. Si no és possible,
-    crea un nou _commit_ de fusió.
+- __`git merge <nom>`__: fusiona la branca especificada en la branca actual (`HEAD`).
+    Per defecte, intenta fer una fusió _fast-forward_ i, si no és possible, crea un _commit_ de fusió.
+    Si hi ha conflictes, el repositori entra en l'estat `MERGING` i cal resoldre'ls.
 
-    - Si hi ha conflictes, entrarem a l'estat `MERGING` i caldrà resoldre'ls.
-    - Opció `--ff-only`: Realitza la fusió __només__ si es pot fer _fast-forward_.
-    - Opció `--no-ff`: Realitza una fusió mitjançant un __commit de fusió__.
+    - __`--ff-only`__: fa la fusió __només__ si pot ser _fast-forward_.
+    - __`--no-ff`__: fa la fusió sempre mitjançant un __commit de fusió__.
 
-- `git merge --abort`: Si es troba en l'estat de fusió `MERGING`,
-    deté el procés de fusió i torna a l'estat anterior.
+- __`git merge --abort`__: en l'estat `MERGING`, atura el procés de fusió i torna a l'estat anterior.
 
 
 ### Canvi de base
-- `git rebase <nom>`: Canvia la base de la branca actual (`HEAD`) a la branca
-    a la branca especificada.
+El canvi de base permet integrar canvis de branques divergents mantenint una història lineal:
 
-    - Si hi ha conflictes, entrarem a l'estat `REBASING` i caldrà resoldre'ls.
+- __`git rebase <nom>`__: canvia la base de la branca actual (`HEAD`) a la branca especificada.
+    Si hi ha conflictes, el repositori entra en l'estat `REBASING` i cal resoldre'ls.
 
-- `git rebase --continue`: A l'estat `REBASING`, continua el
-    procés de canvi de base després de resoldre els conflictes.
+- __`git rebase --continue`__: en l'estat `REBASING`, continua el procés de canvi de base
+    després de resoldre els conflictes.
 
-- `git rebase --abort`: A l'estat `REBASING`, deté el procés de canvi de base i
-    torna a l'estat anterior.
+- __`git rebase --abort`__: en l'estat `REBASING`, atura el procés de canvi de base
+    i torna a l'estat anterior.
 
 
 ### Configuració
-- `merge.edit [yes/no]`: Configura si l'operació de fusió `merge` demana
-    editar el missatge del _commit_ de fusió o es fa automàticament.
+Aquestes claus de configuració modifiquen el comportament per defecte de `git merge`:
 
-    > Equivalent a utilitzar l'opció `--edit` o `--no-edit` en `git merge`.
+- __`merge.edit`__: indica si la fusió demana editar el missatge del _commit_ de fusió
+    o si es fa automàticament.
 
-- `merge.ff [false/only]`: Configura el comportament de la fusió `merge` en
-    relació al _fast-forward_.
+    ??? info "Valors de `merge.edit`"
 
-    - Si s'estableix a `false`, les fusiones de branques
-        es realitzaran mitjançant un _commit de fusió_.
-    - Si s'estableix a `only`, les fusiones de branques
-        es realitzaran mitjançant un _fast-forward_. En cas de no ser possible,
-        el procés es cancel·la.
+        | Valor | Significat                                                   |
+        |-------|--------------------------------------------------------------|
+        | `yes` | __Demana__ editar el missatge. Equival a `git merge --edit`. |
+        | `no`  | Utilitza el missatge __automàtic__. Equival a `git merge --no-edit`. |
 
-    > Equivalent a utilitzar l'opció `--no-ff` o `--ff-only` en
-    > `git merge`.
+- __`merge.ff`__: indica el comportament de la fusió respecte del _fast-forward_.
 
-!!! docs
-    [:octicons-link-external-16: merge config](https://git-scm.com/docs/merge-config) - :simple-git: Git Docs
+    ??? info "Valors de `merge.ff`"
+
+        | Valor   | Significat                                                                              |
+        |---------|-----------------------------------------------------------------------------------------|
+        | `false` | Les fusions es fan sempre amb un __commit de fusió__. Equival a `git merge --no-ff`.    |
+        | `only`  | Les fusions es fan __només__ amb _fast-forward_; si no és possible, el procés es cancel·la. Equival a `git merge --ff-only`. |
+
+```ini title="~/.gitconfig"
+[merge]
+    edit = no
+    ff = only
+```
+
+!!! docs "Documentació oficial: [:octicons-link-external-16: `merge` config](https://git-scm.com/docs/merge-config) – :simple-git: Git"
