@@ -1,6 +1,5 @@
 site_name: "Introducció a Git i GitHub Actions"
 site_author: "Joan Puigcerver Ibáñez"
-site_email: "j.puigcerveribanez@edu.gva.es"
 site_url: https://joapuiib.github.io/curs-git/
 dev_addr: 127.0.0.1:4567
 
@@ -32,6 +31,7 @@ watch:
 
 theme:
   name: material-joapuiib
+  email: "j.puigcerveribanez@edu.gva.es"
   custom_dir: overrides
   icon:
     logo: simple/git

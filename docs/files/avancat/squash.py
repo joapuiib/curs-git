@@ -22,7 +22,7 @@ def init_repositori():
     x.run('mkdir -p stdout/squash')
 
     # @TODO: remove directory if exists bash script
-    x.log_bash('# Elimina els repositori si existeix')
+    x.log_bash('# Elimina el repositori si existeix')
     x.log_bash('if [ -d ~/git_squash ]; then')
     x.log_bash('    rm -rf ~/git_squash')
     x.log_bash('fi')

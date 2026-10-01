@@ -53,11 +53,11 @@ Control de versions amb :simple-git: __Git__, gestió de projectes col·laborati
 - Aprendre a utilitzar Git per a gestionar projectes de desenvolupament de programari.
 - Conéixer i aplicar estratègies de ramificació en projectes de desenvolupament de programari col·laboratiu.
 - Conéixer i utilitzar plataformes d'allotjament de repositoris en línia com GitHub.
-- Conéixer i utilitzar eines de gestió de projectes proporcionades per GitHub.
-- Promoure la utilització de Git i GitHub a l’aula com a eina de treball col·laboratiu.
-- Proporcionar estratègies als docents per incorporar la utilització de Git i GitHub a l'aula.
-- Conéixer els principis bàsics de GitHub Actions i el seu paper en l’automatització del flux de desenvolupament (CI/CD).
-- Automatitzar tasques habituals com proves automàtiques, integració contínua, anàlisi de codi o desplegaments.
+- Conéixer i utilitzar ferramentes de gestió de projectes proporcionades per GitHub.
+- Promoure la utilització de Git i GitHub a l'aula com a ferramenta de treball col·laboratiu.
+- Proporcionar estratègies al professorat per a incorporar la utilització de Git i GitHub a l'aula.
+- Conéixer els principis bàsics de GitHub Actions i el seu paper en l'automatització del flux de desenvolupament (CI/CD).
+- Automatitzar tasques habituals com ara proves automàtiques, integració contínua, anàlisi de codi o desplegaments.
 
 
 ## Continguts específics
@@ -104,7 +104,7 @@ Control de versions amb :simple-git: __Git__, gestió de projectes col·laborati
     - Reserva de canvis: `stash`.
     - Eliminació de canvis: `reset` i `revert`.
     - Còpia de canvis: `cherry-pick`.
-    - Fusió de canvis en un sol commit: `squash`.
+    - Fusió de canvis en un sol _commit_: `squash`.
 
 - :material-sitemap:{ .lg .middle } __[[estrategies-index]]__
 
@@ -143,5 +143,5 @@ Control de versions amb :simple-git: __Git__, gestió de projectes col·laborati
 
 
 ## Condicions per superar el curs
-Per superar el curs, els participants hauran de realitzar i superar totes les tasques proposades.
-__En cas de no superar totes les tasques abans de la finalització del curs, no es podrà obtenir el certificat de superació del curs__.
+Per a superar el curs, cal fer i superar totes les tasques proposades.
+__Si no se superen totes les tasques abans de la finalització del curs, no es podrà obtindre el certificat de superació__.

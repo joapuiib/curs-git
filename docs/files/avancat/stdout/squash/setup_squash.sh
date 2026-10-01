@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Elimina els repositori si existeix
+# Elimina el repositori si existeix
 if [ -d ~/git_squash ]; then
     rm -rf ~/git_squash
 fi

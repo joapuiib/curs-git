@@ -14,92 +14,83 @@ tags:
 *[CD]: Continuous Deployment
 
 ## Automatització en CI/CD
-El concepte d'__Integració Contínua__ (_Continuous Integration_ o CI) i
-__Desplegament Continu__ (_Continuous Deployment_ o CD) és una pràctica
-que permet als equips de desenvolupament integrar els canvis en el codi
-de manera regular i distribuir-los de manera automàtica.
+La __integració contínua__ (_Continuous Integration_ o CI) i el __desplegament continu__
+(_Continuous Deployment_ o CD) són pràctiques que permeten als equips de desenvolupament
+integrar els canvis en el codi de manera regular i distribuir-los automàticament.
 
-Aquesta pràctica és essencial en el desenvolupament modern de software,
-ja que accelera el procés de lliurament de noves funcionalitats,
-redueix el temps de parada i millora la qualitat del projecte mitjançant
-__l'automatització__ de tasques repetitives, sense necessitat d'intervenció manual.
+Aquestes pràctiques són essencials en el desenvolupament de programari actual, ja que acceleren
+el lliurament de funcionalitats noves, redueixen el temps d'aturada i milloren la qualitat del projecte
+mitjançant l'__automatització__ de tasques repetitives, sense necessitat d'intervenció manual.
+Les tasques que s'automatitzen més habitualment són:
 
-Les tasques més comunes que es poden automatitzar són:
-
-- __Compilació i empaquetatge de l'aplicació__
-- __Proves i validacions__
-- __Anàlisi de la qualitat del codi__: _linters_, anàlisi estàtica, etc.
-- __Desplegament de l'aplicació__ i gestió de llançaments
-- __Generació i publicació de documentació__
+- __Compilació__: compilació i empaquetatge de l'aplicació.
+- __Proves__: execució de proves i validacions.
+- __Qualitat del codi__: anàlisi amb _linters_, anàlisi estàtica, etc.
+- __Desplegament__: desplegament de l'aplicació i gestió de llançaments.
+- __Documentació__: generació i publicació de la documentació.
 
 
 ### Què és la integració contínua (CI)?
-La __Integració Contínua__ (_Continuous Integration_ o CI) consisteix en integrar
-de manera contínua i freqüent els canvis a la branca principal del projecte,
-provant de manera automàtica cada canvi quan s'integra al repositori.
+La __integració contínua__ (_Continuous Integration_ o CI) consisteix a integrar de manera contínua
+i freqüent els canvis en la branca principal del projecte i a provar automàticament cada canvi
+quan s'integra en el repositori.
 
-Això permet detectar i solucionar errors o vulnerabilitats de manera més senzilla
-i ràpida, ja que els canvis són més xicotets i fàcils de revisar.
+Això permet detectar i solucionar errors o vulnerabilitats de manera més senzilla i ràpida,
+ja que els canvis són més xicotets i fàcils de revisar. A més, la integració contínua facilita
+la col·laboració de l'equip, ja que redueix la possibilitat de conflictes entre branques
+encara que es treballe en paral·lel.
 
-A més, la integració contínua facilita la col·laboració entre els membres de l'equip,
-ja que minimitza la possibilitat de conflictes entre diferents branques encara que
-es treballa de manera paral·lela.
+Un flux de treball típic de CI inclou els passos següents:
 
-Un flux de treball típic de CI inclou els següents passos:
-
-- __Anàlisi estàtica del codi__, que verifique la qualitat del codi font
-    i assegure que compleix amb els estàndards establerts.
-
-- __Compilació del projecte i execució de proves automatitzades__,
-    que assegure que el projecte es pot compilar correctament
+- __Anàlisi estàtica del codi__: verifica la qualitat del codi font i assegura que compleix
+    els estàndards establerts.
+- __Compilació i proves automatitzades__: asseguren que el projecte es compila correctament
     i que les funcionalitats implementades funcionen com s'espera.
 
 
 ### Què és el desplegament continu (CD)?
-El __Desplegament Continu__ (_Continuous Deployment_ o CD) és el procés
-d'automatitzar les tasques necessàries per desplegar una aplicació.
-El CD pot incloure des de preparar la infraestructura fins a desplegar
-l'aplicació a un entorn de proves o producció.
+El __desplegament continu__ (_Continuous Deployment_ o CD) és el procés d'automatitzar les tasques
+necessàries per a desplegar una aplicació. Pot incloure des de la preparació de la infraestructura
+fins al desplegament de l'aplicació en un entorn de proves o de producció.
 
-Un flux de treball típic de CD inclou els següents passos:
+Un flux de treball típic de CD inclou els passos següents:
 
-- __Desplegament automàtic a un entorn de proves__,
-    on es poden realitzar proves addicionals i validacions.
-
-- __Desplegament automàtic a l'entorn de producció__,
-    que permet lliurar noves funcionalitats als usuaris de manera ràpida
-    i segura.
+- __Desplegament automàtic en un entorn de proves__: permet fer proves i validacions addicionals.
+- __Desplegament automàtic en l'entorn de producció__: permet lliurar funcionalitats noves
+    a les persones usuàries de manera ràpida i segura.
 
 
 ### Fluxos de treball
-Els **fluxos de treball a CI/CD** o, també coneguts com a **CI/CD _pipelines_**, són
-processos automatitzats que s'encarreguen de la compilació, la prova i el desplegament
-de les aplicacions.
-Es componen de diferents tasques que s'executaran automàticament sense necessitat d'intervenció
-humana.
+Els __fluxos de treball de CI/CD__, també coneguts com a __CI/CD *pipelines*__, són processos automatitzats
+que s'encarreguen de la compilació, les proves i el desplegament de les aplicacions.
+Es componen de diferents tasques que s'executen automàticament, sense intervenció humana.
 
 ![Exemple d'un flux de treball](img/cicd/pipeline.png)
 /// attribution: https://katalon.com/
-/// figure-caption: Exemple d'un flux de treball.
+/// figure-caption | #figure-pipeline : Exemple d'un flux de treball.
+
+Cadascuna d'aquestes tasques pot incloure diverses accions, que es configuren
+en l'entorn de CI/CD que s'utilitze.
 
 
-Pot ser que cadascuna d'aquestes tasques necessiten portar a terme múltiples accions, que podran ser configurades
-en l'entorn que s'utilitze.
+### Entorns i ferramentes de CI/CD
+Hi ha diferents entorns i ferramentes de CI/CD que permeten configurar i gestionar fluxos de treball
+automatitzats. Alguns dels més habituals són:
 
+- __[:simple-github: GitHub Actions][actions]__: fluxos de treball automatitzats sobre repositoris
+    de Git allotjats a GitHub.
+- __[:simple-gitlab: GitLab CI/CD][gitlab-cicd]__: fluxos de treball automatitzats sobre repositoris
+    de Git allotjats a GitLab.
+- __[:simple-codeberg: Forgejo Actions][forgejo-actions]__: fluxos de treball automatitzats sobre repositoris
+    de Git allotjats a Codeberg (o en qualsevol altra instància de [Forgejo](https://forgejo.org/)).
+    La seua sintaxi és pràcticament compatible amb la de GitHub Actions.
+- __[:simple-jenkins: Jenkins][jenkins]__: servidor d'automatització de codi obert,
+    que cal instal·lar i configurar.
+- __[:simple-travisci: Travis CI][travis-ci]__: servei d'automatització allotjat en el núvol.
+    És programari privatiu i requereix un compte de pagament.
+- __[:material-microsoft-azure: Azure Pipelines][azure-pipelines]__: servei d'automatització de Microsoft Azure.
+- __[:material-aws: AWS CodePipeline][aws-codepipeline]__: servei d'automatització d'Amazon Web Services.
 
-### Entorns i eines de CI/CD
-Existeixen diferents entorns i eines de CI/CD que permeten configurar i gestionar els fluxos de treball
-automatitzats. Algunes de les més comunes són:
-
-- __[:simple-github: GitHub Actions][actions]__: Permet configurar fluxos de treball automatitzats sobre repositoris de Git allotjats a GitHub.
-- __[:simple-gitlab: GitLab CI/CD][gitlab-cicd]__: Permet configurar fluxos de treball automatitzats sobre repositoris de Git allotjats a GitLab.
-- __[:simple-codeberg: Forgejo Actions][forgejo-actions]__: Permet configurar fluxos de treball automatitzats sobre repositoris de Git allotjats a Codeberg
-    (o qualsevol altra instància de [Forgejo](https://forgejo.org/)). La seua sintaxi és pràcticament compatible amb la de GitHub Actions.
-- __[:simple-jenkins: Jenkins][jenkins]__: Servidor d'automatització de codi obert. Necessita ser instal·lat i configurat.
-- __[:simple-travisci: Travis CI][travis-ci]__: Servei d'automatització de codi allotjat al núvol. Es codi privatiu i requereix d'un compte de pagament.
-- __[:material-microsoft-azure: Azure Pipelines][azure-pipelines]__: Servei d'automatització de Microsoft Azure.
-- __[:material-aws: AWS CodePipeline][aws-codepipeline]__: Servei d'automatització de Amazon Web Services.
-    
 
 [actions]: https://docs.github.com/en/actions
 [gitlab-cicd]: https://docs.gitlab.com/ee/ci/
@@ -111,22 +102,21 @@ automatitzats. Algunes de les més comunes són:
 
 
 ## :octicons-play-24: GitHub Actions
+[__:octicons-play-24: GitHub Actions__](https://github.com/features/actions) és una funcionalitat
+de :simple-github: GitHub que permet crear fluxos de treball sobre un repositori.
+Es gestionen des de l'apartat __:material-arrow-right-drop-circle-outline: Actions__, on es poden consultar
+les tasques d'automatització configurades i les seues execucions.
 
-[__:octicons-play-24: GitHub Actions__](https://github.com/features/actions)
-és una funcionalitat de :simple-github: GitHub que permet crear
-fluxos de treball sobre un repositori. Es gestionen des de l'apartat __:material-arrow-right-drop-circle-outline: Actions__,
-on es poden consultar les tasques d'automatització configurades i les execucions d'aquestes.
+!!! important "Cada projecte té característiques i necessitats pròpies; per tant, cal adaptar els processos a la naturalesa del projecte."
 
-!!! important "Cada projecte té unes característiques i necessitats pròpies i, per tant, caldrà adaptar els processos de la naturalesa del projecte."
-
-!!! notice "Consulteu els [[actions-exemples]] per trobar exemples de fluxos de treball més complexos i adaptats a diferents tipus de projectes."
+!!! notice "Consulta els [[actions-exemples]] per a trobar exemples de fluxos de treball més complexos i adaptats a diferents tipus de projectes."
 
 
 ### Configuració d'un flux de treball
 Les tasques d'automatització es defineixen en fitxers de configuració `YAML`,
 que s'han de situar dins del directori `.github/workflows/`.
 
-!!! docs "[:octicons-link-external-16: Quickstart for GitHub Actions](https://docs.github.com/en/actions/writing-workflows/quickstart) – :simple-github: GitHub Docs"
+!!! docs "Documentació oficial: [:octicons-link-external-16: Quickstart for GitHub Actions](https://docs.github.com/en/actions/writing-workflows/quickstart) – :simple-github: GitHub"
 
 !!! example "Repositori d'exemple: [:octicons-link-external-16: `exemple-actions`](https://github.com/cursgit/exemple-actions)"
 
@@ -156,27 +146,23 @@ jobs:
 {% endraw %}
 /// attribution: :simple-github: GitHub Docs
 
-La configuració bàsica d'una tasca d'automatització es fa amb els següents camps:
+La configuració bàsica d'un flux de treball es fa amb els camps següents:
 
-- `name`: Nom de la tasca
-- `on`: [Esdeveniments][events]
-    que faran que s'execute la tasca.
-- `jobs`: Llista de tasques a executar.
+- __`name`__: nom del flux de treball.
+- __`on`__: [esdeveniments][events] que fan que s'execute.
+- __`jobs`__: llista de tasques que cal executar.
 
-Cada tasca té les següents seccions:
+Cada tasca té les seccions següents:
 
-- `runs-on`: Tipus de màquina on s'executarà la tasca.
-- `if`: (_Opcional_) [Condició][if] que ha de complir-se per a executar la tasca.
-- `steps`: Llista de passos a executar.
-    
-    Cada pas ha de ser una comanda de shell (`run`) o una acció de GitHub predefinida (`uses`).
+- __`runs-on`__: tipus de màquina on s'executa la tasca.
+- __`if`__: (opcional) [condició][if] que s'ha de complir per a executar la tasca.
+- __`steps`__: llista de passos que cal executar. Cada pas és una ordre de la terminal (`run`)
+    o una acció de GitHub predefinida (`uses`):
 
-    - `name`: Nom del pas
-    - `run`: Comanda de shell que s'executarà.
-    - `uses`: [Acció de GitHub predefinida][uses] que s'executarà.
-
-        Cada acció pot tenir els seus propis paràmetres de configuració, que s'estableixen dins de la
-        secció `with`.
+    - __`name`__: nom del pas.
+    - __`run`__: ordre de la terminal que s'executa.
+    - __`uses`__: [acció de GitHub predefinida][uses] que s'executa. Cada acció pot tindre
+        els seus propis paràmetres de configuració, que s'estableixen dins de la secció `with`.
 
 [events]: https://docs.github.com/es/actions/reference/workflows-and-actions/events-that-trigger-workflows
 [if]: https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/using-conditions-to-control-job-execution
@@ -184,9 +170,8 @@ Cada tasca té les següents seccions:
 
 
 ### Execució d'una automatització
-Les tasques d'automatització s'executen automàticament
-quan es compleixen les condicions definides en la secció `on`
-de la configuració.
+Les tasques d'automatització s'executen automàticament quan es compleixen les condicions
+definides en la secció `on` de la configuració.
 
 ```yaml
 on:
@@ -195,31 +180,31 @@ on:
       - main
 ```
 
-!!! docs "[:octicons-link-external-16: Events that trigger workflows](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows) – :simple-github: GitHub Docs"
+!!! docs "Documentació oficial: [:octicons-link-external-16: Events that trigger workflows](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows) – :simple-github: GitHub"
 
-A la secció :octicons-play-24: Actions es poden consultar les execucions de les tasques d'automatització
+En la secció :octicons-play-24: Actions es poden consultar les execucions de les tasques d'automatització
 definides en el repositori.
 
-A més, és possible configurar una tasca perquè es puga executar manualment si s'especifica
-`workflow_dispatch` en la secció `on` de la configuració.
+A més, una tasca es pot configurar perquè també es puga executar manualment,
+especificant `workflow_dispatch` en la secció `on` de la configuració:
 
 ```yaml
 on:
   workflow_dispatch:
 ```
 
-Això permet llançar l'automatització manualment des de la secció :material-arrow-right-drop-circle-outline: Actions.
+Així, l'automatització es pot llançar manualment des de la secció
+:material-arrow-right-drop-circle-outline: Actions.
 
 ![Execució manual d'una automatització](img/cicd/workflow-dispatch.png)
-/// figure-caption | .shadow : Execució manual d'una automatització des de :material-arrow-right-drop-circle-outline: Actions.
+/// shadow-figure-caption | #figure-workflow-dispatch : Execució manual d'una automatització des de :material-arrow-right-drop-circle-outline: Actions.
 
-En cas de necessitar provar una tasca d'automatització localment
-sense haver de publicar canvis al repositori,
-es pot fer ús d'eines com [__`act`__](https://nektosact.com/).
+Per a provar una tasca d'automatització localment sense haver de publicar canvis en el repositori,
+es poden utilitzar ferramentes com [__`act`__](https://nektosact.com/). Aquesta ferramenta utilitza
+[:simple-docker: Docker](https://www.docker.com/) per a simular un entorn d'execució semblant
+al de GitHub Actions.
 
-Aquesta eina utilitza [:simple-docker: Docker](https://www.docker.com/)
-per simular l'entorn d'execució semblant a l'entorn de GitHub Actions,
-que permet provar les tasques sense haver de publicar els canvis al repositori remot.
+Per exemple, aquesta és l'eixida d'`act` en executar el flux de treball del repositori d'exemple:
 
 ```shellconsole
 jpuigcerver@fp:~/exemple-actions (main) $ act
@@ -269,41 +254,43 @@ INFO[0000] Using docker host 'unix:///var/run/docker.sock', and daemon socket 'u
 ```
 
 
-### Execució d'una automatització a una Pull Request
-Les tasques d'automatització també es poden combinar amb les [[pull-requests]] per comprovar que els canvis proposats compleixen
-amb els estàndards de qualitat del projecte abans de ser integrats a la branca principal, facilitant la __integració contínua (CI)__.
+### Execució d'una automatització en una Pull Request
+Les tasques d'automatització també es poden combinar amb les [[pull-requests]] per a comprovar
+que els canvis proposats compleixen els estàndards de qualitat del projecte abans d'integrar-los
+en la branca principal. D'aquesta manera, es facilita la __integració contínua (CI)__.
+Les tasques més habituals en aquest cas són:
 
-Algunes de les tasques més comunes que es defineixen en aquest cas són 
-
-- Execució de proves automatitzades
-- Anàlisi de l'estil del codi
-- Anàlisi de la qualitat del codi
+- __Proves__: execució de proves automatitzades.
+- __Estil__: anàlisi de l'estil del codi.
+- __Qualitat__: anàlisi de la qualitat del codi.
 
 
-![Execució d'una automatització a una Pull Request](img/cicd/pr-workflow-pending.png)
-/// figure-caption | .shadow : Exemple d'una tasca d'automatització que s'executa a una Pull Request
+![Execució d'una automatització en una Pull Request](img/cicd/pr-workflow-pending.png)
+/// shadow-figure-caption | #figure-pr-pending : Exemple d'una tasca d'automatització que s'executa en una Pull Request.
 
-![Execució correcta d'una automatització a una Pull Request](img/cicd/pr-workflow-success.png)
-/// figure-caption | .shadow : Exemple d'una tasca d'automatització que s'ha executat correctament a una Pull Request
+![Execució correcta d'una automatització en una Pull Request](img/cicd/pr-workflow-success.png)
+/// shadow-figure-caption | #figure-pr-success : Exemple d'una tasca d'automatització que s'ha executat correctament en una Pull Request.
 
 
 ### Secrets
 De vegades, les tasques d'automatització necessiten informació sensible per a executar-se,
 com ara credencials d'accés a serveis externs, claus d'API, etc.
 
-En aquests casos, és important no incloure aquesta informació directament en els fitxers de configuració, ja que aquests fitxers són públics
-i poden ser accedits per qualsevol persona que tinga accés al repositori.
+En aquests casos, és important no incloure aquesta informació directament en els fitxers de configuració,
+ja que formen part del repositori i qualsevol persona amb accés al repositori els pot llegir.
 
-GitHub Actions permet gestionar aquesta informació sensible d'una manera segura mitjançant els __:octicons-key-asterisk-16: Secrets__.
-Són variables d'entorn que es poden utilitzar en les tasques d'automatització, però que no són visibles ni accessibles des dels fitxers de configuració.
+GitHub Actions permet gestionar aquesta informació de manera segura mitjançant els __:octicons-key-asterisk-16: secrets__:
+variables d'entorn que es poden utilitzar en les tasques d'automatització, però que no són visibles
+ni accessibles des dels fitxers de configuració.
 
-Per a configurar un secret, cal anar a la secció __:octicons-gear-24: Settings__ del repositori, a l'apartat __:octicons-key-asterisk-16: Secrets and variables > Actions__.
+Per a configurar un secret, cal anar a la secció __:octicons-gear-24: Settings__ del repositori,
+a l'apartat __:octicons-key-asterisk-16: Secrets and variables > Actions__.
 
 ![Configuració de secrets en GitHub Actions](img/cicd/secrets.png)
-/// figure-caption | .shadow : Configuració de secrets en GitHub Actions.
+/// shadow-figure-caption | #figure-secrets : Configuració de secrets en GitHub Actions.
 
-Aquests secrets poden utilitzar-se com a variables en els fitxers de configuració dels fluxos de treball,
-i el seu valor serà substituït de manera segura durant l'execució d'aquests.
+Els secrets es poden utilitzar com a variables en els fitxers de configuració dels fluxos de treball,
+i el seu valor se substitueix de manera segura durant l'execució.
 
 {% raw %}
 ```yaml
@@ -317,7 +304,7 @@ steps:
 {% endraw %}
 
 
-!!! docs "[:octicons-link-external-16: Using secrets in GitHub Actions](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets) – :simple-github: GitHub Docs"
+!!! docs "Documentació oficial: [:octicons-link-external-16: Using secrets in GitHub Actions](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets) – :simple-github: GitHub"
 
 !!! example "Exemple: [[actions-exemples#creacio-duna-imatge-de-docker]]"
 
@@ -327,46 +314,43 @@ estàtics[^1] directament des d'un repositori de GitHub.
 
 [pages]: https://pages.github.com/
 
-!!! info "En comptes de :simple-github: GitHub gratuïts, es permet configurar GitHub Pages en repositoris públics."
-    En canvi, en els repositoris privats, [es requereix d'un compte de pagament](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages).
-
-    No obstant això, GitHub proporciona llicències gratuïtes per a estudiants i professors
-    des de [:fontawesome-solid-graduation-cap: GitHub Education](https://education.github.com/).
+!!! info "Amb un compte gratuït de :simple-github: GitHub, només es pot configurar GitHub Pages en repositoris públics."
+    En els repositoris privats, [cal un compte de pagament](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages).
+    No obstant això, GitHub proporciona llicències gratuïtes per a l'alumnat i el professorat
+    mitjançant [:fontawesome-solid-graduation-cap: GitHub Education](https://education.github.com/).
 
 Aquest servei és útil per a publicar:
 
-- La documentació d'un projecte.
-- Portafolis personals o de projectes.
-- Llocs web estàtics generats per eines com [:simple-jekyll: Jekyll](https://jekyllrb.com/) o [MkDocs](https://www.mkdocs.org/).
-    
+- __Documentació__: la documentació d'un projecte.
+- __Portafolis__: portafolis personals o de projectes.
+- __Llocs web estàtics__: llocs generats amb ferramentes com [:simple-jekyll: Jekyll](https://jekyllrb.com/)
+    o [MkDocs](https://www.mkdocs.org/).
+
 !!! success "Per exemple, aquest lloc web està publicat amb __:octicons-browser-24: GitHub Pages__."
-    
+
 
 
 ### Configuració de GitHub Pages
-GitHub Pages pot ser habilitat i configurat en la secció __:octicons-gear-24: Settings__ del repositori,
+GitHub Pages s'habilita i es configura en la secció __:octicons-gear-24: Settings__ del repositori,
 dins de l'apartat __:octicons-browser-24: Pages__.
 
 ![Configuració de GitHub Pages](./img/cicd/github-pages.png)
-/// figure-caption | .shadow : Configuració de GitHub Pages en aquest repositori.
+/// shadow-figure-caption | #figure-github-pages : Configuració de GitHub Pages en aquest repositori.
 
-GitHub Pages pot ser configurat per publicar-se de dues maneres diferents:
+GitHub Pages es pot configurar per a publicar el lloc web de dues maneres diferents:
 
-- :octicons-thumbsup-16:{ .text-success title="Opció recomanada" } Mitjançant una __automatització__:
-    Un flux de treball que construeix, carrega i desplega els continguts del lloc web.
+- :octicons-thumbsup-16:{ .text-success title="Opció recomanada" } __Automatització__:
+    un flux de treball construeix, carrega i desplega els continguts del lloc web.
 
-- A partir del __contingut d'una branca__ i directori concrets del repositori.
+- __Contingut d'una branca__: es publica el contingut d'una branca i d'un directori concrets del repositori.
+    Es pot triar qualsevol branca, però només els directoris `/` (arrel del repositori) o `/docs`.
 
-    Es pot triar qualsevol branca, però sols els directoris `/` (arrel del repositori)
-    o `/docs`.
+!!! docs "Documentació oficial de :simple-github: GitHub"
+    - [:octicons-link-external-16: Publishing from a branch - Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch)
+    - [:octicons-link-external-16: Publishing with a custom GitHub Actions workflow - Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow)
 
-!!! docs "Documentació"
-    - [:octicons-link-external-16: Publishing from a branch - Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch) - :simple-github: GitHub Docs
-    - [:octicons-link-external-16: Publishing with a custom GitHub Actions workflow - Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow) - :simple-github: GitHub Docs
-
-[^1]: Un lloc web estàtic és un lloc web que no requereix d'un servidor web
-    per generar les pàgines HTML, sinó que les pàgines ja estan generades
-    i són servides directament.
+[^1]: Un lloc web estàtic és un lloc web que no necessita un servidor que genere les pàgines HTML,
+    sinó que les pàgines ja estan generades i se serveixen directament.
 
 !!! example "Exemple: [[actions-exemples#publicacio-dun-lloc-web-estatic-generat-amb-properdocs-a-github-pages]]"
 

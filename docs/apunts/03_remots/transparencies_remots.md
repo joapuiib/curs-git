@@ -35,13 +35,13 @@ alias: remots-slides
 
 ## Repositori remot
 
-![components](../01_introduccio/img/components.light.png){ .r-stretch }
+![Estructura d'un repositori local i remot](../01_introduccio/img/components.light.png){ .r-stretch }
 
 ---
 
 ## Desenvolupament distribuït
 
-![multiple_local_repo](img/multiple_local_repo.light.png){ .r-stretch }
+![Repositori remot vinculat a diversos repositoris locals](img/multiple_local_repo.light.png){ .r-stretch }
 
 ---
 
@@ -54,17 +54,17 @@ git remote add origin <url>
 - (_HTTPS_) Personal Access Token (PAT)
 - (_SSH_) Clau SSH
 
-![Repsitori Local vinculat amb un Repositori Remot](img/add_remote.light.png){ .r-stretch }
+![Repositori local vinculat amb un repositori remot](img/add_remote.light.png){ .r-stretch }
 
 ---
 
-## Associació branques locals i remotes
+## Associació de branques locals i remotes
 
 ```bash
 git push [-u | --set-upstream] origin <branca>
 ```
 
-![Publicació d'una branca local a una branca remota](img/push.light.png){ .r-stretch }
+![Publicació d'una branca local en una branca remota](img/push.light.png){ .r-stretch }
 
 ---
 
@@ -74,7 +74,7 @@ git push [-u | --set-upstream] origin <branca>
 git clone <url> [<directori>]
 ```
 
-![clone](img/clone.light.png){ .r-stretch }
+![Clonació d'un repositori remot](img/clone.light.png){ .r-stretch }
 
 ---
 
@@ -83,7 +83,7 @@ git clone <url> [<directori>]
 ```bash
 git fetch
 ```
-![fetch](img/fetch.light.png){ .r-stretch }
+![Sincronització amb git fetch](img/fetch.light.png){ .r-stretch }
 
 ---
 
@@ -93,4 +93,4 @@ git fetch
 git pull [--rebase]
 ```
 
-![pull](img/pull.light.png){ .r-stretch }
+![Incorporació de canvis amb git pull](img/pull.light.png){ .r-stretch }

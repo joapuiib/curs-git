@@ -7,126 +7,124 @@ comments: true
 ---
 
 ## Exemple: Estratègia de ramificació
-En aquests apunts veurem com es pot utilitzar una estratègia de ramificació
-en un projecte de desenvolupament de programari.
-
-En aquest projecte utilitzarem la tècnica d'integració [[estrategies#merge-squash-ff-only]].
+Aquests apunts mostren com s'aplica una estratègia de ramificació en un projecte de desenvolupament
+de programari. El projecte utilitza la tècnica d'integració [[estrategies#merge-squash-ff-only]].
 
 ### Repositori remot
-Anem a simular un projecte de desenvolupament de programari
-on tres desenvolupadors treballen en diferents funcionalitats
-de manera independent.
+L'exemple simula un projecte de desenvolupament de programari en què tres persones treballen
+en diferents funcionalitats de manera independent.
 
-Per evitar haver de crear un repositori a [:material-github: GitHub](https://github.com)
-crearem un repositori remot en la màquina local.
+Per no haver de crear un repositori a [:simple-github: GitHub](https://github.com),
+es crea un repositori remot en la màquina local.
 
-!!! warning "Tracteu de seguir la mateixa estructura de directoris per seguir l'exemple correctament."
+!!! warning "Segueix la mateixa estructura de directoris per a reproduir l'exemple correctament."
 
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/remot.txt"
 ```
 
-1. Aquesta comanda és necessària perquè el repositori siga configurat com a  __bare__ i puga ser utilitzat com a repositori remot.
+1. Aquesta ordre és necessària perquè el repositori es configure com a __bare__ (sense directori de treball)
+    i es puga utilitzar com a repositori remot.
 
 ### Branca de desenvolupament
-El primer pas per establir un flux de treball
-és crear la branca de desenvolupament `develop`.
+El primer pas per a establir el flux de treball és crear la branca de desenvolupament `develop`.
 
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/development.txt"
 ```
 
 ### Desenvolupament de funcionalitats
-En aquest punt, podem començar a desenvolupar les diferents funcionalitats del projecte
-en branques independents.
-
-Crearem un repositori local per a cada desenvolupador,
-simulant que cadascú treballa en el seu dispositiu.
+En aquest punt, ja es poden desenvolupar les diferents funcionalitats del projecte en branques independents.
+Es crea un repositori local per a cada persona, per a simular que cadascuna treballa en el seu dispositiu.
 
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/clone.txt"
 ```
 
-Cada desenvolupador començarà a treballar en una nova funcionalitat.
+Cada persona comença a treballar en una funcionalitat nova:
 
-- Anna treballarà en la funcionalitat `feature/readme`, que consistirà a afegir una descripció del projecte al README.
-- Pau treballarà en la funcionalitat `feature/license`, que consistirà a afegir una llicència al projecte.
-- Mar treballarà en la funcionalitat `feature/author`, que consistirà a afegir el nom dels autors del projecte al README.
+- __Anna__: treballa en la funcionalitat `feature/readme`, que consisteix a afegir una descripció
+    del projecte al fitxer `README.md`.
+- __Pau__: treballa en la funcionalitat `feature/license`, que consisteix a afegir una llicència al projecte.
+- __Mar__: treballa en la funcionalitat `feature/author`, que consisteix a afegir el nom de les persones
+    autores del projecte al fitxer `README.md`.
 
-A partir d'aquest moment, cada desenvolupador treballarà en el seu propi repositori,
-en la seua pròpia branca de funcionalitat de manera independent i paral·lela.
+A partir d'aquest moment, cada persona treballa en el seu repositori i en la seua branca de funcionalitat,
+de manera independent i paral·lela.
 
-!!! important "És important que cada desenvolupador treballe en una única branca per funcionalitat per evitar conflictes i facilitar la integració posterior."
-    Si existeix la necessitat de compartir una branca, segurament siga perquè la tasca no està ben definida i podrà ser dividida en diverses tasques més xicotetes.
+!!! important "Cada persona ha de treballar en una única branca per funcionalitat per a evitar conflictes i facilitar la integració posterior."
+    Si cal compartir una branca, segurament és perquè la tasca no està ben definida
+    i es pot dividir en diverses tasques més xicotetes.
 
 #### Branca `feature/readme`
-Anna començarà a treballar en la seua funcionalitat `feature/readme` en el seu repositori local.
+Anna comença a treballar en la funcionalitat `feature/readme` en el seu repositori local.
 
-!!! note "Configurem l'usuari i el correu electrònic per a cada repositori local per simular que cada desenvolupador treballa en el seu propi dispositiu."
-    També es mostra el nom en el prompt.
+!!! note "En cada repositori local es configuren el nom i el correu electrònic per a simular que cada persona treballa en el seu dispositiu. A més, el nom es mostra en el _prompt_."
+
 
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/feature_readme.txt"
 ```
 
-Els passos seguits per Anna són:
+Els passos que ha seguit Anna són:
 
-- Crear la branca `feature/readme` a partir de `develop`.
-- Realitzar els canvis pertinents.
-- Publicar la branca `feature/readme` al repositori remot.
+1. Crear la branca `feature/readme` a partir de `develop`.
+2. Fer els canvis pertinents.
+3. Publicar la branca `feature/readme` en el repositori remot.
 
 #### Branca `feature/license`
-Pau començarà a treballar en la seua funcionalitat `feature/license` en el seu repositori local.
+Pau comença a treballar en la funcionalitat `feature/license` en el seu repositori local.
 
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/feature_license.txt"
 ```
 
-Els passos seguits per Pau són:
+Els passos que ha seguit Pau són:
 
-- Crear la branca `feature/license` a partir de `develop`.
-- Realitzar els canvis pertinents.
-- Publicar la branca `feature/license` al repositori remot.
+1. Crear la branca `feature/license` a partir de `develop`.
+2. Fer els canvis pertinents.
+3. Publicar la branca `feature/license` en el repositori remot.
 
 
 #### Branca `feature/author`
-Mar començarà a treballar en la seua funcionalitat `feature/author` en el seu repositori local.
+Mar comença a treballar en la funcionalitat `feature/author` en el seu repositori local.
 
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/feature_author.txt"
 ```
 
-Els passos seguits per Mar són:
+Els passos que ha seguit Mar són:
 
-- Crear la branca `feature/author` a partir de `develop`.
-- Realitzar els canvis pertinents.
-- Publicar la branca `feature/author` al repositori remot.
+1. Crear la branca `feature/author` a partir de `develop`.
+2. Fer els canvis pertinents.
+3. Publicar la branca `feature/author` en el repositori remot.
 
 
 ### Integració de les funcionalitats
-En aquest punt, les tres funcionalitats han sigut desenvolupades de manera independent,
-i encara no han segut integrades a la branca de desenvolupament `develop`.
+En aquest punt, les tres funcionalitats s'han desenvolupat de manera independent
+i encara no s'han integrat en la branca de desenvolupament `develop`.
 
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/branques.txt"
 ```
 
-!!! prep "Preparació del repositori"
-    Pots crear un repositor amb l'estat anterior executant el següent script:
-    /// collapse-code
-    ```bash title="Bash script amb el desenvolupament de les funcionalitats"
+??? prep "Preparació del repositori"
+    Pots crear un repositori amb l'estat anterior executant l'_script_ següent:
+
+    ```bash {title="Script de Bash amb el desenvolupament de les funcionalitats" data-fold="10"}
     --8<-- "docs/files/estrategies/stdout/estrategies_development.sh"
     ```
-    ///
+
+    1. Aquesta ordre és necessària perquè el repositori es configure com a __bare__ (sense directori de treball)
+        i es puga utilitzar com a repositori remot.
 
 
-Anem a veure com integrar les funcionalitats amb la tècnica __`merge --no-ff` + `merge --squash --ff-only`__
-seguint el procés indicat a [[estrategies#integracio]].
+A continuació, s'integren les funcionalitats amb la tècnica __`merge --no-ff` + `merge --squash --ff-only`__,
+seguint el procés indicat en [[estrategies#integracio]].
 
 
 #### Integració de `feature/readme`
-Anna ja ha acabat la seua funcionalitat `feature/readme` i vol integrar-la a la branca `develop`.
-
+Anna ja ha acabat la funcionalitat `feature/readme` i vol integrar-la en la branca `develop`.
 Els passos que ha de seguir són:
 
 1. Sincronitzar l'estat del repositori local amb el remot amb `git fetch`.
@@ -143,7 +141,7 @@ Els passos que ha de seguir són:
     --8<-- "docs/files/estrategies/stdout/feature_readme_pull.txt"
     ```
 
-1. Actualitzar la branca `feature/readme` amb els canvis `develop`.
+1. Actualitzar la branca `feature/readme` amb els canvis de `develop`.
 
     En aquest cas, ja està actualitzada.
 
@@ -151,15 +149,15 @@ Els passos que ha de seguir són:
     --8<-- "docs/files/estrategies/stdout/feature_readme_merge.txt"
     ```
 
-    1. L'opció `--no-edit` evita obrir l'editor de text i deixa el missatge de commit per defecte.
+    1. L'opció `--no-edit` evita obrir l'editor de text i manté el missatge del _commit_ per defecte.
 
-1. Fusionar la branca `feature/readme` amb `develop`.
+1. Fusionar la branca `feature/readme` en `develop`.
 
     ```shellconsole
     --8<-- "docs/files/estrategies/stdout/feature_readme_merge_squash.txt"
     ```
 
-1. Publicar els canvis de la branca `develop` al repositori remot.
+1. Publicar els canvis de la branca `develop` en el repositori remot.
 
     ```shellconsole
     --8<-- "docs/files/estrategies/stdout/feature_readme_push.txt"
@@ -172,13 +170,11 @@ Els passos que ha de seguir són:
     ```
 
 
-En aquest punt, la funcionalitat desenvolupada per Anna
-ha sigut integrada a la branca de desenvolupament `develop`
-i pot continuar treballant en altres funcionalitats.
+En aquest punt, la funcionalitat desenvolupada per Anna ja s'ha integrat en la branca de desenvolupament `develop`,
+i Anna pot continuar treballant en altres funcionalitats.
 
 #### Integració de `feature/license`
-Pau ja ha acabat la seua funcionalitat `feature/license` i vol integrar-la a la branca `develop`.
-
+Pau ja ha acabat la funcionalitat `feature/license` i vol integrar-la en la branca `develop`.
 Els passos que ha de seguir són:
 
 1. Sincronitzar l'estat del repositori local amb el remot amb `git fetch`.
@@ -193,21 +189,21 @@ Els passos que ha de seguir són:
     --8<-- "docs/files/estrategies/stdout/feature_license_pull.txt"
     ```
 
-1. Actualitzar la branca `feature/license` amb els canvis `develop`.
+1. Actualitzar la branca `feature/license` amb els canvis de `develop`.
 
     ```shellconsole
     --8<-- "docs/files/estrategies/stdout/feature_license_merge.txt"
     ```
 
-    1. L'opció `--no-edit` evita obrir l'editor de text i deixa el missatge de commit per defecte.
+    1. L'opció `--no-edit` evita obrir l'editor de text i manté el missatge del _commit_ per defecte.
 
-1. Fusionar la branca `feature/license` amb `develop`.
+1. Fusionar la branca `feature/license` en `develop`.
 
     ```shellconsole
     --8<-- "docs/files/estrategies/stdout/feature_license_merge_squash.txt"
     ```
 
-1. Publicar els canvis de la branca `develop` al repositori remot.
+1. Publicar els canvis de la branca `develop` en el repositori remot.
 
     ```shellconsole
     --8<-- "docs/files/estrategies/stdout/feature_license_push.txt"
@@ -220,8 +216,7 @@ Els passos que ha de seguir són:
     ```
 
 #### Integració de `feature/author`
-Mar ja ha acabat la seua funcionalitat `feature/author` i vol integrar-la a la branca `develop`.
-
+Mar ja ha acabat la funcionalitat `feature/author` i vol integrar-la en la branca `develop`.
 Els passos que ha de seguir són:
 
 1. Sincronitzar l'estat del repositori local amb el remot amb `git fetch`.
@@ -236,25 +231,25 @@ Els passos que ha de seguir són:
     --8<-- "docs/files/estrategies/stdout/feature_author_pull.txt"
     ```
 
-1. Actualitzar la branca `feature/author` amb els canvis `develop`.
+1. Actualitzar la branca `feature/author` amb els canvis de `develop`.
 
-    !!! info "En aquest cas, han sorgit conflictes que hem hagut de solucionar manualment."
+    !!! info "En aquest cas, han sorgit conflictes que s'han hagut de resoldre manualment."
 
     ```shellconsole
     --8<-- "docs/files/estrategies/stdout/feature_author_merge.txt"
     ```
 
-    1. L'opció `--no-edit` evita obrir l'editor de text i deixa el missatge de commit per defecte.
+    1. L'opció `--no-edit` evita obrir l'editor de text i manté el missatge del _commit_ per defecte.
     2. S'han esborrat les marques de conflicte manualment.
-    3. L'opció `--no-edit` evita obrir l'editor de text i deixa el missatge de commit per defecte.
+    3. L'opció `--no-edit` evita obrir l'editor de text i manté el missatge del _commit_ per defecte.
 
-1. Fusionar la branca `feature/author` amb `develop`.
+1. Fusionar la branca `feature/author` en `develop`.
 
     ```shellconsole
     --8<-- "docs/files/estrategies/stdout/feature_author_merge_squash.txt"
     ```
 
-1. Publicar els canvis de la branca `develop` al repositori remot.
+1. Publicar els canvis de la branca `develop` en el repositori remot.
 
     ```shellconsole
     --8<-- "docs/files/estrategies/stdout/feature_author_push.txt"
@@ -267,7 +262,7 @@ Els passos que ha de seguir són:
     ```
 
 ### Llançament de la versió 1.0.0
-Anna és l'encarregada de preparar el llançament de la versió 1.0.0.
+Anna s'encarrega de preparar el llançament de la versió 1.0.0.
 
 Els passos que ha de seguir són:
 
@@ -283,19 +278,19 @@ Els passos que ha de seguir són:
     --8<-- "docs/files/estrategies/stdout/release_create.txt"
     ```
 
-1. Realitzar les tasques necessàries per a preparar el llançament de la versió 1.0.0.
+1. Fer les tasques necessàries per a preparar el llançament de la versió 1.0.0.
 
     ```shellconsole
     --8<-- "docs/files/estrategies/stdout/release.txt"
     ```
 
-1. Integrar aquesta branca a la branca de desenvolupament `develop` i publicar-la.
+1. Integrar aquesta branca en la branca de desenvolupament `develop` i publicar-la.
 
     ```shellconsole
     --8<-- "docs/files/estrategies/stdout/release_merge_develop.txt"
     ```
 
-1. Integrar aquesta branca a la branca principal `main` i publicar els canvis.
+1. Integrar aquesta branca en la branca principal `main` i publicar els canvis.
 
     ```shellconsole
     --8<-- "docs/files/estrategies/stdout/release_merge_main.txt"
@@ -314,8 +309,8 @@ Els passos que ha de seguir són:
     ```
 
 ### Estat final
-L'estat final del repositori segons l'estratègia d'integració utilitzada
-és el següent.
+L'estat final del repositori depén de la tècnica d'integració utilitzada.
+A continuació, es mostra el resultat de cadascuna.
 
 #### [`merge --no-ff` + `merge --squash --ff-only`][merge-squash]
 ```shellconsole

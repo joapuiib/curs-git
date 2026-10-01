@@ -18,94 +18,88 @@ tags:
 ---
 
 ## Què és Git?
-Git és __un sistema de control de versions lliure i distribuït__ dissenyat per gestionar xicotets i grans projectes
-amb rapidesa i eficiència. L'objectiu principal de Git és controlar i gestionar els canvis realitzats
-en una enorme quantitat de fitxers d'una manera fàcil i eficient.
+:simple-git: __Git__ és __un sistema de control de versions lliure i distribuït__ dissenyat per gestionar
+projectes xicotets i grans amb rapidesa i eficiència. El seu objectiu principal és controlar i gestionar
+els canvis realitzats en una gran quantitat de fitxers d'una manera fàcil i eficient.
 
-Git va ser dissenyat en 2005 per Linus Torvalds, creador del kernel del sistema operatiu Linux, i des d'aleshores,
-s'ha convertit en una eina fonamental i imprescindible en la gestió de codi font en projectes col·laboratius.
+Git va ser dissenyat en 2005 per Linus Torvalds, creador del nucli (_kernel_) del sistema operatiu Linux.
+Des d'aleshores, s'ha convertit en una ferramenta imprescindible per a gestionar el codi font
+dels projectes col·laboratius.
 
-Git està basat en __repositoris__, que s'inicialitzen en un directori concret i contenen tota la informació
-dels canvis realitzats en tot l'arbre de directoris i fitxers a partir d'aquest directori.
+Git està basat en __repositoris__. Un __repositori__ s'inicialitza en un directori concret i conté tota
+la informació dels canvis realitzats en l'arbre de directoris i fitxers a partir d'aquest directori.
 
 Els principals objectius i característiques de Git són:
 
-- __Control de versions__: Git realitza un seguiment de les modificacions als arxius al llarg del temps,
-    la qual cosa permet als desenvolupadors vore i recuperar versions anteriors del seu codi.
-    Aquesta característica és essencial per a treballar en equips i per a solucionar problemes o errors.
-- __Distribuït__: Cada còpia d'un repositori Git conté tot l'historial de canvis i pot operar de manera independent.
-    Això facilita el treball fora de línia i la col·laboració en equips distribuïts.
-- __Branca i fusió__: Git facilita la creació de branques (_branching_) per a desenvolupar característiques
-    o solucionar problemes sense afectar la branca principal.
-    Després, pots fusionar (_merge_) les branques de nou en la branca principal quan estiguen a punt.
-- __Gestió de conflictes__: Git ofereix eines per a gestionar conflictes en cas que dues o més persones hagen realitzat
-    canvis en la mateixa part del codi.
-    Els desenvolupadors poden resoldre aquests conflictes manualment.
-- __Col·laboració__: Git facilita la col·laboració en projectes de codi obert o en equips,
-    ja que permet a múltiples persones treballar en el mateix projecte de manera eficient.
-    Plataformes com GitHub, GitLab, Bitbucket i Codeberg s'utilitzen comunament per a allotjar repositoris Git en línia i col·laborar en projectes.
-- __Codi obert i gratuït__: Git és de codi obert i gratuït, la qual cosa significa que qualsevol pot utilitzar-lo sense cost i contribuir al desenvolupament de l'eina.
+- __Control de versions__: Git fa un seguiment de les modificacions dels fitxers al llarg del temps,
+    la qual cosa permet a l'equip de desenvolupament vore i recuperar versions anteriors del codi.
+    Aquesta característica és essencial per a treballar en equip i per a solucionar errors.
+- __Distribuït__: cada còpia d'un repositori Git conté tot l'historial de canvis i pot funcionar
+    de manera independent. Això facilita el treball fora de línia i la col·laboració en equips distribuïts.
+- __Branques i fusions__: Git facilita la creació de branques (_branching_) per a desenvolupar
+    funcionalitats o solucionar problemes sense afectar la branca principal.
+    Després, les branques es poden fusionar (_merge_) de nou en la branca principal quan estiguen a punt.
+- __Gestió de conflictes__: Git ofereix ferramentes per a gestionar els conflictes que apareixen quan
+    dues o més persones han modificat la mateixa part del codi. Aquests conflictes es resolen manualment.
+- __Col·laboració__: Git permet que moltes persones treballen en el mateix projecte de manera eficient.
+    Plataformes com :simple-github: GitHub, :simple-gitlab: GitLab, :simple-bitbucket: Bitbucket
+    i :simple-codeberg: Codeberg s'utilitzen habitualment per a allotjar repositoris Git en línia
+    i col·laborar en projectes.
+- __Codi obert i gratuït__: qualsevol persona pot utilitzar Git sense cost i contribuir al seu desenvolupament.
 
-
-## Per què la terminal?
-En aquests apunts, utilitzarem la terminal per a interactuar amb Git, però això no significa que siga l'única manera de fer-ho.
-De fet, pràcticament tots els entorns de desenvolupament moderns tenen integració amb Git, la qual cosa permet realitzar
-les mateixes operacions que proporciona la terminal, però de manera més visual i intuïtiva.
-
-No obstant això, és important conéixer com funcionen les comandes de Git en la terminal, per diferents raons:
-
-- __Portabilitat__: La terminal és un entorn comú en tots els sistemes operatius i en qualsevol entorn de desenvolupament.
-- __Flexibilitat__: La terminal permet realitzar operacions més avançades i personalitzades que les interfícies gràfiques.
-- __Comprensió__: Permet entendre com funcionen les comandes de Git i els processos que realitza en el sistema.
+En aquests apunts s'utilitza Git des de la terminal. Els motius d'aquesta elecció s'expliquen
+en l'apartat [Per què la terminal?](preparacio.md#per-que-la-terminal).
 
 
 ## Inicialització d'un repositori (`git init`)
-
 Per a començar a utilitzar Git en un projecte, primer cal inicialitzar un repositori en un directori concret.
+Per fer-ho, s'utilitza l'ordre:
+
 ```bash
 git init [<directory>]
 ```
 
-- `directory`: Directori on es vol inicialitzar el repositori. Si no s'especifica, s'utilitza el directori actual.
+- `[<directory>]`: (opcional) directori on es vol inicialitzar el repositori.
+    Si no s'especifica, s'utilitza el directori actual.
 
-Aquesta comanda crea un directori ocult anomenat `.git`
-que conté tota la informació relativa al __Repositori Local__.
+Aquesta ordre crea un directori ocult anomenat `.git`, que conté tota la informació
+relativa al __Repositori local__.
 
-!!! docs "Documentació oficial de :simple-git: Git"
-    [:octicons-link-external-16: `git init`](https://git-scm.com/docs/git-init)
+!!! docs "Documentació oficial: [:octicons-link-external-16: `git init`](https://git-scm.com/docs/git-init) – :simple-git: Git"
 
-!!! warning "Tingues en compte els següents aspectes importants a l'hora d'inicialitzar un repositori amb `git init`"
-    - No has d'inicialitzar el repositori cada vegada que vulgues treballar en ell.
-        L'estat del repositori s'emmagatzema d'una manera persistent en
-        el directori ocult `.git`.
+!!! warning "Tingues en compte els aspectes següents a l'hora d'inicialitzar un repositori amb `git init`:"
+    - No cal inicialitzar el repositori cada vegada que vulgues treballar-hi.
+        L'estat del repositori s'emmagatzema de manera persistent en el directori ocult `.git`.
 
     - Si inicialitzes un repositori en un directori que ja conté un repositori,
-        es crearà un nou repositori i el contingut del directori `.git` es sobreescriurà,
-        eliminant tota la informació anterior.
+        es crea un nou repositori i el contingut del directori `.git` se sobreescriu,
+        de manera que s'elimina tota la informació anterior.
 
     - Encara que és possible[^1], no és recomanable inicialitzar un repositori en un directori
-        contingut dins d'un altre repositori.
+        que ja es troba dins d'un altre repositori.
 
-[^1]: Aquests repositoris es coneixen com a [:octicons-link-external-16: Submòduls](https://git-scm.com/book/en/v2/Git-Tools-Submodules),
-    que està fora de l'abast d'aquest curs.
+[^1]: Aquests repositoris es coneixen com a
+    [:octicons-link-external-16: submòduls](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+    i queden fora de l'abast d'aquest curs.
 
-!!! info
-    Per defecte, Git inicialitza la branca principal amb el nom `master`
-    si no s'ha configurat d'una altra manera.
+!!! info "Si no s'ha configurat d'una altra manera, Git anomena `master` la branca principal."
     La comunitat de desenvolupament ha recomanat canviar aquest nom a `main`
-    per a evitar connotacions històriques negatives associades amb el terme `master`.
+    per a evitar les connotacions històriques negatives associades al terme `master`[^2].
 
-    Vegeu: [:octicons-link-external-16: Regarding Git and Branch Naming](https://sfconservancy.org/news/2020/jun/23/gitbranchname/) – Software Freedom Conservancy
-
-    Si vols canviar el nom per defecte de la branca principal a `main` quan
-    inicialitzes un nou repositori, pots utilitzar la següent comanda:
+    Per utilitzar `main` com a nom per defecte de la branca principal en els nous repositoris,
+    es pot executar l'ordre següent:
 
     ```bash
     git config --global init.defaultBranch main
     ```
 
+[^2]: [:octicons-link-external-16: Regarding Git and Branch Naming](https://sfconservancy.org/news/2020/jun/23/gitbranchname/)
+    – Software Freedom Conservancy
+
 
 ??? example "Exemple: Inicialització d'un repositori"
+    Es crea el directori `git_introduccio` i s'hi inicialitza un repositori.
+
     ```shellconsole
     jpuigcerver@fp:~ $ mkdir git_introduccio
     jpuigcerver@fp:~ $ cd git_introduccio
@@ -114,7 +108,7 @@ que conté tota la informació relativa al __Repositori Local__.
     jpuigcerver@fp:~/git_introduccio $ git init
     hint: Using 'master' as the name for the initial branch. This default branch name
     hint: is subject to change. To configure the initial branch name to use in all
-    hint: of your new repositoris, which will suppress this warning, call:
+    hint: of your new repositories, which will suppress this warning, call:
     hint:
     hint: git config --global init.defaultBranch <name>
     hint:
@@ -134,31 +128,34 @@ que conté tota la informació relativa al __Repositori Local__.
     Nothing to commit (create/copy files and use "git add" to track)
     ```
 
-    1. L'opció `-a` mostra tots els fitxers, inclosos els ocults que comencen amb un punt.
-    2. Canviem el nom de la branca principal de `master` a `main`.
-    3. S'ha creat el directori ocult `.git` que conté tota la informació del repositori.
+    1. L'opció `-a` mostra tots els fitxers, inclosos els ocults, que comencen amb un punt.
+    2. Es canvia el nom de la branca principal de `master` a `main`.
+    3. S'ha creat el directori ocult `.git`, que conté tota la informació del repositori.
 
-    L'ordre `git status` ens mostra l'estat actual del nostre repositori.
-    Podem observar que estem en la branca `main` i que de moment no s'ha realitzat cap canvi.
+    L'ordre `git status` mostra l'estat actual del repositori.
+    S'observa que la branca actual és `main` i que encara no s'ha fet cap canvi.
 
 
 ### Eliminar un repositori
-Per a eliminar un repositori de Git, simplement cal eliminar el directori ocult `.git`.
+Git emmagatzema tota la informació del repositori en el directori ocult `.git`.
+Per tant, per a eliminar un repositori, n'hi ha prou amb eliminar aquest directori:
 
 ```bash
 rm -rf .git
 ```
 
-- `-r`: Opció per a eliminar de manera recursiva.
-- `-f`: Opció per a forçar l'eliminació sense confirmació dels elements protegits contra escriptura.
+- `-r`: elimina el directori de manera recursiva.
+- `-f`: força l'eliminació, sense demanar confirmació, dels elements protegits contra escriptura.
 
-!!! danger "Sigues extremadament cautelós amb l'ús de la comanda `rm -rf`, ja que elimina tots els fitxers, inclosos aquells protegits contra escriptura."
+!!! danger "Sigues molt prudent amb l'ordre `rm -rf`, ja que elimina tots els fitxers, inclosos els protegits contra escriptura."
 
 ??? example "Exemple: Eliminar un repositori"
+    S'elimina el repositori creat en l'exemple anterior.
+
     ```shellconsole
     jpuigcerver@fp:~/git_introduccio (main) $ ls -a
     .  ..  .git
-    jpuigcerver@fp:~/git_introduccio $ git status
+    jpuigcerver@fp:~/git_introduccio (main) $ git status
     On branch main
 
     No commits yet
@@ -169,64 +166,57 @@ rm -rf .git
     fatal: not a git repository (or any of the parent directories): .git
     ```
 
-## Estructura d'un repositori de Git
-En aquesta introducció, ens centrarem en com funcionen els repositoris de Git d'una manera __local__,
-on encara no haurem connectat cap repositori __remot__.
+    S'observa que, després d'eliminar el directori `.git`, Git ja no reconeix el directori com a repositori.
 
-Abans que res, hem de conéixer l'estructura d'un repositori de Git.
+## Estructura d'un repositori de Git
+Aquesta introducció se centra en el funcionament __local__ dels repositoris de Git,
+sense connectar encara cap repositori __remot__. Abans que res, cal conéixer l'estructura d'un repositori.
 
 ![Components d'un repositori de Git](img/components.light.png#only-light)
 ![Components d'un repositori de Git](img/components.dark.png#only-dark)
-/// figure-caption
-Components d'un repositori de Git.
-///
+/// figure-caption | #figure-components : Components d'un repositori de Git.
 
-En la figura anterior podem observar el que es coneix com __Entorn de desenvolupament__ o __*Development Environment*__,
-Aquesta part està present __localment__ en el teu dispositiu on realitzaràs els canvis i desenvolupament del teu projecte.
+En la [Figura 1](#figure-components) es distingeix l'__Entorn de desenvolupament__ (_Development Environment_).
+Aquesta part es troba __localment__ en el teu dispositiu, on realitzes els canvis i desenvolupes el projecte.
 
-D'una altra banda, està el __Repositori Remot__, que normalment s'allotja a un servidor accessible per tots els
-desenvolupadors.
+D'una altra banda, hi ha el __Repositori remot__, que normalment s'allotja en un servidor accessible
+per a tot l'equip de desenvolupament.
 
-Dins de l'_Entorn de desenvolupament_ trobem els següents components:
+Dins de l'_Entorn de desenvolupament_ hi ha els components següents:
 
-- __Directori de treball__ o __*Working directory*__: Directori o carpeta del sistema on s'emmagatzema _localment_
+- __Directori de treball__ (_Working Directory_): directori del sistema on s'emmagatzemen _localment_
     els continguts del repositori.
-- __Àrea de preparació__ o __*Staging Area*__: Àrea que s'utilitza per indicar quins canvis volen ser confirmats.
-- __Repositori local__ o __Local repository__: Repositori emmagatzemat _localment_ on es queden registrats totes les versions
-    i canvis realitzats en els fitxers del repositori, així com la informació de les branques i les etiquetes.
+- __Àrea de preparació__ (_Staging Area_): àrea que s'utilitza per a indicar quins canvis es volen confirmar.
+- __Repositori local__ (_Local Repository_): repositori emmagatzemat _localment_ on queden registrades
+    totes les versions i canvis dels fitxers, així com la informació de les branques i les etiquetes.
 
 
 ## Flux de treball
-
-Quan treballes amb un projecte de Git, els canvis es realitzen sobre el __Directori de treball__.
+Quan treballes en un projecte de Git, els canvis es fan sobre el __Directori de treball__.
 Aquests canvis poden ser:
 
-- __Crear un nou fitxer.__ El nou fitxer comença en l'estat __Untracked__, és a dir, no està sotmès a seguiment per Git.
-- __Modificar un fitxer amb seguiment.__ El fitxer modificat es trobarà en l'estat __Modified__.
-- __Eliminar un fitxer amb seguiment.__ El fitxer eliminat es trobarà en l'estat __Deleted__.
+- __Crear un fitxer nou__: el fitxer comença en l'estat __Untracked__, és a dir, Git no en fa el seguiment.
+- __Modificar un fitxer amb seguiment__: el fitxer modificat passa a l'estat __Modified__.
+- __Eliminar un fitxer amb seguiment__: el fitxer eliminat passa a l'estat __Deleted__.
 
-Si executem l'ordre `git status`, ens mostrarà l'estat actual dels fitxers amb els tres estats anteriors de color roig.
+L'ordre `git status` mostra l'estat actual dels fitxers, i els tres estats anteriors apareixen de color roig.
 
+Aquests canvis encara no formen part del repositori. Primer, cal afegir-los a l'__Àrea de preparació__
+amb l'ordre `git add`, que canvia l'estat dels fitxers a __Staged__ (de color verd en `git status`).
 
-Aquests canvis no formen part del repositori. Abans, cal afegir-los a l'__Àrea de preparació__ amb la comanda `git add`,
-que canviarà l'estat dels fitxers __Staged__ (mostrat en color verd amb `git status`).
-
-Per últim, tots els canvis de l'__Àrea de preparació__ es poden confirmar i fer efectius en el __Repositori local__ amb la comanda `git commit`.
+Finalment, tots els canvis de l'__Àrea de preparació__ es confirmen i es fan efectius
+en el __Repositori local__ amb l'ordre `git commit`.
 
 ![Flux de treball en un repositori de Git](img/flux_treball.light.png#only-light)
 ![Flux de treball en un repositori de Git](img/flux_treball.dark.png#only-dark)
 /// figure-caption | #figure-flux-treball : Flux de treball en un repositori de Git.
 
-!!! info "La comanda `git restore` es presenta a l'apartat [Descartar canvis](#descartar-canvis-git-restore)."
-
-!!! docs "Documentació oficial de :simple-git: Git"
-    - [:octicons-link-external-16: `git status`](https://git-scm.com/docs/git-status)
-    - [:octicons-link-external-16: `git add`](https://git-scm.com/docs/git-add)
-    - [:octicons-link-external-16: `git commit`](https://git-scm.com/docs/git-commit)
+!!! info "L'ordre `git restore` es presenta en l'apartat [Descartar canvis](#descartar-canvis-git-restore)."
 
 
-## Afegir fitxers a l'Àrea de Preparació (`git add`)
-Afegim el primer fitxer `README.md` al nostre repositori amb el contingut:
+## Afegir fitxers a l'Àrea de preparació (`git add`)
+Per vore el flux de treball en la pràctica, s'afig el primer fitxer al repositori:
+un fitxer `README.md` amb el contingut següent.
 
 ```md
 # 01 - Introducció a Git
@@ -243,16 +233,12 @@ Estem aprenent a utilitzar Git!
     ```
 
 === ":material-microsoft-visual-studio-code: VS Code"
-    Crea el fitxer __README.md__ amb el contingut anterior
-    en el directori `git_introduccio`.
+    Crea el fitxer `README.md` amb el contingut anterior en el directori `git_introduccio`.
 
 
-Una vegada creat el fitxer, comprovem l'estat del nostre repositori amb `git status`.
-
-Vegem que Git reconeix aquest nou fitxer,que ara mateix resideix en el __Directori de treball__.
-
-La comanda `git status` ens mostra que no s'està realitzant cap seguiment del fitxer `README.md`,
-que es troba en l'estat __Untracked__.
+Una vegada creat el fitxer, es comprova l'estat del repositori amb `git status`.
+Git reconeix el fitxer nou, que ara mateix només es troba en el __Directori de treball__.
+Com que encara no se'n fa el seguiment, el fitxer `README.md` es troba en l'estat __Untracked__.
 
 ```shellconsole
 jpuigcerver@fp:~/git_introduccio (main) $ git status
@@ -267,29 +253,25 @@ Untracked files:
 Nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-![Fitxer sense seguiment](img/untracked_readme.light.png#only-light)
-![Fitxer sense seguiment](img/untracked_readme.dark.png#only-dark)
-/// figure-caption
-Fitxer sense seguiment (untracked).
-///
+![Fitxer sense seguiment (untracked)](img/untracked_readme.light.png#only-light)
+![Fitxer sense seguiment (untracked)](img/untracked_readme.dark.png#only-dark)
+/// figure-caption | #figure-untracked : Fitxer sense seguiment (_untracked_).
 
-Per afegir els canvis al nostre repositori, el següent pas és afegir
-els canvis a l'_Àrea de Preparació_ amb l'ordre `git add`.
-Aquesta comanda permet especificar quins canvis es desitja afegir.
-
-La sintaxi és la següent:
+El pas següent és afegir els canvis a l'_Àrea de preparació_ amb l'ordre `git add`,
+que permet especificar quins canvis es volen incloure en el pròxim _commit_:
 
 ```bash
 git add [--all] <path>
 ```
 
-- `path`: Ruta del fitxer o directori que es vol afegir a l'_Àrea de Preparació_.
-- `--all`: Opcional. Afegix tots els fitxers modificats i eliminats a l'_Àrea de Preparació_.
+- `[--all]`: (opcional) afegeix a l'_Àrea de preparació_ tots els fitxers modificats i eliminats.
+- `<path>`: ruta del fitxer o directori que es vol afegir a l'_Àrea de preparació_.
 
+!!! docs "Documentació oficial: [:octicons-link-external-16: `git add`](https://git-scm.com/docs/git-add) – :simple-git: Git"
 
 ```shellconsole
-jpuigcerver@FP:~/git_introduccio (main) $ git add README.md
-jpuigcerver@FP:~/git_introduccio (main) $ git status
+jpuigcerver@fp:~/git_introduccio (main) $ git add README.md
+jpuigcerver@fp:~/git_introduccio (main) $ git status
 On branch main
 
 No commits yet
@@ -299,53 +281,51 @@ Changes to be committed:
         new file:   README.md
 ```
 
-Vegem com el fitxer `README.md` ha passat a l'estat __Staged__ i està preparat per a ser confirmat.
+S'observa que el fitxer `README.md` ha passat a l'estat __Staged__ i ja està preparat per a ser confirmat.
 
-![Fitxer a l'Àrea de Preparació](img/staged_readme.light.png#only-light)
-![Fitxer a l'Àrea de Preparació](img/staged_readme.dark.png#only-dark)
-/// figure-caption
-Fitxer a l'Àrea de Preparació (staged).
-///
+![Fitxer a l'Àrea de preparació (staged)](img/staged_readme.light.png#only-light)
+![Fitxer a l'Àrea de preparació (staged)](img/staged_readme.dark.png#only-dark)
+/// figure-caption | #figure-staged : Fitxer a l'Àrea de preparació (_staged_).
 
 
 ## Confirmar canvis (`git commit`)
-
-Una vegada afegits tots els canvis a l'_Àrea de Preparació_, ja podem __confirmar-los__
-mitjançant l'ordre `git commit`.
+Una vegada afegits tots els canvis a l'_Àrea de preparació_, ja es poden __confirmar__
+amb l'ordre `git commit`:
 
 ```bash
 git commit [-a] [-m "<message>"]
 ```
 
-- `-a`: Opcional. Afegeix tots els fitxers modificats i eliminats a l'_Àrea de Preparació_ (sense necessitat de `git add`).
-- `-m "<message>"`: Opcional. Missatge que descriu el canvi realitzat en el _commit_.
+- `[-a]`: (opcional) afegeix a l'_Àrea de preparació_ tots els fitxers modificats i eliminats,
+    sense necessitat d'utilitzar `git add`.
+- `[-m "<message>"]`: (opcional) missatge que descriu el canvi realitzat en el _commit_.
 
-!!! warning annotate "Si no s'especifica el missatge amb `-m`, s'obrirà l'editor per defecte(1) per a introduir el missatge del _commit_."
+!!! docs "Documentació oficial: [:octicons-link-external-16: `git commit`](https://git-scm.com/docs/git-commit) – :simple-git: Git"
 
-1. `ViM` per defecte. Pot ser configurat: 
+!!! warning annotate "Si no s'especifica el missatge amb `-m`, s'obri l'editor per defecte(1) per a escriure el missatge del _commit_."
+
+1. Per defecte és `ViM`, però es pot configurar:
     ```bash
     git config --global core.editor <editor>
     ```
 
 ![Estat del repositori de Git abans de fer un commit](img/before_commit_readme.light.png#only-light)
 ![Estat del repositori de Git abans de fer un commit](img/before_commit_readme.dark.png#only-dark)
-/// figure-caption
-Estat del repositori de Git abans de fer un _commit_.
-///
+/// figure-caption | #figure-before-commit : Estat del repositori de Git abans de fer un _commit_.
 
-Aquesta ordre crea un nou _commit_, que és una instantània de l'estat actual dels fitxers
-del repositori i que conté tota la informació relativa als canvis realitzats.
+Un __commit__ és una instantània de l'estat dels fitxers del repositori en un moment concret,
+que conté tota la informació relativa als canvis realitzats. Cada _commit_ conté la informació següent:
 
-Cadascun dels _commit_ conté la següent informació:
+- __Autor__: persona que ha fet el _commit_.
+- __Correu electrònic__: correu electrònic de l'autor.
+- __Data__: data i hora en què s'ha fet el _commit_.
+- __Missatge__: descripció dels canvis realitzats en el _commit_.
+- __Identificador o `hash`__: codi únic generat automàticament que identifica el _commit_.
+- __Canvis__: llista de fitxers modificats, afegits o eliminats en el _commit_ i els canvis realitzats
+    en cadascun __respecte de la versió anterior__.
 
-- __Autor__: Persona que ha realitzat el _commit_.
-- __Correu electrònic__: Correu electrònic de l'autor.
-- __Data__: Data i hora en què s'ha realitzat el _commit_.
-- __Missatge__: Descripció dels canvis realitzats en el _commit_.
-- __Identificador o `hash`__: Codi únic generat automàticament que identifica el _commit_.
-- __Canvis__: Llista de fitxers modificats, afegits o eliminats en el _commit_ i els canvis realitzats en ells __respecte de la versió anterior__.
-
-Per tant, abans de realitzar un _commit_, és necessari configurar el nom i el correu electrònic de l'autor.
+Com que cada _commit_ registra qui l'ha fet, abans del primer _commit_ cal configurar
+el nom i el correu electrònic de l'autor:
 
 ```bash
 git config --global user.name <name>
@@ -353,14 +333,14 @@ git config --global user.email <email>
 ```
 
 ```shellconsole
-jpuigcerver@FP:~/git_introduccio (main) $ git config --global user.name "{{ config.site_author }}"
-jpuigcerver@FP:~/git_introduccio (main) $ git config --global user.email "{{ config.site_email }}"
+jpuigcerver@fp:~/git_introduccio (main) $ git config --global user.name "{{ config.site_author }}"
+jpuigcerver@fp:~/git_introduccio (main) $ git config --global user.email "{{ config.theme.email }}"
 ```
 
-Amb aquesta informació configurada, ja podem realitzar el nostre primer _commit_.
+Amb aquesta informació configurada, ja es pot fer el primer _commit_.
 
 ```shellconsole
-jpuigcerver@FP:~/git_introduccio (main) $ git status
+jpuigcerver@fp:~/git_introduccio (main) $ git status
 On branch main
 
 No commits yet
@@ -368,31 +348,29 @@ No commits yet
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
         new file:   README.md
-jpuigcerver@FP:~/git_introduccio (main) $ git commit -m "Added README.md"
+jpuigcerver@fp:~/git_introduccio (main) $ git commit -m "Added README.md"
 [main (root-commit) 8e70293] Added README.md
  1 file changed, 2 insertions(+)
  create mode 100644 README.md
-jpuigcerver@FP:~/git_introduccio (main) $ git status
+jpuigcerver@fp:~/git_introduccio (main) $ git status
 On branch main
 
 nothing to commit, working tree clean
 ```
 
-Vegem que l'estat del nostre repositori ha canviat i ja no hi ha canvis pendents de confirmar.
-A més, s'ha creat el primer _commit_ amb el missatge `Added README.md` i identificador `8e70293`.
+S'observa que l'estat del repositori ha canviat i ja no hi ha canvis pendents de confirmar.
+A més, s'ha creat el primer _commit_, amb el missatge `Added README.md` i l'identificador `8e70293`.
 
 ![Estat del repositori de Git després de fer un commit](img/after_commit_readme.light.png#only-light)
 ![Estat del repositori de Git després de fer un commit](img/after_commit_readme.dark.png#only-dark)
-/// figure-caption
-Estat del repositori de Git després de fer un _commit_.
-///
+/// figure-caption | #figure-after-commit : Estat del repositori de Git després de fer un _commit_.
 
-Podem consultar la informació del nou _commit_ amb l'ordre `git show`.
+La informació del _commit_ nou es pot consultar amb l'ordre `git show`:
 
 ```shellconsole
-jpuigcerver@FP:~/git_introduccio (main) $ git show 8e70293
+jpuigcerver@fp:~/git_introduccio (main) $ git show 8e70293
 commit 8e702933d5dbec9ee71100a1599ae4491085e1aa (HEAD -> main)
-Author: {{ config.site_author }} <{{ config.site_email }}>
+Author: {{ config.site_author }} <{{ config.theme.email }}>
 Date:   Fri Oct 13 16:06:59 2023 +0200
 
     Added README.md
@@ -408,31 +386,29 @@ index 0000000..6d747b3
 ```
 
 ## Diferències entre versions (`git diff`)
-Una ferramenta molt útil de Git és `git diff`, que permet comparar les diferències entre els canvis realitzats
-en el __Directori de treball__ o __l'Àrea de Preparació__ respecte del __Repositori local__.
+L'ordre `git diff` permet comparar els canvis del __Directori de treball__ o de l'__Àrea de preparació__
+respecte del __Repositori local__. És molt útil per revisar què s'ha modificat abans de confirmar-ho.
 
-La sintaxi amb les opcions bàsiques es:
+La sintaxi amb les opcions bàsiques és:
+
 ```bash
 git diff [--staged] [<path>]
 ```
 
-- `--staged`: Opcional. Mostra les diferències entre __l'Àrea de Preparació__ i el __Repositori local__.
-    Si no s'indica, es compararan les diferències entre el __Directori de treball__ i el __Repositori local__.
-- `<path>`: Opcional. Fitxer o directori sobre el qual es vol comparar les diferències.
-    Si no s'indica, es compararan totes les diferències.
+- `[--staged]`: (opcional) mostra les diferències entre l'__Àrea de preparació__ i el __Repositori local__.
+    Si no s'indica, compara el __Directori de treball__ amb el __Repositori local__.
+- `[<path>]`: (opcional) fitxer o directori del qual es volen comparar les diferències.
+    Si no s'indica, es mostren totes les diferències.
 
-!!! docs "Documentació oficial de :simple-git: Git"
-    [:octicons-link-external-16: `git diff`](https://git-scm.com/docs/git-diff)
+!!! docs "Documentació oficial: [:octicons-link-external-16: `git diff`](https://git-scm.com/docs/git-diff) – :simple-git: Git"
 
-![Resum de `git diff`](img/resum_diff.light.png#only-light)
-![Resum de `git diff`](img/resum_diff.dark.png#only-dark)
-/// figure-caption
-Resum de `git diff`.
-///
+![Resum de git diff](img/resum_diff.light.png#only-light)
+![Resum de git diff](img/resum_diff.dark.png#only-dark)
+/// figure-caption | #figure-resum-diff : Resum de `git diff`.
 
-!!! info "Interpretació de `diff`"
+??? info "Interpretació de l'eixida de `git diff`"
     ```shellconsole
-    jpuigcerver@FP:~/git_introduccio (main) $ git diff
+    jpuigcerver@fp:~/git_introduccio (main) $ git diff
     diff --git a/README.md b/README.md
     index 6d747b3..f3b3b3e 100644
     --- a/README.md
@@ -445,29 +421,29 @@ Resum de `git diff`.
 
     El format d'un `diff` és el següent:
 
-    - `diff --git a/README.md b/README.md`: Mostra els fitxers comparats.
-        - `a/README.md`: Fitxer original.
-        - `b/README.md`: Fitxer modificat.
-    - `index 6d747b3..f3b3b3e 100644`: Mostra el hash dels fitxers comparats i els permisos.
-    - `--- a/README.md`: Mostra la ruta del fitxer original.
-    - `+++ b/README.md`: Mostra la ruta del fitxer modificat.
-    - `@@ -1,2 +1,3 @@`: Mostra la posició de les línies modificades.
-        - `-1,2`: Els canvis comencen a la línia 1 i afecten 2 línies en el fitxer original.
-        - `+1,3`: Els canvis comencen a la línia 1 i afecten 3 línies en el fitxer modificat.
+    - __`diff --git a/README.md b/README.md`__: fitxers comparats.
+        - __`a/README.md`__: fitxer original.
+        - __`b/README.md`__: fitxer modificat.
+    - __`index 6d747b3..f3b3b3e 100644`__: _hash_ dels fitxers comparats i permisos.
+    - __`--- a/README.md`__: ruta del fitxer original.
+    - __`+++ b/README.md`__: ruta del fitxer modificat.
+    - __`@@ -1,2 +1,3 @@`__: posició de les línies modificades.
+        - __`-1,2`__: en el fitxer original, els canvis comencen en la línia 1 i afecten 2 línies.
+        - __`+1,3`__: en el fitxer modificat, els canvis comencen en la línia 1 i afecten 3 línies.
 
-    Després, es mostren les línies modificades:
+    A continuació, es mostren les línies modificades, precedides d'un símbol:
 
-    - `-`: Línia eliminada.
-    - `+`: Línia afegida.
+    - __`-`__: línia eliminada.
+    - __`+`__: línia afegida.
 
     En aquest cas, s'ha afegit la línia `Aquesta és una línia nova` al fitxer `README.md`.
 
 ??? example "Exemple: Diferències entre el Directori de treball i el Repositori local"
-    Observem les diferències entre el fitxer `README.md` del __Directori de treball__ i el __Repositori local__.
+    S'afig una línia al fitxer `README.md` i es comparen el __Directori de treball__ i el __Repositori local__.
 
     ```shellconsole
-    jpuigcerver@FP:~/git_introduccio (main) $ echo "Aquesta és una línia nova" >> README.md
-    jpuigcerver@FP:~/git_introduccio (main) $ git status
+    jpuigcerver@fp:~/git_introduccio (main) $ echo "Aquesta és una línia nova" >> README.md
+    jpuigcerver@fp:~/git_introduccio (main) $ git status
     On branch main
 
     Changes not staged for commit:
@@ -476,7 +452,7 @@ Resum de `git diff`.
             modified:   README.md
 
     no changes added to commit (use "git add" and/or "git commit -a")
-    jpuigcerver@FP:~/git_introduccio (main) $ git diff
+    jpuigcerver@fp:~/git_introduccio (main) $ git diff
     diff --git a/README.md b/README.md
     index 6d747b3..f3b3b3e 100644
     --- a/README.md
@@ -487,19 +463,21 @@ Resum de `git diff`.
     +Aquesta és una línia nova
     ```
 
-??? example "Exemple: Diferències entre l'Àrea de Preparació i el Repositori local"
-    Observem les diferències entre el fitxer `README.md` de l'_Àrea de Preparació_ i el __Repositori local__.
+    S'observa la línia afegida, marcada amb el símbol `+`.
+
+??? example "Exemple: Diferències entre l'Àrea de preparació i el Repositori local"
+    S'afig el fitxer `README.md` a l'_Àrea de preparació_ i es compara amb el __Repositori local__.
 
     ```shellconsole
-    jpuigcerver@FP:~/git_introduccio (main) $ git add README.md
-    jpuigcerver@FP:~/git_introduccio (main) $ git status
+    jpuigcerver@fp:~/git_introduccio (main) $ git add README.md
+    jpuigcerver@fp:~/git_introduccio (main) $ git status
     On branch main
 
     Changes to be committed:
       (use "git restore --staged <file>..." to unstage)
             modified:   README.md
 
-    jpuigcerver@FP:~/git_introduccio (main) $ git diff --staged
+    jpuigcerver@fp:~/git_introduccio (main) $ git diff --staged
     diff --git a/README.md b/README.md
     index 6d747b3..f3b3b3e 100644
     --- a/README.md
@@ -510,41 +488,41 @@ Resum de `git diff`.
     +Aquesta és una línia nova
     ```
 
+    Com que els canvis ja són en l'_Àrea de preparació_, cal utilitzar l'opció `--staged` per a vore'ls.
 
 
 ## Descartar canvis (`git restore`)
-Una altra ferramenta útil de Git és `git restore`, que permet descartar els canvis realitzats en els fitxers
-del __Directori de treball__ o __l'Àrea de Preparació__.
+L'ordre `git restore` permet descartar els canvis realitzats en els fitxers del __Directori de treball__
+o de l'__Àrea de preparació__. És útil quan s'ha fet una modificació que no es vol conservar.
 
 La sintaxi amb les opcions bàsiques és:
+
 ```bash
 git restore [--staged] <path>
 ```
 
-- `--staged`: Opcional. Descarta els canvis realitzats en l'__Àrea de Preparació__.
-    Si no s'indica, es descartaran els canvis realitzats en el __Directori de treball__.
-- `<path>`: Opcional. Fitxer o directori sobre el qual es vol descartar els canvis.
+- `[--staged]`: (opcional) trau els canvis de l'__Àrea de preparació__, però els manté en el
+    __Directori de treball__. Si no s'indica, es descarten els canvis del __Directori de treball__.
+- `<path>`: fitxer o directori del qual es volen descartar els canvis.
 
-Podeu consultar la [Figura 2](#figure-flux-treball) per a veure un resum del comportament de `git restore`.
+La [Figura 2](#figure-flux-treball) resumeix el comportament de `git restore`.
 
-!!! docs "Documentació oficial de :simple-git: Git"
-    [:octicons-link-external-16: `git restore`](https://git-scm.com/docs/git-restore)
+!!! docs "Documentació oficial: [:octicons-link-external-16: `git restore`](https://git-scm.com/docs/git-restore) – :simple-git: Git"
 
-!!! danger
-    La comanda `git restore` descarta els canvis realitzats en els fitxers sense possibilitat de recuperar-los.
+!!! danger "L'ordre `git restore` descarta els canvis del __Directori de treball__ sense possibilitat de recuperar-los."
 
-??? example "Exemple: Descartar canvis en l'Àrea de Preparació"
-    Continuant amb l'exemple anterior, descartem els canvis realitzats en el fitxer `README.md` de l'_Àrea de Preparació_.
+??? example "Exemple: Descartar canvis en l'Àrea de preparació"
+    Continuant amb l'exemple anterior, es trauen de l'_Àrea de preparació_ els canvis del fitxer `README.md`.
 
     ```shellconsole
-    jpuigcerver@FP:~/git_introduccio (main) $ git status
+    jpuigcerver@fp:~/git_introduccio (main) $ git status
     On branch main
 
     Changes to be committed:
       (use "git restore --staged <file>..." to unstage)
             modified:   README.md
 
-    jpuigcerver@FP:~/git_introduccio (main) $ git diff --staged
+    jpuigcerver@fp:~/git_introduccio (main) $ git diff --staged
     diff --git a/README.md b/README.md
     index 6d747b3..f3b3b3e 100644
     --- a/README.md
@@ -553,8 +531,8 @@ Podeu consultar la [Figura 2](#figure-flux-treball) per a veure un resum del com
      # 01 - Introducció a Git
      Estem aprenent a utilitzar Git!
     +Aquesta és una línia nova
-    jpuigcerver@FP:~/git_introduccio (main) $ git restore --staged README.md
-    jpuigcerver@FP:~/git_introduccio (main) $ git status
+    jpuigcerver@fp:~/git_introduccio (main) $ git restore --staged README.md
+    jpuigcerver@fp:~/git_introduccio (main) $ git status
     On branch main
 
     Changes not staged for commit:
@@ -563,14 +541,14 @@ Podeu consultar la [Figura 2](#figure-flux-treball) per a veure un resum del com
             modified:   README.md
     ```
 
-??? example "Exemple: Descartar canvis en el Directori de treball"
-    Descartem els canvis realitzats en el fitxer `README.md` del __Directori de treball__.
+    S'observa que el fitxer continua modificat, però ara els canvis només són en el __Directori de treball__.
 
-    !!! danger
-        Aquesta comanda descartarà els canvis realitzats en el fitxer `README.md` sense possibilitat de recuperar-los.
+??? example "Exemple: Descartar canvis en el Directori de treball"
+    Es descarten els canvis realitzats en el fitxer `README.md` del __Directori de treball__.
+    Aquesta ordre descarta els canvis definitivament.
 
     ```shellconsole
-    jpuigcerver@FP:~/git_introduccio (main) $ git status
+    jpuigcerver@fp:~/git_introduccio (main) $ git status
     On branch main
 
     Changes not staged for commit:
@@ -579,7 +557,7 @@ Podeu consultar la [Figura 2](#figure-flux-treball) per a veure un resum del com
             modified:   README.md
 
     no changes added to commit (use "git add" and/or "git commit -a")
-    jpuigcerver@FP:~/git_introduccio (main) $ git diff
+    jpuigcerver@fp:~/git_introduccio (main) $ git diff
     diff --git a/README.md b/README.md
     index 6d747b3..f3b3b3e 100644
     --- a/README.md
@@ -588,73 +566,79 @@ Podeu consultar la [Figura 2](#figure-flux-treball) per a veure un resum del com
      # 01 - Introducció a Git
      Estem aprenent a utilitzar Git!
     +Aquesta és una línia nova
-    jpuigcerver@FP:~/git_introduccio (main) $ git restore README.md
-    jpuigcerver@FP:~/git_introduccio (main) $ git status
+    jpuigcerver@fp:~/git_introduccio (main) $ git restore README.md
+    jpuigcerver@fp:~/git_introduccio (main) $ git status
     On branch main
 
     nothing to commit, working tree clean
     ```
 
+    S'observa que el repositori torna a estar net: la línia afegida s'ha perdut.
+
 
 ## Històric de canvis (`git log`)
-Git registra tots els canvis confirmats (_commit_) en el __Repositori local__.
-L'històric de canvis es pot consultar amb l'ordre `git log`.
+Git registra en el __Repositori local__ tots els canvis confirmats (_commits_).
+L'històric de canvis es pot consultar amb l'ordre `git log`:
 
 ```bash
-git log [options]
+git log [<options>]
 ```
 
-!!! docs "Documentació oficial de :simple-git: Git"
-    Consulta totes les opcions a [:octicons-link-external-16: `git log`](https://git-scm.com/docs/git-log)
+- `[<options>]`: (opcional) opcions per a personalitzar quins _commits_ es mostren i com.
+
+!!! docs "Documentació oficial: [:octicons-link-external-16: `git log`](https://git-scm.com/docs/git-log) – :simple-git: Git"
 
 ??? example "Exemple: Històric de canvis"
-    Modifiquem novament el fitxer `README.md` i realitzem un nou _commit_.
+    Es modifica novament el fitxer `README.md` i es fa un nou _commit_.
 
     ```shellconsole
-    jpuigcerver@FP:~/git_introduccio (main) $ echo "Aquesta és una altra línia" >> README.md
-    jpuigcerver@FP:~/git_introduccio (main) $ git commit -a -m "Added another line to README.md"# (1)!
+    jpuigcerver@fp:~/git_introduccio (main) $ echo "Aquesta és una altra línia" >> README.md
+    jpuigcerver@fp:~/git_introduccio (main) $ git commit -a -m "Added another line to README.md" # (1)!
     [main c9fc6c8] Added another line to README.md
      1 file changed, 1 insertions(+)
     ```
 
-    1. Amb `-a` afegim tots els canvis realitzats al fitxer `README.md` a l'_Àrea de Preparació_ sense necessitat de `git add`.
+    1. Amb `-a` s'afigen a l'_Àrea de preparació_ els canvis del fitxer `README.md` sense necessitat de `git add`.
 
-    Consultem l'històric de canvis amb `git log`.
+    A continuació, es consulta l'històric de canvis amb `git log`.
 
     ```shellconsole
-    jpuigcerver@FP:~/git_introduccio (main) $ git log
+    jpuigcerver@fp:~/git_introduccio (main) $ git log
     commit c9fc6c856c2d52744b85a6f8d92feac496e60bd6 (HEAD -> main)
-    Author: Joan Puigcerver <j.puigcerveribanez@edu.gva.es>
+    Author: {{ config.site_author }} <{{ config.theme.email }}>
     Date:   Mon Oct 16 11:43:20 2023 +0200
 
         Added another line to README.md
 
     commit 8e702933d5dbec9ee71100a1599ae4491085e1aa
-    Author: Joan Puigcerver <j.puigcerveribanez@edu.gva.es>
+    Author: {{ config.site_author }} <{{ config.theme.email }}>
     Date:   Fri Oct 13 16:06:59 2023 +0200
 
-        Added Readme.md
+        Added README.md
     ```
 
-    S'observa tota la informació dels _commit_ realitzats, com l'autor, la data, el missatge i l'identificador.
+    S'observa la informació de cada _commit_: l'autor, la data, el missatge i l'identificador.
 
-L'ordre `git log` admet moltes opcions per a personalitzar com es mostren els _commit_ i la seua informació.
-
-Una possible combinació d'opcions per visualitzar l'històric de canvis de manera més compacta i intuïtiva és:
+L'ordre `git log` admet moltes opcions per a personalitzar com es mostren els _commits_ i la seua informació.
+Una possible combinació d'opcions per a visualitzar l'històric de manera més compacta i intuïtiva és:
 
 ```bash
 git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
 ```
 
 ??? example "Exemple: Històric de canvis compacte"
+    Es mostra l'històric del repositori amb les opcions anteriors.
+
     ```shellconsole
-    jpuigcerver@FP:~/git_introduccio (main) $ git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
+    jpuigcerver@fp:~/git_introduccio (main) $ git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
     * c9fc6c8 - (2 minutes ago) Added another line to README.md - Joan Puigcerver (HEAD -> main)
-    * 8e70293 - (3 days ago) Added Readme.md - Joan Puigcerver
+    * 8e70293 - (3 days ago) Added README.md - Joan Puigcerver
     ```
 
-No obstant això, no és pràctic recordar aquesta comanda. Per això, podem configurar un __alias__
-per a simplificar la seua crida.
+    S'observa que cada _commit_ ocupa una sola línia.
+
+No obstant això, no és pràctic recordar aquesta ordre. Per això, es pot configurar un __àlies__,
+és a dir, un nom curt que Git substitueix per l'ordre completa:
 
 ```bash
 git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'"
@@ -662,100 +646,105 @@ git config --global alias.lga "lg --all"
 ```
 
 ??? example "Exemple: Històric de canvis compacte amb àlies"
-    Després de configurar l'àlies `git lg` per a l'ordre anterior, podem cridar-lo de la següent manera:
+    Després de configurar l'àlies `lg`, n'hi ha prou amb executar `git lg`:
 
     ```shellconsole
-    jpuigcerver@FP:~/git_introduccio (main) $ git lg
+    jpuigcerver@fp:~/git_introduccio (main) $ git lg
     * c9fc6c8 - (2 minutes ago) Added another line to README.md - Joan Puigcerver (HEAD -> main)
     * 8e70293 - (3 days ago) Added README.md - Joan Puigcerver
     ```
 
+    S'observa que el resultat és el mateix que en l'exemple anterior.
+
 
 ## Configuració (`git config`)
-Git permet configurar diferents paràmetres per a personalitzar
-el seu comportament mitjançant l'ordre `git config`.
+Git permet configurar diferents paràmetres per a personalitzar el seu comportament
+mitjançant l'ordre `git config`.
 
-La configuració de Git es pot realitzar a tres nivells, on els paràmetres d'un nivell
-superior poden ser sobreescrits per un nivell inferior:
+La configuració es pot fer en tres nivells. Els paràmetres d'un nivell més específic
+sobreescriuen els d'un nivell més general:
 
-- __Sistema `--system`__: Configuració de Git per a tots els usuaris del sistema.
-    La configuració es realitza en un fitxer `gitconfig` situat a:
+- __Sistema (`--system`)__: configuració per a totes les persones usuàries del sistema.
+    Es guarda en un fitxer `gitconfig` situat en:
 
     === ":simple-linux: Linux"
-        ```bash
+        ```text
         /etc/gitconfig
         ```
 
     === ":material-microsoft-windows: Windows"
-        Carpeta de la instal·lació de Git:
+        Carpeta d'instal·lació de Git:
 
-        ```cmd
+        ```text
         C:\Program Files\Git\gitconfig
         ```
 
-- __Usuari `--global`__: Configuració de Git per a un usuari concret.
-    La configuració es realitza en un fitxer `gitconfig` situat a
-    la carpeta personal de l'usuari:
+- __Usuari (`--global`)__: configuració per a una persona usuària concreta.
+    Es guarda en un fitxer `.gitconfig` situat en la seua carpeta personal:
 
     === ":simple-linux: Linux"
-        ```bash
+        ```text
         /home/<username>/.gitconfig
         ```
 
     === ":material-microsoft-windows: Windows"
-        ```cmd
+        ```text
         C:\Users\<username>\.gitconfig
         ```
 
-- __Repositori `--local`__: Configuració de Git per a un repositori concret.
-    La configuració es realitza en un fitxer `config` situat a la carpeta `.git` del repositori.
+- __Repositori (`--local`)__: configuració per a un repositori concret.
+    Es guarda en el fitxer `config` de la carpeta `.git` del repositori:
 
-    ```bash
+    ```text
     <path_to_repository>/.git/config
     ```
 
-La sintaxi d'aquesta comanda és la següent:
+La sintaxi d'aquesta ordre és la següent:
 
 ```bash
 git config [--local | --global | --system] <key> [<value>]
 ```
 
-- `--local`, `--global`, `--system`: Opcional. Indica el nivell de configuració.
-    Si no s'indica, per defecte és `--local`.
-- `<key>`: Clau de configuració que es vol establir o consultar.
-- `<value>`: Opcional. Valor de la configuració.
-    Si no s'indica, es mostrarà el valor actual de la clau de configuració.
+- `[--local | --global | --system]`: (opcional) nivell de configuració. Per defecte és `--local`.
+- `<key>`: clau de configuració que es vol establir o consultar.
+- `[<value>]`: (opcional) valor de la configuració.
+    Si no s'indica, es mostra el valor actual de la clau.
 
+!!! docs "Documentació oficial: [:octicons-link-external-16: `git config`](https://git-scm.com/docs/git-config) – :simple-git: Git"
 
-!!! notice "Fixa't que ja s'ha utilitzat aquesta comanda per configurar els següents aspectes"
-    - El nom (`user.name`) i el correu electrònic (`user.email`) de l'autor dels _commit_
+!!! notice "Aquesta ordre ja s'ha utilitzat per configurar els aspectes següents:"
+    - El nom (`user.name`) i el correu electrònic (`user.email`) de l'autor dels _commits_.
     - L'editor per defecte (`core.editor`).
 
 
-??? example "Exemple: Consultar el nom i correu electrònic configurats"
+??? example "Exemple: Consultar el nom i el correu electrònic configurats"
+    Es consulten els valors de `user.name` i `user.email` en el nivell `--global`.
+
     ```shellconsole
-    jpuigcerver@FP:~/git_introduccio (main) $ git config --global user.name
+    jpuigcerver@fp:~/git_introduccio (main) $ git config --global user.name
     {{ config.site_author }}
-    jpuigcerver@FP:~/git_introduccio (main) $ git config --global user.email
-    {{ config.site_email }}
+    jpuigcerver@fp:~/git_introduccio (main) $ git config --global user.email
+    {{ config.theme.email }}
     ```
 
 
 ### Modificació del fitxer de configuració
-Per a modificar el fitxer de configuració de l'usuari, podem utilitzar l'ordre `git config --edit`,
-que obrirà l'editor de text per defecte per a editar el fitxer de configuració del nivell triat.
+En lloc de modificar cada clau per separat, també es pot editar directament el fitxer de configuració
+amb l'ordre `git config --edit`, que l'obri amb l'editor de text per defecte:
 
 ```bash
 git config [--local | --global | --system] --edit
 ```
 
-- `--local`, `--global`, `--system`: Opcional. Indica el nivell de configuració.
-    Si no s'indica, per defecte és `--local`.
+- `[--local | --global | --system]`: (opcional) nivell de configuració. Per defecte és `--local`.
 
 ??? example "Exemple: Fitxer de configuració de l'usuari (`--global`)"
+    S'obri el fitxer de configuració del nivell `--global`.
+
     ```shellconsole
-    jpuigcerver@FP:~/git_introduccio (main) $ git config --global --edit
+    jpuigcerver@fp:~/git_introduccio (main) $ git config --global --edit
     ```
+
     ```cfg title="~/.gitconfig"
     [core]
         editor = code --wait # Editor per defecte
@@ -765,44 +754,48 @@ git config [--local | --global | --system] --edit
 
     [user]
         name = {{ config.site_author }}
-        email = {{ config.site_email }}
+        email = {{ config.theme.email }}
 
     [alias]
         lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
         lga = lg --all
     ```
 
+    S'observa tota la configuració feta fins ara, agrupada per seccions.
+
 
 
 ## Ignorar fitxers (`.gitignore`)
-En un projecte, hi ha fitxers que no volem incloure en el repositori, com arxius temporals, binaris o fitxers de configuració.
-__Git permet ignorar aquests fitxers mitjançant el fitxer `.gitignore`__, que conté una llista de patrons de fitxers els
-quals Git no tindrà en compte.
+En un projecte hi ha fitxers que no s'han d'incloure en el repositori, com ara fitxers temporals,
+binaris o fitxers de configuració local. Per això, __Git permet ignorar fitxers mitjançant el fitxer
+`.gitignore`__, que conté una llista de patrons de fitxers que Git no ha de tindre en compte.
 
-Aquest fitxer pot estar situat en qualsevol directori del repositori i Git ignorarà per a tots els fitxers i subdirectoris d'aquest
-que complisquen algun dels __patrons especificats__.
+Aquest fitxer pot estar situat en qualsevol directori del repositori. Git ignora tots els fitxers
+i subdirectoris d'aquest directori que complisquen algun dels __patrons especificats__.
 
-!!! docs
-    [:octicons-link-external-16: `.gitignore`](https://git-scm.com/docs/gitignore) – Documentació oficial de :simple-git: Git
-
-    Llista de patrons:
-
-    - [:octicons-link-external-16: `gitignore` - Pattern format](https://git-scm.com/docs/gitignore#_pattern_format) – Documentació oficial de :simple-git: Git
+!!! docs "Documentació de `.gitignore`"
+    - [:octicons-link-external-16: `gitignore`](https://git-scm.com/docs/gitignore) – Documentació oficial de :simple-git: Git
+    - [:octicons-link-external-16: `gitignore` - Pattern format](https://git-scm.com/docs/gitignore#_pattern_format)
+        – Documentació oficial de :simple-git: Git
     - [:octicons-link-external-16: Git Ignore and `.gitignore`](https://www.w3schools.com/git/git_ignore.asp) – :simple-w3schools: W3Schools
 
 ??? example "Exemple: Ignorar fitxers"
+    Es crea el fitxer `.gitignore` amb els patrons següents:
+
     ```gitignore title=".gitignore"
-    # ignore ALL .log files
+    # Ignora tots els fitxers .log
     *.log
 
-    # ignore ALL files in ANY directory named temp
+    # Ignora tots els fitxers de qualsevol directori anomenat temp
     temp/
     ```
 
+    A continuació, es comprova l'efecte d'ignorar el directori `temp/`.
+
     ```shellconsole
-    jpuigcerver@FP:~/git_introduccio (main) $ mkdir temp
-    jpuigcerver@FP:~/git_introduccio (main) $ touch temp/file.txt
-    jpuigcerver@FP:~/git_introduccio (main) $ git status
+    jpuigcerver@fp:~/git_introduccio (main) $ mkdir temp
+    jpuigcerver@fp:~/git_introduccio (main) $ touch temp/file.txt
+    jpuigcerver@fp:~/git_introduccio (main) $ git status
     On branch main
 
     Untracked files:
@@ -810,8 +803,8 @@ que complisquen algun dels __patrons especificats__.
             temp/file.txt
 
     nothing added to commit but untracked files present (use "git add" to track)
-    jpuigcerver@FP:~/git_introduccio (main) $ echo "temp/" > .gitignore
-    jpuigcerver@FP:~/git_introduccio (main) $ git status # (1)!
+    jpuigcerver@fp:~/git_introduccio (main) $ echo "temp/" > .gitignore
+    jpuigcerver@fp:~/git_introduccio (main) $ git status # (1)!
     On branch main
 
     Untracked files:
@@ -821,7 +814,7 @@ que complisquen algun dels __patrons especificats__.
     nothing added to commit but untracked files present (use "git add" to track)
     ```
 
-    1. El fitxer `temp/file.txt` no apareix en l'estat del repositori després de crear el fitxer `.gitignore`.
+    1. El fitxer `temp/file.txt` ja no apareix en l'estat del repositori després de crear el fitxer `.gitignore`.
 
 /// html | div.spell-ignore
 ## Recursos addicionals

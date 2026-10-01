@@ -6,13 +6,13 @@ hide:
 ---
 
 ## Bloc 3: Remots
-En aquest bloc es treballarà amb __:material-cloud-sync: repositoris remots__,
-com es creen i com allotjar-los a __[:simple-github: GitHub][github]__.
+En aquest bloc es treballa amb __:material-cloud-sync: repositoris remots__:
+com es creen i com s'allotgen en __[:simple-github: GitHub][github]__.
 
 [github]: https://github.com/
 
 /// html | div.timeline
-[[auth]]: Configuració de l'autenticació a __[:simple-github: GitHub][github]__.
+[[auth]]: configuració de l'autenticació a __[:simple-github: GitHub][github]__.
 
 [[auth-slides]]
 ///

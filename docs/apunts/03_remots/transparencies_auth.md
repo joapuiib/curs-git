@@ -35,13 +35,13 @@ alias: auth-slides
 
 ## Repositori remot
 
-![components](../01_introduccio/img/components.light.png){ .r-stretch }
+![Estructura d'un repositori local i remot](../01_introduccio/img/components.light.png){ .r-stretch }
 
 ---
 
 ## Desenvolupament distribuït
 
-![multiple_local_repo](img/multiple_local_repo.light.png){ .r-stretch }
+![Repositori remot vinculat a diversos repositoris locals](img/multiple_local_repo.light.png){ .r-stretch }
 
 ---
 
@@ -56,7 +56,7 @@ alias: auth-slides
 
 ## Token d'accés personal (PAT)
 
-Generat desde Settings > Developer settings > Personal access tokens
+Es genera des de Settings > Developer settings > Personal access tokens
 
 - Classic
 - Fine-grained
@@ -69,13 +69,13 @@ git config --global credential.helper store
 
 ## Clau SSH
 
-1. Generar clau SSH localment
+1. Generar la clau SSH localment
 
     ```bash
     ssh-keygen -t rsa -b 4096
     ```
 
-2. Afegir clau a GitHub
+2. Afegir la clau a GitHub
 
 3. Comprovar l'autenticació
 

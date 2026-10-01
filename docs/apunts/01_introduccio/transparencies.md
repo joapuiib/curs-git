@@ -76,15 +76,16 @@ https://codeberg.org
 
 ## Estructura d'un repositori
 
-![components](img/components.light.png)
+![Components d'un repositori de Git](img/components.light.png)
 
 ---
 
 ## Estructura d'un repositori
 
-- __Directori de treball__: Directori del sistema on es troba el projecte i els fitxers.
-- __Àrea de preparació (_Staging area_)__: Espai temporal on incloem els fitxers que volem afegir al commit.
-- __Repositori local__: Directori ocult (`.git`) on es guarda tota la informació del repositori (_commits_, _branques_, _tags_, etc.).
+- __Directori de treball__: directori del sistema on es troben el projecte i els fitxers.
+- __Àrea de preparació__ (_Staging Area_): espai temporal amb els canvis que s'inclouran en el _commit_.
+- __Repositori local__: directori ocult (`.git`) on es guarda tota la informació del repositori
+    (_commits_, branques, etiquetes, etc.).
 
 ---
 
@@ -105,7 +106,7 @@ Aquesta operació crea un directori ocult `.git` que conté tota la informació 
 git add <path>
 ```
 
-![staged_readme](img/staged_readme.light.png)
+![Fitxer a l'Àrea de preparació](img/staged_readme.light.png)
 
 ---
 
@@ -115,7 +116,7 @@ git add <path>
 git commit [-m <message>]
 ```
 
-![after_commit_readme](img/after_commit_readme.light.png)
+![Estat del repositori després de fer un commit](img/after_commit_readme.light.png)
 
 ---
 
@@ -133,7 +134,7 @@ git config --global alias.lga "lg --all"
 
 ---
 
-## Mostrar commit
+## Mostrar un _commit_
 
 ```bash
 git show [ref]
@@ -147,7 +148,7 @@ git show [ref]
 git diff [--staged]
 ```
 
-![resum_diff](img/resum_diff.light.png)
+![Resum de git diff](img/resum_diff.light.png)
 
 ---
 
@@ -158,7 +159,7 @@ git diff [--staged]
 git restore <files>
 ```
 
-![flux_treball](img/flux_treball.light.png){ height=450px }
+![Flux de treball en un repositori de Git](img/flux_treball.light.png){ height=450px }
 
 ---
 
@@ -167,14 +168,14 @@ git restore <files>
 git config [--global] <key> <value>
 # Exemples
 git config --global init.defaultBranch main
-git config --global user.name "Joan Puigcerver Ibáñez"
-git config --global user.email "jpuigcerver@edu.gva.es"
+git config --global user.name "{{ config.site_author }}"
+git config --global user.email "{{ config.theme.email }}"
 git config --global core.editor "code --wait"
 ```
 
 ---
 
-## Exemple configuració
+## Exemple de configuració
 ```cfg
 [core]
     editor = code --wait # Editor per defecte
@@ -183,8 +184,8 @@ git config --global core.editor "code --wait"
     defaultBranch = main # Nom de la branca principal per defecte
 
 [user]
-    name = Joan Puigcerver Ibáñez
-    email = j.puigcerveribanez@edu.gva.es
+    name = {{ config.site_author }}
+    email = {{ config.theme.email }}
 
 [alias]
     lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
@@ -196,9 +197,9 @@ git config --global core.editor "code --wait"
 ## `.gitignore`
 
 ```gitignore
-# ignore ALL .log files
+# Ignora tots els fitxers .log
 *.log
 
-# ignore ALL files in ANY directory named temp
+# Ignora tots els fitxers de qualsevol directori anomenat temp
 temp/
 ```

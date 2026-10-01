@@ -6,8 +6,8 @@ alias: actions-exemples
 ---
 
 ## Exemples de fluxos de treball
-Per veure com combinar totes aquestes opcions, anem a veure diferents exemples
-d'automatitzacions en projectes de naturalesa distinta.
+Aquests apunts recullen diferents exemples d'automatitzacions en projectes de naturalesa diversa,
+per a mostrar com es combinen les opcions de GitHub Actions en casos reals.
 
 
 ### Publicació d'un lloc web estàtic generat amb ProperDocs a GitHub Pages
@@ -15,24 +15,24 @@ d'automatitzacions en projectes de naturalesa distinta.
 
 [curs-git]: {{ config.repo_url }}
 
-La següent automatització permet __generar aquest lloc web__ amb [ProperDocs][properdocs]
+L'automatització següent permet __generar aquest lloc web__ amb [ProperDocs][properdocs]
 i __publicar-lo__ a [:octicons-browser-24: GitHub Pages][pages].
-
-Aquesta acció s'executa sempre que es publiquen nous canvis sobre la branca `main`. També es pot executar manualment.
+S'executa sempre que es publiquen canvis nous en la branca `main`, i també es pot executar manualment.
 
 Els passos que la componen són els següents:
 
 /// html | div.steps
-1. __Compila el lloc web estàtic amb MkDocs.__
-    - Còpia els fitxers del repositori amb l'acció predefinida [`actions/checkout`][actions-checkout].
+1. __Compila el lloc web estàtic amb ProperDocs.__
+    - Copia els fitxers del repositori amb l'acció predefinida [`actions/checkout`][actions-checkout].
     - Configura Python amb l'acció predefinida [`actions/setup-python`][actions-setup-python].
-    - Instal·la les dependències necessàries per executar MkDocs.
+    - Instal·la les dependències necessàries per a executar ProperDocs.
     - Compila el lloc web amb l'ordre `properdocs build`.
-    - Emmagatzema el directori amb la documentació generada (`site/`) com a artefacte per a la
-        següent tasca amb l'acció predefinida [`actions/upload-pages-artifact`][actions-upload-pages-artifact].
+    - Emmagatzema el directori amb la documentació generada (`site/`) com a artefacte per a la tasca
+        següent, amb l'acció predefinida [`actions/upload-pages-artifact`][actions-upload-pages-artifact].
 2. __Publica el lloc web a :octicons-browser-24: GitHub Pages.__
-    - Sols s'executa si la tasca anterior s'ha executat correctament.
-    - Publica l'artefacte generat en la tasca anterior l'acció predefinida [`actions/deploy-pages`][actions-deploy-pages].
+    - Només s'executa si la tasca anterior ha acabat correctament.
+    - Publica l'artefacte generat en la tasca anterior amb l'acció predefinida [`actions/deploy-pages`][actions-deploy-pages].
+///
 
 
 [properdocs]: https://www.properdocs.org/
@@ -50,27 +50,25 @@ Els passos que la componen són els següents:
 ### Prova de correcció ortogràfica
 !!! success "Exemple en el repositori d'aquesta documentació: [`curs-git`][curs-git]"
 
-Aquest flux de treball comprova la correcció ortogràfica de la documentació
-del repositori utilitzant el programa [`pyspelling`][pyspelling].
+Aquest flux de treball comprova l'ortografia de la documentació del repositori
+amb el programa [`pyspelling`][pyspelling]. S'executa quan es crea una _Pull Request_ sobre la branca `main`
+o quan es marca com a llesta per a revisió.
 
 [pyspelling]: https://facelessuser.github.io/pyspelling/
 
-S'executa quan es crea Pull Request o es marca com a que està llesta per a revisió
-sobre la branca `main`.
-
-El flux de treball es compon de dues tasques. S'ha configurat d'aquesta manera
-perquè la tasca de correcció ortogràfica només s'executa quan s'han modificat fitxers de documentació,
-evitant així executar-la innecessàriament quan es modifiquen altres fitxers.
+El flux de treball es compon de dues tasques. S'ha dividit d'aquesta manera perquè la correcció ortogràfica
+només s'execute quan s'han modificat fitxers de documentació i no es faça innecessàriament
+quan es modifiquen altres fitxers.
 
 /// html | div.steps
-1. __`changed-files`: Comprova si cal realitzar la correcció ortogràfica.__
-    - Comprova si s'han modificat fitxers de documentació (`*.md`) respecte a la branca `main`.
+1. __`changed-files`: comprova si cal fer la correcció ortogràfica.__
+    - Comprova si s'han modificat fitxers de documentació (`*.md`) respecte de la branca `main`.
     - Emmagatzema el resultat en la variable `EXIST_CHANGED_FILES`.
 
-2. __`spellcheck`: En cas afirmatiu, comprova la correcció ortogràfica dels fitxers modificats.__
-    - S'executa només si `needs.changed-files.outputs.EXIST_CHANGED_FILES == 1`.
+2. __`spellcheck`: en cas afirmatiu, comprova l'ortografia dels fitxers modificats.__
+    - Només s'executa si `needs.changed-files.outputs.EXIST_CHANGED_FILES == 1`.
     - Instal·la les dependències.
-    - Es descarrega els diccionaris necessaris.
+    - Descarrega els diccionaris necessaris.
     - Executa la correcció ortogràfica amb `pyspelling`.
 ///
 
@@ -80,30 +78,30 @@ evitant així executar-la innecessàriament quan es modifiquen altres fitxers.
 
 ### Execució de proves unitàries i d'integració en un projecte Java amb Maven
 !!! success "Repositori d'exemple: [`tasklist-api`][tasklist-api]"
-    Podeu observar el seu comportament en la :octicons-git-pull-request-16: Pull Request [feature: tasks can be marked as favorites (#1)][pr].
+    Pots observar-ne el comportament en la :octicons-git-pull-request-16: _Pull Request_
+    [feature: tasks can be marked as favorites (#1)][pr]:
 
-    1. En el :octicons-git-commit-16: commit [`2ca7024` – feature: tasks can be marked as favorites][pr-skip] no s'han executat les proves
-        perquè la :octicons-git-pull-request-16: Pull Request encara estava marcada com a esborrany.
-
-    2. En els commits posteriors a haver marcat la :octicons-git-pull-request-16: Pull Request com a llesta per a revisió, sí que s'han executat les proves.
+    1. En el :octicons-git-commit-16: _commit_ [`2ca7024` – feature: tasks can be marked as favorites][pr-skip]
+        no s'han executat les proves, perquè la _Pull Request_ encara estava marcada com a esborrany.
+    2. En els _commits_ posteriors, una vegada marcada la _Pull Request_ com a llesta per a revisió,
+        sí que s'han executat les proves.
 
 [tasklist-api]: https://github.com/cursgit/tasklist-api
 [pr]: https://github.com/cursgit/tasklist-api/pull/1
 [pr-skip]: https://github.com/cursgit/tasklist-api/actions/runs/22114248635/job/63918090903
 [pr-success]: https://github.com/cursgit/tasklist-api/actions/runs/22138402089/job/63996001935
 
-Aquest flux de treball s'executa cada vegada que es publiquen canvis a la branca `main`
-o quan es crea o actualitza una pull request cap a les branques `main` o `dev`.
-
+Aquest flux de treball s'executa cada vegada que es publiquen canvis en la branca `main`
+o quan es crea o s'actualitza una _pull request_ cap a les branques `main` o `dev`.
 Es basa en dues tasques:
 
 /// html | div.steps
-1. __`unit-tests`__: Executa les proves unitàries del projecte.
+1. __`unit-tests`__: executa les proves unitàries del projecte.
     - Configura l'entorn amb JDK 21.
     - Executa les proves unitàries amb l'ordre `mvn test`.
 
-2. __`integration-tests`__: Executa les proves d'integració del projecte.
-    - Sols s'executa si la tasca `unit-test` s'ha executat correctament.
+2. __`integration-tests`__: executa les proves d'integració del projecte.
+    - Només s'executa si la tasca `unit-tests` ha acabat correctament.
     - Configura l'entorn amb JDK 21.
     - Executa les proves d'integració amb l'ordre `mvn verify`, sense tornar a executar les proves unitàries.
 ///
@@ -125,20 +123,19 @@ Es basa en dues tasques:
 [mkdocs-data-plugin]: https://github.com/joapuiib/mkdocs-data-plugin/blob/main/.github/workflows/publish-to-pypi.yml
 
 Aquest flux de treball compila i publica les distribucions d'un paquet de Python
-a [PyPI](https://pypi.org/) cada vegada que es publica una nova etiqueta (`tag`)
-al repositori.
+a [PyPI](https://pypi.org/) cada vegada que es publica una etiqueta (`tag`) nova en el repositori.
 
-!!! docs "Documentació"
-    - [:octicons-link-external-16: Publishing to PyPI with a Trusted Publisher](https://docs.pypi.org/trusted-publishers/) - PyPI Docs
-    - [:octicons-link-external-16: Publishing with a Trusted Publisher](https://docs.pypi.org/trusted-publishers/using-a-publisher/) - PyPI Docs
+!!! docs "Documentació oficial de PyPI"
+    - [:octicons-link-external-16: Publishing to PyPI with a Trusted Publisher](https://docs.pypi.org/trusted-publishers/)
+    - [:octicons-link-external-16: Publishing with a Trusted Publisher](https://docs.pypi.org/trusted-publishers/using-a-publisher/)
 
 
-Els passos que realitza són:
+Els passos que fa són:
 
-- Configura l'entorn per poder utilitzar Python 3.8.
-- Instal·la el paquet `build` per compilar les distribucions de Python.
-- Compila les distribucions del paquet.
-- Publica les distribucions a PyPI utilitzant l'acció predefinida [`pypa/gh-action-pypi-publish`][pypi-publish].
+1. Configura l'entorn per a utilitzar Python 3.8.
+2. Instal·la el paquet `build` per a compilar les distribucions de Python.
+3. Compila les distribucions del paquet.
+4. Publica les distribucions a PyPI amb l'acció predefinida [`pypa/gh-action-pypi-publish`][pypi-publish].
 
 [pypi-publish]: https://github.com/pypa/gh-action-pypi-publish
 
@@ -147,35 +144,37 @@ Els passos que realitza són:
 ```
 
 ### Creació d'una imatge de Docker
-Podeu seguir aquest tutorial per crear una imatge de Docker a partir d'un repositori de GitHub
-i publicar-la a [Docker Hub](https://hub.docker.com/).
+Aquest exemple crea una imatge de Docker a partir d'un repositori de GitHub
+i la publica a [Docker Hub](https://hub.docker.com/), seguint el tutorial següent:
 
 !!! info "[:octicons-link-external-16: Using GitHub Actions to automatically build Docker images][tutorial-docker-build] – :simple-medium: Medium"
 
 !!! example "Repositori d'exemple: [`tasklist-api`][tasklist-api]"
-    Podeu observar quan s'ha publicat [la etiqueta :octicons-tag-16: `v0.1.0`][tag] en el [commit :octicons-git-commit-16: `d42ed1e` – Primera versió del projecte][tag-commit],
-    s'ha executat el flux de treball correctament i s'ha publicat la imatge de Docker al [repositori __`joapuiib/tasklist-api`__ de Docker Hub][docker-hub-repo].
+    Quan s'ha publicat [l'etiqueta :octicons-tag-16: `v0.1.0`][tag] en el
+    [_commit_ :octicons-git-commit-16: `d42ed1e` – Primera versió del projecte][tag-commit],
+    el flux de treball s'ha executat correctament i ha publicat la imatge de Docker
+    en el [repositori __`joapuiib/tasklist-api`__ de Docker Hub][docker-hub-repo].
 
 
 [tutorial-docker-build]: https://medium.com/@kicsipixel/using-github-actions-to-automatically-build-docker-images-65a038b8ce56
 [docker-action]: https://github.com/cursgit/tasklist-api/actions/runs/22113606749/job/63915873196
 [tag]: https://github.com/cursgit/tasklist-api/releases/tag/v0.1.0
 [tag-commit]: https://github.com/cursgit/tasklist-api/actions/runs/22113606749/job/63915873196
-[docker-hub-repo]: hhttps://hub.docker.com/repository/docker/joapuiib/tasklist-api/generalttps
+[docker-hub-repo]: https://hub.docker.com/repository/docker/joapuiib/tasklist-api/general
 
 
-Aquest flux de treball s'executa cada vegada que es publica una nova :octicons-tag-16: etiqueta al repositori amb el format `v*.*.*`.
-També es pot executar manualment ja que està configurat amb el `workflow_dispatch`.
+Aquest flux de treball s'executa cada vegada que es publica en el repositori una :octicons-tag-16: etiqueta
+nova amb el format `v*.*.*`. També es pot executar manualment, ja que està configurat amb `workflow_dispatch`.
 
-Consisteix en una única tasca que realitza els següents passos:
+Consisteix en una única tasca que fa els passos següents:
 
 /// html | div.steps
-1. __Còpia el repositori a l'entorn d'execució__ amb l'acció predefinida [`actions/checkout`][actions-checkout].
+1. __Copia el repositori en l'entorn d'execució__ amb l'acció predefinida [`actions/checkout`][actions-checkout].
 2. __Inicia sessió a Docker Hub__ amb l'acció predefinida [`docker/login-action`][docker-login-action].
     - Utilitza les credencials `DOCKER_USERNAME` i `DOCKER_PASSWORD` emmagatzemades com a
         [:octicons-key-asterisk-16: secrets][secrets] del repositori.
 3. __Configura les metadades de la imatge de Docker__ amb l'acció predefinida [`docker/metadata-action`][docker-metadata-action].
-    - Especifica el nom de la imatge com `joapuiib/tasklist-api`.
+    - Especifica el nom de la imatge: `joapuiib/tasklist-api`.
     - Configura les etiquetes de la imatge:
         - `latest` per a la branca `main`.
         - El número de versió extret de l'etiqueta publicada amb els patrons `*.*.*`, `*.*` i `*`.

@@ -1,22 +1,22 @@
 ---
 template: document.html
-title: "Introducció a Git: Resum comandes"
+title: "Introducció a Git: Resum d'ordres"
 icon: material/file-eye
 alias: introduccio-resum
 comments: true
 ---
 
-## Introducció a Git: Resum de comandes
-En aquests apunts inclouen un resum de les comandes i fitxers
-vists en el [[introduccio-index]].
+## Introducció a Git: Resum d'ordres
+Aquest resum recull les ordres i els fitxers presentats en el [[introduccio-index]].
 
 ### Fitxers
-- `.git/`: Directori que conté la informació del _Repositori Local_.
-- `.gitignore`: Fitxer que especifica quins fitxers o directoris
-    no s'han d'incloure en el _Repositori Local_.
-- `~/.gitconfig`: Fitxer de configuració __global__ de Git,
-    on s'enregistren totes les configuracions realitzades
-    amb la comanda `git config --global`.
+Git guarda la informació i la configuració en els fitxers següents:
+
+- __`.git/`__: directori que conté la informació del _Repositori local_.
+- __`.gitignore`__: fitxer que especifica quins fitxers o directoris no s'han d'incloure
+    en el _Repositori local_.
+- __`~/.gitconfig`__: fitxer de configuració __global__ de Git, on es registren totes les configuracions
+    realitzades amb l'ordre `git config --global`.
 
     ```cfg title=".gitconfig"
     [core]
@@ -27,63 +27,57 @@ vists en el [[introduccio-index]].
 
     [user]
         name = {{ config.site_author }}
-        email = {{ config.site_email }}
+        email = {{ config.theme.email }}
 
     [alias]
         lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
         lga = lg --all
     ```
 
-### Comandes bàsiques
-- `git init`: Inicialitza un nou _Repositori Local_ a la carpeta
-    actual. Crea el directori `.git/`.
+### Ordres bàsiques
+Aquestes són les ordres per a treballar amb un repositori local:
 
-- `git status`: Mostra l'estat del _Repositori Local_, com els
-    canvis en el _Directori de Treball_ i l'_Àrea de Preparació_.
+- __`git init`__: inicialitza un nou _Repositori local_ en la carpeta actual i crea el directori `.git/`.
 
-- `git add <path>`: Afegeix fitxers al _Directori de Treball_ a
-    l'_Àrea de Preparació_.
+- __`git status`__: mostra l'estat del _Repositori local_, com ara els canvis del _Directori de treball_
+    i de l'_Àrea de preparació_.
 
-- `git commit`: Crea un nou _commit_ amb els fitxers de
-    l'_Àrea de Preparació_.
+- __`git add <path>`__: afegeix fitxers del _Directori de treball_ a l'_Àrea de preparació_.
 
-    - Opció `-m`: Permet afegir un missatge al _commit_.
-    - Opció `-a`: Afegeix automàticament tots els fitxers
-        modificats o eliminats a l'_Àrea de
-        Preparació_. No afegeix els fitxers nous.
+- __`git commit`__: crea un nou _commit_ amb els fitxers de l'_Àrea de preparació_.
 
-- `git restore <path>`: Descarta els canvis realitzats en un fitxer
-    del _Directori de Treball_.
+    - __`-m`__: permet indicar el missatge del _commit_.
+    - __`-a`__: afegeix automàticament a l'_Àrea de preparació_ tots els fitxers modificats o eliminats.
+        No afegeix els fitxers nous.
 
-- `git restore --staged <path>`: Elimina un fitxer de l'_Àrea de
-    Preparació_.
+- __`git restore <path>`__: descarta els canvis realitzats en un fitxer del _Directori de treball_.
 
-- `git log`: Mostra l'historial de _commits_ del _Repositori Local_.
+- __`git restore --staged <path>`__: trau un fitxer de l'_Àrea de preparació_.
 
-    - Opció `--oneline`: Cada _commit_ es mostra en una sola línia.
-    - Opció `--graph`: Mostra l'historial de _commits_ en forma
-        d'arbre.
+- __`git log`__: mostra l'historial de _commits_ del _Repositori local_.
 
-- `git show <revision>`: Mostra la informació d'un _commit_ concret.
+    - __`--oneline`__: mostra cada _commit_ en una sola línia.
+    - __`--graph`__: mostra l'historial de _commits_ en forma d'arbre.
 
-    - Opció `--stat`: Mostra un resum dels fitxers modificats
-        en el _commit_ en compte de un `diff` complet.
+- __`git show <revision>`__: mostra la informació d'un _commit_ concret.
 
-- `git diff`: Mostra els canvis realitzats en el _Directori de Treball_
-    respecte de l'estat actual del _Repositori Local_.
+    - __`--stat`__: mostra un resum dels fitxers modificats en el _commit_ en lloc del `diff` complet.
 
-- `git diff --staged`: Mostra els canvis de l'_Àrea de Preparació_
-    respecte de l'estat actual del _Repositori Local_.
+- __`git diff`__: mostra els canvis del _Directori de treball_ respecte de l'estat actual
+    del _Repositori local_.
+
+- __`git diff --staged`__: mostra els canvis de l'_Àrea de preparació_ respecte de l'estat actual
+    del _Repositori local_.
 
 
 ### Configuració
-- `core.editor`: Editor de text que utilitzarà Git per algunes ordres,
-    com editar missatges de _commit_.
-- `user.name`: Nom de l'usuari que realitza els _commits_.
-- `user.email`: Correu electrònic de l'usuari que realitza els
-    _commits_.
-- `init.defaultBranch`: Nom de la branca principal per defecte
-    quan s'inicialitza un nou _Repositori Local_ amb `git init`.
+Aquestes són les claus de configuració utilitzades en aquest bloc:
 
-!!! docs
-    [:octicons-link-external-16: 8.1 Customizing Git - Git Configuration](https://git-scm.com/book/be/v2/Customizing-Git-Git-Configuration) - :simple-git: Pro Git Book
+- __`core.editor`__: editor de text que utilitza Git en algunes ordres, com ara per a editar
+    els missatges dels _commits_.
+- __`user.name`__: nom de la persona que fa els _commits_.
+- __`user.email`__: correu electrònic de la persona que fa els _commits_.
+- __`init.defaultBranch`__: nom per defecte de la branca principal quan s'inicialitza
+    un nou _Repositori local_ amb `git init`.
+
+!!! docs "Documentació: [:octicons-link-external-16: 8.1 Customizing Git - Git Configuration](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration) – :simple-git: Pro Git Book"

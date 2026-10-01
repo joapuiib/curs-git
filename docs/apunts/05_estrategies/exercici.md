@@ -6,106 +6,100 @@ alias: estrategies-exercici
 ---
 
 ## Objectius
-Els objectius d'aquest exercici són:
+Aquest exercici permet aplicar una estratègia de ramificació en un projecte. En acabar, has de saber:
 
-- Conéixer les diferents estratègies de ramificació.
-- Conéixer com aplicar les diferents estratègies de ramificació.
-- Identificar els principals avantatges i desavantatges de cada estratègia de ramificació.
-- Identificar i saber solucionar els problemes associats a cada estratègia de ramificació.
+- Distingir les diferents estratègies de ramificació.
+- Aplicar les diferents estratègies de ramificació.
+- Identificar els principals avantatges i inconvenients de cada estratègia de ramificació.
+- Identificar i solucionar els problemes associats a cada estratègia de ramificació.
 
 
 ## Lliurament
-Per a lliurar aquest exercici podeu triar entre una de les següents opcions:
+Per a lliurar aquest exercici, tria una de les opcions següents:
 
 === "Document PDF"
-    Documenteu els passos realitzats en un document de text.
+    Documenta els passos realitzats en un document de text.
 
-    - Cal incloure captures de pantalla amb els passos realitzats
-        i els resultats obtinguts.
+    - Inclou captures de pantalla amb els passos realitzats i els resultats obtinguts.
 
-        > És recomanable mostrar l'estat del repositori amb `git status` o `git lga`
+        > És recomanable mostrar l'estat del repositori amb `git status` o `git lga`.
 
-        > Retalla les captures de pantalla per mostrar sols la informació rellevant.
-    
-    - S'ha de lliurar en format __PDF__.
+        > Retalla les captures de pantalla per mostrar només la informació rellevant.
+
+    - Lliura el document en format __PDF__.
 
 === "Vídeo de la pantalla"
-    Una vegada acabat l'exercici, graveu un vídeo de la pantalla
-    mostrant i explicant els passos realitzats i el resultat final.
+    Una vegada acabat l'exercici, grava un vídeo de la pantalla on mostres i expliques
+    els passos realitzats i el resultat final.
 
-    > No cal que es graveu a vosaltres mateixos, només la pantalla.
+    > No cal que aparegues en el vídeo, només la pantalla.
 
-    !!! important
-        No esborreu les branques de funcionalitat en l'exercici,
-        per poder mostrar-les en el vídeo.
+    - La durada __màxima__ del vídeo és de 10 minuts.
 
-    - La durada __màxima__ del vídeo ha de ser 10 minuts.
+    !!! important "No esborres les branques de funcionalitat durant l'exercici, per a poder mostrar-les en el vídeo."
 
-En qualsevol cas, també cal lliurar la carpeta amb el repositori de Git
-que has creat durant l'exercici de forma comprimida en format `.zip` o `.tgz`.
-        
+En qualsevol cas, lliura també la carpeta amb el repositori de Git que has creat durant l'exercici,
+comprimida en format `.zip` o `.tgz`.
+
 
 ## Enunciat
-Crea un repositori de Git per guardar les teues pel·lícules i sèries preferides.
+Crea un repositori de Git per a guardar les teues pel·lícules i sèries preferides.
 
-Utilitza una estratègia de ramificació per mantindre un ordre en el teu repositori,
-utilitzant les següents branques:
+Per a mantindre l'ordre en el repositori, utilitza una estratègia de ramificació amb les branques següents:
 
-- Branca principal: `main`.
-- Branca de desenvolupament: `develop`.
-- Branques de funcionalitat: `feature/*`.
+- __Branca principal__: `main`.
+- __Branca de desenvolupament__: `develop`.
+- __Branques de funcionalitat__: `feature/*`.
 
-Per integrar les branques de funcionalitat a la branca de desenvolupament,
-has d'utilitzar la tècnica [__merge --squash --ff-only__][merge-squash].
+Per a integrar les branques de funcionalitat en la branca de desenvolupament,
+utilitza la tècnica [__`merge --squash --ff-only`__][merge-squash].
 
 [merge-squash]: estrategies.md#merge-squash-ff-only
 
 ### Tasca
 
-1. Crea un repositori de Git anomenat `git_estrategies_exerici`.
-2. Crea un fitxer `README.md` amb la descripció del teu repositori
-    que desitges.
-3. Crea un primer commit amb el fitxer `README.md`.
+1. Crea un repositori de Git anomenat `bloc5_exercici`.
+2. Crea un fitxer `README.md` amb la descripció que vulgues del teu repositori.
+3. Crea un primer _commit_ amb el fitxer `README.md`.
 4. Crea una branca `develop` a partir de la branca `main`.
-5. Crea les següents branques de funcionalitat:
-
-    !!! note "Modifica `genere-N` per un gènere de pel·lícules o sèries que t'agrade."
+5. Crea les branques de funcionalitat següents:
 
     - `feature/pelicules-genere-1`
     - `feature/pelicules-genere-2`
     - `feature/series-genere-3`
     - `feature/series-genere-4`
 
-6. En cada branca de funcionalitat afegeix tants elements del tipus
-    i amb el gènere de la branca com vulgues.
+    > Substitueix `genere-N` per un gènere de pel·lícules o sèries que t'agrade.
+
+6. En cada branca de funcionalitat, afig tants elements del tipus i del gènere de la branca com vulgues.
 
     === "`feature/pelicules-genere-N`"
-        - Afegeix, com a mínim, dues pel·lícules del gènere triat al fitxer `pelicules.txt`.
+        - Afig, com a mínim, dues pel·lícules del gènere triat al fitxer `pelicules.txt`.
         - Cada pel·lícula ha d'estar en un :octicons-git-commit-16: _commit_ diferent.
 
     === "`feature/series-genere-N`"
-        - Afegeix, com a mínim, dues sèries del gènere triat al fitxer `series.txt`.
-        - Cada sèrie d'estar en un :octicons-git-commit-16: _commit_ diferent.
+        - Afig, com a mínim, dues sèries del gènere triat al fitxer `series.txt`.
+        - Cada sèrie ha d'estar en un :octicons-git-commit-16: _commit_ diferent.
 
-    !!! docs "Mostra l'estat del repositori amb `git lga` amb totes les branques de funcionalitat"
+    !!! docs "Mostra l'estat del repositori amb `git lga` amb totes les branques de funcionalitat."
 
-7. Integra les branques de funcionalitat a la branca `develop`
-    utilitzant la tècnica [__merge --squash --ff-only__][merge-squash].
+7. Integra les branques de funcionalitat en la branca `develop` amb la tècnica
+    [__`merge --squash --ff-only`__][merge-squash].
 
-    !!! notice "Recordeu actualitzar les branques de funcionalitat amb la branca de desenvolupament amb `git merge --no-ff` abans d'integrar-les!"
+    !!! notice "Recorda actualitzar les branques de funcionalitat amb la branca de desenvolupament amb `git merge --no-ff` abans d'integrar-les."
 
-    !!! docs "Mostra l'estat del repositori amb `git lga` després de cada integració"
-        _Abans i després d'esborrar la branca de funcionalitat_.
+    !!! docs "Mostra l'estat del repositori amb `git lga` després de cada integració, abans i després d'esborrar la branca de funcionalitat."
 
-8. Publica els canvis a la branca principal `main`.
+8. Publica els canvis en la branca principal `main`.
 
-    !!! docs "Mostra l'estat del repositori amb `git lga`"
+    !!! docs "Mostra l'estat del repositori amb `git lga`."
 
 ## Estat final
-!!! info "S'han eliminat les branques de funcionalitat"
+En acabar l'exercici, i després d'eliminar les branques de funcionalitat,
+l'històric del repositori ha de tindre una estructura semblant a aquesta:
 
 ```shellconsole
-jpuigcerver@fp:~/bloc5_exercici $ git lga
+jpuigcerver@fp:~/bloc5_exercici (main) $ git lga
 * 2c075dd - (1 second ago) Sèries del gènere 4 - Joan Puigcerver (HEAD -> main, develop)
 * f9152dc - (1 second ago) Sèries del gènere 3 - Joan Puigcerver
 * b7bf0a5 - (2 seconds ago) Pel·lícules del gènere 2 - Joan Puigcerver
@@ -113,19 +107,16 @@ jpuigcerver@fp:~/bloc5_exercici $ git lga
 * ec0e2bd - (5 seconds ago) Commit inicial - Joan Puigcerver
 ```
 
-## Ampliació
+## :material-rocket-launch-outline:{ style="color: var(--md-admonition-color--extension)" } Ampliacions
 
-!!! recommend "Aquesta ampliació no és necessària per superar l'activitat."
+Si has acabat l'exercici, pots aprofundir amb aquesta proposta, que no és necessària per a superar l'activitat:
 
-Repeteix l'exercici utilitzant diferents tècniques
-per integrar les branques de funcionalitat a la branca de desenvolupament.
-
-- [merge --no-ff][merge-no-ff]
-- [rebase + --merge --ff-only][rebase-merge-ff-only]
-- [rebase + --merge --no-ff][rebase-merge-no-ff]
+- Repeteix l'exercici amb altres tècniques per a integrar les branques de funcionalitat
+    en la branca de desenvolupament:
+    [`merge --no-ff`][merge-no-ff], [`rebase` + `merge --ff-only`][rebase-merge-ff-only]
+    i [`rebase` + `merge --no-ff`][rebase-merge-no-ff].
+    Quina tècnica t'agrada més i per què?
 
 [merge-no-ff]: estrategies.md#merge-no-ff
 [rebase-merge-ff-only]: estrategies.md#rebase-merge-ff-only
 [rebase-merge-no-ff]: estrategies.md#rebase-merge-no-ff
-
-Quina és la tècnica que més t'agrada i per què?

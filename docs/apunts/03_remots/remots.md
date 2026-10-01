@@ -19,109 +19,93 @@ tags:
 ---
 
 *[PAT]: Personal Access Token
+*[CI/CD]: Integració contínua i desplegament continu
 
 ## Introducció
-En el blocs anteriors, ens hem centrat en conéixer la seua estructura i
-realitzar accions bàsiques per realitzar canvis sobre aquest.
+En els blocs anteriors, s'ha presentat l'estructura d'un repositori de Git i les accions bàsiques
+per a fer-hi canvis. No obstant això, totes aquestes accions s'han fet sobre un repositori __local__,
+és a dir, un repositori que es troba en el teu dispositiu i els canvis del qual no s'han publicat enlloc.
 
-No obstant això, totes les accions que hem realitzat fins ara han sigut
-sobre un repositori __local__, és a dir, un repositori que es troba en
-el nostre dispositiu i aquests canvis no han segut publicats en cap
-lloc.
-
-En aquest bloc, ens centrarem en la creació de repositoris __remots__;
-repositoris que es troben __allotjats en un servidor__, que permeten
-l'accés a altres usuaris i la col·laboració en el desenvolupament de
-projectes.
+Aquest bloc se centra en els repositoris __remots__: repositoris __allotjats en un servidor__,
+que permeten l'accés d'altres persones i la col·laboració en el desenvolupament de projectes.
 
 ![Estructura d'un repositori local i remot](../01_introduccio/img/components.light.png#only-light)
 ![Estructura d'un repositori local i remot](../01_introduccio/img/components.dark.png#only-dark)
-/// figure-caption
-Estructura d'un repositori local i remot
-///
+/// figure-caption | #figure-components : Estructura d'un repositori local i remot.
 
-??? prep "Preparació repositori local"
-    En aquests apunts treballarem sobre un nou repositori local.
+??? prep "Preparació del repositori local"
+    En aquests apunts es treballa sobre un nou repositori local, que s'inicialitza amb les ordres següents:
 
-    !!! danger
-        Crea el nou repositori __en una carpeta independent__ per evitar
-        problemes amb els exemples i exercicis anteriors.
-
-    __Inicialització:__
     ```bash
     --8<-- "docs/files/remots/stdout/remots/setup_remots.sh"
     ```
+
+    1. Es canvia el nom de la branca principal a `main`.
 
     ```shellconsole
     --8<-- "docs/files/remots/stdout/remots/inicial.txt"
     ```
 
-    1. Canviem el nom de la branca principal a `main`.
+    1. Es canvia el nom de la branca principal a `main`.
 
     ```md title="README.md"
     --8<-- "docs/files/remots/stdout/remots/README.txt"
     ```
 
+    !!! danger "Crea el nou repositori __en una carpeta independent__ per evitar problemes amb els exemples i exercicis anteriors."
+
 
 ## Repositori remot
-Un __Repositori Remot__ és una còpia d'un repositori de Git que es troba allotjat en un servidor
-o en un altre lloc fora del teu propi sistema local.
-Aquesta còpia conté una rèplica completa de la història del repositori,
-incloses totes les revisions i les branques.
-Els repositoris remots permeten la col·laboració i el seguiment del desenvolupament del codi
-entre múltiples persones, o tu mateix en diferents dispositius.
+Un __repositori remot__ és una còpia d'un repositori de Git allotjada en un servidor
+o en un altre lloc fora del teu sistema local. Aquesta còpia conté una rèplica completa
+de la història del repositori, incloses totes les revisions i les branques.
 
-![Repositori remot vinculat a múltiples repositoris locals](img/multiple_local_repo.light.png#only-light)
-![Repositori remot vinculat a múltiples repositoris locals](img/multiple_local_repo.dark.png#only-dark)
-/// figure-caption
-Repositori remot vinculat a múltiples repositoris locals
-///
+Els repositoris remots permeten col·laborar i fer el seguiment del desenvolupament del codi
+entre diverses persones, o bé treballar tu mateix des de diferents dispositius.
 
-Entre les finalitats dels repositoris remots podem trobar:
+![Repositori remot vinculat a diversos repositoris locals](img/multiple_local_repo.light.png#only-light)
+![Repositori remot vinculat a diversos repositoris locals](img/multiple_local_repo.dark.png#only-dark)
+/// figure-caption | #figure-multiple-local-repo : Repositori remot vinculat a diversos repositoris locals.
 
-- __Col·laboració__: Permeten que diversos desenvolupadors treballen junts en un mateix projecte.
-    Cada desenvolupador pot treballar en la seua còpia local del repositori remot i,
-    una vegada fetes les seues modificacions, pot pujar els canvis al repositori remot perquè altres membres
-    de l'equip puguen veure i incorporar aquestes modificacions.
-- __Còpia de seguretat__: Un repositori remot pot servir com a còpia de seguretat del teu projecte.
-    Si el teu sistema local es danya o es perd, encara tindràs accés a la teua història completa
+Les principals finalitats dels repositoris remots són:
+
+- __Col·laboració__: permeten que diverses persones treballen juntes en un mateix projecte.
+    Cada persona treballa en la seua còpia local del repositori i, una vegada fetes les modificacions,
+    puja els canvis al repositori remot perquè la resta de l'equip els puga vore i incorporar.
+- __Còpia de seguretat__: un repositori remot pot servir com a còpia de seguretat del projecte.
+    Si el teu sistema local es danya o es perd, encara tens accés a la història completa
     i als fitxers del projecte mitjançant el repositori remot.
-- __Distribució__: Els repositoris remots permeten distribuir el teu codi a altres llocs.
-    Això pot ser útil per compartir el teu codi amb altres persones
-    o per desplegar el teu projecte en un servidor en línia.
+- __Distribució__: els repositoris remots permeten distribuir el codi a altres llocs,
+    tant per a compartir-lo amb altres persones com per a desplegar el projecte en un servidor en línia.
 
-Gràcies a aquestes característiques, Git s'ha convertit en una eina clau en qualsevol desenvolupament,
-però sobretot en __els projectes de codi obert__ (_open source_), ja que permet la col·laboració
-de desenvolupadors de tot el món en un mateix projecte de manera senzilla i distribuïda.
+Gràcies a aquestes característiques, Git s'ha convertit en una ferramenta clau en qualsevol desenvolupament,
+i sobretot en els __projectes de codi obert__ (_open source_), ja que permet que persones de tot el món
+col·laboren en un mateix projecte de manera senzilla i distribuïda.
 
 ## Allotjament de repositoris remots
 Els repositoris remots es poden allotjar en qualsevol màquina o __servidor dedicat__.
-No obstant això, hi ha serveis d'allotjament de repositoris remots en línia que faciliten la creació
-i la gestió de repositoris remots.
+No obstant això, hi ha serveis en línia que faciliten la creació i la gestió de repositoris remots.
+Alguns dels més coneguts són:
 
-Alguns dels serveis d'allotjament repositoris remots en línia més coneguts són:
-
-- __[:simple-github: GitHub](https://github.com/)__: Servei d'allotjament de repositoris creat en 2008 i adquirit per Microsoft en 2018.
+- __[:simple-github: GitHub](https://github.com/)__: servei creat en 2008 i adquirit per Microsoft en 2018.
     És el servei d'allotjament de repositoris de Git més utilitzat.
+    Ofereix una opció gratuïta, que permet crear projectes públics i privats amb algunes restriccions,
+    i plans de pagament per a projectes empresarials.
 
-    Ofereix una opció gratuïta, que permet crear projectes públics i privats, però amb algunes restriccions.
-    També ofereix plans de pagament per projectes empresarials.
+- __[:simple-gitlab: GitLab](https://gitlab.com/)__: servei d'allotjament basat en una plataforma de codi obert.
 
-- __[:simple-gitlab: GitLab](https://gitlab.com/)__: Servei d'allotjament de repositoris. GitLab és una plataforma de codi obert.
-- __[:simple-bitbucket: Bitbucket](https://bitbucket.org/)__: Servei d'allotjament de repositoris propietat de l'empresa Atlassian,
-    s'integra estretament amb altres eines d'aquesta empresa, com Jira.
-- __[:simple-codeberg: Codeberg](https://codeberg.org/)__: Servei d'allotjament de repositoris gestionat per Codeberg e.V.,
-    una associació sense ànim de lucre alemanya.
+- __[:simple-bitbucket: Bitbucket](https://bitbucket.org/)__: servei propietat de l'empresa Atlassian,
+    que s'integra estretament amb altres ferramentes d'aquesta empresa, com Jira.
 
-    Està basat en el projecte de codi obert [Forgejo](https://forgejo.org/),
-    de manera que la seua interfície i les seues funcionalitats d'automatització
-    resulten molt familiars per a qui ja coneix GitHub.
+- __[:simple-codeberg: Codeberg](https://codeberg.org/)__: servei gestionat per Codeberg e.V.,
+    una associació alemanya sense ànim de lucre. Està basat en el projecte de codi obert
+    [Forgejo](https://forgejo.org/), de manera que la seua interfície i les seues funcionalitats
+    d'automatització resulten molt familiars per a qui ja coneix GitHub.
 
     A diferència de GitHub o Bitbucket, Codeberg no és una empresa amb ànim de lucre:
     es manté amb donacions, tot el seu programari és lliure i totes les característiques
-    (incloent-hi repositoris privats i CI/CD) són gratuïtes.
-    Per aquest motiu, cada vegada més projectes de codi obert opten per allotjar-se a Codeberg
-    com a alternativa a plataformes propietàries.
+    (inclosos els repositoris privats i la CI/CD) són gratuïtes. Per aquest motiu, cada vegada més
+    projectes de codi obert opten per allotjar-se a Codeberg com a alternativa a les plataformes propietàries.
 
 !!! info "Més informació"
     - [:octicons-link-external-16: GitLab vs. GitHub: Which is Better in 2025?](https://prismic.io/blog/gitlab-vs-github#similarities-between-github-and-gitlab) – :simple-prismic: prismic Blog
@@ -131,352 +115,309 @@ Alguns dels serveis d'allotjament repositoris remots en línia més coneguts só
 
 
 ## Creació d'un repositori remot a GitHub
-En aquesta secció, crearem un repositori remot a GitHub.
+Per a publicar un repositori local, primer cal crear el repositori remot.
+A GitHub, es fa seguint aquests passos:
 
-1. Crea un compte a [:simple-github: GitHub](https://github.com/) si no en tens un.
+1. Crea un compte a [:simple-github: GitHub](https://github.com/), si encara no en tens.
 2. Inicia la sessió amb el teu compte.
-3. Fes clic al botó __[:octicons-repo-24: New](https://github.com/new)__ per crear un nou repositori.
-4. Omple el formulari amb la informació del teu repositori:
-    - __Nom__ del repositori. Ha de ser un nom únic en el teu compte de GitHub.
-    - __Descripció__ del repositori. Opcional.
-    - __Visibilitat__ del repositori. Pots triar entre públic o privat.
-        - __:octicons-repo-24: Públic__: Qualsevol persona pot veure el teu repositori. Sols les persones autoritzades poden fer canvis.
-        - __:octicons-lock-24: Privat__: Només tu i les persones que tu autoritzes poden veure el teu repositori. Sols les persones autoritzades poden fer canvis.
-    - __README__: Indica si vols afegir un README al teu repositori.
-    - __.gitignore__: Indica si vols afegir un fitxer `.gitignore` per ignorar fitxers en el teu repositori.
-    - __Llicència__: Indica si vols afegir una llicència al teu repositori.
+3. Fes clic en el botó __[:octicons-repo-24: New](https://github.com/new)__ per a crear un repositori nou.
+4. Omple el formulari amb la informació del repositori:
+    - __Nom__: nom del repositori, que ha de ser únic en el teu compte de GitHub.
+    - __Descripció__: (opcional) descripció del repositori.
+    - __Visibilitat__: indica qui pot vore el repositori.
+        - __:octicons-repo-24: Públic__: qualsevol persona pot vore el repositori,
+            però només les persones autoritzades poden fer-hi canvis.
+        - __:octicons-lock-24: Privat__: només tu i les persones que autoritzes podeu vore el repositori
+            i fer-hi canvis.
+    - __README__: indica si vols afegir un fitxer `README` al repositori.
+    - __.gitignore__: indica si vols afegir un fitxer `.gitignore` per a ignorar fitxers en el repositori.
+    - __Llicència__: indica si vols afegir una llicència al repositori.
 
 ??? example "Exemple: Creació d'un repositori a GitHub"
-    Creem un repositori amb les següents característiques:
+    Es crea un repositori amb les característiques següents:
 
-    - __Nom__: `git_remots`
-    - __Descripció__: Repositori del Bloc: Remots del curs "Introducció a Git i GitHub Actions"
-    - __Visibilitat__: Públic
-    - __README__: No
-    - __.gitignore__: No
-    - __Llicència__: No
+    - __Nom__: `git_remots`.
+    - __Descripció__: _Repositori del Bloc: Remots del curs "Introducció a Git i GitHub Actions"_.
+    - __Visibilitat__: públic.
+    - __README__: no.
+    - __.gitignore__: no.
+    - __Llicència__: no.
 
-    ![Formulari de creació d'un nou repositori a GitHub](img/github_new_repository.png)
-    /// figure-caption
-    Formulari de creació d'un nou repositori a GitHub
-    ///
+    ![Formulari de creació d'un repositori nou a GitHub](img/github_new_repository.png)
+    /// shadow-figure-caption | #figure-github-new-repo : Formulari de creació d'un repositori nou a GitHub.
 
-    Una vegada omplert el formulari, fes clic a __"Create repository"__ per crear el teu repositori.
-
-    El teu repositori s'hauria de crear __buit__ i hauries de veure una pàgina com la següent:
+    Una vegada omplert el formulari, es fa clic en __Create repository__ per a crear el repositori.
+    El repositori es crea __buit__ i es mostra una pàgina com la següent:
 
     ![Repositori buit creat a GitHub](img/github_empty_repository.png)
-    /// figure-caption | #figure-create-github-repo : Repositori buit creat a GitHub
+    /// shadow-figure-caption | #figure-create-github-repo : Repositori buit creat a GitHub.
 
-    La [Figura 3](#figure-create-github-repo) mostra els passos per enllaçar el teu repositori local amb el repositori remot creat a GitHub.
-    En els següents apartats, explicarem aquestes ordres amb més detall.
+    La [Figura 4](#figure-create-github-repo) mostra els passos per a enllaçar el repositori local
+    amb el repositori remot creat a GitHub. Els apartats següents expliquen aquestes ordres amb més detall.
 
 
 ## Configurar un repositori remot (`git remote`)
-El primer pas és enllaçar el teu __Repositori Local__
-amb el __Repositori Remot__ que acabem de crear.
-Per fer-ho, utilitzarem la comanda `git remote`.
+El primer pas és enllaçar el __Repositori local__ amb el __Repositori remot__ que s'acaba de crear.
+Per fer-ho, s'utilitza l'ordre `git remote`, que permet gestionar els repositoris remots
+associats al repositori local:
 
-La comanda `git remote` permet gestionar els repositoris remots
-associats al teu repositori local.
-
-La sintaxi és la següent:
 ```bash
-git remote [add|rename|remove|show] [<options>]
+git remote [add | rename | remove | show] [<options>]
 ```
 
-Aquesta comanda permet realitzar les següents accions:
+- __Sense subordre__: mostra els repositoris remots associats al repositori local.
+- `[add]`: (opcional) afegeix un repositori remot nou.
+- `[rename]`: (opcional) canvia el nom d'un repositori remot.
+- `[remove]`: (opcional) elimina un repositori remot.
+- `[show]`: (opcional) mostra informació detallada d'un repositori remot.
+- `[<options>]`: (opcional) opcions i arguments propis de cada subordre.
 
-- __Sense opcions__: Mostra els repositoris remots associats al teu repositori local.
-- __`add`__: Afegeix un nou repositori remot.
-- __`rename`__: Canvia el nom d'un repositori remot.
-- __`remove`__: Elimina un repositori remot.
-- __`show`__: Mostra informació detallada d'un repositori remot.
-
-Cadascuna d'aquestes opcions té les seues pròpies opcions i arguments.
-
-!!! docs "Documentació oficial de :simple-git: Git"
-    [:octicons-link-external-16: `git remote`](https://git-scm.com/docs/git-remote)
+!!! docs "Documentació oficial: [:octicons-link-external-16: `git remote`](https://git-scm.com/docs/git-remote) – :simple-git: Git"
 
 ### Afegir un repositori remot
-Per afegir un repositori remot, utilitzarem la comanda `git remote add`.
+Per a afegir un repositori remot, s'utilitza l'ordre `git remote add`:
 
-La sintaxi és la següent:
 ```bash
 git remote add <alies> <url>
 ```
 
-- `<alies>`: Nom o àlies del repositori remot en el teu repositori local.
-    Normalment, s'utilitza el nom `origin` per referir-se al repositori remot principal.
+- `<alies>`: nom o àlies amb què s'identifica el repositori remot en el repositori local.
+    Normalment, s'utilitza el nom `origin` per a referir-se al repositori remot principal.
 - `<url>`: URL del repositori remot.
 
-![Repositori Local vinculat amb un Repositori Remot](img/add_remote.light.png#only-light)
-![Repositori Local vinculat amb un Repositori Remot](img/add_remote.dark.png#only-dark)
-/// figure-caption
-Repositori Local vinculat amb un Repositori Remot
-///
+![Repositori local vinculat amb un repositori remot](img/add_remote.light.png#only-light)
+![Repositori local vinculat amb un repositori remot](img/add_remote.dark.png#only-dark)
+/// figure-caption | #figure-add-remote : Repositori local vinculat amb un repositori remot.
 
-!!! warning annotate "Si intentes publicar els canvis amb `git push` abans d'enllaçar cap remot, Git et mostrarà un missatge d'error"
+!!! warning "Si intentes publicar els canvis amb `git push` abans d'enllaçar cap remot, Git mostra un missatge d'error."
     ```shellconsole
     --8<-- "docs/files/remots/stdout/remots/no_remote.txt"
     ```
 
-??? example annotate "Exemple: Afegir un repositori remot"
-    Enllaçarem el nostre repositori local amb el repositori
-    remot creat anteriorment a GitHub.
+??? example "Exemple: Afegir un repositori remot"
+    S'enllaça el repositori local amb el repositori remot creat anteriorment a GitHub,
+    la URL del qual és `git@github.com:joapuiib/git_remots.git`.
 
-    La URL del repositori remot és `git@github.com:jpuigcerver/git_remots.git`.
-    
-    > Utilitzem la URL __SSH__ ja que he decidit utilitzar aquest mètode d'autenticació.
+    > S'utilitza la URL __SSH__ perquè és el mètode d'autenticació configurat.
 
     ```shellconsole
     --8<-- "docs/files/remots/stdout/remots/add_remote.txt"
     ```
 
+    S'observa que el remot `origin` apareix associat a la URL indicada.
+
 
 ### Reanomenar un repositori remot
-L'ordre `git remote rename` permet canviar el nom
-d'un repositori remot associat al teu repositori local.
+L'ordre `git remote rename` permet canviar el nom d'un repositori remot associat al repositori local:
 
-La sintaxi és la següent:
 ```bash
 git remote rename <antic> <nou>
 ```
 
-- `<antic>`: Àlies actual del repositori remot.
-- `<nou>`: Nou àlies del repositori remot.
+- `<antic>`: àlies actual del repositori remot.
+- `<nou>`: nou àlies del repositori remot.
 
 ### Eliminar un repositori remot
-L'ordre `git remote remove` permet eliminar un repositori remot
-associat al teu repositori local.
+L'ordre `git remote remove` permet eliminar un repositori remot associat al repositori local:
 
-La sintaxi és la següent:
 ```bash
 git remote remove <alies>
 ```
 
-- `<alies>`: Àlies del repositori remot a eliminar.
+- `<alies>`: àlies del repositori remot que es vol eliminar.
 
 
 ## Publicació de canvis (`git push`)
-De moment, les branques que hem creat resideixen en el repositori local,
-és a dir, en el nostre dispositiu.
-
-Podem publicar la branca i els seus canvis al repositori remot
-mitjançant l'ordre `git push`.
+De moment, les branques creades només existeixen en el repositori local, és a dir, en el teu dispositiu.
+Per a publicar una branca i els seus canvis en el repositori remot, s'utilitza l'ordre `git push`:
 
 ```bash
-git push [-u|--set-upstream] [<remot> [<branca>]]
+git push [-u | --set-upstream] [<remot> [<branca>]]
 ```
 
-- `-u|--set-upstream`: Configura la branca local perquè utilitze el remot indicat per defecte
-    en futures operacions de `git pull` i `git push`.
-- `<remot>`: Opcional. Àlies del repositori remot. Si no s'especifica, s'utilitza el remot enllaçat prèviament amb `--set-upstream`.
-- `<branca>`: Opcional. Nom de la branca local que es desitja publicar. Si no s'especifica, s'utilitza la branca actual (`HEAD`).
+- `[-u | --set-upstream]`: (opcional) configura la branca local perquè utilitze per defecte
+    el remot indicat en les operacions `git pull` i `git push` futures.
+- `[<remot>]`: (opcional) àlies del repositori remot.
+    Si no s'especifica, s'utilitza el remot associat prèviament amb `--set-upstream`.
+- `[<branca>]`: (opcional) nom de la branca local que es vol publicar.
+    Si no s'especifica, s'utilitza la branca actual (`HEAD`).
 
-!!! docs "Documentació oficial de :simple-git: Git"
-    [:octicons-link-external-16: `git push`](https://git-scm.com/docs/git-push)
+!!! docs "Documentació oficial: [:octicons-link-external-16: `git push`](https://git-scm.com/docs/git-push) – :simple-git: Git"
 
-![Publicació d'una branca local a una branca remota](img/push.light.png#only-light)
-![Publicació d'una branca local a una branca remota](img/push.dark.png#only-dark)
-/// figure-caption
-Publicació d'una branca local a una branca remota
-///
+![Publicació d'una branca local en una branca remota](img/push.light.png#only-light)
+![Publicació d'una branca local en una branca remota](img/push.dark.png#only-dark)
+/// figure-caption | #figure-push : Publicació d'una branca local en una branca remota.
 
-??? example "Exemple: Publicació i associació branca local i remota"
-    Vegem que inicialment la branca `main` no està associada a cap branca remota.
-
-    Si intentem fer un `git push`, ens mostrarà un missatge d'error com que
-    hem d'anar associar una branca remota.
+??? example "Exemple: Publicació i associació de la branca local i la remota"
+    Inicialment, la branca `main` no està associada a cap branca remota.
+    Per això, si s'executa `git push`, es mostra un missatge d'error que indica
+    que cal associar-hi una branca remota.
 
     ```shellconsole
     --8<-- "docs/files/remots/stdout/remots/push_no_upstream.txt"
     ```
 
-    Associem les branques `main` local i remota amb l'ordre `git push --set-upstream`.
-
-    Localment, s'ha creat la referència `origin/main` que apunta a la branca remota `main`.
-
+    A continuació, s'associen la branca `main` local i la remota amb l'ordre `git push --set-upstream`.
 
     ```shellconsole
     --8<-- "docs/files/remots/stdout/remots/push_upstream.txt"
     ```
 
-    Vegem que els canvis s'han publicat correctament al repositori remot:
+    S'observa que localment s'ha creat la referència `origin/main`, que apunta a la branca remota `main`.
+    A més, els canvis s'han publicat correctament en el repositori remot:
 
     ![Canvis publicats a GitHub](img/github_push.png)
-    /// figure-caption | ^1 .shadow : Canvis publicats a :material-github: GitHub
+    /// figure-caption | ^1 .shadow : Canvis publicats a :simple-github: GitHub.
 
 
 ### Associació d'un remot per defecte
-A les branques locals es pot associar un remot per defecte
-mitjançant l'opció `-u` o `--set-upstream` de la comanda `git push`.
+Cada branca local es pot associar a un remot per defecte mitjançant l'opció `-u` o `--set-upstream`
+de l'ordre `git push`:
 
+```bash
+git push -u <remot> <branca>
 ```
-git push [-u | --set-upstream] <remot> <branca>
-```
 
-Aquesta associació li permet a Git saber sobre quin remot
-ha de realitzar les operacions quan no s'especifica explícitament,
-com ara `git pull` o `git push`.
+Aquesta associació permet a Git saber sobre quin remot ha de fer les operacions,
+com ara `git pull` o `git push`, quan no s'especifica explícitament.
 
-!!! tip "Pots configurar git perquè configure automàticament la branca local perquè s'associe amb la branca remota amb el mateix nom amb l'opció `push.autoSetupRemote`."
+!!! tip "L'opció `push.autoSetupRemote` fa que cada branca local s'associe automàticament amb la branca remota del mateix nom."
     ```bash
     git config --global push.autoSetupRemote true
     ```
 
-L'associació d'una branca local pot ser eliminada
-mitjançant l'ordre `git branch --unset-upstream`.
+L'associació d'una branca local es pot eliminar amb l'ordre `git branch --unset-upstream`:
 
 ```bash
 git branch --unset-upstream [<branca>]
 ```
 
+- `[<branca>]`: (opcional) branca de la qual es vol eliminar l'associació.
+    Si no s'especifica, s'utilitza la branca actual.
+
 
 ## Clonació d'un repositori remot (`git clone`)
-L'ordre `git clone` permet copiar un repositori remot a un repositori local en el teu sistema,
-des del qual podràs realitzar canvis.
+L'ordre `git clone` copia un repositori remot en un repositori local del teu sistema,
+des del qual pots fer canvis.
 
-Aquesta ordre còpia els continguts del _Directori de Treball_ i tota la informació del _Repositori Local_,
-incloent la història de canvis. A més, configura automàticament el repositori remot com a `origin`.
+Aquesta ordre copia els continguts del _Directori de treball_ i tota la informació del _Repositori local_,
+inclosa la història de canvis. A més, configura automàticament el repositori remot amb l'àlies `origin`.
 
 La sintaxi és la següent:
+
 ```bash
 git clone <url> [<directori>]
 ```
 
 - `<url>`: URL del repositori remot. Pot ser una URL HTTPS o SSH.
-- `<directori>`: Opcional. Nom del directori on es copiarà el repositori. Per defecte, es crea un directori amb
-    el nom del repositori remot.
+- `[<directori>]`: (opcional) nom del directori on es copia el repositori.
+    Per defecte, es crea un directori amb el nom del repositori remot.
+
+!!! docs "Documentació oficial: [:octicons-link-external-16: `git clone`](https://git-scm.com/docs/git-clone) – :simple-git: Git"
 
 ![Clonació d'un repositori remot](img/clone.light.png#only-light)
 ![Clonació d'un repositori remot](img/clone.dark.png#only-dark)
-/// figure-caption
-Clonació d'un repositori remot
-///
+/// figure-caption | #figure-clone : Clonació d'un repositori remot.
 
 ??? example "Exemple: Clonació d'un repositori remot"
-    Com que ja tenim els canvis publicats al repositori remot,
-    podem clonar el repositori remot al nostre sistema local.
-
-    Esborrem el directori `git_remots` i el clonarem des del repositori remot.
-
+    Com que els canvis ja estan publicats en el repositori remot, es pot clonar en el sistema local.
+    Per comprovar-ho, s'esborra el directori `git_remots` i es clona des del repositori remot.
 
     ```shellconsole
     --8<-- "docs/files/remots/stdout/remots/clone.txt"
     ```
 
-    S'observa que s'ha clonat correctament el repositori remot `git_remots`
+    S'observa que s'ha clonat correctament el repositori `git_remots`,
     que conté els fitxers i la història de canvis del repositori remot.
 
 
 ## Sincronització entre repositoris (`git fetch`)
-
-
-L'ordre `git fetch` actualitza la informació de les branques remotes `origin/<branca>`
-al nostre repositori local, però no aplica els canvis a les nostres branques locals.
+L'ordre `git fetch` actualitza en el repositori local la informació de les branques remotes
+(`origin/<branca>`), però no aplica els canvis a les branques locals:
 
 ```bash
 git fetch [<options>] [<remot>]
 ```
 
-- `<options>`: Opcions de la comanda.
-- `<remot>`: Àlies del repositori remot. Per defecte, s'utilitza `origin`.
+- `[<options>]`: (opcional) opcions de l'ordre.
+- `[<remot>]`: (opcional) àlies del repositori remot. Per defecte, s'utilitza `origin`.
+
+!!! docs "Documentació oficial: [:octicons-link-external-16: `git fetch`](https://git-scm.com/docs/git-fetch) – :simple-git: Git"
 
 ![Sincronització entre repositoris amb git fetch](img/fetch.light.png#only-light)
 ![Sincronització entre repositoris amb git fetch](img/fetch.dark.png#only-dark)
-/// figure-caption
-Sincronització entre repositoris amb `git fetch`
-///
+/// figure-caption | #figure-fetch : Sincronització entre repositoris amb `git fetch`.
 
+Aquesta ordre és útil per a obtindre la informació dels canvis realitzats en el repositori remot
+i decidir després si es volen incorporar al repositori local.
 
-Aquesta ordre és útil per obtindre la informació dels canvis realitzats en el repositori remot
-i decidir si volem incorporar-los al nostre repositori local.
-
-!!! docs "Documentació oficial de :simple-git: Git"
-    [:octicons-link-external-16: `git fetch`](https://git-scm.com/docs/git-fetch)
-
-!!! info "L'opció `--prune` permet eliminar les referències de les branques remotes que ja no existeixen en el repositori remot."
-    Aquesta opció pot ser configurada per defecte amb la comanda `git config`.
+!!! info "L'opció `--prune` elimina les referències de les branques remotes que ja no existeixen en el repositori remot."
+    Aquesta opció es pot activar per defecte amb l'ordre `git config`:
 
     ```bash
     git config --global fetch.prune true
     ```
 
-    També es pot configurar perquè aquesta opció s'aplique en la comanda `git pull`.
+    També es pot configurar perquè s'aplique en l'ordre `git pull`:
 
     ```bash
     git config --global remote.origin.prune true
     ```
 
 ??? prep "Preparació: Canvis en el repositori remot"
-    Anem a realitzar un canvi en el repositori remot directament a :material-github: GitHub.
+    Es fa un canvi en el repositori remot directament a :simple-github: GitHub.
 
-    1. Creem un fitxer `menjar.txt` amb el contingut:
+    1. Es crea un fitxer `menjar.txt` amb el contingut següent:
 
-        ```plaintext title="menjar.txt"
+        ```text title="menjar.txt"
         Pa
         Macarrons
         ```
 
-    ![Crear un nou fitxer a GitHub](img/github_create_new_file.png)
-    /// figure-caption | ^1
-    Crear un nou fitxer a :material-github: GitHub
-    ///
+        ![Crear un fitxer nou a GitHub](img/github_create_new_file.png)
+        /// figure-caption | ^1 .shadow : Crear un fitxer nou a :simple-github: GitHub.
 
-    ![Afegir contingut a un fitxer en GitHub](img/github_create_menjar.png)
-    /// figure-caption | ^1
-    Afegir contingut a `menjar.txt` en :material-github: GitHub
-    ///
+        ![Afegir contingut a un fitxer a GitHub](img/github_create_menjar.png)
+        /// figure-caption | ^1 .shadow : Afegir contingut a `menjar.txt` a :simple-github: GitHub.
 
-    2. Creem un _commit_ amb el missatge __Menjar__.
+    2. Es crea un _commit_ amb el missatge __Menjar__.
 
-    ![Crear un commit a GitHub](img/github_commit_menjar.png)
-    /// figure-caption | ^1
-    Crear un commit a :material-github: GitHub
-    ///
+        ![Crear un commit a GitHub](img/github_commit_menjar.png)
+        /// figure-caption | ^1 .shadow : Crear un _commit_ a :simple-github: GitHub.
 
-    3. Comprovem que el canvi s'ha realitzat correctament.
+    3. Es comprova que el canvi s'ha fet correctament.
 
-    ![Canvi realitzat a GitHub](img/github_after_commit_menjar.png)
-    /// figure-caption | ^1
-    Canvi realitzat a :material-github: GitHub
-    ///
+        ![Canvi realitzat a GitHub](img/github_after_commit_menjar.png)
+        /// figure-caption | ^1 .shadow : Canvi realitzat a :simple-github: GitHub.
 
 
 ??? example "Exemple: Sincronització entre repositoris (`fetch`)"
-    En aquest moment, s'ha realitzat un canvi en el repositori remot,
-    que no figura en el nostre repositori local.
+    En aquest moment, el repositori remot té un canvi que no figura en el repositori local.
 
     ```shellconsole
     --8<-- "docs/files/remots/stdout/remots/before_fetch.txt"
     ```
 
-    Sincronitzem el repositori local amb el repositori remot,
-    que conté els nous canvis realitzats.
-    
+    Es sincronitza el repositori local amb el repositori remot, que conté els canvis nous.
+
     ```shellconsole
     --8<-- "docs/files/remots/stdout/remots/after_fetch.txt"
     ```
 
-    S'observa que la branca `origin/main` s'ha actualitzat amb el nou canvi,
+    S'observa que la branca `origin/main` s'ha actualitzat amb el canvi nou,
     però la branca local `main` no s'ha modificat.
 
 
 ## Incorporació de canvis (`git pull`)
-Per incorporar els canvis d'una branca remota a la branca local,
-utilitzarem l'ordre `git pull`.
+Per a incorporar els canvis d'una branca remota en la branca local, s'utilitza l'ordre `git pull`,
+que fa dues accions:
 
-Aquesta ordre realitza dos accions:
-
-- `git fetch`: Actualitza la informació de les branques remotes al nostre repositori local.
-- `git merge origin/<branca>`: Incorpora els canvis de la branca remota a la branca local.
+1. __`git fetch`__: actualitza en el repositori local la informació de les branques remotes.
+2. __`git merge origin/<branca>`__: incorpora els canvis de la branca remota en la branca local.
 
 ![Incorporació de canvis amb git pull](img/pull.light.png#only-light)
 ![Incorporació de canvis amb git pull](img/pull.dark.png#only-dark)
-/// figure-caption
-Incorporació de canvis amb `git pull`
-///
+/// figure-caption | #figure-pull : Incorporació de canvis amb `git pull`.
 
 La sintaxi és:
 
@@ -484,129 +425,120 @@ La sintaxi és:
 git pull [<options>] [<remot> [<branca>]]
 ```
 
-- `<options>`: Opcions de la comanda.
-- `<remot>`: Àlies del repositori remot. Per defecte, s'utilitza el [remot associat][associada] a la branca actual.
-- `<branca>`: Nom de la branca remota. Per defecte, s'utilitza el [remot associat][associada] a la branca actual.
+- `[<options>]`: (opcional) opcions de l'ordre.
+- `[<remot>]`: (opcional) àlies del repositori remot.
+    Per defecte, s'utilitza el [remot associat][associada] a la branca actual.
+- `[<branca>]`: (opcional) nom de la branca remota.
+    Per defecte, s'utilitza la branca remota [associada][associada] a la branca actual.
 
 [associada]: #associacio-dun-remot-per-defecte
 
-!!! docs "Documentació oficial de :simple-git: Git"
-    [:octicons-link-external-16: `git pull`](https://git-scm.com/docs/git-pull)
+!!! docs "Documentació oficial: [:octicons-link-external-16: `git pull`](https://git-scm.com/docs/git-pull) – :simple-git: Git"
 
-!!! warning " La fusió (`merge`) implícita de `git pull` pot ser una [[branques#fusio-directa]] o es pot produir una [[branques#fusio-de-branques-divergents]] si la branca local i la branca remota divergeixen."
+!!! warning "La fusió (`merge`) implícita de `git pull` pot ser una [[branques#fusio-directa]] o una [[branques#fusio-de-branques-divergents]], si la branca local i la remota han divergit."
     En el cas d'una fusió de branques divergents:
 
-    - __Poden produir conflictes__. Si es produeixen, caldrà resoldre'ls manualment.
-    - Executar directament `git pull` __generarà un commit de fusió__,
-        que pot ser no és desitjable si es vol mantenir __una història lineal__.
-    
-!!! tip "Per evitar __la fusió de branques divergents__ en `git pull`, es pot fer el següent:"
-    - `git pull --ff-only`: Incorpora els canvis de la branca remota
+    - __Es poden produir conflictes__, que cal resoldre manualment.
+    - Executar directament `git pull` __genera un _commit_ de fusió__,
+        que potser no és desitjable si es vol mantindre __una història lineal__.
+
+!!! tip "Per a evitar __la fusió de branques divergents__ en `git pull`, hi ha dues opcions:"
+    - __`git pull --ff-only`__: incorpora els canvis de la branca remota
         __només si es pot fer una fusió directa (_fast-forward_)__.
+        Si no és possible, es mostra un error i no s'incorporen els canvis en la branca local.
 
-        Si no és possible, es produirà un error i no s'incorporaran els canvis a la branca local.
+        Aquest comportament es pot configurar per defecte:
 
-        A més, Git pot ser configurat perquè incloga aquesta opció en la comanda `git pull`.
-
-        ```
+        ```bash
         git config --global pull.ff only
         ```
 
-    - `git pull --rebase`: Incorpora els canvis de la branca remota
-        mitjançant un `rebase`, és a dir, aplica els canvis de la branca local
-        després dels canvis de la branca remota.
+    - __`git pull --rebase`__: incorpora els canvis de la branca remota mitjançant un canvi de base (`rebase`),
+        és a dir, aplica els canvis de la branca local després dels canvis de la branca remota.
         { #git-pull-rebase }
 
-        Aquest comportament també es pot configurar per defecte en la comanda `git pull`.
+        Aquest comportament també es pot configurar per defecte:
 
-        ```
+        ```bash
         git config --global pull.rebase true
         ```
 
-??? example "Exemple: Incorporació de canvis fusió directa (`pull --ff-only`)"
-    Vegem com el commit `1b3b4b0` forma part de la branca remota `origin/main`,
-    però no de la branca local `main`.
+??? example "Exemple: Incorporació de canvis amb fusió directa (`pull --ff-only`)"
+    El _commit_ `8594cb9` forma part de la branca remota `origin/main`, però no de la branca local `main`.
 
     ```shellconsole
     --8<-- "docs/files/remots/stdout/remots/before_pull_ff.txt"
     ```
 
-    Incorporem els canvis de la branca remota `origin/main` a la branca local `main`.
+    S'incorporen els canvis de la branca remota `origin/main` en la branca local `main`.
 
     ```shellconsole
     --8<-- "docs/files/remots/stdout/remots/after_pull_ff.txt"
     ```
 
+    S'observa que la branca local `main` ha avançat fins al mateix _commit_ que `origin/main`.
+
 ??? prep "Preparació: Més canvis en el repositori remot"
-    Realitza els següents canvis en el repositori remot directament a :material-github: GitHub.
+    Fes els canvis següents en el repositori remot directament a :simple-github: GitHub.
 
-    - Modifica el fitxer `menjar.txt` amb el següent contingut:
+    1. Modifica el fitxer `menjar.txt` amb el contingut següent:
 
-        ```plaintext title="menjar.txt"
+        ```text title="menjar.txt"
         Pa
         Macarrons
         Pomes
         ```
 
-    - Crea un _commit_ amb el missatge __Més menjar__.
+    2. Crea un _commit_ amb el missatge __Més menjar__.
 
-??? example annotate "Exemple: Incorporació de canvis amb fusió de branques divergents (`pull --no-ff` i `pull --rebase`)"
+??? example "Exemple: Incorporació de canvis amb fusió de branques divergents (`pull --no-ff` i `pull --rebase`)"
+    Una de les situacions més habituals en què la branca local divergeix de la remota és
+    fer canvis en la branca local sense haver-la sincronitzat abans amb la branca remota associada.
 
-    Una de les situacions més comunes que ens porten a que la branca local divergisca de la branca remota és
-    quan realitzem canvis sobre la branca local sense haver sincronitzat abans el seu estat amb la branca remota associada.
-
-    En aquest cas, s'ha realitzat un altre canvi en el repositori remot,
-    que nosaltres no hem incorporat.
-
-    No obstant això, anem a fer un canvi a la branca local `main`,
-    simulant la situació anteriorment descrita.
+    En aquest cas, s'ha fet un altre canvi en el repositori remot que encara no s'ha incorporat.
+    Per a simular la situació anterior, es fa un canvi en la branca local `main`.
 
     ```shellconsole
     --8<-- "docs/files/remots/stdout/remots/prepare_local_pull_no_ff.txt"
     ```
 
-    1. El canvi __Més menjar__ no està reflectit en la branca remota `origin/main`
-    perquè no hem sincronitzat el nostre repositori local amb el repositori remot.
+    1. El canvi __Més menjar__ no apareix en la branca remota `origin/main`
+        perquè no s'ha sincronitzat el repositori local amb el repositori remot.
 
-
-    En aquest moment, podríem intentar publicar aquest canvi al repositori remot,
-    però com que el repositori remot té canvis que no estan reflectits en el nostre repositori local,
-    Git ens mostrarà un missatge d'error.
+    Si ara s'intenta publicar aquest canvi en el repositori remot, Git mostra un missatge d'error,
+    perquè el repositori remot té canvis que no estan en el repositori local.
 
     ```shellconsole
     --8<-- "docs/files/remots/stdout/remots/pull_no_ff_push_error.txt"
     ```
 
-    Vegem que l'ordre `git push` ens recomana fer un `git pull` per incorporar els canvis,
+    S'observa que `git push` recomana fer un `git pull` per a incorporar els canvis,
     ja que les dues branques __han divergit__.
+    No obstant això, `git pull` faria una fusió de branques divergents, que crearia un _commit_ de fusió
+    i donaria com a resultat una història no lineal.
 
-    Si executem `git pull`, es produirà una fusió de branques divergents, que crearà un commit de fusió
-    i resultarà en una història no lineal.
-
-    Vegem que no podem incorporar els canvis amb una fusió directa `git pull --ff-only`.
+    Tampoc no es poden incorporar els canvis amb una fusió directa (`git pull --ff-only`):
 
     ```shellconsole
     --8<-- "docs/files/remots/stdout/remots/pull_ff_only_error.txt"
     ```
 
-    En aquest cas, haurem d'incorporar els canvis de dues maneres diferents.
+    Per tant, els canvis s'han d'incorporar d'alguna de les dues maneres següents:
 
-    !!! warning "Un _commit_ de fusió: `git pull --no-ff`."
-        Aquest és el procés que seguirà `git pull` si no
-        indiquem cap opció addicional.
-
-        En aquest cas crearà un commit de fusió,
-        que no és desitjable si es vol mantenir una història lineal.
+    !!! warning "Amb un _commit_ de fusió: `git pull --no-ff`."
+        És el procés que segueix `git pull` si no s'indica cap opció addicional.
+        Crea un _commit_ de fusió, que no és desitjable si es vol mantindre una història lineal.
 
         ```shellconsole
         --8<-- "docs/files/remots/stdout/remots/pull_no_ff.txt"
         ```
 
-        1. L'opció `--no-edit` indica que no volem editar el missatge de commit de fusió i deixem el missatge per defecte.
+        1. L'opció `--no-edit` indica que no es vol editar el missatge del _commit_ de fusió
+            i que es manté el missatge per defecte.
 
-    !!! recommend "Un canvi de base: `git pull --rebase`."
+    !!! recommend "Amb un canvi de base: `git pull --rebase`."
         Aquesta opció aplica els canvis de la branca local després dels canvis de la branca remota,
-        mantenint una història lineal.
+        de manera que es manté una història lineal.
 
         ```shellconsole
         --8<-- "docs/files/remots/stdout/remots/pull_rebase.txt"

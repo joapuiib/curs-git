@@ -10,28 +10,30 @@ tags:
 ---
 
 ## Preparació de l'entorn
-En aquesta secció, veurem com instal·lar i configurar les eines necessàries
-per a treballar amb :material-git: Git i :material-microsoft-visual-studio-code: Visual Studio Code.
+En aquesta secció s'explica com instal·lar i configurar les ferramentes necessàries
+per a treballar amb :simple-git: Git i :material-microsoft-visual-studio-code: Visual Studio Code.
 
 ## Per què la terminal?
-En aquest curs, utilitzarem la terminal per a interactuar amb Git, però això no significa que siga l'única manera de fer-ho.
-De fet, pràcticament tots els entorns de desenvolupament moderns tenen integració amb Git, la qual cosa permet realitzar
-les mateixes operacions que proporciona la terminal, però de manera més visual i intuïtiva.
+En aquest curs s'utilitza la terminal per a interactuar amb Git, però no és l'única manera de fer-ho.
+De fet, pràcticament tots els entorns de desenvolupament moderns tenen integració amb Git,
+que permet fer les mateixes operacions que la terminal de manera més visual i intuïtiva.
 
-No obstant això, és important conéixer com funcionen les comandes de Git en la terminal, per diferents raons:
+No obstant això, és important conéixer com funcionen les ordres de Git en la terminal per diferents raons:
 
-- __Portabilitat__: La terminal és un entorn comú en tots els sistemes operatius i en qualsevol entorn de desenvolupament.
-- __Flexibilitat__: La terminal permet realitzar operacions més avançades i personalitzades que les interfícies gràfiques.
-- __Comprensió__: Permet entendre com funcionen les comandes de Git i els processos que realitza en el sistema.
+- __Portabilitat__: la terminal és un entorn comú en tots els sistemes operatius i entorns de desenvolupament.
+- __Flexibilitat__: la terminal permet fer operacions més avançades i personalitzades que les interfícies gràfiques.
+- __Comprensió__: treballar amb les ordres ajuda a entendre com funciona Git i quins processos fa internament.
 
 
-## Instal·lació de :material-git: Git
-Git està disponible a [la pàgina oficial][git] per a
+## Instal·lació de :simple-git: Git
+Git està disponible en [la pàgina oficial][git] per a
 :material-microsoft-windows: Windows, :simple-linux: Linux i :simple-apple: macOS.
+La instal·lació depén del sistema operatiu:
 
 [git]: https://git-scm.com/
 
 === ":simple-ubuntu: Ubuntu"
+    Git s'instal·la des del gestor de paquets del sistema:
 
     ```bash
     sudo apt update
@@ -39,64 +41,50 @@ Git està disponible a [la pàgina oficial][git] per a
     ```
 
 === ":material-microsoft-windows: Windows"
-
     [Descarrega][git] i executa l'instal·lador de Git.
 
-    Una vegada instal·lat, pots utilitzar la consola __Git Bash__.
-    És una terminal basada l'intèrpret __Bash__, que et permetrà
-    realitzar les comandes de Git en la consola.
+    Una vegada instal·lat, es pot utilitzar la consola __Git Bash__, una terminal basada
+    en l'intèrpret __Bash__ que permet executar les ordres de Git.
 
 ### Configuració inicial
-Git utilitza un editor de text per a realitzar certes operacions,
-com ara escriure missatges de commit.
+Git utilitza un editor de text per a algunes operacions, com ara escriure els missatges dels _commits_.
 
-Per defecte, Git utilitza l'editor [:simple-vim: ViM](https://www.vim.org/),
-un editor de text per terminal molt potent, però difícil i poc intuïtiu
-per treballar.
-
-Si desitgeu canviar l'editor per defecte, podeu utilitzar
-la següent comanda des de la consola:
+Per defecte, Git utilitza l'editor [:simple-vim: ViM](https://www.vim.org/), un editor de text per terminal
+molt potent, però difícil i poc intuïtiu si no s'hi està acostumat. Per això, és recomanable canviar
+l'editor per defecte amb l'ordre següent:
 
 ```bash
 git config --global core.editor <editor>
 ```
 
-!!! tip "Editors de text"
-
+??? tip "Editors de text"
     === ":material-asterisk: Multiplataforma"
-
         - [:material-microsoft-visual-studio-code: Visual Studio Code](https://code.visualstudio.com/)
-            - [:octicons-link-external-16: How to use Visual Studio Code as default editor for git?](https://stackoverflow.com/questions/30024353/how-to-use-visual-studio-code-as-default-editor-for-git) – :simple-stackoverflow: StackOverflow
+            ([:octicons-link-external-16: How to use Visual Studio Code as default editor for git?](https://stackoverflow.com/questions/30024353/how-to-use-visual-studio-code-as-default-editor-for-git)
+            – :simple-stackoverflow: StackOverflow).
 
-        ```
+        ```bash
         git config --global core.editor "code --wait"
         ```
 
     === ":material-microsoft-windows: Windows"
+        - __`notepad`__: editor instal·lat per defecte.
+        - __[:simple-notepadplusplus: Notepad++](https://notepad-plus-plus.org/)__: editor de text lleuger amb més funcionalitats.
 
-        - `notepad`. Ve instal·lat per defecte.
-        - [:simple-notepadplusplus: Notepad++.](https://notepad-plus-plus.org/)
-
-        ```
+        ```bash
         git config --global core.editor notepad
         ```
 
     === ":simple-linux: Linux"
+        - __`gedit`__: editor instal·lat per defecte en Ubuntu.
+        - __`nano`__: editor de text bàsic per terminal.
+        - __`vim`__: editor de text avançat per terminal. Per guardar s'utilitza `:w` i per eixir, `:q`.
 
-        - `gedit`. Ve instal·lat per defecte en Ubuntu.
-        - `nano`. Editor de text bàsic per terminal.
-        - `vim`. Editor de text avançat per terminal.
-            - `:w` per guardar.
-            - `:q` per eixir.
-
-        ```
+        ```bash
         git config --global core.editor nano
         ```
 
-!!! recommend
-    Com que utilitzarem :material-microsoft-visual-studio-code: Visual Studio Code com a editor de text,
-    vos recomane que l'utilitzeu també com a editor per a Git.
-
+!!! recommend "Com que en el curs s'utilitza :material-microsoft-visual-studio-code: Visual Studio Code com a editor, et recomane configurar-lo també com a editor de Git."
     ```bash
     git config --global core.editor "code --wait"
     ```
@@ -106,97 +94,71 @@ git config --global core.editor <editor>
 [:material-microsoft-visual-studio-code: Visual Studio Code](https://code.visualstudio.com/)
 és un editor de text gratuït i de codi obert desenvolupat per :material-microsoft: Microsoft.
 
-És un editor molt popular entre els desenvolupadors per la seua lleugeresa, rendiment i gran quantitat d'extensions disponibles,
-que permeten personalitzar-lo per a qualsevol llenguatge de programació.
+És un editor molt popular en el món del desenvolupament per la seua lleugeresa, el seu rendiment
+i la gran quantitat d'extensions disponibles, que permeten adaptar-lo a qualsevol llenguatge de programació.
 
 Per a instal·lar-lo, descarrega'l des de la seua pàgina web i executa l'instal·lador.
 
 ### Configuració
-Anem a realitzar algunes configuracions bàsiques per a treballar amb Git en Visual Studio Code.
+A continuació, es configuren alguns aspectes bàsics per a treballar amb Git en Visual Studio Code.
 
 #### Integració amb la terminal
 :material-microsoft-visual-studio-code: Visual Studio Code permet obrir una terminal integrada
-en la part inferior de la finestra, la qual cosa facilita la seua utilització sense haver de canviar
-de finestra.
+en la part inferior de la finestra. Així, es pot utilitzar la terminal sense haver de canviar de finestra.
 
-Es pot obrir la terminal mitjançant el menú __Terminal__ > __New Terminal__.
+La terminal s'obri des del menú __Terminal__ > __New Terminal__.
 
+!!! tip "En :material-microsoft-windows: Windows, la terminal integrada utilitza :material-powershell: PowerShell per defecte."
+    Es pot seleccionar Git Bash des del
+    [:octicons-link-external-16: menú desplegable de la terminal](https://code.visualstudio.com/docs/terminal/basics#_terminal-shells),
+    on també es pot configurar com a opció predeterminada.
 
-!!! tip
-    En sistemes :material-microsoft-windows: Windows,
-    la terminal integrada utilitza :material-powershell: PowerShell per defecte.
-
-    Podeu seleccionar Git Bash des del [:octicons-link-external-16: menú desplegable de la terminal](https://code.visualstudio.com/docs/terminal/basics#_terminal-shells),
-    on també podeu configurar que aquesta opció siga la predeterminada.
-
-    ![Menú desplegable de la terminal](img/vscode_terminal.png)
-    /// attribution
-    [Documentació oficial de :material-microsoft-visual-studio-code: Visual Studio Code](https://code.visualstudio.com/docs/terminal/basics#_terminal-shells)
-    ///
-    /// figure-caption
-    Menú desplegable de la terminal en :material-microsoft-visual-studio-code: Visual Studio Code.
-    ///
+    ![Menú desplegable de la terminal en Visual Studio Code](img/vscode_terminal.png)
+    /// attribution: [Documentació oficial de :material-microsoft-visual-studio-code: Visual Studio Code](https://code.visualstudio.com/docs/terminal/basics#_terminal-shells)
+    /// shadow-figure-caption | #figure-vscode-terminal : Menú desplegable de la terminal en :material-microsoft-visual-studio-code: Visual Studio Code.
 
 #### Extensió Git Graph
-Per a visualitzar la història dels commits de manera gràfica,
-podeu instal·lar l'extensió [__Git Graph__](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
+Per a visualitzar la història dels _commits_ de manera gràfica, es pot instal·lar l'extensió
+[__Git Graph__](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
 des de l'apartat d'extensions de Visual Studio Code.
 
 ![Demostració de l'extensió Git Graph](img/git_graph_demo.gif)
-/// attribution
-[Extensió Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
-///
-/// figure-caption
-Demostració de l'extensió Git Graph
-///
+/// attribution: [Extensió Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
+/// shadow-figure-caption | #figure-git-graph-demo : Demostració de l'extensió Git Graph.
 
-Una vegada instal·lada, podeu accedir a la vista gràfica de
-la història de commits des del botó __Git Graph__ en la barra inferior esquerra de l'editor.
+Una vegada instal·lada, la vista gràfica de la història de _commits_ s'obri des del botó __Git Graph__
+de la barra inferior esquerra de l'editor.
 
-!!! warning
-    El botó __Git Graph__ sols està visible si has obert un directori
-    amb un __repositori de :simple-git: Git__.
+!!! warning "El botó __Git Graph__ només és visible si s'ha obert un directori amb un __repositori de :simple-git: Git__."
 
-![Botó Git Graph](img/git_graph.png)
-/// figure-caption
-Botó Git Graph en :material-microsoft-visual-studio-code: Visual Studio Code.
-///
+![Botó Git Graph en Visual Studio Code](img/git_graph.png)
+/// shadow-figure-caption | #figure-git-graph : Botó Git Graph en :material-microsoft-visual-studio-code: Visual Studio Code.
 
 
 
-## Configuració del prompt de la terminal per treballar amb Git
-La terminal __Git Bash__ defineix un prompt que incorpora informació
-molt útil sobre l'estat del repositori de Git, com ara la branca activa
-o l'estat del repositori en alguns processos (`MERGING`, `REBASING`, etc.).
+## Configuració del _prompt_ de la terminal
+La terminal __Git Bash__ defineix un _prompt_ que incorpora informació molt útil sobre l'estat
+del repositori de Git, com ara la branca activa o l'estat del repositori durant alguns processos
+(`MERGING`, `REBASING`, etc.).
 
-No obstant això, si utilitzem la terminal del sistema, aquesta informació no estarà
-disponible i dificulta el treball amb Git.
+No obstant això, la terminal del sistema no mostra aquesta informació, i això dificulta el treball amb Git.
+A continuació, s'explica com configurar el _prompt_ en :simple-linux: Linux o en terminals basades en Bash:
 
-A continuació, veurem com configurar el prompt de la terminal
-a :simple-linux: Linux o terminals basades en Bash.
-
-!!! docs
-    [:octicons-link-external-16: `git-prompt.sh`][git-prompt]
-
-[git-prompt]: https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
-
-1. Còpia el fitxer [`git-prompt.sh`][git-prompt] en algun lloc del teu sistema.
-
-    !!! warning "Revisa que el fitxer descarregat és l'adequat."
+1. Copia el fitxer [`git-prompt.sh`][git-prompt] en algun lloc del teu sistema.
 
     ```bash
     curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/refs/heads/master/contrib/completion/git-prompt.sh
     ```
 
-2. Afegeix la següent línia al fitxer `.bashrc`, `.zshrc` o `.profile` del teu usuari:
+    > Revisa que el fitxer descarregat és l'adequat.
+
+2. Afig la línia següent al fitxer `.bashrc`, `.zshrc` o `.profile` del teu usuari:
 
     ```bash
-    source ~/.git-prompt.sh # source ruta/fixer/git-prompt.sh
+    source ~/.git-prompt.sh # source <ruta>/git-prompt.sh
     ```
 
-3. Modifica la variable `PS1` per incloure la informació del prompt de Git `$(__git_ps1)`:
-
-    !!! info "Adapteu el prompt al vostre gust."
+3. Modifica la variable `PS1` perquè incloga la informació de Git, `$(__git_ps1)`:
 
     === ":simple-gnubash: Bash"
         ```bash
@@ -216,17 +178,28 @@ a :simple-linux: Linux o terminals basades en Bash.
         PROMPT='%n@%m:%~$(__git_ps1 " (%s)") %# '
         ```
 
-4. Reinicia la terminal o executa `source ~/.bashrc` (o el fitxer que hàgeu modificat).
+    > Pots adaptar el _prompt_ al teu gust.
 
-```shellconsole
-jpuigcerver@fp:~ $ cd ~/git_introduccio
-jpuigcerver@fp:~/git_introduccio $ git init
-Initialized empty Git repository in /home/jpuigcerver/git_introduccio/.git/
-jpuigcerver@fp:~/git_introduccio (main) $
-```
+4. Reinicia la terminal o executa `source ~/.bashrc` (o el fitxer que hages modificat).
+
+!!! docs "Codi font: [:octicons-link-external-16: `git-prompt.sh`][git-prompt] – :simple-git: Git"
+
+[git-prompt]: https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
+
+??? example "Exemple: _Prompt_ amb informació de Git"
+    S'inicialitza un repositori amb el _prompt_ configurat.
+
+    ```shellconsole
+    jpuigcerver@fp:~ $ cd ~/git_introduccio
+    jpuigcerver@fp:~/git_introduccio $ git init
+    Initialized empty Git repository in /home/jpuigcerver/git_introduccio/.git/
+    jpuigcerver@fp:~/git_introduccio (main) $
+    ```
+
+    S'observa que, després d'inicialitzar el repositori, el _prompt_ mostra la branca activa, `main`.
 
 
 ## Recursos addicionals
 - [:octicons-link-external-16: Extensió Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) – :material-microsoft-visual-studio: Visual Studio Marketplace
 - [:octicons-link-external-16: What is the shortcut for displaying the GitGraph tab on VS Code?](https://stackoverflow.com/questions/57803207/what-is-the-shortcut-for-displaying-the-gitgraph-tab-on-vs-code) – :simple-stackoverflow: StackOverflow
-- [:octicons-link-external-16: `git-prompt.sh`][git-prompt]
+- [:octicons-link-external-16: `git-prompt.sh`][git-prompt] – :simple-git: Git
