@@ -1,5 +1,7 @@
 jpuigcerver@fp:~/git_remots (main) $ git lga
-* 113f1d4 - (4 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main)
+* 2036c5a - (0 seconds ago) Commit inicial - Joan Puigcerver (HEAD -> main)
+jpuigcerver@fp:~/git_remots (main) $ git branch -vv
+* main 2036c5a Commit inicial
 jpuigcerver@fp:~/git_remots (main) $ git push
 fatal: The current branch main has no upstream branch.
 To push the current branch and set the remote as upstream, use

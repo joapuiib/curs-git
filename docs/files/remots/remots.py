@@ -9,6 +9,8 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from command_executor import CommandExecutor
 
+FAKE_GITHUB = os.path.expanduser('~/.fake_github')
+
 x = CommandExecutor(user='jpuigcerver', host='fp', verbose=False, script_path=__file__)
 
 def remove_repositori_if_exists():
@@ -50,8 +52,13 @@ def init_repositori():
 
 
 def init_remote():
-    x.run('gh repo delete joapuiib/git_remots --yes')
-    x.run('gh repo create joapuiib/git_remots --public')
+    if args.github:
+        x.run('gh repo delete joapuiib/git_remots --yes')
+        x.run('gh repo create joapuiib/git_remots --public')
+    else:
+        # Repositori remot simulat: un repositori nu local que fa de GitHub
+        x.run(f'rm -rf {FAKE_GITHUB}')
+        x.run(f'git init --bare -b main {FAKE_GITHUB}/joapuiib/git_remots.git')
 
 
 def show_no_remote():
@@ -70,12 +77,14 @@ def push_no_upstream():
     x.log_file('stdout/remots/push_no_upstream.txt')
     print('==================== PUSH NO UPSTREAM ========================')
     x.x('git lga')
+    x.x('git branch -vv')
     x.x('git push')
 
 def push_upstream():
     x.log_file('stdout/remots/push_upstream.txt')
     print('==================== PUSH UPSTREAM ========================')
     x.x('git push --set-upstream origin main')
+    x.x('git branch -vv')
     x.x('git lga')
 
 
@@ -188,11 +197,22 @@ parser = argparse.ArgumentParser(description='Etiquetes')
 parser.add_argument('-v', "--verbose", action='store_true')
 parser.add_argument("--push", action='store_true')
 parser.add_argument("--skip", action='store_true')
+parser.add_argument("--github", action='store_true',
+                    help="Utilitza el repositori real de GitHub en lloc d'un remot local simulat")
 args = parser.parse_args()
 
 
 if args.verbose:
     x.verbose = True
+
+if not args.github:
+    # Redirigeix les URL de GitHub al remot local simulat (insteadOf) i
+    # mostra l'eixida de les ordres com si fora GitHub.
+    x.set_env('GIT_CONFIG_COUNT', '1')
+    x.set_env('GIT_CONFIG_KEY_0', f'url.{FAKE_GITHUB}/.insteadOf')
+    x.set_env('GIT_CONFIG_VALUE_0', 'git@github.com:')
+    x.add_replacement(f'URL: {FAKE_GITHUB}/', 'URL: git@github.com:')
+    x.add_replacement(f'{FAKE_GITHUB}/', 'github.com:')
 
 x.set_logging(True)
 

@@ -235,8 +235,9 @@ Per a publicar una branca i els seus canvis en el repositori remot, s'utilitza l
 git push [-u | --set-upstream] [<remot> [<branca>]]
 ```
 
-- `[-u | --set-upstream]`: (opcional) configura la branca local perquè utilitze per defecte
-    el remot indicat en les operacions `git pull` i `git push` futures.
+- `[-u | --set-upstream]`: (opcional) associa la branca local amb la branca remota indicada
+    (_upstream_), de manera que les operacions `git pull` i `git push` futures
+    la utilitzen per defecte.
 - `[<remot>]`: (opcional) àlies del repositori remot.
     Si no s'especifica, s'utilitza el remot associat prèviament amb `--set-upstream`.
 - `[<branca>]`: (opcional) nom de la branca local que es vol publicar.
@@ -250,6 +251,7 @@ git push [-u | --set-upstream] [<remot> [<branca>]]
 
 ??? example "Exemple: Publicació i associació de la branca local i la remota"
     Inicialment, la branca `main` no està associada a cap branca remota.
+    Es pot comprovar amb `git branch -vv`, que no mostra cap branca remota entre claudàtors.
     Per això, si s'executa `git push`, es mostra un missatge d'error que indica
     que cal associar-hi una branca remota.
 
@@ -264,22 +266,32 @@ git push [-u | --set-upstream] [<remot> [<branca>]]
     ```
 
     S'observa que localment s'ha creat la referència `origin/main`, que apunta a la branca remota `main`.
-    A més, els canvis s'han publicat correctament en el repositori remot:
+    A més, ara `git branch -vv` mostra `[origin/main]` al costat de la branca `main`,
+    és a dir, la branca remota associada. Finalment, els canvis s'han publicat correctament en el repositori remot:
 
     ![Canvis publicats a GitHub](img/github_push.png)
     /// figure-caption | ^1 .shadow : Canvis publicats a :simple-github: GitHub.
 
 
-### Associació d'un remot per defecte
-Cada branca local es pot associar a un remot per defecte mitjançant l'opció `-u` o `--set-upstream`
-de l'ordre `git push`:
+### Associació amb una branca remota (_upstream_)
+Cada branca local es pot associar amb una branca remota mitjançant l'opció `-u` o `--set-upstream`
+de l'ordre `git push`. Aquesta branca remota s'anomena __upstream__ i inclou tant el remot
+com el nom de la branca en aquest:
 
 ```bash
 git push -u <remot> <branca>
 ```
 
-Aquesta associació permet a Git saber sobre quin remot ha de fer les operacions,
-com ara `git pull` o `git push`, quan no s'especifica explícitament.
+Per exemple, `git push -u origin main` publica la branca `main` en el remot `origin`
+i, a més, associa la branca local `main` amb `origin/main`. Aquesta associació és
+__independent per a cada branca local__: no afecta la resta de branques.
+
+Gràcies a l'associació, Git sap on ha de publicar i d'on ha de portar els canvis quan s'executen
+les ordres `git push` o `git pull` sense arguments. A més, `git status` l'utilitza
+per indicar si la branca local va per davant o per darrere de la remota.
+
+Per consultar la branca remota associada a cada branca local, s'utilitza l'ordre `git branch -vv`.
+Vegeu-ne el resultat en l'[exemple anterior](#publicacio-de-canvis-git-push).
 
 !!! tip "L'opció `push.autoSetupRemote` fa que cada branca local s'associe automàticament amb la branca remota del mateix nom."
     ```bash
@@ -464,7 +476,7 @@ git pull [<options>] [<remot> [<branca>]]
         ```
 
 ??? example "Exemple: Incorporació de canvis amb fusió directa (`pull --ff-only`)"
-    El _commit_ `8594cb9` forma part de la branca remota `origin/main`, però no de la branca local `main`.
+    El _commit_ `b460858` forma part de la branca remota `origin/main`, però no de la branca local `main`.
 
     ```shellconsole
     --8<-- "docs/files/remots/stdout/remots/before_pull_ff.txt"

@@ -64,6 +64,10 @@ git remote add origin <url>
 git push [-u | --set-upstream] origin <branca>
 ```
 
+- _Upstream_ = remot + branca remota, per a cada branca local
+- `git push` i `git pull` sense arguments
+- `git branch -vv` mostra l'_upstream_ de cada branca
+
 ![Publicació d'una branca local en una branca remota](img/push.light.png){ .r-stretch }
 
 ---
