@@ -43,7 +43,7 @@ Els apunts d'aquest curs estan dividits en els següents blocs:
     - Reserva de canvis: `stash`.
     - Eliminació de canvis: `reset` i `revert`.
     - Còpia de canvis: `cherry-pick`.
-    - Fusió de canvis en un sol commit: `squash`.
+    - Fusió de canvis en un sol _commit_: `squash`.
 
 - :material-sitemap:{ .lg .middle } __[[estrategies-index]]__
 
