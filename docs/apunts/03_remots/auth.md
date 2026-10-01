@@ -69,6 +69,10 @@ GitHub ofereix diferents mètodes d'autenticació, basats en dos protocols de co
 
 - __Protocol SSH__: cal configurar una clau SSH en el sistema local i afegir-la al teu compte de GitHub.
 
+A més, la ferramenta [:simple-github: GitHub CLI][github-cli] (`gh`) permet configurar l'autenticació
+de manera interactiva amb qualsevol dels dos protocols, sense haver de crear manualment el token
+ni la clau SSH. Vegeu [Autenticació mitjançant GitHub CLI](#autenticacio-mitjancant-github-cli).
+
 
 ### Token d'accés personal (PAT)
 Un __token d'accés personal__ (_Personal Access Token_ o PAT) és una clau d'accés
