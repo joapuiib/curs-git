@@ -6,30 +6,30 @@ hide:
 ---
 
 ## Bloc 4: Git avançat
-En aquest bloc es treballaran operacions més avançades de [__:simple-git: Git__][git].
+En aquest bloc es treballen operacions més avançades de [__:simple-git: Git__][git].
 
 [git]: https://git-scm.com/
 
 /// html | div.timeline
-[[etiquetes]]: Creació d'etiquetes per identificar versions.
+[[etiquetes]]: creació d'etiquetes per identificar versions.
 
-[[stash]]: Guardar canvis de manera temporal.
+[[stash]]: guardar canvis de manera temporal.
 ///
 
 /// html | div.timeline
-[[reset]]: Eliminar _commits_ de la història.
+[[reset]]: eliminar _commits_ de la història.
 
-[[amend]]: Modificar l'últim  _commit_.
+[[amend]]: modificar l'últim _commit_.
 ///
 
 /// html | div.timeline
-[[revert]]: Desfer un _commit_ sense eliminar-lo de la història.
+[[revert]]: desfer un _commit_ sense eliminar-lo de la història.
 
-[[cherrypick]]: Aplicar un _commit_ d'una branca a una altra.
+[[cherrypick]]: aplicar un _commit_ d'una branca a una altra.
 ///
 
 /// html | div.timeline.dashed
-[[squash]]: Fusionar una branca amb un sol _commit_.
+[[squash]]: fusionar una branca amb un sol _commit_.
 ///
 
 /// html | div.timeline.success.check

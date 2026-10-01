@@ -6,12 +6,12 @@ alias: avancat-exercici
 ---
 
 ## Objectius
-Els objectius d'aquest exercici són:
+Aquest exercici permet practicar les ordres avançades de Git. En acabar, has de saber:
 
-- Conéixer i saber aplicar els mètodes per modificar la història del repositori.
-- Conéixer com modificar el commit anterior, canviant els canvis realitzats i el seu missatge.
-- Conéixer com fusionar de branques en un sol _commit_.
-- Conéixer com aplicar la còpia de _commits_.
+- Aplicar els mètodes per a modificar la història del repositori.
+- Modificar l'últim _commit_, tant els canvis com el missatge.
+- Fusionar una branca en un sol _commit_.
+- Copiar _commits_ d'una branca a una altra.
 
 
 ## Lliurament
@@ -19,58 +19,51 @@ No es requereix el lliurament d'aquest exercici per a la certificació del curs.
 
 
 ## Exercici
-A partir del següent repositori inicial:
+L'exercici parteix del repositori inicial següent:
 
 ```shellconsole
 --8<-- "docs/files/avancat/stdout/exercici/estructura_inicial.txt"
 ```
 
-??? prep "Preparació repositori inicial"
-
-    !!! danger "Crea el nou repositori __en una carpeta independent__ per evitar problemes amb els exemples i exercicis anteriors."
-
-    Pots executar el següent script per obtenir el repositori inicial:
+??? prep "Preparació del repositori inicial"
+    Pots executar l'_script_ següent per a obtindre el repositori inicial:
 
     !load_file "avancat/stdout/exercici/setup_exercici_avancat.sh"
 
+    !!! danger "Crea el nou repositori __en una carpeta independent__ per evitar problemes amb els exemples i exercicis anteriors."
+
 
 ### Tasca 1
-Fent ús de les ordres avançades de Git,
-modifica la història del repositori perquè
-quede com es mostra a continuació.
+Utilitza les ordres avançades de Git per a modificar la història del repositori
+perquè quede com es mostra a continuació.
 
 ```shellconsole
 --8<-- "docs/files/avancat/stdout/exercici/estructura_reset.txt"
 ```
 
 ### Tasca 2
-Modifica el missatge del _commit_ __`canviA`__
-per __`Canvi A`__.
+Canvia el missatge del _commit_ __`canviA`__ per __`Canvi A`__.
 
 ```shellconsole
 --8<-- "docs/files/avancat/stdout/exercici/estructura_amend.txt"
 ```
 
 ### Tasca 3
-Còpia els continguts dels _commits_ __`Canvi A`__, __`Canvi B`__ i __`Canvi C`__
-a la branca `canvis`.
+Copia els continguts dels _commits_ __`Canvi A`__, __`Canvi B`__ i __`Canvi C`__ a la branca `canvis`.
 
 ```shellconsole
 --8<-- "docs/files/avancat/stdout/exercici/estructura_cherrypick.txt"
 ```
 
-Després, elimina les branques `canvi/A`, `canvi/B` i `canvi/C`
+Després, elimina les branques `canvi/A`, `canvi/B` i `canvi/C`.
 
 ```shellconsole
 --8<-- "docs/files/avancat/stdout/exercici/estructura_cherrypick_eliminar_branques.txt"
 ```
 
 ### Tasca 4
-Fusiona la branca `canvis` amb la branca `main`
-en un sol _commit_.
-
-Crea una etiqueta anotada amb el nom `GitAvançat` en aquest _commit_
-amb el missatge:
+Fusiona la branca `canvis` en la branca `main` amb un sol _commit_.
+Després, crea en aquest _commit_ una etiqueta anotada amb el nom `GitAvançat` i el missatge següent:
 
 ```text
 Estat final després de l'exercici de Git avançat
@@ -80,7 +73,7 @@ Estat final després de l'exercici de Git avançat
 --8<-- "docs/files/avancat/stdout/exercici/estructura_squash.txt"
 ```
 
-Per últim, també pots eliminar la branca `canvis`
+Finalment, també pots eliminar la branca `canvis`.
 
 ```shellconsole
 --8<-- "docs/files/avancat/stdout/exercici/estructura_squash_eliminar_branques.txt"
