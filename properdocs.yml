@@ -123,6 +123,13 @@ plugins:
       branch: main
       exclude_committers:
         - web-flow
+  - glightbox:
+      zoomable: true
+      draggable: true
+      skip_classes:
+        - skip-lightbox
+      auto_themed: true
+
 
 markdown_extensions:
   - abbr
@@ -143,13 +150,16 @@ markdown_extensions:
         - caption
         - name: figure-caption
           prefix: "Figura {}. "
+          classes: "glightbox-title"
         - name: shadow-figure-caption
           prefix: "Figura {}. "
-          classes: shadow
+          classes: "shadow glightbox-title"
         - name: "table-caption"
           prefix: "Taula {}. "
         - name: attribution
-          classes: attribution
+          classes: "attribution glightbox-attribution"
+        - name: description
+          classes: "description glightbox-description"
   - pymdownx.details
   - pymdownx.critic
   - pymdownx.caret
