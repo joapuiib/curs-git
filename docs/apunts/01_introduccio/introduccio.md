@@ -166,7 +166,7 @@ rm -rf .git
     fatal: not a git repository (or any of the parent directories): .git
     ```
 
-    S'observa que, després d'eliminar el directori `.git`, Git ja no reconeix el directori com a repositori.
+    Es pot comprovar que, després d'eliminar el directori `.git`, Git ja no reconeix el directori com a repositori.
 
 ## Estructura d'un repositori de Git
 Aquesta introducció se centra en el funcionament __local__ dels repositoris de Git,
@@ -358,7 +358,7 @@ On branch main
 nothing to commit, working tree clean
 ```
 
-S'observa que l'estat del repositori ha canviat i ja no hi ha canvis pendents de confirmar.
+L'estat del repositori ha canviat i ja no hi ha canvis pendents de confirmar.
 A més, s'ha creat el primer _commit_, amb el missatge `Added README.md` i l'identificador `8e70293`.
 
 ![Estat del repositori de Git després de fer un commit](img/after_commit_readme.light.png#only-light)
@@ -541,7 +541,7 @@ La [Figura 2](#figure-flux-treball) resumeix el comportament de `git restore`.
             modified:   README.md
     ```
 
-    S'observa que el fitxer continua modificat, però ara els canvis només són en el __Directori de treball__.
+    El fitxer continua modificat, però ara els canvis només són en el __Directori de treball__.
 
 ??? example "Exemple: Descartar canvis en el Directori de treball"
     Es descarten els canvis realitzats en el fitxer `README.md` del __Directori de treball__.
@@ -573,7 +573,7 @@ La [Figura 2](#figure-flux-treball) resumeix el comportament de `git restore`.
     nothing to commit, working tree clean
     ```
 
-    S'observa que el repositori torna a estar net: la línia afegida s'ha perdut.
+    El repositori torna a estar net: la línia afegida s'ha perdut.
 
 
 ## Històric de canvis (`git log`)
@@ -635,7 +635,7 @@ git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(re
     * 8e70293 - (3 days ago) Added README.md - Joan Puigcerver
     ```
 
-    S'observa que cada _commit_ ocupa una sola línia.
+    Es pot comprovar que cada _commit_ ocupa una sola línia.
 
 No obstant això, no és pràctic recordar aquesta ordre. Per això, es pot configurar un __àlies__,
 és a dir, un nom curt que Git substitueix per l'ordre completa:
@@ -654,7 +654,7 @@ git config --global alias.lga "lg --all"
     * 8e70293 - (3 days ago) Added README.md - Joan Puigcerver
     ```
 
-    S'observa que el resultat és el mateix que en l'exemple anterior.
+    El resultat és el mateix que en l'exemple anterior.
 
 
 ## Configuració (`git config`)

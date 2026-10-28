@@ -108,7 +108,7 @@ Els canvis s'emmagatzemen temporalment en una __pila__, de manera que:
         --8<-- "docs/files/avancat/stdout/stash/canvi_c.txt"
         ```
 
-    S'observa que l'índex dels canvis anteriors s'incrementa amb cada reserva nova.
+    Es pot comprovar que l'índex dels canvis anteriors s'incrementa amb cada reserva nova.
 
 ### Mostrar les reserves de canvis
 Per a mostrar les reserves existents, s'utilitza l'ordre:
@@ -127,7 +127,7 @@ i pel missatge associat.
     --8<-- "docs/files/avancat/stdout/stash/llista.txt"
     ```
 
-    S'observa que la reserva més recent, `Canvi C`, ocupa la posició `stash@{0}`.
+    La reserva més recent, `Canvi C`, ocupa la posició `stash@{0}`.
 
 
 ### Mostrar els canvis d'una reserva
@@ -148,7 +148,7 @@ git stash show [-p] [<index>]
     --8<-- "docs/files/avancat/stdout/stash/mostrar.txt"
     ```
 
-    S'observa que cada reserva conté una línia diferent afegida al fitxer `README.md`.
+    Cada reserva conté una línia diferent afegida al fitxer `README.md`.
 
 ### Recuperar els canvis
 Els canvis reservats es poden recuperar amb l'acció `apply`, que els aplica en el __Directori de treball__:

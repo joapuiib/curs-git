@@ -320,7 +320,7 @@ git commit -m <missatge>
 
 Si la branca de funcionalitat no està actualitzada respecte de la branca de desenvolupament,
 es considera una bona pràctica integrar primer els canvis de `develop` en la branca de funcionalitat.
-A més, en aquest procés es poden resoldre els conflictes, si n'hi ha.
+En aquest procés també es poden resoldre els conflictes, si n'hi ha.
 Per a fer aquesta integració, es recomana utilitzar `git merge --no-ff`:
 
 ```bash

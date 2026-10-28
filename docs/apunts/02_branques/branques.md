@@ -88,7 +88,7 @@ git branch [--list] [-a | --all] [-v | --verbose]
     --8<-- "docs/files/branques/stdout/branques/branch_show.txt"
     ```
 
-    S'observa que només hi ha una branca, anomenada `main`.
+    Es pot comprovar que només hi ha una branca, anomenada `main`.
     L'ordre marca amb un `*` la branca activa, és a dir, on es troba el `HEAD`.
 
 ### Crear una branca
@@ -113,8 +113,8 @@ git branch [-f | --force] <nom> [<ref>]
     --8<-- "docs/files/branques/stdout/branques/branch_create.txt"
     ```
 
-    S'observa que les branques s'han creat en el mateix _commit_ on es trobava el `HEAD`.
-    No obstant això, la branca activa (`HEAD`) continua sent `main`.
+    Les branques s'han creat en el mateix _commit_ on es trobava el `HEAD`.
+    Tot i això, la branca activa (`HEAD`) continua sent `main`.
 
 ![Estructura de branques després de crear les branques](img/create_branches.light.png#only-light)
 ![Estructura de branques després de crear les branques](img/create_branches.dark.png#only-dark)
@@ -123,7 +123,7 @@ git branch [-f | --force] <nom> [<ref>]
 
 ### Canviar de branca
 Canviar de branca significa moure el punter `HEAD` a la branca desitjada.
-A més, el contingut del __Directori de treball__ passa a l'estat del _commit_ al qual apunta la branca.
+Alhora, el contingut del __Directori de treball__ passa a l'estat del _commit_ al qual apunta la branca.
 
 Hi ha dues ordres per a canviar de branca, cadascuna amb la seua sintaxi i opcions:
 
@@ -161,8 +161,8 @@ i la [Figura 3](#figure-checkout-menjar), l'estat després de canviar a la branc
     --8<-- "docs/files/branques/stdout/branques/checkout_menjar.txt"
     ```
 
-    S'observa que `HEAD` s'ha desplaçat a la branca `menjar`.
-    No obstant això, el contingut del repositori és el mateix, ja que les dues branques apunten al mateix _commit_.
+    Ara el `HEAD` s'ha desplaçat a la branca `menjar`.
+    Malgrat això, el contingut del repositori és el mateix, ja que les dues branques apunten al mateix _commit_.
 
 ![Estructura de branques després de canviar a la branca menjar](img/checkout_branch.light.png#only-light)
 ![Estructura de branques després de canviar a la branca menjar](img/checkout_branch.dark.png#only-dark)
@@ -198,7 +198,7 @@ Quan es fa un _commit_ en una branca, el punter de la branca actual (`HEAD`) ava
     --8<-- "docs/files/branques/stdout/branques/canvis_beguda.txt"
     ```
 
-    S'observa que la branca `beguda` i el `HEAD` han avançat al nou _commit_.
+    Igual que abans, la branca `beguda` i el `HEAD` han avançat al nou _commit_.
 
 ![Estructura de branques després de fer un commit en la branca beguda](img/commit_beguda.light.png#only-light)
 ![Estructura de branques després de fer un commit en la branca beguda](img/commit_beguda.dark.png#only-dark)
@@ -211,7 +211,7 @@ Quan es fa un _commit_ en una branca, el punter de la branca actual (`HEAD`) ava
     --8<-- "docs/files/branques/stdout/branques/canvis_neteja.txt"
     ```
 
-    S'observa que la branca `neteja` i el `HEAD` han avançat al nou _commit_.
+    De nou, la branca `neteja` i el `HEAD` han avançat al nou _commit_.
 
 ![Estructura de branques després de fer un commit en la branca neteja](img/commit_neteja.light.png#only-light)
 ![Estructura de branques després de fer un commit en la branca neteja](img/commit_neteja.dark.png#only-dark)
@@ -266,7 +266,7 @@ git branch -D <nom>
     --8<-- "docs/files/branques/stdout/branques/eliminar_neteja.txt"
     ```
 
-    S'observa que la branca `neteja` s'ha eliminat i, per tant, el _commit_ __Productes de neteja__
+    La branca `neteja` s'ha eliminat i, per tant, el _commit_ __Productes de neteja__
     s'ha convertit en un _commit_ orfe que el recol·lector de fem de Git eliminarà.
 
 ![Estructura de branques després d'eliminar la branca neteja](img/delete_neteja.light.png#only-light)
@@ -337,7 +337,7 @@ fins on es troba la branca que es vol fusionar.
     --8<-- "docs/files/branques/stdout/branques/after_ff.txt"
     ```
 
-    1. S'observa que s'ha incorporat el fitxer `menjar.txt` amb els canvis de la branca `menjar`.
+    1. Es pot comprovar que s'ha incorporat el fitxer `menjar.txt` amb els canvis de la branca `menjar`.
 
 ### Fusió de branques divergents
 No sempre és possible fer una [__fusió directa__ (_fast-forward_)](#fusio-directa).
@@ -404,7 +404,7 @@ Contingut de la branca a fusionar
 >>>>>>> branca_a_fusionar
 ```
 
-A més, el repositori passa a l'estat de __fusió__ (`MERGING`), que indica que hi ha una fusió en curs.
+El repositori passa, a més, a l'estat de __fusió__ (`MERGING`), que indica que hi ha una fusió en curs.
 Per a resoldre el conflicte, cal seguir aquests passos:
 
 1. Editar el fitxer i resoldre manualment el conflicte.
@@ -603,7 +603,7 @@ Aquest procés es repeteix per a cada _commit_ que tinga conflictes.
 
 ??? example "Exemple: Fusió de les branques `postre` i `aperitiu` amb canvi de base i conflictes"
     Les branques `postre` i `aperitiu` han modificat la mateixa secció del fitxer `menjar.txt`.
-    Per tant, quan es fa el canvi de base es produeixen conflictes.
+    Per això, quan es fa el canvi de base es produeixen conflictes.
 
     ```shellconsole
     --8<-- "docs/files/branques/stdout/branques/rebase_conflicts_show.txt"

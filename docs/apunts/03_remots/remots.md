@@ -23,7 +23,7 @@ tags:
 
 ## Introducció
 En els blocs anteriors, s'ha presentat l'estructura d'un repositori de Git i les accions bàsiques
-per a fer-hi canvis. No obstant això, totes aquestes accions s'han fet sobre un repositori __local__,
+per a fer-hi canvis. Tot i això, totes aquestes accions s'han fet sobre un repositori __local__,
 és a dir, un repositori que es troba en el teu dispositiu i els canvis del qual no s'han publicat enlloc.
 
 Aquest bloc se centra en els repositoris __remots__: repositoris __allotjats en un servidor__,
@@ -265,8 +265,8 @@ git push [-u | --set-upstream] [<remot> [<branca>]]
     --8<-- "docs/files/remots/stdout/remots/push_upstream.txt"
     ```
 
-    S'observa que localment s'ha creat la referència `origin/main`, que apunta a la branca remota `main`.
-    A més, ara `git branch -vv` mostra `[origin/main]` al costat de la branca `main`,
+    Localment s'ha creat la referència `origin/main`, que apunta a la branca remota `main`.
+    Alhora, ara `git branch -vv` mostra `[origin/main]` al costat de la branca `main`,
     és a dir, la branca remota associada. Finalment, els canvis s'han publicat correctament en el repositori remot:
 
     ![Canvis publicats a GitHub](img/github_push.png)
@@ -287,7 +287,7 @@ i, a més, associa la branca local `main` amb `origin/main`. Aquesta associació
 __independent per a cada branca local__: no afecta la resta de branques.
 
 Gràcies a l'associació, Git sap on ha de publicar i d'on ha de portar els canvis quan s'executen
-les ordres `git push` o `git pull` sense arguments. A més, `git status` l'utilitza
+les ordres `git push` o `git pull` sense arguments. `git status` també l'utilitza
 per indicar si la branca local va per davant o per darrere de la remota.
 
 Per consultar la branca remota associada a cada branca local, s'utilitza l'ordre `git branch -vv`.
@@ -339,7 +339,7 @@ git clone <url> [<directori>]
     --8<-- "docs/files/remots/stdout/remots/clone.txt"
     ```
 
-    S'observa que s'ha clonat correctament el repositori `git_remots`,
+    Es pot comprovar que s'ha clonat correctament el repositori `git_remots`,
     que conté els fitxers i la història de canvis del repositori remot.
 
 
@@ -488,7 +488,7 @@ git pull [<options>] [<remot> [<branca>]]
     --8<-- "docs/files/remots/stdout/remots/after_pull_ff.txt"
     ```
 
-    S'observa que la branca local `main` ha avançat fins al mateix _commit_ que `origin/main`.
+    La branca local `main` ha avançat fins al mateix _commit_ que `origin/main`.
 
 ??? prep "Preparació: Més canvis en el repositori remot"
     Fes els canvis següents en el repositori remot directament a :simple-github: GitHub.

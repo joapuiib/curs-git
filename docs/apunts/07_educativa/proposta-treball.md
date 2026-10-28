@@ -206,7 +206,7 @@ A partir d'aquest punt, els equips poden treballar de manera autònoma i gestion
 dins d'un únic projecte. Per a treballar de manera col·laborativa sobre el mateix repositori,
 és important que facen un bon ús d'una de les [[estrategies]].
 
-A més, l'ús de :simple-github: GitHub és independent de la metodologia de treball que s'aplique a l'aula,
+L'ús de :simple-github: GitHub és, d'altra banda, independent de la metodologia de treball que s'aplique a l'aula,
 com ara metodologies àgils com __Scrum__ o __Kanban__.
 
 !!! example "Exemple real: projecte intermodular de 1r de DAW amb Scrum"
@@ -266,7 +266,7 @@ en la __plataforma educativa oficial (Aules)__, amb l'enllaç al seu repositori.
     /// shadow-figure-caption | #figure-aules-lliurament : Lliurament d'una tasca a Aules.
 
 !!! note "En la pràctica, no revise el codi lliurat a Aules, sinó que el consulte directament en el :octicons-repo-locked-16: repositori privat."
-    No obstant això, de vegades l'alumnat ha tingut algun problema amb :simple-git: Git
+    Tot i això, de vegades l'alumnat ha tingut algun problema amb :simple-git: Git
     i, gràcies a aquesta còpia de seguretat, l'he pogut avaluar.
 
 ## Gestió de l'organització
@@ -289,7 +289,7 @@ Aquesta ferramenta permet fer les accions següents de manera massiva:
 !!! docs "Documentació: [:octicons-link-external-16: GitHub Organization Tools][ghot-docs] – `ghot`"
 
 !!! warning "`ghot` és una ferramenta en __estat experimental__. Et recomane executar primer les ordres amb l'opció `--dry` per a comprovar que tot funciona correctament."
-    A més, si trobes algun error o tens alguna proposta de millora, pots indicar-ho en la secció
+    Si trobes algun error o tens alguna proposta de millora, pots indicar-ho en la secció
     [:octicons-issue-opened-16: Issues del repositori de `ghot`][ghot-issues].
 
 [ghot-issues]: https://github.com/joapuiib/github-organization-tools/issues

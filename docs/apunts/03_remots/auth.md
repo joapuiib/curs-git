@@ -44,7 +44,7 @@ Si encara no en tens, crea'n un.
 
 !!! note "Hi ha persones que prefereixen tindre diferents comptes, per exemple, un de personal i un de professional."
     No obstant això, gestionar l'autenticació de diversos comptes afig complexitat.
-    A més, cal parar atenció a la [[introduccio#configuracio-git-config|configuració]]
+    Cal parar atenció, també, a la [[introduccio#configuracio-git-config|configuració]]
     local i global dels valors `user.name` i `user.email`.
 
 
