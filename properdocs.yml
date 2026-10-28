@@ -84,8 +84,6 @@ plugins:
   - materialx/search
   - material-joapuiib/social:
       enabled: !ENV [CI, false]
-  - materialx/social:
-      enabled: !ENV [CI, false]
   - material-joapuiib/enviorment
   - material-joapuiib/functions:
       load_file:
