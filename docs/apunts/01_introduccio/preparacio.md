@@ -49,7 +49,7 @@ La instal·lació depén del sistema operatiu:
 Git utilitza un editor de text per a algunes operacions, com ara escriure els missatges dels _commits_.
 
 Per defecte, Git utilitza l'editor [:simple-vim: ViM](https://www.vim.org/), un editor de text per terminal
-molt potent, però difícil i poc intuïtiu si no s'hi està acostumat. Per això, és recomanable canviar
+molt potent, però difícil i poc intuïtiu si no s'està acostumat. Per això, és recomanable canviar
 l'editor per defecte amb l'ordre següent:
 
 ```bash

@@ -64,7 +64,7 @@ comprimida en format `.zip` o `.tgz`.
 1. Crea una branca anomenada `musica` i situa't en aquesta branca.
 1. Crea un fitxer anomenat `musica.txt` i afig tres cançons que t'agraden.
 1. Fes un _commit_ en aquesta branca.
-1. Incorpora els canvis de `musica` a la branca `main` mitjançant una fusió.
+1. Incorpora els canvis de `musica` a la branca `main` amb una fusió.
 
 !!! docs "Documenta l'estat del repositori amb `git lga` al final d'aquest apartat."
 
@@ -78,10 +78,10 @@ comprimida en format `.zip` o `.tgz`.
     1. Afig una cançó a `musica.txt`.
     1. Fes un _commit_.
 
-1. Incorpora els canvis de `mes-llibres` a la branca `main` mitjançant una fusió.
-1. Incorpora els canvis de `mes-musica` a la branca `main` mitjançant una fusió.
+1. Incorpora els canvis de `mes-llibres` a la branca `main` amb una fusió.
+1. Incorpora els canvis de `mes-musica` a la branca `main` amb una fusió.
 
-!!! info "La primera fusió hauria de ser [directa][directa] i la segona [mitjançant un _commit_ de fusió][merge-commit]."
+!!! info "La primera fusió hauria de ser [directa][directa] i la segona [amb un _commit_ de fusió][merge-commit]."
 
 [directa]: ./branques.md#fusio-directa
 [merge-commit]: ./branques.md#fusio-de-branques-divergents
@@ -97,8 +97,8 @@ comprimida en format `.zip` o `.tgz`.
 1. Des de la branca `llibres-fantasia`:
     1. Afig un llibre de fantasia a `llibres.txt`.
     1. Fes un _commit_.
-1. Incorpora els canvis de `llibres-ciencia-ficcio` a la branca `main` mitjançant una fusió.
-1. Incorpora els canvis de `llibres-fantasia` a la branca `main` mitjançant una fusió.
+1. Incorpora els canvis de `llibres-ciencia-ficcio` a la branca `main` amb una fusió.
+1. Incorpora els canvis de `llibres-fantasia` a la branca `main` amb una fusió.
 
 !!! docs "Documenta els conflictes que s'han generat i com els has resolt."
 
@@ -127,9 +127,9 @@ comprimida en format `.zip` o `.tgz`.
 1. Des de la branca `pelicules`:
     1. Afig una pel·lícula a `pelicules.txt`.
     1. Fes un _commit_.
-1. Incorpora els canvis de la branca `pelicules` a la branca `main` mitjançant una fusió.
+1. Incorpora els canvis de la branca `pelicules` a la branca `main` amb una fusió.
 1. Canvia la base de la branca `series` a la branca `main`.
-1. Incorpora els canvis de la branca `series` a la branca `main` mitjançant una fusió.
+1. Incorpora els canvis de la branca `series` a la branca `main` amb una fusió.
 
 !!! info "Aquest procés és el que cal seguir per fusionar branques divergents d'una manera que la història siga lineal."
 
@@ -143,12 +143,12 @@ comprimida en format `.zip` o `.tgz`.
 1. Des de la branca `series-drama`:
     1. Afig una sèrie de drama a `series.txt`.
     1. Fes un _commit_.
-1. Incorpora els canvis de la branca `series-accio` a la branca `main` mitjançant una fusió.
+1. Incorpora els canvis de la branca `series-accio` a la branca `main` amb una fusió.
 1. Canvia la base de la branca `series-drama` a la branca `main`.
 
     !!! docs "Documenta els conflictes que s'han generat i com els has resolt."
 
-1. Incorpora els canvis de la branca `series-drama` a la branca `main` mitjançant una fusió.
+1. Incorpora els canvis de la branca `series-drama` a la branca `main` amb una fusió.
 
 !!! docs "Documenta l'estat del repositori amb `git lga` al final d'aquest apartat."
 

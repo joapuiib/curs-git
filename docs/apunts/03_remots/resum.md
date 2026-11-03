@@ -34,7 +34,7 @@ Aquestes ordres permeten sincronitzar les branques locals i les remotes:
     - __`--prune`__: elimina les referències de branques remotes que ja no existeixen en el repositori remot.
 
 - __`git pull`__: actualitza la branca local actual (`HEAD`) amb els canvis de la branca remota associada,
-    mitjançant `git fetch` i `git merge`.
+    amb `git fetch` i `git merge`.
 
     - __`--ff-only`__: si no es pot fer _fast-forward_, el procés es cancel·la.
     - __`--rebase`__: fa un `rebase` en lloc d'un `merge` per a incorporar els canvis remots.

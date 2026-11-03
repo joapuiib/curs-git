@@ -23,7 +23,7 @@ tags:
 
 ## Introducció
 En els blocs anteriors, s'ha presentat l'estructura d'un repositori de Git i les accions bàsiques
-per a fer-hi canvis. No obstant això, totes aquestes accions s'han fet sobre un repositori __local__,
+per a fer canvis. Tot i això, totes aquestes accions s'han fet sobre un repositori __local__,
 és a dir, un repositori que es troba en el teu dispositiu i els canvis del qual no s'han publicat enlloc.
 
 Aquest bloc se centra en els repositoris __remots__: repositoris __allotjats en un servidor__,
@@ -74,7 +74,7 @@ Les principals finalitats dels repositoris remots són:
     puja els canvis al repositori remot perquè la resta de l'equip els puga vore i incorporar.
 - __Còpia de seguretat__: un repositori remot pot servir com a còpia de seguretat del projecte.
     Si el teu sistema local es danya o es perd, encara tens accés a la història completa
-    i als fitxers del projecte mitjançant el repositori remot.
+    i als fitxers del projecte a través del repositori remot.
 - __Distribució__: els repositoris remots permeten distribuir el codi a altres llocs,
     tant per a compartir-lo amb altres persones com per a desplegar el projecte en un servidor en línia.
 
@@ -126,9 +126,9 @@ A GitHub, es fa seguint aquests passos:
     - __Descripció__: (opcional) descripció del repositori.
     - __Visibilitat__: indica qui pot vore el repositori.
         - __:octicons-repo-24: Públic__: qualsevol persona pot vore el repositori,
-            però només les persones autoritzades poden fer-hi canvis.
+            però només les persones autoritzades poden fer canvis.
         - __:octicons-lock-24: Privat__: només tu i les persones que autoritzes podeu vore el repositori
-            i fer-hi canvis.
+            i fer canvis.
     - __README__: indica si vols afegir un fitxer `README` al repositori.
     - __.gitignore__: indica si vols afegir un fitxer `.gitignore` per a ignorar fitxers en el repositori.
     - __Llicència__: indica si vols afegir una llicència al repositori.
@@ -204,7 +204,7 @@ git remote add <alies> <url>
     --8<-- "docs/files/remots/stdout/remots/add_remote.txt"
     ```
 
-    S'observa que el remot `origin` apareix associat a la URL indicada.
+    El remot `origin` apareix associat a la URL indicada.
 
 
 ### Reanomenar un repositori remot
@@ -253,7 +253,7 @@ git push [-u | --set-upstream] [<remot> [<branca>]]
     Inicialment, la branca `main` no està associada a cap branca remota.
     Es pot comprovar amb `git branch -vv`, que no mostra cap branca remota entre claudàtors.
     Per això, si s'executa `git push`, es mostra un missatge d'error que indica
-    que cal associar-hi una branca remota.
+    que cal associar una branca remota a la branca local.
 
     ```shellconsole
     --8<-- "docs/files/remots/stdout/remots/push_no_upstream.txt"
@@ -265,8 +265,8 @@ git push [-u | --set-upstream] [<remot> [<branca>]]
     --8<-- "docs/files/remots/stdout/remots/push_upstream.txt"
     ```
 
-    S'observa que localment s'ha creat la referència `origin/main`, que apunta a la branca remota `main`.
-    A més, ara `git branch -vv` mostra `[origin/main]` al costat de la branca `main`,
+    Localment s'ha creat la referència `origin/main`, que apunta a la branca remota `main`.
+    D'altra banda, ara `git branch -vv` mostra `[origin/main]` al costat de la branca `main`,
     és a dir, la branca remota associada. Finalment, els canvis s'han publicat correctament en el repositori remot:
 
     ![Canvis publicats a GitHub](img/github_push.png)
@@ -274,7 +274,7 @@ git push [-u | --set-upstream] [<remot> [<branca>]]
 
 
 ### Associació amb una branca remota (_upstream_)
-Cada branca local es pot associar amb una branca remota mitjançant l'opció `-u` o `--set-upstream`
+Cada branca local es pot associar amb una branca remota amb l'opció `-u` o `--set-upstream`
 de l'ordre `git push`. Aquesta branca remota s'anomena __upstream__ i inclou tant el remot
 com el nom de la branca en aquest:
 
@@ -287,7 +287,7 @@ i, a més, associa la branca local `main` amb `origin/main`. Aquesta associació
 __independent per a cada branca local__: no afecta la resta de branques.
 
 Gràcies a l'associació, Git sap on ha de publicar i d'on ha de portar els canvis quan s'executen
-les ordres `git push` o `git pull` sense arguments. A més, `git status` l'utilitza
+les ordres `git push` o `git pull` sense arguments. `git status` també l'utilitza
 per indicar si la branca local va per davant o per darrere de la remota.
 
 Per consultar la branca remota associada a cada branca local, s'utilitza l'ordre `git branch -vv`.
@@ -339,7 +339,7 @@ git clone <url> [<directori>]
     --8<-- "docs/files/remots/stdout/remots/clone.txt"
     ```
 
-    S'observa que s'ha clonat correctament el repositori `git_remots`,
+    Es pot comprovar que s'ha clonat correctament el repositori `git_remots`,
     que conté els fitxers i la història de canvis del repositori remot.
 
 
@@ -465,7 +465,7 @@ git pull [<options>] [<remot> [<branca>]]
         git config --global pull.ff only
         ```
 
-    - __`git pull --rebase`__: incorpora els canvis de la branca remota mitjançant un canvi de base (`rebase`),
+    - __`git pull --rebase`__: incorpora els canvis de la branca remota per mitjà d'un canvi de base (`rebase`),
         és a dir, aplica els canvis de la branca local després dels canvis de la branca remota.
         { #git-pull-rebase }
 
@@ -488,7 +488,7 @@ git pull [<options>] [<remot> [<branca>]]
     --8<-- "docs/files/remots/stdout/remots/after_pull_ff.txt"
     ```
 
-    S'observa que la branca local `main` ha avançat fins al mateix _commit_ que `origin/main`.
+    La branca local `main` ha avançat fins al mateix _commit_ que `origin/main`.
 
 ??? prep "Preparació: Més canvis en el repositori remot"
     Fes els canvis següents en el repositori remot directament a :simple-github: GitHub.

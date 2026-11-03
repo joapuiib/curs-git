@@ -10,7 +10,7 @@ tags:
 
 ## Modificar l'últim _commit_ (`git commit --amend`)
 L'opció `git commit --amend` permet corregir l'últim _commit_ realitzat. En concret, permet modificar-ne
-el missatge, afegir-hi fitxers nous o afegir-hi nous canvis, inclosos els fitxers modificats en aquest _commit_.
+el missatge, afegir fitxers nous o afegir nous canvis, inclosos els fitxers modificats en aquest _commit_.
 
 Internament, aquesta ordre crea un _commit_ nou amb els canvis de l'__Àrea de preparació__
 i els del _commit_ anterior, i el _commit_ nou substitueix l'anterior.

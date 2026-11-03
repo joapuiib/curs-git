@@ -37,7 +37,7 @@ del repositori, __:octicons-gear-16: Settings__, i habilitar-la.
 
 ??? example "Exemple: Debats en aquest repositori"
     Aquest lloc web està allotjat a :simple-github: GitHub i té habilitada la funcionalitat de debats.
-    S'hi pot accedir mitjançant la secció __:octicons-comment-discussion-16: Discussions__ del menú superior
+    Es pot accedir a través de la secció __:octicons-comment-discussion-16: Discussions__ del menú superior
     o en [aquest enllaç](https://github.com/joapuiib/curs-git/discussions).
 
     ![Debats en el repositori d'aquest curs a GitHub](./img/projectes/exemple_debats.png)
@@ -78,7 +78,7 @@ sobre la incidència i debatre'n la resolució.
 ??? example "Exemple: Incidències a :simple-materialformkdocs: Material for MkDocs"
     [:simple-materialformkdocs: Material for MkDocs][mkdocs-material] també utilitza les incidències
     per a informar de problemes, suggeriments o millores del tema.
-    S'hi pot accedir mitjançant la secció [__:octicons-issue-opened-16: Issues__][mkdocs-material-issues]
+    Es pot accedir des de la secció [__:octicons-issue-opened-16: Issues__][mkdocs-material-issues]
     del menú superior.
 
     ![Llista d'incidències en un repositori de GitHub](./img/projectes/exemple_issues.png)
@@ -139,7 +139,7 @@ i prioritzar les tasques d'un projecte.
 
 ??? example "Exemple: Projecte d'exemple"
     He creat un [__:octicons-table-16: projecte d'exemple__][projecte-exemple] dins de l'organització del curs.
-    Aquest projecte està buit, però és útil perquè pugues entrar-hi i vore les diferents vistes i opcions
+    Aquest projecte està buit, però és útil perquè pugues entrar i vore les diferents vistes i opcions
     que ofereix.
 
     [projecte-exemple]: https://github.com/orgs/cursgit/projects/1
@@ -213,7 +213,7 @@ __:octicons-issue-opened-16: Issues__ o __:material-source-pull: Pull Requests__
 ## :material-tray-arrow-up: Llançaments
 Els [__llançaments__](https://docs.github.com/es/github/administering-a-repository/releasing-projects-on-github/about-releases)
 (_Releases_) són una funcionalitat de GitHub que permet indicar que s'ha publicat una versió del projecte,
-amb informació rellevant sobre els canvis realitzats i les persones que hi han contribuït.
+amb informació rellevant sobre els canvis realitzats i les persones que han contribuït.
 
 Els llançaments __sempre estan associats__ a una __[[etiquetes|:octicons-tag-16: etiqueta]]__,
 que pot existir prèviament o es pot crear en el moment. Encara que són semblants, no s'han de confondre:
@@ -222,7 +222,7 @@ els llançaments són elements de GitHub, mentre que les etiquetes són objectes
 ??? example "Exemple: Llançaments a :simple-materialformkdocs: Material for MkDocs"
     [:simple-materialformkdocs: Material for MkDocs][mkdocs-material] també utilitza els llançaments
     per a indicar que s'ha publicat una versió nova del tema.
-    S'hi pot accedir mitjançant la secció [__Releases__][mkdocs-material-releases]
+    Es pot accedir des de la secció [__Releases__][mkdocs-material-releases]
     del lateral de la pàgina principal del repositori.
 
     ![Exemple de llançament en un repositori de GitHub](./img/projectes/release.png)
@@ -237,7 +237,7 @@ Des de la secció de llançaments es pot crear un llançament nou, que ha d'incl
 - __Etiqueta__: etiqueta associada al llançament.
 - __Fitxers binaris__: fitxers binaris associats al llançament.
 
-!!! info "GitHub permet [__generar automàticament les notes de llançament__](https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes), amb informació sobre les __[:material-source-pull: pull requests][pr]__ i les persones que hi han contribuït."
+!!! info "GitHub permet [__generar automàticament les notes de llançament__](https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes), amb informació sobre les __[:material-source-pull: pull requests][pr]__ i les persones que han contribuït."
 
 ??? example "Exemple: Creació d'un llançament"
     La imatge següent mostra la creació d'un llançament nou en un repositori de GitHub.

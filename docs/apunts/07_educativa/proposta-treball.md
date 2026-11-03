@@ -161,7 +161,7 @@ Els passos per a preparar l'organització són:
         /// shadow-figure-caption | #figure-projecte-owners : Professorat com a propietari de l'organització.
 
 
-1. __Crea un :octicons-people-16: equip__ per a cada grup d'alumnes i afig-hi els seus membres.
+1. __Crea un :octicons-people-16: equip__ per a cada grup d'alumnes i afig els seus membres.
 
     !!! info "L'equip :octicons-people-16:, el repositori privat :octicons-repo-locked-16: i el projecte :octicons-table-16: els pot crear el professorat o un dels membres del grup."
 
@@ -170,7 +170,7 @@ Els passos per a preparar l'organització són:
         /// shadow-figure-caption | #figure-projecte-teams : Equips de l'alumnat dins de l'organització.
 
 1. __Crea un :octicons-repo-locked-16: repositori privat__ per a cada grup
-    i __afig-hi com a col·laborador l':octicons-people-16: equip creat anteriorment__.
+    i __afig com a col·laborador l':octicons-people-16: equip creat anteriorment__.
 
     ??? picture "Repositoris dels projectes en l'organització"
         ![Repositoris dels projectes en l'organització](./img/projecte/private-repos.png)
@@ -206,8 +206,8 @@ A partir d'aquest punt, els equips poden treballar de manera autònoma i gestion
 dins d'un únic projecte. Per a treballar de manera col·laborativa sobre el mateix repositori,
 és important que facen un bon ús d'una de les [[estrategies]].
 
-A més, l'ús de :simple-github: GitHub és independent de la metodologia de treball que s'aplique a l'aula,
-com ara metodologies àgils com __Scrum__ o __Kanban__.
+D'altra banda, l'ús de :simple-github: GitHub és independent de la metodologia de treball
+que s'aplique a l'aula, com ara metodologies àgils com __Scrum__ o __Kanban__.
 
 !!! example "Exemple real: projecte intermodular de 1r de DAW amb Scrum"
     Amb l'alumnat de 1r curs de __Desenvolupament d'Aplicacions Web (DAW)__, hem treballat en un
@@ -266,7 +266,7 @@ en la __plataforma educativa oficial (Aules)__, amb l'enllaç al seu repositori.
     /// shadow-figure-caption | #figure-aules-lliurament : Lliurament d'una tasca a Aules.
 
 !!! note "En la pràctica, no revise el codi lliurat a Aules, sinó que el consulte directament en el :octicons-repo-locked-16: repositori privat."
-    No obstant això, de vegades l'alumnat ha tingut algun problema amb :simple-git: Git
+    Tot i això, de vegades l'alumnat ha tingut algun problema amb :simple-git: Git
     i, gràcies a aquesta còpia de seguretat, l'he pogut avaluar.
 
 ## Gestió de l'organització
@@ -300,7 +300,7 @@ Aquesta ferramenta permet fer les accions següents de manera massiva:
 [ghot]: https://github.com/joapuiib/github-organization-tools
 [ghot-docs]: https://joapuiib.github.io/github-organization-tools/
 
-??? example "Exemple: Convidar l'alumnat a l'organització mitjançant `ghot`"
+??? example "Exemple: Convidar l'alumnat a l'organització amb `ghot`"
     El primer pas és crear un fitxer `estudiants.csv` a partir de les dades exportades
     de la plataforma educativa Aules.
 

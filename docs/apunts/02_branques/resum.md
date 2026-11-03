@@ -27,13 +27,13 @@ Per a canviar de branca, hi ha dues ordres equivalents:
 
 === "`checkout`"
     - __`git checkout <nom>`__: canvia a la branca especificada (mou el `HEAD`).
-    - __`git checkout -b <nom>`__: crea una branca nova i s'hi situa.
+    - __`git checkout -b <nom>`__: crea una branca nova i canvia a aquesta.
 
         > Equivalent a `git branch <nom>` i `git checkout <nom>`.
 
 === "`switch`"
     - __`git switch <nom>`__: canvia a la branca especificada (mou el `HEAD`).
-    - __`git switch -c <nom>`__: crea una branca nova i s'hi situa.
+    - __`git switch -c <nom>`__: crea una branca nova i canvia a aquesta.
 
         > Equivalent a `git branch <nom>` i `git switch <nom>`.
 
@@ -46,7 +46,7 @@ La fusió incorpora els canvis d'una branca en la branca actual:
     Si hi ha conflictes, el repositori entra en l'estat `MERGING` i cal resoldre'ls.
 
     - __`--ff-only`__: fa la fusió __només__ si pot ser _fast-forward_.
-    - __`--no-ff`__: fa la fusió sempre mitjançant un __commit de fusió__.
+    - __`--no-ff`__: fa la fusió sempre amb un __commit de fusió__.
 
 - __`git merge --abort`__: en l'estat `MERGING`, atura el procés de fusió i torna a l'estat anterior.
 

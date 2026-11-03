@@ -107,7 +107,7 @@ Els canvis s'emmagatzemen temporalment en una __pila__, de manera que:
         --8<-- "docs/files/avancat/stdout/stash/canvi_c.txt"
         ```
 
-    S'observa que l'índex dels canvis anteriors s'incrementa amb cada reserva nova.
+    Es pot comprovar que l'índex dels canvis anteriors s'incrementa amb cada reserva nova.
 
 ## Mostrar les reserves de canvis
 Per a mostrar les reserves existents, s'utilitza l'ordre:
@@ -120,13 +120,13 @@ Aquesta ordre mostra una llista amb les reserves existents, identificades per l'
 i pel missatge associat.
 
 ??? example "Exemple: Mostrar les reserves de canvis"
-    Es mostren les reserves creades en els exemples anteriors.
+    Les reserves creades en els exemples anteriors es poden llistar.
 
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/stash/llista.txt"
     ```
 
-    S'observa que la reserva més recent, `Canvi C`, ocupa la posició `stash@{0}`.
+    La reserva més recent, `Canvi C`, ocupa la posició `stash@{0}`.
 
 
 ## Mostrar els canvis d'una reserva
@@ -141,13 +141,13 @@ git stash show [-p] [<index>]
 - `[<index>]`: (opcional) índex de la reserva que es vol consultar. Per defecte, `stash@{0}`.
 
 ??? example "Exemple: Mostrar els canvis d'una reserva"
-    Es mostren els canvis de cadascuna de les reserves.
+    Per veure què conté cada reserva, es consulten els seus canvis.
 
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/stash/mostrar.txt"
     ```
 
-    S'observa que cada reserva conté una línia diferent afegida al fitxer `README.md`.
+    Cada reserva conté una línia diferent afegida al fitxer `README.md`.
 
 ## Recuperar els canvis
 Els canvis reservats es poden recuperar amb l'acció `apply`, que els aplica en el __Directori de treball__:
@@ -207,4 +207,4 @@ git stash drop [<index>]
     --8<-- "docs/files/avancat/stdout/stash/drop.txt"
     ```
 
-    S'observa que la reserva descartada desapareix de la llista i que l'índex de la resta es redueix en 1.
+    La reserva descartada desapareix de la llista i l'índex de la resta es redueix en 1.

@@ -1,6 +1,6 @@
 ---
 template: document.html
-title: "Exercici: Col·laboració mitjançant Pull Requests"
+title: "Exercici: Col·laboració amb Pull Requests"
 icon: material/pencil-outline
 alias: projectes-exercici
 ---
@@ -8,12 +8,12 @@ alias: projectes-exercici
 *[PR]: Pull Request
 
 ## Objectius
-Aquest exercici permet practicar la col·laboració en un projecte real mitjançant _Pull Requests_.
+Aquest exercici permet practicar la col·laboració en un projecte real amb _Pull Requests_.
 En acabar, has de saber:
 
 - Crear una bifurcació (_fork_) d'un projecte.
 - Crear una _Pull Request_.
-- Col·laborar en un projecte mitjançant _Pull Requests_.
+- Col·laborar en un projecte amb _Pull Requests_.
 
 
 ## Lliurament
@@ -151,5 +151,5 @@ amb els :octicons-git-commit-24: _commits_ nous de la branca.
 
 Si has acabat l'exercici, pots aprofundir amb aquesta proposta:
 
-- Revisa el repositori a la recerca d'errors i comunica'ls mitjançant l'apartat
+- Revisa el repositori a la recerca d'errors i comunica'ls a través de l'apartat
     [:octicons-issue-opened-24: Incidències](https://github.com/cursgit/filmoteca/issues).
