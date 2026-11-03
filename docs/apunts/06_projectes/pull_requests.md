@@ -11,7 +11,7 @@ tags:
 
 *[PR]: Pull Request
 
-## :material-source-pull: Pull Requests
+## :material-source-pull: Què és una Pull Request?
 Una [__sol·licitud d'incorporació de canvis__](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests)
 (_Pull Request_ o PR) és una petició per a incorporar canvis en una branca d'un repositori.
 Les PR es poden utilitzar per a:

@@ -8,7 +8,6 @@ comments: true
 *[IDE]: Integrated Development Environment
 *[IA]: Intel·ligència Artificial
 
-## GitHub Education
 [__:fontawesome-solid-graduation-cap: GitHub Education__](https://github.com/education) és una iniciativa
 de GitHub adreçada a la comunitat educativa, que proporciona a l'alumnat i al professorat de centres educatius
 accés gratuït a ferramentes i recursos de pagament.
@@ -17,7 +16,7 @@ accés gratuït a ferramentes i recursos de pagament.
     Cal una adreça de correu electrònic vàlida d'un centre educatiu o documentació que acredite
     la vinculació amb el centre.
 
-### Beneficis per a l'alumnat
+## Beneficis per a l'alumnat
 L'alumnat pot obtindre els beneficis del [__GitHub Student Developer Pack__](https://education.github.com/pack),
 que inclou una àmplia varietat de ferramentes i serveis gratuïts. Aquests són alguns dels més destacats:
 
@@ -36,7 +35,7 @@ que inclou una àmplia varietat de ferramentes i serveis gratuïts. Aquests són
 
 !!! info "Més informació: [:octicons-link-external-16: GitHub Education Students](https://github.com/education/students) – :simple-github: GitHub"
 
-### Beneficis per al professorat
+## Beneficis per al professorat
 El professorat també es pot beneficiar dels serveis de GitHub Education, que inclouen ferramentes
 per a gestionar les classes i els projectes de l'alumnat:
 

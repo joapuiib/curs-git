@@ -12,7 +12,6 @@ tags:
     - releases
 ---
 
-## Ferramentes de gestió de projectes a GitHub
 Els serveis d'allotjament de repositoris en línia, com [:simple-github: GitHub][github],
 [:simple-gitlab: GitLab][gitlab] o [:simple-codeberg: Codeberg][codeberg], ofereixen una sèrie de ferramentes
 i funcionalitats que permeten gestionar de manera fàcil i eficaç projectes col·laboratius
@@ -25,7 +24,7 @@ de desenvolupament de programari.
 Aquests apunts se centren en la part de gestió de projectes: crear debats, comunicar incidències
 i organitzar tasques.
 
-### :octicons-comment-discussion-16: Debats
+## :octicons-comment-discussion-16: Debats
 Els [__debats__](https://github.com/features/discussions) (_Discussions_) són un espai de comunicació
 on les persones que formen part d'un projecte o d'una comunitat poden intercanviar idees i opinions,
 fer suggeriments o debatre sobre temes concrets.
@@ -70,7 +69,7 @@ Les categories per defecte són les següents:
 - __:pray_tone1: Q&A__: preguntes i respostes.
 - __:raised_hands_tone1: Show and Tell__: projectes i treballs relacionats amb el repositori.
 
-### :octicons-issue-opened-16: Incidències
+## :octicons-issue-opened-16: Incidències
 Les [__incidències__](https://guides.github.com/features/issues/) (_Issues_) són una ferramenta
 per a crear i fer el seguiment de les incidències relacionades amb un projecte.
 A més, permeten que les persones del projecte es comuniquen i col·laboren per a aportar informació
@@ -133,7 +132,7 @@ que es pot canviar a __:octicons-issue-closed-16:{ .issue-closed } Tancada__ una
 
 [new-issue]: https://github.com/joapuiib/curs-git/issues
 
-### :octicons-table-16: GitHub Projects
+## :octicons-table-16: GitHub Projects
 Els [__projectes de GitHub__](https://docs.github.com/es/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
 (_GitHub Projects_) són una ferramenta de gestió de tasques que permet organitzar, classificar
 i prioritzar les tasques d'un projecte.
@@ -184,7 +183,7 @@ Cada tasca conté la mateixa informació que una incidència, però a més es po
     /// shadow-figure-caption | #figure-exemple-tasca : Exemple de tasca en un projecte de GitHub.
 
 
-### :octicons-milestone-24: Fites
+## :octicons-milestone-24: Fites
 Les [__fites__][milestones] (_Milestones_) són un mecanisme per a agrupar
 [:octicons-issue-opened-16: incidències](#incidencies) i [:material-source-pull: _pull requests_][pr]
 dins d'un repositori. S'utilitzen per a __definir objectius específics__ en el desenvolupament del projecte.
@@ -211,7 +210,7 @@ __:octicons-issue-opened-16: Issues__ o __:material-source-pull: Pull Requests__
 [curs-git]: https://github.com/joapuiib/curs-git/
 [curs-git-milestone]: https://github.com/joapuiib/curs-git/milestone/1
 
-### :material-tray-arrow-up: Llançaments
+## :material-tray-arrow-up: Llançaments
 Els [__llançaments__](https://docs.github.com/es/github/administering-a-repository/releasing-projects-on-github/about-releases)
 (_Releases_) són una funcionalitat de GitHub que permet indicar que s'ha publicat una versió del projecte,
 amb informació rellevant sobre els canvis realitzats i les persones que hi han contribuït.

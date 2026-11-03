@@ -8,7 +8,7 @@ comments: true
 
 *[DAW]: Desenvolupament d'Aplicacions Web
 
-## Proposta d'ús de les organitzacions en l'àmbit educatiu
+## Context
 En aquest apartat es proposa una metodologia de treball per a aprofitar les ferramentes
 de :simple-github: GitHub, facilitar la gestió del treball de l'alumnat i la revisió dels projectes
 per part del professorat.

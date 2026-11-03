@@ -5,12 +5,11 @@ icon: material/file-check-outline
 alias: actions-exemples
 ---
 
-## Exemples de fluxos de treball
 Aquests apunts recullen diferents exemples d'automatitzacions en projectes de naturalesa diversa,
 per a mostrar com es combinen les opcions de GitHub Actions en casos reals.
 
 
-### Publicació d'un lloc web estàtic generat amb ProperDocs a GitHub Pages
+## Publicació d'un lloc web estàtic generat amb ProperDocs a GitHub Pages
 !!! success "Exemple en el repositori d'aquesta documentació: [`curs-git`][curs-git]"
 
 [curs-git]: {{ config.repo_url }}
@@ -47,7 +46,7 @@ Els passos que la componen són els següents:
 ```
 
 
-### Prova de correcció ortogràfica
+## Prova de correcció ortogràfica
 !!! success "Exemple en el repositori d'aquesta documentació: [`curs-git`][curs-git]"
 
 Aquest flux de treball comprova l'ortografia de la documentació del repositori
@@ -76,7 +75,7 @@ quan es modifiquen altres fitxers.
 --8<-- ".github/workflows/spellcheck.yml"
 ```
 
-### Execució de proves unitàries i d'integració en un projecte Java amb Maven
+## Execució de proves unitàries i d'integració en un projecte Java amb Maven
 !!! success "Repositori d'exemple: [`tasklist-api`][tasklist-api]"
     Pots observar-ne el comportament en la :octicons-git-pull-request-16: _Pull Request_
     [feature: tasks can be marked as favorites (#1)][pr]:
@@ -117,7 +116,7 @@ Es basa en dues tasques:
     ```
 
 
-### Publicació d'un paquet de Python a PyPI
+## Publicació d'un paquet de Python a PyPI
 !!! success "Exemple en el repositori [`mkdocs-data-plugin`][mkdocs-data-plugin]"
 
 [mkdocs-data-plugin]: https://github.com/joapuiib/mkdocs-data-plugin/blob/main/.github/workflows/publish-to-pypi.yml
@@ -143,7 +142,7 @@ Els passos que fa són:
 --8<-- "https://raw.githubusercontent.com/joapuiib/mkdocs-data-plugin/refs/heads/main/.github/workflows/publish-to-pypi.yml"
 ```
 
-### Creació d'una imatge de Docker
+## Creació d'una imatge de Docker
 Aquest exemple crea una imatge de Docker a partir d'un repositori de GitHub
 i la publica a [Docker Hub](https://hub.docker.com/), seguint el tutorial següent:
 

@@ -29,7 +29,7 @@ Per tot això, GitHub es pot convertir en una plataforma educativa molt potent, 
     a l'entorn educatiu mitjançant metodologies actives.
 
 
-## :octicons-organization-16: Organitzacions
+## :octicons-organization-16: Què és una organització?
 Les [__organitzacions__](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations)
 són comptes compartits que permeten agrupar diversos repositoris i persones col·laboradores,
 i gestionar els permisos d'accés de manera centralitzada.
