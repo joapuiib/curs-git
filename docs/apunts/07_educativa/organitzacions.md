@@ -26,7 +26,7 @@ Per tot això, GitHub es pot convertir en una plataforma educativa molt potent, 
 - __Treball col·laboratiu__: GitHub facilita la col·laboració entre l'alumnat, ja que permet treballar
     en branques independents i fusionar els canvis de manera senzilla.
 - __Gestió de projectes__: GitHub ofereix ferramentes de gestió de projectes que es poden adaptar
-    a l'entorn educatiu mitjançant metodologies actives.
+    a l'entorn educatiu amb metodologies actives.
 
 
 ## :octicons-organization-16: Organitzacions
@@ -45,7 +45,7 @@ Es pot crear una organització nova en l'apartat
 [__:octicons-organization-16: Organitzacions__](https://github.com/settings/organizations) del teu compte de GitHub.
 En crear-la, GitHub demana quin pla es vol utilitzar.
 
-!!! important "En l'àmbit educatiu, es pot utilitzar el pla gratuït i després sol·licitar la millora a GitHub Team mitjançant [GitHub Global Campus](https://education.github.com/globalcampus/teacher)."
+!!! important "En l'àmbit educatiu, es pot utilitzar el pla gratuït i després sol·licitar la millora a GitHub Team a través de [GitHub Global Campus](https://education.github.com/globalcampus/teacher)."
 
 A continuació, cal especificar la informació següent:
 
@@ -60,7 +60,7 @@ A continuació, cal especificar la informació següent:
 
 
 ### Millorar una organització a GitHub Team
-La millora d'una organització a GitHub Team es pot sol·licitar mitjançant
+La millora d'una organització a GitHub Team es pot sol·licitar a través de
 [GitHub Global Campus](https://education.github.com/globalcampus/teacher).
 
 ??? picture "Millorar una organització a GitHub Team"

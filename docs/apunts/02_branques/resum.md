@@ -47,7 +47,7 @@ La fusió incorpora els canvis d'una branca en la branca actual:
     Si hi ha conflictes, el repositori entra en l'estat `MERGING` i cal resoldre'ls.
 
     - __`--ff-only`__: fa la fusió __només__ si pot ser _fast-forward_.
-    - __`--no-ff`__: fa la fusió sempre mitjançant un __commit de fusió__.
+    - __`--no-ff`__: fa la fusió sempre amb un __commit de fusió__.
 
 - __`git merge --abort`__: en l'estat `MERGING`, atura el procés de fusió i torna a l'estat anterior.
 

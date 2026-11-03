@@ -133,7 +133,7 @@ relativa al __Repositori local__.
     3. S'ha creat el directori ocult `.git`, que conté tota la informació del repositori.
 
     L'ordre `git status` mostra l'estat actual del repositori.
-    S'observa que la branca actual és `main` i que encara no s'ha fet cap canvi.
+    La branca actual és `main` i encara no s'ha fet cap canvi.
 
 
 ### Eliminar un repositori
@@ -166,7 +166,7 @@ rm -rf .git
     fatal: not a git repository (or any of the parent directories): .git
     ```
 
-    Es pot comprovar que, després d'eliminar el directori `.git`, Git ja no reconeix el directori com a repositori.
+    Després d'eliminar el directori `.git`, Git ja no reconeix el directori com a repositori.
 
 ## Estructura d'un repositori de Git
 Aquesta introducció se centra en el funcionament __local__ dels repositoris de Git,
@@ -281,7 +281,7 @@ Changes to be committed:
         new file:   README.md
 ```
 
-S'observa que el fitxer `README.md` ha passat a l'estat __Staged__ i ja està preparat per a ser confirmat.
+El fitxer `README.md` ha passat a l'estat __Staged__ i ja està preparat per a ser confirmat.
 
 ![Fitxer a l'Àrea de preparació (staged)](img/staged_readme.light.png#only-light)
 ![Fitxer a l'Àrea de preparació (staged)](img/staged_readme.dark.png#only-dark)
@@ -463,7 +463,7 @@ git diff [--staged] [<path>]
     +Aquesta és una línia nova
     ```
 
-    S'observa la línia afegida, marcada amb el símbol `+`.
+    La línia afegida apareix marcada amb el símbol `+`.
 
 ??? example "Exemple: Diferències entre l'Àrea de preparació i el Repositori local"
     S'afig el fitxer `README.md` a l'_Àrea de preparació_ i es compara amb el __Repositori local__.
@@ -617,7 +617,7 @@ git log [<options>]
         Added README.md
     ```
 
-    S'observa la informació de cada _commit_: l'autor, la data, el missatge i l'identificador.
+    Per a cada _commit_ es mostra l'autor, la data, el missatge i l'identificador.
 
 L'ordre `git log` admet moltes opcions per a personalitzar com es mostren els _commits_ i la seua informació.
 Una possible combinació d'opcions per a visualitzar l'històric de manera més compacta i intuïtiva és:
@@ -635,7 +635,7 @@ git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(re
     * 8e70293 - (3 days ago) Added README.md - Joan Puigcerver
     ```
 
-    Es pot comprovar que cada _commit_ ocupa una sola línia.
+    Cada _commit_ ocupa una sola línia.
 
 No obstant això, no és pràctic recordar aquesta ordre. Per això, es pot configurar un __àlies__,
 és a dir, un nom curt que Git substitueix per l'ordre completa:
@@ -659,7 +659,7 @@ git config --global alias.lga "lg --all"
 
 ## Configuració (`git config`)
 Git permet configurar diferents paràmetres per a personalitzar el seu comportament
-mitjançant l'ordre `git config`.
+amb l'ordre `git config`.
 
 La configuració es pot fer en tres nivells. Els paràmetres d'un nivell més específic
 sobreescriuen els d'un nivell més general:
@@ -761,13 +761,13 @@ git config [--local | --global | --system] --edit
         lga = lg --all
     ```
 
-    S'observa tota la configuració feta fins ara, agrupada per seccions.
+    La configuració feta fins ara apareix agrupada per seccions.
 
 
 
 ## Ignorar fitxers (`.gitignore`)
 En un projecte hi ha fitxers que no s'han d'incloure en el repositori, com ara fitxers temporals,
-binaris o fitxers de configuració local. Per això, __Git permet ignorar fitxers mitjançant el fitxer
+binaris o fitxers de configuració local. Per això, __Git permet ignorar fitxers amb el fitxer
 `.gitignore`__, que conté una llista de patrons de fitxers que Git no ha de tindre en compte.
 
 Aquest fitxer pot estar situat en qualsevol directori del repositori. Git ignora tots els fitxers

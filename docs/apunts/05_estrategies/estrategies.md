@@ -18,7 +18,7 @@ una metodologia de treball que facilite la gestió i el desenvolupament del proj
 
 Si, a més, s'utilitza __:simple-git: Git__ com a sistema de control de versions, cal una
 __estratègia de ramificació__: un conjunt de regles i pautes que defineixen
-__el flux de treball mitjançant branques__. Els objectius d'una estratègia de ramificació són:
+__el flux de treball amb branques__. Els objectius d'una estratègia de ramificació són:
 
 - __Claredat__: proporciona un flux de treball clar i coherent per a gestionar els canvis del codi.
 - __Desenvolupament paral·lel__: permet treballar en diverses funcionalitats alhora.
@@ -233,7 +233,7 @@ de desenvolupament de programari. Es basa en la creació de les branques `main`,
 /// figure-caption | #figure-gitflow : Esquema de branques amb Gitflow.
 
 La particularitat d'aquesta estratègia és que les branques de funcionalitat `feature/*` es fusionen
-amb la branca de desenvolupament `develop` mitjançant `merge --no-ff`. D'aquesta manera, es conserva
+amb la branca de desenvolupament `develop` amb `merge --no-ff`. D'aquesta manera, es conserva
 la història de les branques de funcionalitat, que s'incorporen amb un __commit de fusió__.
 
 ```bash
@@ -241,9 +241,9 @@ git checkout develop
 git merge --no-ff feature/A
 ```
 
-![Fusió de branques mitjançant merge --no-ff](img/merge_no_ff.light.png#only-light)
-![Fusió de branques mitjançant merge --no-ff](img/merge_no_ff.dark.png#only-dark)
-/// figure-caption | #figure-merge-no-ff : Fusió de branques mitjançant `merge --no-ff`.
+![Fusió de branques amb merge --no-ff](img/merge_no_ff.light.png#only-light)
+![Fusió de branques amb merge --no-ff](img/merge_no_ff.dark.png#only-dark)
+/// figure-caption | #figure-merge-no-ff : Fusió de branques amb `merge --no-ff`.
 
 Les característiques d'aquesta opció són:
 
@@ -264,9 +264,9 @@ git checkout develop
 git merge --ff-only feature/A
 ```
 
-![Fusió de branques mitjançant rebase](img/rebase_merge_ff.light.png#only-light)
-![Fusió de branques mitjançant rebase](img/rebase_merge_ff.dark.png#only-dark)
-/// figure-caption | #figure-rebase-merge-ff : Fusió de branques mitjançant `rebase` + `merge --ff-only`.
+![Fusió de branques amb rebase](img/rebase_merge_ff.light.png#only-light)
+![Fusió de branques amb rebase](img/rebase_merge_ff.dark.png#only-dark)
+/// figure-caption | #figure-rebase-merge-ff : Fusió de branques amb `rebase` + `merge --ff-only`.
 
 Les característiques d'aquesta opció són:
 
@@ -280,7 +280,7 @@ Les característiques d'aquesta opció són:
 ### `rebase` + `merge --no-ff`
 Aquesta tècnica combina les dues anteriors per a aprofitar els avantatges de cadascuna
 i, alhora, minimitzar-ne els inconvenients. Consisteix a fer un canvi de base (`rebase`) i, després,
-fusionar la branca de funcionalitat mitjançant un __commit de fusió__ amb `merge --no-ff`.
+fusionar la branca de funcionalitat amb un __commit de fusió__ mitjançant `merge --no-ff`.
 
 ```bash
 git checkout feature/A
@@ -289,9 +289,9 @@ git checkout develop
 git merge --no-ff feature/A
 ```
 
-![Fusió de branques mitjançant rebase + merge --no-ff](img/rebase_merge_no_ff.light.png#only-light)
-![Fusió de branques mitjançant rebase + merge --no-ff](img/rebase_merge_no_ff.dark.png#only-dark)
-/// figure-caption | #figure-rebase-merge-no-ff : Fusió de branques mitjançant `rebase` + `merge --no-ff`.
+![Fusió de branques amb rebase + merge --no-ff](img/rebase_merge_no_ff.light.png#only-light)
+![Fusió de branques amb rebase + merge --no-ff](img/rebase_merge_no_ff.dark.png#only-dark)
+/// figure-caption | #figure-rebase-merge-no-ff : Fusió de branques amb `rebase` + `merge --no-ff`.
 
 Les característiques d'aquesta opció són:
 
@@ -303,7 +303,7 @@ Les característiques d'aquesta opció són:
 
 ### `merge --squash --ff-only`
 Aquesta tècnica consisteix a fusionar les branques de funcionalitat amb la branca de desenvolupament `develop`
-mitjançant `merge --squash --ff-only`, de manera que tots els _commits_ de la branca de funcionalitat
+amb `merge --squash --ff-only`, de manera que tots els _commits_ de la branca de funcionalitat
 es fusionen en un __únic _commit___.
 
 !!! recommend "Aquesta és la tècnica d'integració recomanada."
@@ -314,13 +314,13 @@ git merge --squash --ff-only feature/A
 git commit -m <missatge>
 ```
 
-![Fusió de branques mitjançant merge --squash --ff-only](img/merge_squash.light.png#only-light)
-![Fusió de branques mitjançant merge --squash --ff-only](img/merge_squash.dark.png#only-dark)
-/// figure-caption | #figure-merge-squash : Fusió de branques mitjançant `merge --squash --ff-only`.
+![Fusió de branques amb merge --squash --ff-only](img/merge_squash.light.png#only-light)
+![Fusió de branques amb merge --squash --ff-only](img/merge_squash.dark.png#only-dark)
+/// figure-caption | #figure-merge-squash : Fusió de branques amb `merge --squash --ff-only`.
 
 Si la branca de funcionalitat no està actualitzada respecte de la branca de desenvolupament,
 es considera una bona pràctica integrar primer els canvis de `develop` en la branca de funcionalitat.
-En aquest procés també es poden resoldre els conflictes, si n'hi ha.
+A més, en aquest procés es poden resoldre els conflictes, si n'hi ha.
 Per a fer aquesta integració, es recomana utilitzar `git merge --no-ff`:
 
 ```bash
@@ -331,9 +331,9 @@ git merge --squash --ff-only feature/A
 git commit -m <missatge>
 ```
 
-![Fusió de branques mitjançant merge --no-ff + merge --squash --ff-only](img/merge_no_ff_squash.light.png#only-light)
-![Fusió de branques mitjançant merge --no-ff + merge --squash --ff-only](img/merge_no_ff_squash.dark.png#only-dark)
-/// figure-caption | #figure-merge-no-ff-squash : Fusió de branques mitjançant `merge --no-ff` + `merge --squash --ff-only`.
+![Fusió de branques amb merge --no-ff + merge --squash --ff-only](img/merge_no_ff_squash.light.png#only-light)
+![Fusió de branques amb merge --no-ff + merge --squash --ff-only](img/merge_no_ff_squash.dark.png#only-dark)
+/// figure-caption | #figure-merge-no-ff-squash : Fusió de branques amb `merge --no-ff` + `merge --squash --ff-only`.
 
 Com que la branca de funcionalitat s'elimina després de la fusió,
 no importa si la seua història queda neta o no.

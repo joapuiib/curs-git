@@ -225,7 +225,7 @@ i `git rebase --continue` (vegeu
 
 Si has acabat l'exercici, pots aprofundir amb aquesta proposta:
 
-- Configura `git pull` perquè només permeta incorporar els canvis mitjançant una
+- Configura `git pull` perquè només permeta incorporar els canvis amb una
     [:material-book-open-variant: fusió directa][fusio-directa]. Després, comprova'n el funcionament
     executant `git pull` en una situació que requerisca una fusió de branques divergents.
 

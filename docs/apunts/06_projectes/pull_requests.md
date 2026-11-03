@@ -128,9 +128,9 @@ La incorporació es pot fer de tres maneres diferents:
 - __Crear un _commit_ de fusió__: es crea un _commit_ nou que incorpora els canvis de la PR,
     com en una [[branques#fusio-de-branques-divergents]].
 - __Fusió en un sol _commit_ (`squash`)__: es fusionen tots els canvis de la PR en un sol _commit_
-    mitjançant [[squash]].
+    amb [[squash]].
 - __Canvi de base (`rebase`)__: es fa un [[branques#canvi-de-base-git-rebase]] de la branca de la PR
-    respecte de la branca de destí i es fusiona mitjançant una [[branques#fusio-directa]].
+    respecte de la branca de destí i es fusiona amb una [[branques#fusio-directa]].
 
 !!! recommend "La fusió en un sol _commit_ (`squash`) és útil per a mantindre una història de _commits_ més clara, ordenada i concisa."
     Si cal consultar el procés de revisió de la branca, sempre es pot accedir a la PR,
@@ -174,7 +174,7 @@ El flux de treball pot ser el següent:
 
 ## Protecció de branques
 Per a evitar canvis no desitjats en les branques principals i problemes deguts a una mala aplicació
-de les [[estrategies]], les branques importants (com `main` o `develop`) es poden protegir mitjançant
+de les [[estrategies]], les branques importants (com `main` o `develop`) es poden protegir amb
 [__conjunts de regles__](https://docs.github.com/es/github/administering-a-repository/defining-the-mergeability-of-pull-requests)
 (_Rulesets_).
 
@@ -186,7 +186,7 @@ Aquestes regles permeten definir les condicions per a modificar la branca especi
 - __Història lineal__: obligar a mantindre una història lineal.
 - __Publicacions forçades__: no permetre publicacions forçades (`push --force`).
 - __Comprovacions__: obligar que les [[actions|comprovacions automàtiques]] s'hagen completat satisfactòriament.
-- __Pull Request obligatòria__: obligar que la fusió es faça mitjançant una PR.
+- __Pull Request obligatòria__: obligar que la fusió es faça per mitjà d'una PR.
     En aquest cas, es poden configurar altres opcions, com ara:
 
     - Que la branca estiga actualitzada amb la branca de destí.

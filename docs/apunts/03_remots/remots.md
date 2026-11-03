@@ -74,7 +74,7 @@ Les principals finalitats dels repositoris remots són:
     puja els canvis al repositori remot perquè la resta de l'equip els puga vore i incorporar.
 - __Còpia de seguretat__: un repositori remot pot servir com a còpia de seguretat del projecte.
     Si el teu sistema local es danya o es perd, encara tens accés a la història completa
-    i als fitxers del projecte mitjançant el repositori remot.
+    i als fitxers del projecte a través del repositori remot.
 - __Distribució__: els repositoris remots permeten distribuir el codi a altres llocs,
     tant per a compartir-lo amb altres persones com per a desplegar el projecte en un servidor en línia.
 
@@ -204,7 +204,7 @@ git remote add <alies> <url>
     --8<-- "docs/files/remots/stdout/remots/add_remote.txt"
     ```
 
-    S'observa que el remot `origin` apareix associat a la URL indicada.
+    El remot `origin` apareix associat a la URL indicada.
 
 
 ### Reanomenar un repositori remot
@@ -266,7 +266,7 @@ git push [-u | --set-upstream] [<remot> [<branca>]]
     ```
 
     Localment s'ha creat la referència `origin/main`, que apunta a la branca remota `main`.
-    Alhora, ara `git branch -vv` mostra `[origin/main]` al costat de la branca `main`,
+    D'altra banda, ara `git branch -vv` mostra `[origin/main]` al costat de la branca `main`,
     és a dir, la branca remota associada. Finalment, els canvis s'han publicat correctament en el repositori remot:
 
     ![Canvis publicats a GitHub](img/github_push.png)
@@ -274,7 +274,7 @@ git push [-u | --set-upstream] [<remot> [<branca>]]
 
 
 ### Associació amb una branca remota (_upstream_)
-Cada branca local es pot associar amb una branca remota mitjançant l'opció `-u` o `--set-upstream`
+Cada branca local es pot associar amb una branca remota amb l'opció `-u` o `--set-upstream`
 de l'ordre `git push`. Aquesta branca remota s'anomena __upstream__ i inclou tant el remot
 com el nom de la branca en aquest:
 
@@ -465,7 +465,7 @@ git pull [<options>] [<remot> [<branca>]]
         git config --global pull.ff only
         ```
 
-    - __`git pull --rebase`__: incorpora els canvis de la branca remota mitjançant un canvi de base (`rebase`),
+    - __`git pull --rebase`__: incorpora els canvis de la branca remota per mitjà d'un canvi de base (`rebase`),
         és a dir, aplica els canvis de la branca local després dels canvis de la branca remota.
         { #git-pull-rebase }
 

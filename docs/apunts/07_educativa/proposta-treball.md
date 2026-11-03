@@ -206,8 +206,8 @@ A partir d'aquest punt, els equips poden treballar de manera autònoma i gestion
 dins d'un únic projecte. Per a treballar de manera col·laborativa sobre el mateix repositori,
 és important que facen un bon ús d'una de les [[estrategies]].
 
-L'ús de :simple-github: GitHub és, d'altra banda, independent de la metodologia de treball que s'aplique a l'aula,
-com ara metodologies àgils com __Scrum__ o __Kanban__.
+D'altra banda, l'ús de :simple-github: GitHub és independent de la metodologia de treball
+que s'aplique a l'aula, com ara metodologies àgils com __Scrum__ o __Kanban__.
 
 !!! example "Exemple real: projecte intermodular de 1r de DAW amb Scrum"
     Amb l'alumnat de 1r curs de __Desenvolupament d'Aplicacions Web (DAW)__, hem treballat en un
@@ -289,7 +289,7 @@ Aquesta ferramenta permet fer les accions següents de manera massiva:
 !!! docs "Documentació: [:octicons-link-external-16: GitHub Organization Tools][ghot-docs] – `ghot`"
 
 !!! warning "`ghot` és una ferramenta en __estat experimental__. Et recomane executar primer les ordres amb l'opció `--dry` per a comprovar que tot funciona correctament."
-    Si trobes algun error o tens alguna proposta de millora, pots indicar-ho en la secció
+    A més, si trobes algun error o tens alguna proposta de millora, pots indicar-ho en la secció
     [:octicons-issue-opened-16: Issues del repositori de `ghot`][ghot-issues].
 
 [ghot-issues]: https://github.com/joapuiib/github-organization-tools/issues
@@ -300,7 +300,7 @@ Aquesta ferramenta permet fer les accions següents de manera massiva:
 [ghot]: https://github.com/joapuiib/github-organization-tools
 [ghot-docs]: https://joapuiib.github.io/github-organization-tools/
 
-??? example "Exemple: Convidar l'alumnat a l'organització mitjançant `ghot`"
+??? example "Exemple: Convidar l'alumnat a l'organització amb `ghot`"
     El primer pas és crear un fitxer `estudiants.csv` a partir de les dades exportades
     de la plataforma educativa Aules.
 

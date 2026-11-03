@@ -43,7 +43,7 @@ en cada fase del flux de treball.
 1. Modifica el fitxer `llibres.txt` per a eliminar un dels llibres.
 1. Fes un cinqué _commit_.
 1. Modifica el fitxer `pelicules.txt` per a afegir una pel·lícula.
-1. Sense modificar el fitxer manualment, descarta el canvi de `pelicules.txt` mitjançant una ordre de Git.
+1. Sense modificar el fitxer manualment, descarta el canvi de `pelicules.txt` amb una ordre de Git.
 1. Afig el fitxer `{data}.log` amb qualsevol contingut, on `{data}` és la data actual en format `YYYYMMDD`.
 1. Configura el repositori perquè ignore els fitxers amb extensió `.log`.
 1. Fes un _commit_ amb aquesta configuració.

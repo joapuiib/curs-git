@@ -121,7 +121,7 @@ Aquesta ordre mostra una llista amb les reserves existents, identificades per l'
 i pel missatge associat.
 
 ??? example "Exemple: Mostrar les reserves de canvis"
-    Es mostren les reserves creades en els exemples anteriors.
+    Les reserves creades en els exemples anteriors es poden llistar.
 
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/stash/llista.txt"
@@ -142,7 +142,7 @@ git stash show [-p] [<index>]
 - `[<index>]`: (opcional) índex de la reserva que es vol consultar. Per defecte, `stash@{0}`.
 
 ??? example "Exemple: Mostrar els canvis d'una reserva"
-    Es mostren els canvis de cadascuna de les reserves.
+    Per veure què conté cada reserva, es consulten els seus canvis.
 
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/stash/mostrar.txt"
@@ -208,4 +208,4 @@ git stash drop [<index>]
     --8<-- "docs/files/avancat/stdout/stash/drop.txt"
     ```
 
-    S'observa que la reserva descartada desapareix de la llista i que l'índex de la resta es redueix en 1.
+    La reserva descartada desapareix de la llista i l'índex de la resta es redueix en 1.

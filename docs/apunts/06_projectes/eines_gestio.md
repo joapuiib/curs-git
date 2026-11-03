@@ -38,7 +38,7 @@ del repositori, __:octicons-gear-16: Settings__, i habilitar-la.
 
 ??? example "Exemple: Debats en aquest repositori"
     Aquest lloc web està allotjat a :simple-github: GitHub i té habilitada la funcionalitat de debats.
-    S'hi pot accedir mitjançant la secció __:octicons-comment-discussion-16: Discussions__ del menú superior
+    S'hi pot accedir a través de la secció __:octicons-comment-discussion-16: Discussions__ del menú superior
     o en [aquest enllaç](https://github.com/joapuiib/curs-git/discussions).
 
     ![Debats en el repositori d'aquest curs a GitHub](./img/projectes/exemple_debats.png)
@@ -79,7 +79,7 @@ sobre la incidència i debatre'n la resolució.
 ??? example "Exemple: Incidències a :simple-materialformkdocs: Material for MkDocs"
     [:simple-materialformkdocs: Material for MkDocs][mkdocs-material] també utilitza les incidències
     per a informar de problemes, suggeriments o millores del tema.
-    S'hi pot accedir mitjançant la secció [__:octicons-issue-opened-16: Issues__][mkdocs-material-issues]
+    S'hi pot accedir des de la secció [__:octicons-issue-opened-16: Issues__][mkdocs-material-issues]
     del menú superior.
 
     ![Llista d'incidències en un repositori de GitHub](./img/projectes/exemple_issues.png)
@@ -223,7 +223,7 @@ els llançaments són elements de GitHub, mentre que les etiquetes són objectes
 ??? example "Exemple: Llançaments a :simple-materialformkdocs: Material for MkDocs"
     [:simple-materialformkdocs: Material for MkDocs][mkdocs-material] també utilitza els llançaments
     per a indicar que s'ha publicat una versió nova del tema.
-    S'hi pot accedir mitjançant la secció [__Releases__][mkdocs-material-releases]
+    S'hi pot accedir des de la secció [__Releases__][mkdocs-material-releases]
     del lateral de la pàgina principal del repositori.
 
     ![Exemple de llançament en un repositori de GitHub](./img/projectes/release.png)

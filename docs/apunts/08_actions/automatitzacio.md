@@ -20,7 +20,7 @@ integrar els canvis en el codi de manera regular i distribuir-los automàticamen
 
 Aquestes pràctiques són essencials en el desenvolupament de programari actual, ja que acceleren
 el lliurament de funcionalitats noves, redueixen el temps d'aturada i milloren la qualitat del projecte
-mitjançant l'__automatització__ de tasques repetitives, sense necessitat d'intervenció manual.
+gràcies a l'__automatització__ de tasques repetitives, sense necessitat d'intervenció manual.
 Les tasques que s'automatitzen més habitualment són:
 
 - __Compilació__: compilació i empaquetatge de l'aplicació.
@@ -279,7 +279,7 @@ com ara credencials d'accés a serveis externs, claus d'API, etc.
 En aquests casos, és important no incloure aquesta informació directament en els fitxers de configuració,
 ja que formen part del repositori i qualsevol persona amb accés al repositori els pot llegir.
 
-GitHub Actions permet gestionar aquesta informació de manera segura mitjançant els __:octicons-key-asterisk-16: secrets__:
+GitHub Actions permet gestionar aquesta informació de manera segura amb els __:octicons-key-asterisk-16: secrets__:
 variables d'entorn que es poden utilitzar en les tasques d'automatització, però que no són visibles
 ni accessibles des dels fitxers de configuració.
 
@@ -317,7 +317,7 @@ estàtics[^1] directament des d'un repositori de GitHub.
 !!! info "Amb un compte gratuït de :simple-github: GitHub, només es pot configurar GitHub Pages en repositoris públics."
     En els repositoris privats, [cal un compte de pagament](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages).
     No obstant això, GitHub proporciona llicències gratuïtes per a l'alumnat i el professorat
-    mitjançant [:fontawesome-solid-graduation-cap: GitHub Education](https://education.github.com/).
+    a través de [:fontawesome-solid-graduation-cap: GitHub Education](https://education.github.com/).
 
 Aquest servei és útil per a publicar:
 

@@ -9,7 +9,7 @@ tags:
 ---
 
 ## Etiquetes
-En Git, cada _commit_ s'identifica mitjançant un _hash_, un identificador alfanumèric que es genera
+En Git, cada _commit_ s'identifica per mitjà d'un _hash_, un identificador alfanumèric que es genera
 quan es crea el _commit_. No obstant això, de vegades és útil identificar punts concrets de la història
 del repositori amb un nom, que és més fàcil de recordar i més significatiu que un _hash_.
 
@@ -98,7 +98,7 @@ git tag [-a] <nom_etiqueta> [-m "<missatge>"] [<ref>]
     ```
 
 ??? example "Exemple: Creació d'etiquetes lleugeres"
-    Es creen les etiquetes lleugeres següents:
+    De manera semblant, es creen les etiquetes lleugeres següents:
 
     - `v1.1.0`, en el _commit_ __README: Descripció__.
     - `v2.1.0`, en el _commit_ actual.
@@ -119,14 +119,14 @@ git tag [-l | --list] [<patró>]
     [caràcters comodí](https://en.wikipedia.org/wiki/Wildcard_character) (_wildcards_).
 
 ??? example "Exemple: Llistar etiquetes"
-    Es mostren les etiquetes del repositori.
+    Per veure les etiquetes existents, es llisten totes les del repositori.
 
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/etiquetes/llista.txt"
     ```
 
 ??? example "Exemple: Llistar etiquetes amb un patró"
-    Es mostren les etiquetes del repositori que comencen per `v2.`.
+    Per filtrar-les, es llisten només les etiquetes que comencen per `v2.`.
 
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/etiquetes/llista_patro.txt"
@@ -148,22 +148,22 @@ que ha creat l'etiqueta, la data de creació i el missatge associat.
 !!! docs "Documentació oficial: [:octicons-link-external-16: `git show`](https://git-scm.com/docs/git-show) – :simple-git: Git"
 
 ??? example "Exemple: Consultar la informació d'una etiqueta anotada"
-    Es mostra la informació de l'etiqueta anotada `v1.0.0`.
+    Per consultar l'etiqueta anotada `v1.0.0`, es mostra tota la seua informació.
 
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/etiquetes/info_etiqueta_anotada.txt"
     ```
 
-    S'observa la persona que ha creat l'etiqueta, la data de creació, el missatge i el _commit_ associat.
+    L'eixida inclou la persona que ha creat l'etiqueta, la data de creació, el missatge i el _commit_ associat.
 
 ??? example "Exemple: Consultar la informació d'una etiqueta lleugera"
-    Es mostra la informació de l'etiqueta lleugera `v1.1.0`.
+    De la mateixa manera, es consulta la informació de l'etiqueta lleugera `v1.1.0`.
 
     ```shellconsole
     --8<-- "docs/files/avancat/stdout/etiquetes/info_etiqueta_lleugera.txt"
     ```
 
-    S'observa que, en aquest cas, només es mostra el _commit_ associat.
+    En aquest cas, només es mostra el _commit_ associat.
 
 
 ### Eliminar etiquetes
@@ -224,7 +224,7 @@ git push -d origin <nom_etiqueta>
     --8<-- "docs/files/avancat/stdout/etiquetes/push_etiquetes.txt"
     ```
 
-    S'observa que les etiquetes creades en el repositori local s'han publicat en el
+    Ara les etiquetes creades en el repositori local s'han publicat en el
     [repositori remot](https://github.com/joapuiib/cursgit_etiquetes/tags).
 
     ![Repositori remot amb etiquetes](img/etiquetes/github_etiquetes.png)

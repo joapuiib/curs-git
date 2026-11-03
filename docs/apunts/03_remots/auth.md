@@ -44,7 +44,7 @@ Si encara no en tens, crea'n un.
 
 !!! note "Hi ha persones que prefereixen tindre diferents comptes, per exemple, un de personal i un de professional."
     No obstant això, gestionar l'autenticació de diversos comptes afig complexitat.
-    Cal parar atenció, també, a la [[introduccio#configuracio-git-config|configuració]]
+    També cal parar atenció a la [[introduccio#configuracio-git-config|configuració]]
     local i global dels valors `user.name` i `user.email`.
 
 
@@ -53,13 +53,13 @@ Per a enllaçar el teu repositori local amb el repositori remot i publicar-hi ca
 cal autenticar-se en el servidor de GitHub.
 
 !!! recommend "Per seguretat i comoditat, es recomana utilitzar el __mètode SSH__ per a autenticar-se en el servidor de GitHub."
-    Pots anar directament a l'apartat [Autenticació mitjançant claus SSH](#autenticacio-mitjancant-claus-ssh)
+    Pots anar directament a l'apartat [Autenticació amb claus SSH](#autenticacio-amb-claus-ssh)
     per a configurar aquest mètode d'autenticació.
 
 GitHub ofereix diferents mètodes d'autenticació, basats en dos protocols de comunicació:
 
 - __Protocol HTTPS__: cal configurar les teues credencials d'accés a GitHub en el sistema local.
-    Aquesta autenticació es pot fer mitjançant:
+    Aquesta autenticació es pot fer amb:
 
     - __~~Nom d'usuari i contrasenya~~__: aquest mètode està deshabilitat a GitHub des del 13/08/2021.
     - __Token d'accés personal__ (_Personal Access Token_ o PAT): una clau d'accés que GitHub
@@ -71,12 +71,12 @@ GitHub ofereix diferents mètodes d'autenticació, basats en dos protocols de co
 
 A més, la ferramenta [:simple-github: GitHub CLI][github-cli] (`gh`) permet configurar l'autenticació
 de manera interactiva amb qualsevol dels dos protocols, sense haver de crear manualment el token
-ni la clau SSH. Vegeu [Autenticació mitjançant GitHub CLI](#autenticacio-mitjancant-github-cli).
+ni la clau SSH. Vegeu [Autenticació amb GitHub CLI](#autenticacio-amb-github-cli).
 
 
 ### Token d'accés personal (PAT)
 Un __token d'accés personal__ (_Personal Access Token_ o PAT) és una clau d'accés
-que permet autenticar-se en el servidor de GitHub mitjançant el protocol HTTPS.
+que permet autenticar-se en el servidor de GitHub amb el protocol HTTPS.
 Funciona com una contrasenya, però es pot limitar a uns permisos concrets i revocar en qualsevol moment.
 
 Per a crear un token d'accés personal, segueix aquests passos:
@@ -132,8 +132,8 @@ El token d'accés personal es pot utilitzar de dues maneres:
         – :simple-stackoverflow: StackOverflow
 
 
-### Autenticació mitjançant claus SSH
-Per a autenticar-se en el servidor de GitHub mitjançant el protocol SSH, cal generar una clau SSH
+### Autenticació amb claus SSH
+Per a autenticar-se en el servidor de GitHub amb el protocol SSH, cal generar una clau SSH
 en el sistema local i afegir-la al teu compte de GitHub. Una __clau SSH__ és un parell de claus:
 la __clau privada__ es queda en el teu dispositiu i la __clau pública__ es comparteix amb GitHub.
 
@@ -220,7 +220,7 @@ Hi joapuiib! You've successfully authenticated, but GitHub does not provide shel
 ```
 
 
-### Autenticació mitjançant :simple-github: GitHub CLI
+### Autenticació amb :simple-github: GitHub CLI
 [:simple-github: GitHub CLI][github-cli] és una ferramenta de línia d'ordres per a interactuar amb GitHub
 des de la terminal. Permet gestionar repositoris, incidències (_issues_), sol·licituds d'incorporació
 de canvis (_pull requests_) i altres funcionalitats de GitHub.
