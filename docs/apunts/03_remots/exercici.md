@@ -69,7 +69,7 @@ cadascuna amb el seu repositori local.
 
 
 ### Enllaç amb el repositori remot
-1. Configura el repositori local per a afegir-hi com a `origin` el repositori remot creat anteriorment.
+1. Configura el repositori local per a afegir com a `origin` el repositori remot creat anteriorment.
 1. Publica la branca `main` al repositori remot, associant-la a la branca `origin/main`
     del repositori remot.
 

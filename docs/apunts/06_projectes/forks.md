@@ -54,7 +54,7 @@ Estructura de treball amb _forks_ i _pull requests_.
     ![Repositori original de Material for MkDocs](./img/forks/fork_principal.png)
     /// shadow-figure-caption | #figure-fork-principal : [Repositori :simple-materialformkdocs: Material for MkDocs][mkdocs-material].
 
-    Per a poder fer-hi contribucions, s'ha creat un [:material-source-fork: __fork__][mkdocs-material-fork]
+    Per a poder fer contribucions, s'ha creat un [:material-source-fork: __fork__][mkdocs-material-fork]
     del repositori original.
 
     ![Repositori de Material for MkDocs bifurcat](./img/forks/fork_forked.png)

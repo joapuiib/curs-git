@@ -28,13 +28,13 @@ Per a canviar de branca, hi ha dues ordres equivalents:
 
 === "`checkout`"
     - __`git checkout <nom>`__: canvia a la branca especificada (mou el `HEAD`).
-    - __`git checkout -b <nom>`__: crea una branca nova i s'hi situa.
+    - __`git checkout -b <nom>`__: crea una branca nova i canvia a aquesta.
 
         > Equivalent a `git branch <nom>` i `git checkout <nom>`.
 
 === "`switch`"
     - __`git switch <nom>`__: canvia a la branca especificada (mou el `HEAD`).
-    - __`git switch -c <nom>`__: crea una branca nova i s'hi situa.
+    - __`git switch -c <nom>`__: crea una branca nova i canvia a aquesta.
 
         > Equivalent a `git branch <nom>` i `git switch <nom>`.
 

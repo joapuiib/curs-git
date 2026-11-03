@@ -23,7 +23,7 @@ tags:
 
 ## Introducció
 En els blocs anteriors, s'ha presentat l'estructura d'un repositori de Git i les accions bàsiques
-per a fer-hi canvis. Tot i això, totes aquestes accions s'han fet sobre un repositori __local__,
+per a fer canvis. Tot i això, totes aquestes accions s'han fet sobre un repositori __local__,
 és a dir, un repositori que es troba en el teu dispositiu i els canvis del qual no s'han publicat enlloc.
 
 Aquest bloc se centra en els repositoris __remots__: repositoris __allotjats en un servidor__,
@@ -126,9 +126,9 @@ A GitHub, es fa seguint aquests passos:
     - __Descripció__: (opcional) descripció del repositori.
     - __Visibilitat__: indica qui pot vore el repositori.
         - __:octicons-repo-24: Públic__: qualsevol persona pot vore el repositori,
-            però només les persones autoritzades poden fer-hi canvis.
+            però només les persones autoritzades poden fer canvis.
         - __:octicons-lock-24: Privat__: només tu i les persones que autoritzes podeu vore el repositori
-            i fer-hi canvis.
+            i fer canvis.
     - __README__: indica si vols afegir un fitxer `README` al repositori.
     - __.gitignore__: indica si vols afegir un fitxer `.gitignore` per a ignorar fitxers en el repositori.
     - __Llicència__: indica si vols afegir una llicència al repositori.
@@ -253,7 +253,7 @@ git push [-u | --set-upstream] [<remot> [<branca>]]
     Inicialment, la branca `main` no està associada a cap branca remota.
     Es pot comprovar amb `git branch -vv`, que no mostra cap branca remota entre claudàtors.
     Per això, si s'executa `git push`, es mostra un missatge d'error que indica
-    que cal associar-hi una branca remota.
+    que cal associar una branca remota a la branca local.
 
     ```shellconsole
     --8<-- "docs/files/remots/stdout/remots/push_no_upstream.txt"

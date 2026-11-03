@@ -68,7 +68,7 @@ relativa al __Repositori local__.
 !!! docs "Documentació oficial: [:octicons-link-external-16: `git init`](https://git-scm.com/docs/git-init) – :simple-git: Git"
 
 !!! warning "Tingues en compte els aspectes següents a l'hora d'inicialitzar un repositori amb `git init`:"
-    - No cal inicialitzar el repositori cada vegada que vulgues treballar-hi.
+    - No cal inicialitzar el repositori cada vegada que vulgues treballar.
         L'estat del repositori s'emmagatzema de manera persistent en el directori ocult `.git`.
 
     - Si inicialitzes un repositori en un directori que ja conté un repositori,
@@ -98,7 +98,7 @@ relativa al __Repositori local__.
 
 
 ??? example "Exemple: Inicialització d'un repositori"
-    Es crea el directori `git_introduccio` i s'hi inicialitza un repositori.
+    Es crea el directori `git_introduccio` i s'inicialitza un repositori.
 
     ```shellconsole
     jpuigcerver@fp:~ $ mkdir git_introduccio

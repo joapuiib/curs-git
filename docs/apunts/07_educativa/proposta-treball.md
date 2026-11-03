@@ -161,7 +161,7 @@ Els passos per a preparar l'organització són:
         /// shadow-figure-caption | #figure-projecte-owners : Professorat com a propietari de l'organització.
 
 
-1. __Crea un :octicons-people-16: equip__ per a cada grup d'alumnes i afig-hi els seus membres.
+1. __Crea un :octicons-people-16: equip__ per a cada grup d'alumnes i afig els seus membres.
 
     !!! info "L'equip :octicons-people-16:, el repositori privat :octicons-repo-locked-16: i el projecte :octicons-table-16: els pot crear el professorat o un dels membres del grup."
 
@@ -170,7 +170,7 @@ Els passos per a preparar l'organització són:
         /// shadow-figure-caption | #figure-projecte-teams : Equips de l'alumnat dins de l'organització.
 
 1. __Crea un :octicons-repo-locked-16: repositori privat__ per a cada grup
-    i __afig-hi com a col·laborador l':octicons-people-16: equip creat anteriorment__.
+    i __afig com a col·laborador l':octicons-people-16: equip creat anteriorment__.
 
     ??? picture "Repositoris dels projectes en l'organització"
         ![Repositoris dels projectes en l'organització](./img/projecte/private-repos.png)

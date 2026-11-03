@@ -18,7 +18,7 @@ tags:
 
 ## Introducció
 En els blocs anteriors, s'ha presentat l'estructura d'un repositori de Git i les accions bàsiques
-per a fer-hi canvis.
+per a fer canvis.
 
 No obstant això, totes aquestes accions s'han fet sobre un repositori __local__, és a dir,
 un repositori que es troba en el teu dispositiu i els canvis del qual no s'han publicat enlloc.
@@ -49,7 +49,7 @@ Si encara no en tens, crea'n un.
 
 
 ## Mètodes d'autenticació
-Per a enllaçar el teu repositori local amb el repositori remot i publicar-hi canvis,
+Per a enllaçar el teu repositori local amb el repositori remot i publicar canvis,
 cal autenticar-se en el servidor de GitHub.
 
 !!! recommend "Per seguretat i comoditat, es recomana utilitzar el __mètode SSH__ per a autenticar-se en el servidor de GitHub."

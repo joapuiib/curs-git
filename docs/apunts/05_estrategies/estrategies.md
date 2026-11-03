@@ -13,7 +13,7 @@ tags:
 ---
 
 ## Estratègies de ramificació
-Quan es treballa en un projecte, sobretot si hi participen moltes persones, és imprescindible adoptar
+Quan es treballa en un projecte, sobretot si participen moltes persones, és imprescindible adoptar
 una metodologia de treball que facilite la gestió i el desenvolupament del projecte.
 
 Si, a més, s'utilitza __:simple-git: Git__ com a sistema de control de versions, cal una

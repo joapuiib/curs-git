@@ -44,7 +44,7 @@ una vegada acabades, s'integren en la branca principal. Aquesta branca s'anomena
 
 ## Branques
 Una __branca__ és una línia de desenvolupament independent.
-En Git, una branca és simplement un __punter__ a un _commit_, que avança a mesura que s'hi fan nous _commits_.
+En Git, una branca és simplement un __punter__ a un _commit_, que avança a mesura que es fan nous _commits_.
 
 ![Estructura de branques inicial](img/branques_inicial.light.png#only-light)
 ![Estructura de branques inicial](img/branques_inicial.dark.png#only-dark)
@@ -251,7 +251,7 @@ git branch -D <nom>
 - `<nom>`: nom de la branca que es vol eliminar.
 
 !!! warning "Eliminar una branca pot provocar la pèrdua de _commits_."
-    Quan un _commit_ perd totes les referències que permeten accedir-hi, es diu que és un _commit_ __orfe__,
+    Quan un _commit_ perd totes les referències que permeten accedir a aquest, es diu que és un _commit_ __orfe__,
     i el __recol·lector de fem__ (_garbage collector_) de Git l'eliminarà.
 
     Per evitar-ho, si l'eliminació deixa _commits_ orfes, Git mostra un error i no elimina la branca,
@@ -513,7 +513,7 @@ git rebase main paella
 En primer lloc, el canvi de base identifica tots els _commits_ de la `branca` que no estan presents
 en la `nova_base`, és a dir, tots els posteriors a l'__avantpassat comú__.
 
-Després, el `HEAD` es mou a la `nova_base` (`main` en aquest cas) i s'hi apliquen els _commits_
+Després, el `HEAD` es mou a la `nova_base` (`main` en aquest cas) i s'apliquen els _commits_
 de la `branca` en ordre seqüencial.
 
 ![Història després del canvi de base](img/after_rebase.light.png#only-light)
