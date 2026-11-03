@@ -8,7 +8,6 @@ tags:
     - stash
 ---
 
-## Reserva de canvis (`git stash`)
 La __reserva de canvis__ (`stash`) és un magatzem de Git que permet guardar temporalment
 els canvis que encara no es volen confirmar (_commit_).
 
@@ -50,7 +49,7 @@ més avant, quan siga necessari.
         però potser encara no vols confirmar-los.
     - __Guardar els canvis__ de manera temporal amb l'ordre `git stash`.
 
-### Crear una reserva de canvis
+## Crear una reserva de canvis
 L'ordre `git stash` guarda els canvis del __Directori de treball__ en una reserva
 i deixa el directori net:
 
@@ -110,7 +109,7 @@ Els canvis s'emmagatzemen temporalment en una __pila__, de manera que:
 
     Es pot comprovar que l'índex dels canvis anteriors s'incrementa amb cada reserva nova.
 
-### Mostrar les reserves de canvis
+## Mostrar les reserves de canvis
 Per a mostrar les reserves existents, s'utilitza l'ordre:
 
 ```bash
@@ -130,7 +129,7 @@ i pel missatge associat.
     La reserva més recent, `Canvi C`, ocupa la posició `stash@{0}`.
 
 
-### Mostrar els canvis d'una reserva
+## Mostrar els canvis d'una reserva
 Els canvis guardats en una reserva es poden consultar amb l'acció `show`,
 que mostra els fitxers modificats:
 
@@ -150,7 +149,7 @@ git stash show [-p] [<index>]
 
     Cada reserva conté una línia diferent afegida al fitxer `README.md`.
 
-### Recuperar els canvis
+## Recuperar els canvis
 Els canvis reservats es poden recuperar amb l'acció `apply`, que els aplica en el __Directori de treball__:
 
 ```bash
@@ -192,7 +191,7 @@ git stash pop [<index>]
 
     1. Es descarten els canvis del __Directori de treball__ de l'exemple anterior.
 
-### Descartar els canvis
+## Descartar els canvis
 Una reserva es pot eliminar de la pila amb l'acció `drop`:
 
 ```bash

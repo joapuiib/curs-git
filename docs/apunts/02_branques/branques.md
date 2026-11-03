@@ -42,7 +42,7 @@ una vegada acabades, s'integren en la branca principal. Aquesta branca s'anomena
     !!! danger "Crea el nou repositori __en una carpeta independent__ per evitar problemes amb els exemples i exercicis anteriors."
 
 
-## Branques
+## Què és una branca?
 Una __branca__ és una línia de desenvolupament independent.
 En Git, una branca és simplement un __punter__ a un _commit_, que avança a mesura que es fan nous _commits_.
 

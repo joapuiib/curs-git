@@ -8,7 +8,7 @@ tags:
     - tag
 ---
 
-## Etiquetes
+## Què són les etiquetes?
 En Git, cada _commit_ s'identifica per mitjà d'un _hash_, un identificador alfanumèric que es genera
 quan es crea el _commit_. No obstant això, de vegades és útil identificar punts concrets de la història
 del repositori amb un nom, que és més fàcil de recordar i més significatiu que un _hash_.

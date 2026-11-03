@@ -13,7 +13,7 @@ tags:
 *[CI]: Continuous Integration
 *[CD]: Continuous Deployment
 
-## Automatització en CI/CD
+## Introducció
 La __integració contínua__ (_Continuous Integration_ o CI) i el __desplegament continu__
 (_Continuous Deployment_ o CD) són pràctiques que permeten als equips de desenvolupament
 integrar els canvis en el codi de manera regular i distribuir-los automàticament.

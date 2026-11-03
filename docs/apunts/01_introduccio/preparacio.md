@@ -9,7 +9,6 @@ tags:
   - VS Code
 ---
 
-## Preparació de l'entorn
 En aquesta secció s'explica com instal·lar i configurar les ferramentes necessàries
 per a treballar amb :simple-git: Git i :material-microsoft-visual-studio-code: Visual Studio Code.
 

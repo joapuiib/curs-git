@@ -11,7 +11,7 @@ tags:
 
 *[PR]: Pull Request
 
-## Forks i Pull Requests
+## Introducció
 Entre les ferramentes de col·laboració que ofereixen els serveis d'allotjament de repositoris en línia,
 com :simple-github: GitHub, :simple-gitlab: GitLab o :simple-codeberg: Codeberg, hi ha dues funcionalitats clau:
 
@@ -28,7 +28,7 @@ com :simple-github: GitHub, :simple-gitlab: GitLab o :simple-codeberg: Codeberg,
 Aquestes dues funcionalitats són essencials per a col·laborar de manera distribuïda en projectes
 de desenvolupament de programari, sobretot en projectes de __:material-open-source-initiative: codi obert__.
 
-## :material-source-fork: Forks
+## :material-source-fork: Què és un _fork_?
 Una [__bifurcació__](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
 (_fork_) és una còpia d'un repositori que passa a pertànyer a una persona o organització com a propi.
 En el teu _fork_ pots fer qualsevol canvi, com ara:
