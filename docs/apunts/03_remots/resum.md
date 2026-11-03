@@ -6,11 +6,10 @@ alias: remots-resum
 comments: true
 ---
 
-## Remots: Resum d'ordres
 Aquest resum recull les ordres presentades en el [[remots-index]].
 
 
-### Gestió de repositoris remots
+## Gestió de repositoris remots
 Aquestes ordres permeten associar repositoris remots al repositori local:
 
 - __`git remote`__: mostra els repositoris remots associats al repositori local.
@@ -21,7 +20,7 @@ Aquestes ordres permeten associar repositoris remots al repositori local:
     El repositori remot s'associa automàticament amb l'àlies `origin`.
 
 
-### Gestió de branques remotes
+## Gestió de branques remotes
 Aquestes ordres permeten sincronitzar les branques locals i les remotes:
 
 - __`git branch -r`__: mostra les branques remotes associades al repositori local.
@@ -43,7 +42,7 @@ Aquestes ordres permeten sincronitzar les branques locals i les remotes:
 - __`git push -d <alies> <branca>`__: elimina la branca remota especificada del repositori remot `alies`.
 
 
-### Configuració
+## Configuració
 Aquestes claus de configuració modifiquen el comportament per defecte de les ordres anteriors:
 
 - __`push.autoSetupRemote`__: si s'estableix a `true`, `git push` associa automàticament

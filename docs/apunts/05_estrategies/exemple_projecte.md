@@ -6,11 +6,10 @@ alias: estrategies-example
 comments: true
 ---
 
-## Exemple: Estratègia de ramificació
 Aquests apunts mostren com s'aplica una estratègia de ramificació en un projecte de desenvolupament
 de programari. El projecte utilitza la tècnica d'integració [[estrategies#merge-squash-ff-only]].
 
-### Repositori remot
+## Repositori remot
 L'exemple simula un projecte de desenvolupament de programari en què tres persones treballen
 en diferents funcionalitats de manera independent.
 
@@ -26,14 +25,14 @@ es crea un repositori remot en la màquina local.
 1. Aquesta ordre és necessària perquè el repositori es configure com a __bare__ (sense directori de treball)
     i es puga utilitzar com a repositori remot.
 
-### Branca de desenvolupament
+## Branca de desenvolupament
 El primer pas per a establir el flux de treball és crear la branca de desenvolupament `develop`.
 
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/development.txt"
 ```
 
-### Desenvolupament de funcionalitats
+## Desenvolupament de funcionalitats
 En aquest punt, ja es poden desenvolupar les diferents funcionalitats del projecte en branques independents.
 Es crea un repositori local per a cada persona, per a simular que cadascuna treballa en el seu dispositiu.
 
@@ -56,7 +55,7 @@ de manera independent i paral·lela.
     Si cal compartir una branca, segurament és perquè la tasca no està ben definida
     i es pot dividir en diverses tasques més xicotetes.
 
-#### Branca `feature/readme`
+### Branca `feature/readme`
 Anna comença a treballar en la funcionalitat `feature/readme` en el seu repositori local.
 
 !!! note "En cada repositori local es configuren el nom i el correu electrònic per a simular que cada persona treballa en el seu dispositiu. A més, el nom es mostra en el _prompt_."
@@ -72,7 +71,7 @@ Els passos que ha seguit Anna són:
 2. Fer els canvis pertinents.
 3. Publicar la branca `feature/readme` en el repositori remot.
 
-#### Branca `feature/license`
+### Branca `feature/license`
 Pau comença a treballar en la funcionalitat `feature/license` en el seu repositori local.
 
 ```shellconsole
@@ -86,7 +85,7 @@ Els passos que ha seguit Pau són:
 3. Publicar la branca `feature/license` en el repositori remot.
 
 
-#### Branca `feature/author`
+### Branca `feature/author`
 Mar comença a treballar en la funcionalitat `feature/author` en el seu repositori local.
 
 ```shellconsole
@@ -100,7 +99,7 @@ Els passos que ha seguit Mar són:
 3. Publicar la branca `feature/author` en el repositori remot.
 
 
-### Integració de les funcionalitats
+## Integració de les funcionalitats
 En aquest punt, les tres funcionalitats s'han desenvolupat de manera independent
 i encara no s'han integrat en la branca de desenvolupament `develop`.
 
@@ -123,7 +122,7 @@ A continuació, s'integren les funcionalitats amb la tècnica __`merge --no-ff` 
 seguint el procés indicat en [[estrategies#integracio]].
 
 
-#### Integració de `feature/readme`
+### Integració de `feature/readme`
 Anna ja ha acabat la funcionalitat `feature/readme` i vol integrar-la en la branca `develop`.
 Els passos que ha de seguir són:
 
@@ -173,7 +172,7 @@ Els passos que ha de seguir són:
 En aquest punt, la funcionalitat desenvolupada per Anna ja s'ha integrat en la branca de desenvolupament `develop`,
 i Anna pot continuar treballant en altres funcionalitats.
 
-#### Integració de `feature/license`
+### Integració de `feature/license`
 Pau ja ha acabat la funcionalitat `feature/license` i vol integrar-la en la branca `develop`.
 Els passos que ha de seguir són:
 
@@ -215,7 +214,7 @@ Els passos que ha de seguir són:
     --8<-- "docs/files/estrategies/stdout/feature_license_delete.txt"
     ```
 
-#### Integració de `feature/author`
+### Integració de `feature/author`
 Mar ja ha acabat la funcionalitat `feature/author` i vol integrar-la en la branca `develop`.
 Els passos que ha de seguir són:
 
@@ -261,7 +260,7 @@ Els passos que ha de seguir són:
     --8<-- "docs/files/estrategies/stdout/feature_author_delete.txt"
     ```
 
-### Llançament de la versió 1.0.0
+## Llançament de la versió 1.0.0
 Anna s'encarrega de preparar el llançament de la versió 1.0.0.
 
 Els passos que ha de seguir són:
@@ -308,16 +307,16 @@ Els passos que ha de seguir són:
     --8<-- "docs/files/estrategies/stdout/release_delete.txt"
     ```
 
-### Estat final
+## Estat final
 L'estat final del repositori depén de la tècnica d'integració utilitzada.
 A continuació, es mostra el resultat de cadascuna.
 
-#### [`merge --no-ff` + `merge --squash --ff-only`][merge-squash]
+### [`merge --no-ff` + `merge --squash --ff-only`][merge-squash]
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/squash_final.txt"
 ```
 
-#### [`merge --no-ff`][merge-no-ff] (_Gitflow_)
+### [`merge --no-ff`][merge-no-ff] (_Gitflow_)
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/merge_no_ff_final.txt"
 ```
@@ -352,12 +351,12 @@ gitGraph
    merge release/v1.0.0 tag: "v1.0.0"
 ```
 
-#### [`rebase` + `merge --ff-only`][rebase-merge-ff-only]
+### [`rebase` + `merge --ff-only`][rebase-merge-ff-only]
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/rebase_final.txt"
 ```
 
-#### [`rebase` + `merge --no-ff`][rebase-merge-no-ff]
+### [`rebase` + `merge --no-ff`][rebase-merge-no-ff]
 ```shellconsole
 --8<-- "docs/files/estrategies/stdout/rebase_merge_no_ff_final.txt"
 ```

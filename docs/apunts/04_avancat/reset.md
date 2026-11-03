@@ -11,7 +11,6 @@ tags:
     - hard reset
 ---
 
-## Reset (`git reset`)
 L'ordre `git reset` permet moure la referència de la branca actual a qualsevol altre _commit_ del repositori.
 Això significa que es pot modificar la història del repositori local per ajustar-la o refer-la
 segons les necessitats. Per exemple, permet:
@@ -57,7 +56,7 @@ els _commits_ __Canvi B__ i __Canvi C__ s'esborraran perquè han perdut totes le
 
     !!! danger "Crea el nou repositori __en una carpeta independent__ per evitar problemes amb els exemples i exercicis anteriors."
 
-### Sintaxi general
+## Sintaxi general
 L'ordre `git reset` mou la referència de la branca actual, on es troba el `HEAD`. La sintaxi és:
 
 ```bash
@@ -71,7 +70,7 @@ git reset [--soft | --mixed | --hard | --keep] <ref>
 !!! docs "Documentació oficial: [:octicons-link-external-16: `git reset`](https://git-scm.com/docs/git-reset) – :simple-git: Git"
 
 
-### Soft
+## Soft
 El mode `--soft` mou la referència de la branca actual al _commit_ especificat
 i conserva en l'__Àrea de preparació__ els canvis dels _commits_ que es deixen enrere.
 
@@ -93,7 +92,7 @@ git reset --soft <ref>
     --8<-- "docs/files/avancat/stdout/reset/revert_soft.txt"
     ```
 
-### Mixed
+## Mixed
 El mode `--mixed` mou la referència de la branca actual al _commit_ especificat
 i conserva els canvis en el __Directori de treball__. És el comportament per defecte si no s'especifica cap mode.
 
@@ -116,7 +115,7 @@ git reset --mixed <ref>
     ```
 
 
-### Hard
+## Hard
 El mode `--hard` mou la referència de la branca actual al _commit_ especificat
 i torna tot el repositori a l'estat d'aquesta referència.
 
@@ -135,7 +134,7 @@ git reset --hard <ref>
     ```
 
 
-### Keep
+## Keep
 El mode `--keep` és molt semblant al comportament per defecte. La diferència és que no permet fer
 el `reset` si això implica sobreescriure els canvis actuals del __Directori de treball__.
 

@@ -55,7 +55,7 @@ que permeten l'accés d'altres persones i la col·laboració en el desenvolupame
     !!! danger "Crea el nou repositori __en una carpeta independent__ per evitar problemes amb els exemples i exercicis anteriors."
 
 
-## Repositori remot
+## Què és un repositori remot?
 Un __repositori remot__ és una còpia d'un repositori de Git allotjada en un servidor
 o en un altre lloc fora del teu sistema local. Aquesta còpia conté una rèplica completa
 de la història del repositori, incloses totes les revisions i les branques.

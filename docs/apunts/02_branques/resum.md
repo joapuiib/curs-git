@@ -6,11 +6,10 @@ alias: branques-resum
 comments: true
 ---
 
-## Branques: Resum d'ordres
 Aquest resum recull les ordres presentades en el [[branques-index]].
 
 
-### Gestió de branques locals
+## Gestió de branques locals
 Aquestes ordres permeten consultar, crear, reanomenar i eliminar branques:
 
 - __`git branch`__: mostra les branques locals del _Repositori local_.
@@ -39,7 +38,7 @@ Per a canviar de branca, hi ha dues ordres equivalents:
         > Equivalent a `git branch <nom>` i `git switch <nom>`.
 
 
-### Fusió de branques locals
+## Fusió de branques locals
 La fusió incorpora els canvis d'una branca en la branca actual:
 
 - __`git merge <nom>`__: fusiona la branca especificada en la branca actual (`HEAD`).
@@ -52,7 +51,7 @@ La fusió incorpora els canvis d'una branca en la branca actual:
 - __`git merge --abort`__: en l'estat `MERGING`, atura el procés de fusió i torna a l'estat anterior.
 
 
-### Canvi de base
+## Canvi de base
 El canvi de base permet integrar canvis de branques divergents mantenint una història lineal:
 
 - __`git rebase <nom>`__: canvia la base de la branca actual (`HEAD`) a la branca especificada.
@@ -65,7 +64,7 @@ El canvi de base permet integrar canvis de branques divergents mantenint una his
     i torna a l'estat anterior.
 
 
-### Configuració
+## Configuració
 Aquestes claus de configuració modifiquen el comportament per defecte de `git merge`:
 
 - __`merge.edit`__: indica si la fusió demana editar el missatge del _commit_ de fusió

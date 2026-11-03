@@ -12,7 +12,7 @@ tags:
     - hotfix
 ---
 
-## Estratègies de ramificació
+## Introducció
 Quan es treballa en un projecte, sobretot si hi participen moltes persones, és imprescindible adoptar
 una metodologia de treball que facilite la gestió i el desenvolupament del projecte.
 

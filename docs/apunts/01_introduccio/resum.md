@@ -6,10 +6,9 @@ alias: introduccio-resum
 comments: true
 ---
 
-## Introducció a Git: Resum d'ordres
 Aquest resum recull les ordres i els fitxers presentats en el [[introduccio-index]].
 
-### Fitxers
+## Fitxers
 Git guarda la informació i la configuració en els fitxers següents:
 
 - __`.git/`__: directori que conté la informació del _Repositori local_.
@@ -34,7 +33,7 @@ Git guarda la informació i la configuració en els fitxers següents:
         lga = lg --all
     ```
 
-### Ordres bàsiques
+## Ordres bàsiques
 Aquestes són les ordres per a treballar amb un repositori local:
 
 - __`git init`__: inicialitza un nou _Repositori local_ en la carpeta actual i crea el directori `.git/`.
@@ -70,7 +69,7 @@ Aquestes són les ordres per a treballar amb un repositori local:
     del _Repositori local_.
 
 
-### Configuració
+## Configuració
 Aquestes són les claus de configuració utilitzades en aquest bloc:
 
 - __`core.editor`__: editor de text que utilitza Git en algunes ordres, com ara per a editar
