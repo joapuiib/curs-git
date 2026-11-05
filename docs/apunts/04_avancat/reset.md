@@ -40,7 +40,7 @@ Com es gestionen aquests canvis depén del mode amb què s'executa l'ordre `git 
 /// figure-caption | #figure-resum-reset : Resum de la ferramenta `git reset`.
 
 A més, aquesta ordre pot provocar que alguns _commits_ perden totes les referències i que,
-per tant, el __recol·lector de fem__ de Git els esborre. Per exemple, en la [Figura 1](#figure-reset),
+per tant, el __recol·lector de fem__ de Git els esborre. Per exemple, en la [@figure-reset],
 els _commits_ __Canvi B__ i __Canvi C__ s'esborraran perquè han perdut totes les referències.
 
 ??? prep "Preparació del repositori"

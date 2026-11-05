@@ -105,7 +105,7 @@ El flux de treball amb aquestes branques és el següent:
 
 1. Es creen a partir de la branca `develop`.
 
-    > En la [Figura 2](#figure-feature) s'observa que totes les branques `feature/`
+    > En la [@figure-feature] s'observa que totes les branques `feature/`
     > s'han creat a partir de la branca `develop`, però no necessàriament en el mateix punt.
 
 2. [S'integren](#integracio) en la branca `develop` una vegada s'han implementat i provat els canvis.

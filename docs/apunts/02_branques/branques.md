@@ -52,7 +52,7 @@ En Git, una branca és simplement un __punter__ a un _commit_, que avança a mes
 
 ??? example "Exemple: Estructura de branques inicial"
     L'estructura de branques inicial del repositori d'aquests apunts és la que mostra
-    la [Figura 1](#figure-estat-inicial).
+    la [@figure-estat-inicial].
 
     ```shellconsole
     --8<-- "docs/files/branques/stdout/branques/estructura_inicial.txt"
@@ -145,8 +145,8 @@ git switch <nom>
 [^switch]: [:octicons-link-external-16: What's the difference between `git switch` and `git checkout` &lt;branch&gt;?](https://stackoverflow.com/questions/57265785/whats-the-difference-between-git-switch-and-git-checkout-branch)
     – :simple-stackoverflow: StackOverflow
 
-La [Figura 2](#figure-create-menjar) mostra l'estat del repositori quan el `HEAD` apunta a la branca `main`
-i la [Figura 3](#figure-checkout-menjar), l'estat després de canviar a la branca `menjar`.
+La [@figure-create-menjar] mostra l'estat del repositori quan el `HEAD` apunta a la branca `main`
+i la [@figure-checkout-menjar], l'estat després de canviar a la branca `menjar`.
 
 ??? example "Exemple: Canviar a la branca `menjar`"
     L'estat del repositori abans de canviar a la branca `menjar` és el següent:
@@ -323,7 +323,7 @@ fins on es troba la branca que es vol fusionar.
 
 
 ??? example "Exemple: Fusió directa de la branca `menjar` en la branca `main`"
-    Partint de la situació de la [Figura 8](#figure-before-ff), on la branca `menjar` té un _commit_ més
+    Partint de la situació de la [@figure-before-ff], on la branca `menjar` té un _commit_ més
     que la branca `main`, la fusió de `menjar` en `main` és una fusió directa.
 
     ```shellconsole
@@ -331,7 +331,7 @@ fins on es troba la branca que es vol fusionar.
     ```
 
     En aquest cas, la fusió avança el punter de la branca `main` fins on es troba la branca `menjar`,
-    tal com mostra la [Figura 9](#figure-after-ff).
+    tal com mostra la [@figure-after-ff].
 
     ```shellconsole
     --8<-- "docs/files/branques/stdout/branques/after_ff.txt"
@@ -369,7 +369,7 @@ Si no se n'especifica cap, s'obri l'editor de text configurat per defecte
     ```
 
 ??? example "Exemple: Fusió de la branca divergent `beguda` en la branca `main`"
-    Es parteix de la situació de la [Figura 10](#figure-before-no-ff), on la branca `beguda`
+    Es parteix de la situació de la [@figure-before-no-ff], on la branca `beguda`
     ha divergit de la branca `main`.
 
     ```shellconsole
@@ -386,7 +386,7 @@ Si no se n'especifica cap, s'obri l'editor de text configurat per defecte
         Si no s'especifica, s'obri l'editor de text per a escriure'l.
     2. Igual que abans, s'han incorporat els canvis de la branca `beguda` en la branca `main`.
 
-    El repositori queda en la situació de la [Figura 11](#figure-after-no-ff),
+    El repositori queda en la situació de la [@figure-after-no-ff],
     amb un __commit de fusió__ que incorpora els canvis de la branca `beguda` en la branca `main`.
 
 

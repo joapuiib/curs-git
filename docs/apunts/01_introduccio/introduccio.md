@@ -176,7 +176,7 @@ sense connectar encara cap repositori __remot__. Abans que res, cal conéixer l'
 ![Components d'un repositori de Git](img/components.dark.png#only-dark)
 /// figure-caption | #figure-components : Components d'un repositori de Git.
 
-En la [Figura 1](#figure-components) es distingeix l'__Entorn de desenvolupament__ (_Development Environment_).
+En la [@figure-components] es distingeix l'__Entorn de desenvolupament__ (_Development Environment_).
 Aquesta part es troba __localment__ en el teu dispositiu, on realitzes els canvis i desenvolupes el projecte.
 
 D'una altra banda, hi ha el __Repositori remot__, que normalment s'allotja en un servidor accessible
@@ -505,7 +505,7 @@ git restore [--staged] <path>
     __Directori de treball__. Si no s'indica, es descarten els canvis del __Directori de treball__.
 - `<path>`: fitxer o directori del qual es volen descartar els canvis.
 
-La [Figura 2](#figure-flux-treball) resumeix el comportament de `git restore`.
+La [@figure-flux-treball] resumeix el comportament de `git restore`.
 
 !!! docs "Documentació oficial: [:octicons-link-external-16: `git restore`](https://git-scm.com/docs/git-restore) – :simple-git: Git"
 

@@ -89,6 +89,7 @@ plugins:
       load_file:
         files_dir: files
   - material-joapuiib/sectionicons
+  - material-joapuiib/xref
   - i18n:
       languages:
         - locale: ca

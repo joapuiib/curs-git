@@ -152,7 +152,7 @@ A GitHub, es fa seguint aquests passos:
     ![Repositori buit creat a GitHub](img/github_empty_repository.png)
     /// shadow-figure-caption | #figure-create-github-repo : Repositori buit creat a GitHub.
 
-    La [Figura 4](#figure-create-github-repo) mostra els passos per a enllaçar el repositori local
+    La [@figure-create-github-repo] mostra els passos per a enllaçar el repositori local
     amb el repositori remot creat a GitHub. Els apartats següents expliquen aquestes ordres amb més detall.
 
 
