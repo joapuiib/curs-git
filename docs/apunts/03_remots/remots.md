@@ -443,7 +443,7 @@ git pull [<options>] [<remot> [<branca>]]
 - `[<branca>]`: (opcional) nom de la branca remota.
     Per defecte, s'utilitza la branca remota [associada][associada] a la branca actual.
 
-[associada]: #associacio-dun-remot-per-defecte
+[associada]: #associacio-amb-una-branca-remota-upstream
 
 !!! docs "Documentació oficial: [:octicons-link-external-16: `git pull`](https://git-scm.com/docs/git-pull) – :simple-git: Git"
 
