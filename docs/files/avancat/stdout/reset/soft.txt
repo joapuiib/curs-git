@@ -1,11 +1,11 @@
-jpuigcerver@fp:~/git_reset $ git reset --soft 8999e85
-jpuigcerver@fp:~/git_reset $ git status
+jpuigcerver@fp:~/git_reset (main) $ git reset --soft 8999e85
+jpuigcerver@fp:~/git_reset (main) $ git status
 On branch main
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
 	modified:   README.md
 
-jpuigcerver@fp:~/git_reset $ git diff --staged
+jpuigcerver@fp:~/git_reset (main) $ git diff --staged
 diff --git a/README.md b/README.md
 index dc7fc7d..d05d0d2 100644
 --- a/README.md
@@ -15,7 +15,7 @@ index dc7fc7d..d05d0d2 100644
  - Canvi A
  - Canvi B
 +- Canvi C
-jpuigcerver@fp:~/git_reset $ git lga
+jpuigcerver@fp:~/git_reset (main) $ git lga
 * 8999e85 - (0 seconds ago) Canvi B - Joan Puigcerver (HEAD -> main)
 * ff64d47 - (0 seconds ago) Canvi A - Joan Puigcerver
 * 5f92181 - (0 seconds ago) Commit inicial - Joan Puigcerver
