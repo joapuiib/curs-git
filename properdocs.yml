@@ -14,6 +14,9 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/joanpuigcerver/
       name: Joan Puigcerver a LinkedIn
+    - icon: fp-terminal-mono
+      link: https://joapuiib.github.io/fp/
+      name: "FP – Apunts de Formació Professional"
 
 extra_css:
   - stylesheets/extra.css
