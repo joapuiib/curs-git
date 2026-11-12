@@ -9,6 +9,7 @@ tags:
     - soft reset
     - mixed reset
     - hard reset
+    - git clean
 ---
 
 L'ordre `git reset` permet moure la referència de la branca actual a qualsevol altre _commit_ del repositori.
@@ -133,6 +134,11 @@ git reset --hard <ref>
     --8<-- "docs/files/avancat/stdout/reset/hard.txt"
     ```
 
+!!! warning "`git reset --hard` no esborra els fitxers sense seguiment (_Untracked_)."
+    Com que Git no en fa el seguiment, aquests fitxers no formen part de cap _commit_ i el `reset`
+    no els toca. Per esborrar-los, cal utilitzar l'ordre `git clean`.
+    Vegeu [Esborrar fitxers sense seguiment](#esborrar-fitxers-sense-seguiment-git-clean).
+
 
 ## Keep
 El mode `--keep` és molt semblant al comportament per defecte. La diferència és que no permet fer
@@ -153,6 +159,83 @@ git reset --keep <ref>
     l'operació no es fa.
 
 
+## Esborrar fitxers sense seguiment (`git clean`)
+L'ordre `git clean` esborra del __Directori de treball__ els fitxers que estan en l'estat
+__Untracked__, és a dir, els fitxers dels quals Git no fa el seguiment. Els fitxers que ja formen part
+del repositori no es modifiquen mai.
+
+És el complement de `git reset --hard`: mentre que el `reset` descarta els canvis dels fitxers
+seguits, `git clean` elimina els fitxers nous que encara no s'han afegit. Combinant les dues ordres,
+el __Directori de treball__ torna a quedar exactament com el _commit_ actual.
+
+```bash
+git clean [-n | --dry-run] [-f | --force] [-i | --interactive] [-d] [-x | -X]
+```
+
+- `[-n | --dry-run]`: (opcional) mostra quins fitxers s'esborrarien, però no n'esborra cap.
+- `[-f | --force]`: (opcional) esborra els fitxers. Per defecte, Git es nega a executar `git clean`
+    si no s'indica `-f`, `-n` o `-i`, perquè l'opció de configuració `clean.requireForce` val `true`.
+- `[-i | --interactive]`: (opcional) mostra els fitxers que s'esborrarien i un menú per triar
+    quins s'esborren.
+- `[-d]`: (opcional) esborra també els directoris sense seguiment. Sense aquesta opció,
+    `git clean` només esborra fitxers i no entra en els directoris nous.
+- `[-x]`: (opcional) no té en compte el fitxer `.gitignore`, de manera que esborra els fitxers
+    sense seguiment __i__ els fitxers ignorats.
+- `[-X]`: (opcional) esborra __només__ els fitxers ignorats i conserva els fitxers sense seguiment.
+
+!!! docs "Documentació oficial: [:octicons-link-external-16: `git clean`](https://git-scm.com/docs/git-clean) – :simple-git: Git"
+
+!!! danger "Els fitxers que esborra `git clean` no es poden recuperar."
+    Com que no formen part de cap _commit_, Git no en guarda cap còpia. Per això, es recomana
+    executar sempre `git clean -n` abans de `git clean -f` per comprovar què s'esborrarà.
+
+    Cal tindre especial cura amb l'opció `-x`, ja que també esborra fitxers ignorats
+    que solen ser necessaris, com `.env` o `node_modules/`.
+
+??? prep "Preparació del repositori"
+    Sobre el repositori dels exemples anteriors, es crea un fitxer `.gitignore` que ignora
+    el directori `build/`. A continuació, es creen el fitxer `notes.txt` i el directori `temp/`,
+    que queden sense seguiment, i el directori `build/`, que queda ignorat.
+
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/reset/clean_setup.txt"
+    ```
+
+    L'opció `--ignored` de `git status` mostra també els fitxers ignorats.
+
+??? example "Exemple: Previsualitzar què s'esborrarà (`-n`)"
+    Abans d'esborrar res, es comprova quins fitxers eliminaria `git clean`.
+
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/reset/clean_n.txt"
+    ```
+
+    Sense l'opció `-d`, només apareix el fitxer `notes.txt`. En afegir-la, també s'inclou
+    el directori `temp/`. El directori `build/` no apareix en cap cas, perquè està ignorat.
+
+??? example "Exemple: Esborrar els fitxers sense seguiment (`-f`)"
+    Si s'executa `git clean` sense cap opció, Git es nega a esborrar res.
+    Per fer-ho, cal indicar l'opció `-f`.
+
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/reset/clean_f.txt"
+    ```
+
+    S'han esborrat `notes.txt` i `temp/`, però el directori ignorat `build/` es conserva.
+
+??? example "Exemple: Esborrar els fitxers ignorats (`-x` i `-X`)"
+    Es torna a crear el fitxer `notes.txt` i es compara el comportament de les opcions `-X` i `-x`.
+
+    ```shellconsole
+    --8<-- "docs/files/avancat/stdout/reset/clean_x.txt"
+    ```
+
+    Amb `-X`, només s'esborraria el directori ignorat `build/`, mentre que amb `-x` s'esborrarien
+    `build/` i `notes.txt`. Finalment, `git clean -fdX` elimina `build/` i manté `notes.txt`,
+    que continua sense seguiment.
+
+
 ## Bibliografia
 - [:octicons-link-external-16: What's the difference between git reset --mixed, --soft, and --hard?](https://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard) – :simple-stackoverflow: StackOverflow
 - [:octicons-link-external-16: `git reset`](https://git-scm.com/docs/git-reset) – :simple-git: Git
+- [:octicons-link-external-16: `git clean`](https://git-scm.com/docs/git-clean) – :simple-git: Git

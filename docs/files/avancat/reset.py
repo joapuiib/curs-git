@@ -109,6 +109,39 @@ def amend():
     x.x('git lga')
 
 
+def clean():
+    x.log_file('stdout/reset/clean_setup.txt')
+    print('==================== CLEAN SETUP ========================')
+    x.x('echo "build/" > .gitignore')
+    x.x('git add .gitignore')
+    x.x('git commit -m "Afegeix .gitignore"')
+    x.x('echo "Idees pendents" > notes.txt')
+    x.x('mkdir temp')
+    x.x('echo "Prova" > temp/prova.txt')
+    x.x('mkdir build')
+    x.x('echo "Compilació correcta" > build/app.log')
+    x.x('git status --ignored')
+
+    x.log_file('stdout/reset/clean_n.txt')
+    print('==================== CLEAN -n ========================')
+    x.x('git clean -n')
+    x.x('git clean -nd')
+
+    x.log_file('stdout/reset/clean_f.txt')
+    print('==================== CLEAN -f ========================')
+    x.x('git clean')
+    x.x('git clean -fd')
+    x.x('git status --ignored')
+
+    x.log_file('stdout/reset/clean_x.txt')
+    print('==================== CLEAN -x / -X ========================')
+    x.x('echo "Idees pendents" > notes.txt')
+    x.x('git clean -ndX')
+    x.x('git clean -ndx')
+    x.x('git clean -fdX')
+    x.x('git status --ignored')
+
+
 parser = argparse.ArgumentParser(description='Etiquetes')
 parser.add_argument('-v', "--verbose", action='store_true')
 args = parser.parse_args()
@@ -127,3 +160,5 @@ reset_hard()
 reset_keep()
 
 amend()
+
+clean()

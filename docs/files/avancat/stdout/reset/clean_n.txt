@@ -1,0 +1,5 @@
+jpuigcerver@fp:~/git_reset (main) $ git clean -n
+Would remove notes.txt
+jpuigcerver@fp:~/git_reset (main) $ git clean -nd
+Would remove notes.txt
+Would remove temp/

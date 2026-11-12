@@ -1,0 +1,15 @@
+jpuigcerver@fp:~/git_reset (main) $ echo "Idees pendents" > notes.txt
+jpuigcerver@fp:~/git_reset (main) $ git clean -ndX
+Would remove build/
+jpuigcerver@fp:~/git_reset (main) $ git clean -ndx
+Would remove build/
+Would remove notes.txt
+jpuigcerver@fp:~/git_reset (main) $ git clean -fdX
+Removing build/
+jpuigcerver@fp:~/git_reset (main) $ git status --ignored
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	notes.txt
+
+nothing added to commit but untracked files present (use "git add" to track)

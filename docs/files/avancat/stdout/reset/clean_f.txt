@@ -1,0 +1,12 @@
+jpuigcerver@fp:~/git_reset (main) $ git clean
+fatal: clean.requireForce is true and -f not given: refusing to clean
+jpuigcerver@fp:~/git_reset (main) $ git clean -fd
+Removing notes.txt
+Removing temp/
+jpuigcerver@fp:~/git_reset (main) $ git status --ignored
+On branch main
+Ignored files:
+  (use "git add -f <file>..." to include in what will be committed)
+	build/
+
+nothing to commit, working tree clean
